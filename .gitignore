@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+.vs/
+artifacts/
+**/TestResults/
+*.user
+*.suo
+*.nupkg
+*.snupkg
+.env
+.env.*
+!.env.example

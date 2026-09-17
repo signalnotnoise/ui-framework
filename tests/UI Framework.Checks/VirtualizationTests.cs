@@ -1,0 +1,146 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Windows.Controls;
+using UI_Framework;
+using UI_Framework.Wpf;
+using static UI_Framework.UI;
+
+[TestClass]
+public sealed class VirtualizationTests
+{
+    private static ViewHost Create(StateList<int> ids, Dictionary<int, VirtualizationProbe> probes) => new(() =>
+        VirtualList(ids.Select(id => Component<VirtualizationProbe>(probe =>
+        {
+            probe.Id = id;
+            probes[id] = probe;
+        }).Id(id.ToString()).Memo(id)), 300));
+
+    [TestMethod]
+    public void ThousandRowsMountOnlyViewportAndBuffer() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        Assert.IsTrue(probes.Count > 0 && probes.Count < 40, $"Mounted {probes.Count} rows");
+        Assert.IsTrue(TestVisualTree.Find<TextBox>(host).Count() < 40);
+        host.Dispose();
+        Assert.IsTrue(probes.Values.All(p => p.Mounts == p.Unmounts));
+    });
+
+    [TestMethod]
+    public void OffscreenInsertAndRemovalRetainVisibleInputs() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        var first = TestVisualTree.Find<TextBox>(host).First();
+        first.Text = "retained selection";
+        first.Select(2, 4);
+        ids.Add(1000);
+        TestVisualTree.Layout(host);
+        ids.Remove(999);
+        TestVisualTree.Layout(host);
+        Assert.AreSame(first, TestVisualTree.Find<TextBox>(host).First());
+        Assert.AreEqual(2, first.SelectionStart);
+        Assert.AreEqual(4, first.SelectionLength);
+        Assert.AreEqual(1, probes[0].Mounts);
+        Assert.AreEqual(0, probes[0].Unmounts);
+    });
+
+    [TestMethod]
+    public void MovingOffscreenRowRetainsVisibleInputs() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        var first = TestVisualTree.Find<TextBox>(host).First();
+        ids.Move(900, 950);
+        TestVisualTree.Layout(host);
+        Assert.AreSame(first, TestVisualTree.Find<TextBox>(host).First());
+        Assert.AreEqual(1, probes[0].Mounts);
+    });
+
+    [TestMethod]
+    public void ScrollingRestoresLocalStateAndReleasesObservers() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        var original = probes[0];
+        original.Text.Value = "saved edit";
+        original.Expanded.Value = true;
+        TestVisualTree.Layout(host);
+        var scroll = TestVisualTree.Find<ScrollViewer>(host).First();
+        scroll.ScrollToEnd();
+        TestVisualTree.Layout(host);
+        Assert.AreEqual(original.Mounts, original.Unmounts);
+        var builds = original.Builds;
+        original.Text.Value = "offscreen edit";
+        TestVisualTree.Flush();
+        Assert.AreEqual(builds, original.Builds);
+        Assert.IsTrue(probes.Values.Count(p => p.Mounts > p.Unmounts) < 40);
+        scroll.ScrollToHome();
+        TestVisualTree.Layout(host);
+        Assert.AreSame(original, probes[0]);
+        Assert.IsTrue(original.Expanded.Value);
+        Assert.AreEqual("offscreen edit", TestVisualTree.Find<TextBox>(host).First().Text);
+    });
+
+    [TestMethod]
+    public void VisibleMoveRetainsUnaffectedRowControls() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        probes[0].Text.Value = "moved row";
+        probes[2].Text.Value = "unaffected row";
+        TestVisualTree.Layout(host);
+        var unaffected = TestVisualTree.Find<TextBox>(host).Single(input => input.Text == "unaffected row");
+        unaffected.Select(1, 3);
+        var moved = probes[0];
+        ids.Move(0, 1);
+        TestVisualTree.Layout(host);
+        Assert.AreSame(unaffected, TestVisualTree.Find<TextBox>(host).Single(input => input.Text == "unaffected row"));
+        Assert.AreEqual(1, unaffected.SelectionStart);
+        Assert.AreEqual(3, unaffected.SelectionLength);
+        Assert.AreSame(moved, probes[0]);
+        var input = TestVisualTree.Find<TextBox>(host).Single(field => field.Text == "moved row");
+        input.Text = "correct binding";
+        Assert.AreEqual("correct binding", moved.Text.Value);
+        Assert.AreEqual("unaffected row", probes[2].Text.Value);
+    });
+
+    [TestMethod]
+    public void RemovedKeyGetsFreshStateOnReinsertion() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        TestVisualTree.Layout(host);
+        var original = probes[0];
+        original.Text.Value = "discard me";
+        ids.Remove(0);
+        TestVisualTree.Layout(host);
+        ids.ReplaceAll(new[] { 0 }.Concat(ids));
+        TestVisualTree.Layout(host);
+        Assert.AreNotSame(original, probes[0]);
+        Assert.AreEqual("initial", probes[0].Text.Value);
+    });
+
+    [TestMethod]
+    public void VirtualRowsRequireUniqueKeys() => StaTestRunner.Run(() =>
+    {
+        Assert.ThrowsException<InvalidOperationException>(() =>
+        {
+            using var host = new ViewHost(() => VirtualList([Text("no key")], 300));
+        });
+        Assert.ThrowsException<InvalidOperationException>(() =>
+        {
+            using var host = new ViewHost(() => VirtualList([Text("a").Id("same"), Text("b").Id("same")], 300));
+        });
+    });
+}
