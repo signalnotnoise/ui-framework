@@ -4,13 +4,25 @@
 
 **Experimental · 0.1.0-alpha.1 release candidate · Windows renderer · .NET 10**
 
-APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). No NuGet package is published by this repository's workflow.
+APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
 A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the first backend renders WPF controls on Windows. The runtime requires no XAML or third-party packages. Tests use MSTest.
 
 See the [documentation index](docs/README.md) for API guides, architectural decisions, benchmarks, and the next milestone.
 
-## Run
+## NuGet preview
+
+The package IDs are `SignalNotNoise.UI` (core) and `SignalNotNoise.UI.Wpf` (Windows renderer). The WPF package brings in the core automatically. Version `0.1.0-alpha.1` is prepared for publication; availability on NuGet.org is not implied by this README.
+
+Build and verify local packages with `./tools/Test-Packages.ps1`. Outputs are under `artifacts/packages`. To try the local preview in a .NET 10 WPF project:
+
+```powershell
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.1 --source "C:\path\to\ui-framework\artifacts\packages"
+```
+
+See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md).
+
+## Run from source
 
 Requires Windows and the .NET 10 SDK. From this directory:
 

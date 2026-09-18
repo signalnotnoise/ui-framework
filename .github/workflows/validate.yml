@@ -29,3 +29,12 @@ jobs:
           name: windows-validation
           path: artifacts/release-validation/
           if-no-files-found: warn
+      - name: Validate NuGet packages
+        shell: pwsh
+        run: ./tools/Test-Packages.ps1 -NoBuild
+      - name: Upload NuGet packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-preview
+          path: artifacts/packages/
+          if-no-files-found: warn

@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>SignalNotNoise.UI.Wpf</PackageId>
+    <Description>Experimental WPF host and renderer for SignalNotNoise.UI declarative C# components. Requires Windows and .NET 10.</Description>
+  </PropertyGroup>
   <ItemGroup><ProjectReference Include="../UI Framework/UI Framework.csproj" /></ItemGroup>
 </Project>
 

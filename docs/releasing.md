@@ -1,20 +1,39 @@
 # Preparing an experimental release
 
-The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The candidate version is 0.1.0-alpha.1, defined in Directory.Build.props. The first release is intended as source for evaluation. Package generation is disabled until public package identity is chosen.
+The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The candidate version is 0.1.0-alpha.1, defined in Directory.Build.props. Source archives and NuGet packages are intended for experimental evaluation.
 
 ## Required owner decisions
 
 - MIT licensing is selected and the approved license text is in LICENSE.
 - Public repository: https://github.com/signalnotnoise/ui-framework. Verify the staged source files before uploading.
-- For NuGet: choose unique package IDs and author metadata, set repository/license/readme metadata, enable packing only for the two libraries, and verify installation from a local package feed first. Do not publish packages with placeholder metadata.
+- NuGet IDs: `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf`; authors: UI Framework contributors. Only the two libraries are packable. Both include a package README, MIT license, repository metadata, and separate portable symbol packages. NuGet.org returned no published versions for either ID on September 18, 2026; this does not reserve the names or guarantee permission to publish under a reserved prefix.
+
+## NuGet packages
+
+Run `./tools/Test-Packages.ps1` to build the two packages under `artifacts/packages`, then restore and run a fresh WPF consumer using only that local feed and an isolated package cache. It checks the transitive core dependency, initial rendering, button events, observable updates, and retained control identity. After a Release build, use `-NoBuild` to reuse its binaries. Each validation gets a new consumer/cache directory so a stale package cannot hide a packaging defect.
+
+The Validate workflow runs the same check and uploads the validated `.nupkg` and `.snupkg` files. Symbols allow debugging. The separate Publish NuGet workflow builds from committed `main`, runs full release validation and package installation checks on Windows, and publishes those exact artifacts from a separate job.
+
+## GitHub Actions trusted publishing
+
+Use [NuGet Trusted Publishing](https://learn.microsoft.com/en-us/nuget/nuget-org/trusted-publishing). No long-lived API key or GitHub publishing secret is needed. Configure this once:
+
+1. In GitHub repository Settings > Environments, create `nuget`, restrict deployment branches to `main`, and optionally require a release reviewer.
+2. In Settings > Secrets and variables > Actions > Variables, create `NUGET_USER` containing `signalNotNoise`, your NuGet.org profile username (not email). This username is not a secret.
+3. In NuGet.org Account > Trusted Publishing, add a GitHub policy with Repository Owner `signalnotnoise`, Repository `ui-framework`, Workflow File `publish-nuget.yml` (filename only), Environment `nuget`. Select the intended NuGet package owner. Permit new packages and new versions, scoped to exact package IDs `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf` on separate lines.
+4. Push the committed packaging and workflow changes to GitHub. In Actions > Publish NuGet > Run workflow, choose branch `main` and enter the exact version from `Directory.Build.props` (initially `0.1.0-alpha.1`).
+
+The workflow rejects other branches or mismatched versions. The validation job has no publishing permission; only the publishing job requests an OIDC identity token (`id-token: write`). `NuGet/login@v1` exchanges it for a temporary credential immediately before the push. The environment name must match the NuGet policy. Core publishes before WPF. Runs are serialized; duplicate versions are skipped to permit retries after partial publication.
+
+The CLI also pushes the adjacent symbol package. Package versions are immutable: increment the prerelease suffix for corrections, and never use a retry to replace published contents. After indexing, repeat installation in a fresh WPF project using NuGet.org and update the README availability text. Local preparation alone does not publish packages. First publication remains pending until the owner configures the trusted policy and the workflow succeeds.
 
 ## Validation
 
-Local verification on September 17, 2026: Release build completed with zero warnings/errors; 19 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted CI has not run yet because no public repository has been created.
+Local verification on September 18, 2026: Release build completed with zero warnings/errors; 41 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. The isolated package consumer also passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted CI status was not verified in this preparation.
 
 Run `./tools/Test-Release.ps1` from Windows PowerShell or PowerShell 7. The same checks are configured in .github/workflows/validate.yml. Local evidence is stored under artifacts/release-validation and is excluded from source control.
 
-The workflow builds and validates only. It has read-only repository permissions and no publishing credentials. Its hosted run must still pass after the repository is created.
+`validate.yml` builds and validates only, with read-only repository permissions. `publish-nuget.yml` is manually triggered and repeats validation before its environment-scoped publishing job.
 
 ## Source release
 

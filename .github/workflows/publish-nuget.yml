@@ -1,0 +1,102 @@
+name: Publish NuGet
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact version from Directory.Build.props
+        required: true
+        default: 0.1.0-alpha.1
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nuget-publish
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Check release version and branch
+        id: version
+        shell: pwsh
+        env:
+          REQUESTED_VERSION: ${{ inputs.version }}
+        run: |
+          if ($env:GITHUB_REF -ne 'refs/heads/main') { throw 'Publish only from main.' }
+          [xml]$props = Get-Content Directory.Build.props
+          $version = [string]$props.Project.PropertyGroup.Version
+          if ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z]+([.-][0-9A-Za-z]+)*)?$') { throw 'Invalid package version.' }
+          if ($env:REQUESTED_VERSION -cne $version) { throw 'Requested version does not match Directory.Build.props.' }
+          "version=$version" >> $env:GITHUB_OUTPUT
+      - name: Validate release
+        shell: pwsh
+        run: ./tools/Test-Release.ps1
+      - name: Pack and verify fresh WPF installation
+        shell: pwsh
+        run: ./tools/Test-Packages.ps1 -NoBuild
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nuget-release
+          path: artifacts/packages/*.*nupkg
+          if-no-files-found: error
+      - name: Save validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-validation
+          path: artifacts/release-validation/
+          if-no-files-found: warn
+
+  publish:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: nuget
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/download-artifact@v4
+        with:
+          name: nuget-release
+          path: artifacts/packages
+      - name: Check NuGet profile configuration
+        shell: pwsh
+        env:
+          NUGET_USER: ${{ vars.NUGET_USER }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:NUGET_USER)) { throw 'Set the NUGET_USER repository variable to your NuGet.org profile username.' }
+      - name: Get temporary NuGet publishing credential
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ vars.NUGET_USER }}
+      - name: Publish core and WPF packages with symbols
+        shell: pwsh
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+          PACKAGE_VERSION: ${{ needs.validate.outputs.version }}
+        run: |
+          foreach ($id in @('SignalNotNoise.UI', 'SignalNotNoise.UI.Wpf')) {
+            $package = "artifacts/packages/$id.$env:PACKAGE_VERSION.nupkg"
+            if (-not (Test-Path -LiteralPath $package)) { throw "Missing package: $package" }
+            dotnet nuget push $package --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_API_KEY --skip-duplicate
+            if ($LASTEXITCODE -ne 0) { throw "Publish failed: $id" }
+          }

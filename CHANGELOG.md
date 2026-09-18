@@ -2,7 +2,10 @@
 
 ## 0.1.0-alpha.1 — Unreleased
 
-First experimental source release candidate. Nothing has been published by this preparation step.
+First experimental source and NuGet release candidate. Nothing has been published by this preparation step.
+
+- Packable `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf` libraries, with README, MIT license, repository metadata, and portable symbol packages.
+- Isolated local-feed WPF consumer validation and CI package artifacts.
 
 - C# view descriptions and a Windows WPF renderer.
 - Components with keyed identity, local state, lifecycle hooks and batched updates.
