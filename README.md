@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.1 release candidate · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.1 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
@@ -12,15 +12,15 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-The package IDs are `SignalNotNoise.UI` (core) and `SignalNotNoise.UI.Wpf` (Windows renderer). The WPF package brings in the core automatically. Version `0.1.0-alpha.1` is prepared for publication; availability on NuGet.org is not implied by this README.
+Version `0.1.0-alpha.1` is published on NuGet.org: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.1) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.1) (Windows renderer). The WPF package brings in the core automatically.
 
-Build and verify local packages with `./tools/Test-Packages.ps1`. Outputs are under `artifacts/packages`. To try the local preview in a .NET 10 WPF project:
+In a .NET 10 WPF project:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.1 --source "C:\path\to\ui-framework\artifacts\packages"
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.1
 ```
 
-See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md).
+See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md). To build and verify local packages instead, run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
 
 ## Run from source
 

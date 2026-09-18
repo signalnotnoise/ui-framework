@@ -25,11 +25,11 @@ Use [NuGet Trusted Publishing](https://learn.microsoft.com/en-us/nuget/nuget-org
 
 The workflow rejects other branches or mismatched versions. The validation job has no publishing permission; only the publishing job requests an OIDC identity token (`id-token: write`). `NuGet/login@v1` exchanges it for a temporary credential immediately before the push. The environment name must match the NuGet policy. Core publishes before WPF. Runs are serialized; duplicate versions are skipped to permit retries after partial publication.
 
-The CLI also pushes the adjacent symbol package. Package versions are immutable: increment the prerelease suffix for corrections, and never use a retry to replace published contents. After indexing, repeat installation in a fresh WPF project using NuGet.org and update the README availability text. Local preparation alone does not publish packages. First publication remains pending until the owner configures the trusted policy and the workflow succeeds.
+The CLI also pushes the adjacent symbol package. Package versions are immutable: increment the prerelease suffix for corrections, and never use a retry to replace published contents. After indexing, repeat installation in a fresh WPF project using NuGet.org and update the README availability text. Local preparation alone does not publish packages. Version `0.1.0-alpha.1` was published on September 18, 2026 from commit `78c88fb` by [Publish NuGet run 1](https://github.com/signalnotnoise/ui-framework/actions/runs/35395414259). The trusted policy, `NUGET_USER=signalNotNoise`, and `nuget` environment restricted to `main` are configured.
 
 ## Validation
 
-Local verification on September 18, 2026: Release build completed with zero warnings/errors; 41 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. The isolated package consumer also passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted CI status was not verified in this preparation.
+Local verification on September 18, 2026: Release build completed with zero warnings/errors; 41 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. The isolated package consumer also passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted validation and publishing both passed.
 
 Run `./tools/Test-Release.ps1` from Windows PowerShell or PowerShell 7. The same checks are configured in .github/workflows/validate.yml. Local evidence is stored under artifacts/release-validation and is excluded from source control.
 
@@ -39,8 +39,8 @@ Run `./tools/Test-Release.ps1` from Windows PowerShell or PowerShell 7. The same
 
 Run `./tools/New-SourceArchive.ps1` to generate artifacts/ui-framework-0.1.0-alpha.1-source.zip. The script includes an explicit set of source/documentation directories and file types, validates required files, and excludes build outputs and user settings. It does not upload or publish the archive.
 
-Exclude bin, obj, .vs, TestResults, artifacts, local environment files and user-specific IDE settings. Include source, project files, docs, tools, README, CHANGELOG, CONTRIBUTING and LICENSE. Review the release contents for accidental private data before upload. Git is initialized locally; the initial commit and push require a configured author and GitHub write authentication.
+Exclude bin, obj, .vs, TestResults, artifacts, local environment files and user-specific IDE settings. Include source, project files, docs, tools, README, CHANGELOG, CONTRIBUTING and LICENSE. Review the release contents for accidental private data before upload. The source repository is public; keep future release source commits pushed before running the publishing workflow.
 
-After validation and owner decisions are complete, create the public repository and an explicitly marked prerelease with a source archive. Describe it as experimental, Windows-only for rendering, requiring .NET 10. Do not present historical benchmarks as performance guarantees or claim focus/IME/accessibility verification.
+An optional GitHub prerelease can attach the source archive after validation. Describe it as experimental, Windows-only for rendering, requiring .NET 10. Do not present historical benchmarks as performance guarantees or claim focus/IME/accessibility verification.
 
 No repository, tag, release or package is created by the validation script.
