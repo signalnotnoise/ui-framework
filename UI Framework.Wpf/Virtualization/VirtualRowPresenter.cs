@@ -57,7 +57,8 @@ internal sealed class VirtualRowPresenter : ContentControl
 
     private static FrameworkElement? FindFocusable(DependencyObject? parent)
     {
-        if (parent is FrameworkElement element && element.Focusable && element.IsEnabled)
+        // Component hosts are infrastructure, not the row's interactive controls.
+        if (parent is FrameworkElement element && element is not ViewHost && element.Focusable && element.IsEnabled)
             return element;
         for (var i = 0; parent is not null && i < VisualTreeHelper.GetChildrenCount(parent); i++)
             if (FindFocusable(VisualTreeHelper.GetChild(parent, i)) is { } result)

@@ -123,6 +123,46 @@ public sealed class VirtualizationTests
     });
 
     [TestMethod]
+    public void RealWindowRestoresFocusAfterContainerRegeneration() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        var window = new Window { Content = host, Width = 500, Height = 300, ShowInTaskbar = false };
+        try
+        {
+            window.Show();
+            TestVisualTree.Layout(host);
+            var probe = probes[0];
+            probe.Text.Value = "focused row";
+            TestVisualTree.Layout(host);
+            var original = TestVisualTree.Find<TextBox>(host).Single(input => input.Text == "focused row");
+            Assert.IsTrue(original.Focus());
+            Assert.AreSame(original, Keyboard.FocusedElement);
+            var mounts = probe.Mounts;
+            var unmounts = probe.Unmounts;
+
+            // Refresh WPF's containers while preserving the framework's keyed rows.
+            TestVisualTree.Find<ItemsControl>(host).Single().Items.Refresh();
+            TestVisualTree.Layout(host);
+
+            var restored = TestVisualTree.Find<TextBox>(host).Single(input => input.Text == "focused row");
+            Assert.AreNotSame(original, restored, "Container regeneration must recreate the native input.");
+            Assert.AreSame(probe, probes[0]);
+            Assert.AreEqual(unmounts + 1, probe.Unmounts);
+            Assert.AreEqual(mounts + 1, probe.Mounts);
+            Assert.AreSame(restored, Keyboard.FocusedElement);
+            restored.Text = "edited after regeneration";
+            Assert.AreEqual("edited after regeneration", probe.Text.Value);
+            Assert.AreEqual("initial", probes[1].Text.Value);
+        }
+        finally
+        {
+            window.Close();
+        }
+    });
+
+    [TestMethod]
     public void VisibleMoveRetainsUnaffectedRowControls() => StaTestRunner.Run(() =>
     {
         var ids = new StateList<int>(Enumerable.Range(0, 1000));
