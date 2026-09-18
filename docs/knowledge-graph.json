@@ -33,6 +33,8 @@
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "samples/Counter/Models/LaunchTheme.cs",
         "tests/UI Framework.Checks/LayoutStyleTests.cs",
+        "UI Framework.Wpf/Styling/ToggleStyles.cs",
+        "tests/UI Framework.Checks/ToggleStyleTests.cs",
         "docs/layout-styling.md"
       ]
     },

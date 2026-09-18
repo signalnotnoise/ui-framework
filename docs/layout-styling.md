@@ -31,15 +31,20 @@ var theme = new ThemeTokens { Accent = "#176B57", ControlRadius = 8 };
 ThemeStyles.Apply(host, theme); // UI_Framework.Wpf
 ```
 
-ThemeTokens is an immutable core record for canvas, surface, text, interaction colors, control radius, and control padding. Sample views consume the surface and typography colors; scoped WPF Button and TextBox styles consume the control tokens. Apply another theme at the same boundary to replace these styles. Application-wide resources are not modified. Local WPF property values can override style values using standard WPF precedence.
+ThemeTokens is an immutable core record for canvas, surface, text, interaction colors, control radius, and control padding. Sample views consume the surface and typography colors; scoped WPF Button, TextBox, PasswordBox, ComboBox and CheckBox styles consume the control tokens. Apply another theme at the same boundary to replace these styles. Application-wide resources are not modified. Local WPF property values can override style values using standard WPF precedence.
 
-`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Toggle and scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.
+`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.
+
+`Toggle` remains a native CheckBox with the same boolean binding API. Its scoped template uses Ink for labels, Accent/OnAccent for checked indicators, Hover/Pressed variants for interaction, and a Focus-colored outline while keyboard focus is inside. Disabled labels and checkmarks use Muted at full opacity against Surface; they do not fall back to system black/gray text or fade the entire control. An explicit `.Foreground(...)` on the Toggle takes precedence, including when disabled. The template covers the framework's string-label, two-state Toggle contract. This source fix is newer than the published `0.1.0-alpha.1` package and needs a subsequent package version for NuGet consumers.
 
 ## Ownership and verification
 
 - Core `Layout/` and `Styling/`: platform-independent descriptions and tokens.
 - WPF `Layout/AdaptivePanel.cs`: measurement and arrangement.
 - WPF `Styling/ThemeStyles.cs`: scoped native resources, templates, and interaction states.
+- WPF `Styling/ToggleStyles.cs`: checkbox label, indicator, focus and disabled visuals; native CheckBox still owns input and automation.
 - Sample `LaunchTheme`: application palette; Launchpad composes the responsive screen.
 
 Focused regression checks cover proportional allocation after fixed widths/gaps, adaptive reflow without losing input identity or selection, themed binding and disabled-state updates, explicit foreground precedence/removal, empty-grid sizing, and invalid layout values. All 33 Release checks passed on September 18, 2026. Wide and compact Launchpad previews are generated with `--showcase --capture` and `--showcase --capture --compact`.
+
+`ToggleStyleTests` adds light/dark rendered-label and indicator checks, disabled contrast tokens, native UI Automation toggle/binding behavior, foreground precedence and removal, theme replacement, and focus-outline activation. Focus appearance is tested by driving WPF's focus-state property on a hidden presentation source; it is not a visible-window keyboard-focus or screen-reader campaign.

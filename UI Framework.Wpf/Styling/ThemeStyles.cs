@@ -23,6 +23,7 @@ public static class ThemeStyles
         root.Resources[typeof(TextBox)] = InputStyle(typeof(TextBox), theme);
         root.Resources[typeof(PasswordBox)] = InputStyle(typeof(PasswordBox), theme);
         root.Resources[typeof(ComboBox)] = PickerStyles.Create(BaseStyle(typeof(ComboBox), theme), theme);
+        root.Resources[typeof(CheckBox)] = ToggleStyles.Create(theme);
     }
 
     private static SolidColorBrush Brush(string color)
