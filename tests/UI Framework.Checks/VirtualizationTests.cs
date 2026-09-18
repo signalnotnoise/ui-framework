@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using UI_Framework;
 using UI_Framework.Wpf;
 using static UI_Framework.UI;
@@ -87,6 +89,37 @@ public sealed class VirtualizationTests
         Assert.AreSame(original, probes[0]);
         Assert.IsTrue(original.Expanded.Value);
         Assert.AreEqual("offscreen edit", TestVisualTree.Find<TextBox>(host).First().Text);
+    });
+
+    [TestMethod]
+    public void RealWindowRetainsFocusAfterScrollRoundTrip() => StaTestRunner.Run(() =>
+    {
+        var ids = new StateList<int>(Enumerable.Range(0, 1000));
+        var probes = new Dictionary<int, VirtualizationProbe>();
+        using var host = Create(ids, probes);
+        var window = new Window { Content = host, Width = 500, Height = 300, ShowInTaskbar = false };
+        try
+        {
+            window.Show();
+            TestVisualTree.Layout(host);
+            var original = TestVisualTree.Find<TextBox>(host).First();
+            Assert.IsTrue(original.Focus());
+            Assert.AreSame(original, Keyboard.FocusedElement);
+
+            var scroll = TestVisualTree.Find<ScrollViewer>(host).First();
+            scroll.ScrollToEnd();
+            TestVisualTree.Layout(host);
+            scroll.ScrollToHome();
+            TestVisualTree.Layout(host);
+
+            var restored = TestVisualTree.Find<TextBox>(host).First();
+            Assert.AreSame(restored, Keyboard.FocusedElement);
+            Assert.AreEqual("initial", restored.Text);
+        }
+        finally
+        {
+            window.Close();
+        }
     });
 
     [TestMethod]
