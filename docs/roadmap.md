@@ -1,6 +1,6 @@
 # Next milestone: viewport virtualization
 
-Status: basic viewport virtualization and incremental list updates implemented. See [current behavior and verification](virtualization.md). Remaining work includes visible-window focus/IME, accessibility, large-shuffle optimization and comparative performance measurements.
+Status: basic viewport virtualization, incremental list updates, and focused-row restoration implemented. See [current behavior and verification](virtualization.md). Remaining work includes stronger IME preservation, custom accessibility metadata/UI Automation coverage, large-shuffle optimization and comparative performance measurements.
 
 ## Objective
 
