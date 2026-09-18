@@ -88,10 +88,13 @@ public sealed class ViewHost : ContentControl, IDisposable
             if (view.AccessibleName is null) node.Control.ClearValue(System.Windows.Automation.AutomationProperties.NameProperty);
             else System.Windows.Automation.AutomationProperties.SetName(node.Control, view.AccessibleName);
         }
-        node.Frame.Padding = new Thickness(view.Inset);
-        node.Frame.Width = view.DesiredWidth;
-        node.Frame.Height = view.DesiredHeight;
-        node.Frame.CornerRadius = new CornerRadius(view.Radius);
+        // Avoid boxing and dependency-property work when retained layout is unchanged.
+        var padding = new Thickness(view.Inset);
+        if (node.Frame.Padding != padding) node.Frame.Padding = padding;
+        if (!node.Frame.Width.Equals(view.DesiredWidth)) node.Frame.Width = view.DesiredWidth;
+        if (!node.Frame.Height.Equals(view.DesiredHeight)) node.Frame.Height = view.DesiredHeight;
+        var radius = new CornerRadius(view.Radius);
+        if (node.Frame.CornerRadius != radius) node.Frame.CornerRadius = radius;
         node.Frame.HorizontalAlignment = view.Horizontal switch { ViewAlignment.Start => HorizontalAlignment.Left, ViewAlignment.Center => HorizontalAlignment.Center, ViewAlignment.End => HorizontalAlignment.Right, _ => HorizontalAlignment.Stretch };
         node.Frame.VerticalAlignment = view.Vertical switch { ViewAlignment.Start => VerticalAlignment.Top, ViewAlignment.Center => VerticalAlignment.Center, ViewAlignment.End => VerticalAlignment.Bottom, _ => VerticalAlignment.Stretch };
         node.Frame.IsEnabled = view.Enabled;
@@ -188,6 +191,25 @@ public sealed class ViewHost : ContentControl, IDisposable
                     adaptive.InvalidateMeasure();
                 }
                 var old = node.Children;
+                // Most state updates keep the same siblings in the same order.
+                // Patch those directly instead of allocating reconciliation collections.
+                var sameOrder = old.Count == view.Children.Count && panel.Children.Count == old.Count;
+                for (var i = 0; sameOrder && i < old.Count; i++)
+                {
+                    var child = view.Children[i];
+                    sameOrder = old[i].View.Kind == child.Kind && old[i].View.Key == child.Key
+                        && old[i].View.ComponentType == child.ComponentType
+                        && ReferenceEquals(panel.Children[i], old[i].Element);
+                }
+                if (sameOrder)
+                {
+                    for (var i = 0; i < old.Count; i++)
+                    {
+                        Patch(old[i], view.Children[i], node.RestoredChild(view.Children[i], i));
+                        SetChildLayout(panel, old[i].Element, i, old.Count, view.Gap);
+                    }
+                    break;
+                }
                 var keyed = old.Where(n => n.View.Key != null).ToDictionary(n => n.View.Key!);
                 var next = new List<Node>();
                 try
@@ -219,16 +241,22 @@ public sealed class ViewHost : ContentControl, IDisposable
                         panel.Children.Remove(element);
                         panel.Children.Insert(i, element);
                     }
-                    if (panel is Grid) Grid.SetColumn(element, i * 2);
-                    element.Margin = panel is AdaptivePanel or Grid ? new Thickness(0) : panel is StackPanel { Orientation: Orientation.Vertical }
-                        ? new Thickness(0, 0, 0, i < next.Count - 1 ? view.Gap : 0)
-                        : new Thickness(0, 0, i < next.Count - 1 ? view.Gap : 0, 0);
+                    SetChildLayout(panel, element, i, next.Count, view.Gap);
                 }
                 node.Children = next;
                 break;
         }
         node.Restored = null;
         return node;
+    }
+
+    private static void SetChildLayout(Panel panel, FrameworkElement element, int index, int count, double gap)
+    {
+        if (panel is Grid) Grid.SetColumn(element, index * 2);
+        var margin = panel is AdaptivePanel or Grid ? new Thickness(0) : panel is StackPanel { Orientation: Orientation.Vertical }
+            ? new Thickness(0, 0, 0, index < count - 1 ? gap : 0)
+            : new Thickness(0, 0, index < count - 1 ? gap : 0, 0);
+        if (element.Margin != margin) element.Margin = margin;
     }
 
     private static Brush? Brush(string? color)

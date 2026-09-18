@@ -29,6 +29,40 @@ public sealed class LayoutStyleTests
     });
 
     [TestMethod]
+    public void RetainedLayoutTracksChangesAndRestoresAutomaticSize() => StaTestRunner.Run(() =>
+    {
+        var inset = new State<double>(4);
+        var gap = new State<double>(6);
+        var width = new State<double>(100);
+        var height = new State<double>(40);
+        var radius = new State<double>(3);
+        using var host = new ViewHost(() => HStack(
+            Text("first") with { Inset = inset.Value, DesiredWidth = width.Value, DesiredHeight = height.Value, Radius = radius.Value },
+            Text("second")).Spacing(gap.Value));
+        Layout(host, 600);
+        var text = TestVisualTree.Find<TextBlock>(host).First(t => t.Text == "first");
+        var frame = (Border)text.Parent;
+        Assert.AreEqual(new Thickness(4), frame.Padding);
+        Assert.AreEqual(new Thickness(0, 0, 6, 0), frame.Margin);
+        Assert.AreEqual(100.0, frame.Width);
+        Assert.AreEqual(40.0, frame.Height);
+        Assert.AreEqual(new CornerRadius(3), frame.CornerRadius);
+        inset.Value = 9;
+        gap.Value = 12;
+        width.Value = double.NaN;
+        height.Value = double.NaN;
+        radius.Value = 7;
+        TestVisualTree.Flush();
+        Layout(host, 600);
+        Assert.AreSame(text, TestVisualTree.Find<TextBlock>(host).First(t => t.Text == "first"));
+        Assert.AreEqual(new Thickness(9), frame.Padding);
+        Assert.AreEqual(new Thickness(0, 0, 12, 0), frame.Margin);
+        Assert.IsTrue(double.IsNaN(frame.Width));
+        Assert.IsTrue(double.IsNaN(frame.Height));
+        Assert.AreEqual(new CornerRadius(7), frame.CornerRadius);
+    });
+
+    [TestMethod]
     public void AdaptiveColumnsReflowWithoutReplacingTheInput() => StaTestRunner.Run(() =>
     {
         var state = new State<string>("selection survives resize");

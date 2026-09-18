@@ -15,7 +15,7 @@ internal static class ToggleStyles
     {
         var style = new Style(typeof(CheckBox));
         style.Setters.Add(new Setter(Control.ForegroundProperty, Brush(theme.Ink)));
-        style.Setters.Add(new Setter(Control.PaddingProperty, new Thickness(4)));
+        style.Setters.Add(new Setter(Control.PaddingProperty, new Thickness(2)));
         // The template supplies a theme-colored focus outline instead of system black.
         style.Setters.Add(new Setter(Control.FocusVisualStyleProperty, null));
         var template = new ControlTemplate(typeof(CheckBox));
@@ -30,19 +30,22 @@ internal static class ToggleStyles
         indicator.SetValue(DockPanel.DockProperty, Dock.Left);
         indicator.SetValue(FrameworkElement.WidthProperty, 20.0);
         indicator.SetValue(FrameworkElement.HeightProperty, 20.0);
-        indicator.SetValue(FrameworkElement.MarginProperty, new Thickness(0, 0, 8, 0));
+        indicator.SetValue(FrameworkElement.MarginProperty, new Thickness(0, 0, 4, 0));
         indicator.SetValue(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
         indicator.SetValue(Border.CornerRadiusProperty, new CornerRadius(3));
         indicator.SetValue(Border.BorderThicknessProperty, new Thickness(1));
         indicator.SetValue(Border.BorderBrushProperty, Brush(theme.Border));
         indicator.SetValue(Border.BackgroundProperty, Brush(theme.Surface));
         var mark = new FrameworkElementFactory(typeof(Path), "CheckMark");
-        mark.SetValue(Path.DataProperty, Geometry.Parse("M 3,8 L 7,12 L 15,4"));
+        var checkGeometry = Geometry.Parse("M 3,8 L 7,12 L 15,4");
+        checkGeometry.Freeze();
+        mark.SetValue(Path.DataProperty, checkGeometry);
         mark.SetValue(Shape.StrokeProperty, Brush(theme.OnAccent));
         mark.SetValue(Shape.StrokeThicknessProperty, 2.0);
         mark.SetValue(Shape.StrokeStartLineCapProperty, PenLineCap.Round);
         mark.SetValue(Shape.StrokeEndLineCapProperty, PenLineCap.Round);
-        mark.SetValue(UIElement.VisibilityProperty, Visibility.Hidden);
+        // The fixed-size indicator owns layout; an unchecked mark needs no measure work.
+        mark.SetValue(UIElement.VisibilityProperty, Visibility.Collapsed);
         indicator.AppendChild(mark);
         row.AppendChild(indicator);
         var label = new FrameworkElementFactory(typeof(TextBlock), "Label");

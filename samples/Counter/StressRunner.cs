@@ -17,13 +17,22 @@ internal static class StressRunner
     {
         var path = Path.GetFullPath(Option(args, "--report", "artifacts/stress/comparison.json"));
         using var model = new WorkspaceModel(1000) { TelemetryEnabled = false };
+        model.Virtualized.Value = args.Contains("--virtualized");
+        var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
+        var mountWatch = Stopwatch.StartNew();
         using var host = new ViewHost(() => Component<Dashboard>(screen => screen.Model = model));
+        if (args.Contains("--themed")) ThemeStyles.Apply(host, new UI_Framework.ThemeTokens());
         Flush();
         host.Measure(new Size(1320, 1080));
         host.Arrange(new Rect(0, 0, 1320, 1080));
         host.UpdateLayout();
+        mountWatch.Stop();
+        var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
+        var mountBuilds = model.Counters.Builds;
         Console.WriteLine("Comparison tree mounted: 1,000 rows. Measuring 50 mixed operations.");
         var before = model.Counters.Builds;
+        var beforeMounts = model.Counters.Mounts;
+        var beforeUnmounts = model.Counters.Unmounts;
         var allocations = GC.GetAllocatedBytesForCurrentThread();
         var watch = Stopwatch.StartNew();
         for (var step = 0; step < 50; step++)
@@ -35,10 +44,15 @@ internal static class StressRunner
         watch.Stop();
         var result = new
         {
+            SchemaVersion = 2,
+            Scenario = args.Contains("--themed") ? "themed-full-list" : model.Virtualized.Value ? "virtualized" : "full-list",
+            MountMilliseconds = mountWatch.Elapsed.TotalMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
             Mode = args.Contains("--reference") ? "unfiltered observation, memo disabled" : "selective observation, memo enabled",
             Rows = 1000, MixedOperations = 50, Milliseconds = watch.Elapsed.TotalMilliseconds,
             BodyBuilds = model.Counters.Builds - before,
             AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocations,
+            Mounts = model.Counters.Mounts - beforeMounts, Unmounts = model.Counters.Unmounts - beforeUnmounts,
+            Runtime = Environment.Version.ToString(),
             TimeUtc = DateTimeOffset.UtcNow
         };
         Require(model.Items.Count == 1000, "Comparison changed the expected row count.");

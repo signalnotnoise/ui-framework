@@ -39,6 +39,8 @@ Memo is opt-in. Include changing labels, scalar props, callbacks, and any callba
 
 ## Stress workload and remaining limits
 
+For every runtime change, use the paired revision comparison and CI budgets in [performance guardrails](performance-guardrails.md). The renderer patches siblings directly when their identities and order are unchanged, avoiding temporary reconciliation collections. It still uses keyed reconciliation for structural changes and skips unchanged padding, size, radius, and spacing writes on retained elements.
+
 The stress board uses projected bindings, per-row selected-state selectors, and explicit Memo inputs on retained child components. All 1,000 rows still mount; no virtualization or reduction in work-item count is used to improve the comparison. The renderer also avoids resetting a retained element's margin to zero immediately before restoring its stack spacing.
 
 Use the workload in [stress-lab.md](stress-lab.md) and compare body builds, UI-thread allocations, and elapsed time together. Lower body counts alone are not proof of a speed improvement. Timing includes native control work and varies by machine and runtime warm-up.

@@ -1,0 +1,13 @@
+{
+  "revision": "78c88fb901c202e3c2e49b6de300d1ce2369e00b",
+  "description": "Published 0.1.0-alpha.1 source. Retain until an evidence-backed baseline promotion is explicitly justified.",
+  "timeRegressionPercent": 10,
+  "allocationRegressionPercent": 2,
+  "componentWorkRegressionPercent": 0,
+  "scenarioMetricBudgets": {
+    "themed-full-list": {
+      "AllocatedBytes": 6
+    }
+  },
+  "exceptionReason": "2026-09-18: user explicitly accepted approximately 6% extra allocation for themed updates for now. Retain the published reference and keep pursuing improvement; all other budgets remain unchanged."
+}

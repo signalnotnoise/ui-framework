@@ -19,7 +19,7 @@ concurrency:
 jobs:
   validate:
     runs-on: windows-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
@@ -48,6 +48,19 @@ jobs:
       - name: Pack and verify fresh WPF installation
         shell: pwsh
         run: ./tools/Test-Packages.ps1 -NoBuild
+      - name: Check performance before publishing
+        shell: pwsh
+        run: ./tools/Test-Performance.ps1 -OutputDirectory artifacts/performance/release
+      - name: Save performance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-performance
+          path: |
+            artifacts/performance/release/*.json
+            artifacts/performance/release/*.md
+            artifacts/performance/release/*.log
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
         with:
           name: nuget-release

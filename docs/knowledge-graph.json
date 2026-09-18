@@ -129,7 +129,7 @@
       "id": "host",
       "label": "WPF view host",
       "status": "implemented",
-      "summary": "Owns one render session and reconciles descriptions with retained controls.",
+      "summary": "Owns one render session and reconciles descriptions with retained controls. Unchanged sibling order patches directly; structural changes use keyed reconciliation.",
       "sources": [
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Rendering/Node.cs"
@@ -371,7 +371,10 @@
         "samples/Counter/StressRunner.cs",
         "samples/Counter/Diagnostics/Measurement.cs",
         "docs/stress-lab.md",
-        "docs/performance-results.md"
+        "docs/performance-results.md",
+        "docs/performance-guardrails.md",
+        "tools/Test-Performance.ps1",
+        "tools/performance-baseline.json"
       ]
     },
     {

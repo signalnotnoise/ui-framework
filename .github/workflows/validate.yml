@@ -9,6 +9,36 @@ permissions:
   contents: read
 
 jobs:
+  performance:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Measure against accepted baseline
+        shell: pwsh
+        run: ./tools/Test-Performance.ps1 -OutputDirectory artifacts/performance/ci
+      - name: Save performance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-comparison
+          path: |
+            artifacts/performance/ci/*.json
+            artifacts/performance/ci/*.md
+            artifacts/performance/ci/*.log
+          if-no-files-found: warn
+      - name: Show comparison
+        if: always()
+        shell: pwsh
+        run: |
+          if (Test-Path artifacts/performance/ci/summary.md) {
+            Get-Content artifacts/performance/ci/summary.md >> $env:GITHUB_STEP_SUMMARY
+          }
   windows:
     runs-on: windows-latest
     timeout-minutes: 20

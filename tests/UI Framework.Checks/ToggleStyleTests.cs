@@ -34,12 +34,15 @@ public sealed class ToggleStyleTests
         var mark = (System.Windows.Shapes.Path)toggle.Template.FindName("CheckMark", toggle);
         AssertColor(theme.Ink, label.Foreground);
         AssertColor(theme.Surface, indicator.Background);
-        Assert.AreEqual(Visibility.Hidden, mark.Visibility);
+        Assert.AreEqual(Visibility.Collapsed, mark.Visibility);
+        var uncheckedSize = toggle.RenderSize;
         // Exercise the native checkbox toggle provider, preserving UI Automation behavior.
         var peer = new CheckBoxAutomationPeer(toggle);
         var provider = (IToggleProvider)peer.GetPattern(PatternInterface.Toggle);
         provider.Toggle();
         TestVisualTree.Flush();
+        TestVisualTree.Layout(host);
+        Assert.AreEqual(uncheckedSize, toggle.RenderSize, "Checking must not resize the fixed indicator or its label.");
         Assert.IsTrue(value.Value);
         Assert.AreEqual(Visibility.Visible, mark.Visibility);
         AssertColor(theme.Accent, indicator.Background);
@@ -59,9 +62,30 @@ public sealed class ToggleStyleTests
         value.Value = false;
         TestVisualTree.Flush();
         AssertColor(theme.Ink, label.Foreground);
-        Assert.AreEqual(Visibility.Hidden, mark.Visibility);
+        Assert.AreEqual(Visibility.Collapsed, mark.Visibility);
         using var other = new ViewHost(() => Toggle("Unscoped", new State<bool>(false)));
         Assert.IsFalse(other.Resources.Contains(typeof(CheckBox)));
+    });
+
+    [TestMethod]
+    public void CompactToggleKeepsShortLabelOnOneLineAndWrapsLongLabels() => StaTestRunner.Run(() =>
+    {
+        var caption = new State<string>("Done");
+        var value = new State<bool>(false);
+        using var host = new ViewHost(() => Toggle(caption.Value, value).Width(78));
+        ThemeStyles.Apply(host, new ThemeTokens());
+        TestVisualTree.Layout(host);
+        var toggle = TestVisualTree.Find<CheckBox>(host).Single();
+        var label = (TextBlock)toggle.Template.FindName("Label", toggle);
+        var shortHeight = label.ActualHeight;
+        Assert.IsTrue(shortHeight <= toggle.FontSize * 1.6, "Short caption should not wrap in a compact toggle.");
+        caption.Value = "A longer label still wraps and remains readable";
+        TestVisualTree.Flush();
+        TestVisualTree.Layout(host);
+        Assert.IsTrue(label.ActualHeight > shortHeight);
+        Assert.AreEqual(TextWrapping.Wrap, label.TextWrapping);
+        var mark = (System.Windows.Shapes.Path)toggle.Template.FindName("CheckMark", toggle);
+        Assert.IsTrue(mark.Data.IsFrozen);
     });
 
     [TestMethod]

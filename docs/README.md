@@ -13,6 +13,9 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Editors and selectors](editors.md) | Multiline/read-only text, bounded undo, masked passwords, and indexed selection. |
 | [Rendering performance](performance.md) | Derived observation, Memo inputs, and performance contracts. |
 | [Measured results](performance-results.md) | Reference/optimized timings, allocations, checks, and measurement limitations. |
+| [Performance guardrails](performance-guardrails.md) | Paired baseline measurements, regression budgets, and CI/release gates. |
+| [September 18 comparison](performance-2026-09-18.md) | Detected regression, improvements, and the explicitly accepted temporary allocation budget. |
+| [Accessibility labels](accessibility.md) | Contextual native automation names without changing visible control text. |
 | [Stress lab](stress-lab.md) | Interactive controls, automated workloads, and comparison commands. |
 | [Launchpad showcase](launchpad.md) | A release board with live editing, workflow actions, filters, and progress. |
 | [Layout and styling](layout-styling.md) | Weighted rows, adaptive columns, alignment, and scoped control themes. |
