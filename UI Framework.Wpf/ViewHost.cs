@@ -19,6 +19,8 @@ public sealed class ViewHost : ContentControl, IDisposable
     internal ViewHost(Func<View> body, NodeSnapshot? snapshot)
     {
         initialSnapshot = snapshot;
+        HorizontalContentAlignment = HorizontalAlignment.Stretch;
+        VerticalContentAlignment = VerticalAlignment.Stretch;
         session = new(body);
         session.Invalidated += Schedule;
         try { Refresh(); }
@@ -83,6 +85,10 @@ public sealed class ViewHost : ContentControl, IDisposable
         node.Frame.Width = view.DesiredWidth;
         node.Frame.Height = view.DesiredHeight;
         node.Frame.CornerRadius = new CornerRadius(view.Radius);
+        node.Frame.HorizontalAlignment = view.Horizontal switch { ViewAlignment.Start => HorizontalAlignment.Left, ViewAlignment.Center => HorizontalAlignment.Center, ViewAlignment.End => HorizontalAlignment.Right, _ => HorizontalAlignment.Stretch };
+        node.Frame.VerticalAlignment = view.Vertical switch { ViewAlignment.Start => VerticalAlignment.Top, ViewAlignment.Center => VerticalAlignment.Center, ViewAlignment.End => VerticalAlignment.Bottom, _ => VerticalAlignment.Stretch };
+        node.Frame.IsEnabled = view.Enabled;
+        if (node.Control is Button styledButton) ThemeStyles.SetAppearance(styledButton, view.ButtonAppearance);
         if (created || previous.BackgroundColor != view.BackgroundColor)
             node.Frame.Background = Brush(view.BackgroundColor);
         if (created || previous.ForegroundColor != view.ForegroundColor)
@@ -126,7 +132,23 @@ public sealed class ViewHost : ContentControl, IDisposable
                 node.Children = [scrollChild];
                 scroll.Content = scrollChild.Element;
                 break;
-            case StackPanel panel:
+            case Panel panel:
+                if (panel is Grid grid)
+                {
+                    grid.ColumnDefinitions.Clear();
+                    foreach (var child in view.Children)
+                    {
+                        if (grid.ColumnDefinitions.Count > 0) grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(view.Gap) });
+                        grid.ColumnDefinitions.Add(new ColumnDefinition { Width = !double.IsNaN(child.DesiredWidth) || child.FlexWeight == 0
+                            ? GridLength.Auto : new GridLength(child.FlexWeight, GridUnitType.Star) });
+                    }
+                }
+                if (panel is AdaptivePanel adaptive)
+                {
+                    adaptive.MinimumColumnWidth = view.MinimumColumnWidth;
+                    adaptive.Gap = view.Gap;
+                    adaptive.InvalidateMeasure();
+                }
                 var old = node.Children;
                 var keyed = old.Where(n => n.View.Key != null).ToDictionary(n => n.View.Key!);
                 var next = new List<Node>();
@@ -159,7 +181,8 @@ public sealed class ViewHost : ContentControl, IDisposable
                         panel.Children.Remove(element);
                         panel.Children.Insert(i, element);
                     }
-                    element.Margin = panel.Orientation == Orientation.Vertical
+                    if (panel is Grid) Grid.SetColumn(element, i * 2);
+                    element.Margin = panel is AdaptivePanel or Grid ? new Thickness(0) : panel is StackPanel { Orientation: Orientation.Vertical }
                         ? new Thickness(0, 0, 0, i < next.Count - 1 ? view.Gap : 0)
                         : new Thickness(0, 0, i < next.Count - 1 ? view.Gap : 0, 0);
                 }

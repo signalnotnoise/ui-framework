@@ -7,6 +7,8 @@ Green: implemented. Amber: partial. Gray: planned.
 ```mermaid
 flowchart LR
   subgraph implemented[implemented]
+    layoutstyle["Responsive layout and scoped styling"]
+    launchpad["Launchpad product showcase"]
     api["C# composition API"]
     view["View description"]
     component["Reusable component"]
@@ -89,10 +91,14 @@ flowchart LR
   visualstress -->|exercises| identity
   release -->|validates| checks
   release -->|runs| stress
+  launchpad -->|composes| api
+  launchpad -->|edits through| binding
+  launchpad -->|demonstrates| layoutstyle
+  layoutstyle -->|extends| api
   classDef implemented fill:#dcfce7,stroke:#15803d,color:#14532d
   classDef partial fill:#fef3c7,stroke:#b45309,color:#78350f
   classDef planned fill:#f1f5f9,stroke:#64748b,color:#334155
-  class api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,binding,stress,derived,memo,visualstress implemented
+  class layoutstyle,launchpad,api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,binding,stress,derived,memo,visualstress implemented
   class updates,focus,errors,styling,virtualization,release partial
   class navigation,animation,hotreload,platforms planned
 ```
@@ -101,6 +107,8 @@ flowchart LR
 
 | Concept | Status | Contract / limitation | Sources |
 | --- | --- | --- | --- |
+| Responsive layout and scoped styling | implemented | Core defines weighted rows, adaptive grids, alignment and theme tokens. WPF owns measurement, native templates and interaction states. Launchpad supplies application design. | [UI Framework/Layout/ViewAlignment.cs](../UI%20Framework/Layout/ViewAlignment.cs), [UI Framework/Styling/ThemeTokens.cs](../UI%20Framework/Styling/ThemeTokens.cs), [UI Framework/Styling/ButtonStyleKind.cs](../UI%20Framework/Styling/ButtonStyleKind.cs), [UI Framework.Wpf/Layout/AdaptivePanel.cs](../UI%20Framework.Wpf/Layout/AdaptivePanel.cs), [UI Framework.Wpf/Styling/ThemeStyles.cs](../UI%20Framework.Wpf/Styling/ThemeStyles.cs), [samples/Counter/Models/LaunchTheme.cs](../samples/Counter/Models/LaunchTheme.cs), [tests/UI Framework.Checks/LayoutStyleTests.cs](../tests/UI%20Framework.Checks/LayoutStyleTests.cs), [docs/layout-styling.md](../docs/layout-styling.md) |
+| Launchpad product showcase | implemented | Session-only release board with live editing, stage transitions, search, priority filtering, and progress. Sample models own application state; the WPF window owns presentation lifecycle. | [samples/Counter/Components/Launchpad.cs](../samples/Counter/Components/Launchpad.cs), [samples/Counter/Models/LaunchModel.cs](../samples/Counter/Models/LaunchModel.cs), [samples/Counter/Models/LaunchItem.cs](../samples/Counter/Models/LaunchItem.cs), [samples/Counter/Models/LaunchStage.cs](../samples/Counter/Models/LaunchStage.cs), [samples/Counter/LaunchpadWindow.cs](../samples/Counter/LaunchpadWindow.cs), [docs/launchpad.md](../docs/launchpad.md) |
 | C# composition API | implemented | Text, Button, TextField, Toggle, Scroll, stacks, modifiers, and Component<T> factories. | [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/UI.cs](../UI%20Framework/UI.cs) |
 | View description | implemented | Records describe a view tree without owning native controls. | [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/UI.cs](../UI%20Framework/UI.cs) |
 | Reusable component | implemented | Retained instance with Body, local state, props, and lifetime hooks. | [UI Framework/Component.cs](../UI%20Framework/Component.cs), [docs/components.md](../docs/components.md) |

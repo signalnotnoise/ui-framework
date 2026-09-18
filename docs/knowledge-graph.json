@@ -3,6 +3,36 @@
   "title": "UI Framework knowledge graph",
   "nodes": [
     {
+      "id": "layoutstyle",
+      "label": "Responsive layout and scoped styling",
+      "status": "implemented",
+      "summary": "Core defines weighted rows, adaptive grids, alignment and theme tokens. WPF owns measurement, native templates and interaction states. Launchpad supplies application design.",
+      "sources": [
+        "UI Framework/Layout/ViewAlignment.cs",
+        "UI Framework/Styling/ThemeTokens.cs",
+        "UI Framework/Styling/ButtonStyleKind.cs",
+        "UI Framework.Wpf/Layout/AdaptivePanel.cs",
+        "UI Framework.Wpf/Styling/ThemeStyles.cs",
+        "samples/Counter/Models/LaunchTheme.cs",
+        "tests/UI Framework.Checks/LayoutStyleTests.cs",
+        "docs/layout-styling.md"
+      ]
+    },
+    {
+      "id": "launchpad",
+      "label": "Launchpad product showcase",
+      "status": "implemented",
+      "summary": "Session-only release board with live editing, stage transitions, search, priority filtering, and progress. Sample models own application state; the WPF window owns presentation lifecycle.",
+      "sources": [
+        "samples/Counter/Components/Launchpad.cs",
+        "samples/Counter/Models/LaunchModel.cs",
+        "samples/Counter/Models/LaunchItem.cs",
+        "samples/Counter/Models/LaunchStage.cs",
+        "samples/Counter/LaunchpadWindow.cs",
+        "docs/launchpad.md"
+      ]
+    },
+    {
       "id": "api",
       "label": "C# composition API",
       "status": "implemented",
@@ -639,6 +669,26 @@
       "from": "release",
       "relation": "runs",
       "to": "stress"
+    },
+    {
+      "from": "launchpad",
+      "relation": "composes",
+      "to": "api"
+    },
+    {
+      "from": "launchpad",
+      "relation": "edits through",
+      "to": "binding"
+    },
+    {
+      "from": "launchpad",
+      "relation": "demonstrates",
+      "to": "layoutstyle"
+    },
+    {
+      "from": "layoutstyle",
+      "relation": "extends",
+      "to": "api"
     }
   ]
 }

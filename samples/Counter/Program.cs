@@ -24,6 +24,7 @@ internal static class Program
         if (args.Contains("--visual-check")) return VisualStressChecks.Run();
         if (args.Contains("--compare")) return StressRunner.Compare(args);
         if (args.Contains("--stress")) return StressRunner.Run(args);
+        if (args.Contains("--showcase")) return LaunchpadWindow.Run(app, args);
 
         using var model = new WorkspaceModel();
         using var host = new ViewHost(() => Component<Dashboard>(screen => screen.Model = model));

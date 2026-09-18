@@ -24,12 +24,22 @@ public sealed record View(ViewKind Kind)
     public string? BackgroundColor { get; init; }
     public string? ForegroundColor { get; init; }
     public double Radius { get; init; }
+    public double FlexWeight { get; init; } = 1;
+    public double MinimumColumnWidth { get; init; } = 240;
+    public ViewAlignment Horizontal { get; init; } = ViewAlignment.Stretch;
+    public ViewAlignment Vertical { get; init; } = ViewAlignment.Stretch;
+    public ButtonStyleKind ButtonAppearance { get; init; }
+    public bool Enabled { get; init; } = true;
+    public View Flex(double weight = 1) => this with { FlexWeight = Dimension(weight) };
+    public View Align(ViewAlignment horizontal, ViewAlignment vertical = ViewAlignment.Stretch) => this with { Horizontal = horizontal, Vertical = vertical };
+    public View ButtonStyle(ButtonStyleKind style) => this with { ButtonAppearance = style };
+    public View IsEnabled(bool enabled) => this with { Enabled = enabled };
     public View Id(string key) => this with { Key = key };
     /// <summary>Skip parent-driven component rebuilds when these immutable input values compare equal.</summary>
     public View Memo(object? inputs) => Kind == ViewKind.Component
         ? this with { IsMemoized = true, MemoInputs = inputs }
         : throw new InvalidOperationException("Memo applies only to component descriptions.");
-    public View Spacing(double value) => this with { Gap = value };
+    public View Spacing(double value) => this with { Gap = Dimension(value) };
     public View Padding(double value) => this with { Inset = value };
     public View FontSize(double value) => this with { TextSize = value };
     public View Width(double value) => this with { DesiredWidth = Dimension(value) };

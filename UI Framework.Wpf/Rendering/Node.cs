@@ -58,6 +58,8 @@ internal sealed class Node : IDisposable
             ViewKind.VirtualList => new VirtualListControl(),
             ViewKind.VStack => new StackPanel { Orientation = Orientation.Vertical },
             ViewKind.HStack => new StackPanel { Orientation = Orientation.Horizontal },
+            ViewKind.FlexRow => new Grid(),
+            ViewKind.AdaptiveGrid => new AdaptivePanel(),
             _ => throw new ArgumentOutOfRangeException(nameof(view))
         };
         Frame = new Border { Child = Control };

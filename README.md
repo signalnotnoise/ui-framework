@@ -20,6 +20,16 @@ dotnet run --project samples/Counter
 dotnet test "tests/UI Framework.Checks"
 ```
 
+## Try the product showcase
+
+Launchpad is a release-planning board built with the framework's C# views and observable state. Move cards between Planned, Building, and Shipped, edit their details live, filter by title/owner/area, and add ideas while the release metrics update.
+
+```powershell
+dotnet run --project samples/Counter -- --showcase
+```
+
+The demo uses session-only sample data. The existing stress lab remains the default. See [Launchpad](docs/launchpad.md) for a short walkthrough.
+
 ## Write a view
 
 ```csharp
@@ -84,7 +94,7 @@ The [first measured optimization pass](docs/performance-results.md) reduced body
 
 The Counter app is now a [binding stress lab](docs/stress-lab.md): a project board with up to 1,000 rows, full-list and [virtualized modes](docs/virtualization.md), a shared inspector, nested checklists, filters, project settings, lifecycle/heap counters, recursive components, a 10,000-write burst, and a stoppable mixed-operation campaign. Run it normally for manual testing, or use the documented `--stress` mode to generate measurements and an offscreen dashboard capture.
 
-Additional primitives include `Toggle`, `Scroll`, Width/Height, Background/Foreground, and CornerRadius. These provide basic composition and styling; they are not a complete styling/theme system.
+Additional primitives include `Toggle`, `Scroll`, Width/Height, Background/Foreground, and CornerRadius. `FlexRow`, `AdaptiveGrid`, and `Align` add responsive layout; `ThemeTokens` and scoped WPF `ThemeStyles` provide reusable button and input styling with interaction states. See [layout and styling](docs/layout-styling.md).
 
 ## Projects
 
@@ -118,7 +128,7 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Update scope | Local updates skip ancestors/siblings; explicit Memo inputs let unchanged child components skip parent-driven rebuilds. |
 | Mutable collections | Structural changes observed through StateList; arbitrary object mutations are not deep-observed. |
 | Binding | Direct/composed projections notify only when the selected value changes; raw State.Value reads still observe the whole state. |
-| Styling | Basic dimensions, colors, corners, font size, and spacing; no theme/token/animation system. |
+| Styling | Theme tokens, scoped button/input styles, weighted rows, adaptive columns, and alignment; no animation system. |
 | Threading | State belongs to its creating thread; no concurrent state or automatic marshaling. |
 | Focus | Controls, text, and selection retained in tested reorders; uninterrupted keyboard focus/IME behavior still needs visible-window testing. |
 | Errors | Dependency tracking survives failed body builds; rendering is not transactional and has no error boundary/recovery UI. |

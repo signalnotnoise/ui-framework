@@ -2,6 +2,13 @@ namespace UI_Framework;
 
 public static class UI
 {
+    /// <summary>Distributes finite horizontal space by Flex weight. Explicit Width takes precedence.</summary>
+    public static View FlexRow(params View[] children) => new(ViewKind.FlexRow) { Children = children };
+    /// <summary>Equal-width columns that wrap as available width changes.</summary>
+    public static View AdaptiveGrid(double minimumColumnWidth, params View[] children) =>
+        double.IsFinite(minimumColumnWidth) && minimumColumnWidth > 0
+            ? new(ViewKind.AdaptiveGrid) { Children = children, MinimumColumnWidth = minimumColumnWidth }
+            : throw new ArgumentOutOfRangeException(nameof(minimumColumnWidth));
     // Factories are invoked only when a component is first mounted or its identity changes.
     public static View Component<T>(Action<T>? configure = null) where T : Component, new() =>
         new(ViewKind.Component)
