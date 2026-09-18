@@ -4,6 +4,7 @@ public sealed record View(ViewKind Kind)
 {
     public string? Key { get; init; }
     public string Content { get; init; } = "";
+    public string? AccessibleName { get; init; }
     public IReadOnlyList<View> Children { get; init; } = [];
     public Action? Click { get; init; }
     public Action<string>? Edit { get; init; }
@@ -51,6 +52,8 @@ public sealed record View(ViewKind Kind)
     public View UndoLimit(int limit) => Kind is ViewKind.TextField or ViewKind.TextEditor
         ? this with { UndoHistoryLimit = NonNegative(limit) } : throw new InvalidOperationException("UndoLimit applies only to text fields and editors.");
     public View Id(string key) => this with { Key = key };
+    /// <summary>Sets the native automation name without changing visible content. Null restores the native name.</summary>
+    public View AccessibilityLabel(string? label) => this with { AccessibleName = label };
     /// <summary>Skip parent-driven component rebuilds when these immutable input values compare equal.</summary>
     public View Memo(object? inputs) => Kind == ViewKind.Component
         ? this with { IsMemoized = true, MemoInputs = inputs }

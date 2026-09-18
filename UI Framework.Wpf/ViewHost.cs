@@ -83,6 +83,11 @@ public sealed class ViewHost : ContentControl, IDisposable
         ArgumentNullException.ThrowIfNull(node);
         var previous = node.View;
         node.View = view; // Event handlers always read the latest description.
+        if (created || previous.AccessibleName != view.AccessibleName)
+        {
+            if (view.AccessibleName is null) node.Control.ClearValue(System.Windows.Automation.AutomationProperties.NameProperty);
+            else System.Windows.Automation.AutomationProperties.SetName(node.Control, view.AccessibleName);
+        }
         node.Frame.Padding = new Thickness(view.Inset);
         node.Frame.Width = view.DesiredWidth;
         node.Frame.Height = view.DesiredHeight;
