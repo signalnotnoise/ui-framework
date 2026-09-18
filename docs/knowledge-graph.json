@@ -3,6 +3,22 @@
   "title": "UI Framework knowledge graph",
   "nodes": [
     {
+      "id": "editors",
+      "label": "Text editors, passwords and selectors",
+      "status": "implemented",
+      "summary": "Core describes bound multiline text, masked passwords and indexed pickers. WPF owns native editing, read-only selection, bounded undo, theme integration and feedback suppression.",
+      "sources": [
+        "UI Framework/UI.cs",
+        "UI Framework/View.cs",
+        "UI Framework/ViewKind.cs",
+        "UI Framework.Wpf/Rendering/Node.cs",
+        "UI Framework.Wpf/ViewHost.cs",
+        "UI Framework.Wpf/Styling/ThemeStyles.cs",
+        "tests/UI Framework.Checks/EditorTests.cs",
+        "docs/editors.md"
+      ]
+    },
+    {
       "id": "layoutstyle",
       "label": "Responsive layout and scoped styling",
       "status": "implemented",
@@ -42,7 +58,7 @@
       "id": "api",
       "label": "C# composition API",
       "status": "implemented",
-      "summary": "Text, Button, TextField, Toggle, Scroll, stacks, modifiers, and Component<T> factories.",
+      "summary": "Text, Button, TextField, TextEditor, PasswordField, Picker, Toggle, Scroll, stacks, modifiers, and Component<T> factories.",
       "sources": [
         "UI Framework/ViewKind.cs",
         "UI Framework/View.cs",
@@ -440,6 +456,21 @@
     }
   ],
   "edges": [
+    {
+      "from": "api",
+      "relation": "exposes",
+      "to": "editors"
+    },
+    {
+      "from": "editors",
+      "relation": "reads and writes through",
+      "to": "binding"
+    },
+    {
+      "from": "host",
+      "relation": "renders native",
+      "to": "editors"
+    },
     {
       "from": "api",
       "relation": "creates",

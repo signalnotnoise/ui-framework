@@ -55,6 +55,11 @@ internal sealed class Node : IDisposable
             ViewKind.Text => new TextBlock { TextWrapping = TextWrapping.Wrap },
             ViewKind.Button => new Button { Padding = new Thickness(12, 6, 12, 6), HorizontalAlignment = HorizontalAlignment.Left },
             ViewKind.TextField => new TextBox { MinWidth = 40, Padding = new Thickness(6) },
+            ViewKind.TextEditor => new TextBox { MinWidth = 40, Padding = new Thickness(6), AcceptsReturn = true,
+                TextWrapping = TextWrapping.Wrap, VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled },
+            ViewKind.PasswordField => new PasswordBox { MinWidth = 40, Padding = new Thickness(6) },
+            ViewKind.Picker => new ComboBox { MinWidth = 40, Padding = new Thickness(6), IsEditable = false },
             ViewKind.Toggle => new CheckBox { VerticalAlignment = VerticalAlignment.Center },
             ViewKind.Scroll => new ScrollViewer { VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled },
             ViewKind.VirtualList => new VirtualListControl(snapshot?.VirtualList),
@@ -69,8 +74,8 @@ internal sealed class Node : IDisposable
         if (Control is Button button) button.Click += (_, _) => View.Click?.Invoke();
         if (Control is TextBox input) input.TextChanged += (_, _) =>
         {
-            if (Updating) return;
-            View.Edit?.Invoke(input.Text);
+            if (Updating || detached) return;
+            if (!View.ReadOnly) View.Edit?.Invoke(input.Text);
             // A custom binding may normalize or reject an edit without notifying state.
             var accepted = View.ReadText?.Invoke();
             if (accepted is not null && input.Text != accepted)
@@ -80,6 +85,26 @@ internal sealed class Node : IDisposable
                 try { input.Text = accepted; input.SelectionStart = Math.Min(caret, accepted.Length); }
                 finally { Updating = false; }
             }
+        };
+        if (Control is PasswordBox password) password.PasswordChanged += (_, _) =>
+        {
+            if (Updating || detached) return;
+            View.Edit?.Invoke(password.Password);
+            var accepted = View.ReadText?.Invoke();
+            if (accepted is null || password.Password == accepted) return;
+            Updating = true;
+            try { password.Password = accepted; }
+            finally { Updating = false; }
+        };
+        if (Control is ComboBox picker) picker.SelectionChanged += (_, _) =>
+        {
+            if (Updating || detached) return;
+            View.SelectionChanged?.Invoke(picker.SelectedIndex);
+            if (View.ReadSelectedIndex is not { } read) return;
+            var accepted = read();
+            Updating = true;
+            try { picker.SelectedIndex = accepted >= 0 && accepted < picker.Items.Count ? accepted : -1; }
+            finally { Updating = false; }
         };
         if (Control is CheckBox toggle)
         {

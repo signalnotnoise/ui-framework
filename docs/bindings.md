@@ -9,7 +9,7 @@ var enabled = new State<bool>(false);
 var toggle = Toggle("Enabled", enabled.Binding());
 ```
 
-The original `TextField(State<string>)` overload still works. Toggle also accepts `State<bool>` directly.
+The original `TextField(State<string>)` overload still works. Toggle also accepts `State<bool>` directly. [TextEditor, PasswordField, and Picker](editors.md) accept bindings or state and use the same accepted-value readback contract.
 
 ## Project a record field
 

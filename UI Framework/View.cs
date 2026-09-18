@@ -8,6 +8,13 @@ public sealed record View(ViewKind Kind)
     public Action? Click { get; init; }
     public Action<string>? Edit { get; init; }
     public Func<string>? ReadText { get; init; }
+    public bool ReadOnly { get; init; }
+    public int MaximumLength { get; init; }
+    public int UndoHistoryLimit { get; init; } = 100;
+    public IReadOnlyList<string> Options { get; init; } = [];
+    public int SelectedIndex { get; init; } = -1;
+    public Action<int>? SelectionChanged { get; init; }
+    public Func<int>? ReadSelectedIndex { get; init; }
     public bool Checked { get; init; }
     public Action<bool>? ToggleChanged { get; init; }
     public Func<bool>? ReadChecked { get; init; }
@@ -35,6 +42,14 @@ public sealed record View(ViewKind Kind)
     public View Align(ViewAlignment horizontal, ViewAlignment vertical = ViewAlignment.Stretch) => this with { Horizontal = horizontal, Vertical = vertical };
     public View ButtonStyle(ButtonStyleKind style) => this with { ButtonAppearance = style };
     public View IsEnabled(bool enabled) => this with { Enabled = enabled };
+    public View IsReadOnly(bool readOnly) => Kind is ViewKind.TextField or ViewKind.TextEditor
+        ? this with { ReadOnly = readOnly } : throw new InvalidOperationException("IsReadOnly applies only to text fields and editors.");
+    /// <summary>Native user-input length limit; 0 is unlimited. Bound values are not truncated.</summary>
+    public View MaxLength(int length) => Kind is ViewKind.TextField or ViewKind.TextEditor or ViewKind.PasswordField
+        ? this with { MaximumLength = NonNegative(length) } : throw new InvalidOperationException("MaxLength applies only to text inputs.");
+    /// <summary>Maximum undo actions; 0 disables undo. Read-only text always disables undo.</summary>
+    public View UndoLimit(int limit) => Kind is ViewKind.TextField or ViewKind.TextEditor
+        ? this with { UndoHistoryLimit = NonNegative(limit) } : throw new InvalidOperationException("UndoLimit applies only to text fields and editors.");
     public View Id(string key) => this with { Key = key };
     /// <summary>Skip parent-driven component rebuilds when these immutable input values compare equal.</summary>
     public View Memo(object? inputs) => Kind == ViewKind.Component
@@ -50,4 +65,5 @@ public sealed record View(ViewKind Kind)
     public View CornerRadius(double value) => this with { Radius = Dimension(value) };
     private static double Dimension(double value) => double.IsFinite(value) && value >= 0
         ? value : throw new ArgumentOutOfRangeException(nameof(value), "Use a finite, non-negative dimension.");
+    private static int NonNegative(int value) => value >= 0 ? value : throw new ArgumentOutOfRangeException(nameof(value));
 }

@@ -34,6 +34,25 @@ public static class UI
     public static View TextField(State<string> value) => TextField(value.Binding());
     public static View TextField(Binding<string> value) => new(ViewKind.TextField)
         { Content = value.Value, Edit = text => value.Value = text, ReadText = () => value.Value };
+    public static View TextEditor(State<string> value) => TextEditor(value.Binding());
+    public static View TextEditor(Binding<string> value) => new(ViewKind.TextEditor)
+        { Content = value.Value, Edit = text => value.Value = text, ReadText = () => value.Value };
+    /// <summary>Masks input on screen; the binding still contains a managed string.</summary>
+    public static View PasswordField(State<string> value) => PasswordField(value.Binding());
+    public static View PasswordField(Binding<string> value) => new(ViewKind.PasswordField)
+        { Content = value.Value, Edit = text => value.Value = text, ReadText = () => value.Value };
+    public static View Picker(IReadOnlyList<string> options, State<int> selectedIndex) => Picker(options, selectedIndex.Binding());
+    /// <summary>Indices are positional. Out-of-range values display no selection without changing the binding.</summary>
+    public static View Picker(IReadOnlyList<string> options, Binding<int> selectedIndex)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(selectedIndex);
+        return new(ViewKind.Picker)
+        {
+            Options = options.ToArray(), SelectedIndex = selectedIndex.Value,
+            SelectionChanged = index => selectedIndex.Value = index, ReadSelectedIndex = () => selectedIndex.Value
+        };
+    }
     public static View Toggle(string label, State<bool> value) => Toggle(label, value.Binding());
     public static View Toggle(string label, Binding<bool> value) => new(ViewKind.Toggle)
         { Content = label, Checked = value.Value, ToggleChanged = next => value.Value = next, ReadChecked = () => value.Value };

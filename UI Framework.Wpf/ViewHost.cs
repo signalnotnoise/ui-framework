@@ -129,6 +129,12 @@ public sealed class ViewHost : ContentControl, IDisposable
                 break;
             case TextBox input:
                 input.FontSize = view.TextSize;
+                input.IsReadOnly = view.ReadOnly;
+                input.MaxLength = view.MaximumLength;
+                var undoLimit = view.ReadOnly ? 0 : view.UndoHistoryLimit;
+                // Reassigning UndoLimit clears history, so only change it when necessary.
+                if (input.UndoLimit != undoLimit) input.UndoLimit = undoLimit;
+                input.IsUndoEnabled = undoLimit > 0;
                 if (input.Text != view.Content)
                 {
                     var caret = input.SelectionStart;
@@ -136,6 +142,23 @@ public sealed class ViewHost : ContentControl, IDisposable
                     try { input.Text = view.Content; input.SelectionStart = Math.Min(caret, input.Text.Length); }
                     finally { node.Updating = false; }
                 }
+                break;
+            case PasswordBox password:
+                password.FontSize = view.TextSize;
+                password.MaxLength = view.MaximumLength;
+                node.Updating = true;
+                try { if (password.Password != view.Content) password.Password = view.Content; }
+                finally { node.Updating = false; }
+                break;
+            case ComboBox picker:
+                picker.FontSize = view.TextSize;
+                node.Updating = true;
+                try
+                {
+                    if (created || !previous.Options.SequenceEqual(view.Options)) picker.ItemsSource = view.Options;
+                    picker.SelectedIndex = view.SelectedIndex >= 0 && view.SelectedIndex < view.Options.Count ? view.SelectedIndex : -1;
+                }
+                finally { node.Updating = false; }
                 break;
             case ScrollViewer scroll:
                 var scrollChild = Patch(node.Children.FirstOrDefault(), view.Children[0], node.RestoredChild(view.Children[0], 0));

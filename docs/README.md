@@ -10,6 +10,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
 | [Components](components.md) | Identity, props, local state, lifecycle, and scheduling. |
 | [Bindings](bindings.md) | Two-way editing, immutable record projections, and custom adapters. |
+| [Editors and selectors](editors.md) | Multiline/read-only text, bounded undo, masked passwords, and indexed selection. |
 | [Rendering performance](performance.md) | Derived observation, Memo inputs, and performance contracts. |
 | [Measured results](performance-results.md) | Reference/optimized timings, allocations, checks, and measurement limitations. |
 | [Stress lab](stress-lab.md) | Interactive controls, automated workloads, and comparison commands. |

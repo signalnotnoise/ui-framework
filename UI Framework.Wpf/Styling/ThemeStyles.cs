@@ -20,7 +20,14 @@ public static class ThemeStyles
         if (!double.IsFinite(theme.ControlRadius) || theme.ControlRadius < 0 || !double.IsFinite(theme.ControlPadding) || theme.ControlPadding < 0)
             throw new ArgumentOutOfRangeException(nameof(theme));
         root.Resources[typeof(Button)] = ButtonStyle(theme);
-        root.Resources[typeof(TextBox)] = InputStyle(theme);
+        root.Resources[typeof(TextBox)] = InputStyle(typeof(TextBox), theme);
+        root.Resources[typeof(PasswordBox)] = InputStyle(typeof(PasswordBox), theme);
+        // Keep the native selector template, popup, and keyboard behavior.
+        var picker = BaseStyle(typeof(ComboBox), theme);
+        var disabled = new Trigger { Property = UIElement.IsEnabledProperty, Value = false };
+        disabled.Setters.Add(new Setter(UIElement.OpacityProperty, 0.45));
+        picker.Triggers.Add(disabled);
+        root.Resources[typeof(ComboBox)] = picker;
     }
 
     private static SolidColorBrush Brush(string color)
@@ -97,10 +104,10 @@ public static class ThemeStyles
         return style;
     }
 
-    private static Style InputStyle(ThemeTokens theme)
+    private static Style InputStyle(Type type, ThemeTokens theme)
     {
-        var style = BaseStyle(typeof(TextBox), theme);
-        var template = new ControlTemplate(typeof(TextBox));
+        var style = BaseStyle(type, theme);
+        var template = new ControlTemplate(type);
         var border = Border(theme);
         border.AppendChild(new FrameworkElementFactory(typeof(ScrollViewer), "PART_ContentHost"));
         template.VisualTree = border;
