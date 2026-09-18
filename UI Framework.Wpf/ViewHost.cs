@@ -52,6 +52,8 @@ public sealed class ViewHost : ContentControl, IDisposable
 
     private static void Validate(View view)
     {
+        if (view.Kind == ViewKind.Navigation && (view.Children.Count == 0 || view.Children.Any(child => string.IsNullOrEmpty(child.Key))))
+            throw new InvalidOperationException("Navigation requires at least one uniquely keyed screen.");
         if (view.Kind == ViewKind.VirtualList && (!double.IsFinite(view.DesiredHeight) || view.DesiredHeight <= 0))
             throw new InvalidOperationException("VirtualList requires a finite, positive viewport height.");
         if (view.Kind == ViewKind.Scroll && view.Children.Count != 1)
@@ -103,6 +105,9 @@ public sealed class ViewHost : ContentControl, IDisposable
         }
         switch (node.Control)
         {
+            case NavigationSurface navigation:
+                navigation.Update(view.Children, view.Transition);
+                break;
             case VirtualListControl list:
                 list.Update(view.Children, view.Gap);
                 break;

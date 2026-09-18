@@ -11,9 +11,11 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
     private readonly ObservableCollection<VirtualRow> ordered = [];
     private double gap;
     private bool disposed;
+    private IReadOnlyDictionary<string, NodeSnapshot>? initialRows;
 
-    internal VirtualListControl()
+    internal VirtualListControl(VirtualListSnapshot? snapshot = null)
     {
+        initialRows = snapshot?.Rows;
         VirtualizingPanel.SetIsVirtualizing(this, true);
         VirtualizingPanel.SetVirtualizationMode(this, VirtualizationMode.Recycling);
         VirtualizingPanel.SetScrollUnit(this, ScrollUnit.Pixel);
@@ -51,7 +53,7 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
         for (var i = 0; i < views.Count; i++)
         {
             var view = views[i];
-            var row = rows.GetValueOrDefault(view.Key!) ?? new VirtualRow(view);
+            var row = rows.GetValueOrDefault(view.Key!) ?? new VirtualRow(view) { Saved = initialRows?.GetValueOrDefault(view.Key!) };
             row.View = view;
             next[i] = row;
             nextByKey.Add(view.Key!, row);
@@ -78,12 +80,21 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
             else ordered.Move(current, i);
         }
         rows = nextByKey;
+        initialRows = null;
         foreach (var row in next) row.Presenter?.Refresh(gap);
     }
 
     internal void Deactivate()
     {
         foreach (var row in rows.Values) row.Presenter?.Deactivate();
+    }
+
+    internal VirtualListSnapshot Capture()
+    {
+        var snapshots = new Dictionary<string, NodeSnapshot>();
+        foreach (var (key, row) in rows)
+            if ((row.Presenter?.Capture() ?? row.Saved) is { } snapshot) snapshots.Add(key, snapshot);
+        return new(snapshots);
     }
 
     public void Dispose()
@@ -95,5 +106,6 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
         ItemsSource = null;
         rows.Clear();
         ordered.Clear();
+        initialRows = null;
     }
 }

@@ -29,6 +29,8 @@ The mixed campaign uses a fixed initial random seed and deterministic operation 
 
 ## Repeatable automated workload
 
+For Launchpad's separate three-screen workflow, use `dotnet run --project samples/Counter -c Release -- --navigation-check`. It opens a real window, performs 64 navigation/edit/resize steps, and checks 104 assertions including local state on Back and reduced-motion cancellation. The full-list workload below remains the baseline.
+
 The **Visual stress** button makes an immediate edit and then advances every 350 ms, subject to UI-thread rendering time. An action strip and progress bar show the current phase. The run uses the current data size, clears search filters, mounts the board, and temporarily opens a focused row's checklist. It changes demo data. Stop cancels future steps and releases temporary expansion; completion also clears the open-only filter. Choose 50 rows to watch the sequence clearly or 1,000 rows to increase the load.
 
 The button, real timer, all 60 steps, cancellation, restart, empty-board handling, and disposal can be checked with `dotnet run --project samples/Counter -c Release -- --visual-check`. This also saves an offscreen running-state image under artifacts/visual-stress.

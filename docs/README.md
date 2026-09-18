@@ -15,6 +15,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Stress lab](stress-lab.md) | Interactive controls, automated workloads, and comparison commands. |
 | [Launchpad showcase](launchpad.md) | A release board with live editing, workflow actions, filters, and progress. |
 | [Layout and styling](layout-styling.md) | Weighted rows, adaptive columns, alignment, and scoped control themes. |
+| [Navigation](navigation.md) | Typed history, retained screen state, lifetime, and entry transitions. |
 | [Architecture graph](knowledge-graph.md) | Relationships between APIs, rendering, tests, and planned features. |
 | [Decision record](decisions/0001-selective-rendering.md) | Why selective observation and explicit Memo inputs were added. |
 | [Virtualization](virtualization.md) | Implemented behavior, state lifetime, test coverage and limitations. |
@@ -32,7 +33,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 
 ## Verification snapshot
 
-The September 18, 2026 Release build and all 25 discoverable MSTest tests passed, including the new layout and styling checks. See [layout and styling](layout-styling.md) and [virtualization verification](virtualization.md). The following measurements are historical, from before virtualization and the test-project migration.
+The September 18, 2026 Release build and all 33 discoverable MSTest tests passed, including layout, styling, and navigation checks. The new visible navigation campaign passed 64 steps and 104 assertions; the full-list baseline passed 21 stress assertions. See [navigation](navigation.md) and [virtualization verification](virtualization.md). The following measurements are historical, from before virtualization and the test-project migration.
 
 The latest implementation pass completed a clean Release build, 90 regression checks, and 21 full-workload stress assertions. The matched 50-operation comparison reduced body builds by 84.1%, UI-thread allocations by 30.6%, and elapsed time by 9.9%. These are recorded development-run measurements, not performance guarantees; the separate full-workload timing did not improve against its historical baseline. See the complete [measurement record](performance-results.md).
 

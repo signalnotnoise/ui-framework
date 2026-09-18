@@ -22,6 +22,7 @@ flowchart LR
     controls["Native WPF controls"]
     checks["Regression checks"]
     demo["Component demo"]
+    navigation["Navigation"]
     binding["Live data binding"]
     stress["Stress workload"]
     derived["Derived observation"]
@@ -34,11 +35,10 @@ flowchart LR
     errors["Error recovery"]
     styling["Styling and themes"]
     virtualization["List virtualization"]
+    animation["Animation"]
     release["Experimental release preparation"]
   end
   subgraph planned[planned]
-    navigation["Navigation"]
-    animation["Animation"]
     hotreload["Hot reload tooling"]
     platforms["Other backends"]
   end
@@ -95,12 +95,15 @@ flowchart LR
   launchpad -->|edits through| binding
   launchpad -->|demonstrates| layoutstyle
   layoutstyle -->|extends| api
+  launchpad -->|demonstrates| navigation
+  navigation -->|uses| animation
+  navigation -->|preserves state from| virtualization
   classDef implemented fill:#dcfce7,stroke:#15803d,color:#14532d
   classDef partial fill:#fef3c7,stroke:#b45309,color:#78350f
   classDef planned fill:#f1f5f9,stroke:#64748b,color:#334155
-  class layoutstyle,launchpad,api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,binding,stress,derived,memo,visualstress implemented
-  class updates,focus,errors,styling,virtualization,release partial
-  class navigation,animation,hotreload,platforms planned
+  class layoutstyle,launchpad,api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,navigation,binding,stress,derived,memo,visualstress implemented
+  class updates,focus,errors,styling,virtualization,animation,release partial
+  class hotreload,platforms planned
 ```
 
 ## Source index
@@ -108,7 +111,7 @@ flowchart LR
 | Concept | Status | Contract / limitation | Sources |
 | --- | --- | --- | --- |
 | Responsive layout and scoped styling | implemented | Core defines weighted rows, adaptive grids, alignment and theme tokens. WPF owns measurement, native templates and interaction states. Launchpad supplies application design. | [UI Framework/Layout/ViewAlignment.cs](../UI%20Framework/Layout/ViewAlignment.cs), [UI Framework/Styling/ThemeTokens.cs](../UI%20Framework/Styling/ThemeTokens.cs), [UI Framework/Styling/ButtonStyleKind.cs](../UI%20Framework/Styling/ButtonStyleKind.cs), [UI Framework.Wpf/Layout/AdaptivePanel.cs](../UI%20Framework.Wpf/Layout/AdaptivePanel.cs), [UI Framework.Wpf/Styling/ThemeStyles.cs](../UI%20Framework.Wpf/Styling/ThemeStyles.cs), [samples/Counter/Models/LaunchTheme.cs](../samples/Counter/Models/LaunchTheme.cs), [tests/UI Framework.Checks/LayoutStyleTests.cs](../tests/UI%20Framework.Checks/LayoutStyleTests.cs), [docs/layout-styling.md](../docs/layout-styling.md) |
-| Launchpad product showcase | implemented | Session-only release board with live editing, stage transitions, search, priority filtering, and progress. Sample models own application state; the WPF window owns presentation lifecycle. | [samples/Counter/Components/Launchpad.cs](../samples/Counter/Components/Launchpad.cs), [samples/Counter/Models/LaunchModel.cs](../samples/Counter/Models/LaunchModel.cs), [samples/Counter/Models/LaunchItem.cs](../samples/Counter/Models/LaunchItem.cs), [samples/Counter/Models/LaunchStage.cs](../samples/Counter/Models/LaunchStage.cs), [samples/Counter/LaunchpadWindow.cs](../samples/Counter/LaunchpadWindow.cs), [docs/launchpad.md](../docs/launchpad.md) |
+| Launchpad product showcase | implemented | Session-only Overview, Board and Details screens with Back, retained local preferences, edits and workflow actions. Sample models own routes; WPF owns native screen lifetime. | [samples/Counter/Components/Launchpad.cs](../samples/Counter/Components/Launchpad.cs), [samples/Counter/Components/LaunchOverview.cs](../samples/Counter/Components/LaunchOverview.cs), [samples/Counter/Components/LaunchBoard.cs](../samples/Counter/Components/LaunchBoard.cs), [samples/Counter/Components/LaunchDetails.cs](../samples/Counter/Components/LaunchDetails.cs), [samples/Counter/Models/LaunchRoute.cs](../samples/Counter/Models/LaunchRoute.cs), [samples/Counter/Models/LaunchScreen.cs](../samples/Counter/Models/LaunchScreen.cs), [samples/Counter/Diagnostics/LaunchNavigationChecks.cs](../samples/Counter/Diagnostics/LaunchNavigationChecks.cs), [samples/Counter/Models/LaunchModel.cs](../samples/Counter/Models/LaunchModel.cs), [samples/Counter/Models/LaunchItem.cs](../samples/Counter/Models/LaunchItem.cs), [samples/Counter/Models/LaunchStage.cs](../samples/Counter/Models/LaunchStage.cs), [samples/Counter/LaunchpadWindow.cs](../samples/Counter/LaunchpadWindow.cs), [docs/launchpad.md](../docs/launchpad.md) |
 | C# composition API | implemented | Text, Button, TextField, Toggle, Scroll, stacks, modifiers, and Component<T> factories. | [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/UI.cs](../UI%20Framework/UI.cs) |
 | View description | implemented | Records describe a view tree without owning native controls. | [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/UI.cs](../UI%20Framework/UI.cs) |
 | Reusable component | implemented | Retained instance with Body, local state, props, and lifetime hooks. | [UI Framework/Component.cs](../UI%20Framework/Component.cs), [docs/components.md](../docs/components.md) |
@@ -126,9 +129,9 @@ flowchart LR
 | Focus and IME | partial | Controls/text/selection retained in checks; visible keyboard focus and IME need verification. | [README.md](../README.md), [tests/UI Framework.Checks/ComponentChecks.cs](../tests/UI%20Framework.Checks/ComponentChecks.cs), [tests/UI Framework.Checks/Probes/MountMutation.cs](../tests/UI%20Framework.Checks/Probes/MountMutation.cs), [tests/UI Framework.Checks/Probes/OtherProbe.cs](../tests/UI%20Framework.Checks/Probes/OtherProbe.cs), [tests/UI Framework.Checks/Probes/Probe.cs](../tests/UI%20Framework.Checks/Probes/Probe.cs) |
 | Error recovery | partial | Failed builds preserve previous subscriptions; renderer rollback and error boundaries remain open. | [UI Framework/IState.cs](../UI%20Framework/IState.cs), [UI Framework/ObservableState.cs](../UI%20Framework/ObservableState.cs), [UI Framework/State.cs](../UI%20Framework/State.cs), [UI Framework/Dependencies.cs](../UI%20Framework/Dependencies.cs), [UI Framework/ViewSession.cs](../UI%20Framework/ViewSession.cs), [README.md](../README.md) |
 | Styling and themes | partial | Basic dimensions, colors, corners, text size, spacing; advanced themes and style systems remain open. | [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/UI.cs](../UI%20Framework/UI.cs), [UI Framework.Wpf/ViewHost.cs](../UI%20Framework.Wpf/ViewHost.cs), [UI Framework.Wpf/Rendering/Node.cs](../UI%20Framework.Wpf/Rendering/Node.cs), [README.md](../README.md) |
-| Navigation | planned | Routes, navigation stacks, and screen lifetime policies. | [README.md](../README.md) |
+| Navigation | implemented | Core owns observable typed history and entry identity; WPF owns active-screen lifetime and logical snapshots, including nested navigation and virtual rows. | [UI Framework/Navigation/NavigationStack.cs](../UI%20Framework/Navigation/NavigationStack.cs), [UI Framework/Navigation/NavigationEntry.cs](../UI%20Framework/Navigation/NavigationEntry.cs), [UI Framework.Wpf/Navigation/NavigationSurface.cs](../UI%20Framework.Wpf/Navigation/NavigationSurface.cs), [UI Framework.Wpf/Navigation/NavigationSnapshot.cs](../UI%20Framework.Wpf/Navigation/NavigationSnapshot.cs), [UI Framework.Wpf/Rendering/NodeSnapshot.cs](../UI%20Framework.Wpf/Rendering/NodeSnapshot.cs), [UI Framework.Wpf/Virtualization/VirtualListSnapshot.cs](../UI%20Framework.Wpf/Virtualization/VirtualListSnapshot.cs), [tests/UI Framework.Checks/NavigationTests.cs](../tests/UI%20Framework.Checks/NavigationTests.cs), [docs/navigation.md](../docs/navigation.md) |
 | List virtualization | partial | WPF viewport realization, keyed snapshots and incremental collection updates; focus, IME and accessibility verification remain. | [UI Framework.Wpf/Virtualization/VirtualListControl.cs](../UI%20Framework.Wpf/Virtualization/VirtualListControl.cs), [UI Framework.Wpf/Virtualization/VirtualRowPresenter.cs](../UI%20Framework.Wpf/Virtualization/VirtualRowPresenter.cs), [UI Framework.Wpf/Rendering/NodeSnapshot.cs](../UI%20Framework.Wpf/Rendering/NodeSnapshot.cs), [tests/UI Framework.Checks/VirtualizationTests.cs](../tests/UI%20Framework.Checks/VirtualizationTests.cs), [docs/virtualization.md](../docs/virtualization.md) |
-| Animation | planned | Transitions and animatable view properties. | [README.md](../README.md) |
+| Animation | partial | WPF screen entry fade/slide transitions with interruption cleanup and reduced-motion support. General animatable view properties remain planned. | [UI Framework/Navigation/NavigationTransition.cs](../UI%20Framework/Navigation/NavigationTransition.cs), [UI Framework.Wpf/Navigation/NavigationSurface.cs](../UI%20Framework.Wpf/Navigation/NavigationSurface.cs), [docs/navigation.md](../docs/navigation.md) |
 | Hot reload tooling | planned | Framework-specific refresh integration and state policies for code updates. | [README.md](../README.md) |
 | Other backends | planned | A rendering abstraction and non-Windows implementations. | [README.md](../README.md) |
 | Live data binding | implemented | Live direct and record-projected binding with result equality filtering and accepted-value readback. | [UI Framework/Binding.cs](../UI%20Framework/Binding.cs), [docs/bindings.md](../docs/bindings.md), [tests/UI Framework.Checks/BindingChecks.cs](../tests/UI%20Framework.Checks/BindingChecks.cs), [tests/UI Framework.Checks/Probes/Profile.cs](../tests/UI%20Framework.Checks/Probes/Profile.cs), [tests/UI Framework.Checks/Probes/Preferences.cs](../tests/UI%20Framework.Checks/Probes/Preferences.cs) |

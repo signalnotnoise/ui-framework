@@ -22,6 +22,7 @@ internal static class Program
         buttonStyle.Setters.Add(new Setter(Control.BorderThicknessProperty, new Thickness(1)));
         app.Resources.Add(typeof(Button), buttonStyle);
         if (args.Contains("--visual-check")) return VisualStressChecks.Run();
+        if (args.Contains("--navigation-check")) return LaunchNavigationChecks.Run(app);
         if (args.Contains("--compare")) return StressRunner.Compare(args);
         if (args.Contains("--stress")) return StressRunner.Run(args);
         if (args.Contains("--showcase")) return LaunchpadWindow.Run(app, args);

@@ -5,6 +5,20 @@ namespace StressLab;
 public sealed class LaunchModel
 {
     private int nextId = 108;
+    public NavigationStack<LaunchRoute> Navigation { get; } = new(new(LaunchScreen.Overview));
+    public State<bool> ReduceMotion { get; } = new(false);
+
+    public void OpenBoard()
+    {
+        while (Navigation.Current.Screen == LaunchScreen.Details && Navigation.CanGoBack) Navigation.Back();
+        if (Navigation.Current.Screen != LaunchScreen.Board) Navigation.Push(new(LaunchScreen.Board));
+    }
+
+    public void OpenDetails(LaunchItem item)
+    {
+        Selected.Value = item;
+        Navigation.Push(new(LaunchScreen.Details, item.Id));
+    }
     public StateList<LaunchItem> Items { get; } = new([
         new(101, "A warmer first impression", "Maya", "DESIGN", LaunchStage.Building, true, "Make the welcome screen feel personal. Keep the first action obvious."),
         new(102, "Invite your team", "Noah", "PRODUCT", LaunchStage.Planned, true, "Let people bring a teammate into their workspace in one step."),

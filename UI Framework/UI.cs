@@ -2,6 +2,18 @@ namespace UI_Framework;
 
 public static class UI
 {
+    /// <summary>Displays the top history entry and retains logical state for entries below it.</summary>
+    public static View Navigation<TRoute>(NavigationStack<TRoute> history, Func<TRoute, View> screen,
+        NavigationTransition transition = NavigationTransition.FadeSlide) where TRoute : notnull
+    {
+        ArgumentNullException.ThrowIfNull(history);
+        ArgumentNullException.ThrowIfNull(screen);
+        return new(ViewKind.Navigation)
+        {
+            Children = history.Entries.Select(entry => screen(entry.Route).Id(entry.Id.ToString(System.Globalization.CultureInfo.InvariantCulture))).ToArray(),
+            Transition = transition
+        };
+    }
     /// <summary>Distributes finite horizontal space by Flex weight. Explicit Width takes precedence.</summary>
     public static View FlexRow(params View[] children) => new(ViewKind.FlexRow) { Children = children };
     /// <summary>Equal-width columns that wrap as available width changes.</summary>

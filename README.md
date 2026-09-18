@@ -22,7 +22,7 @@ dotnet test "tests/UI Framework.Checks"
 
 ## Try the product showcase
 
-Launchpad is a release-planning board built with the framework's C# views and observable state. Move cards between Planned, Building, and Shipped, edit their details live, filter by title/owner/area, and add ideas while the release metrics update.
+Launchpad is a release-planning application with Overview, Board, and Details screens, retained state on Back, and reduced-motion-aware transitions. Move cards between Planned, Building, and Shipped, edit details, filter by title/owner/area, and add ideas while release metrics update.
 
 ```powershell
 dotnet run --project samples/Counter -- --showcase
@@ -128,12 +128,13 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Update scope | Local updates skip ancestors/siblings; explicit Memo inputs let unchanged child components skip parent-driven rebuilds. |
 | Mutable collections | Structural changes observed through StateList; arbitrary object mutations are not deep-observed. |
 | Binding | Direct/composed projections notify only when the selected value changes; raw State.Value reads still observe the whole state. |
-| Styling | Theme tokens, scoped button/input styles, weighted rows, adaptive columns, and alignment; no animation system. |
+| Styling | Theme tokens, scoped button/input styles, weighted rows, adaptive columns, alignment, and entry transitions; no general animation API. |
 | Threading | State belongs to its creating thread; no concurrent state or automatic marshaling. |
 | Focus | Controls, text, and selection retained in tested reorders; uninterrupted keyboard focus/IME behavior still needs visible-window testing. |
 | Errors | Dependency tracking survives failed body builds; rendering is not transactional and has no error boundary/recovery UI. |
 | Virtualization | Viewport controls plus a buffer; offscreen logical state retained; some large shuffles have quadratic cost. See [contracts](docs/virtualization.md). |
-| Still planned | Navigation, animation, advanced styling, hot reload integration, and non-Windows backends. |
+| Navigation | Typed history, Back/PopToRoot/Reset, logical screen snapshots, and WPF entry transitions. See [navigation](docs/navigation.md). |
+| Still planned | General animation, advanced styling, hot reload integration, and non-Windows backends. |
 
 For a demo already running in Debug, stop it before rebuilding, or use `dotnet run --project samples/Counter -c Release` to build and run separately.
 

@@ -30,6 +30,7 @@ public sealed record View(ViewKind Kind)
     public ViewAlignment Vertical { get; init; } = ViewAlignment.Stretch;
     public ButtonStyleKind ButtonAppearance { get; init; }
     public bool Enabled { get; init; } = true;
+    public NavigationTransition Transition { get; init; } = NavigationTransition.FadeSlide;
     public View Flex(double weight = 1) => this with { FlexWeight = Dimension(weight) };
     public View Align(ViewAlignment horizontal, ViewAlignment vertical = ViewAlignment.Stretch) => this with { Horizontal = horizontal, Vertical = vertical };
     public View ButtonStyle(ButtonStyleKind style) => this with { ButtonAppearance = style };

@@ -35,6 +35,7 @@ internal sealed class VirtualRowPresenter : ContentControl
     }
 
     internal void Deactivate() => host?.Deactivate();
+    internal NodeSnapshot? Capture() => host?.Capture();
 
     internal void Release()
     {

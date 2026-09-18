@@ -22,9 +22,15 @@
       "id": "launchpad",
       "label": "Launchpad product showcase",
       "status": "implemented",
-      "summary": "Session-only release board with live editing, stage transitions, search, priority filtering, and progress. Sample models own application state; the WPF window owns presentation lifecycle.",
+      "summary": "Session-only Overview, Board and Details screens with Back, retained local preferences, edits and workflow actions. Sample models own routes; WPF owns native screen lifetime.",
       "sources": [
         "samples/Counter/Components/Launchpad.cs",
+        "samples/Counter/Components/LaunchOverview.cs",
+        "samples/Counter/Components/LaunchBoard.cs",
+        "samples/Counter/Components/LaunchDetails.cs",
+        "samples/Counter/Models/LaunchRoute.cs",
+        "samples/Counter/Models/LaunchScreen.cs",
+        "samples/Counter/Diagnostics/LaunchNavigationChecks.cs",
         "samples/Counter/Models/LaunchModel.cs",
         "samples/Counter/Models/LaunchItem.cs",
         "samples/Counter/Models/LaunchStage.cs",
@@ -268,10 +274,17 @@
     {
       "id": "navigation",
       "label": "Navigation",
-      "status": "planned",
-      "summary": "Routes, navigation stacks, and screen lifetime policies.",
+      "status": "implemented",
+      "summary": "Core owns observable typed history and entry identity; WPF owns active-screen lifetime and logical snapshots, including nested navigation and virtual rows.",
       "sources": [
-        "README.md"
+        "UI Framework/Navigation/NavigationStack.cs",
+        "UI Framework/Navigation/NavigationEntry.cs",
+        "UI Framework.Wpf/Navigation/NavigationSurface.cs",
+        "UI Framework.Wpf/Navigation/NavigationSnapshot.cs",
+        "UI Framework.Wpf/Rendering/NodeSnapshot.cs",
+        "UI Framework.Wpf/Virtualization/VirtualListSnapshot.cs",
+        "tests/UI Framework.Checks/NavigationTests.cs",
+        "docs/navigation.md"
       ]
     },
     {
@@ -290,10 +303,12 @@
     {
       "id": "animation",
       "label": "Animation",
-      "status": "planned",
-      "summary": "Transitions and animatable view properties.",
+      "status": "partial",
+      "summary": "WPF screen entry fade/slide transitions with interruption cleanup and reduced-motion support. General animatable view properties remain planned.",
       "sources": [
-        "README.md"
+        "UI Framework/Navigation/NavigationTransition.cs",
+        "UI Framework.Wpf/Navigation/NavigationSurface.cs",
+        "docs/navigation.md"
       ]
     },
     {
@@ -689,6 +704,21 @@
       "from": "layoutstyle",
       "relation": "extends",
       "to": "api"
+    },
+    {
+      "from": "launchpad",
+      "relation": "demonstrates",
+      "to": "navigation"
+    },
+    {
+      "from": "navigation",
+      "relation": "uses",
+      "to": "animation"
+    },
+    {
+      "from": "navigation",
+      "relation": "preserves state from",
+      "to": "virtualization"
     }
   ]
 }

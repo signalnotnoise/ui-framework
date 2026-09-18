@@ -14,6 +14,8 @@ internal static class LaunchpadWindow
     internal static int Run(Application app, string[] args)
     {
         var model = new LaunchModel();
+        if (args.Contains("--board") || args.Contains("--details")) model.OpenBoard();
+        if (args.Contains("--details")) model.OpenDetails(model.Items[0]);
         using var host = new ViewHost(() => Component<Launchpad>(screen => screen.Model = model));
         ThemeStyles.Apply(host, LaunchTheme.Tokens);
         if (args.Contains("--capture"))
@@ -30,7 +32,8 @@ internal static class LaunchpadWindow
             var encoder = new PngBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(bitmap));
             Directory.CreateDirectory("artifacts/launchpad");
-            using var stream = File.Create(args.Contains("--compact") ? "artifacts/launchpad/compact.png" : "artifacts/launchpad/board.png");
+            var screen = model.Navigation.Current.Screen.ToString().ToLowerInvariant();
+            using var stream = File.Create($"artifacts/launchpad/{screen}{(args.Contains("--compact") ? "-compact" : "")}.png");
             encoder.Save(stream);
             return 0;
         }

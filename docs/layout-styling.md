@@ -33,7 +33,7 @@ ThemeStyles.Apply(host, theme); // UI_Framework.Wpf
 
 ThemeTokens is an immutable core record for canvas, surface, text, interaction colors, control radius, and control padding. Sample views consume the surface and typography colors; scoped WPF Button and TextBox styles consume the control tokens. Apply another theme at the same boundary to replace these styles. Application-wide resources are not modified. Local WPF property values can override style values using standard WPF precedence.
 
-`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain their native editing behavior and get hover/focus borders. Toggle and scrollbar styling remains native; this is not a complete theme system for every control. No animation or responsive visibility API is introduced.
+`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Toggle and scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.
 
 ## Ownership and verification
 
@@ -42,4 +42,4 @@ ThemeTokens is an immutable core record for canvas, surface, text, interaction c
 - WPF `Styling/ThemeStyles.cs`: scoped native resources, templates, and interaction states.
 - Sample `LaunchTheme`: application palette; Launchpad composes the responsive screen.
 
-Focused regression checks cover proportional allocation after fixed widths/gaps, adaptive reflow without losing input identity or selection, themed binding and disabled-state updates, and invalid layout values. All 25 Release checks passed on September 18, 2026. Wide and compact Launchpad previews are generated with `--showcase --capture` and `--showcase --capture --compact`.
+Focused regression checks cover proportional allocation after fixed widths/gaps, adaptive reflow without losing input identity or selection, themed binding and disabled-state updates, explicit foreground precedence/removal, empty-grid sizing, and invalid layout values. All 33 Release checks passed on September 18, 2026. Wide and compact Launchpad previews are generated with `--showcase --capture` and `--showcase --capture --compact`.

@@ -35,4 +35,6 @@ Hooks describe renderer lifetime. OnMounted does not mean WPF Loaded, layout com
 
 ## Verified behavior
 
+Navigation and virtual-list restoration can remount a saved logical component instance. OnMounted/OnUnmounted therefore run once per mount cycle, not necessarily once per object. Hidden navigation screens release subscriptions and controls while preserving component fields for Back. See [navigation lifetime](navigation.md).
+
 The executable checks cover local update isolation and batching, keyed reorder and local text retention, selection retention, prop refresh, type/key replacement, removal and remount, cleanup before queued renders, list mutations/no-ops/invalid moves, cross-thread rejection, failed-build dependency handling, and state reads in configure callbacks. These checks run WPF controls and a dispatcher without a visible window. They do not establish uninterrupted keyboard focus, accessibility behavior, or IME correctness.
