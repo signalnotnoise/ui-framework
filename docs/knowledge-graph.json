@@ -15,6 +15,8 @@
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "tests/UI Framework.Checks/EditorTests.cs",
+        "tests/UI Framework.Checks/PickerStyleTests.cs",
+        "UI Framework.Wpf/Styling/PickerStyles.cs",
         "docs/editors.md"
       ]
     },

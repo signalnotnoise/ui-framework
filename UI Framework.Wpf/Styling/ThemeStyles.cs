@@ -22,12 +22,7 @@ public static class ThemeStyles
         root.Resources[typeof(Button)] = ButtonStyle(theme);
         root.Resources[typeof(TextBox)] = InputStyle(typeof(TextBox), theme);
         root.Resources[typeof(PasswordBox)] = InputStyle(typeof(PasswordBox), theme);
-        // Keep the native selector template, popup, and keyboard behavior.
-        var picker = BaseStyle(typeof(ComboBox), theme);
-        var disabled = new Trigger { Property = UIElement.IsEnabledProperty, Value = false };
-        disabled.Setters.Add(new Setter(UIElement.OpacityProperty, 0.45));
-        picker.Triggers.Add(disabled);
-        root.Resources[typeof(ComboBox)] = picker;
+        root.Resources[typeof(ComboBox)] = PickerStyles.Create(BaseStyle(typeof(ComboBox), theme), theme);
     }
 
     private static SolidColorBrush Brush(string color)

@@ -42,6 +42,8 @@ Indices are positional, including when labels repeat. `-1` means no selection. A
 
 ## Themes and verification
 
-`ThemeStyles.Apply` styles text editors using the text-input template and passwords using an equivalent content-host template. Pickers receive theme colors, sizing, and disabled opacity while retaining the native selector template and popup behavior. `.IsEnabled`, `.FontSize`, and the usual layout modifiers apply.
+`ThemeStyles.Apply` styles text editors using the text-input template and passwords using an equivalent content-host template. Pickers use a scoped template for both closed chrome and dropdown items, so stock Windows gradients cannot override dark theme backgrounds. Surface/Ink colors pair for ordinary items, Accent/OnAccent for selection, Hover/AccentHover for highlighted items, Pressed for the open control, and Focus for keyboard focus borders. Disabled controls use reduced opacity. The native ComboBox and ComboBoxItem still own keyboard selection, type-ahead, popup capture and dismissal. `.IsEnabled`, `.FontSize`, and the usual layout modifiers apply. The picker template is for the non-editable `UI.Picker` contract.
 
 `EditorTests` covers multiline edits, normalization, read-only selection/undo, password rejection and binding replacement, picker options/invalid indices/duplicate labels, disabled state, disposal, and modifier validation. These are offscreen STA tests; visible keyboard, IME, popup, and screen-reader behavior still require interactive verification.
+
+`PickerStyleTests` also creates a hidden native presentation source and verifies light/dark closed and popup chrome, actual item colors, keyboard Down selection, Escape dismissal, binding propagation, and theme scope. It does not replace visible-window accessibility or pointer-interaction review.
