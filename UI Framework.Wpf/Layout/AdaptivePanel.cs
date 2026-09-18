@@ -12,6 +12,7 @@ internal sealed class AdaptivePanel : Panel
 
     protected override Size MeasureOverride(Size available)
     {
+        if (InternalChildren.Count == 0) return new Size();
         var columns = Columns(available.Width);
         var width = double.IsInfinity(available.Width) ? MinimumColumnWidth : Math.Max(0, (available.Width - Gap * (columns - 1)) / columns);
         double height = 0, row = 0;

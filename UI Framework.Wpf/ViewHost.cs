@@ -95,6 +95,11 @@ public sealed class ViewHost : ContentControl, IDisposable
         {
             if (view.ForegroundColor is null) node.Frame.ClearValue(TextElement.ForegroundProperty);
             else TextElement.SetForeground(node.Frame, Brush(view.ForegroundColor));
+            if (node.Control is Control native)
+            {
+                if (view.ForegroundColor is null) native.ClearValue(Control.ForegroundProperty);
+                else native.Foreground = Brush(view.ForegroundColor);
+            }
         }
         switch (node.Control)
         {

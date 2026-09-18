@@ -72,6 +72,44 @@ public sealed class LayoutStyleTests
     });
 
     [TestMethod]
+    public void ExplicitForegroundOverridesThemeAndCanBeRemoved() => StaTestRunner.Run(() =>
+    {
+        var color = new State<string?>("#FF0000");
+        var value = new State<string>("editable");
+        using var host = new ViewHost(() => VStack(
+            UI_Framework.UI.Button("Action", () => { }) with { ForegroundColor = color.Value },
+            TextField(value) with { ForegroundColor = color.Value }));
+        Layout(host, 400);
+        var button = TestVisualTree.Find<Button>(host).Single();
+        var input = TestVisualTree.Find<TextBox>(host).Single();
+        Assert.AreEqual(Colors.Red, ((SolidColorBrush)button.Foreground).Color);
+        Assert.AreEqual(Colors.Red, ((SolidColorBrush)input.Foreground).Color);
+        ThemeStyles.Apply(host, new ThemeTokens { Ink = "#123456" });
+        Layout(host, 400);
+        Assert.AreEqual(Colors.Red, ((SolidColorBrush)button.Foreground).Color);
+        color.Value = null;
+        TestVisualTree.Flush();
+        Assert.AreEqual(Color.FromRgb(18, 52, 86), ((SolidColorBrush)button.Foreground).Color);
+        Assert.AreEqual(Color.FromRgb(18, 52, 86), ((SolidColorBrush)input.Foreground).Color);
+    });
+
+    [TestMethod]
+    public void EmptyAdaptiveGridReleasesSpaceAndCanBePopulated() => StaTestRunner.Run(() =>
+    {
+        var populated = new State<bool>(false);
+        using var host = new ViewHost(() => HStack(AdaptiveGrid(240, populated.Value ? [Text("item")] : []), Text("after")));
+        Layout(host, 600);
+        double Position() => TestVisualTree.Find<TextBlock>(host).Single(t => t.Text == "after").TranslatePoint(new Point(), host).X;
+        Assert.AreEqual(0, Position(), 0.1);
+        populated.Value = true;
+        TestVisualTree.Flush(); Layout(host, 600);
+        Assert.AreEqual(240, Position(), 0.1);
+        populated.Value = false;
+        TestVisualTree.Flush(); Layout(host, 600);
+        Assert.AreEqual(0, Position(), 0.1);
+    });
+
+    [TestMethod]
     public void InvalidLayoutDimensionsAreRejected()
     {
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => AdaptiveGrid(0));
