@@ -1,6 +1,6 @@
 # Retained WPF controls
 
-See [validation status](native-interop-validation.md): functional checks pass, but a performance check currently blocks public publication. Local packages are for integration testing.
+See [validation status](native-interop-validation.md): functional checks and a seven-sample performance repeat pass; earlier timing failures remain documented. Local packages are for integration testing, and no public publication has been performed.
 
 `WpfUI.Native<T>(Func<T> create, Action<T>? update = null, Action<T>? release = null)` embeds an app-owned native WPF island in a declarative view. `T` must derive from `FrameworkElement`. This supports existing editors, trees, context menus, splitter grids, docking libraries and console controls without recreating their functionality in the framework.
 

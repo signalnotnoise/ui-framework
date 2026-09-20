@@ -1,7 +1,7 @@
 #requires -Version 7.0
 param(
     [string]$BaselineRef,
-    [ValidateRange(3, 15)][int]$Samples = 3,
+    [ValidateRange(3, 15)][int]$Samples = 7,
     [string]$OutputDirectory,
     [switch]$ReportOnly
 )

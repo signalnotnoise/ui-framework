@@ -9,10 +9,10 @@ Run from PowerShell 7 on Windows with the .NET 10 SDK and full Git history:
 ```powershell
 ./tools/Test-Performance.ps1
 # Use more samples to investigate timing variation:
-./tools/Test-Performance.ps1 -Samples 7
+./tools/Test-Performance.ps1 -Samples 11
 ```
 
-The runner builds the accepted source revision in an isolated archive and the current working tree in Release mode. Both use the current Counter sample workload. It alternates baseline and candidate processes, discards one warmup process per side and scenario, and records three measured processes per side by default. Keep the machine otherwise idle during measurement.
+The runner builds the accepted source revision in an isolated archive and the current working tree in Release mode. Both use the current Counter sample workload. It alternates baseline and candidate processes, discards one warmup process per side and scenario, and records seven measured processes per side by default. Keep the machine otherwise idle during measurement. The default increased from three on September 20 after broad timing ranges produced inconsistent failures; budgets, workloads and the accepted source revision are unchanged. CI and release workflows inherit the larger sample count. A failed run still fails immediately after analysis; there is no automatic retry-until-pass behavior.
 
 Each process uses 1,000 logical rows and 50 deterministic mixed operations. Three scenarios cover the full list, the virtualized list, and the themed full list. The full-list baseline remains mandatory. Initial mount and subsequent updates are measured separately; elapsed time, UI-thread allocated bytes, component body builds, and mount/unmount work are recorded. Correctness assertions include row count and balanced disposal.
 
