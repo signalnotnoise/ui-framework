@@ -81,7 +81,7 @@ internal static class Program
         themed.Measure(new Size(400, 300));
         themed.Arrange(new Rect(0, 0, 400, 300));
         themed.UpdateLayout();
-        close.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        close.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
         if (fileLabel.ActualWidth <= 0 || close.ActualWidth <= 0 || closed != 1 || !ReferenceEquals(fileRow, fileButton.Content))
             throw new Exception("Packaged themed rich button content failed.");
         Console.WriteLine("Packaged themed file label and interactive close content passed.");
