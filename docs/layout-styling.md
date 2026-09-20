@@ -39,6 +39,8 @@ ThemeTokens is an immutable core record for canvas, surface, text, interaction c
 
 `ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.
 
+The scoped Button template presents native `Content`, including panels containing labels and interactive controls, through a `ContentPresenter`. It forwards `ContentTemplate`, `ContentTemplateSelector`, and `ContentStringFormat` using WPF's normal template selection. Ordinary string labels retain wrapping and inherited theme foreground. Application-owned visuals and explicit or implicit data templates retain their own wrapping policy. This does not add a declarative rich-button API; native compositions remain application-owned. Menus, context menus and scrollbars still need application styles.
+
 `Toggle` remains a native CheckBox with the same boolean binding API. Its scoped template uses Ink for labels, Accent/OnAccent for checked indicators, Hover/Pressed variants for interaction, and a Focus-colored outline while keyboard focus is inside. Disabled labels and checkmarks use Muted at full opacity against Surface; they do not fall back to system black/gray text or fade the entire control. An explicit `.Foreground(...)` on the Toggle takes precedence, including when disabled. The template covers the framework's string-label, two-state Toggle contract. This source fix is newer than the published `0.1.0-alpha.1` package and needs a subsequent package version for NuGet consumers.
 
 ## Ownership and verification
@@ -46,6 +48,7 @@ ThemeTokens is an immutable core record for canvas, surface, text, interaction c
 - Core `Layout/` and `Styling/`: platform-independent descriptions and tokens.
 - WPF `Layout/AdaptivePanel.cs`: measurement and arrangement.
 - WPF `Styling/ThemeStyles.cs`: scoped native resources, templates, and interaction states.
+- WPF `Styling/ButtonContentPresenter.cs`: native content presentation with wrapping for ordinary generated string labels; application content and templates remain untouched.
 - WPF `Styling/ToggleStyles.cs`: checkbox label, indicator, focus and disabled visuals; native CheckBox still owns input and automation.
 - Sample `LaunchTheme`: application palette; Launchpad composes the responsive screen.
 

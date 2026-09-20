@@ -68,9 +68,11 @@ public static class ThemeStyles
         var style = BaseStyle(typeof(Button), theme);
         var template = new ControlTemplate(typeof(Button));
         var border = Border(theme);
-        var content = new FrameworkElementFactory(typeof(TextBlock));
-        content.SetValue(TextBlock.TextProperty, new TemplateBindingExtension(ContentControl.ContentProperty));
-        content.SetValue(TextBlock.TextWrappingProperty, TextWrapping.Wrap);
+        var content = new FrameworkElementFactory(typeof(ButtonContentPresenter), "ButtonContent");
+        content.SetValue(ContentPresenter.ContentProperty, new TemplateBindingExtension(ContentControl.ContentProperty));
+        content.SetValue(ContentPresenter.ContentTemplateProperty, new TemplateBindingExtension(ContentControl.ContentTemplateProperty));
+        content.SetValue(ContentPresenter.ContentTemplateSelectorProperty, new TemplateBindingExtension(ContentControl.ContentTemplateSelectorProperty));
+        content.SetValue(ContentPresenter.ContentStringFormatProperty, new TemplateBindingExtension(ContentControl.ContentStringFormatProperty));
         content.SetValue(FrameworkElement.HorizontalAlignmentProperty, HorizontalAlignment.Center);
         content.SetValue(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
         border.AppendChild(content);

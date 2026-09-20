@@ -136,7 +136,12 @@ public sealed class ViewHost : ContentControl, IDisposable
                     }
                     break;
                 case TextBlock text: text.Text = view.Content; text.FontSize = view.TextSize; break;
-                case Button button: button.Content = view.Content; button.FontSize = view.TextSize; break;
+                case Button button:
+                    // Content is object-valued: equal labels can be distinct string instances.
+                    // Avoid invalidating the presenter when the displayed value is unchanged.
+                    if (!Equals(button.Content, view.Content)) button.Content = view.Content;
+                    button.FontSize = view.TextSize;
+                    break;
                 case CheckBox toggle:
                     toggle.Content = view.Content;
                     toggle.FontSize = view.TextSize;

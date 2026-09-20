@@ -68,6 +68,23 @@ internal static class Program
         if (!ReferenceEquals(button, Find<Button>(host)))
             throw new Exception("Button identity was not retained.");
         Console.WriteLine("Package installation, transitive core dependency, rendering, click, and state update passed.");
+        var fileLabel = new TextBlock { Text = "Program.cs" };
+        var close = new Button { Content = "Close" };
+        var closed = 0;
+        close.Click += (_, _) => closed++;
+        var fileRow = new StackPanel { Orientation = Orientation.Horizontal };
+        fileRow.Children.Add(fileLabel);
+        fileRow.Children.Add(close);
+        var fileButton = new Button { Content = fileRow };
+        var themed = new ContentControl { Content = fileButton };
+        ThemeStyles.Apply(themed, new ThemeTokens());
+        themed.Measure(new Size(400, 300));
+        themed.Arrange(new Rect(0, 0, 400, 300));
+        themed.UpdateLayout();
+        close.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        if (fileLabel.ActualWidth <= 0 || close.ActualWidth <= 0 || closed != 1 || !ReferenceEquals(fileRow, fileButton.Content))
+            throw new Exception("Packaged themed rich button content failed.");
+        Console.WriteLine("Packaged themed file label and interactive close content passed.");
         var creates = 0;
         var releases = 0;
         var value = 0;
