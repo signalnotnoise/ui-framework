@@ -31,6 +31,10 @@ var theme = new ThemeTokens { Accent = "#176B57", ControlRadius = 8 };
 ThemeStyles.Apply(host, theme); // UI_Framework.Wpf
 ```
 
+`ThemeStyles.Apply` installs control styles; it does not set the host's Foreground/Background or a global TextBlock style. Standalone dark surfaces must set root colors explicitly, for example `.Foreground(theme.Ink).Background(theme.Canvas)` on the declarative root, or WPF `host.Foreground`/`host.Background` in the application's theme helper. Otherwise text inherits colors from its surrounding WPF surface.
+
+`UI.Text` wraps by default. Wrapping requires finite available width; an unconstrained `HStack` can measure children with infinite horizontal space. Use a constrained width or a `FlexRow` inside a finite-width surface for wrapping descriptions.
+
 ThemeTokens is an immutable core record for canvas, surface, text, interaction colors, control radius, and control padding. Sample views consume the surface and typography colors; scoped WPF Button, TextBox, PasswordBox, ComboBox and CheckBox styles consume the control tokens. Apply another theme at the same boundary to replace these styles. Application-wide resources are not modified. Local WPF property values can override style values using standard WPF precedence.
 
 `ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.

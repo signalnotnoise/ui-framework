@@ -52,6 +52,7 @@ internal sealed class Node : IDisposable
         }
         Control = view.Kind switch
         {
+            ViewKind.Platform => new NativeControlHost((NativeViewDescriptor)view.PlatformContent!),
             ViewKind.Text => new TextBlock { TextWrapping = TextWrapping.Wrap },
             ViewKind.Button => new Button { Padding = new Thickness(12, 6, 12, 6), HorizontalAlignment = HorizontalAlignment.Left },
             ViewKind.TextField => new TextBox { MinWidth = 40, Padding = new Thickness(6) },
@@ -148,6 +149,7 @@ internal sealed class Node : IDisposable
         if (Control is ViewHost host) Cleanup(host.Dispose);
         if (Control is VirtualListControl list) Cleanup(list.Dispose);
         if (Control is NavigationSurface navigation) Cleanup(navigation.Dispose);
+        if (Control is NativeControlHost native) Cleanup(native.Dispose);
         if (ComponentInstance is { } component) Cleanup(component.OnUnmounted);
         if (errors.Count > 0) throw new AggregateException("Component cleanup failed.", errors);
     }

@@ -3,6 +3,21 @@
   "title": "UI Framework knowledge graph",
   "nodes": [
     {
+      "id": "nativeinterop",
+      "label": "Retained native WPF islands",
+      "status": "implemented",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment and one-time release; apps own native contents and durable state.",
+      "sources": [
+        "UI Framework/View.cs",
+        "UI Framework/ViewKind.cs",
+        "UI Framework.Wpf/Interop/WpfUI.cs",
+        "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
+        "UI Framework.Wpf/Interop/NativeControlHost.cs",
+        "tests/UI Framework.Checks/NativeHostTests.cs",
+        "docs/native-interop.md"
+      ]
+    },
+    {
       "id": "editors",
       "label": "Text editors, passwords and selectors",
       "status": "implemented",
@@ -465,6 +480,11 @@
     }
   ],
   "edges": [
+    {
+      "from": "host",
+      "relation": "retains and releases",
+      "to": "nativeinterop"
+    },
     {
       "from": "api",
       "relation": "exposes",

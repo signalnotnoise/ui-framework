@@ -1,17 +1,26 @@
-param([switch]$NoBuild)
+#requires -Version 7.0
+param([switch]$NoBuild, [string]$Version, [string]$OutputDirectory)
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectRoot
 try {
-    $feed = Join-Path $projectRoot 'artifacts/packages'
+    $customVersion = -not [string]::IsNullOrWhiteSpace($Version)
+    if ($customVersion -and $NoBuild) { throw 'A version override requires a matching build; omit -NoBuild.' }
+    if (-not $customVersion) {
+        [xml]$properties = Get-Content 'Directory.Build.props'
+        $Version = [string]$properties.Project.PropertyGroup.Version
+    }
+    if ($Version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z]+([.-][0-9A-Za-z]+)*)?$') { throw 'Invalid package version.' }
+    $feed = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory, $projectRoot) } else { Join-Path $projectRoot 'artifacts/packages' }
+    if ($customVersion -and (Test-Path (Join-Path $feed "SignalNotNoise.UI.$Version.nupkg"))) {
+        throw 'This local package version already exists. Choose a new version instead of replacing it.'
+    }
     foreach ($project in @('UI Framework/UI Framework.csproj', 'UI Framework.Wpf/UI Framework.Wpf.csproj')) {
-        $arguments = @('pack', $project, '-c', 'Release', '-o', $feed, '--disable-build-servers', '-warnaserror')
+        $arguments = @('pack', $project, '-c', 'Release', '-o', $feed, '--disable-build-servers', '-warnaserror', "-p:Version=$Version")
         if ($NoBuild) { $arguments += @('--no-build', '--no-restore') }
         & dotnet @arguments
         if ($LASTEXITCODE -ne 0) { throw "Packing failed: $project" }
     }
-    [xml]$properties = Get-Content 'Directory.Build.props'
-    $version = $properties.Project.PropertyGroup.Version
     # A unique consumer and package cache prevent an older build of this version from masking defects.
     $consumer = Join-Path $projectRoot ('artifacts/package-validation/' + [Guid]::NewGuid().ToString('N'))
     New-Item -ItemType Directory -Path $consumer -Force | Out-Null
@@ -59,6 +68,26 @@ internal static class Program
         if (!ReferenceEquals(button, Find<Button>(host)))
             throw new Exception("Button identity was not retained.");
         Console.WriteLine("Package installation, transitive core dependency, rendering, click, and state update passed.");
+        var creates = 0;
+        var releases = 0;
+        var value = 0;
+        TextBox? editor = null;
+        using var island = new ViewHost(() => WpfUI.Native(
+            () => { creates++; return editor = new TextBox { Text = "retained native editor" }; },
+            control => control.Tag = value,
+            control => { if (control.Parent is not null) throw new Exception("Release ran before detach."); releases++; }).Id("editor"));
+        editor!.Select(2, 4);
+        var allocated = GC.GetAllocatedBytesForCurrentThread();
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        for (value = 1; value <= 1000; value++) island.Refresh();
+        watch.Stop();
+        allocated = GC.GetAllocatedBytesForCurrentThread() - allocated;
+        if (creates != 1 || editor.Text != "retained native editor" || editor.SelectionLength != 4 || !Equals(editor.Tag, 1000))
+            throw new Exception("Packaged native retention/update failed.");
+        island.Dispose();
+        island.Dispose();
+        if (releases != 1) throw new Exception("Packaged native release was not exactly once.");
+        Console.WriteLine($"Native interop: 1000 retained updates, {watch.Elapsed.TotalMilliseconds:F2} ms, {allocated} UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.");
     }
 
     private static T Find<T>(DependencyObject root) where T : DependencyObject =>

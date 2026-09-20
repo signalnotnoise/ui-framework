@@ -7,6 +7,7 @@ Green: implemented. Amber: partial. Gray: planned.
 ```mermaid
 flowchart LR
   subgraph implemented[implemented]
+    nativeinterop["Retained native WPF islands"]
     editors["Text editors, passwords and selectors"]
     layoutstyle["Responsive layout and scoped styling"]
     launchpad["Launchpad product showcase"]
@@ -43,6 +44,7 @@ flowchart LR
     hotreload["Hot reload tooling"]
     platforms["Other backends"]
   end
+  host -->|retains and releases| nativeinterop
   api -->|exposes| editors
   editors -->|reads and writes through| binding
   host -->|renders native| editors
@@ -105,7 +107,7 @@ flowchart LR
   classDef implemented fill:#dcfce7,stroke:#15803d,color:#14532d
   classDef partial fill:#fef3c7,stroke:#b45309,color:#78350f
   classDef planned fill:#f1f5f9,stroke:#64748b,color:#334155
-  class editors,layoutstyle,launchpad,api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,navigation,binding,stress,derived,memo,visualstress implemented
+  class nativeinterop,editors,layoutstyle,launchpad,api,view,component,state,list,session,host,dispatcher,identity,lifecycle,controls,checks,demo,navigation,binding,stress,derived,memo,visualstress implemented
   class updates,focus,errors,styling,virtualization,animation,release partial
   class hotreload,platforms planned
 ```
@@ -114,6 +116,7 @@ flowchart LR
 
 | Concept | Status | Contract / limitation | Sources |
 | --- | --- | --- | --- |
+| Retained native WPF islands | implemented | Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment and one-time release; apps own native contents and durable state. | [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework.Wpf/Interop/WpfUI.cs](../UI%20Framework.Wpf/Interop/WpfUI.cs), [UI Framework.Wpf/Interop/NativeViewDescriptor.cs](../UI%20Framework.Wpf/Interop/NativeViewDescriptor.cs), [UI Framework.Wpf/Interop/NativeControlHost.cs](../UI%20Framework.Wpf/Interop/NativeControlHost.cs), [tests/UI Framework.Checks/NativeHostTests.cs](../tests/UI%20Framework.Checks/NativeHostTests.cs), [docs/native-interop.md](../docs/native-interop.md) |
 | Text editors, passwords and selectors | implemented | Core describes bound multiline text, masked passwords and indexed pickers. WPF owns native editing, read-only selection, bounded undo, theme integration and feedback suppression. | [UI Framework/UI.cs](../UI%20Framework/UI.cs), [UI Framework/View.cs](../UI%20Framework/View.cs), [UI Framework/ViewKind.cs](../UI%20Framework/ViewKind.cs), [UI Framework.Wpf/Rendering/Node.cs](../UI%20Framework.Wpf/Rendering/Node.cs), [UI Framework.Wpf/ViewHost.cs](../UI%20Framework.Wpf/ViewHost.cs), [UI Framework.Wpf/Styling/ThemeStyles.cs](../UI%20Framework.Wpf/Styling/ThemeStyles.cs), [tests/UI Framework.Checks/EditorTests.cs](../tests/UI%20Framework.Checks/EditorTests.cs), [tests/UI Framework.Checks/PickerStyleTests.cs](../tests/UI%20Framework.Checks/PickerStyleTests.cs), [UI Framework.Wpf/Styling/PickerStyles.cs](../UI%20Framework.Wpf/Styling/PickerStyles.cs), [docs/editors.md](../docs/editors.md) |
 | Responsive layout and scoped styling | implemented | Core defines weighted rows, adaptive grids, alignment and theme tokens. WPF owns measurement, native templates and interaction states. Launchpad supplies application design. | [UI Framework/Layout/ViewAlignment.cs](../UI%20Framework/Layout/ViewAlignment.cs), [UI Framework/Styling/ThemeTokens.cs](../UI%20Framework/Styling/ThemeTokens.cs), [UI Framework/Styling/ButtonStyleKind.cs](../UI%20Framework/Styling/ButtonStyleKind.cs), [UI Framework.Wpf/Layout/AdaptivePanel.cs](../UI%20Framework.Wpf/Layout/AdaptivePanel.cs), [UI Framework.Wpf/Styling/ThemeStyles.cs](../UI%20Framework.Wpf/Styling/ThemeStyles.cs), [samples/Counter/Models/LaunchTheme.cs](../samples/Counter/Models/LaunchTheme.cs), [tests/UI Framework.Checks/LayoutStyleTests.cs](../tests/UI%20Framework.Checks/LayoutStyleTests.cs), [UI Framework.Wpf/Styling/ToggleStyles.cs](../UI%20Framework.Wpf/Styling/ToggleStyles.cs), [tests/UI Framework.Checks/ToggleStyleTests.cs](../tests/UI%20Framework.Checks/ToggleStyleTests.cs), [docs/layout-styling.md](../docs/layout-styling.md) |
 | Launchpad product showcase | implemented | Session-only Overview, Board and Details screens with Back, retained local preferences, edits and workflow actions. Sample models own routes; WPF owns native screen lifetime. | [samples/Counter/Components/Launchpad.cs](../samples/Counter/Components/Launchpad.cs), [samples/Counter/Components/LaunchOverview.cs](../samples/Counter/Components/LaunchOverview.cs), [samples/Counter/Components/LaunchBoard.cs](../samples/Counter/Components/LaunchBoard.cs), [samples/Counter/Components/LaunchDetails.cs](../samples/Counter/Components/LaunchDetails.cs), [samples/Counter/Models/LaunchRoute.cs](../samples/Counter/Models/LaunchRoute.cs), [samples/Counter/Models/LaunchScreen.cs](../samples/Counter/Models/LaunchScreen.cs), [samples/Counter/Diagnostics/LaunchNavigationChecks.cs](../samples/Counter/Diagnostics/LaunchNavigationChecks.cs), [samples/Counter/Models/LaunchModel.cs](../samples/Counter/Models/LaunchModel.cs), [samples/Counter/Models/LaunchItem.cs](../samples/Counter/Models/LaunchItem.cs), [samples/Counter/Models/LaunchStage.cs](../samples/Counter/Models/LaunchStage.cs), [samples/Counter/LaunchpadWindow.cs](../samples/Counter/LaunchpadWindow.cs), [docs/launchpad.md](../docs/launchpad.md) |
