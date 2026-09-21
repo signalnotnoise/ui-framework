@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.2 — September 21, 2026
+
+Second experimental NuGet preview, including native interop, accessibility labels, rich button content, and rendering optimizations.
+
+- **Native WPF interop**: Embed retained native WPF controls with `WpfUI.Native<T>()` and `NativeControlHost`, supporting lifecycle hooks and isolated layout.
+- **Accessibility labels**: Native contextual automation names via `View.AccessibilityLabel` (`AutomationProperties.SetName`) without altering visible control text.
+- **Rich button content**: `ButtonContentPresenter` supports arbitrary native WPF elements, data templates, string format, template selectors, and text wrapping.
+- **High-contrast toggle visuals**: Scoped `CheckBox` template with clear visual indicator, rounded checkmark geometry, and focused interaction states.
+- **Rendering & allocation optimizations**:
+  - Direct set reconciliation in `Dependencies.Reconcile` eliminating temporary LINQ HashSet allocations.
+  - On-demand duplicate key validation in `ViewHost.Validate`.
+  - Guarded dependency property writes in `ViewHost.Patch` avoiding layout churn and enum boxing.
+  - Core list update allocations improved by 5.02% (~32 MB reduction) and virtualized update allocations by 5.84%.
+- **Resilience**: Preserved subscriptions and rollback recovery on failed component builds and computed getters.
+
 ## 0.1.0-alpha.1 — September 18, 2026
 
 First experimental NuGet preview, published through GitHub Actions Trusted Publishing from commit `78c88fb`.

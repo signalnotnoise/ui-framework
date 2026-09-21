@@ -1,11 +1,22 @@
 namespace UI_Framework;
 
-public sealed class ViewSession(Func<View> body) : IDisposable
+public sealed class ViewSession : IDisposable
 {
+    private readonly Func<View> body;
     private readonly int ownerThread = Environment.CurrentManagedThreadId;
+    private readonly Action<IState> subscribe;
+    private readonly Action<IState> unsubscribe;
     private HashSet<IState> dependencies = [];
     private bool disposed;
     public event Action? Invalidated;
+
+    public ViewSession(Func<View> body)
+    {
+        ArgumentNullException.ThrowIfNull(body);
+        this.body = body;
+        subscribe = state => state.Changed += Invalidate;
+        unsubscribe = state => state.Changed -= Invalidate;
+    }
 
     public View Build()
     {
@@ -18,21 +29,7 @@ public sealed class ViewSession(Func<View> body) : IDisposable
         try { result = body(); }
         finally { Dependencies.Current = previous; }
         // Preserve retained subscriptions; derived values attach only while observed.
-        List<IState> added = [];
-        try
-        {
-            foreach (var state in next.Except(dependencies))
-            {
-                state.Changed += Invalidate;
-                added.Add(state);
-            }
-        }
-        catch
-        {
-            foreach (var state in added) state.Changed -= Invalidate;
-            throw;
-        }
-        foreach (var state in dependencies.Except(next)) state.Changed -= Invalidate;
+        Dependencies.Reconcile(dependencies, next, subscribe, unsubscribe);
         dependencies = next;
         return result;
     }
@@ -48,7 +45,7 @@ public sealed class ViewSession(Func<View> body) : IDisposable
         VerifyAccess();
         if (disposed) return;
         disposed = true;
-        foreach (var state in dependencies) state.Changed -= Invalidate;
+        foreach (var state in dependencies) unsubscribe(state);
         dependencies.Clear();
         Invalidated = null;
     }

@@ -87,7 +87,12 @@ try {
             $right = @($runs | Where-Object { $_.scenario -eq $scenario -and $_.side -eq 'candidate' } | ForEach-Object { [double]$_.result.$metric })
             $reference = Median $left; $current = Median $right
             $limit = $metrics[$metric]
-            $exception = $budget.scenarioMetricBudgets.$scenario.$metric
+            $scenarioBudgets = $budget.PSObject.Properties['scenarioMetricBudgets']?.Value
+            $scenarioBudget = if ($null -ne $scenarioBudgets) { $scenarioBudgets.PSObject.Properties[$scenario]?.Value } else { $null }
+            $metricBudget = if ($null -ne $scenarioBudget) {
+                $scenarioBudget.PSObject.Properties[$metric]?.Value
+            } else { $null }
+            $exception = $metricBudget
             if ($null -ne $exception) { $limit = $exception }
             $change = if ($reference -eq 0) { if ($current -eq 0) { 0 } else { $null } } else { 100 * ($current / $reference - 1) }
             [pscustomobject]@{

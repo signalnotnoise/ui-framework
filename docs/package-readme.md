@@ -10,7 +10,7 @@ Experimental SwiftUI-inspired UI components in C#. Requires .NET 10; the WPF ren
 In a .NET 10 WPF application, install the preview:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.1
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.2
 ```
 
 In your WPF window constructor, after `InitializeComponent()`:

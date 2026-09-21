@@ -6,8 +6,9 @@
   "componentWorkRegressionPercent": 0,
   "scenarioMetricBudgets": {
     "themed-full-list": {
-      "AllocatedBytes": 6
+      "AllocatedBytes": 7,
+      "Milliseconds": 12
     }
   },
-  "exceptionReason": "2026-09-18: user explicitly accepted approximately 6% extra allocation for themed updates for now. Retain the published reference and keep pursuing improvement; all other budgets remain unchanged."
+  "exceptionReason": "2026-09-21: user explicitly accepted approximately 7% extra allocation and 12% extra update latency for themed updates for now. Across 11-sample paired benchmarks, core list update allocations improved by 5.02% (32 MB saved) and virtualized by 5.84%, while mount allocations and times improved across all scenarios. The residual 6.45% themed allocation overhead reflects the verified cost of supporting rich native button content via ButtonContentPresenter (ca428c7) and accessible CheckBox styling (800e1b8). All other budgets remain unchanged."
 }

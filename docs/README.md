@@ -14,6 +14,8 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Rendering performance](performance.md) | Derived observation, Memo inputs, and performance contracts. |
 | [Measured results](performance-results.md) | Reference/optimized timings, allocations, checks, and measurement limitations. |
 | [Performance guardrails](performance-guardrails.md) | Paired baseline measurements, regression budgets, and CI/release gates. |
+| [September 21 comparison](performance-2026-09-21.md) | Measured optimization results, 11-sample verification, and the approved themed budget. |
+| [September 20 performance exploration](performance-exploration-2026-09-20.md) | Virtualization measurements, dependency-tracking experiment, and tradeoffs of further techniques. |
 | [September 18 comparison](performance-2026-09-18.md) | Detected regression, improvements, and the explicitly accepted temporary allocation budget. |
 | [Accessibility labels](accessibility.md) | Contextual native automation names without changing visible control text. |
 | [Native WPF interop](native-interop.md) | Retained native islands, ownership, cleanup, and migration gaps. |

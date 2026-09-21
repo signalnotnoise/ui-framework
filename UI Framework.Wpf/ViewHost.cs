@@ -62,13 +62,16 @@ public sealed class ViewHost : ContentControl, IDisposable
             throw new InvalidOperationException("A Scroll view requires exactly one child.");
         if (view.Kind == ViewKind.Component && (view.ComponentType is null || view.CreateComponent is null))
             throw new InvalidOperationException("Use UI.Component<T>() to describe a component.");
-        var keys = new HashSet<string>();
+        HashSet<string>? keys = null;
         foreach (var child in view.Children)
         {
             if (view.Kind == ViewKind.VirtualList && string.IsNullOrEmpty(child.Key))
                 throw new InvalidOperationException("Every VirtualList row requires a stable, nonempty key.");
-            if (child.Key is { } key && !keys.Add(key))
-                throw new InvalidOperationException($"Duplicate sibling key: {key}");
+            if (child.Key is { } key)
+            {
+                keys ??= [];
+                if (!keys.Add(key)) throw new InvalidOperationException($"Duplicate sibling key: {key}");
+            }
             Validate(child);
         }
     }
@@ -104,10 +107,13 @@ public sealed class ViewHost : ContentControl, IDisposable
             if (!node.Frame.Height.Equals(view.DesiredHeight)) node.Frame.Height = view.DesiredHeight;
             var radius = new CornerRadius(view.Radius);
             if (node.Frame.CornerRadius != radius) node.Frame.CornerRadius = radius;
-            node.Frame.HorizontalAlignment = view.Horizontal switch { ViewAlignment.Start => HorizontalAlignment.Left, ViewAlignment.Center => HorizontalAlignment.Center, ViewAlignment.End => HorizontalAlignment.Right, _ => HorizontalAlignment.Stretch };
-            node.Frame.VerticalAlignment = view.Vertical switch { ViewAlignment.Start => VerticalAlignment.Top, ViewAlignment.Center => VerticalAlignment.Center, ViewAlignment.End => VerticalAlignment.Bottom, _ => VerticalAlignment.Stretch };
-            node.Frame.IsEnabled = view.Enabled;
-            if (node.Control is Button styledButton) ThemeStyles.SetAppearance(styledButton, view.ButtonAppearance);
+            if (created || previous.Horizontal != view.Horizontal)
+                node.Frame.HorizontalAlignment = view.Horizontal switch { ViewAlignment.Start => HorizontalAlignment.Left, ViewAlignment.Center => HorizontalAlignment.Center, ViewAlignment.End => HorizontalAlignment.Right, _ => HorizontalAlignment.Stretch };
+            if (created || previous.Vertical != view.Vertical)
+                node.Frame.VerticalAlignment = view.Vertical switch { ViewAlignment.Start => VerticalAlignment.Top, ViewAlignment.Center => VerticalAlignment.Center, ViewAlignment.End => VerticalAlignment.Bottom, _ => VerticalAlignment.Stretch };
+            if (created || previous.Enabled != view.Enabled) node.Frame.IsEnabled = view.Enabled;
+            if (node.Control is Button styledButton && (created || previous.ButtonAppearance != view.ButtonAppearance))
+                ThemeStyles.SetAppearance(styledButton, view.ButtonAppearance);
             if (created || previous.BackgroundColor != view.BackgroundColor)
                 node.Frame.Background = Brush(view.BackgroundColor);
             if (created || previous.ForegroundColor != view.ForegroundColor)
@@ -135,22 +141,28 @@ public sealed class ViewHost : ContentControl, IDisposable
                         componentHost.Refresh();
                     }
                     break;
-                case TextBlock text: text.Text = view.Content; text.FontSize = view.TextSize; break;
+                case TextBlock text:
+                    if (text.Text != view.Content) text.Text = view.Content;
+                    if (!text.FontSize.Equals(view.TextSize)) text.FontSize = view.TextSize;
+                    break;
                 case Button button:
                     // Content is object-valued: equal labels can be distinct string instances.
                     // Avoid invalidating the presenter when the displayed value is unchanged.
                     if (!Equals(button.Content, view.Content)) button.Content = view.Content;
-                    button.FontSize = view.TextSize;
+                    if (!button.FontSize.Equals(view.TextSize)) button.FontSize = view.TextSize;
                     break;
                 case CheckBox toggle:
-                    toggle.Content = view.Content;
-                    toggle.FontSize = view.TextSize;
-                    node.Updating = true;
-                    try { toggle.IsChecked = view.Checked; }
-                    finally { node.Updating = false; }
+                    if (!Equals(toggle.Content, view.Content)) toggle.Content = view.Content;
+                    if (!toggle.FontSize.Equals(view.TextSize)) toggle.FontSize = view.TextSize;
+                    if (toggle.IsChecked != view.Checked)
+                    {
+                        node.Updating = true;
+                        try { toggle.IsChecked = view.Checked; }
+                        finally { node.Updating = false; }
+                    }
                     break;
                 case TextBox input:
-                    input.FontSize = view.TextSize;
+                    if (!input.FontSize.Equals(view.TextSize)) input.FontSize = view.TextSize;
                     input.IsReadOnly = view.ReadOnly;
                     input.MaxLength = view.MaximumLength;
                     var undoLimit = view.ReadOnly ? 0 : view.UndoHistoryLimit;
@@ -166,14 +178,14 @@ public sealed class ViewHost : ContentControl, IDisposable
                     }
                     break;
                 case PasswordBox password:
-                    password.FontSize = view.TextSize;
+                    if (!password.FontSize.Equals(view.TextSize)) password.FontSize = view.TextSize;
                     password.MaxLength = view.MaximumLength;
                     node.Updating = true;
                     try { if (password.Password != view.Content) password.Password = view.Content; }
                     finally { node.Updating = false; }
                     break;
                 case ComboBox picker:
-                    picker.FontSize = view.TextSize;
+                    if (!picker.FontSize.Equals(view.TextSize)) picker.FontSize = view.TextSize;
                     node.Updating = true;
                     try
                     {
@@ -276,7 +288,7 @@ public sealed class ViewHost : ContentControl, IDisposable
 
     private static void SetChildLayout(Panel panel, FrameworkElement element, int index, int count, double gap)
     {
-        if (panel is Grid) Grid.SetColumn(element, index * 2);
+        if (panel is Grid && Grid.GetColumn(element) != index * 2) Grid.SetColumn(element, index * 2);
         var margin = panel is AdaptivePanel or Grid ? new Thickness(0) : panel is StackPanel { Orientation: Orientation.Vertical }
             ? new Thickness(0, 0, 0, index < count - 1 ? gap : 0)
             : new Thickness(0, 0, index < count - 1 ? gap : 0, 0);

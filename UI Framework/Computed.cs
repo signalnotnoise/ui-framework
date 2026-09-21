@@ -9,6 +9,8 @@ public sealed class Computed<T> : IState
     private readonly IEqualityComparer<T> comparer;
     private readonly IState? fixedSource;
     private readonly int ownerThread = Environment.CurrentManagedThreadId;
+    private readonly Action<IState> subscribe;
+    private readonly Action<IState> unsubscribe;
     private HashSet<IState> dependencies = [];
     private Action? changed;
     private T current = default!;
@@ -19,6 +21,8 @@ public sealed class Computed<T> : IState
         ArgumentNullException.ThrowIfNull(get);
         this.get = get;
         this.comparer = comparer ?? EqualityComparer<T>.Default;
+        subscribe = dependency => dependency.Changed += OnDependencyChanged;
+        unsubscribe = dependency => dependency.Changed -= OnDependencyChanged;
     }
 
     // Bindings/selectors originating from one State already know their source;
@@ -74,7 +78,7 @@ public sealed class Computed<T> : IState
         if (evaluating) throw new InvalidOperationException("A computed value cannot depend on itself.");
         evaluating = true;
         var outer = Dependencies.Current;
-        var next = fixedSource is null ? new HashSet<IState>() : null;
+        HashSet<IState>? next = fixedSource is null && changed is not null ? [] : null;
         Dependencies.Current = next;
         T result;
         try { result = get(); }
@@ -91,21 +95,7 @@ public sealed class Computed<T> : IState
                 return result;
             }
             ArgumentNullException.ThrowIfNull(next);
-            List<IState> added = [];
-            try
-            {
-                foreach (var dependency in next.Except(dependencies))
-                {
-                    dependency.Changed += OnDependencyChanged;
-                    added.Add(dependency);
-                }
-            }
-            catch
-            {
-                foreach (var dependency in added) dependency.Changed -= OnDependencyChanged;
-                throw;
-            }
-            foreach (var dependency in dependencies.Except(next)) dependency.Changed -= OnDependencyChanged;
+            Dependencies.Reconcile(dependencies, next, subscribe, unsubscribe);
             dependencies = next;
         }
         return result;
@@ -123,7 +113,7 @@ public sealed class Computed<T> : IState
 
     private void Detach()
     {
-        foreach (var dependency in dependencies) dependency.Changed -= OnDependencyChanged;
+        foreach (var dependency in dependencies) unsubscribe(dependency);
         dependencies.Clear();
     }
 

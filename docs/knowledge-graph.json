@@ -465,7 +465,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "MIT-licensed source and NuGet preview with Windows validation, fresh package consumer checks and a separate GitHub Actions trusted-publishing job; version 0.1.0-alpha.1 published through trusted publishing.",
+      "summary": "MIT-licensed source and NuGet preview with Windows validation, fresh package consumer checks and a separate GitHub Actions trusted-publishing job; version 0.1.0-alpha.1 published, version 0.1.0-alpha.2 prepared.",
       "sources": [
         "Directory.Build.props",
         "global.json",
