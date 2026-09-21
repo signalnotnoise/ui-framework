@@ -20,7 +20,7 @@ Changes invalidate only the sessions that read the changed observable. Each host
 
 Memo compares inputs using object equality; immutable records and tuples provide value comparison. Include all changing props and callback dependencies. Observable objects can be passed by stable reference when the child reads them reactively; ordinary mutable objects need an immutable value snapshot or revision input. Keys control identity and local-state lifetime; Memo controls whether a retained instance needs a parent-driven build. Do not use keys as a substitute for input comparison.
 
-If Body throws, its previous successful dependency subscriptions remain intact and the temporary tracking context is restored. Renderer changes are not transactional; application-level error boundaries and rollback are future work.
+If Body or validation throws, previous successful dependency subscriptions remain intact and candidate subscriptions are discarded. Host-level node replacement safely cleans up replacement nodes on exception; application-level error boundaries and rollback are future work.
 
 ## Lifetime
 

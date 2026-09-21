@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -13,6 +13,7 @@
   <ItemGroup>
     <!-- Original template placeholder is not part of the public API. -->
     <Compile Remove="Class1.cs" />
+    <InternalsVisibleTo Include="UI Framework.Wpf" />
   </ItemGroup>
 
 </Project>

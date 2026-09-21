@@ -13,7 +13,7 @@ Second experimental NuGet preview, including native interop, accessibility label
   - On-demand duplicate key validation in `ViewHost.Validate`.
   - Guarded dependency property writes in `ViewHost.Patch` avoiding layout churn and enum boxing.
   - Core list update allocations improved by 5.02% (~32 MB reduction) and virtualized update allocations by 5.84%.
-- **Resilience**: Preserved subscriptions and rollback recovery on failed component builds and computed getters.
+- **Resilience**: Preserved subscriptions and rollback recovery on failed component builds and computed getters; transactional candidate dependency commit and exception-safe replacement node cleanup in `ViewHost`.
 
 ## 0.1.0-alpha.1 — September 18, 2026
 

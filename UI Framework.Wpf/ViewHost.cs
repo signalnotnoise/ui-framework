@@ -24,7 +24,15 @@ public sealed class ViewHost : ContentControl, IDisposable
         session = new(body);
         session.Invalidated += Schedule;
         try { Refresh(); }
-        catch { Dispose(); throw; }
+        catch (Exception error)
+        {
+            try { Dispose(); }
+            catch (Exception cleanupError)
+            {
+                throw new AggregateException("Initial render failed and host cleanup also failed.", error, cleanupError);
+            }
+            throw;
+        }
     }
 
     private void Schedule()
@@ -43,11 +51,13 @@ public sealed class ViewHost : ContentControl, IDisposable
         Dispatcher.VerifyAccess();
         ObjectDisposedException.ThrowIf(disposed, this);
         queued = false;
-        var view = session.Build();
+        var view = session.BuildCandidate(out var commit);
         Validate(view);
-        root = Patch(root, view, initialSnapshot);
+        var nextRoot = Patch(root, view, initialSnapshot);
         initialSnapshot = null;
-        Content = root.Element;
+        root = nextRoot;
+        Content = nextRoot.Element;
+        commit();
     }
 
     private static void Validate(View view)
@@ -78,17 +88,18 @@ public sealed class ViewHost : ContentControl, IDisposable
 
     private static Node Patch(Node? node, View view, NodeSnapshot? snapshot = null)
     {
+        var previousNode = node;
         var created = node is null || node.View.Kind != view.Kind || node.View.Key != view.Key
             || node.View.ComponentType != view.ComponentType
             || view.Kind == ViewKind.Platform && node.Control is NativeControlHost retainedNative && !retainedNative.Matches(view.PlatformContent);
         if (created)
         {
-            node?.Dispose();
-            node = new Node(view, snapshot?.Matches(view) == true ? snapshot : null);
+            node = null;
         }
-        ArgumentNullException.ThrowIfNull(node);
         try
         {
+            if (created) node = new Node(view, snapshot?.Matches(view) == true ? snapshot : null);
+            ArgumentNullException.ThrowIfNull(node);
             var previous = node.View;
             node.View = view; // Event handlers always read the latest description.
             if (created || previous.AccessibleName != view.AccessibleName)
@@ -277,11 +288,19 @@ public sealed class ViewHost : ContentControl, IDisposable
                     break;
             }
             node.Restored = null;
+            if (created) previousNode?.Dispose();
             return node;
         }
-        catch
+        catch (Exception error)
         {
-            if (created && node.Control is NativeControlHost) node.Dispose();
+            if (created && node is not null)
+            {
+                try { node.Dispose(); }
+                catch (Exception cleanupError)
+                {
+                    throw new AggregateException("Rendering failed and replacement-node cleanup also failed.", error, cleanupError);
+                }
+            }
             throw;
         }
     }

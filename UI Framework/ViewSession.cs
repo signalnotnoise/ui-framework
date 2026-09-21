@@ -20,6 +20,13 @@ public sealed class ViewSession : IDisposable
 
     public View Build()
     {
+        var result = BuildCandidate(out var commit);
+        commit();
+        return result;
+    }
+
+    internal View BuildCandidate(out Action commit)
+    {
         VerifyAccess();
         ObjectDisposedException.ThrowIf(disposed, this);
         var previous = Dependencies.Current;
@@ -28,9 +35,12 @@ public sealed class ViewSession : IDisposable
         View result;
         try { result = body(); }
         finally { Dependencies.Current = previous; }
-        // Preserve retained subscriptions; derived values attach only while observed.
-        Dependencies.Reconcile(dependencies, next, subscribe, unsubscribe);
-        dependencies = next;
+        commit = () =>
+        {
+            // Preserve retained subscriptions; derived values attach only while observed.
+            Dependencies.Reconcile(dependencies, next, subscribe, unsubscribe);
+            dependencies = next;
+        };
         return result;
     }
 

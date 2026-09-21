@@ -122,6 +122,32 @@ public sealed class NativeHostTests
     });
 
     [TestMethod]
+    public void FailedValidationDoesNotCommitCandidateDependencies() => StaTestRunner.Run(() =>
+    {
+        var candidate = new State<int>(0);
+        var invalid = false;
+        var builds = 0;
+        using var host = new ViewHost(() =>
+        {
+            builds++;
+            if (invalid)
+            {
+                _ = candidate.Value;
+                return VirtualList([Text("missing key")], 300);
+            }
+            return Text("valid");
+        });
+
+        invalid = true;
+        Assert.ThrowsException<InvalidOperationException>(host.Refresh);
+        invalid = false;
+        var buildsAfterFailure = builds;
+        candidate.Value++;
+        TestVisualTree.Flush();
+        Assert.AreEqual(buildsAfterFailure, builds);
+    });
+
+    [TestMethod]
     public void NavigationRecreatesIslandsFromApplicationState() => StaTestRunner.Run(() =>
     {
         var history = new NavigationStack<int>(0);
