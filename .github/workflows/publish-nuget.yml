@@ -53,7 +53,7 @@ jobs:
         run: ./tools/Test-Performance.ps1 -OutputDirectory artifacts/performance/release
       - name: Save performance evidence
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: release-performance
           path: |
@@ -61,14 +61,14 @@ jobs:
             artifacts/performance/release/*.md
             artifacts/performance/release/*.log
           if-no-files-found: warn
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: nuget-release
           path: artifacts/packages/*.*nupkg
           if-no-files-found: error
       - name: Save validation evidence
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: release-validation
           path: artifacts/release-validation/
