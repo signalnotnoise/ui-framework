@@ -11,8 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Original template placeholder is not part of the public API. -->
-    <Compile Remove="Class1.cs" />
     <InternalsVisibleTo Include="UI Framework.Wpf" />
   </ItemGroup>
 

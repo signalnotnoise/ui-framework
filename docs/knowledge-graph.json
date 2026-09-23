@@ -111,13 +111,15 @@
       "id": "state",
       "label": "Observable state",
       "status": "implemented",
-      "summary": "Tracks value reads and notifies on unequal assignments.",
+      "summary": "Tracks value reads and notifies on unequal assignments. Notifications verify thread ownership and finish delivering to all observers before propagating errors.",
       "sources": [
         "UI Framework/IState.cs",
         "UI Framework/ObservableState.cs",
         "UI Framework/State.cs",
         "UI Framework/Dependencies.cs",
-        "UI Framework/ViewSession.cs"
+        "UI Framework/ViewSession.cs",
+        "UI Framework/StateNotifications.cs",
+        "tests/UI Framework.Checks/StateNotificationTests.cs"
       ]
     },
     {
@@ -271,27 +273,34 @@
       "id": "focus",
       "label": "Focus and IME",
       "status": "partial",
-      "summary": "Controls/text/selection retained in checks; visible keyboard focus and IME need verification.",
+      "summary": "Real-window tests cover regenerated editor keys, visual paths and TextBox selection; unkeyed/native segments require stable structure. IME and assistive-technology verification remain release gates.",
       "sources": [
         "README.md",
         "tests/UI Framework.Checks/ComponentChecks.cs",
         "tests/UI Framework.Checks/Probes/MountMutation.cs",
         "tests/UI Framework.Checks/Probes/OtherProbe.cs",
-        "tests/UI Framework.Checks/Probes/Probe.cs"
+        "tests/UI Framework.Checks/Probes/Probe.cs",
+        "UI Framework.Wpf/Virtualization/RowFocusSnapshot.cs",
+        "tests/UI Framework.Checks/VirtualizationTests.cs",
+        "UI Framework.Wpf/Rendering/FocusIdentity.cs"
       ]
     },
     {
       "id": "errors",
       "label": "Error recovery",
       "status": "partial",
-      "summary": "Failed builds preserve previous subscriptions; renderer rollback and error boundaries remain open.",
+      "summary": "Body and validation failures retain the last tree. Patch failures clear the affected host, finish cleanup and permit explicit rebuild; arbitrary application mutations cannot roll back.",
       "sources": [
         "UI Framework/IState.cs",
         "UI Framework/ObservableState.cs",
         "UI Framework/State.cs",
         "UI Framework/Dependencies.cs",
         "UI Framework/ViewSession.cs",
-        "README.md"
+        "README.md",
+        "UI Framework.Wpf/ViewHost.cs",
+        "tests/UI Framework.Checks/RendererFailureTests.cs",
+        "tests/UI Framework.Checks/ViewValidationTests.cs",
+        "docs/error-recovery.md"
       ]
     },
     {
@@ -465,7 +474,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "MIT-licensed source and NuGet preview with Windows validation, fresh package consumer checks and a separate GitHub Actions trusted-publishing job; version 0.1.0-alpha.1 published, version 0.1.0-alpha.2 prepared.",
+      "summary": "Current package version 0.1.0-alpha.2; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -477,7 +486,9 @@
         "CHANGELOG.md",
         "CONTRIBUTING.md",
         "LICENSE",
-        "tools/New-SourceArchive.ps1"
+        "tools/New-SourceArchive.ps1",
+        "tools/Test-Documentation.ps1",
+        ".github/dependabot.yml"
       ]
     }
   ],
@@ -782,5 +793,6 @@
       "relation": "preserves state from",
       "to": "virtualization"
     }
-  ]
+  ],
+  "releaseVersion": "0.1.0-alpha.2"
 }

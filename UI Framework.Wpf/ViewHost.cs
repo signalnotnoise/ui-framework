@@ -13,6 +13,7 @@ public sealed class ViewHost : ContentControl, IDisposable
     private Node? root;
     private NodeSnapshot? initialSnapshot;
     private bool queued, disposed;
+    private bool refreshing, faulted;
 
     public ViewHost(Func<View> body) : this(body, null) { }
 
@@ -38,7 +39,7 @@ public sealed class ViewHost : ContentControl, IDisposable
     private void Schedule()
     {
         Dispatcher.VerifyAccess();
-        if (queued || disposed) return;
+        if (queued || disposed || faulted) return;
         queued = true;
         Dispatcher.BeginInvoke(DispatcherPriority.DataBind, new Action(() =>
         {
@@ -50,18 +51,66 @@ public sealed class ViewHost : ContentControl, IDisposable
     {
         Dispatcher.VerifyAccess();
         ObjectDisposedException.ThrowIf(disposed, this);
+        if (refreshing) throw new InvalidOperationException("A host cannot refresh during its own render or cleanup callback.");
         queued = false;
-        var view = session.BuildCandidate(out var commit);
-        Validate(view);
-        var nextRoot = Patch(root, view, initialSnapshot);
-        initialSnapshot = null;
-        root = nextRoot;
-        Content = nextRoot.Element;
-        commit();
+        refreshing = true;
+        try
+        {
+            var view = session.BuildCandidate(out var commit);
+            Validate(view);
+            try
+            {
+                var nextRoot = Patch(root, view, initialSnapshot);
+                initialSnapshot = null;
+                root = nextRoot;
+                Content = nextRoot.Element;
+                commit();
+                faulted = false;
+            }
+            catch (Exception error)
+            {
+                // Native callbacks cannot be rolled back. Never reuse a partially patched tree.
+                faulted = true;
+                queued = false;
+                initialSnapshot = null;
+                var failedRoot = root;
+                root = null;
+                Content = null;
+                try { failedRoot?.Dispose(); }
+                catch (Exception cleanupError)
+                {
+                    throw new AggregateException("Rendering failed and tree cleanup also failed.", error, cleanupError);
+                }
+                throw;
+            }
+        }
+        finally { refreshing = false; }
     }
 
     private static void Validate(View view)
     {
+        ArgumentNullException.ThrowIfNull(view);
+        if (!Enum.IsDefined(view.Kind) || !Enum.IsDefined(view.Horizontal) || !Enum.IsDefined(view.Vertical)
+            || !Enum.IsDefined(view.ButtonAppearance) || !Enum.IsDefined(view.Transition))
+            throw new InvalidOperationException("View contains an unknown kind, alignment, appearance or transition.");
+        if (view.Children is null || view.Options is null || view.Content is null)
+            throw new InvalidOperationException("View content and collections cannot be null.");
+        static bool Dimension(double value) => double.IsFinite(value) && value >= 0;
+        if (!Dimension(view.Gap) || !Dimension(view.Inset) || !Dimension(view.Radius) || !Dimension(view.FlexWeight)
+            || !(double.IsNaN(view.DesiredWidth) || Dimension(view.DesiredWidth))
+            || !(double.IsNaN(view.DesiredHeight) || Dimension(view.DesiredHeight))
+            || !double.IsFinite(view.TextSize) || view.TextSize <= 0
+            || !double.IsFinite(view.MinimumColumnWidth) || view.MinimumColumnWidth <= 0
+            || view.MaximumLength < 0 || view.UndoHistoryLimit < 0)
+            throw new InvalidOperationException("View dimensions and editor limits are invalid.");
+        if (view.Kind != ViewKind.Component && (view.ComponentType is not null || view.CreateComponent is not null
+            || view.ConfigureComponent is not null || view.IsMemoized))
+            throw new InvalidOperationException("Component metadata requires a Component view.");
+        if (view.Kind != ViewKind.Platform && view.PlatformContent is not null)
+            throw new InvalidOperationException("Platform content requires a Platform view.");
+        if (view.Kind is not (ViewKind.VStack or ViewKind.HStack or ViewKind.FlexRow or ViewKind.AdaptiveGrid
+            or ViewKind.Scroll or ViewKind.Navigation or ViewKind.VirtualList) && view.Children.Count != 0)
+            throw new InvalidOperationException("This view kind does not accept declarative children.");
         if (view.Kind == ViewKind.Platform && (view.PlatformContent is not NativeViewDescriptor || view.Children.Count != 0))
             throw new InvalidOperationException("Use WpfUI.Native<T>() without declarative children for a native WPF island.");
         if (view.Kind == ViewKind.Navigation && (view.Children.Count == 0 || view.Children.Any(child => string.IsNullOrEmpty(child.Key))))
@@ -75,6 +124,7 @@ public sealed class ViewHost : ContentControl, IDisposable
         HashSet<string>? keys = null;
         foreach (var child in view.Children)
         {
+            if (child is null) throw new InvalidOperationException("View children cannot be null.");
             if (view.Kind == ViewKind.VirtualList && string.IsNullOrEmpty(child.Key))
                 throw new InvalidOperationException("Every VirtualList row requires a stable, nonempty key.");
             if (child.Key is { } key)
@@ -174,23 +224,28 @@ public sealed class ViewHost : ContentControl, IDisposable
                     break;
                 case TextBox input:
                     if (!input.FontSize.Equals(view.TextSize)) input.FontSize = view.TextSize;
-                    input.IsReadOnly = view.ReadOnly;
-                    input.MaxLength = view.MaximumLength;
+                    if (created || input.IsReadOnly != view.ReadOnly) input.IsReadOnly = view.ReadOnly;
+                    if (created || input.MaxLength != view.MaximumLength) input.MaxLength = view.MaximumLength;
                     var undoLimit = view.ReadOnly ? 0 : view.UndoHistoryLimit;
                     // Reassigning UndoLimit clears history, so only change it when necessary.
                     if (input.UndoLimit != undoLimit) input.UndoLimit = undoLimit;
-                    input.IsUndoEnabled = undoLimit > 0;
+                    if (created || input.IsUndoEnabled != (undoLimit > 0)) input.IsUndoEnabled = undoLimit > 0;
                     if (input.Text != view.Content)
                     {
                         var caret = input.SelectionStart;
                         node.Updating = true;
-                        try { input.Text = view.Content; input.SelectionStart = Math.Min(caret, input.Text.Length); }
+                        try
+                        {
+                            input.Text = view.Content;
+                            var desiredCaret = Math.Min(caret, input.Text.Length);
+                            if (input.SelectionStart != desiredCaret) input.SelectionStart = desiredCaret;
+                        }
                         finally { node.Updating = false; }
                     }
                     break;
                 case PasswordBox password:
                     if (!password.FontSize.Equals(view.TextSize)) password.FontSize = view.TextSize;
-                    password.MaxLength = view.MaximumLength;
+                    if (created || password.MaxLength != view.MaximumLength) password.MaxLength = view.MaximumLength;
                     node.Updating = true;
                     try { if (password.Password != view.Content) password.Password = view.Content; }
                     finally { node.Updating = false; }
@@ -201,7 +256,8 @@ public sealed class ViewHost : ContentControl, IDisposable
                     try
                     {
                         if (created || !previous.Options.SequenceEqual(view.Options)) picker.ItemsSource = view.Options;
-                        picker.SelectedIndex = view.SelectedIndex >= 0 && view.SelectedIndex < view.Options.Count ? view.SelectedIndex : -1;
+                        var selectedIndex = view.SelectedIndex >= 0 && view.SelectedIndex < view.Options.Count ? view.SelectedIndex : -1;
+                        if (created || picker.SelectedIndex != selectedIndex) picker.SelectedIndex = selectedIndex;
                     }
                     finally { node.Updating = false; }
                     break;
@@ -259,29 +315,36 @@ public sealed class ViewHost : ContentControl, IDisposable
                                 : i < old.Count && old[i].View.Key is null ? old[i] : null;
                             next.Add(Patch(match, child, node.RestoredChild(child, i)));
                         }
+                        var removedNodes = old.Except(next).ToArray();
+                        foreach (var removed in removedNodes) removed.Detach();
+                        foreach (var removed in removedNodes) removed.Dispose();
+                        var retained = next.Select(n => n.Element).ToHashSet();
+                        for (var i = panel.Children.Count - 1; i >= 0; i--)
+                            if (!retained.Contains(panel.Children[i])) panel.Children.RemoveAt(i);
+                        for (var i = 0; i < next.Count; i++)
+                        {
+                            var element = next[i].Element;
+                            if (i >= panel.Children.Count || !ReferenceEquals(panel.Children[i], element))
+                            {
+                                panel.Children.Remove(element);
+                                panel.Children.Insert(i, element);
+                            }
+                            SetChildLayout(panel, element, i, next.Count, view.Gap);
+                        }
+                        node.Children = next;
                     }
-                    catch
+                    catch (Exception error)
                     {
-                        foreach (var added in next.Except(old)) added.Dispose();
+                        List<Exception>? errors = null;
+                        foreach (var added in next.Except(old)) added.Detach();
+                        foreach (var added in next.Except(old))
+                        {
+                            try { added.Dispose(); }
+                            catch (Exception cleanupError) { (errors ??= [error]).Add(cleanupError); }
+                        }
+                        if (errors is not null) throw new AggregateException("Child patch and cleanup failed.", errors);
                         throw;
                     }
-                    var removedNodes = old.Except(next).ToArray();
-                    foreach (var removed in removedNodes) removed.Detach();
-                    foreach (var removed in removedNodes) removed.Dispose();
-                    var retained = next.Select(n => n.Element).ToHashSet();
-                    for (var i = panel.Children.Count - 1; i >= 0; i--)
-                        if (!retained.Contains(panel.Children[i])) panel.Children.RemoveAt(i);
-                    for (var i = 0; i < next.Count; i++)
-                    {
-                        var element = next[i].Element;
-                        if (i >= panel.Children.Count || !ReferenceEquals(panel.Children[i], element))
-                        {
-                            panel.Children.Remove(element);
-                            panel.Children.Insert(i, element);
-                        }
-                        SetChildLayout(panel, element, i, next.Count, view.Gap);
-                    }
-                    node.Children = next;
                     break;
                 case NativeControlHost nativeHost:
                     nativeHost.Update((NativeViewDescriptor)view.PlatformContent!);
@@ -325,6 +388,7 @@ public sealed class ViewHost : ContentControl, IDisposable
     public void Dispose()
     {
         Dispatcher.VerifyAccess();
+        if (refreshing) throw new InvalidOperationException("A host cannot be disposed during its own render callback.");
         Deactivate();
         var previousRoot = root;
         root = null;

@@ -29,6 +29,12 @@ The CLI also pushes the adjacent symbol package. Package versions are immutable:
 
 ## Validation
 
+Run tools/Test-Documentation.ps1 to verify the README, latest versioned changelog entry and knowledge graph against Directory.Build.props, and to reject mutable workflow action references. Test-Release includes this check. Action SHAs were resolved from the existing major-version tags; Dependabot checks for updates weekly. Keep the human-readable version comment beside each SHA.
+
+The test dependencies remain explicitly pinned together in the single test project. Upgrade the MSTest adapter and framework as a pair, then run Test-Release on the repository's .NET 10 SDK and Windows WPF runtime. Central package management is deferred until multiple projects need shared package versions; introducing it alone would not improve the current runtime contract.
+
+Before any production-readiness claim, record manual visible-window IME composition (including scrolling and regeneration), keyboard navigation, screen-reader announcements, high-contrast behavior and full-application frame/scroll performance. Automated peer and focus tests do not establish these outcomes. Prerelease APIs may change without compatibility guarantees; behavioral changes belong in the Unreleased changelog and require a new package version before publishing. This hardening work does not authorize or perform a publication.
+
 Local verification on September 18, 2026: Release build completed with zero warnings/errors; 41 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. The isolated package consumer also passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted validation and publishing both passed. After NuGet indexing completed, a fresh WPF consumer restored both published packages from NuGet.org using an empty cache and passed rendering, click, retained-control and observable-update checks.
 
 Run `./tools/Test-Release.ps1` from Windows PowerShell or PowerShell 7. The same checks are configured in .github/workflows/validate.yml. Local evidence is stored under artifacts/release-validation and is excluded from source control.

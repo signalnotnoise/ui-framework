@@ -12,8 +12,7 @@ $files = @($rootFiles | ForEach-Object {
 foreach ($folder in $folders) {
     $files += Get-ChildItem -LiteralPath (Join-Path $projectRoot $folder) -Recurse -File | Where-Object {
         $_.FullName -notmatch '[\\/](bin|obj|TestResults|\.vs|artifacts)[\\/]' -and
-        $_.Extension -in @('.cs', '.csproj', '.md', '.json', '.ps1', '.yml', '.yaml') -and
-        $_.Name -ne 'Class1.cs'
+        $_.Extension -in @('.cs', '.csproj', '.md', '.json', '.ps1', '.yml', '.yaml')
     }
 }
 $artifactDirectory = Join-Path $projectRoot 'artifacts'

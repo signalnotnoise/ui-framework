@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using UI_Framework;
 using UI_Framework.Wpf;
 using static UI_Framework.UI;
 
@@ -62,6 +63,94 @@ internal static class StressRunner
         File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
         Console.WriteLine(JsonSerializer.Serialize(result));
         return 0;
+    }
+
+    public static int Diagnostics(string[] args)
+    {
+        var scenario = Option(args, "--diagnostic", "");
+        if (scenario is not ("buttons-plain" or "buttons-themed" or "checkboxes-plain" or "checkboxes-themed" or "checkboxes-local" or "theme-noop" or "theme-updates"))
+            throw new ArgumentException("Use --diagnostic buttons-plain, buttons-themed, checkboxes-plain, checkboxes-themed, checkboxes-local, theme-noop, or theme-updates.", nameof(args));
+        var changed = int.Parse(Option(args, "--changed", "1000"));
+        if (changed is < 1 or > 1000) throw new ArgumentOutOfRangeException(nameof(args), "--changed must be between 1 and 1000.");
+        var path = Path.GetFullPath(Option(args, "--report", $"artifacts/diagnostics/{scenario}.json"));
+        var phase = new State<int>(0);
+        var localValues = Enumerable.Range(0, 1000).Select(_ => new State<bool>(false)).ToArray();
+        View Build() => scenario == "checkboxes-local"
+            ? Scroll(VStack(localValues.Select((value, index) => Component<DiagnosticToggle>(toggle =>
+            {
+                toggle.Label = $"Toggle item {index}";
+                toggle.Value = value;
+            }).Id($"toggle-{index}")).ToArray())).Height(1080)
+            : Scroll(VStack(Enumerable.Range(0, 1000).Select(index => DiagnosticView(scenario, index, phase.Value, changed)).ToArray())).Height(1080);
+        var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
+        var mountWatch = Stopwatch.StartNew();
+        using var host = new ViewHost(Build);
+        if (scenario is "buttons-themed" or "checkboxes-themed" or "checkboxes-local" or "theme-noop" or "theme-updates")
+            ThemeStyles.Apply(host, new UI_Framework.ThemeTokens());
+        Layout(host);
+        mountWatch.Stop();
+        var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
+        var allocation = GC.GetAllocatedBytesForCurrentThread();
+        var watch = Stopwatch.StartNew();
+        for (var step = 1; step <= 50; step++)
+        {
+            if (scenario == "checkboxes-local")
+            {
+                for (var index = 0; index < changed; index++) localValues[index].Value = step % 2 == 1;
+            }
+            else phase.Value = step;
+            Flush();
+            host.UpdateLayout();
+        }
+        watch.Stop();
+        var result = new
+        {
+            SchemaVersion = 1,
+            Scenario = scenario,
+            Rows = 1000,
+            ChangedControls = changed,
+            MixedOperations = 50,
+            MountMilliseconds = mountWatch.Elapsed.TotalMilliseconds,
+            MountAllocatedBytes = mountBytes,
+            Milliseconds = watch.Elapsed.TotalMilliseconds,
+            AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
+            Runtime = Environment.Version.ToString(),
+            TimeUtc = DateTimeOffset.UtcNow
+        };
+        host.Dispose();
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+        File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+        Console.WriteLine(JsonSerializer.Serialize(result));
+        return 0;
+    }
+
+    private static View DiagnosticView(string scenario, int index, int phase, int changed)
+    {
+        var active = index < changed;
+        return scenario switch
+        {
+            "buttons-plain" or "buttons-themed" => Button($"Open item {index}: a deliberately long label that exercises wrapped button content", static () => { })
+                .Id($"button-{index}"),
+            "checkboxes-plain" or "checkboxes-themed" => new View(ViewKind.Toggle)
+            {
+                Key = $"toggle-{index}", Content = $"Toggle item {index}", Checked = active && phase % 2 == 1
+            },
+            "theme-noop" => Button($"Theme item {index}", static () => { })
+                .ButtonStyle(ButtonStyleKind.Secondary)
+                .Id($"theme-{index}"),
+            "theme-updates" => Button($"Theme item {index}", static () => { })
+                .ButtonStyle(active && phase % 2 != 0 ? ButtonStyleKind.Primary : ButtonStyleKind.Secondary)
+                .IsEnabled(!active || phase % 4 != 0)
+                .Id($"theme-{index}"),
+            _ => throw new ArgumentOutOfRangeException(nameof(scenario))
+        };
+    }
+
+    private static void Layout(FrameworkElement element)
+    {
+        element.Measure(new Size(1320, 1080));
+        element.Arrange(new Rect(0, 0, 1320, 1080));
+        element.UpdateLayout();
     }
 
 

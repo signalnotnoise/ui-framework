@@ -143,7 +143,7 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Styling | Theme tokens, scoped button/input styles, weighted rows, adaptive columns, alignment, and entry transitions; no general animation API. |
 | Threading | State belongs to its creating thread; no concurrent state or automatic marshaling. |
 | Focus | Controls, text, and selection retained in tested reorders; uninterrupted keyboard focus/IME behavior still needs visible-window testing. |
-| Errors | Dependency tracking survives failed body builds; rendering is not transactional and has no error boundary/recovery UI. |
+| Errors | Failed builds preserve the previous tree; patch failures clear the affected host and allow explicit rebuild. See [failure and recovery contracts](docs/error-recovery.md). No rollback of application side effects or built-in recovery UI. |
 | Virtualization | Viewport controls plus a buffer; offscreen logical state retained; some large shuffles have quadratic cost. See [contracts](docs/virtualization.md). |
 | Navigation | Typed history, Back/PopToRoot/Reset, logical screen snapshots, and WPF entry transitions. See [navigation](docs/navigation.md). |
 | Still planned | General animation, advanced styling, hot reload integration, and non-Windows backends. |

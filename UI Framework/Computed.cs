@@ -108,7 +108,7 @@ public sealed class Computed<T> : IState
         var previous = current;
         var next = Evaluate();
         current = next;
-        if (!comparer.Equals(previous, next)) changed?.Invoke();
+        if (!comparer.Equals(previous, next)) StateNotifications.Deliver(changed);
     }
 
     private void Detach()

@@ -86,7 +86,7 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
 
     internal void Deactivate()
     {
-        foreach (var row in rows.Values) row.Presenter?.Deactivate();
+        foreach (var row in ordered) row.Presenter?.Deactivate();
     }
 
     internal VirtualListSnapshot Capture()
@@ -102,10 +102,16 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
         if (disposed) return;
         disposed = true;
         Deactivate();
-        foreach (var row in rows.Values) row.Presenter?.Release();
+        List<Exception>? errors = null;
+        foreach (var row in ordered)
+        {
+            try { row.Presenter?.Release(); }
+            catch (Exception error) { (errors ??= []).Add(error); }
+        }
         ItemsSource = null;
         rows.Clear();
         ordered.Clear();
         initialRows = null;
+        if (errors is not null) throw new AggregateException("Virtual row cleanup failed.", errors);
     }
 }

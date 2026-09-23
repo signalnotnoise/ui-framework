@@ -1,6 +1,6 @@
 # UI Framework documentation
 
-The framework is a C# class library with a WPF renderer. This index describes the implementation as of September 17, 2026. It is a working prototype; APIs may change.
+The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. It is a working prototype; APIs may change.
 
 ## Start here
 
@@ -8,6 +8,8 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | --- | --- |
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
+| [September 23 review resolution](review-resolution-2026-09-23.md) | Hardening changes, verification evidence and remaining production gates. |
+| [Failure and recovery contracts](error-recovery.md) | Render failures, explicit recovery, validation and notification behavior. |
 | [Components](components.md) | Identity, props, local state, lifecycle, and scheduling. |
 | [Bindings](bindings.md) | Two-way editing, immutable record projections, and custom adapters. |
 | [Editors and selectors](editors.md) | Multiline/read-only text, bounded undo, masked passwords, and indexed selection. |
@@ -42,7 +44,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 
 The September 18, 2026 Release build and all 33 discoverable MSTest tests passed, including layout, styling, and navigation checks. The new visible navigation campaign passed 64 steps and 104 assertions; the full-list baseline passed 21 stress assertions. See [navigation](navigation.md) and [virtualization verification](virtualization.md). The following measurements are historical, from before virtualization and the test-project migration.
 
-The latest implementation pass completed a clean Release build, 90 regression checks, and 21 full-workload stress assertions. The matched 50-operation comparison reduced body builds by 84.1%, UI-thread allocations by 30.6%, and elapsed time by 9.9%. These are recorded development-run measurements, not performance guarantees; the separate full-workload timing did not improve against its historical baseline. See the complete [measurement record](performance-results.md).
+An earlier implementation pass completed a clean Release build, 90 regression checks, and 21 full-workload stress assertions. The matched 50-operation comparison reduced body builds by 84.1%, UI-thread allocations by 30.6%, and elapsed time by 9.9%. These are recorded development-run measurements, not performance guarantees; the separate full-workload timing did not improve against its historical baseline. See the complete [measurement record](performance-results.md).
 
 ## Maintaining these docs
 

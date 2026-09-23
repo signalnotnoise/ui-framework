@@ -19,8 +19,7 @@ public abstract class ObservableState : IState
 
     protected void NotifyChanged()
     {
-        Dependencies.NotificationDepth++;
-        try { Changed?.Invoke(); }
-        finally { Dependencies.NotificationDepth--; }
+        VerifyAccess();
+        StateNotifications.Deliver(Changed);
     }
 }

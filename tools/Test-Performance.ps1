@@ -3,7 +3,8 @@ param(
     [string]$BaselineRef,
     [ValidateRange(3, 15)][int]$Samples = 7,
     [string]$OutputDirectory,
-    [switch]$ReportOnly
+    [switch]$ReportOnly,
+    [switch]$IncludeLayoutEditors
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
@@ -37,11 +38,29 @@ try {
         & dotnet build (Join-Path $root 'samples/Counter/Counter.csproj') -c Release --disable-build-servers -m:1 -warnaserror
         if ($LASTEXITCODE -ne 0) { throw "Benchmark build failed: $root" }
     }
+    # Preserve the exact dirty candidate sources, including new files, alongside
+    # the raw runs. A HEAD hash alone cannot identify a working-tree benchmark.
+    $candidateSource = Join-Path $output 'candidate-source'
+    $sourceFiles = @('Directory.Build.props', 'global.json', 'UI Framework.slnx') | ForEach-Object { Get-Item (Join-Path $projectRoot $_) }
+    foreach ($folder in @('UI Framework', 'UI Framework.Wpf', 'samples', 'tools')) {
+        $sourceFiles += Get-ChildItem (Join-Path $projectRoot $folder) -Recurse -File | Where-Object {
+            $_.FullName -notmatch '[\\/](bin|obj|artifacts)[\\/]' -and $_.Extension -in @('.cs', '.csproj', '.ps1', '.json')
+        }
+    }
+    $manifest = foreach ($file in $sourceFiles) {
+        $relative = [IO.Path]::GetRelativePath($projectRoot, $file.FullName)
+        $destination = Join-Path $candidateSource $relative
+        New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
+        Copy-Item -LiteralPath $file.FullName -Destination $destination
+        [pscustomobject]@{ path = $relative; sha256 = (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash }
+    }
+    $manifest | ConvertTo-Json | Set-Content (Join-Path $output 'candidate-source-manifest.json')
     $executables = @{
         baseline = Join-Path $baseline 'samples/Counter/bin/Release/net10.0-windows/Counter.dll'
         candidate = Join-Path $projectRoot 'samples/Counter/bin/Release/net10.0-windows/Counter.dll'
     }
     $scenarios = [ordered]@{ 'full-list' = @(); 'virtualized' = @('--virtualized'); 'themed-full-list' = @('--themed') }
+    if ($IncludeLayoutEditors) { $scenarios['layout-editors'] = @('--layout-editors') }
     $runs = [System.Collections.Generic.List[object]]::new()
     foreach ($scenario in $scenarios.Keys) {
         # One discarded process per side warms filesystem/runtime caches. Measured
@@ -53,8 +72,22 @@ try {
                 $log = Join-Path $output "$scenario-$iteration-$side.log"
                 Write-Output "$scenario / sample $iteration / $side"
                 $arguments = @($executables[$side], '--compare', '--report', $report) + $scenarios[$scenario]
-                & dotnet @arguments > $log 2>&1
-                if ($LASTEXITCODE -ne 0) { throw "Benchmark failed. See $log" }
+                $start = [Diagnostics.ProcessStartInfo]::new((Get-Command dotnet).Source)
+                $start.UseShellExecute = $false
+                $start.CreateNoWindow = $true
+                $start.RedirectStandardOutput = $true
+                $start.RedirectStandardError = $true
+                foreach ($argument in $arguments) { $start.ArgumentList.Add($argument) }
+                $process = [Diagnostics.Process]::Start($start)
+                try {
+                    $stdout = $process.StandardOutput.ReadToEndAsync()
+                    $stderr = $process.StandardError.ReadToEndAsync()
+                    $completed = $process.WaitForExit(120000)
+                    if (-not $completed) { $process.Kill($true); $process.WaitForExit() }
+                    ($stdout.GetAwaiter().GetResult() + $stderr.GetAwaiter().GetResult()) | Set-Content -LiteralPath $log
+                    if (-not $completed) { throw "Benchmark exceeded 120 seconds: $scenario / $iteration / $side. See $log" }
+                    if ($process.ExitCode -ne 0) { throw "Benchmark failed. See $log" }
+                } finally { $process.Dispose() }
                 $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
                 if ($result.SchemaVersion -ne 2 -or $result.Rows -ne 1000 -or $result.MixedOperations -ne 50 -or $result.Scenario -ne $scenario) {
                     throw "Unexpected benchmark workload in $report"

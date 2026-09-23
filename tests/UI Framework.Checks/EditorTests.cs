@@ -37,6 +37,15 @@ public sealed class EditorTests
         TestVisualTree.Flush();
         Assert.AreEqual(text.Value, editor.Text);
         Assert.AreEqual(1, writes);
+        Assert.AreEqual(2, editor.SelectionStart);
+        text.Value = "x";
+        TestVisualTree.Flush();
+        Assert.AreEqual(1, editor.SelectionStart, "External text replacement clamps the retained caret.");
+        text.Value = "";
+        TestVisualTree.Flush();
+        Assert.AreEqual(0, editor.SelectionStart);
+        Assert.AreEqual(0, editor.SelectionLength);
+        Assert.AreEqual(1, writes, "Caret restoration must not write back through the binding.");
     });
 
     [TestMethod]

@@ -35,7 +35,9 @@ internal sealed class AdaptivePanel : Panel
         for (var first = 0; first < InternalChildren.Count; first += columns)
         {
             var count = Math.Min(columns, InternalChildren.Count - first);
-            var height = Enumerable.Range(first, count).Max(i => InternalChildren[i].DesiredSize.Height);
+            var height = 0d;
+            for (var i = first; i < first + count; i++)
+                height = Math.Max(height, InternalChildren[i].DesiredSize.Height);
             for (var j = 0; j < count; j++) InternalChildren[first + j].Arrange(new Rect(j * (width + Gap), y, width, height));
             y += height + Gap;
         }

@@ -1,7 +1,6 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace UI_Framework.Wpf;
@@ -10,6 +9,7 @@ internal sealed class VirtualRowPresenter : ContentControl
 {
     private VirtualRow? row;
     private ViewHost? host;
+    private DispatcherOperation? focusOperation;
 
     internal void Attach(VirtualRow value, double gap)
     {
@@ -18,13 +18,24 @@ internal sealed class VirtualRowPresenter : ContentControl
         row.Presenter = this;
         Margin = new Thickness(0, 0, 0, gap);
         HorizontalContentAlignment = HorizontalAlignment.Stretch;
-        host = new ViewHost(() => value.View, value.Saved);
+        try { host = new ViewHost(() => value.View, value.Saved); }
+        catch { row.Presenter = null; row = null; throw; }
         value.Saved = null;
         Content = host;
-        if (value.RestoreFocus)
+        if (value.Focus is { } focus)
         {
-            value.RestoreFocus = false;
-            Dispatcher.BeginInvoke(DispatcherPriority.Input, new Action(RestoreFocus));
+            value.Focus = null;
+            var attachedHost = host;
+            var previousFocus = Keyboard.FocusedElement;
+            focusOperation = Dispatcher.BeginInvoke(DispatcherPriority.Input, new Action(() =>
+            {
+                focusOperation = null;
+                if (ReferenceEquals(row, value) && ReferenceEquals(host, attachedHost)
+                    && !IsKeyboardFocusWithin && (Keyboard.FocusedElement is null
+                        || ReferenceEquals(Keyboard.FocusedElement, previousFocus)
+                        || ReferenceEquals(Keyboard.FocusedElement, Window.GetWindow(this))))
+                    focus.Restore(this);
+            }));
         }
     }
 
@@ -39,31 +50,28 @@ internal sealed class VirtualRowPresenter : ContentControl
 
     internal void Release()
     {
+        focusOperation?.Abort();
+        focusOperation = null;
         if (row is null) return;
-        row.RestoreFocus = IsKeyboardFocusWithin;
-        row.Saved = host?.Capture();
-        row.Presenter = null;
+        var previous = row;
         row = null;
         var old = host;
         host = null;
+        previous.Presenter = null;
+        Exception? failure = null;
+        try
+        {
+            previous.Focus = IsKeyboardFocusWithin ? RowFocusSnapshot.Capture(this) : null;
+            previous.Saved = old?.Capture();
+        }
+        catch (Exception error) { previous.Saved = null; previous.Focus = null; failure = error; }
         Content = null;
-        old?.Dispose();
-    }
-
-    private void RestoreFocus()
-    {
-        if (!IsKeyboardFocusWithin && FindFocusable(Content as DependencyObject) is { } focusable)
-            focusable.Focus();
-    }
-
-    private static FrameworkElement? FindFocusable(DependencyObject? parent)
-    {
-        // Component hosts are infrastructure, not the row's interactive controls.
-        if (parent is FrameworkElement element && element is not ViewHost && element.Focusable && element.IsEnabled)
-            return element;
-        for (var i = 0; parent is not null && i < VisualTreeHelper.GetChildrenCount(parent); i++)
-            if (FindFocusable(VisualTreeHelper.GetChild(parent, i)) is { } result)
-                return result;
-        return null;
+        try { old?.Dispose(); }
+        catch (Exception error)
+        {
+            if (failure is not null) throw new AggregateException("Row capture and cleanup failed.", failure, error);
+            throw;
+        }
+        if (failure is not null) System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(failure).Throw();
     }
 }

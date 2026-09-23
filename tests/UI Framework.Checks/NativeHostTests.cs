@@ -113,12 +113,12 @@ public sealed class NativeHostTests
     });
 
     [TestMethod]
-    public void InitialLayoutFailureAlsoReleasesNativeElement() => StaTestRunner.Run(() =>
+    public void InvalidLayoutFailsBeforeCreatingNativeElement() => StaTestRunner.Run(() =>
     {
         var released = 0;
-        Assert.ThrowsException<ArgumentException>(() => new ViewHost(() =>
+        Assert.ThrowsException<InvalidOperationException>(() => new ViewHost(() =>
             WpfUI.Native(() => new TextBox(), release: _ => released++).Padding(-1)));
-        Assert.AreEqual(1, released);
+        Assert.AreEqual(0, released);
     });
 
     [TestMethod]

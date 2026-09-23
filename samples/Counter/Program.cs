@@ -23,7 +23,9 @@ internal static class Program
         app.Resources.Add(typeof(Button), buttonStyle);
         if (args.Contains("--visual-check")) return VisualStressChecks.Run();
         if (args.Contains("--navigation-check")) return LaunchNavigationChecks.Run(app);
+        if (args.Contains("--layout-editors")) return LayoutEditorComparison.Run(app, args);
         if (args.Contains("--compare")) return StressRunner.Compare(args);
+        if (args.Contains("--diagnostic")) return StressRunner.Diagnostics(args);
         if (args.Contains("--stress")) return StressRunner.Run(args);
         if (args.Contains("--showcase")) return LaunchpadWindow.Run(app, args);
 

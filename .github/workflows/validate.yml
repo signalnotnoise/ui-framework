@@ -13,10 +13,10 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: '10.0.x'
       - name: Measure against accepted baseline
@@ -24,7 +24,7 @@ jobs:
         run: ./tools/Test-Performance.ps1 -OutputDirectory artifacts/performance/ci
       - name: Save performance evidence
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: performance-comparison
           path: |
@@ -43,8 +43,8 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: '10.0.x'
       - name: Restore
@@ -54,7 +54,7 @@ jobs:
         run: ./tools/Test-Release.ps1 -NoRestore
       - name: Upload test and stress evidence
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: windows-validation
           path: artifacts/release-validation/
@@ -63,7 +63,7 @@ jobs:
         shell: pwsh
         run: ./tools/Test-Packages.ps1 -NoBuild
       - name: Upload NuGet packages
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: nuget-preview
           path: artifacts/packages/

@@ -9,6 +9,123 @@ using static UI_Framework.UI;
 [TestClass]
 public sealed class VirtualizationTests
 {
+    [TestMethod]
+    public void RegenerationRestoresSecondEditorAndSelection() => StaTestRunner.Run(() =>
+    {
+        var first = new State<string>("first editor");
+        var second = new State<string>("second editor selection");
+        using var host = new ViewHost(() => VirtualList(
+            [VStack(TextField(first), HStack(TextField(second))).Id("row")], 300));
+        var window = new Window { Content = host, Width = 500, Height = 300, ShowInTaskbar = false };
+        try
+        {
+            window.Show();
+            TestVisualTree.Layout(host);
+            var editor = TestVisualTree.Find<TextBox>(host).Last();
+            Assert.IsTrue(editor.Focus());
+            editor.Select(3, 5);
+            TestVisualTree.Find<ItemsControl>(host).Single().Items.Refresh();
+            TestVisualTree.Layout(host);
+            var restored = TestVisualTree.Find<TextBox>(host).Last();
+            Assert.AreNotSame(editor, restored);
+            Assert.AreSame(restored, Keyboard.FocusedElement);
+            Assert.AreEqual(3, restored.SelectionStart);
+            Assert.AreEqual(5, restored.SelectionLength);
+        }
+        finally { window.Close(); }
+    });
+
+    [TestMethod]
+    public void RegenerationUsesEditorKeysWhenSiblingsReorder() => StaTestRunner.Run(() =>
+    {
+        var first = new State<string>("first editor");
+        var second = new State<string>("second editor");
+        var reverse = false;
+        using var host = new ViewHost(() => VirtualList([VStack(reverse
+            ? [TextField(second).Id("second"), TextField(first).Id("first")]
+            : [TextField(first).Id("first"), TextField(second).Id("second")]).Id("row")], 300));
+        var window = new Window { Content = host, Width = 500, Height = 300, ShowInTaskbar = false };
+        try
+        {
+            window.Show();
+            TestVisualTree.Layout(host);
+            var editor = TestVisualTree.Find<TextBox>(host).Last();
+            Assert.IsTrue(editor.Focus());
+            editor.Select(2, 4);
+            TestVisualTree.Find<ItemsControl>(host).Single().Items.Refresh();
+            reverse = true;
+            host.Refresh();
+            TestVisualTree.Layout(host);
+            var restored = TestVisualTree.Find<TextBox>(host).Single(input => input.Text == second.Value);
+            Assert.AreNotSame(editor, restored);
+            Assert.AreSame(restored, Keyboard.FocusedElement);
+            Assert.AreEqual(2, restored.SelectionStart);
+            Assert.AreEqual(4, restored.SelectionLength);
+        }
+        finally { window.Close(); }
+    });
+
+    [TestMethod]
+    public void QueuedFocusRestorationRespectsFocusMovedOutsideTheRow() => StaTestRunner.Run(() =>
+    {
+        var outside = new State<string>("outside");
+        var inside = new State<string>("inside");
+        using var host = new ViewHost(() => VStack(TextField(outside), VirtualList([TextField(inside).Id("row")], 180)));
+        var window = new Window { Content = host, Width = 500, Height = 300, ShowInTaskbar = false };
+        try
+        {
+            window.Show();
+            TestVisualTree.Layout(host);
+            Assert.IsTrue(TestVisualTree.Find<TextBox>(host).Last().Focus());
+            TestVisualTree.Find<ItemsControl>(host).Single().Items.Refresh();
+            host.UpdateLayout(); // Reattach synchronously, leaving the Input callback queued.
+            var external = TestVisualTree.Find<TextBox>(host).First();
+            Assert.IsTrue(external.Focus());
+            TestVisualTree.Flush();
+            Assert.AreSame(external, Keyboard.FocusedElement);
+        }
+        finally { window.Close(); }
+    });
+
+    [TestMethod]
+    public void NativeRowsReleaseOnRecycleAndRecreateFromApplicationState() => StaTestRunner.Run(() =>
+    {
+        var created = 0;
+        var released = 0;
+        using var host = new ViewHost(() => VirtualList(Enumerable.Range(0, 1000).Select(id =>
+            WpfUI.Native(() => { created++; return new TextBox { Text = $"row {id}", Height = 35 }; },
+                release: element => { Assert.IsNull(element.Parent); released++; }).Id(id.ToString())), 300));
+        TestVisualTree.Layout(host);
+        var initial = TestVisualTree.Find<TextBox>(host).First();
+        var scroll = TestVisualTree.Find<ScrollViewer>(host).First();
+        scroll.ScrollToEnd();
+        TestVisualTree.Layout(host);
+        Assert.IsTrue(released > 0);
+        scroll.ScrollToHome();
+        TestVisualTree.Layout(host);
+        var restored = TestVisualTree.Find<TextBox>(host).First();
+        Assert.AreNotSame(initial, restored);
+        Assert.AreEqual("row 0", restored.Text);
+        host.Dispose();
+        Assert.AreEqual(created, released);
+    });
+
+    [TestMethod]
+    public void ThrowingRowCleanupStillReleasesEveryRealizedIsland() => StaTestRunner.Run(() =>
+    {
+        var created = 0;
+        var released = 0;
+        using var host = new ViewHost(() => VirtualList(Enumerable.Range(0, 10).Select(id =>
+            WpfUI.Native(() => { created++; return new TextBox { Height = 35 }; },
+                release: _ => { released++; throw new InvalidOperationException("release"); }).Id(id.ToString())), 300));
+        TestVisualTree.Layout(host);
+        Assert.IsTrue(created > 1);
+        Assert.ThrowsException<AggregateException>(host.Dispose);
+        Assert.AreEqual(created, released);
+        host.Dispose();
+        Assert.AreEqual(created, released);
+    });
+
     private static ViewHost Create(StateList<int> ids, Dictionary<int, VirtualizationProbe> probes) => new(() =>
         VirtualList(ids.Select(id => Component<VirtualizationProbe>(probe =>
         {

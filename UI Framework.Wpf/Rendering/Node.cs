@@ -41,11 +41,16 @@ internal sealed class Node : IDisposable
             }, snapshot?.Body);
             Control = host;
             Frame = new Border { Child = Control };
+            if (view.Key is not null) Frame.SetValue(FocusIdentity.KeyProperty, view.Key);
             try { ComponentInstance.OnMounted(); }
-            catch
+            catch (Exception error)
             {
+                List<Exception> errors = [error];
                 try { host.Dispose(); }
-                finally { ComponentInstance.OnUnmounted(); }
+                catch (Exception cleanupError) { errors.Add(cleanupError); }
+                try { ComponentInstance.OnUnmounted(); }
+                catch (Exception cleanupError) { errors.Add(cleanupError); }
+                if (errors.Count > 1) throw new AggregateException("Component mount and cleanup failed.", errors);
                 throw;
             }
             return;
@@ -72,7 +77,8 @@ internal sealed class Node : IDisposable
             _ => throw new ArgumentOutOfRangeException(nameof(view))
         };
         Frame = new Border { Child = Control };
-        if (Control is Button button) button.Click += (_, _) => View.Click?.Invoke();
+        if (view.Key is not null) Frame.SetValue(FocusIdentity.KeyProperty, view.Key);
+        if (Control is Button button) button.Click += (_, _) => { if (!detached) View.Click?.Invoke(); };
         if (Control is TextBox input) input.TextChanged += (_, _) =>
         {
             if (Updating || detached) return;
@@ -111,7 +117,7 @@ internal sealed class Node : IDisposable
         {
             void Changed(object sender, RoutedEventArgs args)
             {
-                if (Updating) return;
+                if (Updating || detached) return;
                 View.ToggleChanged?.Invoke(toggle.IsChecked == true);
                 if (View.ReadChecked is not { } read) return;
                 Updating = true;

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Clear damaged host trees after patch failures and support explicit rebuild; preserve good trees when body construction or validation fails.
+- Validate public view descriptions before patching, enforce notification thread ownership, and deliver state/computed notifications to all observers before reporting subscriber errors.
+- Restore the specific visual focus path and TextBox selection on row regeneration; cancel stale focus callbacks and finish sibling cleanup when a row release throws.
+- Bound STA tests, pin workflow actions to verified commits, and check documentation release versions.
+- Guard unchanged editor properties, remove adaptive-layout LINQ, and add an optional themed layout/editor performance scenario. Performance evidence and remaining release gates are recorded separately.
+
 ## 0.1.0-alpha.2 — September 21, 2026
 
 Second experimental NuGet preview, including native interop, accessibility labels, rich button content, and rendering optimizations.
