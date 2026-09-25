@@ -9,6 +9,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
 | [September 24 publication status](publication-status-2026-09-24.md) | Source commits, passing standard checks, and the editor timeout holding the next NuGet release. |
+| [September 25 editor wait isolation](editor-wait-isolation-2026-09-25.md) | Captured text-services wait, native subtraction experiments, and setter-level timings. |
 | [September 23 review resolution](review-resolution-2026-09-23.md) | Hardening changes, verification evidence and remaining production gates. |
 | [Validation and notification costs](validation-costs-2026-09-23.md) | Isolated timing, focused validation optimization, and limits of slowdown attribution. |
 | [Failure and recovery contracts](error-recovery.md) | Render failures, explicit recovery, validation and notification behavior. |

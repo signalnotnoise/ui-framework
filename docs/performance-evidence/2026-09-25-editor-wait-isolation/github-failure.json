@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "reason": "process-timeout",
+  "scenario": "layout-editors",
+  "sample": 6,
+  "side": "baseline",
+  "processId": 5088,
+  "timeoutSeconds": 120,
+  "elapsedSeconds": 120.0029123,
+  "cpuSeconds": 9.296875,
+  "baselineRevision": "78c88fb901c202e3c2e49b6de300d1ce2369e00b",
+  "report": "D:\\a\\ui-framework\\ui-framework\\artifacts\\performance\\ci\\layout-editors-6-baseline.json",
+  "log": "D:\\a\\ui-framework\\ui-framework\\artifacts\\performance\\ci\\layout-editors-6-baseline.log",
+  "dump": {
+    "status": "captured",
+    "path": "D:\\a\\ui-framework\\ui-framework\\artifacts\\performance\\ci\\layout-editors-6-baseline.dmp",
+    "log": "D:\\a\\ui-framework\\ui-framework\\artifacts\\performance\\ci\\layout-editors-6-baseline.dmp.log",
+    "timeoutSeconds": 45,
+    "exitCode": 0
+  }
+}
