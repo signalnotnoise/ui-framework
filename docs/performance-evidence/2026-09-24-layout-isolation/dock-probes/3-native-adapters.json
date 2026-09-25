@@ -1,0 +1,49 @@
+{
+  "Scenario": "native-adapters",
+  "Rows": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "Isolation": "dock",
+  "ProbesEnabled": true,
+  "MountProbes": {
+    "Editor": {
+      "MeasureCalls": 4,
+      "ArrangeCalls": 4,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 52.8579,
+      "ArrangeMilliseconds": 3.441
+    },
+    "Submissions": {
+      "MeasureCalls": 1,
+      "ArrangeCalls": 1,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 33.6896,
+      "ArrangeMilliseconds": 22.0403
+    }
+  },
+  "UpdateProbes": {
+    "Editor": {
+      "MeasureCalls": 100,
+      "ArrangeCalls": 100,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 12.0589,
+      "ArrangeMilliseconds": 12.8526
+    },
+    "Submissions": {
+      "MeasureCalls": 34,
+      "ArrangeCalls": 34,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 50.2572,
+      "ArrangeMilliseconds": 987.8537
+    }
+  },
+  "MountMilliseconds": 445.4115,
+  "Milliseconds": 1238.0389,
+  "MountAllocatedBytes": 21534296,
+  "AllocatedBytes": 196529968,
+  "MountBodyBuilds": 7,
+  "BodyBuilds": 0,
+  "NativeCreates": 2,
+  "NativeReleasesDuringUpdates": 0,
+  "Runtime": "10.0.12"
+}

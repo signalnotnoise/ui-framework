@@ -1,6 +1,6 @@
 # Review resolution — September 23, 2026
 
-This addresses the static review of f381269958aa7113c63d3b47c467781a05d8898f. Changes are in the working tree and are not a published package. The existing sample diagnostic work was retained.
+This addresses the static review of f381269958aa7113c63d3b47c467781a05d8898f. The hardening changes were committed and pushed as d5a94b2; they are not a published package. The existing sample diagnostic work was retained. See the subsequent [validation and notification cost investigation](validation-costs-2026-09-23.md) for the focused follow-up.
 
 | Review finding | Resolution |
 | --- | --- |

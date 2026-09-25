@@ -1,0 +1,17 @@
+{
+  "SchemaVersion": 2,
+  "Scenario": "virtualized",
+  "MountMilliseconds": 420.0658,
+  "MountAllocatedBytes": 9620168,
+  "MountBodyBuilds": 27,
+  "Mode": "selective observation, memo enabled",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "Milliseconds": 1451.4215,
+  "BodyBuilds": 194,
+  "AllocatedBytes": 61102728,
+  "Mounts": 98,
+  "Unmounts": 95,
+  "Runtime": "10.0.12",
+  "TimeUtc": "2026-09-24T18:37:17.4716497+00:00"
+}

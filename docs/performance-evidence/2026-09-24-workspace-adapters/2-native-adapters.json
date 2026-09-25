@@ -1,0 +1,15 @@
+{
+  "Scenario": "native-adapters",
+  "Rows": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "MountMilliseconds": 717.3852,
+  "Milliseconds": 2691.8768,
+  "MountAllocatedBytes": 21523288,
+  "AllocatedBytes": 196498760,
+  "MountBodyBuilds": 7,
+  "BodyBuilds": 0,
+  "NativeCreates": 2,
+  "NativeReleasesDuringUpdates": 0,
+  "Runtime": "10.0.12"
+}

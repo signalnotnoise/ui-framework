@@ -1,0 +1,45 @@
+{
+  "revision": "ab2dce674def8491e92c4d270a03b78b45bbe47b",
+  "dirty": true,
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "processorCount": 20,
+  "sdk": "10.0.401",
+  "binaries": [
+    {
+      "name": "ConsumerDiagnostics.dll",
+      "sha256": "87C9E5E59D302389D4260E43EBB6031E9A60CBD1977A991CA4531C8D6A72D6B7"
+    },
+    {
+      "name": "ICSharpCode.AvalonEdit.dll",
+      "sha256": "0FE9AC94AA22E60B32D670A3D35C58FEF628D1B3352D56F32F2986BF5F96F844"
+    },
+    {
+      "name": "Lab Feedback WPF.dll",
+      "sha256": "51417827837C86586251E346646C692CA27F1C6FF079D4613A98D898F0A11738"
+    },
+    {
+      "name": "Microsoft.Data.Sqlite.dll",
+      "sha256": "86831B3786D98D7629C80FAEAACF3BDC8CAAB18F18B2EB2905AADE667127578C"
+    },
+    {
+      "name": "SQLitePCLRaw.batteries_v2.dll",
+      "sha256": "BC69777001EB4DB81C580F62835396F67E74AAA381EEF446193A904499D5310B"
+    },
+    {
+      "name": "SQLitePCLRaw.core.dll",
+      "sha256": "50C999A1AB2AFEACC93BCE5AC2948D3BB630D99D23EFC3CFCBD8BC11D3426EB7"
+    },
+    {
+      "name": "SQLitePCLRaw.provider.e_sqlite3.dll",
+      "sha256": "369EA2A63067CA06328774191E0E6DC604AEC8621D09B7F7C283FBBCAF533265"
+    },
+    {
+      "name": "UI Framework.dll",
+      "sha256": "B77483B468FA1598E3992722A828DA64B0A59EC79B3C0670751DC015F7EBE930"
+    },
+    {
+      "name": "UI Framework.Wpf.dll",
+      "sha256": "ABFE4A5AEA0F4588B527264DC8637672B96E3900367C52259A52AD147151886E"
+    }
+  ]
+}

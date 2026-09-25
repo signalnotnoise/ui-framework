@@ -1,0 +1,119 @@
+{
+  "status": "INCOMPLETE: themed-full-list sample 1 baseline exceeded 120 seconds; editor scenario not reached",
+  "baselineRevision": "2b678989d70158ffb40d31bfb949e18969439717",
+  "samplesPerSide": 7,
+  "comparisons": [
+    {
+      "scenario": "full-list",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 5501.9182,
+      "candidateMedian": 6032.8761,
+      "changePercent": 9.65041428642106
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Milliseconds",
+      "baselineMedian": 6931.123,
+      "candidateMedian": 7512.4856,
+      "changePercent": 8.387711486291627
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 342729168.0,
+      "candidateMedian": 342890552.0,
+      "changePercent": 0.04708790936638341
+    },
+    {
+      "scenario": "full-list",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 602715992.0,
+      "candidateMedian": 604598456.0,
+      "changePercent": 0.31233018950656
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 1022.0,
+      "candidateMedian": 1022.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "BodyBuilds",
+      "baselineMedian": 5141.0,
+      "candidateMedian": 5141.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Mounts",
+      "baselineMedian": 456.0,
+      "candidateMedian": 456.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Unmounts",
+      "baselineMedian": 658.0,
+      "candidateMedian": 658.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 452.8525,
+      "candidateMedian": 440.7725,
+      "changePercent": -2.6675352349826986
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Milliseconds",
+      "baselineMedian": 1285.5461,
+      "candidateMedian": 1333.7434,
+      "changePercent": 3.7491693218936417
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 9591888.0,
+      "candidateMedian": 9620168.0,
+      "changePercent": 0.2948324667677582
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 60590600.0,
+      "candidateMedian": 61102728.0,
+      "changePercent": 0.8452268173611
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 27.0,
+      "candidateMedian": 27.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "BodyBuilds",
+      "baselineMedian": 194.0,
+      "candidateMedian": 194.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Mounts",
+      "baselineMedian": 98.0,
+      "candidateMedian": 98.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Unmounts",
+      "baselineMedian": 95.0,
+      "candidateMedian": 95.0,
+      "changePercent": 0.0
+    }
+  ]
+}

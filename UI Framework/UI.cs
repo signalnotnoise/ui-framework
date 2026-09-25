@@ -16,6 +16,34 @@ public static class UI
     }
     /// <summary>Distributes finite horizontal space by Flex weight. Explicit Width takes precedence.</summary>
     public static View FlexRow(params View[] children) => new(ViewKind.FlexRow) { Children = children };
+    /// <summary>Distributes finite vertical space by Flex weight. Explicit Height takes precedence.</summary>
+    public static View FlexColumn(params View[] children) => new(ViewKind.FlexColumn) { Children = children };
+    /// <summary>Content-sized edge regions around a center that fills the remaining finite space.</summary>
+    public static View Dock(View center, View? top = null, View? bottom = null, View? left = null, View? right = null)
+    {
+        ArgumentNullException.ThrowIfNull(center);
+        List<View> middle = [];
+        if (left is not null) middle.Add(FlexColumn(left).Flex(0).Id("left"));
+        middle.Add(FlexColumn(center).Id("center"));
+        if (right is not null) middle.Add(FlexColumn(right).Flex(0).Id("right"));
+        List<View> rows = [];
+        if (top is not null) rows.Add(FlexColumn(top).Flex(0).Id("top"));
+        rows.Add(FlexRow(middle.ToArray()).Id("middle"));
+        if (bottom is not null) rows.Add(FlexColumn(bottom).Flex(0).Id("bottom"));
+        return FlexColumn(rows.ToArray());
+    }
+    /// <summary>Two retained panes with a bound first-pane size, native mouse/keyboard resizing and optional collapse.</summary>
+    public static View SplitPane(View first, View second, State<double> firstExtent,
+        SplitAxis axis = SplitAxis.Horizontal, double minimumFirst = 100, double minimumSecond = 100, bool firstCollapsed = false)
+        => SplitPane(first, second, firstExtent.Binding(), axis, minimumFirst, minimumSecond, firstCollapsed);
+    public static View SplitPane(View first, View second, Binding<double> firstExtent,
+        SplitAxis axis = SplitAxis.Horizontal, double minimumFirst = 100, double minimumSecond = 100, bool firstCollapsed = false)
+    {
+        ArgumentNullException.ThrowIfNull(first); ArgumentNullException.ThrowIfNull(second); ArgumentNullException.ThrowIfNull(firstExtent);
+        return new(ViewKind.SplitPane) { Children = [first, second],
+            SplitLayout = new(firstExtent.Value, value => firstExtent.Value = value, () => firstExtent.Value,
+                axis, minimumFirst, minimumSecond, firstCollapsed) };
+    }
     /// <summary>Equal-width columns that wrap as available width changes.</summary>
     public static View AdaptiveGrid(double minimumColumnWidth, params View[] children) =>
         double.IsFinite(minimumColumnWidth) && minimumColumnWidth > 0

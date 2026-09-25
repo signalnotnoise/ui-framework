@@ -72,6 +72,8 @@ internal sealed class Node : IDisposable
             ViewKind.VStack => new StackPanel { Orientation = Orientation.Vertical },
             ViewKind.HStack => new StackPanel { Orientation = Orientation.Horizontal },
             ViewKind.FlexRow => new Grid(),
+            ViewKind.FlexColumn => new FlexColumnPanel(),
+            ViewKind.SplitPane => new SplitPanePanel(),
             ViewKind.AdaptiveGrid => new AdaptivePanel(),
             ViewKind.Navigation => new NavigationSurface(snapshot?.Navigation),
             _ => throw new ArgumentOutOfRangeException(nameof(view))
@@ -137,6 +139,7 @@ internal sealed class Node : IDisposable
         if (Control is ViewHost host) host.Deactivate();
         if (Control is VirtualListControl list) list.Deactivate();
         if (Control is NavigationSurface navigation) navigation.Deactivate();
+        if (Control is SplitPanePanel split) split.Deactivate();
     }
 
     public void Dispose()

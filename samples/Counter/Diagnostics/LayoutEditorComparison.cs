@@ -26,6 +26,7 @@ internal static class LayoutEditorComparison
     {
         var reportIndex = Array.IndexOf(args, "--report");
         var path = Path.GetFullPath(reportIndex >= 0 ? args[reportIndex + 1] : "artifacts/layout-editors.json");
+        var trace = args.Contains("--trace-layout");
         var phase = new State<int>(0);
         var builds = 0;
         View Build()
@@ -54,11 +55,15 @@ internal static class LayoutEditorComparison
         ThemeStyles.Apply(host, new ThemeTokens());
         async Task Layout(int step)
         {
+            var started = trace ? Stopwatch.GetTimestamp() : 0;
+            if (trace) Console.Error.WriteLine($"Step {step}: waiting for dispatcher");
             await Dispatcher.Yield(DispatcherPriority.ApplicationIdle);
+            var resumed = trace ? Stopwatch.GetTimestamp() : 0;
             var width = step % 2 == 0 ? 1320 : 1040;
             host.Measure(new Size(width, 1080));
             host.Arrange(new Rect(0, 0, width, 1080));
             host.UpdateLayout();
+            if (trace) Console.Error.WriteLine($"Step {step}: dispatcher {Stopwatch.GetElapsedTime(started, resumed).TotalMilliseconds:F1} ms; layout {Stopwatch.GetElapsedTime(resumed).TotalMilliseconds:F1} ms");
         }
         await Layout(0);
         watch.Stop();

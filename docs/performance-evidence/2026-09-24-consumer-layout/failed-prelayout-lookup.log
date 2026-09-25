@@ -1,0 +1,4 @@
+System.InvalidOperationException: Consumer pane grid was not found.
+   at Program.Run(String[] args) in C:\Users\iotero\Dev\personal\UI Framework\samples\ConsumerDiagnostics\Program.cs:line 83
+   at Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\iotero\Dev\personal\UI Framework\samples\ConsumerDiagnostics\Program.cs:line 23
+

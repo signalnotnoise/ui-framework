@@ -1,0 +1,6 @@
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Windows.Automation.Peers.TreeViewAutomationPeer.System.Windows.Automation.Provider.ISelectionProvider.GetSelection()
+   at FileTreeChecks.Run(TreeView tree, Func`1 layout, String folder, Boolean virtualized) in C:\Users\iotero\Dev\personal\UI Framework\samples\ConsumerDiagnostics\FileTreeChecks.cs:line 43
+   at Program.Run(String[] args) in C:\Users\iotero\Dev\personal\UI Framework\samples\ConsumerDiagnostics\Program.cs:line 144
+   at Program.<>c__DisplayClass0_0.<<Main>b__0>d.MoveNext() in C:\Users\iotero\Dev\personal\UI Framework\samples\ConsumerDiagnostics\Program.cs:line 23
+

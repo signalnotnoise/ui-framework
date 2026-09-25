@@ -18,6 +18,8 @@ FlexRow(
 
 ## Adaptive columns
 
+For vertical fill, fixed edge docking and bound resizable panes, see [workspace layout](workspace-layout.md). These newer source APIs are not included in the app's pinned local.3 package.
+
 ```csharp
 AdaptiveGrid(240, planned, building, shipped).Spacing(16);
 ```

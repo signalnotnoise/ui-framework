@@ -78,12 +78,23 @@ try {
                 $start.RedirectStandardOutput = $true
                 $start.RedirectStandardError = $true
                 foreach ($argument in $arguments) { $start.ArgumentList.Add($argument) }
+                $elapsed = [Diagnostics.Stopwatch]::StartNew()
                 $process = [Diagnostics.Process]::Start($start)
                 try {
                     $stdout = $process.StandardOutput.ReadToEndAsync()
                     $stderr = $process.StandardError.ReadToEndAsync()
                     $completed = $process.WaitForExit(120000)
-                    if (-not $completed) { $process.Kill($true); $process.WaitForExit() }
+                    if (-not $completed) {
+                        $failure = [ordered]@{
+                            schemaVersion = 1; reason = 'process-timeout'; scenario = $scenario
+                            sample = $iteration; side = $side; processId = $process.Id
+                            timeoutSeconds = 120; elapsedSeconds = $elapsed.Elapsed.TotalSeconds
+                            cpuSeconds = $process.TotalProcessorTime.TotalSeconds
+                            baselineRevision = $baselineCommit; report = $report; log = $log
+                        }
+                        $failure | ConvertTo-Json | Set-Content (Join-Path $output 'failure.json')
+                        $process.Kill($true); $process.WaitForExit()
+                    }
                     ($stdout.GetAwaiter().GetResult() + $stderr.GetAwaiter().GetResult()) | Set-Content -LiteralPath $log
                     if (-not $completed) { throw "Benchmark exceeded 120 seconds: $scenario / $iteration / $side. See $log" }
                     if ($process.ExitCode -ne 0) { throw "Benchmark failed. See $log" }

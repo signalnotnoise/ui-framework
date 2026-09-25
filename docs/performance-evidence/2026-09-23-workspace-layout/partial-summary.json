@@ -1,0 +1,176 @@
+{
+  "status": "INCOMPLETE: candidate layout-editors warmup exceeded unchanged 120-second limit",
+  "baselineRevision": "2b678989d70158ffb40d31bfb949e18969439717",
+  "samplesPerSide": 7,
+  "comparisons": [
+    {
+      "scenario": "full-list",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 5294.8521,
+      "candidateMedian": 5237.2601,
+      "changePercent": -1.087697992546377
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Milliseconds",
+      "baselineMedian": 6595.7238,
+      "candidateMedian": 6665.2808,
+      "changePercent": 1.0545772095550854
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 342594152.0,
+      "candidateMedian": 343007360.0,
+      "changePercent": 0.12061151586733043
+    },
+    {
+      "scenario": "full-list",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 603612968.0,
+      "candidateMedian": 604808200.0,
+      "changePercent": 0.19801297575834376
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 1022.0,
+      "candidateMedian": 1022.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "BodyBuilds",
+      "baselineMedian": 5141.0,
+      "candidateMedian": 5141.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Mounts",
+      "baselineMedian": 456.0,
+      "candidateMedian": 456.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Unmounts",
+      "baselineMedian": 658.0,
+      "candidateMedian": 658.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 364.98,
+      "candidateMedian": 372.5481,
+      "changePercent": 2.073565674831479
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Milliseconds",
+      "baselineMedian": 1135.2455,
+      "candidateMedian": 1120.1313,
+      "changePercent": -1.3313596045965381
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 9591888.0,
+      "candidateMedian": 9620168.0,
+      "changePercent": 0.2948324667677582
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 60591472.0,
+      "candidateMedian": 61097328.0,
+      "changePercent": 0.8348633616295009
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 27.0,
+      "candidateMedian": 27.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "BodyBuilds",
+      "baselineMedian": 194.0,
+      "candidateMedian": 194.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Mounts",
+      "baselineMedian": 98.0,
+      "candidateMedian": 98.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Unmounts",
+      "baselineMedian": 95.0,
+      "candidateMedian": 95.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 5322.1308,
+      "candidateMedian": 5264.8833,
+      "changePercent": -1.0756500009357017
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "Milliseconds",
+      "baselineMedian": 13495.5639,
+      "candidateMedian": 13628.8635,
+      "changePercent": 0.9877290121978577
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 327608288.0,
+      "candidateMedian": 327929912.0,
+      "changePercent": 0.09817334047421689
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 1157879936.0,
+      "candidateMedian": 1159047560.0,
+      "changePercent": 0.10084154355707309
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 1022.0,
+      "candidateMedian": 1022.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "BodyBuilds",
+      "baselineMedian": 5141.0,
+      "candidateMedian": 5141.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "Mounts",
+      "baselineMedian": 456.0,
+      "candidateMedian": 456.0,
+      "changePercent": 0.0
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "Unmounts",
+      "baselineMedian": 658.0,
+      "candidateMedian": 658.0,
+      "changePercent": 0.0
+    }
+  ],
+  "rawEvidenceDirectory": "artifacts/performance/workspace-layout-2026-09-23"
+}

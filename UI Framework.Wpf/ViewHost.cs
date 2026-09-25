@@ -90,8 +90,16 @@ public sealed class ViewHost : ContentControl, IDisposable
     private static void Validate(View view)
     {
         ArgumentNullException.ThrowIfNull(view);
-        if (!Enum.IsDefined(view.Kind) || !Enum.IsDefined(view.Horizontal) || !Enum.IsDefined(view.Vertical)
-            || !Enum.IsDefined(view.ButtonAppearance) || !Enum.IsDefined(view.Transition))
+        // Explicit patterns compile to value checks without repeated enum metadata lookups.
+        // Regression coverage checks every declared value when these enums grow.
+        if (view.Kind is not (ViewKind.Text or ViewKind.Button or ViewKind.TextField or ViewKind.VStack
+                or ViewKind.HStack or ViewKind.Component or ViewKind.Toggle or ViewKind.Scroll
+                or ViewKind.VirtualList or ViewKind.FlexRow or ViewKind.AdaptiveGrid or ViewKind.Navigation
+                or ViewKind.TextEditor or ViewKind.PasswordField or ViewKind.Picker or ViewKind.Platform or ViewKind.FlexColumn or ViewKind.SplitPane)
+            || view.Horizontal is not (ViewAlignment.Stretch or ViewAlignment.Start or ViewAlignment.Center or ViewAlignment.End)
+            || view.Vertical is not (ViewAlignment.Stretch or ViewAlignment.Start or ViewAlignment.Center or ViewAlignment.End)
+            || view.ButtonAppearance is not (ButtonStyleKind.Secondary or ButtonStyleKind.Primary or ButtonStyleKind.Quiet)
+            || view.Transition is not (NavigationTransition.None or NavigationTransition.FadeSlide))
             throw new InvalidOperationException("View contains an unknown kind, alignment, appearance or transition.");
         if (view.Children is null || view.Options is null || view.Content is null)
             throw new InvalidOperationException("View content and collections cannot be null.");
@@ -108,7 +116,7 @@ public sealed class ViewHost : ContentControl, IDisposable
             throw new InvalidOperationException("Component metadata requires a Component view.");
         if (view.Kind != ViewKind.Platform && view.PlatformContent is not null)
             throw new InvalidOperationException("Platform content requires a Platform view.");
-        if (view.Kind is not (ViewKind.VStack or ViewKind.HStack or ViewKind.FlexRow or ViewKind.AdaptiveGrid
+        if (view.Kind is not (ViewKind.VStack or ViewKind.HStack or ViewKind.FlexRow or ViewKind.FlexColumn or ViewKind.SplitPane or ViewKind.AdaptiveGrid
             or ViewKind.Scroll or ViewKind.Navigation or ViewKind.VirtualList) && view.Children.Count != 0)
             throw new InvalidOperationException("This view kind does not accept declarative children.");
         if (view.Kind == ViewKind.Platform && (view.PlatformContent is not NativeViewDescriptor || view.Children.Count != 0))
@@ -119,6 +127,15 @@ public sealed class ViewHost : ContentControl, IDisposable
             throw new InvalidOperationException("VirtualList requires a finite, positive viewport height.");
         if (view.Kind == ViewKind.Scroll && view.Children.Count != 1)
             throw new InvalidOperationException("A Scroll view requires exactly one child.");
+        if (view.Kind == ViewKind.SplitPane)
+        {
+            if (view.Children.Count != 2 || view.SplitLayout is not { } split
+                || split.Axis is not (SplitAxis.Horizontal or SplitAxis.Vertical)
+                || !Dimension(split.FirstExtent) || !Dimension(split.MinimumFirst) || !Dimension(split.MinimumSecond)
+                || split.Resize is null || split.ReadExtent is null)
+                throw new InvalidOperationException("SplitPane requires two children, valid extents and a size binding.");
+        }
+        else if (view.SplitLayout is not null) throw new InvalidOperationException("Split layout metadata requires a SplitPane view.");
         if (view.Kind == ViewKind.Component && (view.ComponentType is null || view.CreateComponent is null))
             throw new InvalidOperationException("Use UI.Component<T>() to describe a component.");
         HashSet<string>? keys = null;
@@ -267,7 +284,9 @@ public sealed class ViewHost : ContentControl, IDisposable
                     scroll.Content = scrollChild.Element;
                     break;
                 case Panel panel:
-                    if (panel is Grid grid)
+                    if (panel is SplitPanePanel splitPanel) splitPanel.Update(view.SplitLayout!);
+                    else if (panel is FlexColumnPanel column) column.Update(view.Children, view.Gap);
+                    else if (panel is Grid grid)
                     {
                         grid.ColumnDefinitions.Clear();
                         foreach (var child in view.Children)
@@ -286,7 +305,7 @@ public sealed class ViewHost : ContentControl, IDisposable
                     var old = node.Children;
                     // Most state updates keep the same siblings in the same order.
                     // Patch those directly instead of allocating reconciliation collections.
-                    var sameOrder = old.Count == view.Children.Count && panel.Children.Count == old.Count;
+                    var sameOrder = old.Count == view.Children.Count && panel.Children.Count == old.Count + (panel is SplitPanePanel ? 1 : 0);
                     for (var i = 0; sameOrder && i < old.Count; i++)
                     {
                         var child = view.Children[i];
@@ -320,7 +339,7 @@ public sealed class ViewHost : ContentControl, IDisposable
                         foreach (var removed in removedNodes) removed.Dispose();
                         var retained = next.Select(n => n.Element).ToHashSet();
                         for (var i = panel.Children.Count - 1; i >= 0; i--)
-                            if (!retained.Contains(panel.Children[i])) panel.Children.RemoveAt(i);
+                            if (!retained.Contains(panel.Children[i]) && !(panel is SplitPanePanel chrome && chrome.IsChrome(panel.Children[i]))) panel.Children.RemoveAt(i);
                         for (var i = 0; i < next.Count; i++)
                         {
                             var element = next[i].Element;
@@ -370,7 +389,9 @@ public sealed class ViewHost : ContentControl, IDisposable
 
     private static void SetChildLayout(Panel panel, FrameworkElement element, int index, int count, double gap)
     {
-        if (panel is Grid && Grid.GetColumn(element) != index * 2) Grid.SetColumn(element, index * 2);
+        if (panel is SplitPanePanel split) split.ArrangeChild(element, index);
+        else if (panel is FlexColumnPanel) { if (Grid.GetRow(element) != index * 2) Grid.SetRow(element, index * 2); }
+        else if (panel is Grid && Grid.GetColumn(element) != index * 2) Grid.SetColumn(element, index * 2);
         var margin = panel is AdaptivePanel or Grid ? new Thickness(0) : panel is StackPanel { Orientation: Orientation.Vertical }
             ? new Thickness(0, 0, 0, index < count - 1 ? gap : 0)
             : new Thickness(0, 0, index < count - 1 ? gap : 0, 0);

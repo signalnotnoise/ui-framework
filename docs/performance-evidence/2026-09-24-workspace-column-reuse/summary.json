@@ -1,0 +1,98 @@
+{
+  "kind": "representative-adapter-comparison-not-release-gate",
+  "samples": 7,
+  "warmupsPerSide": 1,
+  "sdk": "10.0.401",
+  "runtime": [
+    "10.0.12"
+  ],
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "processorCount": 20,
+  "revision": "d5a94b2f01169e3232e9beff514d4e226134edef",
+  "dirty": true,
+  "rows": 1000,
+  "editorLines": 1000,
+  "operations": 50,
+  "comparisons": [
+    {
+      "metric": "MountMilliseconds",
+      "nativeMedian": 655.5339,
+      "frameworkMedian": 628.2787,
+      "changePercent": -4.157710226732759,
+      "nativeMin": 516.5485,
+      "nativeMax": 800.9225,
+      "frameworkMin": 505.8513,
+      "frameworkMax": 1150.9452
+    },
+    {
+      "metric": "Milliseconds",
+      "nativeMedian": 2038.2525,
+      "frameworkMedian": 2321.1774,
+      "changePercent": 13.880758149444183,
+      "nativeMin": 1725.4109,
+      "nativeMax": 4786.0506,
+      "frameworkMin": 1746.6537,
+      "frameworkMax": 4889.2186
+    },
+    {
+      "metric": "MountAllocatedBytes",
+      "nativeMedian": 21523288.0,
+      "frameworkMedian": 21543576.0,
+      "changePercent": 0.09426069102453916,
+      "nativeMin": 21523288.0,
+      "nativeMax": 21523288.0,
+      "frameworkMin": 21543576.0,
+      "frameworkMax": 21543616.0
+    },
+    {
+      "metric": "AllocatedBytes",
+      "nativeMedian": 196498736.0,
+      "frameworkMedian": 197079288.0,
+      "changePercent": 0.2954482109238654,
+      "nativeMin": 196498680.0,
+      "nativeMax": 196498776.0,
+      "frameworkMin": 197079192.0,
+      "frameworkMax": 197081856.0
+    },
+    {
+      "metric": "MountBodyBuilds",
+      "nativeMedian": 7.0,
+      "frameworkMedian": 1.0,
+      "changePercent": -85.71428571428572,
+      "nativeMin": 7.0,
+      "nativeMax": 7.0,
+      "frameworkMin": 1.0,
+      "frameworkMax": 1.0
+    },
+    {
+      "metric": "BodyBuilds",
+      "nativeMedian": 0.0,
+      "frameworkMedian": 50.0,
+      "changePercent": null,
+      "nativeMin": 0.0,
+      "nativeMax": 0.0,
+      "frameworkMin": 50.0,
+      "frameworkMax": 50.0
+    },
+    {
+      "metric": "NativeCreates",
+      "nativeMedian": 2.0,
+      "frameworkMedian": 2.0,
+      "changePercent": 0.0,
+      "nativeMin": 2.0,
+      "nativeMax": 2.0,
+      "frameworkMin": 2.0,
+      "frameworkMax": 2.0
+    },
+    {
+      "metric": "NativeReleasesDuringUpdates",
+      "nativeMedian": 0.0,
+      "frameworkMedian": 0.0,
+      "changePercent": 0,
+      "nativeMin": 0.0,
+      "nativeMax": 0.0,
+      "frameworkMin": 0.0,
+      "frameworkMax": 0.0
+    }
+  ]
+}

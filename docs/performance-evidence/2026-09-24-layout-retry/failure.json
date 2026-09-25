@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "reason": "process-timeout",
+  "scenario": "themed-full-list",
+  "sample": 1,
+  "side": "baseline",
+  "processId": 10712,
+  "timeoutSeconds": 120,
+  "elapsedSeconds": 120.049395,
+  "cpuSeconds": 126.953125,
+  "baselineRevision": "2b678989d70158ffb40d31bfb949e18969439717",
+  "report": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\performance\\workspace-layout-2026-09-24\\themed-full-list-1-baseline.json",
+  "log": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\performance\\workspace-layout-2026-09-24\\themed-full-list-1-baseline.log"
+}

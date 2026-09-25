@@ -3,6 +3,7 @@
   <Project Path="UI Framework.Wpf/UI Framework.Wpf.csproj" />
   <Folder Name="/samples/">
     <Project Path="samples/Counter/Counter.csproj" />
+    <Project Path="samples/WorkspaceComparison/WorkspaceComparison.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/UI Framework.Checks/UI Framework.Checks.csproj" />

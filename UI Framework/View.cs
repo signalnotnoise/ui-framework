@@ -7,6 +7,7 @@ public sealed record View(ViewKind Kind)
     public string? AccessibleName { get; init; }
     /// <summary>Opaque renderer-specific description; use the platform's factory API.</summary>
     public object? PlatformContent { get; init; }
+    public SplitPaneLayout? SplitLayout { get; init; }
     public IReadOnlyList<View> Children { get; init; } = [];
     public Action? Click { get; init; }
     public Action<string>? Edit { get; init; }

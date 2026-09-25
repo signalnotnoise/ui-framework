@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add `FlexColumn`, keyed `Dock` composition, and bound `SplitPane` layouts with retained children, native keyboard/mouse resizing, minimum extents and first-pane collapse.
+- Reduce enum-validation overhead while retaining invalid-description checks, and cover layout sizing, keyed retention, splitter bindings and disposal with regression tests.
+- Add isolated workspace and actual-consumer diagnostics, layout probes and timeout metadata; retain repeated runs, failed experiments and release limitations.
+- Document the consumer file-tree optimization: model-backed recycled selection and active-editor retention, with a measured 20.60% update-time improvement in the final 1,000-file comparison. This is an application improvement, not a framework package speedup.
+
 - Clear damaged host trees after patch failures and support explicit rebuild; preserve good trees when body construction or validation fails.
 - Validate public view descriptions before patching, enforce notification thread ownership, and deliver state/computed notifications to all observers before reporting subscriber errors.
 - Restore the specific visual focus path and TextBox selection on row regeneration; cancel stale focus callbacks and finish sibling cleanup when a row release throws.

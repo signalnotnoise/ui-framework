@@ -9,6 +9,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
 | [September 23 review resolution](review-resolution-2026-09-23.md) | Hardening changes, verification evidence and remaining production gates. |
+| [Validation and notification costs](validation-costs-2026-09-23.md) | Isolated timing, focused validation optimization, and limits of slowdown attribution. |
 | [Failure and recovery contracts](error-recovery.md) | Render failures, explicit recovery, validation and notification behavior. |
 | [Components](components.md) | Identity, props, local state, lifecycle, and scheduling. |
 | [Bindings](bindings.md) | Two-way editing, immutable record projections, and custom adapters. |

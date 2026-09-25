@@ -1,0 +1,62 @@
+{
+  "Kind": "actual-consumer-tree-synthetic-data",
+  "ProbesEnabled": true,
+  "ResizeNavigation": true,
+  "VirtualizeFiles": true,
+  "FileTreeBehaviorChecksPassed": true,
+  "Students": 1000,
+  "Files": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "RealizedStudents": 15,
+  "RealizedFiles": 19,
+  "RealizedStudentsAfterScroll": 29,
+  "StudentVirtualizationEnabled": true,
+  "StudentMode": "Standard",
+  "StudentCanContentScroll": true,
+  "StudentPanel": "VirtualizingStackPanel",
+  "FileVirtualizationEnabled": true,
+  "FilePanel": "VirtualizingStackPanel",
+  "StudentAccessibleName": "Students",
+  "measurements": {
+    "StartupMilliseconds": 647.6718,
+    "StartupAllocatedBytes": 14883112,
+    "MountLayoutMilliseconds": 25.4781,
+    "MountLayoutAllocatedBytes": 1056080,
+    "UpdateMilliseconds": 506.8311,
+    "UpdateAllocatedBytes": 62113976,
+    "DispatcherMilliseconds": 194.3164,
+    "ExplicitLayoutMilliseconds": 306.77690000000007,
+    "Root": {
+      "MeasureCalls": 99,
+      "ArrangeCalls": 99,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 78.9315,
+      "ArrangeMilliseconds": 182.421
+    },
+    "Students": {
+      "MeasureCalls": 100,
+      "ArrangeCalls": 100,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 10.6366,
+      "ArrangeMilliseconds": 10.9793
+    },
+    "Files": {
+      "MeasureCalls": 100,
+      "ArrangeCalls": 100,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 32.939,
+      "ArrangeMilliseconds": 9.2558
+    },
+    "Editor": {
+      "MeasureCalls": 100,
+      "ArrangeCalls": 100,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 23.7083,
+      "ArrangeMilliseconds": 44.9108
+    }
+  },
+  "AppAssembly": "1.0.0.0",
+  "FrameworkAssembly": "0.1.0.0",
+  "Runtime": "10.0.12"
+}

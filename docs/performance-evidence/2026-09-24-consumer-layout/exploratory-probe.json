@@ -1,0 +1,48 @@
+{
+  "Kind": "actual-consumer-tree-synthetic-data",
+  "ProbesEnabled": true,
+  "Students": 1000,
+  "Files": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "RealizedStudents": 15,
+  "RealizedFiles": 1000,
+  "RealizedStudentsAfterScroll": 29,
+  "StudentVirtualizationEnabled": true,
+  "StudentMode": "Standard",
+  "StudentCanContentScroll": true,
+  "StudentPanel": "VirtualizingStackPanel",
+  "FileVirtualizationEnabled": false,
+  "FilePanel": null,
+  "StudentAccessibleName": "Students",
+  "measurements": {
+    "MountLayoutMilliseconds": 124.0851,
+    "MountLayoutAllocatedBytes": 2878200,
+    "UpdateMilliseconds": 1123.4578,
+    "UpdateAllocatedBytes": 35186576,
+    "Students": {
+      "MeasureCalls": 50,
+      "ArrangeCalls": 50,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 18.6187,
+      "ArrangeMilliseconds": 12.2837
+    },
+    "Files": {
+      "MeasureCalls": 50,
+      "ArrangeCalls": 50,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 6.4749,
+      "ArrangeMilliseconds": 7.6489
+    },
+    "Editor": {
+      "MeasureCalls": 50,
+      "ArrangeCalls": 50,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 46.782,
+      "ArrangeMilliseconds": 105.3627
+    }
+  },
+  "AppAssembly": "1.0.0.0",
+  "FrameworkAssembly": "0.1.0.0",
+  "Runtime": "10.0.12"
+}

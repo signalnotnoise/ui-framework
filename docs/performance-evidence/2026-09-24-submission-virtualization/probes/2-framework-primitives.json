@@ -1,0 +1,53 @@
+{
+  "Scenario": "framework-primitives",
+  "Rows": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "Isolation": "workspace",
+  "SubmissionList": "virtualized",
+  "MountRealizedRows": 34,
+  "UpdateRealizedRows": 34,
+  "SubmissionBehaviorChecksPassed": true,
+  "ProbesEnabled": true,
+  "MountProbes": {
+    "Editor": {
+      "MeasureCalls": 4,
+      "ArrangeCalls": 4,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 54.1281,
+      "ArrangeMilliseconds": 4.9924
+    },
+    "Submissions": {
+      "MeasureCalls": 1,
+      "ArrangeCalls": 1,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 29.5491,
+      "ArrangeMilliseconds": 4.114
+    }
+  },
+  "UpdateProbes": {
+    "Editor": {
+      "MeasureCalls": 100,
+      "ArrangeCalls": 100,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 13.2436,
+      "ArrangeMilliseconds": 15.6186
+    },
+    "Submissions": {
+      "MeasureCalls": 34,
+      "ArrangeCalls": 34,
+      "UnboundedMeasures": 0,
+      "MeasureMilliseconds": 25.9574,
+      "ArrangeMilliseconds": 60.6493
+    }
+  },
+  "MountMilliseconds": 514.7977,
+  "Milliseconds": 269.2865,
+  "MountAllocatedBytes": 11774664,
+  "AllocatedBytes": 12343912,
+  "MountBodyBuilds": 1,
+  "BodyBuilds": 50,
+  "NativeCreates": 2,
+  "NativeReleasesDuringUpdates": 0,
+  "Runtime": "10.0.12"
+}

@@ -1,0 +1,15 @@
+{
+  "Scenario": "framework-primitives",
+  "Rows": 1000,
+  "EditorLines": 1000,
+  "Operations": 50,
+  "MountMilliseconds": 617.6751,
+  "Milliseconds": 2321.1774,
+  "MountAllocatedBytes": 21543576,
+  "AllocatedBytes": 197079192,
+  "MountBodyBuilds": 1,
+  "BodyBuilds": 50,
+  "NativeCreates": 2,
+  "NativeReleasesDuringUpdates": 0,
+  "Runtime": "10.0.12"
+}

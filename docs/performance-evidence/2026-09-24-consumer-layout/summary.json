@@ -1,0 +1,166 @@
+{
+  "kind": "consumer-synthetic-data-diagnostic-not-release-gate",
+  "samples": 3,
+  "warmupsPerScenarioPerMode": 1,
+  "sdk": "10.0.401",
+  "frameworkPackage": "0.1.0-alpha.2-local.3",
+  "summaryRecovery": "All 16 processes completed; corrected XML package-version lookup failed only during summary generation. Summary rebuilt from preserved reports without rerunning measurements.",
+  "metrics": [
+    {
+      "mode": "clean",
+      "scenario": "window",
+      "samples": 3,
+      "StartupMilliseconds": 1967.4241,
+      "StartupAllocatedBytes": 111480968,
+      "UpdateMilliseconds": 492.1027,
+      "UpdateAllocatedBytes": 35193448,
+      "DispatcherMilliseconds": 51.59079999999998,
+      "ExplicitLayoutMilliseconds": 427.59499999999986,
+      "Root": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Students": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Files": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Editor": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "updateMin": 485.569,
+      "updateMax": 496.7586,
+      "realizedStudents": 15,
+      "realizedFiles": 1000
+    },
+    {
+      "mode": "clean",
+      "scenario": "splitter",
+      "samples": 3,
+      "StartupMilliseconds": 1858.157,
+      "StartupAllocatedBytes": 111480760,
+      "UpdateMilliseconds": 988.736,
+      "UpdateAllocatedBytes": 82221896,
+      "DispatcherMilliseconds": 626.7870999999997,
+      "ExplicitLayoutMilliseconds": 352.9629,
+      "Root": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Students": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Files": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "Editor": {
+        "MeasureCalls": 0,
+        "ArrangeCalls": 0,
+        "MeasureMilliseconds": 0,
+        "ArrangeMilliseconds": 0
+      },
+      "updateMin": 978.3566,
+      "updateMax": 1010.0034,
+      "realizedStudents": 15,
+      "realizedFiles": 1000
+    },
+    {
+      "mode": "probes",
+      "scenario": "window",
+      "samples": 3,
+      "StartupMilliseconds": 1904.5312,
+      "StartupAllocatedBytes": 111477760,
+      "UpdateMilliseconds": 443.1201,
+      "UpdateAllocatedBytes": 35194896,
+      "DispatcherMilliseconds": 46.648999999999994,
+      "ExplicitLayoutMilliseconds": 398.08720000000005,
+      "Root": {
+        "MeasureCalls": 75,
+        "ArrangeCalls": 75,
+        "MeasureMilliseconds": 76.729,
+        "ArrangeMilliseconds": 262.0386
+      },
+      "Students": {
+        "MeasureCalls": 50,
+        "ArrangeCalls": 50,
+        "MeasureMilliseconds": 7.5326,
+        "ArrangeMilliseconds": 4.6304
+      },
+      "Files": {
+        "MeasureCalls": 50,
+        "ArrangeCalls": 50,
+        "MeasureMilliseconds": 2.6745,
+        "ArrangeMilliseconds": 2.6829
+      },
+      "Editor": {
+        "MeasureCalls": 50,
+        "ArrangeCalls": 50,
+        "MeasureMilliseconds": 27.4684,
+        "ArrangeMilliseconds": 69.8029
+      },
+      "updateMin": 435.0077,
+      "updateMax": 558.158,
+      "realizedStudents": 15,
+      "realizedFiles": 1000
+    },
+    {
+      "mode": "probes",
+      "scenario": "splitter",
+      "samples": 3,
+      "StartupMilliseconds": 1962.8509,
+      "StartupAllocatedBytes": 111479880,
+      "UpdateMilliseconds": 996.2291,
+      "UpdateAllocatedBytes": 82231472,
+      "DispatcherMilliseconds": 648.0058,
+      "ExplicitLayoutMilliseconds": 341.5593000000001,
+      "Root": {
+        "MeasureCalls": 99,
+        "ArrangeCalls": 99,
+        "MeasureMilliseconds": 68.2658,
+        "ArrangeMilliseconds": 291.814
+      },
+      "Students": {
+        "MeasureCalls": 100,
+        "ArrangeCalls": 100,
+        "MeasureMilliseconds": 14.4886,
+        "ArrangeMilliseconds": 13.0036
+      },
+      "Files": {
+        "MeasureCalls": 100,
+        "ArrangeCalls": 100,
+        "MeasureMilliseconds": 4.7644,
+        "ArrangeMilliseconds": 259.6072
+      },
+      "Editor": {
+        "MeasureCalls": 100,
+        "ArrangeCalls": 100,
+        "MeasureMilliseconds": 30.3521,
+        "ArrangeMilliseconds": 69.5314
+      },
+      "updateMin": 971.0564,
+      "updateMax": 1632.5508,
+      "realizedStudents": 15,
+      "realizedFiles": 1000
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+[
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\App.cs",
+    "snapshot": "Lab Feedback WPF\\App.cs",
+    "sha256": "AEFFFDA97C4D1C42AC30FD187C89EC9A524216F79454AB36DC5D22902AF8EA6D"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\AssemblyInfo.cs",
+    "snapshot": "Lab Feedback WPF\\AssemblyInfo.cs",
+    "sha256": "1D31ED3C7E4AAF76FABB82E330208385CB70685E9B7C577764493A4D169BCA61"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Lab Feedback WPF.csproj",
+    "snapshot": "Lab Feedback WPF\\Lab Feedback WPF.csproj",
+    "sha256": "01BD1CD373645C50B6C15E2871797757C9D38AB06452557987D7AF32AF38C9F9"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.cs",
+    "sha256": "0673075522C0E63620348672185DD4B1AEA23DCABD5FF10F6FB80B99882CB83F"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.FileReviews.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.FileReviews.cs",
+    "sha256": "11990D5F253231CE9EC9AC6EFC6CBB87B2FE0E3D4D160A5E372E9638296B721D"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.Framework.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.Framework.cs",
+    "sha256": "5FA0982EBFDB0F30BB3F2CE400218A5AA3BAF5199E4FAB5E9659AC655FB391F6"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.JobQueue.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.JobQueue.cs",
+    "sha256": "6B6CD60DAB72E2D5D27B7619692AEFF56AB15CEBE5A00156511155A6812391C6"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.NativeControls.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.NativeControls.cs",
+    "sha256": "24283EF80C6F0A7212BC98C331C72024E26BBA861431E89AD134CA9B8E1E8420"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.Panels.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.Panels.cs",
+    "sha256": "FA93E93F2120B441AEBCD7FB2D686E5733DDA1EA6C463BD00A5F1052FCEBC5B7"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.ToolsPanel.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.ToolsPanel.cs",
+    "sha256": "2A1740D24CC99ED533B5D5763FFA1406B3ADD248C9ACA9E1566C8BDC8079B54B"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\MainWindow.Workspace.cs",
+    "snapshot": "Lab Feedback WPF\\MainWindow.Workspace.cs",
+    "sha256": "9AA40DE846E37FEC7FFA96E5CE98923965D2AC733B2A345D0569256282B9E82A"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Controls\\InlineCommentAdorner.cs",
+    "snapshot": "Lab Feedback WPF\\Controls\\InlineCommentAdorner.cs",
+    "sha256": "A204636623F2CB8C0B6D9D3019E68B4154207275C65AD804329C984E266CCFDD"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Controls\\InlineCommentLayer.cs",
+    "snapshot": "Lab Feedback WPF\\Controls\\InlineCommentLayer.cs",
+    "sha256": "48D2DB6C5BD01E1FD5C16DE19637058A0B838A99F0A5CBEC503873D1DCF2C3C0"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Converters\\InverseBoolToVisibilityConverter.cs",
+    "snapshot": "Lab Feedback WPF\\Converters\\InverseBoolToVisibilityConverter.cs",
+    "sha256": "B94935DCD2DD84651A52F43CDA876809A02F1653F12EC78349EABE09E535EC23"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\Assignment.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\Assignment.cs",
+    "sha256": "C0F9E4329A6766EFE5E02D68373E73E128F361DBA6A941BFE6C0218F7D0015D6"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\AssignmentResults.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\AssignmentResults.cs",
+    "sha256": "50197F5670927CC2D5BF35B5348597684C40ACD77ABEE8448224B8EBC44A3402"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\Deduction.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\Deduction.cs",
+    "sha256": "C6F68278EE5EC33E3B594C1E0020546F854A15E2F441B4F97A6130278AE0A886"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\FileSystemItem.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\FileSystemItem.cs",
+    "sha256": "A439761942DCDA227ACE99D71DD9F456E2429C5FE21BD511D2F04B683B5EF5E1"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\GradingModels.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\GradingModels.cs",
+    "sha256": "BCD22BD7CE5548944C5CABFF297BDD371DDE47E861335C185C81FB3AD1F8DA49"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\LLMSettings.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\LLMSettings.cs",
+    "sha256": "BDE988F1531974E2753A256644EAF57D50B0D7B7A6557D8785FD15A8F10FA767"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\Result.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\Result.cs",
+    "sha256": "0587530BCBE82A25D39C50D0C232C73E3099C7011BEF425CF1DCC83EB7E55616"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\Student.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\Student.cs",
+    "sha256": "CFED51901EB3DF501451B3B5649C0C128897E0DDE95138DFF6C8C1240F18D170"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Models\\Violation.cs",
+    "snapshot": "Lab Feedback WPF\\Models\\Violation.cs",
+    "sha256": "7640DF859AF6393EF63B7B165FD5F5978EA93BF45553EE0F6E1105782B9D7C59"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\NativeScrollTrack.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\NativeScrollTrack.cs",
+    "sha256": "705DE83E853F7B68798CD45A3393962842648D5F9D3D630DAE1DF8506C87E483"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\NativeTheme.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\NativeTheme.cs",
+    "sha256": "F9BD0C59261C37A6950422AFBBC7CA8CCB77452F7F73F9C36D507326412216FF"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\ReviewTheme.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\ReviewTheme.cs",
+    "sha256": "2AC0B8A74F0EDF20309850B193282E3CC53BB754FECD77EC65BDC64FADC31097"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\ReviewWindow.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\ReviewWindow.cs",
+    "sha256": "BD79B270E3F55DBA0E4D548D2DBE6C2B1D04763F9D4E815BDAF12E095E62F1C5"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\RubricEditorRow.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\RubricEditorRow.cs",
+    "sha256": "56EB3E5E26D418B37A9CA50F112D36DFF7DFB203A8CFE2F0F3C4C7EA5EE09321"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Presentation\\WorkspaceNativeControls.cs",
+    "snapshot": "Lab Feedback WPF\\Presentation\\WorkspaceNativeControls.cs",
+    "sha256": "B0B4F1E818A546CDAE664509F163F4D08C946DBBA43E1154354B15A909846F0B"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Resources\\Html.xshd",
+    "snapshot": "Lab Feedback WPF\\Resources\\Html.xshd",
+    "sha256": "16765D0CA41B38D251AD10274ECC19D815FDF2BCF22C32BA064B261366648937"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Resources\\Monokai.xshd",
+    "snapshot": "Lab Feedback WPF\\Resources\\Monokai.xshd",
+    "sha256": "EAB4BFD94D332D2ABB4EDF7A50954563D2E6938308CE47377FC9CA6915809EB9"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\AdversarialInputPlanner.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\AdversarialInputPlanner.cs",
+    "sha256": "5484EE7B140B318842B693C048C77CB6FB34961C6BE373A64BB220BA87FF541F"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\AiTestQueue.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\AiTestQueue.cs",
+    "sha256": "DFDABA6A5B12DD99C9352D40ADF8347EE9531C196B868584F065E2C830DE3576"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\AiTestStaging.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\AiTestStaging.cs",
+    "sha256": "4CD1508299B325F8969EBE98FCE6B190D8D8D40B7D67BB653BA8ED1730193DE8"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\AssignmentPersistenceService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\AssignmentPersistenceService.cs",
+    "sha256": "C8BE0B500E2AC931CEF97B1B2525F9BEFC380AD706EBB5B909037501B296EC10"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\AzureOpenAIService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\AzureOpenAIService.cs",
+    "sha256": "D41368445AF4B08C009264C237F2176AF69A735A3EE8680B74AB70E08DCA9E67"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\BoundedConsoleProgress.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\BoundedConsoleProgress.cs",
+    "sha256": "DD67BDA8C73DF2EE3CC08C1A7EABA431AD7655B035A44CD05257F0BD63C150EC"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\BoundedTextBuffer.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\BoundedTextBuffer.cs",
+    "sha256": "68A6A3BA78EFE3D2FEA4F87048736A5825F842F21562C23C0768520D36C4BD5E"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\CommentPersistenceService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\CommentPersistenceService.cs",
+    "sha256": "7914AFA1142B14A6583B052EA6CC64A2F27FC77D6180463B0D7C667B430FDB6D"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ConsoleDriverAgent.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ConsoleDriverAgent.cs",
+    "sha256": "84B0FD746FF056A8B21EDB1418FC7636F7EB6C61E3C310036599FC69F8CB883A"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ConsoleInputPolicy.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ConsoleInputPolicy.cs",
+    "sha256": "855AD37629CD6E509DB9203DA817DF06CFD6E83AEAF62457F0D8AF89393586F0"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ConsoleMenuCoverage.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ConsoleMenuCoverage.cs",
+    "sha256": "F6A5697094494CB3FF6DF9614ECE5844CDB2C5B554DEA55AE4D3CBF60C077943"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ConsoleScreen.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ConsoleScreen.cs",
+    "sha256": "FE5D1EB574A26874468032BD1DAAB1E2D51759CED8FAE1344423FA084C97565B"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ConsoleSourceContext.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ConsoleSourceContext.cs",
+    "sha256": "C653143B25D5C985E5695C9040FCEF0B1DCABA06E32E12F8CE3EE2D2A8427A44"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\FeedbackCopyFormatter.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\FeedbackCopyFormatter.cs",
+    "sha256": "A1356F3E874C7E7FE7C953950B0E61D1DAD33446062CEB8248BC6840F6A42AF8"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\FileHandler.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\FileHandler.cs",
+    "sha256": "284981E8ECF8FD5B2273E4E4BA312BBCA04BE512181C3D1A53135FEFDD45D7F7"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\HyperVRunner.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\HyperVRunner.cs",
+    "sha256": "908529DCE79DF35098FB4032EA524EEB0A470CE31AA187CB3E164D80A8ECA750"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\IInteractiveConsoleSession.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\IInteractiveConsoleSession.cs",
+    "sha256": "E16D7E94B51936438DF35B74C7F6DE5543261373F140623B70C4566CFD28227F"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\InteractiveProcessSession.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\InteractiveProcessSession.cs",
+    "sha256": "6A7529F14441BCBB7E282C6320C385B379A9B3CB41B67EC579090FF7C698E1B6"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\LlmCompletionService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\LlmCompletionService.cs",
+    "sha256": "1C74652ADF2BDCF73F16025C4CB35F392BA7DEE574F47CFC7E7ECE01A176EA9B"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\LlmHttpErrors.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\LlmHttpErrors.cs",
+    "sha256": "D87094B0B4FA3032AE80F948AFA182E8D822354D86F08E3FC5DE9D28CCCA3D4A"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\LlmJobQueue.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\LlmJobQueue.cs",
+    "sha256": "06426FBE35845C0681215A9F844E7A123D37D4E3E865BAB52E6E8B1B971DD7F7"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\NativeDependencyStager.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\NativeDependencyStager.cs",
+    "sha256": "C7AA06B550EBA4CD7DB427CF5AA894170F8A9F5B7EE93421E91762621AFD25F6"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\NativeExitCodes.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\NativeExitCodes.cs",
+    "sha256": "13C1F6C90465029FD68D62A20A5FBFA2DFE0026D907C00D942644832A14FA395"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\OllamaService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\OllamaService.cs",
+    "sha256": "0FA4F75E7F10D0D5046900A0B7A7E14314F1F3B9D4050969DC0BF6237019F7FF"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\OutputLimits.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\OutputLimits.cs",
+    "sha256": "B2711D3185DC1B43D1CB0EC97F9C17BFBFD4115D145F2419A02CB2DF615B0AE4"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\OverallFeedbackPrompt.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\OverallFeedbackPrompt.cs",
+    "sha256": "D8C34D78AE672317BA13B97F26D2FE461E835A2A90048D9EBE869EB5D370E5C0"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\PEHeaderReader.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\PEHeaderReader.cs",
+    "sha256": "3D585E0C7EB1FB9DEF2501130FD1BAD77165815BACAAAF8849385F90A0894804"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ProcessRunner.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ProcessRunner.cs",
+    "sha256": "2F103345F6E6865DEC69974BFBB300B6121D1953285BFB1143DD9B987598606B"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\RelatedFileResolver.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\RelatedFileResolver.cs",
+    "sha256": "29F6C45BFAE4CA451153E2987EB5537DA6B34D6F3CED9D88006C397F33EB03A5"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ReviewGeneration.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ReviewGeneration.cs",
+    "sha256": "A67CBF1A73F47C6492746EF4FEDBC596290168F780C2F4E78E695AA8B52BDEEF"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\RunnableSubmissionDetector.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\RunnableSubmissionDetector.cs",
+    "sha256": "0949DA4F4BD46CA0768E38A0329645DD79BFF6B8717B23EF9D55B77D5094E80D"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\RuntimeTerminalPresenter.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\RuntimeTerminalPresenter.cs",
+    "sha256": "4B5170EB12A023AAB485CC3DD5B323008940B2F43D9DD4DAE4BA51B6A2B86AE2"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\SavedFeedbackText.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\SavedFeedbackText.cs",
+    "sha256": "93430EE69BA5E7C7EF0975165DEC185580156B60B46E395A09B207CCA294B9B8"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\SectionGradingService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\SectionGradingService.cs",
+    "sha256": "5A0FD987FAFE4DF5191F2C4EA9B7475105EA6656F49F2860DA7589504911A636"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\StudentDataSanitizer.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\StudentDataSanitizer.cs",
+    "sha256": "3FA88228C81A8B482A15E76BB4974F10DF993EDA67FC277DE3C29756581D5A78"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\SubmissionBuilder.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\SubmissionBuilder.cs",
+    "sha256": "A3AF4D53D463483183D0BC5FA53C8C797BBF798AAE4D5B6C231F8B9624776909"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\SubmissionExecutionPolicy.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\SubmissionExecutionPolicy.cs",
+    "sha256": "74689B4739F6C43414C238EFC88DFABBD08F04C07719A7AE2E2D3270A6335D95"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\SubmissionExecutionService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\SubmissionExecutionService.cs",
+    "sha256": "4A40C85C50BE0DD0AC4B6417BD1E817C191AA598BFFD44A42A222AC75672E9BF"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ViolationHighlighter.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ViolationHighlighter.cs",
+    "sha256": "1CE84BFA11D290CD41BECF20FBF85A0BA4A8BA131C1CDD50C06ACFB493C98D1F"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ViolationsConfigService.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ViolationsConfigService.cs",
+    "sha256": "ACA99DA732D14579F878DB2EC86C0B3511E286FC0AFAF8B57EC07624BF2BCF9C"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ViolationsMatcher.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ViolationsMatcher.cs",
+    "sha256": "0F918A5F3692C34B2D8AC611E6B55E983C19A7115D8BEE44C5DF142AB52C0686"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\WorkspacePanelPreferences.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\WorkspacePanelPreferences.cs",
+    "sha256": "249C1D62EA74FD0E710F3938C30CB23F9548BC72BA05FA53D182611C3BFF3797"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Services\\ZipFileHandler.cs",
+    "snapshot": "Lab Feedback WPF\\Services\\ZipFileHandler.cs",
+    "sha256": "7661230DE1B77C1E28FD5B0608066E1EC1B5641C757E61889EDAAEEB0058116A"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Views\\ExtractionOperation.cs",
+    "snapshot": "Lab Feedback WPF\\Views\\ExtractionOperation.cs",
+    "sha256": "8E382D3E5596A0139F71AC9D64CFF5DCE77E90CC46AA8566FEF90E828466C307"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Views\\ExtractionProgressDialog.cs",
+    "snapshot": "Lab Feedback WPF\\Views\\ExtractionProgressDialog.cs",
+    "sha256": "F5BEC7D357B41DBA16E97DFE8E37827E4B01F367BA942C94903C57A946D041C0"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Views\\GradingView.cs",
+    "snapshot": "Lab Feedback WPF\\Views\\GradingView.cs",
+    "sha256": "56D0BB5F2803679D009ABEC627956EDE2D56DAD062505E3151A3D882583B829D"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Windows\\AssignmentSetupWindow.cs",
+    "snapshot": "Lab Feedback WPF\\Windows\\AssignmentSetupWindow.cs",
+    "sha256": "3CEA9B20EABF6708DFF291DD7674CC6A78D14EC46C875766C3C3F453F2C7E819"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Windows\\LLMSettingsWindow.cs",
+    "snapshot": "Lab Feedback WPF\\Windows\\LLMSettingsWindow.cs",
+    "sha256": "5602B2D66E5830BE5A0BD484C5A8B5BE6888C00D30CEB5F92727A27B6B7CCACA"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Windows\\RubricImportWindow.cs",
+    "snapshot": "Lab Feedback WPF\\Windows\\RubricImportWindow.cs",
+    "sha256": "22B584BCA2438D535B229ECB10DA755F671BDC2D9C35FBE2C33EA833ACDE7AB7"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Windows\\SectionGradingDialog.cs",
+    "snapshot": "Lab Feedback WPF\\Windows\\SectionGradingDialog.cs",
+    "sha256": "E4A5A3128D846DE62E93027923541FEBC6ABF2C4BB4F06110AE32486831A8B99"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback WPF\\Windows\\SettingsWindow.cs",
+    "snapshot": "Lab Feedback WPF\\Windows\\SettingsWindow.cs",
+    "sha256": "01161FBB7E30C751D7C6608F6E13CCE3A9090A3CFB47628810EA622C2AEBE51F"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback Runner\\Lab Feedback Runner.csproj",
+    "snapshot": "Lab Feedback Runner\\Lab Feedback Runner.csproj",
+    "sha256": "33B0A82167109670A4C39996B8A588B75A7204016A4743663BC532C5F934B798"
+  },
+  {
+    "path": "C:\\Users\\iotero\\source\\repos\\Lab-Feedback-WPF\\Lab Feedback Runner\\Program.cs",
+    "snapshot": "Lab Feedback Runner\\Program.cs",
+    "sha256": "C08A5210BEAEC8DF4FD319F0CD5D0FBF0AF34C6B9A916557578D383E53A69F4C"
+  },
+  {
+    "path": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\ConsumerDiagnostics\\ConsumerDiagnostics.csproj",
+    "snapshot": "ConsumerDiagnostics\\ConsumerDiagnostics.csproj",
+    "sha256": "ED44237010D0FD742A5C1D8B9770BFE61A7C609015984C05D2385347B8C1EAC8"
+  },
+  {
+    "path": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\ConsumerDiagnostics\\FileTreeChecks.cs",
+    "snapshot": "ConsumerDiagnostics\\FileTreeChecks.cs",
+    "sha256": "95293C75BE362BE79C2F98E6D4036A6F61ABCC9BB7E014208074ACAA9B6D2EEF"
+  },
+  {
+    "path": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\ConsumerDiagnostics\\Program.cs",
+    "snapshot": "ConsumerDiagnostics\\Program.cs",
+    "sha256": "FD7C48385CF153E74CA5EE61CFCCCD2366822C7A8F1EAA57742F16A4DCC07647"
+  }
+]
