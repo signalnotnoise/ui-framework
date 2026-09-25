@@ -19,7 +19,7 @@ concurrency:
 jobs:
   validate:
     runs-on: windows-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
