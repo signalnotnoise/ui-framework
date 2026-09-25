@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f2f4e734-dd49-4cc9-9dab-5a9513c3dc7e" name="iotero@IOTERO-MSI76 2026-09-25 07:18:28" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-25T07:18:28.0154410-04:00" queuing="2026-09-25T07:18:28.0154414-04:00" start="2026-09-25T07:18:26.3964087-04:00" finish="2026-09-25T07:18:28.0195999-04:00" />
+  <TestSettings name="default" id="8f1037bf-167e-480f-b33f-3f1a563de8f3">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-09-25_07_18_28" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="3f321a02-a687-4d91-9948-381c2c50ddf6" testId="3550da24-9648-e324-23f3-29749211656b" testName="UpdateBoundaryPreservesTextSelectionUndoAndInputSupport" computerName="IOTERO-MSI76" duration="00:00:00.3807132" startTime="2026-09-25T07:18:27.5134567-04:00" endTime="2026-09-25T07:18:27.8952573-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f321a02-a687-4d91-9948-381c2c50ddf6" />
+    <UnitTestResult executionId="f4ac10b8-371b-4fdf-a877-e975daf649b7" testId="014cbc5c-bb7a-69cb-aa99-f7b32c09c837" testName="FailedIdleCleanupIsReportedAndRememberedAfterRecovery" computerName="IOTERO-MSI76" duration="00:00:00.0290164" startTime="2026-09-25T07:18:27.4681775-04:00" endTime="2026-09-25T07:18:27.5099986-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4ac10b8-371b-4fdf-a877-e975daf649b7" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FailedIdleCleanupIsReportedAndRememberedAfterRecovery" storage="c:\users\iotero\source\repos\lab-feedback-wpf\lab feedback wpf.tests\bin\release\net10.0-windows\lab feedback wpf.tests.dll" id="014cbc5c-bb7a-69cb-aa99-f7b32c09c837">
+      <Execution id="f4ac10b8-371b-4fdf-a877-e975daf649b7" />
+      <TestMethod codeBase="C:\Users\iotero\source\repos\Lab-Feedback-WPF\Lab Feedback WPF.Tests\bin\Release\net10.0-windows\Lab Feedback WPF.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="Lab_Feedback_WPF_Tests.Services.ComCleanupPolicyTests" name="FailedIdleCleanupIsReportedAndRememberedAfterRecovery" />
+    </UnitTest>
+    <UnitTest name="UpdateBoundaryPreservesTextSelectionUndoAndInputSupport" storage="c:\users\iotero\source\repos\lab-feedback-wpf\lab feedback wpf.tests\bin\release\net10.0-windows\lab feedback wpf.tests.dll" id="3550da24-9648-e324-23f3-29749211656b">
+      <Execution id="3f321a02-a687-4d91-9948-381c2c50ddf6" />
+      <TestMethod codeBase="C:\Users\iotero\source\repos\Lab-Feedback-WPF\Lab Feedback WPF.Tests\bin\Release\net10.0-windows\Lab Feedback WPF.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="Lab_Feedback_WPF_Tests.Services.ComCleanupPolicyTests" name="UpdateBoundaryPreservesTextSelectionUndoAndInputSupport" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="3550da24-9648-e324-23f3-29749211656b" executionId="3f321a02-a687-4d91-9948-381c2c50ddf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="014cbc5c-bb7a-69cb-aa99-f7b32c09c837" executionId="f4ac10b8-371b-4fdf-a877-e975daf649b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

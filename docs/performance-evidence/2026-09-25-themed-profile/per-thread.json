@@ -1,0 +1,544 @@
+[
+  {
+    "thread": "Thread (19712)",
+    "inclusive": [
+      {
+        "frame": "Process64 dotnet (65620) Args:  artifacts/performance/toggle-retained-layout-2026-09-25/baseline-source/samples/Counter/bin/Release/net10.0-windows/Counter.dll --compare --themed --report artifacts/themed-profile-2026-09-25/current.json ",
+        "sampledMilliseconds": 18525.619
+      },
+      {
+        "frame": "(Non-Activities)",
+        "sampledMilliseconds": 18525.619
+      },
+      {
+        "frame": "Threads",
+        "sampledMilliseconds": 18525.619
+      },
+      {
+        "frame": "Thread (19712)",
+        "sampledMilliseconds": 18525.619
+      },
+      {
+        "frame": "CPU_TIME",
+        "sampledMilliseconds": 17589.95
+      },
+      {
+        "frame": "Counter!Program.Main(class System.String[])",
+        "sampledMilliseconds": 9970.599
+      },
+      {
+        "frame": "Counter!StressLab.StressRunner.Compare(class System.String[])",
+        "sampledMilliseconds": 9945.409
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.DependencyObject.UpdateEffectiveValue(value class System.Windows.EntryIndex,class System.Windows.DependencyProperty,class System.Windows.PropertyMetadata,value class System.Windows.EffectiveValueEntry,value class System.Windows.EffectiveValueEntry&,bool,bool,value class System.Windows.OperationType)",
+        "sampledMilliseconds": 8531.304
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.ViewHost.Refresh()",
+        "sampledMilliseconds": 7397.812
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.ViewHost.Patch(class UI_Framework.Wpf.Node,class UI_Framework.View,class UI_Framework.Wpf.NodeSnapshot)",
+        "sampledMilliseconds": 7272.741
+      },
+      {
+        "frame": "?!?",
+        "sampledMilliseconds": 7238.259
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.MeasureCore(value class System.Windows.Size)",
+        "sampledMilliseconds": 7188.816
+      },
+      {
+        "frame": "PresentationCore.il!System.Windows.UIElement.Measure(value class System.Windows.Size)",
+        "sampledMilliseconds": 7188.816
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.Border.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 7164.869
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.Control.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 7104.928
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.StackPanel.StackMeasureHelper(class System.Windows.Controls.IStackMeasure,class System.Windows.Controls.IStackMeasureScrollData,value class System.Windows.Size)",
+        "sampledMilliseconds": 7081.542
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.StackPanel.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 7081.542
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.ScrollViewer.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 6655.649
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.Grid.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 6618.799
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.Grid.MeasureCellsGroup(int32,value class System.Windows.Size,bool,bool,bool&)",
+        "sampledMilliseconds": 6618.799
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.Grid.MeasureCell(int32,bool)",
+        "sampledMilliseconds": 6618.799
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.ScrollContentPresenter.MeasureOverride(value class System.Windows.Size)",
+        "sampledMilliseconds": 6595.793
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.TreeWalkHelper.OnAncestorChanged(class System.Windows.DependencyObject,value class System.Windows.TreeChangeInfo,bool)",
+        "sampledMilliseconds": 6202.884
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.DescendentsWalker`1[System.Windows.TreeChangeInfo].IterateChildren(class System.Windows.DependencyObject)",
+        "sampledMilliseconds": 6162.747
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.DescendentsWalker`1[System.Windows.TreeChangeInfo].WalkFrameworkElementLogicalThenVisualChildren(class System.Windows.FrameworkElement,bool)",
+        "sampledMilliseconds": 6162.747
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.ExceptionWrapper.InternalRealCall(class System.Delegate,class System.Object,int32)",
+        "sampledMilliseconds": 6120.931
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.ExceptionWrapper.TryCatchWhen(class System.Object,class System.Delegate,class System.Object,int32,class System.Delegate)",
+        "sampledMilliseconds": 6109.057
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.PushFrameImpl(class System.Windows.Threading.DispatcherFrame)",
+        "sampledMilliseconds": 6088.801
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.InvokeImpl(class System.Windows.Threading.DispatcherOperation,value class System.Threading.CancellationToken,value class System.TimeSpan)",
+        "sampledMilliseconds": 6074.749
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.DispatcherOperation.Wait(value class System.TimeSpan)",
+        "sampledMilliseconds": 6074.749
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.Invoke(class System.Action,value class System.Windows.Threading.DispatcherPriority)",
+        "sampledMilliseconds": 6056.849
+      },
+      {
+        "frame": "Counter!StressLab.StressRunner.Flush()",
+        "sampledMilliseconds": 6052.892
+      },
+      {
+        "frame": "WindowsBase.il!MS.Win32.HwndSubclass.SubclassWndProc(int,int32,int,int)",
+        "sampledMilliseconds": 6028.99
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+        "sampledMilliseconds": 6010.456
+      },
+      {
+        "frame": "WindowsBase.il!MS.Win32.HwndWrapper.WndProc(int,int32,int,int,bool&)",
+        "sampledMilliseconds": 6006.334
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.DispatcherOperation.InvokeImpl()",
+        "sampledMilliseconds": 5915.147
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.DispatcherOperation.Invoke()",
+        "sampledMilliseconds": 5914.665
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Threading.ExecutionContext.RunInternal(class System.Threading.ExecutionContext,class System.Threading.ContextCallback,class System.Object)",
+        "sampledMilliseconds": 5895.182
+      },
+      {
+        "frame": "WindowsBase.il!MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(class System.Object)",
+        "sampledMilliseconds": 5895.182
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.DependencyObject.EvaluateEffectiveValue(value class System.Windows.EntryIndex,class System.Windows.DependencyProperty,class System.Windows.PropertyMetadata,value class System.Windows.EffectiveValueEntry,value class System.Windows.EffectiveValueEntry,value class System.Windows.OperationType)",
+        "sampledMilliseconds": 5744.978
+      }
+    ],
+    "exclusive": [
+      {
+        "frame": "CPU_TIME",
+        "sampledMilliseconds": 17589.95
+      },
+      {
+        "frame": "UNMANAGED_CODE_TIME",
+        "sampledMilliseconds": 935.645
+      },
+      {
+        "frame": "Thread (19712)",
+        "sampledMilliseconds": 0.016
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.ViewHost.Patch(class UI_Framework.Wpf.Node,class UI_Framework.View,class UI_Framework.Wpf.NodeSnapshot)",
+        "sampledMilliseconds": 0.003
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.ViewHost.Refresh()",
+        "sampledMilliseconds": 0.002
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.PushFrameImpl(class System.Windows.Threading.DispatcherFrame)",
+        "sampledMilliseconds": 0.001
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.Node..ctor(class UI_Framework.View,class UI_Framework.Wpf.NodeSnapshot)",
+        "sampledMilliseconds": 0.001
+      },
+      {
+        "frame": "Counter!StressLab.StressRunner.Compare(class System.String[])",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.ViewHost.Dispose()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.MeasureCore(value class System.Windows.Size)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.DescendentsWalker`1[System.Windows.TreeChangeInfo].WalkFrameworkElementLogicalThenVisualChildren(class System.Windows.FrameworkElement,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "UI Framework.Wpf!UI_Framework.Wpf.Node.<Dispose>g__Cleanup|15_0(class System.Action,value class <>c__DisplayClass15_0&)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.DispatcherOperation.Invoke()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.TreeWalkHelper.InvalidateStyleAndReferences(class System.Windows.DependencyObject,value class System.Windows.ResourcesChangeInfo,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationCore.il!System.Windows.ContextLayoutManager.UpdateLayout()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationCore.il!System.Windows.UIElement.Measure(value class System.Windows.Size)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.DependencyObject.NotifyPropertyChange(value class System.Windows.DependencyPropertyChangedEventArgs)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.OnPropertyChanged(value class System.Windows.DependencyPropertyChangedEventArgs)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!MS.Internal.FrameworkObject.ChangeLogicalParent(class System.Windows.DependencyObject)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.DependencyObject.UpdateEffectiveValue(value class System.Windows.EntryIndex,class System.Windows.DependencyProperty,class System.Windows.PropertyMetadata,value class System.Windows.EffectiveValueEntry,value class System.Windows.EffectiveValueEntry&,bool,bool,value class System.Windows.OperationType)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.ArrangeCore(value class System.Windows.Rect)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.TreeWalkHelper.OnResourcesChanged(class System.Windows.DependencyObject,value class System.Windows.ResourcesChangeInfo,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!MS.Internal.PrePostDescendentsWalker`1[System.Windows.TreeChangeInfo]._VisitNode(class System.Windows.DependencyObject,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.ChangeLogicalParent(class System.Windows.DependencyObject)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationCore.il!System.Windows.UIElement.Arrange(value class System.Windows.Rect)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.UIElementCollection.Remove(class System.Windows.UIElement)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.StyleHelper.DoTemplateInvalidations(class System.Windows.FrameworkElement,class System.Windows.FrameworkTemplate)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.StyleHelper.GetChildValueHelper(class System.Windows.UncommonField`1<class System.Collections.Specialized.HybridDictionary[]>,value class MS.Utility.ItemStructList`1<value class System.Windows.ChildValueLookup>&,class System.Windows.DependencyProperty,class System.Windows.DependencyObject,value class MS.Internal.FrameworkObject,int32,bool,value class System.Windows.EffectiveValueEntry&,value class System.Windows.ValueLookupType&,class System.Windows.FrameworkElementFactory)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationCore.il!MS.Internal.DpiUtil+ProcessDpiAwarenessHelper.GetProcessDpiAwarenessFromWindow(int)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.ExceptionWrapper.InternalRealCall(class System.Delegate,class System.Object,int32)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!MS.Win32.HwndSubclass.SubclassWndProc(int,int32,int,int)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.TextBox.OnPropertyChanged(value class System.Windows.DependencyPropertyChangedEventArgs)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElement.FindResourceInternal(class System.Windows.FrameworkElement,class System.Windows.FrameworkContentElement,class System.Windows.DependencyProperty,class System.Object,class System.Object,bool,bool,class System.Windows.DependencyObject,bool,class System.Object&)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.TreeWalkHelper.OnAncestorChanged(class System.Windows.DependencyObject,value class System.Windows.TreeChangeInfo,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.BaseCompatibilityPreferences..cctor()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.FrameworkElementFactory.InstantiateTree(class System.Windows.UncommonField`1<class System.Collections.Specialized.HybridDictionary[]>,class System.Windows.DependencyObject,class System.Windows.DependencyObject,class System.Collections.Generic.List`1<class System.Windows.DependencyObject>,class System.Collections.Generic.List`1<class System.Windows.DependencyObject>&,value class MS.Utility.FrugalStructList`1<value class System.Windows.ChildPropertyDependent>&)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.SystemResources.get_ProcessDpiAwarenessContextValue()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Controls.ScrollViewer.OnLayoutUpdated(class System.Object,class System.EventArgs)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Xaml.il!System.Xaml.XamlObjectWriter.WriteEndMember()",
+        "sampledMilliseconds": 0.0
+      }
+    ]
+  },
+  {
+    "thread": "Thread (49428)",
+    "inclusive": [
+      {
+        "frame": "Process64 dotnet (65620) Args:  artifacts/performance/toggle-retained-layout-2026-09-25/baseline-source/samples/Counter/bin/Release/net10.0-windows/Counter.dll --compare --themed --report artifacts/themed-profile-2026-09-25/current.json ",
+        "sampledMilliseconds": 16720.92
+      },
+      {
+        "frame": "(Non-Activities)",
+        "sampledMilliseconds": 16720.92
+      },
+      {
+        "frame": "Threads",
+        "sampledMilliseconds": 16720.92
+      },
+      {
+        "frame": "Thread (49428)",
+        "sampledMilliseconds": 16720.92
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+        "sampledMilliseconds": 16720.92
+      },
+      {
+        "frame": "CPU_TIME",
+        "sampledMilliseconds": 16676.997
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Gen2GcCallback.Finalize()",
+        "sampledMilliseconds": 7388.092
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Buffers.SharedArrayPool`1[System.Boolean].Trim()",
+        "sampledMilliseconds": 7388.092
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+        "sampledMilliseconds": 106.71
+      },
+      {
+        "frame": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+        "sampledMilliseconds": 104.661
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+        "sampledMilliseconds": 94.76
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.RemoveImpl(class System.Delegate)",
+        "sampledMilliseconds": 94.646
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.AppDomain.remove_DomainUnload(class System.EventHandler)",
+        "sampledMilliseconds": 59.23
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.DeleteFromInvocationList(class System.Object[],int32,int32,int32)",
+        "sampledMilliseconds": 45.984
+      },
+      {
+        "frame": "UNMANAGED_CODE_TIME",
+        "sampledMilliseconds": 43.923
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.remove_ShutdownFinished(class System.EventHandler)",
+        "sampledMilliseconds": 35.415
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.RuntimeTypeHandle.<InternalAllocNoChecks>g__InternalAllocNoChecksWorker|37_0(value class System.Runtime.CompilerServices.MethodTable*)",
+        "sampledMilliseconds": 35.218
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Delegate.Equals(class System.Object)",
+        "sampledMilliseconds": 8.104
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.Equals(class System.Object)",
+        "sampledMilliseconds": 7.565
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.ChkCastClass(void*,class System.Object)",
+        "sampledMilliseconds": 4.11
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.IsInstanceOfClass(void*,class System.Object)",
+        "sampledMilliseconds": 2.1
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextStore.OnDetach(bool)",
+        "sampledMilliseconds": 2.049
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextServicesHost.UnregisterTextStore(class System.Windows.Documents.TextStore,bool)",
+        "sampledMilliseconds": 2.049
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.BeginInvoke(value class System.Windows.Threading.DispatcherPriority,class System.Delegate,class System.Object)",
+        "sampledMilliseconds": 2.049
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.InvokeAsyncImpl(class System.Windows.Threading.DispatcherOperation,value class System.Threading.CancellationToken)",
+        "sampledMilliseconds": 2.049
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+        "sampledMilliseconds": 2.049
+      }
+    ],
+    "exclusive": [
+      {
+        "frame": "CPU_TIME",
+        "sampledMilliseconds": 16676.997
+      },
+      {
+        "frame": "UNMANAGED_CODE_TIME",
+        "sampledMilliseconds": 43.923
+      },
+      {
+        "frame": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.RemoveImpl(class System.Delegate)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.DeleteFromInvocationList(class System.Object[],int32,int32,int32)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "Process64 dotnet (65620) Args:  artifacts/performance/toggle-retained-layout-2026-09-25/baseline-source/samples/Counter/bin/Release/net10.0-windows/Counter.dll --compare --themed --report artifacts/themed-profile-2026-09-25/current.json ",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "(Non-Activities)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "Threads",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "Thread (49428)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Gen2GcCallback.Finalize()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Buffers.SharedArrayPool`1[System.Boolean].Trim()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.remove_ShutdownFinished(class System.EventHandler)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.AppDomain.remove_DomainUnload(class System.EventHandler)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.RuntimeTypeHandle.<InternalAllocNoChecks>g__InternalAllocNoChecksWorker|37_0(value class System.Runtime.CompilerServices.MethodTable*)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextStore.OnDetach(bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "PresentationFramework.il!System.Windows.Documents.TextServicesHost.UnregisterTextStore(class System.Windows.Documents.TextStore,bool)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.BeginInvoke(value class System.Windows.Threading.DispatcherPriority,class System.Delegate,class System.Object)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "WindowsBase.il!System.Windows.Threading.Dispatcher.InvokeAsyncImpl(class System.Windows.Threading.DispatcherOperation,value class System.Threading.CancellationToken)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Delegate.Equals(class System.Object)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.ChkCastClass(void*,class System.Object)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.MulticastDelegate.Equals(class System.Object)",
+        "sampledMilliseconds": 0.0
+      },
+      {
+        "frame": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.IsInstanceOfClass(void*,class System.Object)",
+        "sampledMilliseconds": 0.0
+      }
+    ]
+  }
+]

@@ -21,6 +21,10 @@ add `-ExperimentalComCleanup -IncludeLayoutEditors -ReportOnly`. This explicit
 opt-in applies the same experimental policy to both editor revisions, retains all
 other scenarios and budgets, and marks its summary ineligible for release. It is
 not enabled in either CI workflow and cannot clear the ordinary editor gate.
+The summary's `releaseEligible` field is false for experimental cleanup, omitted
+editor scenarios, fewer than seven samples, a nonaccepted reference revision, or
+any exceeded metric budget. It describes performance evidence only; correctness
+and package checks are still required separately.
 
 The runner builds the accepted source revision in an isolated archive and the current working tree in Release mode. Both use the current Counter sample workload. It alternates baseline and candidate processes, discards one warmup process per side and scenario, and records seven measured processes per side by default. Keep the machine otherwise idle during measurement. The default increased from three on September 20 after broad timing ranges produced inconsistent failures; budgets, workloads and the accepted source revision are unchanged. CI and release workflows inherit the larger sample count. A failed run still fails immediately after analysis; there is no automatic retry-until-pass behavior.
 

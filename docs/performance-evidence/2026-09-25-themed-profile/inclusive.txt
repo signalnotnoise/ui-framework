@@ -1,0 +1,26 @@
+Top 25 Functions (Inclusive)                                                  Inclusive           Exclusive           
+1.  (Non-Activities)                                                          100%                0%                  
+2.  Threads                                                                   100%                0%                  
+3.  GC.RunFinalizers()                                                        47.44%              26.17%              
+4.  Counter!Program.Main(class System.String[])                               28.29%              0.01%               
+5.  StressRunner.Compare(class System.String[])                               28.22%              0%                  
+6.  DependencyObject.UpdateEffectiveValue(value class System.Windows.Entry    24.2%               0.02%               
+7.  ViewHost.Refresh()                                                        20.99%              0.06%               
+8.  Gen2GcCallback.Finalize()                                                 20.96%              0%                  
+9.  Boolean].Trim()                                                           20.96%              20.96%              
+10. ViewHost.Patch(class UI_Framework.Wpf.Node,class UI_Framework.View,cla    20.63%              0.02%               
+11. Missing Symbol                                                            20.53%              0.18%               
+12. FrameworkElement.MeasureCore(value class System.Windows.Size)             20.39%              0%                  
+13. UIElement.Measure(value class System.Windows.Size)                        20.39%              0.01%               
+14. Border.MeasureOverride(value class System.Windows.Size)                   20.33%              0%                  
+15. Control.MeasureOverride(value class System.Windows.Size)                  20.16%              0%                  
+16. StackPanel.MeasureOverride(value class System.Windows.Size)               20.09%              0%                  
+17. StackPanel.StackMeasureHelper(class System.Windows.Controls.IStackMeas    20.09%              0%                  
+18. ScrollViewer.MeasureOverride(value class System.Windows.Size)             18.88%              0%                  
+19. Grid.MeasureCell(int32,bool)                                              18.78%              0%                  
+20. Grid.MeasureOverride(value class System.Windows.Size)                     18.78%              0%                  
+21. Grid.MeasureCellsGroup(int32,value class System.Windows.Size,bool,bool    18.78%              0%                  
+22. ScrollContentPresenter.MeasureOverride(value class System.Windows.Size    18.71%              0%                  
+23. TreeWalkHelper.OnAncestorChanged(class System.Windows.DependencyObject    17.6%               0%                  
+24. TreeChangeInfo].IterateChildren(class System.Windows.DependencyObject)    17.48%              0%                  
+25. TreeChangeInfo].WalkFrameworkElementLogicalThenVisualChildren(class Sy    17.48%              0.02%               

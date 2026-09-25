@@ -154,10 +154,12 @@
       "id": "host",
       "label": "WPF view host",
       "status": "implemented",
-      "summary": "Owns one render session and reconciles descriptions with retained controls. Unchanged sibling order patches directly; structural changes use keyed reconciliation.",
+      "summary": "Owns one render session and reconciles descriptions with retained controls. Unchanged sibling order patches directly; keyed reconciliation moves a forward-displaced child once when its desired successor is adjacent, avoiding unnecessary detachments of intervening themed/native subtrees.",
       "sources": [
         "UI Framework.Wpf/ViewHost.cs",
-        "UI Framework.Wpf/Rendering/Node.cs"
+        "UI Framework.Wpf/Rendering/Node.cs",
+        "tests/UI Framework.Checks/PanelReorderTests.cs",
+        "docs/themed-reconciliation-2026-09-25.md"
       ]
     },
     {
