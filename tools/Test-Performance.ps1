@@ -4,12 +4,14 @@ param(
     [ValidateRange(3, 15)][int]$Samples = 7,
     [string]$OutputDirectory,
     [switch]$ReportOnly,
-    [switch]$IncludeLayoutEditors
+    [switch]$IncludeLayoutEditors,
+    [string]$DumpToolPath
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectRoot
 try {
+    if ($DumpToolPath) { $DumpToolPath = (Resolve-Path -LiteralPath $DumpToolPath -ErrorAction Stop).Path }
     $budget = Get-Content tools/performance-baseline.json -Raw | ConvertFrom-Json
     if (-not $BaselineRef) { $BaselineRef = $budget.revision }
     $baselineCommit = (& git rev-parse --verify "$BaselineRef^{commit}").Trim()
@@ -93,7 +95,16 @@ try {
                             baselineRevision = $baselineCommit; report = $report; log = $log
                         }
                         $failure | ConvertTo-Json | Set-Content (Join-Path $output 'failure.json')
-                        $process.Kill($true); $process.WaitForExit()
+                        try {
+                            if ($DumpToolPath) {
+                                Write-Output "Benchmark timed out; capturing diagnostics before termination."
+                                $failure.dump = & (Join-Path $PSScriptRoot 'Save-BenchmarkDump.ps1') -ProcessId $process.Id -DumpToolPath $DumpToolPath -OutputPath (Join-Path $output "$scenario-$iteration-$side.dmp")
+                                $failure | ConvertTo-Json -Depth 4 | Set-Content (Join-Path $output 'failure.json')
+                            }
+                        } finally {
+                            if (-not $process.HasExited) { $process.Kill($true) }
+                            $process.WaitForExit()
+                        }
                     }
                     ($stdout.GetAwaiter().GetResult() + $stderr.GetAwaiter().GetResult()) | Set-Content -LiteralPath $log
                     if (-not $completed) { throw "Benchmark exceeded 120 seconds: $scenario / $iteration / $side. See $log" }

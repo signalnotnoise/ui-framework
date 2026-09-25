@@ -48,9 +48,11 @@ jobs:
       - name: Pack and verify fresh WPF installation
         shell: pwsh
         run: ./tools/Test-Packages.ps1 -NoBuild
+      - name: Install pinned dump collector
+        run: dotnet tool install dotnet-dump --version 10.0.745401 --tool-path artifacts/diagnostic-tools
       - name: Check performance before publishing
         shell: pwsh
-        run: ./tools/Test-Performance.ps1 -IncludeLayoutEditors -OutputDirectory artifacts/performance/release
+        run: ./tools/Test-Performance.ps1 -IncludeLayoutEditors -DumpToolPath artifacts/diagnostic-tools/dotnet-dump.exe -OutputDirectory artifacts/performance/release
       - name: Save performance evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -60,6 +62,7 @@ jobs:
             artifacts/performance/release/*.json
             artifacts/performance/release/*.md
             artifacts/performance/release/*.log
+            artifacts/performance/release/*.dmp
           if-no-files-found: warn
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:

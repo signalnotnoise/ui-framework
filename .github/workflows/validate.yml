@@ -21,9 +21,11 @@ jobs:
       - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           dotnet-version: '10.0.x'
+      - name: Install pinned dump collector
+        run: dotnet tool install dotnet-dump --version 10.0.745401 --tool-path artifacts/diagnostic-tools
       - name: Measure against accepted baseline
         shell: pwsh
-        run: ./tools/Test-Performance.ps1 -IncludeLayoutEditors -OutputDirectory artifacts/performance/ci
+        run: ./tools/Test-Performance.ps1 -IncludeLayoutEditors -DumpToolPath artifacts/diagnostic-tools/dotnet-dump.exe -OutputDirectory artifacts/performance/ci
       - name: Save performance evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -33,6 +35,7 @@ jobs:
             artifacts/performance/ci/*.json
             artifacts/performance/ci/*.md
             artifacts/performance/ci/*.log
+            artifacts/performance/ci/*.dmp
           if-no-files-found: warn
       - name: Show comparison
         if: always()
