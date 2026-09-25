@@ -1,0 +1,54 @@
+{
+  "diagnosticOnly": true,
+  "runtimeChange": false,
+  "releaseGatePassed": false,
+  "rows": 1000,
+  "updates": 50,
+  "textReplacements": 10000,
+  "repetitionsPerMode": 2,
+  "order": "normal, cleanup-before, controlled-cleanup; reverse on second repetition",
+  "results": [
+    {
+      "run": "1-cleanup-before",
+      "mode": "cleanup-before",
+      "updateMilliseconds": 24763.3862,
+      "updateAllocatedBytes": 819506608,
+      "finalStepMilliseconds": 10010.2374
+    },
+    {
+      "run": "1-controlled-cleanup",
+      "mode": "controlled-cleanup",
+      "updateMilliseconds": 14589.3797,
+      "updateAllocatedBytes": 819445408,
+      "finalStepMilliseconds": 447.2446
+    },
+    {
+      "run": "1-normal",
+      "mode": "normal",
+      "updateMilliseconds": 27554.2177,
+      "updateAllocatedBytes": 819464312,
+      "finalStepMilliseconds": 12351.4695
+    },
+    {
+      "run": "2-cleanup-before",
+      "mode": "cleanup-before",
+      "updateMilliseconds": 22568.6514,
+      "updateAllocatedBytes": 819423048,
+      "finalStepMilliseconds": 9130.7107
+    },
+    {
+      "run": "2-controlled-cleanup",
+      "mode": "controlled-cleanup",
+      "updateMilliseconds": 13640.9481,
+      "updateAllocatedBytes": 819422104,
+      "finalStepMilliseconds": 465.9113
+    },
+    {
+      "run": "2-normal",
+      "mode": "normal",
+      "updateMilliseconds": 26150.244,
+      "updateAllocatedBytes": 819502824,
+      "finalStepMilliseconds": 11751.2184
+    }
+  ]
+}

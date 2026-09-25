@@ -1,0 +1,55 @@
+Loading core dump: C:\Users\iotero\source\repos\Lab-Feedback-WPF\TestResults\performance-comparison\layout-editors-6-baseline.dmp ...
+Name:        System.Windows.Threading.Dispatcher
+MethodTable: 00007ff9aab96848
+Size:        232(0xe8) bytes
+File:        C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\10.0.12\WindowsBase.dll
+Fields:
+              MT    Field   Offset                 Type   VT     Attr            Value Name
+00007ff9aaaed968 04000fd8        8  System.EventHandler   No instance 0000000000000000 ShutdownStarted
+00007ff9aaaed968 04000fd9       10  System.EventHandler   No instance 0000022e0bf4d6d8 ShutdownFinished
+0000000000000000 04000fda       18 ...ptionEventHandler   No instance 0000000000000000 UnhandledException
+00007ff9aa7922f8 04000fe5       20 ....Threading.Thread   No instance 0000022e08c46e58 _dispatcherThread
+00007ff9aa767520 04000fe6       c8         System.Int32  Yes instance                1 _frameDepth
+00007ff9aa763110 04000fe7       d8       System.Boolean  Yes instance                0 _exitAllFrames
+00007ff9aa763110 04000fe8       d9       System.Boolean  Yes instance                0 _startingShutdown
+00007ff9aa763110 04000fe9       da       System.Boolean  Yes instance                0 _hasShutdownStarted
+00007ff9aac5e118 04000fea       28 ...gExecutionContext   No instance 0000000000000000 _shutdownExecutionContext
+00007ff9aa767520 04000feb       cc         System.Int32  Yes instance                1 _disableProcessingCount
+00007ff9aab9b6f8 04000fef       30 ...geOnlyHwndWrapper   No instance 0000022e08c471f0 _window
+00007ff9aab9b258 04000ff0       38 ...2.HwndWrapperHook   No instance 0000022e08c4bf80 _hook
+00007ff9aa767520 04000ff1       d0         System.Int32  Yes instance                2 _postedProcessingType
+00007ff9aab9bdd8 04000ff5       40 ...xceptionEventArgs   No instance 0000022e08c47178 _unhandledExceptionEventArgs
+0000000000000000 04000ff6       48 ...ilterEventHandler   No instance 0000000000000000 _unhandledExceptionFilter
+00007ff9aab9bf38 04000ff7       50 ...onFilterEventArgs   No instance 0000022e08c471a0 _exceptionFilterEventArgs
+00007ff9aa694738 04000ff8       58        System.Object   No instance 0000022e09229ac8 _reserved0
+00007ff9aa694738 04000ff9       60        System.Object   No instance 0000022e09266f60 _reserved1
+00007ff9aa694738 04000ffa       68        System.Object   No instance 0000022e0922b9d8 _reserved2
+00007ff9aa694738 04000ffb       70        System.Object   No instance 0000022e08c67340 _reserved3
+00007ff9aa694738 04000ffc       78        System.Object   No instance 0000000000000000 _reserved4
+00007ff9aa694738 04000ffd       80        System.Object   No instance 0000000000000000 _reservedPtsCache
+00007ff9aa694738 04000ffe       88        System.Object   No instance 0000022e08d40530 _reservedInputMethod
+00007ff9aa694738 04000fff       90        System.Object   No instance 0000022e08c66720 _reservedInputManager
+00007ff9aab9bad8 04001000       98 ...ronizationContext   No instance 0000022e08c471c8 _defaultDispatcherSynchronizationContext
+00007ff9aa694738 04001001       a0        System.Object   No instance 0000022e08c46f88 _instanceLock
+00007ff9aab9caf0 04001002       a8 ...on, WindowsBase]]   No instance 0000022e08c46fd8 _queue
+00007ff9aab9cf50 04001003       b0 ...er, WindowsBase]]   No instance 0000022e08c46fa0 _timers
+00007ff9aa7794e8 04001004       c0         System.Int64  Yes instance                0 _timersVersion
+00007ff9aa763110 04001005       db       System.Boolean  Yes instance                0 _dueTimeFound
+00007ff9aa767520 04001006       d4         System.Int32  Yes instance                0 _dueTimeInTicks
+00007ff9aa763110 04001007       dc       System.Boolean  Yes instance                0 _isWin32TimerSet
+00007ff9aa763110 04001008       dd       System.Boolean  Yes instance                0 _hasShutdownFinished
+00007ff9aa763110 04001009       de       System.Boolean  Yes instance                0 _isTSFMessagePumpEnabled
+00007ff9aa763110 0400100a       df       System.Boolean  Yes instance                0 _hasRequestProcessingFailed
+00007ff9ab226e68 0400100b       b8 ...g.DispatcherHooks   No instance 0000000000000000 _hooks
+00007ff9aab96e10 04000fe1       20 ...Private.CoreLib]]   No   static 0000022e08c46d60 _dispatchers
+00007ff9aa792568 04000fe2       28 System.WeakReference   No   static 0000022e08c474b0 _possibleDispatcher
+00007ff9aa694738 04000fe3       30        System.Object   No   static 0000022e08c46d48 _globalLock
+00007ff9aab96770 04000fec        8 ...ing.PriorityRange  Yes   static 0000022e06c01470 _foregroundPriorityRange
+00007ff9aab96770 04000fed       10 ...ing.PriorityRange  Yes   static 0000022e06c01478 _backgroundPriorityRange
+00007ff9aab96770 04000fee       18 ...ing.PriorityRange  Yes   static 0000022e06c01480 _idlePriorityRange
+00007ff9aaaeabc0 04000ff2        8         System.Int32  Yes   static            49462 _msgProcessQueue
+00007ff9aab96aa0 04000ff3       38 ....ExceptionWrapper   No   static 0000022e08c46d98 _exceptionWrapper
+00007ff9aa694738 04000ff4       40        System.Object   No   static 0000022e08c46d30 ExceptionDataKey
+00007ff9aab96848 04000fe4       10 ...eading.Dispatcher   No TLstatic  _tlsDispatcher
+    Thread static values (Thread:Value)
+        1fc0:0000022e08c46ea0

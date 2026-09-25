@@ -1,0 +1,315 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+   EnableRedirectToChakraJsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.032 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 0
+
+Microsoft (R) Windows Debugger Version 10.0.29547.1002 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\iotero\source\repos\Lab-Feedback-WPF\TestResults\performance-comparison\layout-editors-6-baseline.dmp]
+User Mini Dump File with Full Memory : Only application data is available
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is:
+Windows 10 Version 26100 MP (4 procs) Free x64
+Product: Server, suite: TerminalServer DataCenter SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Debug session time: Fri Sep 25 04:58:52.000 2026 (UTC - 4:00)
+System Uptime: 0 days 0:25:52.862
+Process Uptime: 0 days 0:02:02.000
+................................................................
+................................
+Loading unloaded module list
+..
+The call to LoadLibrary(sos) failed, Win32 error 0n2
+    "The system cannot find the file specified."
+Please check your debugger configuration and/or network access.
+Extension DLL search Path:
+You may also consider deploying your extension to the UserExtensions extension gallery repository
+located at %LOCALAPPDATA%\dbg\UserExtensions folder. It would require an extension manifest.
+Error: Failed to load extension sos
+Unable to add extension DLL: ntsdexts
+Unable to add extension DLL: uext
+Unable to add extension DLL: exts
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+For analysis of this file, run !analyze -v
+ntdll!NtWaitForMultipleObjects+0x14:
+00007ffa`1fb033a4 c3              ret
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+000000bb`01d7b528 00007ffa`1cb3de73     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!NtWaitForMultipleObjects+0x14
+000000bb`01d7b530 00007ff9`ab486e03     : 00004408`191717c3 00007ffa`0a3d1e5a 00000000`00000000 00000000`00000001 : KERNELBASE!WaitForMultipleObjectsEx+0x123
+000000bb`01d7b820 00007ff9`ab69448c     : 000000bb`01d7ba48 000000bb`01d7bbf8 00000000`00000000 00000236`18dadc10 : DirectWriteForwarder!ILStubClass.IL_STUB_PInvoke(Int32, IntPtr[], Boolean, Int32, Boolean)+0xb3
+000000bb`01d7b8e0 00007ffa`0a3f3cf3     : 0000022e`0d6d0528 0000022e`0e5d5758 000000bb`00000000 000000bb`00000001 : System_Private_CoreLib!System.Threading.SynchronizationContext.InvokeWaitMethodHelper(System.Threading.SynchronizationContext, IntPtr[], Boolean, Int32)+0xffffffff`cd1900ac
+000000bb`01d7b920 00007ffa`0a2b2538     : 000000bb`00000008 00000000`00000000 000000bb`01d7bbb8 00000000`00000000 : coreclr!CallDescrWorkerInternal+0x83
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!CallDescrWorkerWithHandler+0x5b (Inline Function @ 00007ffa`0a2b2538)
+000000bb`01d7b960 00007ffa`0a4086c5     : 0000022e`0e5d5758 000000bb`00000001 00000000`00000001 00000000`00000000 : coreclr!MethodDescCallSite::CallTargetWorker+0x414
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!MethodDescCallSite::Call_RetI4+0x5b (Inline Function @ 00007ffa`0a4086c5)
+000000bb`01d7bb00 00007ffa`0a407d69     : 00000000`00000001 00000000`00000020 00000000`00000000 0000022e`04cf5040 : coreclr!Thread::DoSyncContextWait+0xc5
+000000bb`01d7bc50 00007ffa`0a407b53     : 0000022e`04d7eb80 0000022e`00000001 00000000`00000000 00007ffa`00000000 : coreclr!Thread::DoAppropriateWaitWorker+0x119
+000000bb`01d7bd20 00007ffa`0a408ac5     : 00000000`00000000 00000000`00000001 00000000`00000000 00007ffa`0a2b9277 : coreclr!Thread::DoAppropriateWait+0xb3
+000000bb`01d7bdc0 00007ffa`0a346c19     : 00000000`00000230 0000022e`04d7eb80 00000000`00000000 00000236`1b943520 : coreclr!Thread::JoinEx+0x75
+000000bb`01d7be10 00007ffa`0a3464d6     : 00000236`1b943528 00000000`00000000 00000000`00001b82 00000236`20db6460 : coreclr!RCWCleanupList::CleanupWrappersInCurrentCtxThread+0x171
+000000bb`01d7be70 00007ffa`0a343b6e     : 0000022e`04d7eb80 00000236`20894580 00000236`20db63a0 00000000`00000001 : coreclr!RCW::Initialize+0x13e
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!RCW::CreateRCWInternal+0x58 (Inline Function @ 00007ffa`0a343b6e)
+000000bb`01d7beb0 00007ffa`0a343dfd     : 00000000`00000000 000000bb`01d7bf70 000000bb`01d7c068 00000236`20db63a0 : coreclr!RCW::CreateRCW+0xba
+000000bb`01d7bf10 00007ffa`0a344156     : 00000000`00000000 00000000`00000000 00000000`00000009 000000bb`01d7c090 : coreclr!COMInterfaceMarshaler::CreateObjectRef+0xa1
+000000bb`01d7bfa0 00007ffa`0a346221     : 0000022e`0e5d5740 00000000`00000000 00000236`1d8ee718 00000000`00000001 : coreclr!COMInterfaceMarshaler::FindOrCreateObjectRefInternal+0x176
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!COMInterfaceMarshaler::FindOrCreateObjectRef+0xd (Inline Function @ 00007ffa`0a346221)
+000000bb`01d7c030 00007ffa`0a3e8781     : 00000236`20894580 00000236`20894580 00007ff9`ab324728 ffffffff`86323000 : coreclr!GetObjectRefFromComIP+0x161
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!UnmarshalObjectFromInterface+0x16 (Inline Function @ 00007ffa`0a3e8781)
+000000bb`01d7c0e0 00007ff9`ab119c9c     : 000000bb`01d7c350 00007ff9`ab324728 00000000`00000000 00007ffa`0db6329f : coreclr!InterfaceMarshaler_ConvertToManaged+0xb1
+000000bb`01d7c170 00007ff9`ab2a7372     : 0000022e`0e5d5708 000000bb`01d7c3b0 00000236`208945e0 00000236`20863230 : System_Private_CoreLib!ILStubClass.IL_STUB_PInvoke(IntPtr*, IntPtr, IntPtr, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)+0x7c
+000000bb`01d7c230 00007ff9`ab6970e2     : 0000022e`0e5d5708 00000000`00000001 000000bb`01d7c400 000000bb`01d7c4f8 : DirectWriteForwarder!ILStubClass.IL_STUB_CLRtoCOM(Int32, IEnumTfRanges ByRef, ITfRange)+0x1c2
+000000bb`01d7c3c0 00007ff9`ab697010     : 0000022e`0e5d4a90 0000022e`0bf43b20 00000000`86323000 00007ff9`ab696fb0 : PresentationFramework!System.Windows.Documents.TextServicesDisplayAttributePropertyRanges.OnEndEdit(ITfContext, Int32, ITfEditRecord)+0xffffffff`cdf27062
+000000bb`01d7c460 00007ff9`ab2a6a6e     : 00000000`00000000 0000022e`04d7eb80 000000bb`01d7c4a0 00000000`00000001 : PresentationFramework!System.Windows.Documents.TextStore.MS.Win32.UnsafeNativeMethods.ITfTextEditSink.OnEndEdit(ITfContext, Int32, ITfEditRecord)+0xffffffff`cdf21ef0
+000000bb`01d7c4b0 00007ffa`0a3f3ec9     : 00000000`00000000 00000236`20863230 000000bb`01d7c538 00000236`20878310 : DirectWriteForwarder!ILStubClass.IL_STUB_COMtoCLR(IntPtr, Int32, IntPtr)+0x5e
+000000bb`01d7c570 00007ffa`0a5b6bc7     : 0000022e`04b13300 0000022e`04b102a8 00000236`20893f20 00000000`00000180 : coreclr!COMToCLRDispatchHelper+0x39
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!InvokeStub+0x1b (Inline Function @ 00007ffa`0a5b6bc7)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!COMToCLRInvokeTarget+0x64 (Inline Function @ 00007ffa`0a5b6bc7)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!COMToCLRWorkerBody+0x175 (Inline Function @ 00007ffa`0a5b6bc7)
+000000bb`01d7c5a0 00007ffa`0a3f3e2b     : 00000000`00000000 00000236`20863230 00000000`40000000 00000000`00000000 : coreclr!COMToCLRWorker+0x2b7
+000000bb`01d7c610 00007ffa`0db2481d     : 00000236`206d5110 00000236`20863230 00000000`86323000 00000236`20878310 : coreclr!GenericComCallStub+0x4b
+000000bb`01d7c690 00007ffa`0db23fd9     : 0000022e`04c80000 00000236`20863270 00000000`00000001 00000000`00000002 : textinputframework!CInputContext::_NotifyEndEdit+0x43d
+000000bb`01d7c720 00007ffa`0db0fe0a     : 00000000`00000001 00000000`00000001 00000000`00000000 00000000`00000000 : textinputframework!CInputContext::OnLockGranted+0xe9
+000000bb`01d7c7b0 00007ff9`ab11d3ab     : 00000236`20893e30 0000022e`0bf43cb8 00000236`20893f20 00000000`00000000 : textinputframework!CACPWrap::OnLockGranted+0x5a
+000000bb`01d7c810 00007ff9`ab687b26     : 0000022e`0bf43cb8 00000000`00000000 00000000`00000000 00000000`00000000 : DirectWriteForwarder!ILStubClass.IL_STUB_CLRtoCOM(LockFlags)+0xab
+000000bb`01d7c900 00007ff9`ab680449     : 0000022e`0bf43b20 0000022e`091e12b8 000000bb`01d7cae0 0000022e`0e5d5658 : PresentationFramework!System.Windows.Documents.TextStore.GrantLockWorker(LockFlags)+0xffffffff`cdf10da6
+000000bb`01d7ca00 00007ff9`ab11ce9d     : 0000022e`08d54620 000000bb`01d7cc70 0000022e`091e12b8 00000000`00000000 : PresentationFramework!System.Windows.Documents.TextStore.RequestLock(LockFlags, Int32 ByRef)+0xffffffff`cdf0f0e9
+000000bb`01d7cb40 00007ffa`0a3f3ec9     : 0000022e`091e1280 00007ff9`ab63b23c 0000022e`0e5d54c0 0000022e`091e1448 : DirectWriteForwarder!ILStubClass.IL_STUB_COMtoCLR(Int32, Int32*)+0xd
+000000bb`01d7cb80 00007ffa`0a5b6bc7     : 00000000`00000000 0000022e`091e12b8 0000022e`091e21e8 00000000`00000000 : coreclr!COMToCLRDispatchHelper+0x39
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!InvokeStub+0x1b (Inline Function @ 00007ffa`0a5b6bc7)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!COMToCLRInvokeTarget+0x64 (Inline Function @ 00007ffa`0a5b6bc7)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!COMToCLRWorkerBody+0x175 (Inline Function @ 00007ffa`0a5b6bc7)
+000000bb`01d7cbb0 00007ffa`0a3f3e2b     : 00000000`00000000 00000236`2084a5b0 000000bb`01d7cdb0 00000236`20863230 : coreclr!COMToCLRWorker+0x2b7
+000000bb`01d7cc20 00007ffa`0db698fb     : 00000236`206d51a0 00000000`00000002 000000bb`01d7ccd0 00000000`00000000 : coreclr!GenericComCallStub+0x4b
+000000bb`01d7cca0 00007ff9`ab2a6912     : 00000000`00000000 00000000`00000000 0000022e`0bf43cb8 00007ff9`ab209b58 : textinputframework!CInputContext::OnSelectionChange+0x6b
+000000bb`01d7ccd0 00007ff9`ab6941f4     : 0000022e`0bf43cb8 00000000`00000008 0000022e`0e5d52c8 00000000`00000000 : DirectWriteForwarder!ILStubClass.IL_STUB_CLRtoCOM()+0xa2
+000000bb`01d7cdc0 00007ff9`ab6809a3     : 00000001`00000000 00000009`00000001 00000001`00000000 00000001`00000004 : PresentationFramework!System.Windows.Documents.TextSelection.System.Windows.Documents.ITextRange.NotifyChanged(Boolean, Boolean)+0xffffffff`cdf28d64
+000000bb`01d7ce20 00007ff9`ab6a5bb8     : 0000022e`091e1998 0000022e`00000000 00000000`00000000 00000000`00000000 : PresentationFramework!System.Windows.Documents.TextRangeBase.EndChange(System.Windows.Documents.ITextRange, Boolean, Boolean)+0xffffffff`cdf2cce3
+000000bb`01d7ce90 00007ff9`ab69b1d5     : 0000022e`0e5d52c8 00000236`208656a0 00000000`40000000 00000000`00000000 : PresentationFramework!System.Windows.Documents.TextRange+ChangeBlock.System.IDisposable.Dispose()+0xffffffff`cdd71848
+000000bb`01d7cec0 00007ff9`ab45ab47     : 00007ff9`aaf336e0 00007ff9`ab67e05f 00000236`20849f90 00007ffa`0db0fe0a : PresentationFramework!System.Windows.Controls.TextBox.OnTextPropertyChanged(System.Windows.DependencyObject, System.Windows.DependencyPropertyChangedEventArgs)+0xffffffff`cde29a35
+000000bb`01d7d040 00007ff9`ab459205     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : PresentationFramework!System.Windows.FrameworkElement.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)+0xffffffff`cdf31657
+000000bb`01d7d300 00007ff9`ab458525     : 00000000`00000000 0000022e`091e1cb0 0000022e`08c5c848 000000bb`01d7d7a0 : WindowsBase!System.Windows.DependencyObject.NotifyPropertyChange(System.Windows.DependencyPropertyChangedEventArgs)+0xffffffff`b4a3baf5
+000000bb`01d7d430 00007ff9`ab465765     : 00000000`8000001d 00000000`80000018 0000022e`08d2da20 00000000`00000000 : WindowsBase!System.Windows.DependencyObject.UpdateEffectiveValue(System.Windows.EntryIndex, System.Windows.DependencyProperty, System.Windows.PropertyMetadata, System.Windows.EffectiveValueEntry, System.Windows.EffectiveValueEntry ByRef, Boolean, Boolean, System.Windows.OperationType)+0xffffffff`b4a3bab5
+000000bb`01d7d650 00007ff9`aa7bede0     : 0000022e`0e43e400 0000022e`04d7eb80 000000bb`01d7d8d8 00000000`00000000 : WindowsBase!System.Windows.DependencyObject.SetValueCommon(System.Windows.DependencyProperty, System.Object, System.Windows.PropertyMetadata, Boolean, Boolean, System.Windows.OperationType, Boolean)+0xffffffff`b4a49d65
+000000bb`01d7d810 00007ff9`aa7bf587     : 0000022e`091e1218 0000022e`0e5aa820 000000bb`01d7da58 000000bb`01d7daa0 : UI_Framework_Wpf!UI_Framework.Wpf.ViewHost.Patch(UI_Framework.Wpf.Node, UI_Framework.View, UI_Framework.Wpf.NodeSnapshot)+0xf60
+000000bb`01d7d990 00007ff9`aa7bf27d     : 0000022e`08d205d0 00007ff9`00000000 000000bb`01d7dbf8 0000022e`0e5aa7c0 : UI_Framework_Wpf!UI_Framework.Wpf.ViewHost.Patch(UI_Framework.Wpf.Node, UI_Framework.View, UI_Framework.Wpf.NodeSnapshot)+0x1707
+000000bb`01d7db10 00007ff9`aa7bad2e     : 0000022e`08cc3db0 00000000`00000000 00000000`00000000 00000000`00000000 : UI_Framework_Wpf!UI_Framework.Wpf.ViewHost.Patch(UI_Framework.Wpf.Node, UI_Framework.View, UI_Framework.Wpf.NodeSnapshot)+0x13fd
+000000bb`01d7dc90 00007ff9`ab11c276     : 0000022e`08c65b10 00000000`00000000 00000000`00000000 00007ff9`ab64fdb0 : UI_Framework_Wpf!UI_Framework.Wpf.ViewHost.Refresh()+0x8e
+000000bb`01d7dcd0 00007ff9`ab64a1e3     : 0000022e`08c65b10 00000000`80006011 00000000`0000c136 00007ff9`ab64fba2 : UI_Framework_Wpf!UI_Framework.Wpf.ViewHost.<Schedule>b__8_0()+0x36
+000000bb`01d7dd00 00007ff9`ab649f2e     : 00000000`00000001 0000022e`08c46ea0 0000022e`0e513b50 0000022e`0e513740 : WindowsBase!System.Windows.Threading.ExceptionWrapper.InternalRealCall(System.Delegate, System.Object, Int32)+0xffffffff`b4c1b673
+000000bb`01d7dd60 00007ff9`ab64f744     : 0000022e`08c46d98 0000022e`08c46ea0 00007ffa`0a6a7750 0000022e`04d7eb80 : WindowsBase!System.Windows.Threading.ExceptionWrapper.TryCatchWhen(System.Object, System.Delegate, System.Object, Int32, System.Delegate)+0xffffffff`b4c1b46e
+000000bb`01d7dda0 00007ff9`ab64f410     : 0000022e`0d6d0118 00000000`00000000 00007ffa`0a6a7210 ffffffff`00000000 : WindowsBase!System.Windows.Threading.DispatcherOperation.InvokeImpl()+0xffffffff`b4c1ac04
+000000bb`01d7de20 00007ff9`ab64f1b1     : 000000bb`01d7df60 00000000`0000c136 00000000`00000001 000000bb`01d7e5c8 : WindowsBase!MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(System.Object)+0xffffffff`b4c744e0
+000000bb`01d7ded0 00007ff9`ab64e8a2     : 00000000`00000007 00000000`00000002 00000000`00000007 00000000`00000002 : System_Private_CoreLib!System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)+0xffffffff`cd1417f1
+000000bb`01d7df40 00007ff9`ab64ddcd     : 0000022e`0d6d0118 00000000`00000000 00000000`00000000 00000000`00000000 : WindowsBase!System.Windows.Threading.DispatcherOperation.Invoke()+0xffffffff`b4c19f22
+000000bb`01d7dfc0 00007ff9`ab64c615     : 00000000`00000000 00000000`00000000 00000001`00000000 00000000`80006011 : WindowsBase!System.Windows.Threading.Dispatcher.ProcessQueue()+0xffffffff`b4c1c30d
+000000bb`01d7e070 00007ff9`ab64a081     : 00000000`00000000 00007ffa`0a3fe14c 00000000`00000000 00000000`0000c136 : WindowsBase!MS.Win32.HwndSubclass.DispatcherCallbackOperation(System.Object)+0xffffffff`b4c7c855
+000000bb`01d7e160 00007ff9`ab649f2e     : 0000022e`08c46d48 00000001`00000000 0000022e`08c47508 00000000`0000c136 : WindowsBase!System.Windows.Threading.ExceptionWrapper.InternalRealCall(System.Delegate, System.Object, Int32)+0xffffffff`b4c1b511
+000000bb`01d7e1c0 00007ff9`ab64b6ff     : 0000022e`08c46d98 0000022e`08c46ea0 00000000`00030000 000000bb`01d7e468 : WindowsBase!System.Windows.Threading.ExceptionWrapper.TryCatchWhen(System.Object, System.Delegate, System.Object, Int32, System.Delegate)+0xffffffff`b4c1b46e
+000000bb`01d7e200 00007ff9`aa7ac007     : 00000000`004200f2 00000000`0000c136 00000000`00000000 00000000`00000000 : WindowsBase!MS.Win32.HwndSubclass.SubclassWndProc(IntPtr, Int32, IntPtr, IntPtr)+0xffffffff`b4c7bd0f
+000000bb`01d7e340 00007ffa`1ddc7846     : 00000000`00000000 000000bb`01d7e650 00000000`00000001 00000000`00000000 : DirectWriteForwarder!ILStubClass.IL_STUB_ReversePInvoke(Int64, Int32, Int64, Int64)+0x57
+000000bb`01d7e3c0 00007ffa`1ddc539d     : 000000bb`01d7e690 00007ff9`aa749548 00000000`004200f2 00000000`00000000 : user32!UserCallWinProcCheckWow+0x356
+000000bb`01d7e520 00007ff9`aa7b804a     : 000000bb`01d7e690 000000bb`01d7e690 00007ff9`aab97db8 00000000`00000000 : user32!DispatchMessageWorker+0x1dd
+000000bb`01d7e5a0 00007ff9`f6a31eb8     : 0000022e`08c653d0 000000bb`01d7e690 00000000`0000001d 00000000`0000000d : DirectWriteForwarder!ILStubClass.IL_STUB_PInvoke(System.Windows.Interop.MSG ByRef)+0x6a
+000000bb`01d7e660 00007ff9`dd519895     : 0000022e`08c46ea0 0000022e`094f7190 0000022e`094c05c0 0000022e`04d7eb80 : WindowsBase!System.Windows.Threading.Dispatcher.PushFrameImpl(System.Windows.Threading.DispatcherFrame)+0xb8
+000000bb`01d7e6e0 00007ff9`dd518293     : 0000022e`094b9090 00000000`00000000 0000022e`094b9128 00000000`00000000 : PresentationFramework!System.Windows.Application.RunDispatcher(System.Object)+0x25
+000000bb`01d7e720 00007ff9`aa7b79bb     : 0000022e`094b9090 00000000`00000000 00000000`00000000 0000022e`04d7eb80 : PresentationFramework!System.Windows.Application.RunInternal(System.Windows.Window)+0x143
+000000bb`01d7e780 00007ff9`aa7a5a91     : 0000022e`08c41d68 0000022e`08c41760 00000000`00000010 00000000`00000004 : Counter!StressLab.LayoutEditorComparison.Run(System.Windows.Application, System.String[])+0xcb
+000000bb`01d7e7d0 00007ffa`0a3f3cf3     : 0000022e`08c41760 00000000`00000000 000000bb`00000000 00000000`00000005 : Counter!Program.Main(System.String[])+0x491
+000000bb`01d7eab0 00007ffa`0a2b2538     : 000000bb`0000001d 00000000`00000000 000000bb`01d7ed58 00000000`00000000 : coreclr!CallDescrWorkerInternal+0x83
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!CallDescrWorkerWithHandler+0x5b (Inline Function @ 00007ffa`0a2b2538)
+000000bb`01d7eaf0 00007ffa`0a31bc68     : 000000bb`01d7ee00 00000000`00000000 000000bb`01d7ee08 00007ffa`0a364d26 : coreclr!MethodDescCallSite::CallTargetWorker+0x414
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!MethodDescCallSite::Call_RetArgSlot+0xf (Inline Function @ 00007ffa`0a31bc68)
+000000bb`01d7ec90 00007ffa`0a31b542     : 0000022e`08c41760 0000022e`094a02c8 00007ffa`00000000 00007ffa`00000001 : coreclr!RunMainInternal+0x124
+000000bb`01d7edb0 00007ffa`0a31af03     : 0000022e`04d7eb80 00007ff9`00000000 00007ff9`aa96e8a8 00007ff9`aa878638 : coreclr!RunMain+0x112
+000000bb`01d7ee50 00007ffa`0a319e55     : 00000000`00000000 00000000`00000000 00000000`00000000 0000022e`04d08580 : coreclr!Assembly::ExecuteMainMethod+0x1b7
+000000bb`01d7f120 00007ffa`0a3cb3e7     : 00000000`00000001 000000bb`01d7f201 00000000`00000004 00007ffa`18b723fc : coreclr!CorHost2::ExecuteAssembly+0x235
+000000bb`01d7f230 00007ffa`18b8dd0a     : 00000236`18df9f50 00000236`18df9f60 0000022e`04ca1460 0000022e`04ca1460 : coreclr!coreclr_execute_assembly+0xd7
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : hostpolicy!coreclr_t::execute_assembly+0x29 (Inline Function @ 00007ffa`18b8dd0a)
+000000bb`01d7f2d0 00007ffa`18b8dfac     : 0000022e`04c99960 000000bb`01d7f4d9 00007ffa`18bc8160 0000022e`04c99960 : hostpolicy!run_app_for_context+0x5ea
+000000bb`01d7f400 00007ffa`18b8ef21     : 00000000`00000000 0000022e`04c99950 0000022e`04c99950 0000022e`04c99950 : hostpolicy!run_app+0x3c
+000000bb`01d7f440 00007ffa`1a2ad56b     : 00000000`00000000 00000000`00000001 00000000`00000000 000000bb`01d7f8f0 : hostpolicy!corehost_main+0x171
+000000bb`01d7f540 00007ffa`1a2b029c     : 0000022e`04ca1700 000000bb`01d7f681 00000000`00000000 00000000`00000000 : hostfxr!execute_app+0x2bb
+000000bb`01d7f5d0 00007ffa`1a2b2676     : 00007ffa`1a2e8ba8 0000022e`04c9a580 000000bb`01d7f838 000000bb`01d7f7f0 : hostfxr!`anonymous namespace'::read_config_and_execute+0xac
+000000bb`01d7f6d0 00007ffa`1a2b079d     : 000000bb`01d7f8f0 00000000`00000000 000000bb`01d7f861 00000000`00000001 : hostfxr!fx_muxer_t::handle_exec_host_command+0x1d6
+000000bb`01d7f780 00007ffa`1a2a8998     : 000000bb`01d7f910 0000022e`04c9a210 00000000`00000006 00007ff7`6c39182e : hostfxr!fx_muxer_t::execute+0x2ad
+000000bb`01d7f8b0 00007ff7`6c392a28     : 00007ffa`1d237c98 00007ffa`1a2aa2d0 7fffffff`fffffffc 00000000`00000004 : hostfxr!hostfxr_main_startupinfo+0xa8
+000000bb`01d7f9b0 00007ff7`6c392f2e     : 0000022e`04c99950 00007ff7`6c3a0660 0000022e`04c99950 00007ff7`6c39b4f5 : dotnet!exe_start+0x928
+000000bb`01d7fb80 00007ff7`6c39b238     : 00000000`00000000 00000000`00000000 0000022e`04c99950 00000000`00000000 : dotnet!wmain+0x12e
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : dotnet!invoke_main+0x22 (Inline Function @ 00007ff7`6c39b238)
+000000bb`01d7fc00 00007ffa`1ebbe8d7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : dotnet!__scrt_common_main_seh+0x10c
+000000bb`01d7fc40 00007ffa`1fa2c53c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : kernel32!BaseThreadInitThunk+0x17
+000000bb`01d7fc70 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+ntdll!NtWaitForMultipleObjects+0x14:
+00007ffa`1fb033a4 c3              ret
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+000000bb`024fe538 00007ffa`1cb3de73     : 00000000`00000000 00000000`00000000 00000236`1b34a8e0 00000000`00000001 : ntdll!NtWaitForMultipleObjects+0x14
+000000bb`024fe540 00007ffa`1d7d8864     : 00000003`86a9e19b 00000000`00000000 00000236`1b581be0 00000000`00000001 : KERNELBASE!WaitForMultipleObjectsEx+0x123
+000000bb`024fe830 00007ffa`1d76675b     : 00000000`00171ba6 0000022e`04d7df90 00000000`00000110 000000bb`00000000 : combase!MTAThreadWaitForCall+0xf4
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : combase!MTAThreadDispatchCrossApartmentCall+0xc9 (Inline Function @ 00007ffa`1d76675b)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : combase!CSyncClientCall::SwitchAptAndDispatchCall+0x4c4 (Inline Function @ 00007ffa`1d76675b)
+000000bb`024fe8e0 00007ffa`1d7d65ce     : 00000000`00000000 00000000`00000000 00000236`00050001 00000236`1b34b640 : combase!CSyncClientCall::SendReceive2+0x6ab
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : combase!SyncClientCallRetryContext::SendReceiveWithRetry+0x36 (Inline Function @ 00007ffa`1d7d65ce)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : combase!CSyncClientCall::SendReceiveInRetryContext+0x36 (Inline Function @ 00007ffa`1d7d65ce)
+000000bb`024fed20 00007ffa`1d7d5214     : 0000022e`04d7df90 00000236`1b34b640 00000236`18f19a90 00000000`00000000 : combase!DefaultSendReceive+0x7e
+000000bb`024fed80 00007ffa`1d76f863     : 00007ffa`1d9f3ae8 00007ffa`1d76e657 00007ffa`1d9dd9c0 00000236`18f19518 : combase!CSyncClientCall::SendReceive+0x434
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : combase!CClientChannel::SendReceive+0x49 (Inline Function @ 00007ffa`1d76f863)
+000000bb`024feef0 00007ffa`1dbe7a91     : 00000000`00000000 00000236`00000000 00000236`1b34b640 00007ffa`1d9cacc0 : combase!NdrExtpProxySendReceive+0xb3
+000000bb`024fef40 00007ffa`1d81b6a6     : 00007ffa`1d9dd9c0 00000000`00000000 00000000`0689fb01 00000000`00000105 : rpcrt4!NdrpClientCall3+0x431
+000000bb`024ff2b0 00007ffa`1d982fe2     : 0000022e`04cf4f10 0000022e`04d7df90 000000bb`024ff8d0 000000bb`024ff749 : combase!ObjectStublessClient+0x146
+000000bb`024ff640 00007ffa`1d88ed7a     : 00000236`18f19518 000000bb`024ff6f0 00000000`00000038 00000000`00000040 : combase!ObjectStubless+0x42
+000000bb`024ff690 00007ffa`1d844d88     : 0000022e`04cf5058 00007ffa`0a2b93e2 0000022e`04d7df90 00007ff9`aa7a47ad : combase!CObjectContext::InternalContextCallback+0x1ba
+000000bb`024ff7a0 00007ffa`0a5a61d8     : 0000022e`04cf5040 00007ffa`00000000 000000bb`024ff888 0000022e`0f003230 : combase!CObjectContext::ContextCallback+0xa8
+000000bb`024ff840 00007ffa`0a5bf127     : 00000236`18e32140 00000000`00000000 00000236`1e43ba60 000000bb`024ff8e0 : coreclr!CtxEntry::EnterContext+0x168
+000000bb`024ff960 00007ffa`0a4501bc     : 00000236`1e43ba60 00007ffa`0a6a7650 00000000`00000000 00000236`1b943520 : coreclr!RCW::EnterContext+0x3f
+000000bb`024ff9a0 00007ffa`0a3eacb1     : 00000236`1b943520 00000236`1b943528 00000000`00000000 00000000`00000000 : coreclr!RCWCleanupList::ReleaseRCWListInCorrectCtx+0x654dc
+000000bb`024ff9d0 00007ffa`0a344cee     : 00000236`1b943528 00000236`20db9870 00000000`00000000 00000000`00000001 : coreclr!RCWCleanupList::CleanupAllWrappers+0x11d
+000000bb`024ffa20 00007ffa`0a33fa85     : 00007ffa`0a6a7650 0000022e`04d56df0 00000000`00000000 00000000`00000000 : coreclr!SyncBlockCache::CleanupSyncBlocks+0xf6
+000000bb`024ffa80 00007ffa`0a33f584     : 00000000`00000003 0000022e`04ca5330 00000000`00000000 00000000`00000000 : coreclr!DoExtraWorkForFinalizer+0x35
+000000bb`024ffac0 00007ffa`0a3422ce     : 0000022e`04e742b0 00000000`00000000 00000000`00000000 0000022e`04e70005 : coreclr!FinalizerThread::FinalizerThreadWorker+0x134
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!ManagedThreadBase_DispatchInner+0xd (Inline Function @ 00007ffa`0a3422ce)
+000000bb`024ffd10 00007ffa`0a3421eb     : 0000022e`04d56df0 000000bb`024ffd68 0000022e`04e74130 00000000`00000000 : coreclr!ManagedThreadBase_DispatchMiddle+0x5e
+000000bb`024ffdb0 00007ffa`0a3a6128     : 00000000`00000001 0000022e`04e742b0 00000000`00000000 00000000`00000000 : coreclr!ManagedThreadBase_DispatchOuter+0x7b
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : coreclr!ManagedThreadBase::KickOff+0x1f (Inline Function @ 00007ffa`0a3a6128)
+000000bb`024ffe20 00007ffa`1ebbe8d7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : coreclr!FinalizerThread::FinalizerThreadStart+0xc8
+000000bb`024fff20 00007ffa`1fa2c53c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : kernel32!BaseThreadInitThunk+0x17
+000000bb`024fff50 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+start             end                 module name
+0000022e`04ea0000 0000022e`04eae000   System_Runtime   (deferred)
+0000022e`04f10000 0000022e`04f18000   System_Threading_ThreadPool   (deferred)
+0000022e`04f50000 0000022e`04f62000   UI_Framework_Wpf   (deferred)
+0000022e`06720000 0000022e`06746000   Counter    (deferred)
+0000022e`06750000 0000022e`06758000   Microsoft_Win32_Primitives   (deferred)
+0000022e`06770000 0000022e`06778000   System_Runtime_Extensions   (deferred)
+0000022e`06780000 0000022e`06788000   System_Diagnostics_Debug   (deferred)
+0000022e`06790000 0000022e`067a2000   UI_Framework   (deferred)
+0000022e`067b0000 0000022e`067b8000   System_Threading_Thread   (deferred)
+0000022e`067d0000 0000022e`067da000   System_Xml_ReaderWriter   (deferred)
+0000022e`067f0000 0000022e`067f8000   System_Text_Encoding_Extensions   (deferred)
+00007ff7`6c390000 00007ff7`6c3ba000   dotnet     (private pdb symbols)  c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\dotnet.pdb\00B1FD661E824618A95485B003FC83231\dotnet.pdb
+00007ff9`dcab0000 00007ff9`dd21b000   System_Private_Xml   (deferred)
+00007ff9`dd220000 00007ff9`de133000   PresentationFramework   (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\PresentationFramework.pdb\39D62CA70DAD4368964549F9E720C5BF1\PresentationFramework.pdb
+00007ff9`de140000 00007ff9`df088000   System_Private_CoreLib   (deferred)
+00007ff9`e4de0000 00007ff9`e526d000   D3DCompiler_47_cor3   (deferred)
+00007ff9`e6180000 00007ff9`e696e000   PresentationCore   (deferred)
+00007ff9`f0920000 00007ff9`f0ad3000   d3d9       (deferred)
+00007ff9`f4d80000 00007ff9`f4e33000   TextShaping   (deferred)
+00007ff9`f64d0000 00007ff9`f66b3000   wpfgfx_cor3   (deferred)
+00007ff9`f6980000 00007ff9`f6b91000   WindowsBase   (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\WindowsBase.pdb\E99D618B96AF4AE88334793B9293C9C41\WindowsBase.pdb
+00007ff9`fcff0000 00007ff9`fd1bb000   System_Text_Json   (deferred)
+00007ff9`ffec0000 00007ff9`fff1a000   dataexchange   (deferred)
+00007ffa`00ce0000 00007ffa`00f25000   twinapi_appcore   (deferred)
+00007ffa`00f30000 00007ffa`014de000   d3d10warp   (deferred)
+00007ffa`01510000 00007ffa`01569000   System_Net_Requests   (deferred)
+00007ffa`01570000 00007ffa`01629000   System_ComponentModel_TypeConverter   (deferred)
+00007ffa`01d40000 00007ffa`01f43000   clrjit     (deferred)
+00007ffa`01fb0000 00007ffa`020ad000   System_Configuration_ConfigurationManager   (deferred)
+00007ffa`02570000 00007ffa`025da000   PresentationFramework_Aero2   (deferred)
+00007ffa`04040000 00007ffa`04076000   System_Collections_Concurrent   (deferred)
+00007ffa`041d0000 00007ffa`04278000   System_Linq   (deferred)
+00007ffa`047d0000 00007ffa`048ff000   PresentationNative_cor3   (deferred)
+00007ffa`04b60000 00007ffa`04bae000   System_Diagnostics_Process   (deferred)
+00007ffa`04bb0000 00007ffa`04bf6000   UIAutomationTypes   (deferred)
+00007ffa`05ac0000 00007ffa`05ae7000   System_Console   (deferred)
+00007ffa`05b20000 00007ffa`05b3b000   System_Windows_Extensions   (deferred)
+00007ffa`05b40000 00007ffa`05b66000   System_Net_WebClient   (deferred)
+00007ffa`05b70000 00007ffa`05bbc000   System_IO_Packaging   (deferred)
+00007ffa`05bc0000 00007ffa`05bfc000   System_Private_Uri   (deferred)
+00007ffa`05c00000 00007ffa`05c7a000   DirectWriteForwarder   (deferred)
+00007ffa`092f0000 00007ffa`09310000   System_Diagnostics_TraceSource   (deferred)
+00007ffa`093f0000 00007ffa`09407000   System_Collections_Specialized   (deferred)
+00007ffa`099a0000 00007ffa`099ba000   Microsoft_Win32_Registry   (deferred)
+00007ffa`0a110000 00007ffa`0a261000   System_Xaml   (deferred)
+00007ffa`0a270000 00007ffa`0a6ea000   coreclr    (private pdb symbols)  c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\coreclr.pdb\07FB51ECFD5748BE9DB932401E0670CD1\coreclr.pdb
+00007ffa`0b420000 00007ffa`0b429000   System_Diagnostics_StackTrace   (deferred)
+00007ffa`0b430000 00007ffa`0b447000   System_Collections_NonGeneric   (deferred)
+00007ffa`0b450000 00007ffa`0b462000   System_Threading   (deferred)
+00007ffa`0d120000 00007ffa`0d12d000   UIAutomationProvider   (deferred)
+00007ffa`0d130000 00007ffa`0d176000   System_Collections   (deferred)
+00007ffa`0db00000 00007ffa`0dc48000   textinputframework   (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\TextInputFramework.pdb\54B0A434FB4DC5ECD4BE3344FB8985FE1\TextInputFramework.pdb
+00007ffa`0f190000 00007ffa`0f1b5000   System_Memory   (deferred)
+00007ffa`105d0000 00007ffa`1086e000   icu        (deferred)
+00007ffa`12410000 00007ffa`12429000   System_Runtime_InteropServices   (deferred)
+00007ffa`12ef0000 00007ffa`12efb000   version    (deferred)
+00007ffa`176b0000 00007ffa`17917000   DWrite     (deferred)
+00007ffa`18b10000 00007ffa`18b15000   System_ComponentModel   (deferred)
+00007ffa`18b70000 00007ffa`18bcf000   hostpolicy   (private pdb symbols)  c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\hostpolicy.pdb\25BFE3E79579474180EA2362829D451C1\hostpolicy.pdb
+00007ffa`18c20000 00007ffa`18c82000   directxdatabasehelper   (deferred)
+00007ffa`18d10000 00007ffa`18d21000   System_ObjectModel   (deferred)
+00007ffa`18d30000 00007ffa`18d41000   System_ComponentModel_Primitives   (deferred)
+00007ffa`19cf0000 00007ffa`19d19000   wtsapi32   (deferred)
+00007ffa`19ec0000 00007ffa`19ec5000   System_Runtime_CompilerServices_VisualC   (deferred)
+00007ffa`1a2a0000 00007ffa`1a2ff000   hostfxr    (private pdb symbols)  c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\hostfxr.pdb\10043DD10D3248C39BFCF10F7CB5E9711\hostfxr.pdb
+00007ffa`1a690000 00007ffa`1a73b000   uxtheme    (deferred)
+00007ffa`1a870000 00007ffa`1a8b4000   DXCore     (deferred)
+00007ffa`1ab20000 00007ffa`1ab50000   dwmapi     (deferred)
+00007ffa`1acd0000 00007ffa`1aceb000   kernel_appcore   (deferred)
+00007ffa`1ba60000 00007ffa`1baa9000   sspicli    (deferred)
+00007ffa`1c870000 00007ffa`1c8d3000   winsta     (deferred)
+00007ffa`1c920000 00007ffa`1c934000   umpdc      (deferred)
+00007ffa`1c940000 00007ffa`1c99e000   powrprof   (deferred)
+00007ffa`1c9b0000 00007ffa`1c9da000   bcrypt     (deferred)
+00007ffa`1cad0000 00007ffa`1caf7000   win32u     (deferred)
+00007ffa`1cb00000 00007ffa`1ceee000   KERNELBASE   (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\kernelbase.pdb\B942314184212966C1AAA3FB7DD186C41\kernelbase.pdb
+00007ffa`1cf00000 00007ffa`1cfac000   bcryptPrimitives   (deferred)
+00007ffa`1d050000 00007ffa`1d0f3000   msvcp_win   (deferred)
+00007ffa`1d100000 00007ffa`1d24b000   ucrtbase   (deferred)
+00007ffa`1d250000 00007ffa`1d37b000   gdi32full   (deferred)
+00007ffa`1d5b0000 00007ffa`1d727000   crypt32    (deferred)
+00007ffa`1d730000 00007ffa`1dab6000   combase    (private pdb symbols)  c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\combase.pdb\EB718246AD7F1A75DA7D7C5CDCC63AC91\combase.pdb
+00007ffa`1db10000 00007ffa`1dc28000   rpcrt4     (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\rpcrt4.pdb\25F2D575B3B5B4DE43935FA16E94C7461\rpcrt4.pdb
+00007ffa`1dc40000 00007ffa`1dd9f000   msctf      (deferred)
+00007ffa`1ddb0000 00007ffa`1df75000   user32     (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\user32.pdb\25E8EAB23B47FDED7A3EDC311501A5961\user32.pdb
+00007ffa`1e840000 00007ffa`1e934000   SHCore     (deferred)
+00007ffa`1e940000 00007ffa`1e9e9000   msvcrt     (deferred)
+00007ffa`1e9f0000 00007ffa`1eaa4000   advapi32   (deferred)
+00007ffa`1eab0000 00007ffa`1eb87000   oleaut32   (deferred)
+00007ffa`1eb90000 00007ffa`1ec59000   kernel32   (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\kernel32.pdb\B1A77D3994E1C9BAC3570DF7F73A54961\kernel32.pdb
+00007ffa`1f290000 00007ffa`1f2c1000   imm32      (deferred)
+00007ffa`1f2d0000 00007ffa`1f2fb000   gdi32      (deferred)
+00007ffa`1f300000 00007ffa`1f3b0000   clbcatq    (deferred)
+00007ffa`1f600000 00007ffa`1f797000   ole32      (deferred)
+00007ffa`1f8b0000 00007ffa`1f957000   sechost    (deferred)
+00007ffa`1f9a0000 00007ffa`1fc04000   ntdll      (pdb symbols)          c:\users\iotero\dev\personal\ui framework\artifacts\native-debugger\symbols\ntdll.pdb\0441C3398F1F66E69AA817FA3C2954781\ntdll.pdb
+
+Unloaded modules:
+00007ffa`1ab70000 00007ffa`1ab84000   resourcepolicyclient.dll
+00007ffa`1ab70000 00007ffa`1ab84000   resourcepolicyclient.dll
+
+Debugger result: 00000000

@@ -1,5 +1,7 @@
 # Editor wait isolation — September 25, 2026
 
+Follow-up: [native COM cleanup analysis](editor-com-cleanup-2026-09-25.md) identifies the UI/finalizer cleanup interaction and measures an isolated mitigation. The original investigation below is retained as historical evidence.
+
 ## Captured failure
 
 The hosted baseline editor process exceeded 120 seconds on measured sample 6. Dump collection succeeded. At capture, its UI thread was in `TextBox.OnTextPropertyChanged`, through `TextStore.RequestLock`, `TextServicesDisplayAttributePropertyRanges.OnEndEdit`, and `ITfProperty.EnumRanges`. The top managed/native boundary was COM interface conversion followed by a native wait. Process CPU time was only 9.297 seconds over 120.003 seconds elapsed. This identifies the blocked path, not the native lock owner or the cause of the wait.

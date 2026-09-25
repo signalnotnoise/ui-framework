@@ -1,0 +1,81 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+   EnableRedirectToChakraJsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 0
+
+Microsoft (R) Windows Debugger Version 10.0.29547.1002 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\iotero\source\repos\Lab-Feedback-WPF\TestResults\performance-comparison\layout-editors-6-baseline.dmp]
+User Mini Dump File with Full Memory : Only application data is available
+
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+Symbol search path is: srv*C:\Users\iotero\Dev\personal\UI Framework\artifacts\native-debugger\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is:
+Windows 10 Version 26100 MP (4 procs) Free x64
+Product: Server, suite: TerminalServer DataCenter SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Debug session time: Fri Sep 25 04:58:52.000 2026 (UTC - 4:00)
+System Uptime: 0 days 0:25:52.862
+Process Uptime: 0 days 0:02:02.000
+................................................................
+................................
+Loading unloaded module list
+..
+The call to LoadLibrary(sos) failed, Win32 error 0n2
+    "The system cannot find the file specified."
+Please check your debugger configuration and/or network access.
+Extension DLL search Path:
+You may also consider deploying your extension to the UserExtensions extension gallery repository
+located at %LOCALAPPDATA%\dbg\UserExtensions folder. It would require an extension manifest.
+Error: Failed to load extension sos
+Unable to add extension DLL: ntsdexts
+Unable to add extension DLL: uext
+Unable to add extension DLL: exts
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+For analysis of this file, run !analyze -v
+   +0x000 m_pFirstBucket   : (null)
+   +0x008 m_lock           : Crst
+   +0x038 m_pCurCleanupThread : 0x0000022e`04d7eb80 Thread
+   +0x040 m_doCleanupInContexts : 0n1
+   +0x130 m_OSThreadId : 0x1fc0
+   +0x000 m_pCtxCookie     : 0x0000022e`04cf5040 Void
+   +0x008 m_pObjCtx        : 0x0000022e`04cf5040 IUnknown
+   +0x010 m_dwRefCount     : 0xb83
+   +0x018 m_pSTAThread     : 0x0000022e`04d7eb80 Thread
+
+Debugger result: 00000000
