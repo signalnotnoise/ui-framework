@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "reason": "process-timeout",
+  "scenario": "layout-editors",
+  "sample": 0,
+  "side": "baseline",
+  "processId": 56776,
+  "timeoutSeconds": 120,
+  "elapsedSeconds": 120.0312326,
+  "cpuSeconds": 21.1875,
+  "baselineRevision": "78c88fb901c202e3c2e49b6de300d1ce2369e00b",
+  "report": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\performance\\publish-candidate-2026-09-24\\layout-editors-0-baseline.json",
+  "log": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\performance\\publish-candidate-2026-09-24\\layout-editors-0-baseline.log"
+}

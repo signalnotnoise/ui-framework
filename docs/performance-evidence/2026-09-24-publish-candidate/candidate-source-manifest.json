@@ -1,0 +1,442 @@
+[
+  {
+    "path": "Directory.Build.props",
+    "sha256": "B1A500D015E009FCFA07634C0B11FDF88FB8A51696969DD31977617795C92BF5"
+  },
+  {
+    "path": "global.json",
+    "sha256": "20C93CA7812D0A9825EEF71217156F95AB2F4FE5AADFEB22EBC1C24B630018D3"
+  },
+  {
+    "path": "UI Framework.slnx",
+    "sha256": "B4EC57DA4A34284B6EF14F8A6FD0559A5BF8D41629C425C4D5C3C229CB8DC3FE"
+  },
+  {
+    "path": "UI Framework\\Binding.cs",
+    "sha256": "566C0E871055778345FBED2AC4F744B12CF8B3BF0F646F02250A90B95BDB6E1D"
+  },
+  {
+    "path": "UI Framework\\Component.cs",
+    "sha256": "5BC78429499713784025706A8B7DCE888D678C676E9FE5E5D6332D13B565C9BC"
+  },
+  {
+    "path": "UI Framework\\Computed.cs",
+    "sha256": "6BDD6173D689A165E11979F51766C4777E4D9C4927591D0A3A6B48788362D40E"
+  },
+  {
+    "path": "UI Framework\\Dependencies.cs",
+    "sha256": "6FADBF442BC3D7FC50D099C4EBB488B6602719A289C2CFACC9FFA20E5B015224"
+  },
+  {
+    "path": "UI Framework\\IState.cs",
+    "sha256": "1A1E426442541A17A2BDB7733ADD8B27BF61AD6BEB9AA50F7BD7930565521CB8"
+  },
+  {
+    "path": "UI Framework\\ObservableState.cs",
+    "sha256": "AA9FF307E5F301B80C261913438CD9DA315044EFF79CE511152589D5FD71C5E8"
+  },
+  {
+    "path": "UI Framework\\State.cs",
+    "sha256": "7B456332F93567E0B9E5159F3BC4289A7C0325ACBF3A1A98BE4E68EF52FD951A"
+  },
+  {
+    "path": "UI Framework\\StateList.cs",
+    "sha256": "FF4DB976BABDDE75CF769861856B67AA519F003E62C2AC4A824740B6893F0DCE"
+  },
+  {
+    "path": "UI Framework\\StateNotifications.cs",
+    "sha256": "FB8E1D0EE08C9630DF94424D7B81FD5A70E73F67A9C78FD0874B2BD8887932F7"
+  },
+  {
+    "path": "UI Framework\\UI Framework.csproj",
+    "sha256": "B53F0B8194031B46FD1F56135C0FD45EDB4B2A1B066C8F25F0F94892DB54D23E"
+  },
+  {
+    "path": "UI Framework\\UI.cs",
+    "sha256": "FE377B60FB24E8283E73A160DC80FF88C25D709D5E30D9B7D3F55C8A6F3D43B9"
+  },
+  {
+    "path": "UI Framework\\View.cs",
+    "sha256": "5B1F7EFBF788B39963884E0C0E2D21284C8406EF99ABDE3B291061F5B65AFCB4"
+  },
+  {
+    "path": "UI Framework\\ViewKind.cs",
+    "sha256": "E9EFBBFF9685C23012A61C7A18BF8AE6B312BB0232677B39B021209C82C5A4B8"
+  },
+  {
+    "path": "UI Framework\\ViewSession.cs",
+    "sha256": "A70B4E9A8148B13D5F2DFE206416A16CC4F62A15BBE2EE6F796DA49DB1017577"
+  },
+  {
+    "path": "UI Framework\\Layout\\SplitAxis.cs",
+    "sha256": "3265D57614D6E1804CC3F03A100A1CCB44E72E80EE0F84D30DC423D4D0BA6B97"
+  },
+  {
+    "path": "UI Framework\\Layout\\SplitPaneLayout.cs",
+    "sha256": "6CA60FB6A0677ED9DA815666DB87E7A046A1CD9F46A9BEE4EA764952EA0FE385"
+  },
+  {
+    "path": "UI Framework\\Layout\\ViewAlignment.cs",
+    "sha256": "B6DD915729F42FB8419E9F60872461571DAE95189085FD7996B9449A826C6077"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationEntry.cs",
+    "sha256": "69AA6012F399114D0160D9B8A4462B2EDE14E2A5B98232394A04A8D74F43E562"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationStack.cs",
+    "sha256": "D359A617C404710FA5AC0FDCAE8BD16D9C1780B7839C095DA95DC15D8E7181BF"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationTransition.cs",
+    "sha256": "6CDC53175B9E2C96EF9B7CB474063A52943DA47DEA56548D7F2F19D1B0185DDA"
+  },
+  {
+    "path": "UI Framework\\Styling\\ButtonStyleKind.cs",
+    "sha256": "90BA5A95F25CA0AEAC22447F1B37F64E8633C596AFF38F95A50214737ABE0798"
+  },
+  {
+    "path": "UI Framework\\Styling\\ThemeTokens.cs",
+    "sha256": "DED33F526A53D237BC276C74918A66FD6BF1AFEA4ABB41B4388C9DABE09D77F4"
+  },
+  {
+    "path": "UI Framework.Wpf\\UI Framework.Wpf.csproj",
+    "sha256": "A540301F921DA06A5190A8A65A4CCDE5C85B84E4C6944C48717D5EE8EB764A2A"
+  },
+  {
+    "path": "UI Framework.Wpf\\ViewHost.cs",
+    "sha256": "6B8092ADEACB96C3636B5FBF61B32B9C387118DBAE1E57622323025558A0168C"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeControlHost.cs",
+    "sha256": "1B9D0ED45FD04FA177775EBB30892932C1D71FCDF49972AA949AA6ED759812F1"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeViewDescriptor.cs",
+    "sha256": "D05F443ADF35DED096424AC0FAA3C8F4649747FEFA24358DFD5A7E9384BEE28F"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\WpfUI.cs",
+    "sha256": "CBC0D2DD3507C2FFD9157B0483BE130EF96FC5D2C133FAE6FB36826560AB3D56"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\AdaptivePanel.cs",
+    "sha256": "8FD2D5A3FF7C8F54674206DB42AE0F3507BF757E405834DA0553338A35D29EF9"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\FlexColumnPanel.cs",
+    "sha256": "AFD3DF354361F688A473925220878E7562A36E95CBCDC14C5E713F9E50D2C62E"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\SplitPanePanel.cs",
+    "sha256": "65EA83094166928682F139072B24905A34809C908C3CC3F6AFCF8225BAB1C33C"
+  },
+  {
+    "path": "UI Framework.Wpf\\Navigation\\NavigationSnapshot.cs",
+    "sha256": "A1AC0703CC77D123727B37F2FA86F33936CADA85055FEFA925ADEBA3B010B112"
+  },
+  {
+    "path": "UI Framework.Wpf\\Navigation\\NavigationSurface.cs",
+    "sha256": "1B3AD43233FB54133E1626BB34DF90DCBECD55B972D269327652F49C58853A72"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\FocusIdentity.cs",
+    "sha256": "1B39939D285EE136E6B103CE3B3287B9FC0979A35473AC54AFFE1EEA99E4327D"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\Node.cs",
+    "sha256": "D7E9C04FAA1CFB83C97D27606FFDE894C2919F46C36700BDAB9ADF80EFCC2A0B"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\NodeSnapshot.cs",
+    "sha256": "56750C0EB42E3C217DB0D8442CA010E329FCD13FBD203B0EA7731908779C3DCD"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ButtonContentPresenter.cs",
+    "sha256": "1198E0375EE94FBEB5028777C205CE5ABD8745EEB8AD9E00E1D03F539039C65C"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\PickerStyles.cs",
+    "sha256": "BA7672F201FC0ECACEF1DCD0C4935F640A82CDE4CF27656C10D6CE2E2E349214"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ThemeStyles.cs",
+    "sha256": "8362ACA38D878733CBC7BCFAB5D797534495C3CFFA1EE05684AB43C104B1B1BF"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ToggleStyles.cs",
+    "sha256": "59CC21D6B10B8F32C455D677138339E1A8399E35D9D337D883F5C484AE89E5EC"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\RowFocusSnapshot.cs",
+    "sha256": "DAEFA9964CF45D8E843FB790D29641C2533C3404CA8CC3A5960E0514B4B600F1"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualListControl.cs",
+    "sha256": "62D8737D5C7277CECAE4AD78C89E2AC6B2E7D81C5907694AF7002A3D4BE5C5A3"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualListSnapshot.cs",
+    "sha256": "6947FA3F0BA2E9B5303EDFC3102571155607A04950C48D6606E0E4EA08C537FF"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRow.cs",
+    "sha256": "B304B7D02EC7DF09351B499B9C829DCDA4249B67A80F43E75547907047BACC94"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRowPresenter.cs",
+    "sha256": "A154DD3E6DA7C6673C6F37D989422984412C8B73FE3C48BD995B6B80AADF1CEC"
+  },
+  {
+    "path": "samples\\ConsumerDiagnostics\\ConsumerDiagnostics.csproj",
+    "sha256": "ED44237010D0FD742A5C1D8B9770BFE61A7C609015984C05D2385347B8C1EAC8"
+  },
+  {
+    "path": "samples\\ConsumerDiagnostics\\FileTreeChecks.cs",
+    "sha256": "24565AE57609BA3D407D52DCF94C1305CAED2E63568EEE5A28C620936CCE59F2"
+  },
+  {
+    "path": "samples\\ConsumerDiagnostics\\Program.cs",
+    "sha256": "FD7C48385CF153E74CA5EE61CFCCCD2366822C7A8F1EAA57742F16A4DCC07647"
+  },
+  {
+    "path": "samples\\Counter\\Counter.csproj",
+    "sha256": "60F3BE6000B8AD6C64C8295AE3E5A6BC949E49FDE8C1E362A349CE3A9033A91F"
+  },
+  {
+    "path": "samples\\Counter\\LaunchpadWindow.cs",
+    "sha256": "94FFC785F2118FB253E0C0441D9C710D89FA0A67775736EA82665B9144469627"
+  },
+  {
+    "path": "samples\\Counter\\Program.cs",
+    "sha256": "83C43227E642204941127FA5C128D5C7FBB26C4C1733D2EFDA7DB25644905225"
+  },
+  {
+    "path": "samples\\Counter\\StressRunner.cs",
+    "sha256": "F1EFBD95B4333FE8C7261D5460EB44350681A9534C3AEFF37DB3D82D8B50474B"
+  },
+  {
+    "path": "samples\\Counter\\VisualStressChecks.cs",
+    "sha256": "3F76337F5B5BB01DD1873CCBD5EE16BE97B5054A0B1011688E9CC3C3A3CCF8EC"
+  },
+  {
+    "path": "samples\\Counter\\Components\\ActivityPanel.cs",
+    "sha256": "53F7CFB016BE4273BCCB84A422877E1F07B00CDF9D669807AE5E1F2A7C9C81A8"
+  },
+  {
+    "path": "samples\\Counter\\Components\\BoardSlot.cs",
+    "sha256": "B1494E18A788E37F82F20370600A7C1B06B370FBDB5B1E61A24A2FB05184305C"
+  },
+  {
+    "path": "samples\\Counter\\Components\\ChecklistPanel.cs",
+    "sha256": "C5F8BEE819826FA3C2C120BA83BD57C1F6761032E56C00536FB62A6B53ACC045"
+  },
+  {
+    "path": "samples\\Counter\\Components\\ChecklistRow.cs",
+    "sha256": "09F6199739FB9E99660576C547760701D24E4DD2FAC0FDDAC6D2B8154B1C20B5"
+  },
+  {
+    "path": "samples\\Counter\\Components\\CommandBar.cs",
+    "sha256": "BDB7C66E8986181D1EE2047E61D81C762E874F1B281BADCD3B959E01D0ABEFF5"
+  },
+  {
+    "path": "samples\\Counter\\Components\\Dashboard.cs",
+    "sha256": "655639B80BD24DE3087ACB1A14432F845B1FB0D70784622DF41BA49862030E9C"
+  },
+  {
+    "path": "samples\\Counter\\Components\\DepthNode.cs",
+    "sha256": "87FE792122B8F1B7AFCC3B3E724031A25239081B7F46623ABAF3F48D4F08A1C5"
+  },
+  {
+    "path": "samples\\Counter\\Components\\DepthPanel.cs",
+    "sha256": "53995A657A1ED3D7FF4E4EF64D43A2FBED254C64A9EDBF5FE00C472AE4174D17"
+  },
+  {
+    "path": "samples\\Counter\\Components\\FilterPanel.cs",
+    "sha256": "339093FC11C0D1A113CB3CC6593491A0467B87795AAB7ED318B72599D8FB8897"
+  },
+  {
+    "path": "samples\\Counter\\Components\\Inspector.cs",
+    "sha256": "4ACAB014FF910196FF3AB32D3B6D0F21D597E63450D8D939643F82AC167483FC"
+  },
+  {
+    "path": "samples\\Counter\\Components\\ItemEditor.cs",
+    "sha256": "83F28815C94BDC136FFC97BE63B298B6E54BA73876228F20B680F5DA727AB519"
+  },
+  {
+    "path": "samples\\Counter\\Components\\LabComponent.cs",
+    "sha256": "52311082865E4895BF3B0C7BA206C935FDA3708EEA9600CBBC960DBAD67597AE"
+  },
+  {
+    "path": "samples\\Counter\\Components\\LaunchBoard.cs",
+    "sha256": "E1F7EF121F04DECF0542D2AE666467963CE3F4D10B7C900A77F37590BF6D865F"
+  },
+  {
+    "path": "samples\\Counter\\Components\\LaunchDetails.cs",
+    "sha256": "DBC49C01547E9CADAD021A058DC0D177AAB27F900510B384777B9060085CF8BB"
+  },
+  {
+    "path": "samples\\Counter\\Components\\LaunchOverview.cs",
+    "sha256": "8FC692DAFB0E8EAE7EBF2EE08DA6082F019A4AB35AF999B9D28C11B3B69408A9"
+  },
+  {
+    "path": "samples\\Counter\\Components\\Launchpad.cs",
+    "sha256": "CCA4DAB81EB984AA7186636334A4693DA8327AA3CD75EEFC67E62EF570899547"
+  },
+  {
+    "path": "samples\\Counter\\Components\\ProjectPanel.cs",
+    "sha256": "C560B841E14BF7CB0528D0112F57AE2C558B17D1EBAF1850E8B86D0354E86F6B"
+  },
+  {
+    "path": "samples\\Counter\\Components\\SummaryPanel.cs",
+    "sha256": "15F0A0A3174DFCA226736E809CD657D75E346573C0060175763FACAFDF654D46"
+  },
+  {
+    "path": "samples\\Counter\\Components\\TelemetryPanel.cs",
+    "sha256": "8DD8B507B36D922DBC12847336367E13769FEAD972DDCCC252ABD96997578AD5"
+  },
+  {
+    "path": "samples\\Counter\\Components\\VisualStressPanel.cs",
+    "sha256": "ADEE5B341C76B606C50D1AFD0BD993B36DB9519CD8B222BEBF5AD5F35768996E"
+  },
+  {
+    "path": "samples\\Counter\\Components\\WorkList.cs",
+    "sha256": "E600CD5397F3286ACD39FBC412F2F978AD4292BB7D9424BD19F615F383153504"
+  },
+  {
+    "path": "samples\\Counter\\Components\\WorkRow.cs",
+    "sha256": "17E311F355B64A1817F19FAB00590803FC3A27F57090295336644740007C4F47"
+  },
+  {
+    "path": "samples\\Counter\\Diagnostics\\DiagnosticToggle.cs",
+    "sha256": "9FBE68C76752D1A82335A4BBC74D588F43F357215B7431D514A21EC448DD97AC"
+  },
+  {
+    "path": "samples\\Counter\\Diagnostics\\LaunchNavigationChecks.cs",
+    "sha256": "3893F688CD490972D815DF20267DCA367A88030E1445B2A45046D90048EA198D"
+  },
+  {
+    "path": "samples\\Counter\\Diagnostics\\LayoutEditorComparison.cs",
+    "sha256": "6F018340F4FB255C0BD47566742DDA5490FD29853B03290E01CFFB13196B16D3"
+  },
+  {
+    "path": "samples\\Counter\\Diagnostics\\Measurement.cs",
+    "sha256": "78170536EE528F7E5A03840AB1567653AA326AF275EFF2421EDAFBD8BCF290CB"
+  },
+  {
+    "path": "samples\\Counter\\Models\\ChecklistItem.cs",
+    "sha256": "5C97A4FE8DB6D1DF8EED2C995A3A7E01228540F2C998B2FC1889267FFAB340DA"
+  },
+  {
+    "path": "samples\\Counter\\Models\\Counters.cs",
+    "sha256": "7E8EAC73F612D2FB72F886359ACD9BC9FC596345306E2DDAABBEC283F8B39EAC"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchItem.cs",
+    "sha256": "A19CB87A6699614DAE54C7558441A4041B8753C1FCE0058339BB24BCAFA9A072"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchModel.cs",
+    "sha256": "332B6E53C9A17284061C9EBE851F13711C808AF5A1EB31C7AE2BD2BB8274C1AD"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchRoute.cs",
+    "sha256": "C9981D31979BE2DE78E0E09B0C62D054A7DDB73FD1270C8E703E611F75F726C7"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchScreen.cs",
+    "sha256": "8745EB4D60D02C6896D71A28DA4ECC569FECF7E8A325C71C9223ABB1E069255A"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchStage.cs",
+    "sha256": "F5DE35CF4A6D87F69FAF4CDB8F353A773BB6E0CAA24E81606BFCFA6B2008F707"
+  },
+  {
+    "path": "samples\\Counter\\Models\\LaunchTheme.cs",
+    "sha256": "DC72546CAE04E7F951953899F112111CB8CE6AA9AF68DEEB14B415D6D8B5F841"
+  },
+  {
+    "path": "samples\\Counter\\Models\\Preferences.cs",
+    "sha256": "61EC0EB8159FF378E6D3E89A7AD8A6CFA34CC55547360FFA050370A3E52E67AF"
+  },
+  {
+    "path": "samples\\Counter\\Models\\ProjectSettings.cs",
+    "sha256": "7B790CFBBA0FC30AA786231ABC3A160433281718D7B5323130D730223AE4F122"
+  },
+  {
+    "path": "samples\\Counter\\Models\\StepData.cs",
+    "sha256": "77008FD4A169219192E5B62480814B0E2502C7C259B50002BD2AF1727ED286FF"
+  },
+  {
+    "path": "samples\\Counter\\Models\\VisualStressState.cs",
+    "sha256": "86D13985CC852593038228E41920CAF27A7573A67D1CE618B6C57D2D4129E6E0"
+  },
+  {
+    "path": "samples\\Counter\\Models\\WorkData.cs",
+    "sha256": "7B124BBF4B197930E0C2EFF5C8DEE5581CD37E4F93D13F6A6817D0B07C3F21C1"
+  },
+  {
+    "path": "samples\\Counter\\Models\\WorkDetails.cs",
+    "sha256": "FB202F68C0C7D38334A57A3B38A78A493C9E3B02E4D203059E4531CA8A59AFAE"
+  },
+  {
+    "path": "samples\\Counter\\Models\\WorkItem.cs",
+    "sha256": "64E2B1A2C68C5DAD77CE3D284C6DCD423E4995F67F463FF1C82B75D1F5CCC16F"
+  },
+  {
+    "path": "samples\\Counter\\Models\\WorkspaceModel.cs",
+    "sha256": "C5780CB7E8B70E8273304E58152832B3B75A7B276B4A6EF2530894E32AF31E96"
+  },
+  {
+    "path": "samples\\WorkspaceComparison\\LayoutProbe.cs",
+    "sha256": "01E1DD5882469EDB1D26BCD4F6EACD6D1B400E927823D596C8CCB970449A7C31"
+  },
+  {
+    "path": "samples\\WorkspaceComparison\\Program.cs",
+    "sha256": "BE7D2E57B9938C4FEE5BDF36364A5AE155A34548032058CA569ABA84B003534B"
+  },
+  {
+    "path": "samples\\WorkspaceComparison\\SubmissionListScenario.cs",
+    "sha256": "D9C10FA82C9AB08E78062FCE0346DA959E64FC72FBD4B1548F17788E11685535"
+  },
+  {
+    "path": "samples\\WorkspaceComparison\\WorkspaceComparison.csproj",
+    "sha256": "57E43FAD9A80968EF42E87DCD8CFEF595C52A3E3B68E1BD0246D244A9CAB94A9"
+  },
+  {
+    "path": "tools\\New-SourceArchive.ps1",
+    "sha256": "8EAC1B18F75E57613E4CB0C3B6FFF822214A3DA4F8154ED7C7F6E239EAE8F5C1"
+  },
+  {
+    "path": "tools\\performance-baseline.json",
+    "sha256": "308F9C79E887F45733D2660076A23935625AC27A702FA53662D89B3B557AEC79"
+  },
+  {
+    "path": "tools\\Test-ConsumerLayout.ps1",
+    "sha256": "FF1284EDAD600CAC4AB9DA4DE2496238FC3AD9DDBFB8E4F95DD4D329C825BA59"
+  },
+  {
+    "path": "tools\\Test-Documentation.ps1",
+    "sha256": "28FE3198B1F7554D0CECD24D941FFAE65A5496E85E1E0833DA3FD38A4A0591F9"
+  },
+  {
+    "path": "tools\\Test-Packages.ps1",
+    "sha256": "C0EC405BDC7BA95B7C2C1347841F1D1C1AB2836FDC29D90FF6B8DFF5EE6D4B57"
+  },
+  {
+    "path": "tools\\Test-Performance.ps1",
+    "sha256": "B0FE6ED7B9B15400E52C6F000038ABEA4E8A1F1B554E6BB88E629CF47381B9B2"
+  },
+  {
+    "path": "tools\\Test-Release.ps1",
+    "sha256": "7D76C24CE0E6C6D31FC3A7B5BECD565430C5A24B58883DB24F325595F0120006"
+  },
+  {
+    "path": "tools\\Test-WorkspacePerformance.ps1",
+    "sha256": "FD23FAF8807A62A959D7AC17680035FF0AD0E06E1092E576F7C7D4B961FDD1F6"
+  },
+  {
+    "path": "tools\\Update-KnowledgeGraph.ps1",
+    "sha256": "6802ECB3E55E39B65C08F4635783D837A84C6BE0988F91FDCFC85BE06341F2A1"
+  }
+]
