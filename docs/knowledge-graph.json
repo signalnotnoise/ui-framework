@@ -398,9 +398,10 @@
       "id": "stress",
       "label": "Stress workload",
       "status": "implemented",
-      "summary": "1000 mounted rows, 10000 projected writes, mixed edits, filters, remounts, and lifecycle balance measurements. A separate representative workspace compares native adapters with layout primitives while checking geometry, selection and ownership; it does not replace the release gate.",
+      "summary": "1000 mounted rows, 10000 projected writes, mixed edits, filters, remounts, and lifecycle balance measurements. Separate workspace and editor diagnostics do not replace the release gate. An experimental application-owned COM cleanup policy and counted native lifetime fixture remain outside the framework API and production consumer.",
       "sources": [
         "samples/Counter/StressRunner.cs",
+        "samples/Counter/Diagnostics/LayoutEditorComparison.cs",
         "samples/Counter/Diagnostics/Measurement.cs",
         "docs/stress-lab.md",
         "docs/performance-results.md",
@@ -418,6 +419,13 @@
           "docs/consumer-layout-2026-09-24.md",
           "docs/layout-isolation-2026-09-24.md",
         "docs/editor-timeout-investigation.md",
+        "samples/EditorWaitDiagnostics/Program.cs",
+        "samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs",
+        "samples/ComCleanupLifecycle/Program.cs",
+        "samples/ComCleanupLifecycle/ComLifetimeProbe.cpp",
+        "tools/Test-ComCleanupLifecycle.ps1",
+        "tools/Test-EditorWaitDiagnostics.ps1",
+        "docs/application-cleanup-policy-2026-09-25.md",
         "tools/performance-baseline.json"
       ]
     },

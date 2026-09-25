@@ -45,45 +45,61 @@ internal static class LayoutEditorComparison
         }
         var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
         var watch = Stopwatch.StartNew();
-        using var host = new ViewHost(Build);
-        using var source = new HwndSource(new HwndSourceParameters("Layout/editor benchmark")
+        var policy = args.Contains("--experimental-com-cleanup")
+            ? new ApplicationComCleanupPolicy(Dispatcher.CurrentDispatcher) : null;
+        try
         {
-            Width = 1320, Height = 1080, PositionX = -10000, PositionY = -10000,
-            WindowStyle = unchecked((int)0x80000000)
-        });
-        source.RootVisual = host;
-        ThemeStyles.Apply(host, new ThemeTokens());
-        async Task Layout(int step)
-        {
-            var started = trace ? Stopwatch.GetTimestamp() : 0;
-            if (trace) Console.Error.WriteLine($"Step {step}: waiting for dispatcher");
-            await Dispatcher.Yield(DispatcherPriority.ApplicationIdle);
-            var resumed = trace ? Stopwatch.GetTimestamp() : 0;
-            var width = step % 2 == 0 ? 1320 : 1040;
-            host.Measure(new Size(width, 1080));
-            host.Arrange(new Rect(0, 0, width, 1080));
-            host.UpdateLayout();
-            if (trace) Console.Error.WriteLine($"Step {step}: dispatcher {Stopwatch.GetElapsedTime(started, resumed).TotalMilliseconds:F1} ms; layout {Stopwatch.GetElapsedTime(resumed).TotalMilliseconds:F1} ms");
+            using var host = new ViewHost(Build);
+            using var source = new HwndSource(new HwndSourceParameters("Layout/editor benchmark")
+            {
+                Width = 1320, Height = 1080, PositionX = -10000, PositionY = -10000,
+                WindowStyle = unchecked((int)0x80000000)
+            });
+            source.RootVisual = host;
+            ThemeStyles.Apply(host, new ThemeTokens());
+            async Task Layout(int step)
+            {
+                var started = trace ? Stopwatch.GetTimestamp() : 0;
+                if (trace) Console.Error.WriteLine($"Step {step}: waiting for dispatcher");
+                await Dispatcher.Yield(DispatcherPriority.ApplicationIdle);
+                var resumed = trace ? Stopwatch.GetTimestamp() : 0;
+                var width = step % 2 == 0 ? 1320 : 1040;
+                host.Measure(new Size(width, 1080));
+                host.Arrange(new Rect(0, 0, width, 1080));
+                host.UpdateLayout();
+                if (trace) Console.Error.WriteLine($"Step {step}: dispatcher {Stopwatch.GetElapsedTime(started, resumed).TotalMilliseconds:F1} ms; layout {Stopwatch.GetElapsedTime(resumed).TotalMilliseconds:F1} ms");
+            }
+            await Layout(0);
+            watch.Stop();
+            var mountMilliseconds = watch.Elapsed.TotalMilliseconds;
+            var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
+            var mountBuilds = builds;
+            var allocation = GC.GetAllocatedBytesForCurrentThread();
+            watch.Restart();
+            for (var step = 1; step <= 50; step++) { phase.Value = step; await Layout(step); }
+            // Experimental mode includes host teardown and the final cleanup in timing.
+            // Both framework revisions use exactly this workload; normal mode is unchanged.
+            if (policy is not null)
+            {
+                source.RootVisual = null;
+                source.Dispose();
+                host.Dispose();
+                policy.CloseBeforeDispatcherShutdown();
+            }
+            watch.Stop();
+            var result = new
+            {
+                SchemaVersion = 2, Scenario = "layout-editors", Rows = 1000, MixedOperations = 50,
+                CleanupPolicy = policy is null ? "runtime-default" : "experimental-application-owned",
+                MountMilliseconds = mountMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
+                Milliseconds = watch.Elapsed.TotalMilliseconds, AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
+                BodyBuilds = builds - mountBuilds, Mounts = 0, Unmounts = 0,
+                Runtime = Environment.Version.ToString(), TimeUtc = DateTimeOffset.UtcNow
+            };
+            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+            File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+            return 0;
         }
-        await Layout(0);
-        watch.Stop();
-        var mountMilliseconds = watch.Elapsed.TotalMilliseconds;
-        var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
-        var mountBuilds = builds;
-        var allocation = GC.GetAllocatedBytesForCurrentThread();
-        watch.Restart();
-        for (var step = 1; step <= 50; step++) { phase.Value = step; await Layout(step); }
-        watch.Stop();
-        var result = new
-        {
-            SchemaVersion = 2, Scenario = "layout-editors", Rows = 1000, MixedOperations = 50,
-            MountMilliseconds = mountMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
-            Milliseconds = watch.Elapsed.TotalMilliseconds, AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
-            BodyBuilds = builds - mountBuilds, Mounts = 0, Unmounts = 0,
-            Runtime = Environment.Version.ToString(), TimeUtc = DateTimeOffset.UtcNow
-        };
-        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-        File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
-        return 0;
+        finally { policy?.CloseBeforeDispatcherShutdown(); }
     }
 }

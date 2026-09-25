@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "scenario": "layout-editors",
+  "cleanupPolicy": "runtime-default",
+  "command": "dotnet samples/Counter/bin/Release/net10.0-windows/Counter.dll --layout-editors --report artifacts/performance/framework-cleanup-default-smoke-2026-09-25.json",
+  "timeoutSeconds": 120,
+  "completed": false,
+  "reportProduced": false,
+  "processTreeKilled": true,
+  "recordedUtc": "2026-09-25T10:35:34.4994745Z",
+  "note": "Separate post-campaign candidate smoke check; no warmup, no policy flag, not a paired performance estimate."
+}

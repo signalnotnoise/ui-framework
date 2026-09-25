@@ -1,0 +1,3 @@
+Comparison tree mounted: 1,000 rows. Measuring 50 mixed operations.
+{"SchemaVersion":2,"Scenario":"virtualized","MountMilliseconds":394.5851,"MountAllocatedBytes":9790376,"MountBodyBuilds":27,"Mode":"selective observation, memo enabled","Rows":1000,"MixedOperations":50,"Milliseconds":1115.5419,"BodyBuilds":194,"AllocatedBytes":64391888,"Mounts":98,"Unmounts":95,"Runtime":"10.0.12","TimeUtc":"2026-09-25T10:28:53.3082839+00:00"}
+

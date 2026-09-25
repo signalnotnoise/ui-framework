@@ -1,6 +1,6 @@
 # Native-WPF subtraction experiments only. Never use these as release comparisons.
 param(
-    [ValidateSet('normal', 'no-caret', 'fixed-options', 'ime-disabled', 'fixed-width', 'cleanup-before', 'controlled-cleanup')]
+    [ValidateSet('normal', 'no-caret', 'fixed-options', 'ime-disabled', 'fixed-width', 'cleanup-before', 'controlled-cleanup', 'application-policy')]
     [string[]]$Modes = @('normal', 'no-caret', 'fixed-options', 'ime-disabled'),
     [ValidateRange(1, 5)][int]$Repetitions = 2,
     [Parameter(Mandatory)][string]$OutputDirectory
@@ -14,6 +14,7 @@ $project = Join-Path $root 'samples/EditorWaitDiagnostics/EditorWaitDiagnostics.
 & dotnet build $project -c Release --nologo -v quiet
 if ($LASTEXITCODE -ne 0) { throw 'Diagnostic build failed.' }
 Copy-Item (Join-Path (Split-Path $project) 'Program.cs') (Join-Path $output 'Program.cs')
+Copy-Item (Join-Path $root 'samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs') (Join-Path $output 'ApplicationComCleanupPolicy.cs')
 $executable = Join-Path (Split-Path $project) 'bin/Release/net10.0-windows/EditorWaitDiagnostics.exe'
 for ($iteration = 1; $iteration -le $Repetitions; $iteration++) {
     $order = @($Modes)

@@ -1,0 +1,53 @@
+{
+  "diagnosticOnly": true,
+  "productionIntegration": false,
+  "releaseGatePassed": false,
+  "rows": 1000,
+  "updates": 50,
+  "textWrites": 10000,
+  "repetitions": 3,
+  "results": [
+    {
+      "run": "1-application-policy",
+      "mode": "application-policy",
+      "updateMilliseconds": 6762.801,
+      "updateAllocatedBytes": 821661264,
+      "finalStepMilliseconds": 168.8054
+    },
+    {
+      "run": "1-normal",
+      "mode": "normal",
+      "updateMilliseconds": 19884.8379,
+      "updateAllocatedBytes": 819669696,
+      "finalStepMilliseconds": 13012.2142
+    },
+    {
+      "run": "2-application-policy",
+      "mode": "application-policy",
+      "updateMilliseconds": 7094.4525,
+      "updateAllocatedBytes": 821639208,
+      "finalStepMilliseconds": 187.1207
+    },
+    {
+      "run": "2-normal",
+      "mode": "normal",
+      "updateMilliseconds": 21403.0425,
+      "updateAllocatedBytes": 819720848,
+      "finalStepMilliseconds": 13385.0919
+    },
+    {
+      "run": "3-application-policy",
+      "mode": "application-policy",
+      "updateMilliseconds": 6872.2539,
+      "updateAllocatedBytes": 821638120,
+      "finalStepMilliseconds": 168.2037
+    },
+    {
+      "run": "3-normal",
+      "mode": "normal",
+      "updateMilliseconds": 21277.5017,
+      "updateAllocatedBytes": 819705648,
+      "finalStepMilliseconds": 13827.2876
+    }
+  ]
+}
