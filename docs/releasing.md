@@ -1,6 +1,6 @@
-# Preparing an experimental release
+# Experimental release process
 
-The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The candidate version is 0.1.0-alpha.3, defined in Directory.Build.props. Source archives and NuGet packages are intended for experimental evaluation.
+The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The current version is 0.1.0-alpha.3, defined in Directory.Build.props. Source archives and NuGet packages are intended for experimental evaluation.
 
 ## Required owner decisions
 
@@ -25,7 +25,7 @@ Use [NuGet Trusted Publishing](https://learn.microsoft.com/en-us/nuget/nuget-org
 
 The workflow rejects other branches or mismatched versions. The validation job has no publishing permission; only the publishing job requests an OIDC identity token (`id-token: write`). `NuGet/login@v1` exchanges it for a temporary credential immediately before the push. The environment name must match the NuGet policy. Core publishes before WPF. Runs are serialized; duplicate versions are skipped to permit retries after partial publication.
 
-The CLI also pushes the adjacent symbol package. Package versions are immutable: increment the prerelease suffix for corrections, and never use a retry to replace published contents. After indexing, repeat installation in a fresh WPF project using NuGet.org and update the README availability text. Local preparation alone does not publish packages. Version `0.1.0-alpha.1` was published on September 18, 2026 from commit `78c88fb` by [Publish NuGet run 1](https://github.com/signalnotnoise/ui-framework/actions/runs/35395414259). The trusted policy, `NUGET_USER=signalNotNoise`, and `nuget` environment restricted to `main` are configured.
+The CLI also pushes the adjacent symbol package. Package versions are immutable: increment the prerelease suffix for corrections, and never use a retry to replace published contents. After indexing, repeat installation in a fresh WPF project using NuGet.org and update the README availability text. Local preparation alone does not publish packages. Version `0.1.0-alpha.1` was published on September 18, 2026 from commit `78c88fb` by [Publish NuGet run 1](https://github.com/signalnotnoise/ui-framework/actions/runs/35395414259). Version `0.1.0-alpha.3` was published on September 26, 2026 from commit `520173d` by [Publish NuGet run 6](https://github.com/signalnotnoise/ui-framework/actions/runs/36231322862). Both package IDs were indexed, and a new WPF project restored the core and WPF packages from NuGet.org using an empty package cache and completed a zero-warning Release build. The trusted policy, `NUGET_USER=signalNotNoise`, and `nuget` environment restricted to `main` are configured.
 
 ## Validation
 
@@ -33,7 +33,9 @@ Run tools/Test-Documentation.ps1 to verify the README, latest versioned changelo
 
 The test dependencies remain explicitly pinned together in the single test project. Upgrade the MSTest adapter and framework as a pair, then run Test-Release on the repository's .NET 10 SDK and Windows WPF runtime. Central package management is deferred until multiple projects need shared package versions; introducing it alone would not improve the current runtime contract.
 
-Before any production-readiness claim, record manual visible-window IME composition (including scrolling and regeneration), keyboard navigation, screen-reader announcements, high-contrast behavior and full-application frame/scroll performance. Automated peer and focus tests do not establish these outcomes. Prerelease APIs may change without compatibility guarantees; behavioral changes belong in the Unreleased changelog and require a new package version before publishing. This hardening work does not authorize or perform a publication.
+Before any production-readiness claim, record manual visible-window IME composition (including scrolling and regeneration), keyboard navigation, screen-reader announcements, high-contrast behavior and full-application frame/scroll performance. Automated peer and focus tests do not establish these outcomes. Prerelease APIs may change without compatibility guarantees; behavioral changes belong in the Unreleased changelog and require a new package version before publishing.
+
+For `0.1.0-alpha.3`, visible typing, selection, replace, undo and redo; installed-IME composition start, update, commit and cancel; screen-reader names, focus, state and text-change announcements; and repeated open/close without cleanup errors or lingering processes were accepted manually before publication.
 
 Local verification on September 18, 2026: Release build completed with zero warnings/errors; 41 MSTest tests, 15 visual-stress checks and 21 full-stress assertions passed. The isolated package consumer also passed. Full stress results are recorded in artifacts/release-validation/stress.json. Hosted validation and publishing both passed. After NuGet indexing completed, a fresh WPF consumer restored both published packages from NuGet.org using an empty cache and passed rendering, click, retained-control and observable-update checks.
 

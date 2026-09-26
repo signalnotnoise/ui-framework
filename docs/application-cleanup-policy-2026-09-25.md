@@ -53,3 +53,13 @@ virtualized, and themed full-list baselines remained alongside the editor case.
 
 Evidence:
 `docs/performance-evidence/2026-09-26-editor-cleanup-release/release/summary.json`
+
+## Publication
+
+Manual visible editor, installed-IME, screen-reader, and repeated open/close
+acceptance passed before publication. Hosted validation passed for commit
+`520173d`, and trusted [Publish NuGet run 6](https://github.com/signalnotnoise/ui-framework/actions/runs/36231322862)
+published `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf`
+`0.1.0-alpha.3` on September 26, 2026. Both packages were then restored from
+NuGet.org into a new WPF project using an empty package cache; the Release build
+completed with zero warnings and errors.

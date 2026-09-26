@@ -3,7 +3,9 @@
 `0.1.0-alpha.3-local.2` is an immutable local integration package built from the
 dirty working tree at framework revision
 `2db7a9a6cdde0fa52c458a9206219348f4ae0bcd`. It adds the production
-`WpfComCleanupPolicy`; it is not yet a NuGet.org release.
+`WpfComCleanupPolicy` and remains the exact package used for the retained
+consumer comparison. The corresponding framework release is now available from
+NuGet.org as `0.1.0-alpha.3`.
 
 Lab-Feedback-WPF pins `SignalNotNoise.UI.Wpf` exactly to
 `[0.1.0-alpha.3-local.2]`, with core resolved transitively to the same version.

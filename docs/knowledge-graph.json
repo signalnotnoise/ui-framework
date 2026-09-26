@@ -505,7 +505,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Current package version 0.1.0-alpha.3; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Published package version 0.1.0-alpha.3; experimental MIT-licensed source and NuGet preview with Windows validation, fresh NuGet.org package consumers, immutable workflow action pins and separate trusted publishing.",
       "sources": [
         "Directory.Build.props",
         "global.json",

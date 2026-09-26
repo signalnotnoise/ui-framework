@@ -4,6 +4,8 @@
 
 ## 0.1.0-alpha.3 — September 26, 2026
 
+Third experimental NuGet preview, published through GitHub Actions Trusted Publishing after the editor cleanup release gate and manual editor, IME, screen-reader, and lifecycle acceptance passed.
+
 - Add `WpfComCleanupPolicy`, an explicit application-owned WPF lifecycle API that
   defers COM wrapper cleanup to idle boundaries and drains it after native hosts
   are disposed. The 1,000-editor release workload now completes without the
