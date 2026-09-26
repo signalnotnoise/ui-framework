@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.3 — September 26, 2026
+
+- Add `WpfComCleanupPolicy`, an explicit application-owned WPF lifecycle API that
+  defers COM wrapper cleanup to idle boundaries and drains it after native hosts
+  are disposed. The 1,000-editor release workload now completes without the
+  reproduced late `TextBox.Text` stalls.
 - Add `FlexColumn`, keyed `Dock` composition, and bound `SplitPane` layouts with retained children, native keyboard/mouse resizing, minimum extents and first-pane collapse.
 - Reduce enum-validation overhead while retaining invalid-description checks, and cover layout sizing, keyed retention, splitter bindings and disposal with regression tests.
 - Add isolated workspace and actual-consumer diagnostics, layout probes and timeout metadata; retain repeated runs, failed experiments and release limitations.

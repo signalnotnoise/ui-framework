@@ -1,10 +1,8 @@
 #requires -Version 7.0
 param([Parameter(Mandatory)][string]$ConsumerProject,
     [Parameter(Mandatory)][string]$OutputDirectory,
-    [ValidateRange(3,15)][int]$Samples = 3, [switch]$CompareFileVirtualization,
-    [switch]$CompareComCleanup)
+    [ValidateRange(3,15)][int]$Samples = 3, [switch]$CompareFileVirtualization)
 $ErrorActionPreference = 'Stop'
-if ($CompareComCleanup -and $CompareFileVirtualization) { throw 'Compare one independent change per campaign.' }
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $consumer = [IO.Path]::GetFullPath($ConsumerProject)
 $consumerRoot = Split-Path (Split-Path $consumer)
@@ -33,7 +31,6 @@ try {
     $executable = Join-Path $projectRoot 'samples/ConsumerDiagnostics/bin/Release/net10.0-windows/ConsumerDiagnostics.dll'
     $runs = [Collections.Generic.List[object]]::new()
     $scenarios = if ($CompareFileVirtualization) { @('full-tree','virtualized-tree') } else { @('window','splitter') }
-    if ($CompareComCleanup) { $scenarios = @('default-cleanup','application-cleanup') }
     foreach ($mode in @('clean','probes')) {
         for ($sample=0; $sample -le $Samples; $sample++) {
             $order = if ($sample % 2) { @($scenarios[1],$scenarios[0]) } else { $scenarios }
@@ -46,8 +43,7 @@ try {
                 $start.RedirectStandardOutput=$true; $start.RedirectStandardError=$true
                 $arguments = @($executable,'--report',$report)
                 if ($mode -eq 'probes') { $arguments += '--probe-layout' }
-                if ($scenario -eq 'splitter' -or $CompareFileVirtualization -or $CompareComCleanup) { $arguments += '--resize-navigation' }
-                if ($scenario -eq 'application-cleanup') { $arguments += '--experimental-com-cleanup' }
+                if ($scenario -eq 'splitter' -or $CompareFileVirtualization) { $arguments += '--resize-navigation' }
                 if ($scenario -eq 'virtualized-tree') { $arguments += '--virtualize-files' }
                 if ($scenario -eq 'full-tree') { $arguments += '--full-files' }
                 foreach ($argument in $arguments) { $start.ArgumentList.Add($argument) }
@@ -62,7 +58,7 @@ try {
                 } finally { $process.Dispose() }
                 $processWatch.Stop()
                 $result = Get-Content $report -Raw | ConvertFrom-Json
-                if ($result.ExperimentalComCleanup -ne ($scenario -eq 'application-cleanup')) { throw 'Unexpected consumer cleanup policy.' }
+                if ($result.ApplicationOwnedComCleanup -ne $true) { throw 'Expected application-owned cleanup policy.' }
                 if ($result.Students -ne 1000 -or $result.Files -ne 1000 -or $result.Operations -ne 50) { throw 'Unexpected consumer workload.' }
                 if ($sample -gt 0) { $runs.Add([pscustomobject]@{mode=$mode; scenario=$scenario; result=$result; processMs=$processWatch.Elapsed.TotalMilliseconds}) }
                 [ordered]@{ completed=$true; processMilliseconds=$processWatch.Elapsed.TotalMilliseconds; includesShutdown=$true } |

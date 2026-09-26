@@ -400,7 +400,7 @@
       "id": "stress",
       "label": "Stress workload",
       "status": "implemented",
-      "summary": "1000 mounted rows, 10000 projected writes, mixed edits, filters, remounts, and lifecycle balance measurements. Separate workspace and editor diagnostics do not replace the release gate. An experimental application-owned COM cleanup policy and counted native lifetime fixture remain outside the framework API and production consumer.",
+      "summary": "1000 mounted rows, 10000 projected writes, mixed edits, filters, remounts, and lifecycle balance measurements. The WPF package exposes one application-owned COM cleanup policy; the editor release workload and production consumer use it with explicit shutdown ownership.",
       "sources": [
         "samples/Counter/StressRunner.cs",
         "samples/Counter/Diagnostics/LayoutEditorComparison.cs",
@@ -418,11 +418,14 @@
           "samples/ConsumerDiagnostics/FileTreeChecks.cs",
           "docs/file-tree-virtualization-2026-09-24.md",
           "tools/Test-ConsumerLayout.ps1",
+          "tools/Test-ConsumerPackages.ps1",
+          "docs/consumer-package-2026-09-25.md",
           "docs/consumer-layout-2026-09-24.md",
           "docs/layout-isolation-2026-09-24.md",
         "docs/editor-timeout-investigation.md",
         "samples/EditorWaitDiagnostics/Program.cs",
-        "samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs",
+        "UI Framework.Wpf/WpfComCleanupPolicy.cs",
+        "tests/UI Framework.Checks/WpfComCleanupPolicyTests.cs",
         "samples/ComCleanupLifecycle/Program.cs",
         "samples/ComCleanupLifecycle/ComLifetimeProbe.cpp",
         "tools/Test-ComCleanupLifecycle.ps1",
@@ -502,7 +505,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Current package version 0.1.0-alpha.2; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Current package version 0.1.0-alpha.3; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -822,5 +825,5 @@
       "to": "virtualization"
     }
   ],
-  "releaseVersion": "0.1.0-alpha.2"
+  "releaseVersion": "0.1.0-alpha.3"
 }

@@ -51,6 +51,7 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
+        using var cleanupPolicy = new WpfComCleanupPolicy(Dispatcher.CurrentDispatcher);
         var count = new State<int>(0);
         using var host = new ViewHost(() => VStack(
             Text($"Count: {count.Value}").FontSize(24),

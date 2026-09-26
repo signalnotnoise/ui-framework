@@ -1,0 +1,18 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\UI Framework\UI Framework.csproj (in 81 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\packages-alpha.3-local.1\SignalNotNoise.UI.0.1.0-alpha.3-local.1.nupkg'.
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\packages-alpha.3-local.1\SignalNotNoise.UI.0.1.0-alpha.3-local.1.snupkg'.
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\UI Framework.Wpf.csproj (in 88 ms).
+  1 of 2 projects are up-to-date for restore.
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\packages-alpha.3-local.1\SignalNotNoise.UI.Wpf.0.1.0-alpha.3-local.1.nupkg'.
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\packages-alpha.3-local.1\SignalNotNoise.UI.Wpf.0.1.0-alpha.3-local.1.snupkg'.
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\package-validation\91d35ca0bf344e3b815bd0345e81eea9\PackageSmoke.csproj (in 173 ms).
+Package installation, transitive core dependency, rendering, click, and state update passed.
+Packaged themed file label and interactive close content passed.
+Native interop: 1000 retained updates, 1.96 ms, 1024040 UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.
+Validated packages: C:\Users\iotero\Dev\personal\UI Framework\artifacts\packages-alpha.3-local.1

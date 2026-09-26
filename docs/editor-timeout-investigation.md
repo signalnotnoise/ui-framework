@@ -1,5 +1,10 @@
 # Editor benchmark timeout investigation — September 24, 2026
 
+> September 26 resolution: `WpfComCleanupPolicy` moves COM-wrapper cleanup to
+> application-owned idle boundaries. The unchanged 1,000-editor diagnostic
+> reduces final updates from 12.73-13.38 seconds to 0.19-0.22 seconds, and the
+> seven-sample release gate passes. The original diagnosis below is retained.
+
 Follow-up: [primitive isolation and layout probes](layout-isolation-2026-09-24.md) did not reproduce the large adapter gap and identified submission-list arrangement as the dominant cost in the representative workspace. The original evidence below remains unchanged.
 
 The September 23 layout-editor timeout is not established as a regression from the workspace primitives. The pre-layout revision and candidate both pause inside WPF Text Services during programmatic text replacement. A standalone WPF program with no framework project or package references also reproduces a long wait in the same native text-services call path.

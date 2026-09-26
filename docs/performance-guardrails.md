@@ -16,15 +16,14 @@ Run from PowerShell 7 on Windows with the .NET 10 SDK and full Git history:
 ./tools/Test-Performance.ps1 -BaselineRef <revision> -IncludeLayoutEditors
 ```
 
-For the [application-owned COM cleanup experiment](application-cleanup-policy-2026-09-25.md),
-add `-ExperimentalComCleanup -IncludeLayoutEditors -ReportOnly`. This explicit
-opt-in applies the same experimental policy to both editor revisions, retains all
-other scenarios and budgets, and marks its summary ineligible for release. It is
-not enabled in either CI workflow and cannot clear the ordinary editor gate.
-The summary's `releaseEligible` field is false for experimental cleanup, omitted
-editor scenarios, fewer than seven samples, a nonaccepted reference revision, or
-any exceeded metric budget. It describes performance evidence only; correctness
-and package checks are still required separately.
+The layout/editor scenario uses the production
+[`WpfComCleanupPolicy`](application-cleanup-policy-2026-09-25.md) on both
+revisions. The accepted baseline predates that API, so the runner overlays the
+candidate's exact policy source into its isolated baseline tree. This isolates
+renderer changes while preserving identical cleanup behavior and workload. The
+summary's `releaseEligible` field is false for omitted editor scenarios, fewer
+than seven samples, a nonaccepted reference revision, or any exceeded metric
+budget. Correctness, lifecycle, package, and consumer checks remain separate.
 
 The runner builds the accepted source revision in an isolated archive and the current working tree in Release mode. Both use the current Counter sample workload. It alternates baseline and candidate processes, discards one warmup process per side and scenario, and records seven measured processes per side by default. Keep the machine otherwise idle during measurement. The default increased from three on September 20 after broad timing ranges produced inconsistent failures; budgets, workloads and the accepted source revision are unchanged. CI and release workflows inherit the larger sample count. A failed run still fails immediately after analysis; there is no automatic retry-until-pass behavior.
 
@@ -32,7 +31,12 @@ Each process uses 1,000 logical rows and 50 deterministic mixed operations. Thre
 
 The optional layout/editor scenario adds a themed adaptive grid with 1,000 editors, alternating available widths and read-only state, and changing text every five steps. It reports the same mount/update, allocation and body-work fields (there are no component mount/unmount hooks in this workload). Both revisions use the identical current harness. It supplements all three existing scenarios and uses the unchanged default budgets. StateList enumeration continues to use snapshots; the full-list workload includes its materialization cost.
 
-The editor scenario runs on WPF's application dispatcher with a native window source. On September 23, its initial headless version and subsequent window/dispatcher probes stalled inside WPF TextStore lock handling on this machine, including on the accepted baseline. The workload is retained as an optional diagnostic; there is no valid paired layout/editor latency result yet. See the [review resolution](review-resolution-2026-09-23.md). Do not disable input methods or reduce the control/operation count to turn that stall into a passing result.
+The editor scenario runs on WPF's application dispatcher with a native window
+source. Earlier runtime-default runs stalled inside WPF TextStore lock handling,
+including on the accepted baseline. The production application-owned policy
+retains input methods and the full 1,000-editor/50-operation workload while moving
+COM cleanup outside property setters. Do not disable input methods or reduce the
+control/operation count to obtain a passing result.
 
 The fixed reference is the published `0.1.0-alpha.1` source, `78c88fb901c202e3c2e49b6de300d1ce2369e00b`. [The budget file](../tools/performance-baseline.json) permits at most 10% median time growth, 2% allocation growth, and no component-work growth. These are initial detection thresholds, not permission to spend performance unnecessarily. Do not weaken them or advance the reference merely to pass. Preserve evidence and explicitly justify any baseline promotion; also compare against the previous revision for each optimization so improvements do not silently erode.
 

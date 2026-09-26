@@ -7,14 +7,15 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot
-$output = [IO.Path]::GetFullPath($OutputDirectory, $root)
+$output = [IO.Path]::GetFullPath((Join-Path $root $OutputDirectory))
 if (Test-Path $output) { throw 'Use a new output directory to retain prior evidence.' }
 New-Item -ItemType Directory -Path $output | Out-Null
 $project = Join-Path $root 'samples/EditorWaitDiagnostics/EditorWaitDiagnostics.csproj'
-& dotnet build $project -c Release --nologo -v quiet
+$config = Join-Path $root 'tools/EditorWaitDiagnostics.NuGet.Config'
+& dotnet build $project -c Release --nologo -v quiet --configfile $config
 if ($LASTEXITCODE -ne 0) { throw 'Diagnostic build failed.' }
 Copy-Item (Join-Path (Split-Path $project) 'Program.cs') (Join-Path $output 'Program.cs')
-Copy-Item (Join-Path $root 'samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs') (Join-Path $output 'ApplicationComCleanupPolicy.cs')
+Copy-Item (Join-Path $root 'UI Framework.Wpf/WpfComCleanupPolicy.cs') (Join-Path $output 'WpfComCleanupPolicy.cs')
 $executable = Join-Path (Split-Path $project) 'bin/Release/net10.0-windows/EditorWaitDiagnostics.exe'
 for ($iteration = 1; $iteration -le $Repetitions; $iteration++) {
     $order = @($Modes)
@@ -26,9 +27,10 @@ for ($iteration = 1; $iteration -le $Repetitions; $iteration++) {
         $start.CreateNoWindow = $true
         $start.RedirectStandardOutput = $true
         $start.RedirectStandardError = $true
-        $start.ArgumentList.Add($mode)
-        $start.ArgumentList.Add((Join-Path $output "$iteration-$mode.json"))
+        $report = Join-Path $output "$iteration-$mode.json"
+        $start.Arguments = '"' + $mode + '" "' + $report + '"'
         $process = [Diagnostics.Process]::Start($start)
+        if ($null -eq $process) { throw "Could not start editor diagnostic executable: $executable" }
         try {
             $stdout = $process.StandardOutput.ReadToEndAsync()
             $stderr = $process.StandardError.ReadToEndAsync()

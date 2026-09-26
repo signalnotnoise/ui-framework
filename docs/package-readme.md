@@ -10,7 +10,7 @@ Experimental SwiftUI-inspired UI components in C#. Requires .NET 10; the WPF ren
 In a .NET 10 WPF application, install the preview:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.2
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.3
 ```
 
 In your WPF window constructor, after `InitializeComponent()`:
@@ -26,6 +26,21 @@ Closed += (_, _) => host.Dispose();
 ```
 
 Create and access state on the UI thread. State reads during view builds become subscriptions; updates are batched. Dispose the host when its window closes. Use stable `.Id(...)` keys for dynamic sibling components.
+
+For applications with substantial WPF text editing, install one cleanup owner
+before constructing controls and close it after disposing windows and native
+hosts:
+
+```csharp
+var app = new Application();
+using var cleanup = new UI_Framework.Wpf.WpfComCleanupPolicy(
+    app.Dispatcher, error => Trace.WriteLine(error));
+app.Run(window);
+```
+
+The policy changes CLR COM-wrapper cleanup for the lifetime of that STA and
+cannot restore eager cleanup. The application owns failure reporting and shutdown
+ordering.
 
 ## Preview limitations
 

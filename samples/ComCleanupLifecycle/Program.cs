@@ -25,7 +25,7 @@ internal static class Program
         Action? duringCleanup = null;
         var depth = 0;
         var maxDepth = 0;
-        var policy = new ApplicationComCleanupPolicy(app.Dispatcher, () =>
+        var policy = new WpfComCleanupPolicy(app.Dispatcher, () =>
         {
             depth++;
             maxDepth = Math.Max(maxDepth, depth);

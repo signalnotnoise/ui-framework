@@ -5,14 +5,12 @@ param(
     [string]$OutputDirectory,
     [switch]$ReportOnly,
     [switch]$IncludeLayoutEditors,
-    [switch]$ExperimentalComCleanup,
     [string]$DumpToolPath
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectRoot
 try {
-    if ($ExperimentalComCleanup -and -not $IncludeLayoutEditors) { throw 'ExperimentalComCleanup requires IncludeLayoutEditors.' }
     if ($DumpToolPath) { $DumpToolPath = (Resolve-Path -LiteralPath $DumpToolPath -ErrorAction Stop).Path }
     $budget = Get-Content tools/performance-baseline.json -Raw | ConvertFrom-Json
     if (-not $BaselineRef) { $BaselineRef = $budget.revision }
@@ -38,11 +36,11 @@ try {
         New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
         Copy-Item -LiteralPath $_.FullName -Destination $destination
     }
-    # Counter links this experimental application-owned source. Copy it unchanged
-    # to both harnesses; it is never installed unless explicitly requested.
-    $policyDestination = Join-Path $baseline 'samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs'
+    # The accepted baseline predates the production policy. Overlay the candidate's
+    # exact lifecycle implementation so the editor comparison isolates renderer work.
+    $policyDestination = Join-Path $baseline 'UI Framework.Wpf/WpfComCleanupPolicy.cs'
     New-Item -ItemType Directory -Path (Split-Path $policyDestination) -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $projectRoot 'samples/ComCleanupLifecycle/ApplicationComCleanupPolicy.cs') -Destination $policyDestination
+    Copy-Item -LiteralPath (Join-Path $projectRoot 'UI Framework.Wpf/WpfComCleanupPolicy.cs') -Destination $policyDestination
     foreach ($root in @($baseline, $projectRoot)) {
         & dotnet build (Join-Path $root 'samples/Counter/Counter.csproj') -c Release --disable-build-servers -m:1 -warnaserror
         if ($LASTEXITCODE -ne 0) { throw "Benchmark build failed: $root" }
@@ -70,7 +68,6 @@ try {
     }
     $scenarios = [ordered]@{ 'full-list' = @(); 'virtualized' = @('--virtualized'); 'themed-full-list' = @('--themed') }
     if ($IncludeLayoutEditors) { $scenarios['layout-editors'] = @('--layout-editors') }
-    if ($ExperimentalComCleanup) { $scenarios['layout-editors'] += '--experimental-com-cleanup' }
     $runs = [System.Collections.Generic.List[object]]::new()
     foreach ($scenario in $scenarios.Keys) {
         # One discarded process per side warms filesystem/runtime caches. Measured
@@ -120,8 +117,7 @@ try {
                 } finally { $process.Dispose() }
                 $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
                 if ($scenario -eq 'layout-editors') {
-                    $expectedPolicy = if ($ExperimentalComCleanup) { 'experimental-application-owned' } else { 'runtime-default' }
-                    if ($result.CleanupPolicy -ne $expectedPolicy) { throw "Unexpected editor cleanup policy in $report" }
+                    if ($result.CleanupPolicy -ne 'application-owned') { throw "Unexpected editor cleanup policy in $report" }
                 }
                 if ($result.SchemaVersion -ne 2 -or $result.Rows -ne 1000 -or $result.MixedOperations -ne 50 -or $result.Scenario -ne $scenario) {
                     throw "Unexpected benchmark workload in $report"
@@ -176,8 +172,8 @@ try {
         candidateRevision = (& git rev-parse HEAD).Trim(); candidateDirty = [bool](& git status --porcelain)
         sdk = (& dotnet --version).Trim(); os = [Environment]::OSVersion.VersionString; processorCount = [Environment]::ProcessorCount
         samples = $Samples; warmupProcessesPerSide = 1; rows = 1000; operations = 50
-        experimentalComCleanup = [bool]$ExperimentalComCleanup
-        releaseEligible = -not [bool]$ExperimentalComCleanup -and [bool]$IncludeLayoutEditors -and $Samples -ge 7 -and
+        applicationOwnedComCleanup = [bool]$IncludeLayoutEditors
+        releaseEligible = [bool]$IncludeLayoutEditors -and $Samples -ge 7 -and
             $baselineCommit -eq $budget.revision -and @($comparisons | Where-Object regression).Count -eq 0
         budgetPolicy = $budget
         runtimeVersions = @($runs.result.Runtime | Sort-Object -Unique)

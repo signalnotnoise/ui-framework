@@ -1,5 +1,11 @@
 # Themed reconciliation and application cleanup investigation
 
+> September 26 follow-up: `WpfComCleanupPolicy` is now a package API and the
+> production consumer owns it by default. The seven-sample framework gate passed
+> all 32 metrics with `releaseEligible: true`, and the 15-sample consumer package
+> comparison passed all 28 checks. The historical experimental results below are
+> retained as investigation evidence.
+
 The previous three-sample comparison missed the themed update time budget
 (+12.97% versus 12%). This investigation retains that failure and the original
 accepted baseline and budgets.

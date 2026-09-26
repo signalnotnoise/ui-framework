@@ -45,8 +45,7 @@ internal static class LayoutEditorComparison
         }
         var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
         var watch = Stopwatch.StartNew();
-        var policy = args.Contains("--experimental-com-cleanup")
-            ? new ApplicationComCleanupPolicy(Dispatcher.CurrentDispatcher) : null;
+        using var policy = new WpfComCleanupPolicy(Dispatcher.CurrentDispatcher);
         try
         {
             using var host = new ViewHost(Build);
@@ -77,20 +76,15 @@ internal static class LayoutEditorComparison
             var allocation = GC.GetAllocatedBytesForCurrentThread();
             watch.Restart();
             for (var step = 1; step <= 50; step++) { phase.Value = step; await Layout(step); }
-            // Experimental mode includes host teardown and the final cleanup in timing.
-            // Both framework revisions use exactly this workload; normal mode is unchanged.
-            if (policy is not null)
-            {
-                source.RootVisual = null;
-                source.Dispose();
-                host.Dispose();
-                policy.CloseBeforeDispatcherShutdown();
-            }
+            source.RootVisual = null;
+            source.Dispose();
+            host.Dispose();
+            policy.CloseBeforeDispatcherShutdown();
             watch.Stop();
             var result = new
             {
                 SchemaVersion = 2, Scenario = "layout-editors", Rows = 1000, MixedOperations = 50,
-                CleanupPolicy = policy is null ? "runtime-default" : "experimental-application-owned",
+                CleanupPolicy = "application-owned",
                 MountMilliseconds = mountMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
                 Milliseconds = watch.Elapsed.TotalMilliseconds, AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
                 BodyBuilds = builds - mountBuilds, Mounts = 0, Unmounts = 0,
@@ -100,6 +94,6 @@ internal static class LayoutEditorComparison
             File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
             return 0;
         }
-        finally { policy?.CloseBeforeDispatcherShutdown(); }
+        finally { policy.CloseBeforeDispatcherShutdown(); }
     }
 }

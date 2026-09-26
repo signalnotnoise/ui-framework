@@ -1,5 +1,10 @@
 # Source publication and package gate — September 24, 2026
 
+> September 26 resolution: the package now exposes `WpfComCleanupPolicy`, the
+> full seven-sample framework gate passes all 32 checks with
+> `releaseEligible: true`, and the 15-sample consumer comparison passes all 28
+> checks. This document retains the original blocked publication evidence.
+
 Framework source was committed and pushed to `main` as `379cd58c76b9f06856a5777f6325f99acef3ddc6`. The consumer migration and file-tree work was pushed to `signalnotnoise/Lab-Feedback-WPF`, branch `GuidedGrade`, as `da092eef8bf84b4550ba4742a42aab57edb85918`.
 
 Local framework Release validation passed 97 tests, 15 visual checks, 21 stress assertions, and documentation/graph validation, with zero build warnings or errors. The consumer passed 188 tests. [Hosted framework validation](https://github.com/signalnotnoise/ui-framework/actions/runs/36080344572) passed both correctness and the standard performance job.

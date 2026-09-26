@@ -1,6 +1,6 @@
 # Workspace layout
 
-These APIs are implemented in the working source after `d5a94b2`; the pinned `0.1.0-alpha.2-local.3` app packages do not contain them. No package or app migration is implied by this source change.
+These APIs are implemented in the working source after `d5a94b2` and included in the local `0.1.0-alpha.3-local.1` integration package. The app retains its existing native layout adapters; adopting the package does not migrate those call sites. See [local adoption and unresolved performance checks](consumer-package-2026-09-25.md).
 
 ## Vertical fill
 

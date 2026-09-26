@@ -7,6 +7,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../ComCleanupLifecycle/ApplicationComCleanupPolicy.cs" Link="ApplicationComCleanupPolicy.cs" />
+    <ProjectReference Include="../../UI Framework.Wpf/UI Framework.Wpf.csproj" />
   </ItemGroup>
 </Project>

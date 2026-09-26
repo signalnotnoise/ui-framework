@@ -1,6 +1,6 @@
 # Preparing an experimental release
 
-The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The candidate version is 0.1.0-alpha.2, defined in Directory.Build.props. Source archives and NuGet packages are intended for experimental evaluation.
+The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The candidate version is 0.1.0-alpha.3, defined in Directory.Build.props. Source archives and NuGet packages are intended for experimental evaluation.
 
 ## Required owner decisions
 

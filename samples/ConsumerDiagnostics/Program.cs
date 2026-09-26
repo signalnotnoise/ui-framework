@@ -63,9 +63,8 @@ internal static class Program
         var virtualizeFiles = args.Contains("--virtualize-files");
         var startupWatch = Stopwatch.StartNew();
         var startupBytes = GC.GetAllocatedBytesForCurrentThread();
-        // Exercise the actual app-owned opt-in, not a separately linked prototype.
-        typeof(App).GetMethod("ConfigureExperimentalCleanup", BindingFlags.Instance | BindingFlags.NonPublic)!
-            .Invoke(Application.Current, [args]);
+        typeof(App).GetMethod("ConfigureCleanup", BindingFlags.Instance | BindingFlags.NonPublic)!
+            .Invoke(Application.Current, null);
         var window = Construct<MainWindow>(Construct<AssignmentPersistenceService>(database), Construct<CommentPersistenceService>(database));
         var root = (FrameworkElement)window.Content;
         window.Content = null;
@@ -125,6 +124,8 @@ internal static class Program
         watch.Stop();
         var mountMs = watch.Elapsed.TotalMilliseconds;
         var mountBytes = GC.GetAllocatedBytesForCurrentThread() - bytes;
+        var mountDispatcherMs = dispatcherMs;
+        var mountExplicitLayoutMs = explicitLayoutMs;
         startupWatch.Stop();
         var totalStartupBytes = GC.GetAllocatedBytesForCurrentThread() - startupBytes;
         for (DependencyObject? ancestor = students; ancestor is not null; ancestor = VisualTreeHelper.GetParent(ancestor))
@@ -149,6 +150,7 @@ internal static class Program
         var updateBytes = GC.GetAllocatedBytesForCurrentThread() - bytes;
         var measurements = new { StartupMilliseconds = startupWatch.Elapsed.TotalMilliseconds, StartupAllocatedBytes = totalStartupBytes,
             MountLayoutMilliseconds = mountMs, MountLayoutAllocatedBytes = mountBytes,
+            MountDispatcherMilliseconds = mountDispatcherMs, MountExplicitLayoutMilliseconds = mountExplicitLayoutMs,
             UpdateMilliseconds = watch.Elapsed.TotalMilliseconds, UpdateAllocatedBytes = updateBytes,
             DispatcherMilliseconds = dispatcherMs, ExplicitLayoutMilliseconds = explicitLayoutMs,
             Root = rootProbe.Snapshot(), Students = studentProbe.Snapshot(), Files = fileProbe.Snapshot(), Editor = editorProbe.Snapshot() };
@@ -157,7 +159,7 @@ internal static class Program
             throw new InvalidOperationException("Consumer list scrolling lost selection or failed to realize the last student.");
         await FileTreeChecks.Run(files, () => Layout(50), folder, VirtualizingPanel.GetIsVirtualizing(files), editor);
         var result = new { Kind = "actual-consumer-tree-synthetic-data", ProbesEnabled = LayoutProbe.Enabled,
-            ExperimentalComCleanup = (bool)typeof(App).GetProperty("ExperimentalCleanupEnabled", BindingFlags.Instance | BindingFlags.NonPublic)!
+            ApplicationOwnedComCleanup = (bool)typeof(App).GetProperty("CleanupEnabled", BindingFlags.Instance | BindingFlags.NonPublic)!
                 .GetValue(Application.Current)!,
             ResizeNavigation = resizeNavigation,
             VirtualizeFiles = virtualizeFiles,

@@ -1,0 +1,201 @@
+Step 1 start: 0 ms
+Step 1 setters done: 8 ms; text 0.0; caret 0.0; options 6.9
+Step 1 dispatcher resumed: 9 ms
+Step 1 done: 176 ms; setters 8.2; dispatcher 1.6; layout 166.5
+Step 2 start: 176 ms
+Step 2 setters done: 180 ms; text 0.0; caret 0.0; options 3.6
+Step 2 dispatcher resumed: 206 ms
+Step 2 done: 361 ms; setters 3.9; dispatcher 26.1; layout 155.4
+Step 3 start: 361 ms
+Step 3 setters done: 365 ms; text 0.0; caret 0.0; options 4.0
+Step 3 dispatcher resumed: 389 ms
+Step 3 done: 555 ms; setters 4.2; dispatcher 23.3; layout 166.3
+Step 4 start: 555 ms
+Step 4 setters done: 558 ms; text 0.0; caret 0.0; options 2.6
+Step 4 dispatcher resumed: 587 ms
+Step 4 done: 712 ms; setters 2.8; dispatcher 28.9; layout 124.8
+Step 5 start: 712 ms
+Step 5 setters done: 783 ms; text 65.8; caret 0.7; options 4.3
+Step 5 dispatcher resumed: 947 ms
+Step 5 done: 1099 ms; setters 71.4; dispatcher 164.4; layout 151.9
+Step 6 start: 1099 ms
+Step 6 setters done: 1102 ms; text 0.0; caret 0.0; options 2.3
+Step 6 dispatcher resumed: 1120 ms
+Step 6 done: 1243 ms; setters 2.5; dispatcher 18.6; layout 122.5
+Step 7 start: 1243 ms
+Step 7 setters done: 1246 ms; text 0.0; caret 0.0; options 2.4
+Step 7 dispatcher resumed: 1266 ms
+Step 7 done: 1391 ms; setters 2.6; dispatcher 20.3; layout 125.5
+Step 8 start: 1392 ms
+Step 8 setters done: 1395 ms; text 0.0; caret 0.0; options 2.8
+Step 8 dispatcher resumed: 1415 ms
+Step 8 done: 1553 ms; setters 3.0; dispatcher 20.4; layout 137.9
+Step 9 start: 1553 ms
+Step 9 setters done: 1555 ms; text 0.0; caret 0.0; options 2.2
+Step 9 dispatcher resumed: 1577 ms
+Step 9 done: 1690 ms; setters 2.4; dispatcher 21.8; layout 113.3
+Step 10 start: 1690 ms
+Step 10 setters done: 1772 ms; text 54.6; caret 0.7; options 3.6
+Step 10 dispatcher resumed: 1900 ms
+Step 10 done: 2021 ms; setters 81.7; dispatcher 127.5; layout 121.9
+Step 11 start: 2022 ms
+Step 11 setters done: 2024 ms; text 0.0; caret 0.0; options 2.2
+Step 11 dispatcher resumed: 2046 ms
+Step 11 done: 2150 ms; setters 2.5; dispatcher 22.1; layout 104.4
+Step 12 start: 2150 ms
+Step 12 setters done: 2153 ms; text 0.0; caret 0.0; options 2.0
+Step 12 dispatcher resumed: 2171 ms
+Step 12 done: 2300 ms; setters 2.3; dispatcher 18.6; layout 128.3
+Step 13 start: 2300 ms
+Step 13 setters done: 2302 ms; text 0.0; caret 0.0; options 2.3
+Step 13 dispatcher resumed: 2326 ms
+Step 13 done: 2459 ms; setters 2.6; dispatcher 23.6; layout 133.5
+Step 14 start: 2459 ms
+Step 14 setters done: 2461 ms; text 0.0; caret 0.0; options 1.8
+Step 14 dispatcher resumed: 2485 ms
+Step 14 done: 2621 ms; setters 2.0; dispatcher 23.5; layout 136.1
+Step 15 start: 2621 ms
+Step 15 setters done: 2675 ms; text 49.4; caret 0.7; options 3.4
+Step 15 dispatcher resumed: 2794 ms
+Step 15 done: 2903 ms; setters 54.1; dispatcher 118.5; layout 109.0
+Step 16 start: 2903 ms
+Step 16 setters done: 2905 ms; text 0.0; caret 0.0; options 1.8
+Step 16 dispatcher resumed: 2927 ms
+Step 16 done: 3043 ms; setters 2.1; dispatcher 22.4; layout 115.6
+Step 17 start: 3043 ms
+Step 17 setters done: 3045 ms; text 0.0; caret 0.0; options 1.9
+Step 17 dispatcher resumed: 3071 ms
+Step 17 done: 3174 ms; setters 2.2; dispatcher 25.6; layout 103.1
+Step 18 start: 3174 ms
+Step 18 setters done: 3176 ms; text 0.0; caret 0.0; options 1.7
+Step 18 dispatcher resumed: 3195 ms
+Step 18 done: 3297 ms; setters 1.9; dispatcher 19.4; layout 102.0
+Step 19 start: 3297 ms
+Step 19 setters done: 3299 ms; text 0.0; caret 0.0; options 2.0
+Step 19 dispatcher resumed: 3321 ms
+Step 19 done: 3434 ms; setters 2.3; dispatcher 21.2; layout 113.8
+Step 20 start: 3434 ms
+Step 20 setters done: 3505 ms; text 65.0; caret 0.9; options 4.1
+Step 20 dispatcher resumed: 3658 ms
+Step 20 done: 3784 ms; setters 70.9; dispatcher 153.0; layout 125.8
+Step 21 start: 3784 ms
+Step 21 setters done: 3787 ms; text 0.0; caret 0.0; options 2.3
+Step 21 dispatcher resumed: 3813 ms
+Step 21 done: 3931 ms; setters 2.7; dispatcher 26.2; layout 118.6
+Step 22 start: 3931 ms
+Step 22 setters done: 3934 ms; text 0.0; caret 0.0; options 2.6
+Step 22 dispatcher resumed: 3965 ms
+Step 22 done: 4102 ms; setters 3.0; dispatcher 30.6; layout 137.3
+Step 23 start: 4102 ms
+Step 23 setters done: 4105 ms; text 0.0; caret 0.0; options 2.1
+Step 23 dispatcher resumed: 4154 ms
+Step 23 done: 4245 ms; setters 2.5; dispatcher 48.9; layout 91.3
+Step 24 start: 4245 ms
+Step 24 setters done: 4248 ms; text 0.0; caret 0.0; options 2.0
+Step 24 dispatcher resumed: 4273 ms
+Step 24 done: 4389 ms; setters 2.3; dispatcher 25.3; layout 116.0
+Step 25 start: 4389 ms
+Step 25 setters done: 4451 ms; text 55.9; caret 0.6; options 4.3
+Step 25 dispatcher resumed: 4589 ms
+Step 25 done: 4666 ms; setters 61.8; dispatcher 138.4; layout 76.6
+Step 26 start: 4666 ms
+Step 26 setters done: 4668 ms; text 0.0; caret 0.0; options 1.7
+Step 26 dispatcher resumed: 4700 ms
+Step 26 done: 4786 ms; setters 1.9; dispatcher 32.4; layout 85.7
+Step 27 start: 4786 ms
+Step 27 setters done: 4788 ms; text 0.0; caret 0.0; options 1.7
+Step 27 dispatcher resumed: 4820 ms
+Step 27 done: 4902 ms; setters 1.9; dispatcher 31.9; layout 82.7
+Step 28 start: 4902 ms
+Step 28 setters done: 4904 ms; text 0.0; caret 0.0; options 1.8
+Step 28 dispatcher resumed: 4931 ms
+Step 28 done: 5011 ms; setters 2.1; dispatcher 26.6; layout 79.9
+Step 29 start: 5011 ms
+Step 29 setters done: 5013 ms; text 0.0; caret 0.0; options 1.7
+Step 29 dispatcher resumed: 5036 ms
+Step 29 done: 5104 ms; setters 2.0; dispatcher 23.5; layout 67.9
+Step 30 start: 5104 ms
+Step 30 setters done: 5138 ms; text 29.8; caret 0.3; options 2.7
+Step 30 dispatcher resumed: 5242 ms
+Step 30 done: 5310 ms; setters 33.3; dispatcher 103.9; layout 68.1
+Step 31 start: 5310 ms
+Step 31 setters done: 5312 ms; text 0.0; caret 0.0; options 2.1
+Step 31 dispatcher resumed: 5340 ms
+Step 31 done: 5454 ms; setters 2.4; dispatcher 28.2; layout 113.4
+Step 32 start: 5454 ms
+Step 32 setters done: 5456 ms; text 0.0; caret 0.0; options 1.7
+Step 32 dispatcher resumed: 5492 ms
+Step 32 done: 5556 ms; setters 2.0; dispatcher 36.6; layout 63.4
+Step 33 start: 5556 ms
+Step 33 setters done: 5557 ms; text 0.0; caret 0.0; options 1.4
+Step 33 dispatcher resumed: 5581 ms
+Step 33 done: 5645 ms; setters 1.6; dispatcher 23.5; layout 64.6
+Step 34 start: 5645 ms
+Step 34 setters done: 5647 ms; text 0.0; caret 0.0; options 1.2
+Step 34 dispatcher resumed: 5671 ms
+Step 34 done: 5734 ms; setters 1.3; dispatcher 24.2; layout 63.3
+Step 35 start: 5734 ms
+Step 35 setters done: 5761 ms; text 24.2; caret 0.3; options 1.8
+Step 35 dispatcher resumed: 5865 ms
+Step 35 done: 5929 ms; setters 26.6; dispatcher 104.6; layout 63.4
+Step 36 start: 5929 ms
+Step 36 setters done: 5930 ms; text 0.0; caret 0.0; options 1.0
+Step 36 dispatcher resumed: 5945 ms
+Step 36 done: 6002 ms; setters 1.1; dispatcher 14.9; layout 57.1
+Step 37 start: 6002 ms
+Step 37 setters done: 6003 ms; text 0.0; caret 0.0; options 0.8
+Step 37 dispatcher resumed: 6018 ms
+Step 37 done: 6082 ms; setters 0.9; dispatcher 14.6; layout 64.1
+Step 38 start: 6082 ms
+Step 38 setters done: 6083 ms; text 0.0; caret 0.0; options 0.9
+Step 38 dispatcher resumed: 6101 ms
+Step 38 done: 6166 ms; setters 1.0; dispatcher 17.7; layout 65.8
+Step 39 start: 6166 ms
+Step 39 setters done: 6167 ms; text 0.0; caret 0.0; options 0.9
+Step 39 dispatcher resumed: 6195 ms
+Step 39 done: 6290 ms; setters 1.1; dispatcher 27.4; layout 94.9
+Step 40 start: 6290 ms
+Step 40 setters done: 6851 ms; text 559.2; caret 0.3; options 1.5
+Step 40 dispatcher resumed: 6920 ms
+Step 40 done: 6983 ms; setters 561.3; dispatcher 68.8; layout 63.1
+Step 41 start: 6983 ms
+Step 41 setters done: 6984 ms; text 0.0; caret 0.0; options 1.0
+Step 41 dispatcher resumed: 7003 ms
+Step 41 done: 7065 ms; setters 1.1; dispatcher 19.3; layout 61.5
+Step 42 start: 7065 ms
+Step 42 setters done: 7077 ms; text 0.0; caret 0.0; options 0.9
+Step 42 dispatcher resumed: 7096 ms
+Step 42 done: 7159 ms; setters 11.9; dispatcher 19.6; layout 62.4
+Step 43 start: 7159 ms
+Step 43 setters done: 7160 ms; text 0.0; caret 0.0; options 0.9
+Step 43 dispatcher resumed: 7176 ms
+Step 43 done: 7250 ms; setters 1.0; dispatcher 15.8; layout 73.8
+Step 44 start: 7250 ms
+Step 44 setters done: 7251 ms; text 0.0; caret 0.0; options 0.9
+Step 44 dispatcher resumed: 7266 ms
+Step 44 done: 7331 ms; setters 1.0; dispatcher 15.8; layout 64.5
+Step 45 start: 7331 ms
+Step 45 setters done: 7347 ms; text 13.9; caret 0.3; options 1.3
+Step 45 dispatcher resumed: 7437 ms
+Step 45 done: 7506 ms; setters 15.8; dispatcher 90.4; layout 68.7
+Step 46 start: 7506 ms
+Step 46 setters done: 7507 ms; text 0.0; caret 0.0; options 1.0
+Step 46 dispatcher resumed: 7524 ms
+Step 46 done: 7592 ms; setters 1.1; dispatcher 17.4; layout 67.5
+Step 47 start: 7592 ms
+Step 47 setters done: 7593 ms; text 0.0; caret 0.0; options 1.2
+Step 47 dispatcher resumed: 7609 ms
+Step 47 done: 7675 ms; setters 1.4; dispatcher 15.7; layout 66.0
+Step 48 start: 7675 ms
+Step 48 setters done: 7676 ms; text 0.0; caret 0.0; options 1.0
+Step 48 dispatcher resumed: 7690 ms
+Step 48 done: 7753 ms; setters 1.1; dispatcher 14.3; layout 62.6
+Step 49 start: 7753 ms
+Step 49 setters done: 7754 ms; text 0.0; caret 0.0; options 1.1
+Step 49 dispatcher resumed: 7770 ms
+Step 49 done: 7829 ms; setters 1.3; dispatcher 15.7; layout 59.4
+Step 50 start: 7829 ms
+Step 50 setters done: 21070 ms; text 13211.9; caret 0.7; options 3.4
+Step 50 dispatcher resumed: 21150 ms
+Step 50 done: 21211 ms; setters 13241.0; dispatcher 79.8; layout 60.6
+

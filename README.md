@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.2 preview · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.3 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
@@ -12,12 +12,12 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.2` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.2) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.2) (Windows renderer). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.3` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.3) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.3) (Windows renderer). The WPF package brings in the core automatically.
 
 In a .NET 10 WPF project:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.2
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.3
 ```
 
 See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md). To build and verify local packages instead, run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
@@ -57,6 +57,12 @@ var host = new ViewHost(() => VStack(
 ```
 
 Place the host in a WPF window and dispose it when the window closes. Create and access observable state on the UI thread. Reads during a build become subscriptions; conditional reads are tracked again each build. Multiple changes are batched through the dispatcher.
+
+Applications with substantial WPF text editing should create one
+`WpfComCleanupPolicy` on the application STA before constructing controls, then
+close it after disposing windows and native hosts but before dispatcher shutdown.
+This replaces CLR eager COM cleanup with explicit idle cleanup on that STA; see
+[the lifecycle guide](docs/application-cleanup-policy-2026-09-25.md).
 
 ## Reusable components
 
@@ -149,4 +155,3 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Still planned | General animation, advanced styling, hot reload integration, and non-Windows backends. |
 
 For a demo already running in Debug, stop it before rebuilding, or use `dotnet run --project samples/Counter -c Release` to build and run separately.
-
