@@ -10,6 +10,10 @@ A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the 
 
 See the [documentation index](docs/README.md) for API guides, architectural decisions, benchmarks, and the next milestone.
 
+![Binding stress lab from samples/Counter: a 50-item project board with native WPF text boxes, check boxes and buttons, summary cards, and a shared work item inspector](docs/images/stress-lab.png)
+
+*The `samples/Counter` binding stress lab, rendered by SignalNotNoise.UI.Wpf as native WPF controls. This is the offscreen capture from the automated `--stress --snapshot` run in CI on `windows-latest`.*
+
 ## NuGet preview
 
 Version `0.1.0-alpha.3` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.3) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.3) (Windows renderer). The WPF package brings in the core automatically.
