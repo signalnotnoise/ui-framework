@@ -11,6 +11,20 @@ permissions:
   contents: read
 
 jobs:
+  knowledge-graph:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate graph tooling and committed outputs
+        shell: pwsh
+        run: |
+          python --version
+          python scripts/test-knowledge-graph.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/update-knowledge-graph.py --check
   performance:
     runs-on: windows-latest
     timeout-minutes: 60

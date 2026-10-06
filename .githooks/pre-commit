@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+if command -v python3 >/dev/null 2>&1 && python3 -c "import sys; sys.exit(sys.version_info.major != 3)" >/dev/null 2>&1; then
+    python3 scripts/update-knowledge-graph.py
+else
+    python scripts/update-knowledge-graph.py
+fi
+git add -- docs/knowledge-graph/graph.json docs/knowledge-graph/graph.html

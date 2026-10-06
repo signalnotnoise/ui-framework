@@ -155,3 +155,23 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Still planned | General animation, advanced styling, hot reload integration, and non-Windows backends. |
 
 For a demo already running in Debug, stop it before rebuilding, or use `dotnet run --project samples/Counter -c Release` to build and run separately.
+
+### Interactive repository map
+
+Open the [offline interactive graph](docs/knowledge-graph/graph.html), or see its
+[JSON data](docs/knowledge-graph/graph.json) and [generation guide](docs/knowledge-graph/README.md).
+It combines the curated architecture above with file membership, Markdown links,
+and explicit .NET project references. It is not a C# semantic call graph.
+
+Python 3 and Git are required. Enable automatic graph updates once per clone:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+The hook reads staged files and stages only the two interactive graph outputs.
+For an unstaged preview, run `python scripts/update-knowledge-graph.py --worktree`;
+validate it with the same command plus `--check`. CI checks committed outputs.
+The existing curated JSON and PowerShell/Mermaid workflow remain authoritative
+for architecture descriptions. See the generation guide before installing over
+an existing hook configuration.

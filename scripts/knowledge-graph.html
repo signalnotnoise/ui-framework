@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI Framework - knowledge graph</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px system-ui;background:#101827;color:#e5edf9}header{padding:20px;border-bottom:1px solid #34425a}h1{margin:0;font-size:24px}p{color:#adc0d8}input,select,button{padding:9px;margin:4px;background:#202e44;color:#e5edf9;border:1px solid #526480;border-radius:6px}button{cursor:pointer}main{display:grid;grid-template-columns:minmax(0,1fr) 320px}#viewport{position:relative;height:75vh;min-height:400px;overflow:hidden;touch-action:none}canvas{display:block}#labels{position:absolute;inset:0;pointer-events:none}.label{position:absolute;font-size:12px;white-space:nowrap;background:#101827db;padding:2px 5px;border-radius:4px}aside{padding:20px;overflow-wrap:anywhere;max-height:75vh;overflow:auto}#nodes{width:100%;margin:0}#hint{position:absolute;bottom:12px;left:12px;pointer-events:none;color:#adc0d8}.link{display:block;text-align:left;width:100%;margin:6px 0}@media(max-width:750px){main{grid-template-columns:1fr}aside{max-height:none}}
+</style>
+<header><h1>UI Framework knowledge graph</h1>
+<p>Scroll to zoom. Drag to pan. Select a concept or file to inspect its evidence and connections.</p>
+<label>Search <input id="search" type="search" placeholder="File or path"></label>
+<label>Area <select id="group"><option value="">All areas</option></select></label>
+<label><input id="membership" type="checkbox"> Directory edges</label>
+<label><input id="neighbors" type="checkbox"> Selected neighborhood only</label>
+<button id="fit">Fit view</button><button id="clear">Clear selection</button>
+<span id="count" aria-live="polite"></span></header>
+<main><div id="viewport" tabindex="0" aria-label="Graph: arrow keys pan, plus and minus zoom, Home fits view"><div id="labels"></div><div id="hint">Blue: references / Orange: selected connections</div></div>
+<aside><label>Choose a node <select id="nodes"><option value="">Select a file or directory</option></select></label><div id="detail" aria-live="polite"><p>Select a node to inspect incoming and outgoing relationships.</p></div></aside></main>
+<script id="data" type="application/json">__GRAPH_JSON__</script>
+<script>__THREE_JS__</script>
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const $=id=>document.getElementById(id), viewport=$('viewport');
+const groups=[...new Set(data.nodes.map(n=>n.group))].sort();
+const palette=[0x67a7ff,0x50d5b3,0xba91ff,0xf5bf6a,0x6ad6ec,0xf88baa];
+for(const group of groups){const o=document.createElement('option');o.value=group;o.textContent=group;$('group').append(o)}
+for(const n of data.nodes){const o=document.createElement('option');o.value=n.id;o.textContent=n.id;$('nodes').append(o)}
+let selected='',visible=[],meshes=[],edgeObjects=[],labelObjects=[],renderer;
+const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-600,600,400,-400,0.1,3000);
+camera.position.z=1000;const layer=new THREE.Group();scene.add(layer);
+const positions=new Map(),raycaster=new THREE.Raycaster();
+groups.forEach((group,index)=>{const members=data.nodes.filter(n=>n.group===group),a=index*2*Math.PI/groups.length;
+ const radius=Math.max(320,Math.sqrt(data.nodes.length)*38);
+ members.forEach((n,i)=>{const angle=i*2.399963,r=30*Math.sqrt(i);positions.set(n.id,new THREE.Vector3(radius*Math.cos(a)+r*Math.cos(angle),radius*Math.sin(a)+r*Math.sin(angle),0))})});
+function connected(){const ids=new Set([selected]);for(const e of data.edges)if(e.source===selected||e.target===selected){ids.add(e.source);ids.add(e.target)}return ids}
+function select(id){selected=id;$('nodes').value=id;const detail=$('detail');detail.replaceChildren();
+ if(id){const h=document.createElement('h2');const node=data.nodes.find(n=>n.id===id);h.textContent=node?.label||id;detail.append(h);if(node?.summary){const p=document.createElement('p');p.textContent=`${node.status}: ${node.summary}`;detail.append(p);}
+ for(const e of data.edges.filter(e=>e.source===id||e.target===id)){const b=document.createElement('button');b.className='link';const incoming=e.target===id,target=incoming?e.source:e.target;b.textContent=`${incoming?'From':'To'} ${target} (${e.kind})`;b.onclick=()=>{$('search').value='';$('group').value='';select(target);focusNode(target)};detail.append(b)}}
+ else{detail.textContent='Select a node to inspect incoming and outgoing relationships.'}draw()}
+function focusNode(id){const p=positions.get(id);if(p){camera.position.x=p.x;camera.position.y=p.y;camera.zoom=Math.max(camera.zoom,2);camera.updateProjectionMatrix();render()}}
+function draw(){for(const object of [...layer.children]){layer.remove(object);object.geometry?.dispose();object.material?.dispose()}
+ meshes=[];edgeObjects=[];labelObjects=[];$('labels').replaceChildren();const neighbors=connected();
+ visible=data.nodes.filter(n=>(!$('group').value||n.group===$('group').value)&&`${n.id} ${n.label} ${n.summary||''}`.toLowerCase().includes($('search').value.toLowerCase())&&(!$('neighbors').checked||!selected||neighbors.has(n.id)));
+ const ids=new Set(visible.map(n=>n.id));const edges=data.edges.filter(e=>ids.has(e.source)&&ids.has(e.target)&&(e.kind!=='contains'||$('membership').checked));
+ for(const e of edges){const active=e.source===selected||e.target===selected;const geometry=new THREE.BufferGeometry().setFromPoints([positions.get(e.source),positions.get(e.target)]);
+ const line=new THREE.Line(geometry,new THREE.LineBasicMaterial({color:active?0xffbc63:e.kind==='contains'?0x526480:0x67a7ff,transparent:true,opacity:active?1:selected?0.12:e.kind==='contains'?0.2:0.55}));line.position.z=active?2:0;layer.add(line);edgeObjects.push(line)}
+ for(const n of visible){const active=n.id===selected,mesh=new THREE.Mesh(new THREE.CircleGeometry(active?11:n.id.startsWith('group:')?9:6,20),new THREE.MeshBasicMaterial({color:active?0xffbc63:palette[groups.indexOf(n.group)%palette.length],transparent:true,opacity:selected&&!neighbors.has(n.id)?0.25:1}));mesh.position.copy(positions.get(n.id));mesh.position.z=4;mesh.userData.node=n;layer.add(mesh);meshes.push(mesh);
+ const label=document.createElement('span');label.className='label';label.textContent=n.label;$('labels').append(label);labelObjects.push({label,node:n,position:mesh.position})}
+ $('count').textContent=`${visible.length} nodes / ${edges.length} connections`;render()}
+function render(){if(!renderer)return;camera.updateMatrixWorld();renderer.render(scene,camera);const w=viewport.clientWidth,h=viewport.clientHeight;
+ for(const item of labelObjects){const p=item.position.clone().project(camera);item.label.style.display=(camera.zoom>1.8||item.node.id===selected||item.node.id.startsWith('group:'))&&Math.abs(p.x)<1&&Math.abs(p.y)<1?'block':'none';item.label.style.left=`${(p.x+1)*w/2+10}px`;item.label.style.top=`${(1-p.y)*h/2-8}px`}}
+function fit(){if(!visible.length)return;const box=new THREE.Box3().setFromPoints(visible.map(n=>positions.get(n.id))),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());camera.position.x=center.x;camera.position.y=center.y;camera.zoom=Math.min((camera.right-camera.left)/(size.x+100),(camera.top-camera.bottom)/(size.y+100));camera.updateProjectionMatrix();render()}
+function zoom(factor){camera.zoom=THREE.MathUtils.clamp(camera.zoom*factor,0.1,30);camera.updateProjectionMatrix();render()}
+try{renderer=new THREE.WebGLRenderer({antialias:true});renderer.setClearColor(0x101827);renderer.setPixelRatio(Math.min(devicePixelRatio,2));viewport.prepend(renderer.domElement);
+ const resize=()=>{const w=viewport.clientWidth,h=viewport.clientHeight;camera.left=-600*w/h;camera.right=600*w/h;camera.top=600;camera.bottom=-600;camera.updateProjectionMatrix();renderer.setSize(w,h);render()};new ResizeObserver(resize).observe(viewport);resize();draw();fit();
+ viewport.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(-e.deltaY*0.001))},{passive:false});let drag=null;
+ viewport.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false};viewport.setPointerCapture(e.pointerId)});
+ viewport.addEventListener('pointermove',e=>{if(!drag)return;drag.moved||=Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)>4;camera.position.x-=(e.clientX-drag.x)*(camera.right-camera.left)/viewport.clientWidth/camera.zoom;camera.position.y+=(e.clientY-drag.y)*(camera.top-camera.bottom)/viewport.clientHeight/camera.zoom;drag.x=e.clientX;drag.y=e.clientY;render()});
+ viewport.addEventListener('pointerup',e=>{if(drag&&!drag.moved){const rect=viewport.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),camera);const hit=raycaster.intersectObjects(meshes)[0];select(hit?.object.userData.node.id||'')}drag=null});viewport.addEventListener('pointercancel',()=>{drag=null});
+ viewport.addEventListener('keydown',e=>{const distance=50/camera.zoom;if(e.key==='ArrowLeft')camera.position.x-=distance;else if(e.key==='ArrowRight')camera.position.x+=distance;else if(e.key==='ArrowUp')camera.position.y+=distance;else if(e.key==='ArrowDown')camera.position.y-=distance;else if(e.key==='+'||e.key==='=')zoom(1.2);else if(e.key==='-')zoom(1/1.2);else if(e.key==='Home')fit();else return;e.preventDefault();render()});
+}catch(error){$('hint').textContent='WebGL is unavailable. Use the node selector to inspect connections.';console.error(error)}
+$('search').oninput=()=>{draw();fit()};$('group').onchange=()=>{draw();fit()};$('membership').onchange=draw;$('neighbors').onchange=()=>{draw();fit()};$('fit').onclick=fit;$('clear').onclick=()=>select('');$('nodes').onchange=()=>{$('search').value='';$('group').value='';select($('nodes').value);focusNode(selected)};
+</script>
+</html>

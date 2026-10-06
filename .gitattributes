@@ -1,3 +1,8 @@
 # Preserve raw benchmark output, including its terminal blank line.
 docs/performance-evidence/**/*.log -text whitespace=cr-at-eol,-blank-at-eof
 docs/performance-evidence/**/*-stack.txt -text whitespace=cr-at-eol,-blank-at-eof
+.githooks/* text eol=lf
+scripts/knowledge-graph.html text eol=lf
+scripts/knowledge-graph-vendor/* text eol=lf
+docs/knowledge-graph/graph.json text eol=lf
+docs/knowledge-graph/graph.html text eol=lf
