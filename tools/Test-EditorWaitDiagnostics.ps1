@@ -1,3 +1,4 @@
+#requires -Version 7.0
 # Native-WPF subtraction experiments only. Never use these as release comparisons.
 param(
     [ValidateSet('normal', 'no-caret', 'fixed-options', 'ime-disabled', 'fixed-width', 'cleanup-before', 'controlled-cleanup', 'application-policy')]
