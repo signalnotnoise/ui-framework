@@ -1,5 +1,27 @@
 # Local consumer package adoption, September 26, 2026
 
+## October 7 audit
+
+The editor blocker and public alpha.3 publication were completed on September 26;
+older blocked-release notes are historical evidence. Both package IDs were
+confirmed in NuGet's version indices on October 7. GuidedGrade still pins the
+validated `[0.1.0-alpha.3-local.2]` package and installs `WpfComCleanupPolicy`
+at application startup. Its vendored publication-status notes were corrected,
+and their previous contents retained in `history/2026-10-07-publication-audit`.
+
+The app project was subsequently renamed to `GuidedGrade/GuidedGrade.csproj`.
+Consumer diagnostics now support that project and namespace as well as the
+historical Lab Feedback WPF layout. Both configurations built without warnings;
+the current app's 1,000-student/file, 50-operation diagnostic passed selection,
+scrolling, finite-viewport and file-tree checks. This compatibility check is not
+a new paired performance result for subsequent app features. Existing repeated
+comparisons and package hashes are retained without advancing the baseline.
+
+The package comparator overlays cleanup source only for known pre-policy
+packages; packages already exporting `WpfComCleanupPolicy` use their own API.
+The native editor diagnostic requires PowerShell 7 explicitly. The knowledge
+validation job's setup-python action is pinned to its verified v5 commit.
+
 `0.1.0-alpha.3-local.2` is an immutable local integration package built from the
 dirty working tree at framework revision
 `2db7a9a6cdde0fa52c458a9206219348f4ae0bcd`. It adds the production

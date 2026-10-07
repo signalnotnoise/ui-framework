@@ -8,9 +8,15 @@ using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
+#if GUIDEDGRADE
+using GuidedGrade;
+using GuidedGrade.Models;
+using GuidedGrade.Services;
+#else
 using Lab_Feedback_WPF;
 using Lab_Feedback_WPF.Models;
 using Lab_Feedback_WPF.Services;
+#endif
 
 internal static class Program
 {

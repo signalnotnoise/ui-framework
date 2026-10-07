@@ -11,7 +11,8 @@ if (Test-Path $output) { throw 'Use a new output directory.' }
 New-Item -ItemType Directory -Path $output | Out-Null
 Push-Location $projectRoot
 try {
-    $sourceManifest = foreach ($folder in @((Split-Path $consumer), (Join-Path $consumerRoot 'Lab Feedback Runner'),
+    $runnerDirectory = if (Test-Path (Join-Path $consumerRoot 'GuidedGrade.Runner')) { 'GuidedGrade.Runner' } else { 'Lab Feedback Runner' }
+    $sourceManifest = foreach ($folder in @((Split-Path $consumer), (Join-Path $consumerRoot $runnerDirectory),
         (Join-Path $projectRoot 'samples/ConsumerDiagnostics'))) {
         Get-ChildItem -LiteralPath $folder -Recurse -File | Where-Object {
             $_.FullName -notmatch '[\\/](bin|obj)[\\/]' -and $_.Extension -in @('.cs','.xaml','.csproj','.props','.targets','.xshd','.config')

@@ -5,12 +5,14 @@
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ConsumerProjectName>$([System.IO.Path]::GetFileNameWithoutExtension('$(ConsumerProject)'))</ConsumerProjectName>
+    <DefineConstants Condition="'$(ConsumerProjectName)' == 'GuidedGrade'">$(DefineConstants);GUIDEDGRADE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="$(ConsumerProject)" />
     <Compile Include="../WorkspaceComparison/LayoutProbe.cs" Link="LayoutProbe.cs" />
   </ItemGroup>
   <Target Name="RequireConsumerProject" BeforeTargets="PrepareForBuild" Condition="'$(ConsumerProject)' == ''">
-    <Error Text="Pass -p:ConsumerProject=the Lab Feedback WPF.csproj path." />
+    <Error Text="Pass -p:ConsumerProject=the GuidedGrade.csproj or historical Lab Feedback WPF.csproj path." />
   </Target>
 </Project>

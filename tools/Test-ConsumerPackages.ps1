@@ -19,7 +19,11 @@ $dirty = [bool](& git -C $consumer status --porcelain)
 if ($dirty -and -not $UseWorkingTree) { throw 'UseWorkingTree is required to snapshot uncommitted integration changes.' }
 if ($LASTEXITCODE -ne 0) { throw 'Cannot read consumer status.' }
 $revision = (& git -C $consumer rev-parse HEAD).Trim()
-$relativeProject = 'Lab Feedback WPF/Lab Feedback WPF.csproj'
+$projects = @('GuidedGrade/GuidedGrade.csproj', 'Lab Feedback WPF/Lab Feedback WPF.csproj') |
+    Where-Object { Test-Path -LiteralPath (Join-Path $consumer $_) }
+if (@($projects).Count -ne 1) { throw 'Expected exactly one supported consumer project.' }
+$relativeProject = @($projects)[0]
+$relativeProjectDirectory = Split-Path $relativeProject
 $referenceVersion = ([xml](Get-Content (Join-Path $consumer $relativeProject) -Raw)).SelectSingleNode("/Project/ItemGroup/PackageReference[@Include='SignalNotNoise.UI.Wpf']").Version
 $installedVersion = $referenceVersion.Trim([char[]]'[]')
 $oldVersion = if ($BaselineVersion) { $BaselineVersion.Trim([char[]]'[]') } else { $installedVersion }
@@ -68,8 +72,11 @@ foreach ($side in @('baseline','candidate')) {
         [IO.File]::WriteAllText($project, $text.Replace($oldReference,
             'Include="SignalNotNoise.UI.Wpf" Version="' + $targetVersion + '"'))
     }
-    if ($side -eq 'baseline') {
-        $policy = Join-Path $app 'Lab Feedback WPF/Services/WpfComCleanupPolicy.cs'
+    # Only pre-policy packages need the identical application-owned source overlay.
+    # Copying it over a package that already exports the type shadows that API.
+    $prePolicyVersions = @('0.1.0-alpha.1', '0.1.0-alpha.2', '0.1.0-alpha.2-local.2', '0.1.0-alpha.2-local.3', '0.1.0-alpha.3-local.1')
+    if ($side -eq 'baseline' -and $oldVersion -in $prePolicyVersions) {
+        $policy = Join-Path $app "$relativeProjectDirectory/Services/WpfComCleanupPolicy.cs"
         Copy-Item -LiteralPath (Join-Path $root 'UI Framework.Wpf/WpfComCleanupPolicy.cs') -Destination $policy
     }
     if ($side -eq 'candidate') {
@@ -95,7 +102,7 @@ foreach ($side in @('baseline','candidate')) {
     } | ForEach-Object { [pscustomobject]@{side=$side; path=[IO.Path]::GetRelativePath($sideRoot,$_.FullName); sha256=(Get-FileHash $_.FullName).Hash} }
     & dotnet build (Join-Path $harness 'ConsumerDiagnostics.csproj') -c Release "-p:ConsumerProject=$project" --configfile (Join-Path $app 'NuGet.Config') --disable-build-servers -m:1 -warnaserror
     if ($LASTEXITCODE -ne 0) { throw "$side consumer build failed." }
-    $assets = Get-Content (Join-Path $app 'Lab Feedback WPF/obj/project.assets.json') -Raw | ConvertFrom-Json
+    $assets = Get-Content (Join-Path $app "$relativeProjectDirectory/obj/project.assets.json") -Raw | ConvertFrom-Json
     $version = if ($side -eq 'baseline') { $oldVersion } else { $CandidateVersion }
     foreach ($id in @('SignalNotNoise.UI','SignalNotNoise.UI.Wpf')) {
         if (-not $assets.libraries.PSObject.Properties["$id/$version"]) { throw "Wrong resolved $id version for $side." }
