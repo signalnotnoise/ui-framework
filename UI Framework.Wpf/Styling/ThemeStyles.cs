@@ -107,6 +107,9 @@ public static class ThemeStyles
         var style = BaseStyle(type, theme);
         var template = new ControlTemplate(type);
         var border = Border(theme);
+        // TextBox/PasswordBox already apply their Padding to the native editing
+        // content. Applying it again on the border clips compact query fields.
+        border.SetValue(System.Windows.Controls.Border.PaddingProperty, new Thickness(0));
         border.AppendChild(new FrameworkElementFactory(typeof(ScrollViewer), "PART_ContentHost"));
         template.VisualTree = border;
         State(template, UIElement.IsMouseOverProperty, true, Control.BorderBrushProperty, Brush(theme.Muted));

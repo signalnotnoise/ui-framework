@@ -42,6 +42,14 @@ Indices are positional, including when labels repeat. `-1` means no selection. A
 
 ## Themes and verification
 
+Unreleased: the input template no longer adds a second border padding around
+the native editing content. `TextBox` and `PasswordBox` already apply their
+own padding; doubling it clipped 16-point query text in a 36-DIP field inside
+a 60-DIP toolbar. `CompactInputTests` checks the complete character-line
+viewport, retained caret and binding feedback, plus multiline scrolling after
+the change. `PART_ContentHost` and native padding remain intact. Containers
+must still supply enough height for their font and chosen native padding.
+
 `ThemeStyles.Apply` styles text editors using the text-input template and passwords using an equivalent content-host template. Pickers use a scoped template for both closed chrome and dropdown items, so stock Windows gradients cannot override dark theme backgrounds. Surface/Ink colors pair for ordinary items, Accent/OnAccent for selection, Hover/AccentHover for highlighted items, Pressed for the open control, and Focus for keyboard focus borders. Disabled controls use reduced opacity. The native ComboBox and ComboBoxItem still own keyboard selection, type-ahead, popup capture and dismissal. `.IsEnabled`, `.FontSize`, and the usual layout modifiers apply. The picker template is for the non-editable `UI.Picker` contract.
 
 `EditorTests` covers multiline edits, normalization, read-only selection/undo, password rejection and binding replacement, picker options/invalid indices/duplicate labels, disabled state, disposal, and modifier validation. These are offscreen STA tests; visible keyboard, IME, popup, and screen-reader behavior still require interactive verification.

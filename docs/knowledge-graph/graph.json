@@ -59,6 +59,16 @@
       "group": "UI Framework.Wpf"
     },
     {
+      "id": "UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "label": "NativeStyleResources.cs",
+      "group": "UI Framework.Wpf"
+    },
+    {
+      "id": "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "label": "NativeStyleScope.cs",
+      "group": "UI Framework.Wpf"
+    },
+    {
       "id": "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
       "label": "NativeViewDescriptor.cs",
       "group": "UI Framework.Wpf"
@@ -396,6 +406,11 @@
     {
       "id": "docs/native-interop.md",
       "label": "native-interop.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/native-style-validation.md",
+      "label": "native-style-validation.md",
       "group": "docs"
     },
     {
@@ -7204,6 +7219,856 @@
       "group": "docs"
     },
     {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/summary.json",
+      "label": "summary.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/summary.md",
+      "label": "summary.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/summary.json",
+      "label": "summary.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/summary.md",
+      "label": "summary.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/summary.json",
+      "label": "summary.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/summary.md",
+      "label": "summary.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-11-native-styles/stress.json",
+      "label": "stress.json",
+      "group": "docs"
+    },
+    {
       "id": "docs/performance-exploration-2026-09-20.md",
       "label": "performance-exploration-2026-09-20.md",
       "group": "docs"
@@ -7619,6 +8484,11 @@
       "group": "tests"
     },
     {
+      "id": "tests/UI Framework.Checks/CompactInputTests.cs",
+      "label": "CompactInputTests.cs",
+      "group": "tests"
+    },
+    {
       "id": "tests/UI Framework.Checks/ComponentChecks.cs",
       "label": "ComponentChecks.cs",
       "group": "tests"
@@ -7651,6 +8521,11 @@
     {
       "id": "tests/UI Framework.Checks/NativeHostTests.cs",
       "label": "NativeHostTests.cs",
+      "group": "tests"
+    },
+    {
+      "id": "tests/UI Framework.Checks/NativeStyleTests.cs",
+      "label": "NativeStyleTests.cs",
       "group": "tests"
     },
     {
@@ -7927,15 +8802,19 @@
       "id": "concept:nativeinterop",
       "label": "Retained native WPF islands",
       "status": "implemented",
-      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment and one-time release; apps own native contents and durable state.",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary for common native controls. Apps own native contents, local styles and durable state.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework/ViewKind.cs",
         "UI Framework.Wpf/Interop/WpfUI.cs",
         "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
         "UI Framework.Wpf/Interop/NativeControlHost.cs",
+        "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+        "UI Framework.Wpf/Interop/NativeStyleResources.cs",
         "tests/UI Framework.Checks/NativeHostTests.cs",
-        "docs/native-interop.md"
+        "tests/UI Framework.Checks/NativeStyleTests.cs",
+        "docs/native-interop.md",
+        "docs/native-style-validation.md"
       ],
       "group": "architecture"
     },
@@ -7952,6 +8831,7 @@
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "tests/UI Framework.Checks/EditorTests.cs",
+        "tests/UI Framework.Checks/CompactInputTests.cs",
         "tests/UI Framework.Checks/PickerStyleTests.cs",
         "UI Framework.Wpf/Styling/PickerStyles.cs",
         "docs/editors.md"
@@ -9059,6 +9939,11 @@
     },
     {
       "source": "concept:editors",
+      "target": "tests/UI Framework.Checks/CompactInputTests.cs",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:editors",
       "target": "tests/UI Framework.Checks/EditorTests.cs",
       "kind": "evidenced by"
     },
@@ -9519,6 +10404,16 @@
     },
     {
       "source": "concept:nativeinterop",
+      "target": "UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:nativeinterop",
       "target": "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
       "kind": "evidenced by"
     },
@@ -9544,7 +10439,17 @@
     },
     {
       "source": "concept:nativeinterop",
+      "target": "docs/native-style-validation.md",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:nativeinterop",
       "target": "tests/UI Framework.Checks/NativeHostTests.cs",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "tests/UI Framework.Checks/NativeStyleTests.cs",
       "kind": "evidenced by"
     },
     {
@@ -10509,6 +11414,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
       "kind": "references"
     },
@@ -10775,6 +11690,11 @@
     {
       "source": "docs/knowledge-graph.md",
       "target": "docs/native-interop.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/native-style-validation.md",
       "kind": "references"
     },
     {
@@ -11109,6 +12029,11 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/CompactInputTests.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tests/UI Framework.Checks/ComponentChecks.cs",
       "kind": "references"
     },
@@ -11130,6 +12055,11 @@
     {
       "source": "docs/knowledge-graph.md",
       "target": "tests/UI Framework.Checks/NativeHostTests.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/NativeStyleTests.cs",
       "kind": "references"
     },
     {
@@ -11369,7 +12299,32 @@
     },
     {
       "source": "docs/native-interop.md",
+      "target": "UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/native-interop.md",
       "target": "docs/native-interop-validation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/native-style-validation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/native-style-validation.md",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/summary.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/native-style-validation.md",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/summary.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/native-style-validation.md",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/summary.md",
       "kind": "references"
     },
     {
@@ -11669,6 +12624,16 @@
     },
     {
       "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
       "target": "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
       "kind": "contains"
     },
@@ -11890,6 +12855,11 @@
     {
       "source": "group:docs",
       "target": "docs/native-interop.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/native-style-validation.md",
       "kind": "contains"
     },
     {
@@ -18699,6 +19669,856 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/accepted-baseline/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-initial/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/direct-repeat/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-11-native-styles/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/performance-exploration-2026-09-20.md",
       "kind": "contains"
     },
@@ -19149,6 +20969,11 @@
     },
     {
       "source": "group:tests",
+      "target": "tests/UI Framework.Checks/CompactInputTests.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tests",
       "target": "tests/UI Framework.Checks/ComponentChecks.cs",
       "kind": "contains"
     },
@@ -19180,6 +21005,11 @@
     {
       "source": "group:tests",
       "target": "tests/UI Framework.Checks/NativeHostTests.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tests",
+      "target": "tests/UI Framework.Checks/NativeStyleTests.cs",
       "kind": "contains"
     },
     {

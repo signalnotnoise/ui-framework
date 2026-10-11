@@ -8,6 +8,7 @@ internal sealed class NativeControlHost : Border, IDisposable
 {
     private readonly NativeViewDescriptor owner;
     private bool disposed;
+    private NativeStyleScope styleScope;
     internal FrameworkElement Element { get; }
 
     internal NativeControlHost(NativeViewDescriptor description)
@@ -18,6 +19,7 @@ internal sealed class NativeControlHost : Border, IDisposable
         if (Element.Parent is not null || VisualTreeHelper.GetParent(Element) is not null
             || PresentationSource.FromVisual(Element) is not null || Element is Window)
             throw new InvalidOperationException("Native factory must return an unparented element, not a window or presentation root.");
+        SetStyleScope(description.StyleScope);
         Child = Element;
     }
 
@@ -26,7 +28,19 @@ internal sealed class NativeControlHost : Border, IDisposable
     internal void Update(NativeViewDescriptor description)
     {
         ObjectDisposedException.ThrowIf(disposed, this);
+        SetStyleScope(description.StyleScope);
         description.Update?.Invoke(Element);
+    }
+
+    private void SetStyleScope(NativeStyleScope next)
+    {
+        if (styleScope == next) return;
+        foreach (var (type, style) in NativeStyleResources.Styles)
+        {
+            if (next == NativeStyleScope.PreserveNative) Resources[type] = style;
+            else Resources.Remove(type);
+        }
+        styleScope = next;
     }
 
     public void Dispose()

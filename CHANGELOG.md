@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add opt-in `NativeStyleScope.PreserveNative` to shield common native controls
+  from ancestor implicit templates while retaining local styles and control identity.
+- Remove duplicate themed input padding so compact query fields have a usable
+  editing viewport; retain native padding, selection, bindings and multiline scrolling.
+
 ## 0.1.0-alpha.3 — September 26, 2026
 
 Third experimental NuGet preview, published through GitHub Actions Trusted Publishing after the editor cleanup release gate and manual editor, IME, screen-reader, and lifecycle acceptance passed.

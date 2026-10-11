@@ -1,6 +1,6 @@
 # Retained WPF controls
 
-See [validation status](native-interop-validation.md): functional checks and a seven-sample performance repeat pass; earlier timing failures remain documented. Local packages are for integration testing, and no public publication has been performed.
+See [validation status](native-interop-validation.md) for historical integration evidence. Native interop ships in the published alpha previews; the style-scope API below is an Unreleased source change.
 
 `WpfUI.Native<T>(Func<T> create, Action<T>? update = null, Action<T>? release = null)` embeds an app-owned native WPF island in a declarative view. `T` must derive from `FrameworkElement`. This supports existing editors, trees, context menus, splitter grids, docking libraries and console controls without recreating their functionality in the framework.
 
@@ -24,6 +24,41 @@ Creation/update/release execute on the WPF dispatcher. Removal and explicit host
 Width, height, padding, alignment, background and enabled modifiers apply through the outer framework frame. Existing implicit WPF styles may inherit into the island. `AccessibilityLabel` targets the island root: without a label it preserves a factory-supplied name; setting then removing a label clears the local name override. Native names on descendants remain application-owned. A native island takes no declarative children; compose its native children in its factory/update callbacks.
 
 Core carries only `ViewKind.Platform` and an opaque `PlatformContent` descriptor. WPF's `Interop` layer owns creation, identity and cleanup. The common renderer owns outer layout and reconciliation.
+
+## Preserving native styles (Unreleased)
+
+Specialist controls can depend on their own templates. Host or application
+implicit Button/TextBox styles may otherwise replace those templates and hide
+query text, navigation glyphs, or other native content. Use the opt-in overload:
+
+```csharp
+WpfUI.Native(
+    () => CreateSpecialistEditor(),
+    NativeStyleScope.PreserveNative,
+    update: editor => UpdateDocument(editor),
+    release: editor => DisposeEditor(editor)).Id("specialist-editor");
+```
+
+The original three-argument overload continues to inherit styles. The new
+scope installs empty implicit styles on the island wrapper for common WPF
+input, button, list/tree, menu, scrolling, label, slider, progress and tab
+controls. These stop ancestor implicit-style lookup while retaining WPF's
+theme templates. Explicit local styles and implicit styles inside the native
+island take precedence. See [the exact protected types](../UI%20Framework.Wpf/Interop/NativeStyleResources.cs).
+
+This is an implicit-control-style boundary, not a separate resource or theme
+universe: named resources, data templates, inherited properties, custom control
+types and explicit application style assignments are not masked. Applications
+remain responsible for the specialist control's colors and accessibility.
+Changing the scope with the same key/type retains the native instance, text,
+selection and lifetime callbacks. Reapplying the outer theme does not replace
+the island's styles. The core remains independent of WPF.
+
+`NativeStyleTests` verifies conflicting templates, scope changes, native query
+and button content, local styles, automation naming, click routing and one-time
+release. These hidden presentation checks do not establish live IME or
+screen-reader acceptance for a particular third-party editor.
+See [validation and performance evidence](native-style-validation.md).
 
 ## Migration follow-ups
 

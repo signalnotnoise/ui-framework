@@ -6,15 +6,19 @@
       "id": "nativeinterop",
       "label": "Retained native WPF islands",
       "status": "implemented",
-      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment and one-time release; apps own native contents and durable state.",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary for common native controls. Apps own native contents, local styles and durable state.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework/ViewKind.cs",
         "UI Framework.Wpf/Interop/WpfUI.cs",
         "UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
         "UI Framework.Wpf/Interop/NativeControlHost.cs",
+        "UI Framework.Wpf/Interop/NativeStyleScope.cs",
+        "UI Framework.Wpf/Interop/NativeStyleResources.cs",
         "tests/UI Framework.Checks/NativeHostTests.cs",
-        "docs/native-interop.md"
+        "tests/UI Framework.Checks/NativeStyleTests.cs",
+        "docs/native-interop.md",
+        "docs/native-style-validation.md"
       ]
     },
     {
@@ -30,6 +34,7 @@
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "tests/UI Framework.Checks/EditorTests.cs",
+        "tests/UI Framework.Checks/CompactInputTests.cs",
         "tests/UI Framework.Checks/PickerStyleTests.cs",
         "UI Framework.Wpf/Styling/PickerStyles.cs",
         "docs/editors.md"
