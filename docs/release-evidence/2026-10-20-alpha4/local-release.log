@@ -1,0 +1,70 @@
+
+Welcome to .NET 10.0!
+---------------------
+SDK Version: 10.0.402
+
+Telemetry
+---------
+The .NET tools collect usage data in order to help us improve your experience. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+----------------
+Installed an ASP.NET Core HTTPS development certificate.
+To trust the certificate, run 'dotnet dev-certs https --trust'
+Learn about HTTPS: https://aka.ms/dotnet-https
+
+----------------
+Write your first app: https://aka.ms/dotnet-hello-world
+Find out what's new: https://aka.ms/dotnet-whats-new
+Explore documentation: https://aka.ms/dotnet-docs
+Report issues and find source on GitHub: https://github.com/dotnet/core
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli
+--------------------------------------------------------------------------------------
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\UI Framework.Wpf.csproj (in 131 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\UI Framework\UI Framework.csproj (in 129 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\samples\WorkspaceComparison\WorkspaceComparison.csproj (in 131 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\samples\Counter\Counter.csproj (in 131 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 1.3 sec).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+  WorkspaceComparison -> C:\Users\iotero\Dev\personal\UI Framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.00
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
+WARNING: Overwriting results file: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\tests\regression.trx
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\tests\regression.trx
+
+Passed!  - Failed:     0, Passed:   106, Skipped:     0, Total:   106, Duration: 5 s - UI Framework.Checks.dll (net10.0)
+Validated 32 nodes, 60 relationships, and source paths.
+Documentation versions and workflow action pins are consistent.
+Passed 15 visual stress checks.
+Initial 50-row mount + offscreen layout: 639.7 ms, 72 body builds
+Native TextBox event + shared binding: 17.0 ms, 2 body builds
+Load 250 rows + layout: 1291.3 ms, 259 body builds
+Load 1000 rows + layout: 4337.7 ms, 1,009 body builds
+Expand row into nested checklist + layout: 10.7 ms, 5 body builds
+1000-row keyed shuffle + layout: 615.5 ms, 2 body builds
+10000 projected writes + one flush + layout: 11.0 ms, 1 body builds
+Mixed workload: 50/200 operations complete
+Mixed workload: 100/200 operations complete
+Mixed workload: 150/200 operations complete
+Mixed workload: 200/200 operations complete
+200 mixed operations with per-step render + layout: 17368.5 ms, 20,559 body builds
+Filter to zero rows + layout: 553.6 ms, 2 body builds
+Clear filter + remount + layout: 4208.5 ms, 1,002 body builds
+Board unmount + layout: 1486.0 ms, 2 body builds
+Board remount + layout: 3676.7 ms, 1,003 body builds
+Expand recursive tree to depth 24 + layout: 6.1 ms, 26 body builds
+Full host disposal: 151.4 ms, 0 body builds
+Passed 21 stress assertions. Report: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\stress.json
+Release validation passed. This command does not publish anything.

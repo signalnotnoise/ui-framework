@@ -40,6 +40,7 @@ try {
     @'
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
 using UI_Framework;
@@ -106,6 +107,89 @@ internal static class Program
         island.Dispose();
         if (releases != 1) throw new Exception("Packaged native release was not exactly once.");
         Console.WriteLine($"Native interop: 1000 retained updates, {watch.Elapsed.TotalMilliseconds:F2} ms, {allocated} UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.");
+        CheckStyleScope();
+        CheckCompactInput();
+    }
+
+    private static void CheckStyleScope()
+    {
+        var scope = new State<NativeStyleScope>(NativeStyleScope.PreserveNative);
+        var creates = 0;
+        var releases = 0;
+        var editor = new TextBox { Text = "Retained query", FontSize = 16, Height = 36 };
+        using var host = new ViewHost(() => WpfUI.Native(
+            () => { creates++; return editor; }, scope.Value,
+            update: control => control.Tag = "updated",
+            release: control => {
+                if (control.Parent is not null) throw new Exception("Scoped release ran before detach.");
+                releases++;
+            }).Id("scoped-editor"));
+        ThemeStyles.Apply(host, new ThemeTokens());
+        var hiddenTemplate = new ControlTemplate(typeof(TextBox))
+        { VisualTree = new FrameworkElementFactory(typeof(Border)) };
+        var hiddenStyle = new Style(typeof(TextBox));
+        hiddenStyle.Setters.Add(new Setter(Control.TemplateProperty, hiddenTemplate));
+        host.Resources[typeof(TextBox)] = hiddenStyle;
+        using var source = new HwndSource(new HwndSourceParameters("Package native style scope")
+        { Width = 400, Height = 120, PositionX = -10000, PositionY = -10000 });
+        source.RootVisual = host;
+        Layout(host);
+        if (editor.Template.FindName("PART_ContentHost", editor) is null)
+            throw new Exception("Packaged native style scope did not preserve the editing host.");
+        editor.Select(2, 4);
+        host.Refresh();
+        if (creates != 1 || editor.SelectionStart != 2 || editor.SelectionLength != 4
+            || !Equals(editor.Tag, "updated"))
+            throw new Exception("Packaged scoped update lost native identity or selection.");
+        scope.Value = NativeStyleScope.Inherit;
+        Layout(host);
+        if (!ReferenceEquals(hiddenStyle, editor.Style))
+            throw new Exception("Packaged inherited style was not restored.");
+        scope.Value = NativeStyleScope.PreserveNative;
+        Layout(host);
+        if (creates != 1 || editor.Text != "Retained query"
+            || editor.Template.FindName("PART_ContentHost", editor) is null)
+            throw new Exception("Packaged scope change recreated or damaged the native editor.");
+        source.RootVisual = null;
+        host.Dispose();
+        host.Dispose();
+        if (releases != 1) throw new Exception("Packaged scoped release was not exactly once.");
+        Console.WriteLine("Packaged style scope, original overload, retained selection, scope changes and cleanup passed.");
+    }
+
+    private static void CheckCompactInput()
+    {
+        var query = new State<string>("Find this query");
+        using var host = new ViewHost(() => HStack(
+            TextField(query).Id("query").FontSize(16).Height(36)).Height(60).Padding(10));
+        ThemeStyles.Apply(host, new ThemeTokens());
+        using var source = new HwndSource(new HwndSourceParameters("Package compact input")
+        { Width = 420, Height = 80, PositionX = -10000, PositionY = -10000 });
+        source.RootVisual = host;
+        Layout(host);
+        var editor = Find<TextBox>(host);
+        var scroll = (ScrollViewer)editor.Template.FindName("PART_ContentHost", editor);
+        var character = editor.GetRectFromCharacterIndex(0);
+        if (character.IsEmpty || scroll.ViewportHeight < character.Height
+            || character.Top < 0 || character.Bottom > editor.ActualHeight)
+            throw new Exception("Packaged compact input clips its query line.");
+        editor.Select(2, 4);
+        query.Value = "Find this query again";
+        Layout(host);
+        if (!ReferenceEquals(editor, Find<TextBox>(host)) || editor.SelectionStart != 2)
+            throw new Exception("Packaged compact input lost retained identity or caret.");
+        editor.Text = "User query";
+        if (query.Value != "User query") throw new Exception("Packaged compact input binding failed.");
+        source.RootVisual = null;
+        Console.WriteLine("Packaged compact input viewport, retained caret and binding passed.");
+    }
+
+    private static void Layout(FrameworkElement host)
+    {
+        Dispatcher.CurrentDispatcher.Invoke(() => { }, DispatcherPriority.ApplicationIdle);
+        host.Measure(new Size(420, 120));
+        host.Arrange(new Rect(0, 0, 420, 120));
+        host.UpdateLayout();
     }
 
     private static T Find<T>(DependencyObject root) where T : DependencyObject =>

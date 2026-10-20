@@ -510,7 +510,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Published package version 0.1.0-alpha.3; experimental MIT-licensed source and NuGet preview with Windows validation, fresh NuGet.org package consumers, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Source release candidate 0.1.0-alpha.4; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing. Publication of this candidate is pending.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -830,5 +830,5 @@
       "to": "virtualization"
     }
   ],
-  "releaseVersion": "0.1.0-alpha.3"
+  "releaseVersion": "0.1.0-alpha.4"
 }

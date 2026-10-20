@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.4 — Release candidate
+
+Publication is pending the release workflow. Includes the native style boundary
+and compact input fixes validated in the October 11 comparison; see
+docs/native-style-validation.md for evidence and remaining timing concerns.
+
 - Add opt-in `NativeStyleScope.PreserveNative` to shield common native controls
   from ancestor implicit templates while retaining local styles and control identity.
 - Remove duplicate themed input padding so compact query fields have a usable

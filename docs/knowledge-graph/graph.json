@@ -309,6 +309,11 @@
       "group": "docs"
     },
     {
+      "id": "docs/backlog.md",
+      "label": "backlog.md",
+      "group": "docs"
+    },
+    {
       "id": "docs/bindings.md",
       "label": "bindings.md",
       "group": "docs"
@@ -8099,6 +8104,16 @@
       "group": "docs"
     },
     {
+      "id": "docs/release-evidence/2026-10-20-alpha4/stress.json",
+      "label": "stress.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/releases/0.1.0-alpha.4.md",
+      "label": "0.1.0-alpha.4.md",
+      "group": "docs"
+    },
+    {
       "id": "docs/releasing.md",
       "label": "releasing.md",
       "group": "docs"
@@ -9337,7 +9352,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Published package version 0.1.0-alpha.3; experimental MIT-licensed source and NuGet preview with Windows validation, fresh NuGet.org package consumers, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Source release candidate 0.1.0-alpha.4; experimental MIT-licensed source and NuGet preview with Windows validation, fresh package consumers, immutable workflow action pins and separate trusted publishing. Publication of this candidate is pending.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -11114,6 +11129,11 @@
     },
     {
       "source": "docs/README.md",
+      "target": "docs/backlog.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/README.md",
       "target": "docs/bindings.md",
       "kind": "references"
     },
@@ -11244,6 +11264,51 @@
     },
     {
       "source": "docs/README.md",
+      "target": "docs/virtualization.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "CHANGELOG.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/layout-styling.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/native-interop.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/native-style-validation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/performance-guardrails.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/reactivity-performance-investigation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.4.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releasing.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
       "target": "docs/virtualization.md",
       "kind": "references"
     },
@@ -12403,6 +12468,16 @@
       "kind": "references"
     },
     {
+      "source": "docs/releases/0.1.0-alpha.4.md",
+      "target": "docs/backlog.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.4.md",
+      "target": "docs/native-style-validation.md",
+      "kind": "references"
+    },
+    {
       "source": "docs/review-resolution-2026-09-23.md",
       "target": "docs/error-recovery.md",
       "kind": "references"
@@ -12420,6 +12495,11 @@
     {
       "source": "docs/review-resolution-2026-09-23.md",
       "target": "docs/virtualization.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/roadmap.md",
+      "target": "docs/backlog.md",
       "kind": "references"
     },
     {
@@ -12755,6 +12835,11 @@
     {
       "source": "group:docs",
       "target": "docs/application-cleanup-policy-2026-09-25.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/backlog.md",
       "kind": "contains"
     },
     {
@@ -20545,6 +20630,16 @@
     {
       "source": "group:docs",
       "target": "docs/reactivity-performance-investigation.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-20-alpha4/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/releases/0.1.0-alpha.4.md",
       "kind": "contains"
     },
     {

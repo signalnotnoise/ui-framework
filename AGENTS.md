@@ -6,6 +6,11 @@
 - Add focused regression checks for behavior changes; retain a full-list baseline when measuring virtualization.
 - Update the relevant documentation and knowledge graph when architectural responsibilities move.
 
+# Framework work tracking
+
+- Use `docs/backlog.md` as the running, prioritized framework work list. Keep application-specific work in the application's backlog.
+- When starting, completing or discovering framework work, update the corresponding backlog status, completion evidence and last-updated date. Preserve stable item IDs and retain completed items.
+
 # Performance is a standing requirement
 
 - For runtime, renderer, control, layout, styling, state, or virtualization changes, measure before and after using `tools/Test-Performance.ps1`. Use the same benchmark harness, machine, SDK, data sizes and operations for both revisions; alternate order and retain raw repeated runs.

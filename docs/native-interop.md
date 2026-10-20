@@ -62,6 +62,31 @@ See [validation and performance evidence](native-style-validation.md).
 
 ## Migration follow-ups
 
+### Proposed browser integration — October 20, 2026
+
+GuidedGrade reported a request to embed the Full Sail Online grading workspace
+using an app-owned WebView2 adapter. Its reported package pin is
+`SignalNotNoise.UI.Wpf` `0.1.0-alpha.3-local.2`; the reporting app had not added
+`Microsoft.Web.WebView2`. These are consumer-reported details, not a verified
+browser integration. No browser primitive or WebView2 validation is supplied
+by the native-host contract.
+
+The initial integration should evaluate the existing `WpfUI.Native` factory,
+update and release callbacks. The framework retains the native root while its
+key, position and declared type remain stable, and detaches it before release;
+it does not automatically dispose native controls. The app adapter must own
+asynchronous initialization, error reporting, event subscriptions and explicit
+cleanup, including initialization that completes after unmount. Keep browser
+dependencies and application navigation outside the platform-independent core.
+
+Before claiming browser support, validate stable identity across updates,
+removal/remount and one-time cleanup; initialization failure and unmount races;
+keyboard navigation and focus restoration; popup/new-window ownership; and
+resizing, clipping, overlays and native airspace behavior in the real grading
+layout. Login/SSO compatibility and browser lifetime remain unverified. This
+tracking note changes no package, consumer pin or runtime behavior. A framework
+API change should follow a reproduced limitation of the existing host contract.
+
 Reported by Lab-Feedback-WPF on September 20, 2026:
 
 - Editable picker/custom text entry: currently use TextField plus Picker or a native editable ComboBox.

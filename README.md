@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.3 preview · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.4 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
@@ -16,7 +16,7 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.3` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.3) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.3) (Windows renderer). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.4` is the release candidate in source. Published `0.1.0-alpha.3` packages remain available: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.3) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.3) (Windows renderer). The WPF package brings in the core automatically. Availability will be updated after the new packages are indexed.
 
 In a .NET 10 WPF project:
 

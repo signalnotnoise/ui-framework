@@ -1,5 +1,9 @@
 # Next milestone: viewport virtualization
 
+The [framework backlog](backlog.md) is the current prioritized work list. This
+document retains virtualization design questions and acceptance criteria;
+implemented milestones below are not new work items.
+
 Status: basic viewport virtualization, incremental list updates, and focused-row restoration implemented. See [current behavior and verification](virtualization.md). Remaining work includes stronger IME preservation, custom accessibility metadata/UI Automation coverage, large-shuffle optimization and comparative performance measurements.
 
 ## Objective
