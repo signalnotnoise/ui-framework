@@ -2,11 +2,14 @@
 
 ## Unreleased
 
-## 0.1.0-alpha.4 — Release candidate
+## 0.1.0-alpha.4 — October 20, 2026
 
-Publication is pending the release workflow. Includes the native style boundary
-and compact input fixes validated in the October 11 comparison; see
-docs/native-style-validation.md for evidence and remaining timing concerns.
+Published both libraries and symbol packages through GitHub Actions Trusted
+Publishing from `039d3bb`, after all release gates passed. Fresh NuGet.org
+installation verified both overloads, style-scope changes, compact input,
+bindings, selection and cleanup; installed assemblies match the hosted artifacts.
+See docs/releases/0.1.0-alpha.4.md for release evidence. Earlier direct-comparison
+timing concerns remain tracked separately; no baseline or budgets changed.
 
 - Add opt-in `NativeStyleScope.PreserveNative` to shield common native controls
   from ancestor implicit templates while retaining local styles and control identity.

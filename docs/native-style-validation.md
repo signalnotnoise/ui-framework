@@ -1,5 +1,8 @@
 # Native style boundary and compact input validation — October 11, 2026
 
+This records the October 11 candidate. The fixes later shipped in
+`0.1.0-alpha.4` on October 20; see the [release record](releases/0.1.0-alpha.4.md).
+
 The Unreleased WPF changes add an opt-in `NativeStyleScope.PreserveNative` boundary
 for common control implicit styles and remove duplicate padding from the themed
 TextBox/PasswordBox border. Native editing already applies its own padding.
@@ -73,4 +76,5 @@ the noisy timing. [Repeated direct summary and raw runs](performance-evidence/20
 The standard benchmark does not exercise a specialist native island with
 `PreserveNative` enabled. It establishes the existing workload gates, not the
 cost of theme replacement for an arbitrary third-party editor. This feature is
-Unreleased; no package version or consumer pin changes in this validation.
+Unreleased at the time of this comparison; no package version or consumer pin
+changed in this validation. Later publication is recorded separately above.

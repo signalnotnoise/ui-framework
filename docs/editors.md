@@ -42,7 +42,7 @@ Indices are positional, including when labels repeat. `-1` means no selection. A
 
 ## Themes and verification
 
-Unreleased: the input template no longer adds a second border padding around
+Since `0.1.0-alpha.4`, the input template no longer adds a second border padding around
 the native editing content. `TextBox` and `PasswordBox` already apply their
 own padding; doubling it clipped 16-point query text in a 36-DIP field inside
 a 60-DIP toolbar. `CompactInputTests` checks the complete character-line

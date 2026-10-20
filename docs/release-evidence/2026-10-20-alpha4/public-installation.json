@@ -1,0 +1,28 @@
+{
+  "checkedAtUtc": "2026-10-20T20:05:17.0234451Z",
+  "sdk": "10.0.402",
+  "isolatedConsumer": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\release-alpha4\\public-consumer-11ea63266d6a450b981e215b0d9b5391",
+  "packages": [
+    {
+      "package": "signalnotnoise.ui",
+      "version": "0.1.0-alpha.4",
+      "source": "https://api.nuget.org/v3/index.json",
+      "assembly": "UI Framework.dll",
+      "assemblySha256": "D32D1A25684DADF06CE6D83E3CE1AFB33E124A0AF29588509F8611FD58DB3DE8",
+      "hostedAssemblyMatches": true,
+      "hostedPackageSha256": "63CDBB6B551D88396B46E7BDBA326F98270167557151775F8CCA06F37105D866",
+      "packageSha256": "A73370480A24E5C649783FA79D6785DA0F1E7136C1AE6C4E782056E7E16148E7"
+    },
+    {
+      "package": "signalnotnoise.ui.wpf",
+      "version": "0.1.0-alpha.4",
+      "source": "https://api.nuget.org/v3/index.json",
+      "assembly": "UI Framework.Wpf.dll",
+      "assemblySha256": "049CB4E1E21FEFE9C09C607708A6EDCFAC43F65A3AE6F6DAA76BE88BF08F0936",
+      "hostedAssemblyMatches": true,
+      "hostedPackageSha256": "0173CEB8A98B00008987F7C0061CFE24B14DFF617AB9AC3044BE52385CD42786",
+      "packageSha256": "1485F41B6C31379996056F359E9BDEB1D7B7C9FCFE5D464E0E372874920246B6"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,9 @@
+  Determining projects to restore...
+C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\public-consumer-7cbace74f536450e85cda0536479a7f0\PackageSmoke.csproj : error NU1102: Unable to find package SignalNotNoise.UI.Wpf with version (= 0.1.0-alpha.4)
+C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\public-consumer-7cbace74f536450e85cda0536479a7f0\PackageSmoke.csproj : error NU1102:   - Found 3 version(s) in nuget.org [ Nearest version: 0.1.0-alpha.3 ]
+  Failed to restore C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\public-consumer-7cbace74f536450e85cda0536479a7f0\PackageSmoke.csproj (in 601 ms).
+Exception: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\Verify-Published.ps1:13
+Line |
+  13 |  … f ($LASTEXITCODE -ne 0) { throw 'Published package restore failed.' }
+     |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Published package restore failed.

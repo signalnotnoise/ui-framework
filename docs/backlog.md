@@ -7,7 +7,7 @@ framework tests, samples, documentation and package releases. GuidedGrade UI,
 its package adoption, browser integration and grading workflows belong in that
 application's backlog.
 
-Start with FW-001. Work within each priority follows the order below; performance
+FW-001 is complete. Start with FW-002. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -15,22 +15,21 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-001 | P0 | Release the implemented native style and compact input fixes | In progress |
-| 2 | FW-002 | P1 | Fix compact button padding and glyph clipping | Open |
-| 3 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
-| 4 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
-| 5 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
-| 6 | FW-006 | P1 | Expand UI Automation and accessibility coverage | Open |
-| 7 | FW-007 | P2 | Improve large keyed shuffles | Open |
-| 8 | FW-008 | P2 | Add a text submit callback | Proposed |
-| 9 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
-| 10 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
-| 11 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
-| 12 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
-| 13 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
-| 14 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
+| 1 | FW-002 | P1 | Fix compact button padding and glyph clipping | Open |
+| 2 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
+| 3 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
+| 4 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
+| 5 | FW-006 | P1 | Expand UI Automation and accessibility coverage | Open |
+| 6 | FW-007 | P2 | Improve large keyed shuffles | Open |
+| 7 | FW-008 | P2 | Add a text submit callback | Proposed |
+| 8 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
+| 9 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
+| 10 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
+| 11 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
+| 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
+| 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
 
-P0 finishes the pending release; P1 addresses known correctness, measurement and
+P0 is reserved for release blockers; none remain for alpha.4. P1 addresses known correctness, measurement and
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
 implementation. Proposed and Investigation items do not commit to a new API.
 
@@ -39,22 +38,25 @@ implementation. Proposed and Investigation items do not commit to a new API.
 ### FW-001 Release the implemented fixes
 
 The style boundary and compact input padding fix are implemented in `8bb20a2`.
-Release preparation started October 20, 2026 for `0.1.0-alpha.4`. Publication
-and fresh NuGet.org installation remain pending; this item is not Done.
+Done October 20, 2026: `0.1.0-alpha.4` was published from
+`039d3bb220e2dbddd3a11f452b0a12a673836565`. Both hosted workflows and all
+performance gates passed; Trusted Publishing pushed both packages and symbols.
+Both public packages passed a fresh consumer with isolated package and HTTP
+caches, and installed assemblies match the exact hosted artifacts.
 Fresh local Release, all 106 tests, 15 visual checks, 21 stress assertions and
 package-only checks for both overloads, scope changes, compact input and cleanup
-have passed. Hosted release gates are next. See the
+have passed. Public indexing and installation verification also passed. See the
 [release record](releases/0.1.0-alpha.4.md).
 The October 11 [validation](native-style-validation.md) passed 106 correctness
 tests, 15 visual checks, 21 stress assertions and all configured performance
 gates. Direct comparison timing concerns remain tracked by FW-003.
 
-- Assign a fresh prerelease version to both packages and update release metadata.
-- Verify the new overload and existing overload in a fresh package-only consumer,
+- [x] Assign a fresh prerelease version to both packages and update release metadata.
+- [x] Verify the new overload and existing overload in a fresh package-only consumer,
   including compact input rendering and native identity, selection and cleanup.
-- Run the [release workflow](releasing.md), including its correctness, package
+- [x] Run the [release workflow](releasing.md), including its correctness, package
   and performance gates, against the exact release commit.
-- Publish both packages and symbols through Trusted Publishing, then verify
+- [x] Publish both packages and symbols through Trusted Publishing, then verify
   installation from NuGet.org using an empty cache and record the release evidence.
 
 ### FW-002 Fix compact button clipping
@@ -196,9 +198,9 @@ delivery dates.
 Existing delivered capabilities include viewport virtualization, vertical fill,
 Dock, SplitPane, retained native hosting, rich button content, accessibility
 labels and the explicit application-owned editor cleanup policy. See the
-[changelog](../CHANGELOG.md). The style boundary and compact input fix are
-implemented but remain under FW-001 until publication.
+[changelog](../CHANGELOG.md). The style boundary and compact input fix shipped
+in `0.1.0-alpha.4` under FW-001.
 
 | ID | Completed | Result | Evidence |
 | --- | --- | --- | --- |
-| — | — | Future completed backlog items will be retained here. | — |
+| FW-001 | October 20, 2026 | Released `0.1.0-alpha.4` from `039d3bb`; packages and symbols published, public installation verified. | [Release record, workflow and checksums](releases/0.1.0-alpha.4.md) |

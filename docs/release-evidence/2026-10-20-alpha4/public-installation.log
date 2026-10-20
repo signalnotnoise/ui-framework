@@ -1,0 +1,8 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\public-consumer-11ea63266d6a450b981e215b0d9b5391\PackageSmoke.csproj (in 1.45 sec).
+Package installation, transitive core dependency, rendering, click, and state update passed.
+Packaged themed file label and interactive close content passed.
+Native interop: 1000 retained updates, 2.17 ms, 1032040 UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.
+Packaged style scope, original overload, retained selection, scope changes and cleanup passed.
+Packaged compact input viewport, retained caret and binding passed.
+Fresh public package installation passed: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha4\public-consumer-11ea63266d6a450b981e215b0d9b5391

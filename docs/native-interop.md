@@ -1,6 +1,6 @@
 # Retained WPF controls
 
-See [validation status](native-interop-validation.md) for historical integration evidence. Native interop ships in the published alpha previews; the style-scope API below is an Unreleased source change.
+See [validation status](native-interop-validation.md) for historical integration evidence. Native interop ships in the published alpha previews; the style-scope API below ships in `0.1.0-alpha.4`.
 
 `WpfUI.Native<T>(Func<T> create, Action<T>? update = null, Action<T>? release = null)` embeds an app-owned native WPF island in a declarative view. `T` must derive from `FrameworkElement`. This supports existing editors, trees, context menus, splitter grids, docking libraries and console controls without recreating their functionality in the framework.
 
@@ -25,7 +25,7 @@ Width, height, padding, alignment, background and enabled modifiers apply throug
 
 Core carries only `ViewKind.Platform` and an opaque `PlatformContent` descriptor. WPF's `Interop` layer owns creation, identity and cleanup. The common renderer owns outer layout and reconciliation.
 
-## Preserving native styles (Unreleased)
+## Preserving native styles
 
 Specialist controls can depend on their own templates. Host or application
 implicit Button/TextBox styles may otherwise replace those templates and hide
