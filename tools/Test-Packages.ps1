@@ -109,6 +109,7 @@ internal static class Program
         Console.WriteLine($"Native interop: 1000 retained updates, {watch.Elapsed.TotalMilliseconds:F2} ms, {allocated} UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.");
         CheckStyleScope();
         CheckCompactInput();
+        CheckCompactButton();
     }
 
     private static void CheckStyleScope()
@@ -182,6 +183,39 @@ internal static class Program
         if (query.Value != "User query") throw new Exception("Packaged compact input binding failed.");
         source.RootVisual = null;
         Console.WriteLine("Packaged compact input viewport, retained caret and binding passed.");
+    }
+
+    private static void CheckCompactButton()
+    {
+        var button = new Button { Content = "×", FontSize = 10, Width = 18, Height = 18, Padding = new Thickness(0), VerticalAlignment = VerticalAlignment.Top };
+        var root = new ContentControl { Content = button };
+        ThemeStyles.Apply(root, new ThemeTokens());
+        using var source = new HwndSource(new HwndSourceParameters("Package compact button")
+        { Width = 420, Height = 120, PositionX = -10000, PositionY = -10000 });
+        source.RootVisual = root;
+        Layout(root);
+        var chrome = (Border)button.Template.FindName("Chrome", button);
+        var text = Find<TextBlock>(button);
+        var bounds = text.TransformToAncestor(button).TransformBounds(new Rect(text.RenderSize));
+        if (chrome.Padding != new Thickness(0) || Math.Abs(button.ActualHeight - 18) > 0.01
+            || text.ActualWidth <= 0 || text.ActualHeight <= 0 || bounds.Left < 0 || bounds.Top < 0
+            || bounds.Right > button.ActualWidth || bounds.Bottom > button.ActualHeight)
+            throw new Exception("Packaged compact button clips its glyph or ignores native sizing/padding.");
+        ThemeStyles.Apply(root, new ThemeTokens { Ink = "#EDF1F7", Surface = "#20252E" });
+        Layout(root);
+        if (!Equals(button.Content, "×") || ((Border)button.Template.FindName("Chrome", button)).Padding != new Thickness(0))
+            throw new Exception("Packaged compact button lost content or native padding after retheming.");
+        button.MinHeight = 24;
+        Layout(root);
+        if (Math.Abs(button.ActualHeight - 24) > 0.01) throw new Exception("Packaged compact button ignores local MinHeight.");
+        button.ClearValue(FrameworkElement.MinHeightProperty);
+        Layout(root);
+        if (Math.Abs(button.ActualHeight - 18) > 0.01) throw new Exception("Packaged compact button did not restore explicit height.");
+        button.ClearValue(FrameworkElement.HeightProperty);
+        Layout(root);
+        if (Math.Abs(button.ActualHeight - 36) > 0.01) throw new Exception("Packaged automatic button lost its theme minimum.");
+        source.RootVisual = null;
+        Console.WriteLine("Packaged compact button glyph, native padding, retheming and sizing precedence passed.");
     }
 
     private static void Layout(FrameworkElement host)

@@ -417,18 +417,18 @@
         "docs/performance-guardrails.md",
         "tools/Test-Performance.ps1",
         "tools/Test-WorkspacePerformance.ps1",
-          "samples/WorkspaceComparison/Program.cs",
-          "samples/WorkspaceComparison/LayoutProbe.cs",
-          "samples/WorkspaceComparison/SubmissionListScenario.cs",
-          "docs/submission-virtualization-2026-09-24.md",
-          "samples/ConsumerDiagnostics/Program.cs",
-          "samples/ConsumerDiagnostics/FileTreeChecks.cs",
-          "docs/file-tree-virtualization-2026-09-24.md",
-          "tools/Test-ConsumerLayout.ps1",
-          "tools/Test-ConsumerPackages.ps1",
-          "docs/consumer-package-2026-09-25.md",
-          "docs/consumer-layout-2026-09-24.md",
-          "docs/layout-isolation-2026-09-24.md",
+        "samples/WorkspaceComparison/Program.cs",
+        "samples/WorkspaceComparison/LayoutProbe.cs",
+        "samples/WorkspaceComparison/SubmissionListScenario.cs",
+        "docs/submission-virtualization-2026-09-24.md",
+        "samples/ConsumerDiagnostics/Program.cs",
+        "samples/ConsumerDiagnostics/FileTreeChecks.cs",
+        "docs/file-tree-virtualization-2026-09-24.md",
+        "tools/Test-ConsumerLayout.ps1",
+        "tools/Test-ConsumerPackages.ps1",
+        "docs/consumer-package-2026-09-25.md",
+        "docs/consumer-layout-2026-09-24.md",
+        "docs/layout-isolation-2026-09-24.md",
         "docs/editor-timeout-investigation.md",
         "samples/EditorWaitDiagnostics/Program.cs",
         "UI Framework.Wpf/WpfComCleanupPolicy.cs",
@@ -512,7 +512,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Published package version 0.1.0-alpha.4; experimental MIT-licensed source and NuGet preview with Windows validation, fresh NuGet.org consumers whose assemblies match hosted artifacts, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Source candidate 0.1.0-alpha.5 includes the compact button fix and package-only regression coverage; publication requires Windows correctness, unchanged performance gates, Trusted Publishing and a fresh public consumer matching hosted assemblies. Latest verified public release is alpha.4.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -526,7 +526,8 @@
         "LICENSE",
         "tools/New-SourceArchive.ps1",
         "tools/Test-Documentation.ps1",
-        ".github/dependabot.yml"
+        ".github/dependabot.yml",
+        "docs/releases/0.1.0-alpha.5.md"
       ]
     }
   ],
@@ -832,5 +833,5 @@
       "to": "virtualization"
     }
   ],
-  "releaseVersion": "0.1.0-alpha.4"
+  "releaseVersion": "0.1.0-alpha.5"
 }

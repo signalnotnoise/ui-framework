@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.5 — Release candidate
+
+Publication is pending release gates and a fresh public installation check.
+
 - Respect native button Padding in themed chrome, including live bindings and
   zero-padding close buttons. Retain the automatic 36-DIP minimum while allowing
   explicit native Height to size compact buttons; local MinHeight still wins.

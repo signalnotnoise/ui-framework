@@ -7,7 +7,7 @@ framework tests, samples, documentation and package releases. GuidedGrade UI,
 its package adoption, browser integration and grading workflows belong in that
 application's backlog.
 
-FW-001 and FW-002 are complete. Start with FW-003. Work within each priority follows the order below; performance
+FW-001 and FW-002 are complete. FW-015 is preparing alpha.5; FW-003 follows. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -15,6 +15,7 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| 0 | FW-015 | P0 | Release compact button fixes as alpha.5 | In progress |
 | 1 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
 | 2 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
 | 3 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
@@ -28,11 +29,25 @@ Dates below record evidence or updates, not delivery commitments.
 | 11 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 12 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
 
-P0 is reserved for release blockers; none remain for alpha.4. P1 addresses known correctness, measurement and
+P0 is reserved for release blockers; alpha.5 requires fresh release gates and public installation evidence. P1 addresses known correctness, measurement and
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
 implementation. Proposed and Investigation items do not commit to a new API.
 
 ## Completion criteria
+
+### FW-015 Publish the compact button preview
+
+Started October 23, 2026. Prepare `0.1.0-alpha.5` with the completed FW-002
+fix and a package-only compact-button regression check. Keep the accepted
+performance baseline and budgets unchanged.
+
+- [x] Run local Release, correctness, visual, stress and isolated package checks.
+- [ ] Commit and push the release source; pass hosted correctness and performance gates.
+- [ ] Publish both packages and symbols through Trusted Publishing.
+- [ ] Verify fresh NuGet.org installation with isolated package/HTTP caches and
+  compare installed assemblies with hosted artifacts. Record the release evidence.
+
+See [release record](releases/0.1.0-alpha.5.md). FW-003 remains open.
 
 ### FW-001 Release the implemented fixes
 

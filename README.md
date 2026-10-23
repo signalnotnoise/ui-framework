@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.4 preview · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.5 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 

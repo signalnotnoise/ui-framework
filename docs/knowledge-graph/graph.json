@@ -9684,8 +9684,23 @@
       "group": "docs"
     },
     {
+      "id": "docs/release-evidence/2026-10-23-alpha5/Program.cs",
+      "label": "Program.cs",
+      "group": "docs"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-23-alpha5/local-stress.json",
+      "label": "local-stress.json",
+      "group": "docs"
+    },
+    {
       "id": "docs/releases/0.1.0-alpha.4.md",
       "label": "0.1.0-alpha.4.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/releases/0.1.0-alpha.5.md",
+      "label": "0.1.0-alpha.5.md",
       "group": "docs"
     },
     {
@@ -10934,7 +10949,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Published package version 0.1.0-alpha.4; experimental MIT-licensed source and NuGet preview with Windows validation, fresh NuGet.org consumers whose assemblies match hosted artifacts, immutable workflow action pins and separate trusted publishing.",
+      "summary": "Source candidate 0.1.0-alpha.5 includes the compact button fix and package-only regression coverage; publication requires Windows correctness, unchanged performance gates, Trusted Publishing and a fresh public consumer matching hosted assemblies. Latest verified public release is alpha.4.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -10948,7 +10963,8 @@
         "LICENSE",
         "tools/New-SourceArchive.ps1",
         "tools/Test-Documentation.ps1",
-        ".github/dependabot.yml"
+        ".github/dependabot.yml",
+        "docs/releases/0.1.0-alpha.5.md"
       ],
       "group": "architecture"
     }
@@ -12176,6 +12192,11 @@
     },
     {
       "source": "concept:release",
+      "target": "docs/releases/0.1.0-alpha.5.md",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:release",
       "target": "docs/releasing.md",
       "kind": "evidenced by"
     },
@@ -12906,6 +12927,11 @@
     },
     {
       "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.5.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
       "target": "docs/releasing.md",
       "kind": "references"
     },
@@ -13407,6 +13433,11 @@
     {
       "source": "docs/knowledge-graph.md",
       "target": "docs/performance.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/releases/0.1.0-alpha.5.md",
       "kind": "references"
     },
     {
@@ -14135,8 +14166,18 @@
       "kind": "references"
     },
     {
+      "source": "docs/releases/0.1.0-alpha.5.md",
+      "target": "docs/compact-button-validation.md",
+      "kind": "references"
+    },
+    {
       "source": "docs/releasing.md",
       "target": "docs/releases/0.1.0-alpha.4.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/releasing.md",
+      "target": "docs/releases/0.1.0-alpha.5.md",
       "kind": "references"
     },
     {
@@ -23876,7 +23917,22 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-23-alpha5/Program.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-23-alpha5/local-stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/releases/0.1.0-alpha.4.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/releases/0.1.0-alpha.5.md",
       "kind": "contains"
     },
     {
