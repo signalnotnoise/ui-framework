@@ -1,0 +1,93 @@
+{
+  "kind": "focused-full-list-repeat-not-a-release-gate",
+  "releaseGate": false,
+  "samples": 7,
+  "discardedWarmupsPerSide": 1,
+  "rows": 1000,
+  "operations": 50,
+  "runtime": [
+    "10.0.13"
+  ],
+  "comparisons": [
+    {
+      "metric": "MountMilliseconds",
+      "baselineMedian": 8145.6167,
+      "candidateMedian": 8285.9653,
+      "changePercent": 1.722995387200088,
+      "baselineMin": 5101.6273,
+      "baselineMax": 8843.8436,
+      "candidateMin": 4949.9921,
+      "candidateMax": 9198.6441
+    },
+    {
+      "metric": "Milliseconds",
+      "baselineMedian": 12086.7559,
+      "candidateMedian": 11534.6375,
+      "changePercent": -4.567961863116632,
+      "baselineMin": 3944.6251,
+      "baselineMax": 16401.8301,
+      "candidateMin": 3889.956,
+      "candidateMax": 12804.7515
+    },
+    {
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 342893088.0,
+      "candidateMedian": 342780840.0,
+      "changePercent": -0.03273556800305055,
+      "baselineMin": 342325608.0,
+      "baselineMax": 343064264.0,
+      "candidateMin": 342374112.0,
+      "candidateMax": 343030808.0
+    },
+    {
+      "metric": "AllocatedBytes",
+      "baselineMedian": 464008160.0,
+      "candidateMedian": 464423096.0,
+      "changePercent": 0.08942428943490288,
+      "baselineMin": 462165096.0,
+      "baselineMax": 472045848.0,
+      "candidateMin": 462090264.0,
+      "candidateMax": 471546944.0
+    },
+    {
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 1022.0,
+      "candidateMedian": 1022.0,
+      "changePercent": 0.0,
+      "baselineMin": 1022.0,
+      "baselineMax": 1022.0,
+      "candidateMin": 1022.0,
+      "candidateMax": 1022.0
+    },
+    {
+      "metric": "BodyBuilds",
+      "baselineMedian": 5141.0,
+      "candidateMedian": 5141.0,
+      "changePercent": 0.0,
+      "baselineMin": 5141.0,
+      "baselineMax": 5141.0,
+      "candidateMin": 5141.0,
+      "candidateMax": 5141.0
+    },
+    {
+      "metric": "Mounts",
+      "baselineMedian": 456.0,
+      "candidateMedian": 456.0,
+      "changePercent": 0.0,
+      "baselineMin": 456.0,
+      "baselineMax": 456.0,
+      "candidateMin": 456.0,
+      "candidateMax": 456.0
+    },
+    {
+      "metric": "Unmounts",
+      "baselineMedian": 658.0,
+      "candidateMedian": 658.0,
+      "changePercent": 0.0,
+      "baselineMin": 658.0,
+      "baselineMax": 658.0,
+      "candidateMin": 658.0,
+      "candidateMax": 658.0
+    }
+  ]
+}

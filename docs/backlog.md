@@ -7,7 +7,7 @@ framework tests, samples, documentation and package releases. GuidedGrade UI,
 its package adoption, browser integration and grading workflows belong in that
 application's backlog.
 
-FW-001 is complete. Start with FW-002. Work within each priority follows the order below; performance
+FW-001 and FW-002 are complete. Start with FW-003. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -15,19 +15,18 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-002 | P1 | Fix compact button padding and glyph clipping | In progress |
-| 2 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
-| 3 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
-| 4 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
-| 5 | FW-006 | P1 | Expand UI Automation and accessibility coverage | Open |
-| 6 | FW-007 | P2 | Improve large keyed shuffles | Open |
-| 7 | FW-008 | P2 | Add a text submit callback | Proposed |
-| 8 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
-| 9 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
-| 10 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
-| 11 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
-| 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
-| 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
+| 1 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
+| 2 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
+| 3 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
+| 4 | FW-006 | P1 | Expand UI Automation and accessibility coverage | Open |
+| 5 | FW-007 | P2 | Improve large keyed shuffles | Open |
+| 6 | FW-008 | P2 | Add a text submit callback | Proposed |
+| 7 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
+| 8 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
+| 9 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
+| 10 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
+| 11 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
+| 12 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
 
 P0 is reserved for release blockers; none remain for alpha.4. P1 addresses known correctness, measurement and
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
@@ -61,12 +60,18 @@ gates. Direct comparison timing concerns remain tracked by FW-003.
 
 ### FW-002 Fix compact button clipping
 
-Started October 23, 2026. Reproduction, template changes and paired performance
-validation are in progress; this item is not yet complete.
-The fix passed 119 correctness tests, 15 visual checks and 21 stress assertions.
-The first direct performance run flagged full-list updates (+28.86%); control
-measurements and accepted-baseline CI verification are pending. See
-[validation evidence](compact-button-validation.md).
+Done October 23, 2026 in `f917ca6`: source fix, 13 new regression cases, 119
+passing correctness tests, 15 visual checks, 21 stress assertions and passing
+accepted-baseline CI gates. Chrome respects native Padding and live bindings;
+automatic native Height keeps the 36-DIP minimum, explicit Height permits
+compact controls, and local MinHeight wins. Normal native theme spacing,
+retained content, focus and automation are covered at simulated 100–200% DPI.
+
+The first direct full-list update gate failed (+28.86%). It is retained;
+an identical-binary control showed substantial variability and a seven-sample
+focused repeat did not reproduce it (−4.57% update median). FW-003 retains the
+timing concern. See [validation evidence](compact-button-validation.md).
+This is an Unreleased source change; alpha.4 package bytes are unchanged.
 
 Make compact controls respect their native padding and intentional dimensions.
 Cover small close/icon buttons, complete glyph visibility, rich content,
@@ -82,6 +87,15 @@ existing budgets. Preserve the earlier runs and investigate variance before
 assigning a cause. Attempt a focused improvement where the evidence identifies
 one; record improvements, regressions and inconclusive results. Do not advance
 the accepted baseline or relax budgets to clear this item.
+
+October 23 follow-up: FW-002's first local direct run flagged unthemed full-list
+updates (+28.86%) with essentially unchanged allocations/work. A seven-sample
+identical-binary control showed broad timing ranges and a −5.79% median
+difference between paths. The flag is retained, not dismissed as proof of
+noise. A seven-sample focused before/after repeat measured −4.57% full-list
+update time with wide timing ranges, and all accepted-baseline CI gates passed.
+Investigate the unstable measurements without claiming a reliable speedup or
+zero regression; see [compact button performance investigation](compact-button-validation.md).
 
 ### FW-004 Measure native style isolation
 
@@ -211,3 +225,4 @@ in `0.1.0-alpha.4` under FW-001.
 | ID | Completed | Result | Evidence |
 | --- | --- | --- | --- |
 | FW-001 | October 20, 2026 | Released `0.1.0-alpha.4` from `039d3bb`; packages and symbols published, public installation verified. | [Release record, workflow and checksums](releases/0.1.0-alpha.4.md) |
+| FW-002 | October 23, 2026 | Fixed compact native button chrome in `f917ca6`; correctness and CI gates pass. Unreleased; timing concerns retained under FW-003. | [Validation, renders and raw performance evidence](compact-button-validation.md) |

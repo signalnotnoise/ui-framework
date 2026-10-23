@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="0a33950a-3302-439e-bf50-2311550f0444" name="iotero@IOTERO-MSI76 2026-10-23 03:55:46" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-23T03:55:46.1820924-04:00" queuing="2026-10-23T03:55:46.1820928-04:00" start="2026-10-23T03:55:44.3121391-04:00" finish="2026-10-23T03:55:46.7135999-04:00" />
+  <TestSettings name="default" id="50e6df8f-838e-4684-bd12-12d8e8ef7bc6">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-23_03_55_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="1c9b2ceb-c2eb-42b6-9c48-0f894435b23a" testId="921974c2-a58e-3a7b-d548-c18f2ab17c4a" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (2,True)" computerName="IOTERO-MSI76" duration="00:00:00.0082704" startTime="2026-10-23T03:55:46.2063082-04:00" endTime="2026-10-23T03:55:46.2147737-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c9b2ceb-c2eb-42b6-9c48-0f894435b23a" />
+    <UnitTestResult executionId="d173fd5c-c825-4439-ad64-063128fac6f3" testId="b65a0832-51ce-1379-774f-9bb96a0c6c35" testName="RichNativeContentRemainsVisibleAndInteractiveAcrossThemeUpdates" computerName="IOTERO-MSI76" duration="00:00:00.7338748" startTime="2026-10-23T03:55:45.0765192-04:00" endTime="2026-10-23T03:55:45.8213736-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d173fd5c-c825-4439-ad64-063128fac6f3" />
+    <UnitTestResult executionId="83e743f4-6133-4cbc-820f-f2e206c1c500" testId="695058f4-18ee-1a95-1388-0df9f3b09c29" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.5,True)" computerName="IOTERO-MSI76" duration="00:00:00.0081776" startTime="2026-10-23T03:55:46.1978554-04:00" endTime="2026-10-23T03:55:46.2062306-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83e743f4-6133-4cbc-820f-f2e206c1c500" />
+    <UnitTestResult executionId="39025dc0-c5e1-467f-b56c-3f6039e4c685" testId="8c3a5153-ee4e-4123-95c9-b0f47463ab0f" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.25,True)" computerName="IOTERO-MSI76" duration="00:00:00.0087687" startTime="2026-10-23T03:55:46.1888106-04:00" endTime="2026-10-23T03:55:46.1977816-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39025dc0-c5e1-467f-b56c-3f6039e4c685" />
+    <UnitTestResult executionId="9c3524f8-5a8f-4f44-a744-a0ee6ca71d2a" testId="1a536dfd-d6c1-f38f-d50a-71478194dbf1" testName="RetainedLayoutTracksChangesAndRestoresAutomaticSize" computerName="IOTERO-MSI76" duration="00:00:00.0125517" startTime="2026-10-23T03:55:46.4483747-04:00" endTime="2026-10-23T03:55:46.4611099-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c3524f8-5a8f-4f44-a744-a0ee6ca71d2a" />
+    <UnitTestResult executionId="5fd465a5-1bb2-4cba-9042-128e25127e3e" testId="b9c2c5fb-b3d4-e4c6-8ffd-feb31b396210" testName="ApplicationTemplatesAndNativeTextKeepTheirWrappingPolicy" computerName="IOTERO-MSI76" duration="00:00:00.0321260" startTime="2026-10-23T03:55:45.8587853-04:00" endTime="2026-10-23T03:55:45.8911136-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fd465a5-1bb2-4cba-9042-128e25127e3e" />
+    <UnitTestResult executionId="712f9ee7-8281-46c2-9a1f-4c949a5fe0bd" testId="ffceb608-748e-ed9e-5150-6eada2174f8a" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (2,False)" computerName="IOTERO-MSI76" duration="00:00:00.0106909" startTime="2026-10-23T03:55:46.1679466-04:00" endTime="2026-10-23T03:55:46.1788372-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="712f9ee7-8281-46c2-9a1f-4c949a5fe0bd" />
+    <UnitTestResult executionId="cf283fd7-85a9-4c6b-a3a6-9d6820da8b0e" testId="46716f5b-2535-af7e-526e-de962f0c6a5e" testName="CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates" computerName="IOTERO-MSI76" duration="00:00:00.2018102" startTime="2026-10-23T03:55:46.2148394-04:00" endTime="2026-10-23T03:55:46.4168147-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf283fd7-85a9-4c6b-a3a6-9d6820da8b0e" />
+    <UnitTestResult executionId="26243168-6787-4092-a5b7-fbbce027ee1b" testId="3b63dd01-0952-97c7-01f8-02c3e65c528f" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.5,False)" computerName="IOTERO-MSI76" duration="00:00:00.0195404" startTime="2026-10-23T03:55:46.1480327-04:00" endTime="2026-10-23T03:55:46.1678780-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26243168-6787-4092-a5b7-fbbce027ee1b" />
+    <UnitTestResult executionId="2378ab07-4f6f-4187-9e46-2c17d308f99c" testId="4c8cf8e0-fedb-8815-c755-eb4d41c089d1" testName="InvalidLayoutDimensionsAreRejected" computerName="IOTERO-MSI76" duration="00:00:00.0014775" startTime="2026-10-23T03:55:46.5726375-04:00" endTime="2026-10-23T03:55:46.5748581-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2378ab07-4f6f-4187-9e46-2c17d308f99c" />
+    <UnitTestResult executionId="f8752ad6-759a-4269-89a9-6910c3bc6129" testId="ad2220b8-dddf-931e-d3b9-4398c395f931" testName="DeclarativeButtonKeepsItsNativePaddingAcrossThemes" computerName="IOTERO-MSI76" duration="00:00:00.0566059" startTime="2026-10-23T03:55:45.9494082-04:00" endTime="2026-10-23T03:55:46.0061739-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8752ad6-759a-4269-89a9-6910c3bc6129" />
+    <UnitTestResult executionId="b772800e-3197-43c9-8577-73fc6759917c" testId="b5dbc8f3-ab4e-f49a-0d1f-bb685b8678be" testName="GeneratedStringContentWrapsAndUsesThemedForeground" computerName="IOTERO-MSI76" duration="00:00:00.0327828" startTime="2026-10-23T03:55:45.8251788-04:00" endTime="2026-10-23T03:55:45.8582377-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b772800e-3197-43c9-8577-73fc6759917c" />
+    <UnitTestResult executionId="2ffa2ee5-f056-422e-9b01-40696aa67516" testId="aad6da70-5558-5942-bc2d-4a5580345b40" testName="ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding" computerName="IOTERO-MSI76" duration="00:00:00.0143303" startTime="2026-10-23T03:55:46.5119215-04:00" endTime="2026-10-23T03:55:46.5264029-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ffa2ee5-f056-422e-9b01-40696aa67516" />
+    <UnitTestResult executionId="aa73798e-a8f8-4326-8a7c-21808dd0db77" testId="02389989-a384-a16a-dcc3-50bb16258c57" testName="PaddingBindingsRemainLiveAndNormalThemeSpacingIsUnchanged" computerName="IOTERO-MSI76" duration="00:00:00.0298503" startTime="2026-10-23T03:55:46.0344674-04:00" endTime="2026-10-23T03:55:46.0644540-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa73798e-a8f8-4326-8a7c-21808dd0db77" />
+    <UnitTestResult executionId="f950aee4-0065-458f-92e6-f6bdba54411b" testId="6f9802d2-4a31-b284-91b2-478f067bfb13" testName="AutomaticSizingAndExplicitMinimumKeepTheirPrecedence" computerName="IOTERO-MSI76" duration="00:00:00.0280182" startTime="2026-10-23T03:55:46.0062406-04:00" endTime="2026-10-23T03:55:46.0343936-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f950aee4-0065-458f-92e6-f6bdba54411b" />
+    <UnitTestResult executionId="81046414-f9d7-4799-a949-51e772764b72" testId="4fcd3631-6698-ef16-b189-ff7d5778b851" testName="EmptyAdaptiveGridReleasesSpaceAndCanBePopulated" computerName="IOTERO-MSI76" duration="00:00:00.0288308" startTime="2026-10-23T03:55:46.5436165-04:00" endTime="2026-10-23T03:55:46.5725729-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81046414-f9d7-4799-a949-51e772764b72" />
+    <UnitTestResult executionId="369822bb-ad43-480d-8855-7b3942ec8944" testId="15e2d21d-e33f-0d82-388c-985546a192ba" testName="FlexRowsAllocateRemainingWidthAfterFixedChildrenAndGaps" computerName="IOTERO-MSI76" duration="00:00:00.0271220" startTime="2026-10-23T03:55:46.4168908-04:00" endTime="2026-10-23T03:55:46.4442817-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="369822bb-ad43-480d-8855-7b3942ec8944" />
+    <UnitTestResult executionId="4b2ac0c6-4e13-489d-ae6f-c578ecd715e3" testId="146ebab1-ff3d-1aa4-8b0c-82efa4565ad2" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1,True)" computerName="IOTERO-MSI76" duration="00:00:00.0096448" startTime="2026-10-23T03:55:46.1789022-04:00" endTime="2026-10-23T03:55:46.1887427-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b2ac0c6-4e13-489d-ae6f-c578ecd715e3" />
+    <UnitTestResult executionId="4742cbb9-dd41-423b-bfb7-61a49cbf0b0c" testId="549d09f5-1414-b8d2-d8d7-5fcc9da83cf5" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1,False)" computerName="IOTERO-MSI76" duration="00:00:00.0380648" startTime="2026-10-23T03:55:46.0645198-04:00" endTime="2026-10-23T03:55:46.1066391-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4742cbb9-dd41-423b-bfb7-61a49cbf0b0c" />
+    <UnitTestResult executionId="9d4c1384-d14b-4738-944f-0a829eb697f1" testId="605a7642-61f3-364f-7450-4698e97a5996" testName="CompactNativeButtonHonorsPaddingAndExplicitHeight" computerName="IOTERO-MSI76" duration="00:00:00.0267330" startTime="2026-10-23T03:55:45.9223801-04:00" endTime="2026-10-23T03:55:45.9493336-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d4c1384-d14b-4738-944f-0a829eb697f1" />
+    <UnitTestResult executionId="1f79b576-1423-45a9-b0d4-3dd871c13c71" testId="7cda3b1a-c492-42d7-076e-30e7dfd38bfe" testName="ExplicitForegroundOverridesThemeAndCanBeRemoved" computerName="IOTERO-MSI76" duration="00:00:00.0169489" startTime="2026-10-23T03:55:46.5264717-04:00" endTime="2026-10-23T03:55:46.5435518-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f79b576-1423-45a9-b0d4-3dd871c13c71" />
+    <UnitTestResult executionId="32e64c79-f5ed-45a4-98ab-bf1450f3e92e" testId="cc8e4def-5fc4-1bab-eb35-404ae9f1c434" testName="AdaptiveColumnsReflowWithoutReplacingTheInput" computerName="IOTERO-MSI76" duration="00:00:00.0505473" startTime="2026-10-23T03:55:46.4611772-04:00" endTime="2026-10-23T03:55:46.5118575-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32e64c79-f5ed-45a4-98ab-bf1450f3e92e" />
+    <UnitTestResult executionId="09238939-a68c-4075-b9d9-2c499623654c" testId="c78a3195-014d-6c57-d6ba-767c714a7473" testName="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.25,False)" computerName="IOTERO-MSI76" duration="00:00:00.0103256" startTime="2026-10-23T03:55:46.1371482-04:00" endTime="2026-10-23T03:55:46.1479109-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09238939-a68c-4075-b9d9-2c499623654c" />
+    <UnitTestResult executionId="f1238d8d-437c-4bb2-9be3-ae7f304ed571" testId="a49ff080-80db-15a5-b0c5-1b8c7b683fad" testName="ContentTemplateAndStringFormatAreRespected" computerName="IOTERO-MSI76" duration="00:00:00.0307843" startTime="2026-10-23T03:55:45.8911877-04:00" endTime="2026-10-23T03:55:45.9223031-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1238d8d-437c-4bb2-9be3-ae7f304ed571" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1,False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="549d09f5-1414-b8d2-d8d7-5fcc9da83cf5">
+      <Execution id="4742cbb9-dd41-423b-bfb7-61a49cbf0b0c" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (2,True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="921974c2-a58e-3a7b-d548-c18f2ab17c4a">
+      <Execution id="1c9b2ceb-c2eb-42b6-9c48-0f894435b23a" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="InvalidLayoutDimensionsAreRejected" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="4c8cf8e0-fedb-8815-c755-eb4d41c089d1">
+      <Execution id="2378ab07-4f6f-4187-9e46-2c17d308f99c" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="InvalidLayoutDimensionsAreRejected" />
+    </UnitTest>
+    <UnitTest name="ApplicationTemplatesAndNativeTextKeepTheirWrappingPolicy" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b9c2c5fb-b3d4-e4c6-8ffd-feb31b396210">
+      <Execution id="5fd465a5-1bb2-4cba-9042-128e25127e3e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="ButtonContentTests" name="ApplicationTemplatesAndNativeTextKeepTheirWrappingPolicy" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.25,False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="c78a3195-014d-6c57-d6ba-767c714a7473">
+      <Execution id="09238939-a68c-4075-b9d9-2c499623654c" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="GeneratedStringContentWrapsAndUsesThemedForeground" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b5dbc8f3-ab4e-f49a-0d1f-bb685b8678be">
+      <Execution id="b772800e-3197-43c9-8577-73fc6759917c" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="ButtonContentTests" name="GeneratedStringContentWrapsAndUsesThemedForeground" />
+    </UnitTest>
+    <UnitTest name="RetainedLayoutTracksChangesAndRestoresAutomaticSize" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="1a536dfd-d6c1-f38f-d50a-71478194dbf1">
+      <Execution id="9c3524f8-5a8f-4f44-a744-a0ee6ca71d2a" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="RetainedLayoutTracksChangesAndRestoresAutomaticSize" />
+    </UnitTest>
+    <UnitTest name="EmptyAdaptiveGridReleasesSpaceAndCanBePopulated" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="4fcd3631-6698-ef16-b189-ff7d5778b851">
+      <Execution id="81046414-f9d7-4799-a949-51e772764b72" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="EmptyAdaptiveGridReleasesSpaceAndCanBePopulated" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.25,True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="8c3a5153-ee4e-4123-95c9-b0f47463ab0f">
+      <Execution id="39025dc0-c5e1-467f-b56c-3f6039e4c685" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="RichNativeContentRemainsVisibleAndInteractiveAcrossThemeUpdates" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b65a0832-51ce-1379-774f-9bb96a0c6c35">
+      <Execution id="d173fd5c-c825-4439-ad64-063128fac6f3" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="ButtonContentTests" name="RichNativeContentRemainsVisibleAndInteractiveAcrossThemeUpdates" />
+    </UnitTest>
+    <UnitTest name="DeclarativeButtonKeepsItsNativePaddingAcrossThemes" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="ad2220b8-dddf-931e-d3b9-4398c395f931">
+      <Execution id="f8752ad6-759a-4269-89a9-6910c3bc6129" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="DeclarativeButtonKeepsItsNativePaddingAcrossThemes" />
+    </UnitTest>
+    <UnitTest name="AdaptiveColumnsReflowWithoutReplacingTheInput" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="cc8e4def-5fc4-1bab-eb35-404ae9f1c434">
+      <Execution id="32e64c79-f5ed-45a4-98ab-bf1450f3e92e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="AdaptiveColumnsReflowWithoutReplacingTheInput" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.5,True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="695058f4-18ee-1a95-1388-0df9f3b09c29">
+      <Execution id="83e743f4-6133-4cbc-820f-f2e206c1c500" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="CompactNativeButtonHonorsPaddingAndExplicitHeight" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="605a7642-61f3-364f-7450-4698e97a5996">
+      <Execution id="9d4c1384-d14b-4738-944f-0a829eb697f1" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="CompactNativeButtonHonorsPaddingAndExplicitHeight" />
+    </UnitTest>
+    <UnitTest name="ContentTemplateAndStringFormatAreRespected" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="a49ff080-80db-15a5-b0c5-1b8c7b683fad">
+      <Execution id="f1238d8d-437c-4bb2-9be3-ae7f304ed571" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="ButtonContentTests" name="ContentTemplateAndStringFormatAreRespected" />
+    </UnitTest>
+    <UnitTest name="PaddingBindingsRemainLiveAndNormalThemeSpacingIsUnchanged" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="02389989-a384-a16a-dcc3-50bb16258c57">
+      <Execution id="aa73798e-a8f8-4326-8a7c-21808dd0db77" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="PaddingBindingsRemainLiveAndNormalThemeSpacingIsUnchanged" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1,True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="146ebab1-ff3d-1aa4-8b0c-82efa4565ad2">
+      <Execution id="4b2ac0c6-4e13-489d-ae6f-c578ecd715e3" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="FlexRowsAllocateRemainingWidthAfterFixedChildrenAndGaps" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="15e2d21d-e33f-0d82-388c-985546a192ba">
+      <Execution id="369822bb-ad43-480d-8855-7b3942ec8944" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="FlexRowsAllocateRemainingWidthAfterFixedChildrenAndGaps" />
+    </UnitTest>
+    <UnitTest name="AutomaticSizingAndExplicitMinimumKeepTheirPrecedence" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="6f9802d2-4a31-b284-91b2-478f067bfb13">
+      <Execution id="f950aee4-0065-458f-92e6-f6bdba54411b" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="AutomaticSizingAndExplicitMinimumKeepTheirPrecedence" />
+    </UnitTest>
+    <UnitTest name="ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="aad6da70-5558-5942-bc2d-4a5580345b40">
+      <Execution id="2ffa2ee5-f056-422e-9b01-40696aa67516" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (2,False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="ffceb608-748e-ed9e-5150-6eada2174f8a">
+      <Execution id="712f9ee7-8281-46c2-9a1f-4c949a5fe0bd" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="ExplicitForegroundOverridesThemeAndCanBeRemoved" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="7cda3b1a-c492-42d7-076e-30e7dfd38bfe">
+      <Execution id="1f79b576-1423-45a9-b0d4-3dd871c13c71" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="LayoutStyleTests" name="ExplicitForegroundOverridesThemeAndCanBeRemoved" />
+    </UnitTest>
+    <UnitTest name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes (1.5,False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3b63dd01-0952-97c7-01f8-02c3e65c528f">
+      <Execution id="26243168-6787-4092-a5b7-fbbce027ee1b" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="GlyphIsContainedAtScaledDpiInLightAndDarkThemes" />
+    </UnitTest>
+    <UnitTest name="CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="46716f5b-2535-af7e-526e-de962f0c6a5e">
+      <Execution id="cf283fd7-85a9-4c6b-a3a6-9d6820da8b0e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="CompactButtonTests" name="CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="921974c2-a58e-3a7b-d548-c18f2ab17c4a" executionId="1c9b2ceb-c2eb-42b6-9c48-0f894435b23a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b65a0832-51ce-1379-774f-9bb96a0c6c35" executionId="d173fd5c-c825-4439-ad64-063128fac6f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="695058f4-18ee-1a95-1388-0df9f3b09c29" executionId="83e743f4-6133-4cbc-820f-f2e206c1c500" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c3a5153-ee4e-4123-95c9-b0f47463ab0f" executionId="39025dc0-c5e1-467f-b56c-3f6039e4c685" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a536dfd-d6c1-f38f-d50a-71478194dbf1" executionId="9c3524f8-5a8f-4f44-a744-a0ee6ca71d2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9c2c5fb-b3d4-e4c6-8ffd-feb31b396210" executionId="5fd465a5-1bb2-4cba-9042-128e25127e3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffceb608-748e-ed9e-5150-6eada2174f8a" executionId="712f9ee7-8281-46c2-9a1f-4c949a5fe0bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46716f5b-2535-af7e-526e-de962f0c6a5e" executionId="cf283fd7-85a9-4c6b-a3a6-9d6820da8b0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b63dd01-0952-97c7-01f8-02c3e65c528f" executionId="26243168-6787-4092-a5b7-fbbce027ee1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c8cf8e0-fedb-8815-c755-eb4d41c089d1" executionId="2378ab07-4f6f-4187-9e46-2c17d308f99c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad2220b8-dddf-931e-d3b9-4398c395f931" executionId="f8752ad6-759a-4269-89a9-6910c3bc6129" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5dbc8f3-ab4e-f49a-0d1f-bb685b8678be" executionId="b772800e-3197-43c9-8577-73fc6759917c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aad6da70-5558-5942-bc2d-4a5580345b40" executionId="2ffa2ee5-f056-422e-9b01-40696aa67516" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02389989-a384-a16a-dcc3-50bb16258c57" executionId="aa73798e-a8f8-4326-8a7c-21808dd0db77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f9802d2-4a31-b284-91b2-478f067bfb13" executionId="f950aee4-0065-458f-92e6-f6bdba54411b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fcd3631-6698-ef16-b189-ff7d5778b851" executionId="81046414-f9d7-4799-a949-51e772764b72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15e2d21d-e33f-0d82-388c-985546a192ba" executionId="369822bb-ad43-480d-8855-7b3942ec8944" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="146ebab1-ff3d-1aa4-8b0c-82efa4565ad2" executionId="4b2ac0c6-4e13-489d-ae6f-c578ecd715e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="549d09f5-1414-b8d2-d8d7-5fcc9da83cf5" executionId="4742cbb9-dd41-423b-bfb7-61a49cbf0b0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="605a7642-61f3-364f-7450-4698e97a5996" executionId="9d4c1384-d14b-4738-944f-0a829eb697f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7cda3b1a-c492-42d7-076e-30e7dfd38bfe" executionId="1f79b576-1423-45a9-b0d4-3dd871c13c71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc8e4def-5fc4-1bab-eb35-404ae9f1c434" executionId="32e64c79-f5ed-45a4-98ab-bf1450f3e92e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c78a3195-014d-6c57-d6ba-767c714a7473" executionId="09238939-a68c-4075-b9d9-2c499623654c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a49ff080-80db-15a5-b0c5-1b8c7b683fad" executionId="f1238d8d-437c-4bb2-9be3-ae7f304ed571" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="24" executed="24" passed="24" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>
