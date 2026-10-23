@@ -7,7 +7,7 @@ framework tests, samples, documentation and package releases. GuidedGrade UI,
 its package adoption, browser integration and grading workflows belong in that
 application's backlog.
 
-FW-001 and FW-002 are complete. FW-015 is preparing alpha.5; FW-003 follows. Work within each priority follows the order below; performance
+FW-001, FW-002 and FW-015 are complete. Start with FW-003. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -15,7 +15,6 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 0 | FW-015 | P0 | Release compact button fixes as alpha.5 | In progress |
 | 1 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
 | 2 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
 | 3 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
@@ -29,7 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 | 11 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 12 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
 
-P0 is reserved for release blockers; alpha.5 requires fresh release gates and public installation evidence. P1 addresses known correctness, measurement and
+P0 is reserved for release blockers; none remain for alpha.5. P1 addresses known correctness, measurement and
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
 implementation. Proposed and Investigation items do not commit to a new API.
 
@@ -37,14 +36,16 @@ implementation. Proposed and Investigation items do not commit to a new API.
 
 ### FW-015 Publish the compact button preview
 
-Started October 23, 2026. Prepare `0.1.0-alpha.5` with the completed FW-002
-fix and a package-only compact-button regression check. Keep the accepted
-performance baseline and budgets unchanged.
+Done October 23, 2026: `0.1.0-alpha.5` published from `fbf5204`. Both
+hosted workflows, all 32 performance gates and fresh NuGet.org installation
+passed. Compact-button package checks and hosted assembly matching passed.
+Both packages and symbols published through Trusted Publishing. The accepted
+performance baseline and budgets are unchanged.
 
 - [x] Run local Release, correctness, visual, stress and isolated package checks.
-- [ ] Commit and push the release source; pass hosted correctness and performance gates.
-- [ ] Publish both packages and symbols through Trusted Publishing.
-- [ ] Verify fresh NuGet.org installation with isolated package/HTTP caches and
+- [x] Commit and push the release source; pass hosted correctness and performance gates.
+- [x] Publish both packages and symbols through Trusted Publishing.
+- [x] Verify fresh NuGet.org installation with isolated package/HTTP caches and
   compare installed assemblies with hosted artifacts. Record the release evidence.
 
 See [release record](releases/0.1.0-alpha.5.md). FW-003 remains open.
@@ -86,7 +87,8 @@ The first direct full-list update gate failed (+28.86%). It is retained;
 an identical-binary control showed substantial variability and a seven-sample
 focused repeat did not reproduce it (−4.57% update median). FW-003 retains the
 timing concern. See [validation evidence](compact-button-validation.md).
-This is an Unreleased source change; alpha.4 package bytes are unchanged.
+Published in `0.1.0-alpha.5` from `fbf5204`; exact-source release gates and
+fresh public package checks passed. See [release evidence](releases/0.1.0-alpha.5.md).
 
 Make compact controls respect their native padding and intentional dimensions.
 Cover small close/icon buttons, complete glyph visibility, rich content,
@@ -240,4 +242,5 @@ in `0.1.0-alpha.4` under FW-001.
 | ID | Completed | Result | Evidence |
 | --- | --- | --- | --- |
 | FW-001 | October 20, 2026 | Released `0.1.0-alpha.4` from `039d3bb`; packages and symbols published, public installation verified. | [Release record, workflow and checksums](releases/0.1.0-alpha.4.md) |
-| FW-002 | October 23, 2026 | Fixed compact native button chrome in `f917ca6`; correctness and CI gates pass. Unreleased; timing concerns retained under FW-003. | [Validation, renders and raw performance evidence](compact-button-validation.md) |
+| FW-002 | October 23, 2026 | Fixed compact native button chrome in `f917ca6`; released in alpha.5 from `fbf5204` after correctness, CI and public package checks passed. Timing concerns retained under FW-003. | [Validation, renders and raw performance evidence](compact-button-validation.md) |
+| FW-015 | October 23, 2026 | Released alpha.5 from `fbf5204`; both packages and symbols, hosted gates and fresh public assembly matching passed. | [Release record and evidence](releases/0.1.0-alpha.5.md) |

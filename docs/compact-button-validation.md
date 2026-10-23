@@ -1,8 +1,9 @@
 # Compact button validation
 
-FW-002 completed October 23, 2026 in `f917ca6`. Source change is Unreleased;
-published alpha.4 packages are unchanged. Correctness and accepted-baseline CI
-gates pass. The initial failed direct timing result is retained below.
+FW-002 completed October 23, 2026 in `f917ca6` and shipped in `0.1.0-alpha.5`
+from `fbf5204`. Correctness, exact-source release performance gates and fresh
+public installation passed; see the [release record](releases/0.1.0-alpha.5.md).
+The initial failed direct timing result is retained below; FW-003 remains open.
 
 ## Behavior
 

@@ -16,12 +16,12 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.4` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.4) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.4) (Windows renderer). Both were published through Trusted Publishing and verified in a fresh package-only consumer. See the [release evidence](docs/releases/0.1.0-alpha.4.md). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.5` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.5) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.5) (Windows renderer). Both were published through Trusted Publishing and verified in a fresh package-only consumer. See the [release evidence](docs/releases/0.1.0-alpha.5.md). The WPF package brings in the core automatically.
 
 In a .NET 10 WPF project:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.4
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.5
 ```
 
 See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md). To build and verify local packages instead, run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.

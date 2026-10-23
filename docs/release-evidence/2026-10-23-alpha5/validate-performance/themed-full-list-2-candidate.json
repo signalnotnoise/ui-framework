@@ -1,0 +1,17 @@
+{
+  "SchemaVersion": 2,
+  "Scenario": "themed-full-list",
+  "MountMilliseconds": 6794.5689,
+  "MountAllocatedBytes": 329569840,
+  "MountBodyBuilds": 1022,
+  "Mode": "selective observation, memo enabled",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "Milliseconds": 6425.0845,
+  "BodyBuilds": 5141,
+  "AllocatedBytes": 467434976,
+  "Mounts": 456,
+  "Unmounts": 658,
+  "Runtime": "10.0.13",
+  "TimeUtc": "2026-10-23T08:25:51.0755227+00:00"
+}

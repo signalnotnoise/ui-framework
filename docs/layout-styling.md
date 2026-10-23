@@ -43,7 +43,7 @@ ThemeTokens is an immutable core record for canvas, surface, text, interaction c
 
 The scoped Button template presents native `Content`, including panels containing labels and interactive controls, through a `ContentPresenter`. It forwards `ContentTemplate`, `ContentTemplateSelector`, and `ContentStringFormat` using WPF's normal template selection. Ordinary string labels retain wrapping and inherited theme foreground. Application-owned visuals and explicit or implicit data templates retain their own wrapping policy. This does not add a declarative rich-button API; native compositions remain application-owned. Menus, context menus and scrollbars still need application styles.
 
-Unreleased compact-button fix: button chrome now binds to the native control's
+Since `0.1.0-alpha.5`: button chrome now binds to the native control's
 `Padding`, including local overrides and live bindings. Without an override,
 `theme.ControlPadding` still supplies the native style's padding. Clearing a
 local padding value restores that theme default. Declarative buttons keep

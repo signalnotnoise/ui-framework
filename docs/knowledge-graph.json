@@ -512,7 +512,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Source candidate 0.1.0-alpha.5 includes the compact button fix and package-only regression coverage; publication requires Windows correctness, unchanged performance gates, Trusted Publishing and a fresh public consumer matching hosted assemblies. Latest verified public release is alpha.4.",
+      "summary": "Published package version 0.1.0-alpha.5 includes the compact button fix and package-only regression coverage. Exact-source Windows correctness, unchanged performance gates and Trusted Publishing passed; a fresh NuGet.org consumer verifies compact sizing and matches hosted assembly hashes. Experimental preview; timing variability remains tracked in FW-003.",
       "sources": [
         "Directory.Build.props",
         "global.json",

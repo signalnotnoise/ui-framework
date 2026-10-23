@@ -2,9 +2,14 @@
 
 ## Unreleased
 
-## 0.1.0-alpha.5 — Release candidate
+## 0.1.0-alpha.5 — October 23, 2026
 
-Publication is pending release gates and a fresh public installation check.
+Published both libraries and symbol packages from `fbf5204` through Trusted
+Publishing after all release gates passed. All 119 tests, 15 visual checks,
+21 stress assertions and fresh package checks passed. Public installation
+verified the compact-button fix and assembly hashes against hosted artifacts.
+See [release evidence](docs/releases/0.1.0-alpha.5.md). The accepted performance
+baseline and budgets are unchanged; FW-003 timing investigation remains open.
 
 - Respect native button Padding in themed chrome, including live bindings and
   zero-padding close buttons. Retain the automatic 36-DIP minimum while allowing
