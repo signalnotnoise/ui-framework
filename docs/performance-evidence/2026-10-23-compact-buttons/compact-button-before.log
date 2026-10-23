@@ -1,0 +1,34 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed CompactNativeButtonHonorsPaddingAndExplicitHeight [834 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<0,0,0,0>. Actual:<10,10,10,10>. The chrome must respect the native padding override.
+  Stack Trace:
+     at CompactButtonTests.<>c.<CompactNativeButtonHonorsPaddingAndExplicitHeight>b__0_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 19
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at CompactButtonTests.CompactNativeButtonHonorsPaddingAndExplicitHeight() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 12
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed DeclarativeButtonUsesThemePaddingAndUnthemedFallback [49 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<10,10,10,10>. Actual:<12,6,12,6>. 
+  Stack Trace:
+     at CompactButtonTests.<>c.<DeclarativeButtonUsesThemePaddingAndUnthemedFallback>b__1_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 37
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at CompactButtonTests.DeclarativeButtonUsesThemePaddingAndUnthemedFallback() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 29
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\compact-button-validation\before.trx
+
+Failed!  - Failed:     2, Passed:     0, Skipped:     0, Total:     2, Duration: 906 ms - UI Framework.Checks.dll (net10.0)

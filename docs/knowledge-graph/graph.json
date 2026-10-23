@@ -324,6 +324,11 @@
       "group": "docs"
     },
     {
+      "id": "docs/compact-button-validation.md",
+      "label": "compact-button-validation.md",
+      "group": "docs"
+    },
+    {
       "id": "docs/components.md",
       "label": "components.md",
       "group": "docs"
@@ -8074,6 +8079,346 @@
       "group": "docs"
     },
     {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/summary.json",
+      "label": "summary.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/summary.md",
+      "label": "summary.md",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-23-compact-buttons/stress.json",
+      "label": "stress.json",
+      "group": "docs"
+    },
+    {
       "id": "docs/performance-exploration-2026-09-20.md",
       "label": "performance-exploration-2026-09-20.md",
       "group": "docs"
@@ -9184,6 +9529,11 @@
       "group": "tests"
     },
     {
+      "id": "tests/UI Framework.Checks/CompactButtonTests.cs",
+      "label": "CompactButtonTests.cs",
+      "group": "tests"
+    },
+    {
       "id": "tests/UI Framework.Checks/CompactInputTests.cs",
       "label": "CompactInputTests.cs",
       "group": "tests"
@@ -9556,6 +9906,8 @@
         "docs/workspace-layout.md",
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "UI Framework.Wpf/Styling/ButtonContentPresenter.cs",
+        "tests/UI Framework.Checks/CompactButtonTests.cs",
+        "docs/compact-button-validation.md",
         "tests/UI Framework.Checks/ButtonContentTests.cs",
         "samples/Counter/Models/LaunchTheme.cs",
         "tests/UI Framework.Checks/LayoutStyleTests.cs",
@@ -10989,6 +11341,11 @@
     },
     {
       "source": "concept:layoutstyle",
+      "target": "docs/compact-button-validation.md",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:layoutstyle",
       "target": "docs/layout-styling.md",
       "kind": "evidenced by"
     },
@@ -11005,6 +11362,11 @@
     {
       "source": "concept:layoutstyle",
       "target": "tests/UI Framework.Checks/ButtonContentTests.cs",
+      "kind": "evidenced by"
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "tests/UI Framework.Checks/CompactButtonTests.cs",
       "kind": "evidenced by"
     },
     {
@@ -11964,6 +12326,11 @@
     },
     {
       "source": "docs/backlog.md",
+      "target": "docs/compact-button-validation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/backlog.md",
       "target": "docs/layout-styling.md",
       "kind": "references"
     },
@@ -12020,6 +12387,11 @@
     {
       "source": "docs/button-content-validation.md",
       "target": "docs/reactivity-performance-investigation.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/compact-button-validation.md",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/summary.md",
       "kind": "references"
     },
     {
@@ -12390,6 +12762,11 @@
     {
       "source": "docs/knowledge-graph.md",
       "target": "docs/bindings.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/compact-button-validation.md",
       "kind": "references"
     },
     {
@@ -12784,6 +13161,11 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/CompactButtonTests.cs",
+      "kind": "references"
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tests/UI Framework.Checks/CompactInputTests.cs",
       "kind": "references"
     },
@@ -13030,6 +13412,11 @@
     {
       "source": "docs/layout-isolation-2026-09-24.md",
       "target": "docs/submission-virtualization-2026-09-24.md",
+      "kind": "references"
+    },
+    {
+      "source": "docs/layout-styling.md",
+      "target": "docs/compact-button-validation.md",
       "kind": "references"
     },
     {
@@ -13565,6 +13952,11 @@
     {
       "source": "group:docs",
       "target": "docs/button-content-validation.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/compact-button-validation.md",
       "kind": "contains"
     },
     {
@@ -21319,6 +21711,346 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/direct/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-23-compact-buttons/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/performance-exploration-2026-09-20.md",
       "kind": "contains"
     },
@@ -22460,6 +23192,11 @@
     {
       "source": "group:tests",
       "target": "tests/UI Framework.Checks/ButtonTestTemplateSelector.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tests",
+      "target": "tests/UI Framework.Checks/CompactButtonTests.cs",
       "kind": "contains"
     },
     {

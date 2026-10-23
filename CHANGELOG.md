@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Respect native button Padding in themed chrome, including live bindings and
+  zero-padding close buttons. Retain the automatic 36-DIP minimum while allowing
+  explicit native Height to size compact buttons; local MinHeight still wins.
+
 ## 0.1.0-alpha.4 — October 20, 2026
 
 Published both libraries and symbol packages through GitHub Actions Trusted

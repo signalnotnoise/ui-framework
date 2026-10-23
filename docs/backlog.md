@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: October 20, 2026.
+Last updated: October 23, 2026.
 
 This is the running, prioritized work list for the core library, WPF renderer,
 framework tests, samples, documentation and package releases. GuidedGrade UI,
@@ -15,7 +15,7 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-002 | P1 | Fix compact button padding and glyph clipping | Open |
+| 1 | FW-002 | P1 | Fix compact button padding and glyph clipping | In progress |
 | 2 | FW-003 | P1 | Investigate direct comparison timing increases | Investigation |
 | 3 | FW-004 | P1 | Measure native style isolation with representative islands | Open |
 | 4 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Open |
@@ -60,6 +60,13 @@ gates. Direct comparison timing concerns remain tracked by FW-003.
   installation from NuGet.org using an empty cache and record the release evidence.
 
 ### FW-002 Fix compact button clipping
+
+Started October 23, 2026. Reproduction, template changes and paired performance
+validation are in progress; this item is not yet complete.
+The fix passed 119 correctness tests, 15 visual checks and 21 stress assertions.
+The first direct performance run flagged full-list updates (+28.86%); control
+measurements and accepted-baseline CI verification are pending. See
+[validation evidence](compact-button-validation.md).
 
 Make compact controls respect their native padding and intentional dimensions.
 Cover small close/icon buttons, complete glyph visibility, rich content,

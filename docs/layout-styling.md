@@ -43,7 +43,23 @@ ThemeTokens is an immutable core record for canvas, surface, text, interaction c
 
 The scoped Button template presents native `Content`, including panels containing labels and interactive controls, through a `ContentPresenter`. It forwards `ContentTemplate`, `ContentTemplateSelector`, and `ContentStringFormat` using WPF's normal template selection. Ordinary string labels retain wrapping and inherited theme foreground. Application-owned visuals and explicit or implicit data templates retain their own wrapping policy. This does not add a declarative rich-button API; native compositions remain application-owned. Menus, context menus and scrollbars still need application styles.
 
-Known compact-control limitation: the shared chrome currently uses `theme.ControlPadding` directly instead of binding the native control's Padding; the base style also sets MinHeight to 36. An 18px native close button with Padding=0 can therefore clip its glyph. Applications currently need a compact close-button style. This is separate from the rich-content presenter fix and remains an upstream follow-up; checking only the outer control width will not catch glyph clipping.
+Unreleased compact-button fix: button chrome now binds to the native control's
+`Padding`, including local overrides and live bindings. Without an override,
+`theme.ControlPadding` still supplies the native style's padding. Clearing a
+local padding value restores that theme default. Declarative buttons keep
+their existing native padding of `(12, 6, 12, 6)`; the chrome now honors it
+instead of silently drawing the theme's different padding. Their vertical
+chrome may therefore be tighter than in alpha.4; colors, content presentation
+and interaction states are unchanged.
+
+Automatic native button sizing retains the 36-DIP theme minimum. Setting the
+native button's `Height` disables that default minimum, so an 18-DIP close
+button with `Padding=0` and a suitably sized glyph can fit without a custom
+style. An explicit native `MinHeight` still takes precedence. Clearing Height
+restores automatic sizing and its minimum. This applies to native button
+properties; view `.Height(...)` and `.Padding(...)` continue to size/pad the
+outer framework frame. Callers must still allow enough room for their chosen
+font, border and native padding. See [compact button validation](compact-button-validation.md).
 
 `Toggle` remains a native CheckBox with the same boolean binding API. Its scoped template uses Ink for labels, Accent/OnAccent for checked indicators, Hover/Pressed variants for interaction, and a Focus-colored outline while keyboard focus is inside. Disabled labels and checkmarks use Muted at full opacity against Surface; they do not fall back to system black/gray text or fade the entire control. An explicit `.Foreground(...)` on the Toggle takes precedence, including when disabled. The template covers the framework's string-label, two-state Toggle contract. This source fix is newer than the published `0.1.0-alpha.1` package and needs a subsequent package version for NuGet consumers.
 

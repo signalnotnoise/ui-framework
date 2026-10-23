@@ -58,6 +58,8 @@
         "docs/workspace-layout.md",
         "UI Framework.Wpf/Styling/ThemeStyles.cs",
         "UI Framework.Wpf/Styling/ButtonContentPresenter.cs",
+        "tests/UI Framework.Checks/CompactButtonTests.cs",
+        "docs/compact-button-validation.md",
         "tests/UI Framework.Checks/ButtonContentTests.cs",
         "samples/Counter/Models/LaunchTheme.cs",
         "tests/UI Framework.Checks/LayoutStyleTests.cs",

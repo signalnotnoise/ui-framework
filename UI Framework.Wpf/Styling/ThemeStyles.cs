@@ -44,7 +44,7 @@ public static class ThemeStyles
         return border;
     }
 
-    private static Style BaseStyle(Type type, ThemeTokens theme)
+    private static Style BaseStyle(Type type, ThemeTokens theme, double minimumHeight = 36)
     {
         var style = new Style(type);
         style.Setters.Add(new Setter(Control.BackgroundProperty, Brush(theme.Surface)));
@@ -52,7 +52,7 @@ public static class ThemeStyles
         style.Setters.Add(new Setter(Control.BorderBrushProperty, Brush(theme.Border)));
         style.Setters.Add(new Setter(Control.BorderThicknessProperty, new Thickness(1)));
         style.Setters.Add(new Setter(Control.PaddingProperty, new Thickness(theme.ControlPadding)));
-        style.Setters.Add(new Setter(FrameworkElement.MinHeightProperty, 36.0));
+        style.Setters.Add(new Setter(FrameworkElement.MinHeightProperty, minimumHeight));
         return style;
     }
 
@@ -65,9 +65,15 @@ public static class ThemeStyles
 
     private static Style ButtonStyle(ThemeTokens theme)
     {
-        var style = BaseStyle(typeof(Button), theme);
+        var style = BaseStyle(typeof(Button), theme, minimumHeight: 0);
+        // Keep the usual minimum for automatic sizing, but let a native explicit
+        // Height define compact chrome. A local MinHeight still takes precedence.
+        var automaticHeight = new Trigger { Property = FrameworkElement.HeightProperty, Value = double.NaN };
+        automaticHeight.Setters.Add(new Setter(FrameworkElement.MinHeightProperty, 36.0));
+        style.Triggers.Add(automaticHeight);
         var template = new ControlTemplate(typeof(Button));
         var border = Border(theme);
+        border.SetValue(System.Windows.Controls.Border.PaddingProperty, new TemplateBindingExtension(Control.PaddingProperty));
         var content = new FrameworkElementFactory(typeof(ButtonContentPresenter), "ButtonContent");
         content.SetValue(ContentPresenter.ContentProperty, new TemplateBindingExtension(ContentControl.ContentProperty));
         content.SetValue(ContentPresenter.ContentTemplateProperty, new TemplateBindingExtension(ContentControl.ContentTemplateProperty));
