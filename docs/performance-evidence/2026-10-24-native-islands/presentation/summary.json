@@ -1,0 +1,50 @@
+{
+  "kind": "exploratory-presentation-context",
+  "releaseEligible": false,
+  "samples": 7,
+  "sdk": "10.0.402",
+  "prototype": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003\\presentation-probe\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll",
+  "note": "Different presentation contexts; not a renderer before/after comparison or replacement release workload. Geometry/DPI acceptance remains separate.",
+  "comparisons": [
+    {
+      "metric": "MountMilliseconds",
+      "unattachedMedian": 7177.384,
+      "attachedMedian": 8636.6006,
+      "changePercent": 20.330758393308756,
+      "unattachedMin": 6790.561,
+      "unattachedMax": 8738.1105,
+      "attachedMin": 8365.6329,
+      "attachedMax": 10052.99
+    },
+    {
+      "metric": "Milliseconds",
+      "unattachedMedian": 10219.0241,
+      "attachedMedian": 6953.0512,
+      "changePercent": -31.959733806675338,
+      "unattachedMin": 9729.8125,
+      "unattachedMax": 10421.9534,
+      "attachedMin": 6743.5962,
+      "attachedMax": 7274.5202
+    },
+    {
+      "metric": "MountAllocatedBytes",
+      "unattachedMedian": 328069680.0,
+      "attachedMedian": 536371616.0,
+      "changePercent": 63.49319937154814,
+      "unattachedMin": 327606576.0,
+      "unattachedMax": 328588056.0,
+      "attachedMin": 536185296.0,
+      "attachedMax": 536417968.0
+    },
+    {
+      "metric": "AllocatedBytes",
+      "unattachedMedian": 458470680.0,
+      "attachedMedian": 475834056.0,
+      "changePercent": 3.787238041045504,
+      "unattachedMin": 458391608.0,
+      "unattachedMax": 459345776.0,
+      "attachedMin": 471968888.0,
+      "attachedMax": 476442224.0
+    }
+  ]
+}

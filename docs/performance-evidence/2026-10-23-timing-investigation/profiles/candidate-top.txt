@@ -1,0 +1,26 @@
+Top 25 Functions (Exclusive)                                                  Inclusive           Exclusive           
+1.  GC.RunFinalizers()                                                        29.53%              29.12%              
+2.  Monitor.Enter_Slowpath(class System.Object)                               12.17%              12.17%              
+3.  Thread.<PollGC>g__PollGCWorker|70_0()                                     7.32%               7.32%               
+4.  GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Medi    1.82%               1.69%               
+5.  TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.Compi    1.69%               1.56%               
+6.  TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServic    1.58%               1.49%               
+7.  TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.F    3.97%               1.05%               
+8.  Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int3    1.74%               1.03%               
+9.  .ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int3    6.77%               0.73%               
+10. UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG    0.71%               0.71%               
+11. TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices    1.13%               0.69%               
+12. DUCE+Channel.SyncFlush()                                                  0.43%               0.43%               
+13. il!<Module>.new(unsigned int64)                                           0.36%               0.36%               
+14. DependencyObject.LookupEntry(int32)                                       0.36%               0.36%               
+15. TextServicesHost._RegisterTextStore(class System.Windows.Documents.Tex    0.32%               0.32%               
+16. FullTextState.SetTabs(class System.Windows.Media.TextFormatting.TextFo    0.28%               0.28%               
+17. DpiAwarenessContextHandle+DpiUtil.AreDpiAwarenessContextsEqual(int,int    0.27%               0.27%               
+18. GlyphTypeface.GlyphMetrics(unsigned int16*,int32,value class MS.Intern    0.36%               0.27%               
+19. CanExecuteChangedEventManager.Purge(class System.Object,class System.O    0.26%               0.26%               
+20. Missing Symbol                                                            31.28%              0.26%               
+21. TextMetrics+FullTextLine.DrawTextLine(class System.Windows.Media.Drawi    0.85%               0.22%               
+22. CastHelpers.IsInstanceOfClass(void*,class System.Object)                  0.22%               0.22%               
+23. MulticastDelegate.RemoveImpl(class System.Delegate)                       0.18%               0.18%               
+24. ShutDownListener.StopListening()                                          0.36%               0.18%               
+25. DependencyObject.UpdateEffectiveValue(value class System.Windows.Entry    30.64%              0.17%               

@@ -19,17 +19,37 @@ internal static class StressRunner
         var path = Path.GetFullPath(Option(args, "--report", "artifacts/stress/comparison.json"));
         using var model = new WorkspaceModel(1000) { TelemetryEnabled = false };
         model.Virtualized.Value = args.Contains("--virtualized");
+        using var phases = args.Contains("--trace-phases") ? new ComparisonPhaseTrace() : null;
+        phases?.CaptureDpiCache("before-mount");
         var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
         var mountWatch = Stopwatch.StartNew();
+        var presentationInitialized = !args.Contains("--cold-presentation");
+        if (!presentationInitialized && args.Contains("--prime-presentation"))
+            throw new ArgumentException("Choose initialized or cold presentation, not both.", nameof(args));
+        if (presentationInitialized)
+        {
+            phases?.Begin("presentation-prime", -1);
+            ComparisonPresentation.Initialize();
+            phases?.End();
+            phases?.CaptureDpiCache("after-prime");
+        }
+        phases?.Begin("mount-render", -1);
         using var host = new ViewHost(() => Component<Dashboard>(screen => screen.Model = model));
         if (args.Contains("--themed")) ThemeStyles.Apply(host, new UI_Framework.ThemeTokens());
+        phases?.End();
+        phases?.Begin("mount-dispatcher", -1);
         Flush();
+        phases?.End();
+        phases?.Begin("mount-layout", -1);
         host.Measure(new Size(1320, 1080));
         host.Arrange(new Rect(0, 0, 1320, 1080));
         host.UpdateLayout();
+        phases?.End();
         mountWatch.Stop();
+        phases?.CaptureDpiCache("after-mount");
         var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
         var mountBuilds = model.Counters.Builds;
+        phases?.CaptureGeometry(host, "mount");
         Console.WriteLine("Comparison tree mounted: 1,000 rows. Measuring 50 mixed operations.");
         var before = model.Counters.Builds;
         var beforeMounts = model.Counters.Mounts;
@@ -38,14 +58,22 @@ internal static class StressRunner
         var watch = Stopwatch.StartNew();
         for (var step = 0; step < 50; step++)
         {
+            phases?.Begin("mutation", step);
             model.MixedStep(step);
+            phases?.End();
+            phases?.Begin("dispatcher", step);
             Flush();
+            phases?.End();
+            phases?.Begin("layout", step);
             host.UpdateLayout();
+            phases?.End();
         }
         watch.Stop();
         var result = new
         {
             SchemaVersion = 2,
+            PresentationPrimed = presentationInitialized,
+            PresentationProtocol = "process-dpi-initialization-v2",
             Scenario = args.Contains("--themed") ? "themed-full-list" : model.Virtualized.Value ? "virtualized" : "full-list",
             MountMilliseconds = mountWatch.Elapsed.TotalMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
             Mode = args.Contains("--reference") ? "unfiltered observation, memo disabled" : "selective observation, memo enabled",
@@ -57,10 +85,12 @@ internal static class StressRunner
             TimeUtc = DateTimeOffset.UtcNow
         };
         Require(model.Items.Count == 1000, "Comparison changed the expected row count.");
+        phases?.CaptureGeometry(host, "updated");
         host.Dispose();
         Require(model.Counters.Active == 0, "Comparison leaked mounted components.");
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+        phases?.Save(path);
         Console.WriteLine(JsonSerializer.Serialize(result));
         return 0;
     }

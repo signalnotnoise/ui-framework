@@ -1,0 +1,26 @@
+#nullable enable
+UI_Framework.Wpf.NativeStyleScope
+UI_Framework.Wpf.NativeStyleScope.Inherit = 0 -> UI_Framework.Wpf.NativeStyleScope
+UI_Framework.Wpf.NativeStyleScope.PreserveNative = 1 -> UI_Framework.Wpf.NativeStyleScope
+UI_Framework.Wpf.ThemeStyles
+UI_Framework.Wpf.ViewHost
+UI_Framework.Wpf.ViewHost.Dispose() -> void
+UI_Framework.Wpf.ViewHost.Refresh() -> void
+UI_Framework.Wpf.ViewHost.ViewHost(System.Func<UI_Framework.View!>! body) -> void
+UI_Framework.Wpf.WpfComCleanupPolicy
+UI_Framework.Wpf.WpfComCleanupPolicy.CleanupCount.get -> int
+UI_Framework.Wpf.WpfComCleanupPolicy.CloseBeforeDispatcherShutdown() -> void
+UI_Framework.Wpf.WpfComCleanupPolicy.Dispose() -> void
+UI_Framework.Wpf.WpfComCleanupPolicy.FailureCount.get -> int
+UI_Framework.Wpf.WpfComCleanupPolicy.IsClosed.get -> bool
+UI_Framework.Wpf.WpfComCleanupPolicy.LastError.get -> System.Exception?
+UI_Framework.Wpf.WpfComCleanupPolicy.RequestCleanup() -> void
+UI_Framework.Wpf.WpfComCleanupPolicy.RunUpdate(System.Action! action) -> void
+UI_Framework.Wpf.WpfComCleanupPolicy.WpfComCleanupPolicy(System.Windows.Threading.Dispatcher! dispatcher, System.Action<System.Exception!>? reportFailure = null) -> void
+UI_Framework.Wpf.WpfUI
+static UI_Framework.Wpf.ThemeStyles.Apply(System.Windows.FrameworkElement! root, UI_Framework.ThemeTokens! theme) -> void
+static UI_Framework.Wpf.ThemeStyles.GetAppearance(System.Windows.DependencyObject! target) -> UI_Framework.ButtonStyleKind
+static UI_Framework.Wpf.ThemeStyles.SetAppearance(System.Windows.DependencyObject! target, UI_Framework.ButtonStyleKind value) -> void
+static UI_Framework.Wpf.WpfUI.Native<T>(System.Func<T!>! create, System.Action<T!>? update = null, System.Action<T!>? release = null) -> UI_Framework.View!
+static UI_Framework.Wpf.WpfUI.Native<T>(System.Func<T!>! create, UI_Framework.Wpf.NativeStyleScope styleScope, System.Action<T!>? update = null, System.Action<T!>? release = null) -> UI_Framework.View!
+static readonly UI_Framework.Wpf.ThemeStyles.AppearanceProperty -> System.Windows.DependencyProperty!

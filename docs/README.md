@@ -23,12 +23,14 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Rendering performance](performance.md) | Derived observation, Memo inputs, and performance contracts. |
 | [Measured results](performance-results.md) | Reference/optimized timings, allocations, checks, and measurement limitations. |
 | [Performance guardrails](performance-guardrails.md) | Paired baseline measurements, regression budgets, and CI/release gates. |
+| [Reopened timing investigation](timing-bottleneck-2026-10-24.md) | Active FW-003 bottleneck analysis; phase CPU, DPI-cache hypothesis and controlled interventions. |
 | [September 21 comparison](performance-2026-09-21.md) | Measured optimization results, 11-sample verification, and the approved themed budget. |
 | [September 25 reconciliation investigation](themed-reconciliation-2026-09-25.md) | Rejected checkbox experiment, forward-row move optimization, and consumer cleanup opt-in evidence. |
 | [September 20 performance exploration](performance-exploration-2026-09-20.md) | Virtualization measurements, dependency-tracking experiment, and tradeoffs of further techniques. |
 | [September 18 comparison](performance-2026-09-18.md) | Detected regression, improvements, and the explicitly accepted temporary allocation budget. |
 | [Accessibility labels](accessibility.md) | Contextual native automation names without changing visible control text. |
 | [Native WPF interop](native-interop.md) | Retained native islands, ownership, cleanup, and migration gaps. |
+| [Native island performance](native-island-performance.md) | Supplemental style-scope workload, phase timings, native lifetime and presentation-context investigation. |
 | [Stress lab](stress-lab.md) | Interactive controls, automated workloads, and comparison commands. |
 | [Launchpad showcase](launchpad.md) | A release board with live editing, workflow actions, filters, and progress. |
 | [Layout and styling](layout-styling.md) | Weighted rows, adaptive columns, alignment, and scoped control themes. |
@@ -57,3 +59,5 @@ An earlier implementation pass completed a clean Release build, 90 regression ch
 ## Maintaining these docs
 
 Update API contracts when behavior changes. Keep measured results dated and distinguish historical measurements from fresh test results. Edit knowledge-graph.json, then run tools/Update-KnowledgeGraph.ps1 to regenerate its Markdown map; use -Check to verify it is current. Planned items in the roadmap and graph are not implemented features.
+
+See [public API and compatibility contracts](api-contract.md) for the reviewed surface, baseline rules and intended v1 policy.

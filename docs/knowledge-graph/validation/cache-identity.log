@@ -1,0 +1,6 @@
+test_cache_identity_is_not_authority (__main__.GraphTests.test_cache_identity_is_not_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 3.023s
+
+OK

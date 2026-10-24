@@ -1,0 +1,46 @@
+{
+  "tool": "dotnet-trace 10.0.745401",
+  "profiles": "dotnet-sampled-thread-time,dotnet-common",
+  "files": [
+    {
+      "file": "attached.nettrace",
+      "sha256": "6394a929e897fa77bb9d818f8e46bc38be8c2441269485b3f47496e88f44db01",
+      "bytes": 7724402
+    },
+    {
+      "file": "attached.speedscope.json",
+      "sha256": "a470f7b84f423987a9467640add7f540bb0081e3d04c2d71c872c8b1f65912c6",
+      "bytes": 14083980
+    },
+    {
+      "file": "baseline.nettrace",
+      "sha256": "c9c6e5d757815a48754d6977e18afa4630064011d10e95be5bedf00cb1a29282",
+      "bytes": 7310818
+    },
+    {
+      "file": "baseline.speedscope.json",
+      "sha256": "4353e3baed18411b6e7411a1cf33891557cd140d5f81777cdc8851e1a0eb63ea",
+      "bytes": 7207277
+    },
+    {
+      "file": "candidate.nettrace",
+      "sha256": "677bbcf5d569c2efadcb4d724632f30bbabbd8031959465f6b7ec88ca840cd99",
+      "bytes": 7388430
+    },
+    {
+      "file": "candidate.speedscope.json",
+      "sha256": "af20f75b884132153cd59f7a6cd352f2a786effa0b401c23eb806bd0dc372e8d",
+      "bytes": 8549073
+    },
+    {
+      "file": "unattached.nettrace",
+      "sha256": "19e46678ed63802bd9cb8a6c0d58fd6cdb2b4580bc35556a4e474e4bb5dfb38f",
+      "bytes": 7313082
+    },
+    {
+      "file": "unattached.speedscope.json",
+      "sha256": "f5f12fd16fe22154e8f87538d288310eb03401a6cfc52166eb133a32290b19b4",
+      "bytes": 8881618
+    }
+  ]
+}

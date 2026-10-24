@@ -1,0 +1,7 @@
+{
+  "scenario": "native-inherit",
+  "sample": 6,
+  "side": "candidate",
+  "wallSeconds": 1.9977731,
+  "cpuSeconds": 1.796875
+}

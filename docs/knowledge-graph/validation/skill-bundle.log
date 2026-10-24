@@ -1,0 +1,17 @@
+test_agents_preserved_and_idempotent (__main__.GraphTests.test_agents_preserved_and_idempotent) ... ok
+test_bounded_queries_and_pagination (__main__.GraphTests.test_bounded_queries_and_pagination) ... ok
+test_cache_rebuild_and_empty_repository (__main__.GraphTests.test_cache_rebuild_and_empty_repository) ... ok
+test_deleted_file_impact (__main__.GraphTests.test_deleted_file_impact) ... ok
+test_deterministic_embedded_data_and_evidence (__main__.GraphTests.test_deterministic_embedded_data_and_evidence) ... ok
+test_history_rename_and_old_revision (__main__.GraphTests.test_history_rename_and_old_revision) ... ok
+test_hook_stages_only_outputs (__main__.GraphTests.test_hook_stages_only_outputs) ... ok
+test_index_and_worktree_separation (__main__.GraphTests.test_index_and_worktree_separation) ... ok
+test_output_protection (__main__.GraphTests.test_output_protection) ... ok
+test_renderer_and_vendor_staleness (__main__.GraphTests.test_renderer_and_vendor_staleness) ... ok
+test_unicode_exclusions_and_html_escaping (__main__.GraphTests.test_unicode_exclusions_and_html_escaping) ... ok
+test_unstaged_extractor_rejected (__main__.GraphTests.test_unstaged_extractor_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 28.584s
+
+OK

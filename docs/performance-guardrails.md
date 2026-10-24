@@ -1,5 +1,31 @@
 # Performance guardrails
 
+Supplemental native style measurements use `-IncludeNativeIslands` with a
+reference revision supporting native scopes. They add two 32-island workloads
+beside the existing scenarios and are always ineligible for release. The native
+harness is compiled out of ordinary comparisons because the accepted baseline
+predates that API. See [method and evidence](native-island-performance.md).
+
+`-FocusedScenarios full-list` supports a targeted diagnostic campaign. Focused
+runs are always ineligible for release. Selecting `virtualized` automatically
+retains `full-list`; optional scenarios still require their include switch.
+No selection changes the workload, sample count or budgets for a retained case.
+
+On October 24, FW-003 identified repeated native process/DPI queries before
+WPF's first presentation target initializes its process cache. Standard renderer
+comparisons now initialize and dispose an empty 1×1 HwndSource before building
+the detached tree **on both revisions**. Its time and UI allocations are inside
+mount measurements. This is protocol `process-dpi-initialization-v2`; the
+accepted source revision and all budgets are unchanged. Existing editor/native
+cases already own a presentation source. No ViewHost implicitly creates a window.
+
+`-ColdPresentation` retains the previous cold renderer setup as an ineligible
+diagnostic run. `-PresentationPrimingComparison` runs verified identical
+candidate binaries cold versus initialized, also ineligible for release.
+Neither mode can clear an earlier failed gate. The old cold failures, causal
+interventions, matching geometry/control work and actual-window startup checks
+are retained in [the investigation](timing-bottleneck-2026-10-24.md).
+
 Temporary exception approved by the user on September 21, 2026: themed full-list **update allocations** may be up to 7% above the published reference, and themed update time may be up to 12% above the published reference. Across 11-sample paired benchmarks, core list update allocations improved by 5.02% (32 MB saved) and virtualized by 5.84%, while mount allocations and times improved across all scenarios. This accepts the irreducible cost of supporting rich native button content via ButtonContentPresenter (ca428c7) and accessible CheckBox styling (800e1b8). The 2% allocation and 10% time limits still apply to all other scenarios; component-work limits remain at 0% growth.
 
 Performance is a standing repository requirement in [AGENTS.md](../AGENTS.md). For runtime changes, measure before and after, investigate regressions, and pursue improvements while preserving behavior and accessibility.
@@ -63,3 +89,12 @@ Add `-ProbeLayout` in a separate campaign to count and time measure/arrange call
 GitHub validation runs this check in a separate Windows job and uploads the evidence, including on failure. The NuGet release workflow also requires a passing comparison before publishing. Commit and push workflow changes to activate these checks remotely; branch protection is a separate repository setting.
 
 Timing remains noisy on shared machines. Inspect all repetitions and repeat with more samples when warranted; keep the failed evidence. Fresh processes still incur JIT work, and warmup primarily primes system caches. Allocations cover the UI thread, not total process memory. These workloads do not measure frame latency, scrolling smoothness, GPU cost, or every control. A passing budget is evidence for these scenarios, not a guarantee against every performance regression. If the sample becomes incompatible with the old framework API, repair the comparison explicitly instead of silently dropping the baseline.
+
+## Investigating timing failures
+
+Retain the failing report and binary manifests. `./tools/Test-Performance.ps1 -IdenticalBinaryControl -IncludeLayoutEditors -Samples 7 -ReportOnly -OutputDirectory <new-directory>` executes identical candidate payloads at two
+paths for diagnostics; it can never qualify a release. The archived setup
+revision is not the control's executed baseline. Controls do not waive failed
+ordinary gates. Run CPU/thread profiles separately from timed campaigns and
+preserve complete matched repeats. `python tools/Summarize-PerformancePairs.py <comparison-directory> --output <new-file.json>` adds descriptive paired changes
+without replacing existing budgets. See [FW-003 evidence](timing-variance-investigation.md).

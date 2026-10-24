@@ -1,0 +1,332 @@
+{
+  "interpretation": "Diagnostic profiles, not timing gates. UI sampled stack spans may include waits; inclusive frames overlap. CPU is quantized Windows thread accounting. GC/runtime suspensions and actual contention are separately reported.",
+  "sameBinaries": true,
+  "geometryMatches": true,
+  "cold": {
+    "presentationInitialized": false,
+    "uiThreadId": 28504,
+    "unmatchedSuspensionStarts": 0,
+    "phaseCount": 153,
+    "dpiCache": {
+      "before-mount": {
+        "IsProcessUnaware": null,
+        "IsProcessSystemAware": null,
+        "IsProcessPerMonitorDpiAware": null
+      },
+      "after-mount": {
+        "IsProcessUnaware": null,
+        "IsProcessSystemAware": null,
+        "IsProcessPerMonitorDpiAware": null
+      }
+    },
+    "geometry": {
+      "mount": {
+        "ActualWidth": 1320,
+        "ActualHeight": 1080,
+        "DpiScaleX": 1,
+        "DpiScaleY": 1,
+        "Counts": {
+          "UI_Framework.Wpf.ViewHost": 1022,
+          "System.Windows.Controls.ContentPresenter": 4054,
+          "System.Windows.Controls.Border": 18196,
+          "System.Windows.Controls.StackPanel": 3042,
+          "System.Windows.Controls.TextBlock": 7077,
+          "System.Windows.Controls.Button": 2019,
+          "System.Windows.Controls.TextBox": 2010,
+          "System.Windows.Controls.ScrollViewer": 2012,
+          "System.Windows.Controls.Grid": 4032,
+          "System.Windows.Shapes.Rectangle": 3027,
+          "System.Windows.Controls.ScrollContentPresenter": 2012,
+          "System.Windows.Controls.TextBoxView": 2010,
+          "System.Windows.Controls.TextBoxLineDrawingVisual": 2010,
+          "System.Windows.Documents.AdornerLayer": 2012,
+          "System.Windows.Controls.Primitives.ScrollBar": 4024,
+          "System.Windows.Controls.CheckBox": 1009,
+          "System.Windows.Shapes.Path": 1013,
+          "System.Windows.Controls.Primitives.RepeatButton": 8,
+          "System.Windows.Controls.Primitives.Track": 2,
+          "System.Windows.Controls.Primitives.Thumb": 2
+        },
+        "Sha256": "E5CFA8DCA9E68E320797409D7A90E9CE585DC36D155C5A2D5ED4980A6FB59FFB"
+      },
+      "updated": {
+        "ActualWidth": 1320,
+        "ActualHeight": 1080,
+        "DpiScaleX": 1,
+        "DpiScaleY": 1,
+        "Counts": {
+          "UI_Framework.Wpf.ViewHost": 820,
+          "System.Windows.Controls.ContentPresenter": 3246,
+          "System.Windows.Controls.Border": 11368,
+          "System.Windows.Controls.StackPanel": 1638,
+          "System.Windows.Controls.TextBlock": 4865,
+          "System.Windows.Controls.Button": 1615,
+          "System.Windows.Controls.TextBox": 808,
+          "System.Windows.Controls.ScrollViewer": 810,
+          "System.Windows.Controls.Grid": 2426,
+          "System.Windows.Shapes.Rectangle": 1623,
+          "System.Windows.Controls.ScrollContentPresenter": 810,
+          "System.Windows.Controls.TextBoxView": 808,
+          "System.Windows.Controls.TextBoxLineDrawingVisual": 808,
+          "System.Windows.Documents.AdornerLayer": 810,
+          "System.Windows.Controls.Primitives.ScrollBar": 1620,
+          "System.Windows.Controls.CheckBox": 807,
+          "System.Windows.Shapes.Path": 811,
+          "System.Windows.Controls.Primitives.RepeatButton": 8,
+          "System.Windows.Controls.Primitives.Track": 2,
+          "System.Windows.Controls.Primitives.Thumb": 2
+        },
+        "Sha256": "D07974CB046BDD89988A5AC47C581286C7CF56A27004B2632F401FA6CF447533"
+      }
+    },
+    "phases": {
+      "mount-render": {
+        "wallMs": 2908.4239,
+        "uiCpuMs": 2546.875,
+        "gcSuspensionMs": 118.4946000000005,
+        "otherSuspensionMs": 56.84130000000047,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "PollGC": 408.00529810447574,
+          "EnsureResourceChangeListener": 1461.4696316423403,
+          "GetProcessDpiAwarenessFromWindow": 1400.946232533263,
+          "Monitor.Enter_Slowpath": 733.0727003738391
+        }
+      },
+      "mount-dispatcher": {
+        "wallMs": 2.963999999999942,
+        "uiCpuMs": 0.0,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.02359999999998763,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "PollGC": 0.0,
+          "EnsureResourceChangeListener": 0.0,
+          "GetProcessDpiAwarenessFromWindow": 0.0,
+          "Monitor.Enter_Slowpath": 1.5084999912260173
+        }
+      },
+      "mount-layout": {
+        "wallMs": 2463.8082,
+        "uiCpuMs": 2375.0,
+        "gcSuspensionMs": 320.3504999999973,
+        "otherSuspensionMs": 57.429399999994985,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "PollGC": 617.6552869819602,
+          "EnsureResourceChangeListener": 256.4359954759593,
+          "GetProcessDpiAwarenessFromWindow": 256.4359954759593,
+          "Monitor.Enter_Slowpath": 817.1868890750861
+        }
+      },
+      "mutation": {
+        "wallMs": 8.218399999997018,
+        "uiCpuMs": 15.625,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.14860000000044238,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "PollGC": 0.49319999999988795,
+          "EnsureResourceChangeListener": 0.0,
+          "GetProcessDpiAwarenessFromWindow": 0.0,
+          "Monitor.Enter_Slowpath": 2.0030354728714883
+        }
+      },
+      "dispatcher": {
+        "wallMs": 4092.1712000000016,
+        "uiCpuMs": 3718.75,
+        "gcSuspensionMs": 762.2834000000003,
+        "otherSuspensionMs": 77.55639999997948,
+        "recordedContentionMs": 0.16780000000017026,
+        "sampledFramesMs": {
+          "PollGC": 737.7438813651943,
+          "EnsureResourceChangeListener": 1110.1955632955605,
+          "GetProcessDpiAwarenessFromWindow": 1082.99326389027,
+          "Monitor.Enter_Slowpath": 1247.7821310632671
+        }
+      },
+      "layout": {
+        "wallMs": 0.19400000000223372,
+        "uiCpuMs": 0.0,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.0,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "PollGC": 0.012200000000120781,
+          "EnsureResourceChangeListener": 0.0,
+          "GetProcessDpiAwarenessFromWindow": 0.0,
+          "Monitor.Enter_Slowpath": 0.04779999999846041
+        }
+      }
+    }
+  },
+  "initialized": {
+    "presentationInitialized": true,
+    "uiThreadId": 32136,
+    "unmatchedSuspensionStarts": 0,
+    "phaseCount": 154,
+    "dpiCache": {
+      "before-mount": {
+        "IsProcessUnaware": null,
+        "IsProcessSystemAware": null,
+        "IsProcessPerMonitorDpiAware": null
+      },
+      "after-prime": {
+        "IsProcessUnaware": false,
+        "IsProcessSystemAware": true,
+        "IsProcessPerMonitorDpiAware": false
+      },
+      "after-mount": {
+        "IsProcessUnaware": false,
+        "IsProcessSystemAware": true,
+        "IsProcessPerMonitorDpiAware": false
+      }
+    },
+    "geometry": {
+      "mount": {
+        "ActualWidth": 1320,
+        "ActualHeight": 1080,
+        "DpiScaleX": 1,
+        "DpiScaleY": 1,
+        "Counts": {
+          "UI_Framework.Wpf.ViewHost": 1022,
+          "System.Windows.Controls.ContentPresenter": 4054,
+          "System.Windows.Controls.Border": 18196,
+          "System.Windows.Controls.StackPanel": 3042,
+          "System.Windows.Controls.TextBlock": 7077,
+          "System.Windows.Controls.Button": 2019,
+          "System.Windows.Controls.TextBox": 2010,
+          "System.Windows.Controls.ScrollViewer": 2012,
+          "System.Windows.Controls.Grid": 4032,
+          "System.Windows.Shapes.Rectangle": 3027,
+          "System.Windows.Controls.ScrollContentPresenter": 2012,
+          "System.Windows.Controls.TextBoxView": 2010,
+          "System.Windows.Controls.TextBoxLineDrawingVisual": 2010,
+          "System.Windows.Documents.AdornerLayer": 2012,
+          "System.Windows.Controls.Primitives.ScrollBar": 4024,
+          "System.Windows.Controls.CheckBox": 1009,
+          "System.Windows.Shapes.Path": 1013,
+          "System.Windows.Controls.Primitives.RepeatButton": 8,
+          "System.Windows.Controls.Primitives.Track": 2,
+          "System.Windows.Controls.Primitives.Thumb": 2
+        },
+        "Sha256": "E5CFA8DCA9E68E320797409D7A90E9CE585DC36D155C5A2D5ED4980A6FB59FFB"
+      },
+      "updated": {
+        "ActualWidth": 1320,
+        "ActualHeight": 1080,
+        "DpiScaleX": 1,
+        "DpiScaleY": 1,
+        "Counts": {
+          "UI_Framework.Wpf.ViewHost": 820,
+          "System.Windows.Controls.ContentPresenter": 3246,
+          "System.Windows.Controls.Border": 11368,
+          "System.Windows.Controls.StackPanel": 1638,
+          "System.Windows.Controls.TextBlock": 4865,
+          "System.Windows.Controls.Button": 1615,
+          "System.Windows.Controls.TextBox": 808,
+          "System.Windows.Controls.ScrollViewer": 810,
+          "System.Windows.Controls.Grid": 2426,
+          "System.Windows.Shapes.Rectangle": 1623,
+          "System.Windows.Controls.ScrollContentPresenter": 810,
+          "System.Windows.Controls.TextBoxView": 808,
+          "System.Windows.Controls.TextBoxLineDrawingVisual": 808,
+          "System.Windows.Documents.AdornerLayer": 810,
+          "System.Windows.Controls.Primitives.ScrollBar": 1620,
+          "System.Windows.Controls.CheckBox": 807,
+          "System.Windows.Shapes.Path": 811,
+          "System.Windows.Controls.Primitives.RepeatButton": 8,
+          "System.Windows.Controls.Primitives.Track": 2,
+          "System.Windows.Controls.Primitives.Thumb": 2
+        },
+        "Sha256": "D07974CB046BDD89988A5AC47C581286C7CF56A27004B2632F401FA6CF447533"
+      }
+    },
+    "phases": {
+      "presentation-prime": {
+        "wallMs": 138.3046,
+        "uiCpuMs": 46.875,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 1.559599999999989,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 0.0,
+          "Monitor.Enter_Slowpath": 0.0
+        }
+      },
+      "mount-render": {
+        "wallMs": 1431.2584000000002,
+        "uiCpuMs": 1406.25,
+        "gcSuspensionMs": 103.29080000000005,
+        "otherSuspensionMs": 23.7031000000041,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 1.6272999916076287,
+          "PollGC": 355.4138830591207,
+          "Monitor.Enter_Slowpath": 837.5335476392743
+        }
+      },
+      "mount-dispatcher": {
+        "wallMs": 4.234300000000076,
+        "uiCpuMs": 0.0,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.1048000000000684,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 0.0,
+          "Monitor.Enter_Slowpath": 2.0148000000001502
+        }
+      },
+      "mount-layout": {
+        "wallMs": 2231.6530999999995,
+        "uiCpuMs": 2078.125,
+        "gcSuspensionMs": 313.88630000000217,
+        "otherSuspensionMs": 54.50720000001024,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 656.2756895912198,
+          "Monitor.Enter_Slowpath": 874.9464825281148
+        }
+      },
+      "mutation": {
+        "wallMs": 9.167199999996683,
+        "uiCpuMs": 0.0,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.17490000000043437,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 0.6263000446315345,
+          "Monitor.Enter_Slowpath": 2.8296998580935906
+        }
+      },
+      "dispatcher": {
+        "wallMs": 3375.0054000000064,
+        "uiCpuMs": 3031.25,
+        "gcSuspensionMs": 784.4799000000021,
+        "otherSuspensionMs": 83.27179999999362,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 639.1720096052209,
+          "Monitor.Enter_Slowpath": 1408.5016971885784
+        }
+      },
+      "layout": {
+        "wallMs": 0.23459999999522552,
+        "uiCpuMs": 0.0,
+        "gcSuspensionMs": 0.0,
+        "otherSuspensionMs": 0.0,
+        "recordedContentionMs": 0.0,
+        "sampledFramesMs": {
+          "EnsureResourceChangeListener": 0.0,
+          "PollGC": 0.017899999999826832,
+          "Monitor.Enter_Slowpath": 0.03169999999954598
+        }
+      }
+    }
+  }
+}

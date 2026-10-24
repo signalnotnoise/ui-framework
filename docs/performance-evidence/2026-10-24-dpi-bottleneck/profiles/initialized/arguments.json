@@ -1,0 +1,16 @@
+[
+  "collect",
+  "--profile",
+  "dotnet-sampled-thread-time",
+  "--providers",
+  "Microsoft-Windows-DotNETRuntime:0x1C001:4,SignalNotNoise-Comparison:0xFFFFFFFFFFFFFFFF:5",
+  "--output",
+  "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003-reopened\\corrected-initialized\\trace.nettrace",
+  "--",
+  "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\release-alpha4\\dotnet\\dotnet.exe",
+  "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll",
+  "--compare",
+  "--trace-phases",
+  "--report",
+  "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003-reopened\\corrected-initialized\\report.json"
+]

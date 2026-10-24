@@ -18,7 +18,10 @@
         "tests/UI Framework.Checks/NativeHostTests.cs",
         "tests/UI Framework.Checks/NativeStyleTests.cs",
         "docs/native-interop.md",
-        "docs/native-style-validation.md"
+        "docs/native-style-validation.md",
+        "samples/Counter/Diagnostics/NativeStyleComparison.cs",
+        "tools/Test-NativeStyleIsolation.ps1",
+        "docs/native-island-performance.md"
       ]
     },
     {
@@ -96,7 +99,11 @@
       "sources": [
         "UI Framework/ViewKind.cs",
         "UI Framework/View.cs",
-        "UI Framework/UI.cs"
+        "UI Framework/UI.cs",
+        "docs/api-contract.md",
+        "tools/Test-ApiCompatibility.ps1",
+        "UI Framework/UI Framework.csproj",
+        "UI Framework.Wpf/UI Framework.Wpf.csproj"
       ]
     },
     {
@@ -407,7 +414,7 @@
       "id": "stress",
       "label": "Stress workload",
       "status": "implemented",
-      "summary": "1000 mounted rows, 10000 projected writes, mixed edits, filters, remounts, and lifecycle balance measurements. The WPF package exposes one application-owned COM cleanup policy; the editor release workload and production consumer use it with explicit shutdown ownership.",
+      "summary": "Full-list, virtualized, themed and editor workloads retain 1000 rows and 50 paired operations. Supplemental 32-island measurements separate retained updates, theme replacement, scope changes and native removal, checking local style precedence and exact release balance. Focused and supplemental runs cannot qualify a release. The editor workload uses the application-owned COM cleanup policy.",
       "sources": [
         "samples/Counter/StressRunner.cs",
         "samples/Counter/Diagnostics/LayoutEditorComparison.cs",
@@ -438,7 +445,24 @@
         "tools/Test-ComCleanupLifecycle.ps1",
         "tools/Test-EditorWaitDiagnostics.ps1",
         "docs/application-cleanup-policy-2026-09-25.md",
-        "tools/performance-baseline.json"
+        "tools/performance-baseline.json",
+        "docs/timing-variance-investigation.md",
+        "tools/Summarize-PerformancePairs.py",
+        "scripts/test-performance-pairs.py",
+        "samples/Counter/Diagnostics/NativeStyleComparison.cs",
+        "tools/Test-NativeStyleIsolation.ps1",
+        "docs/native-island-performance.md",
+        "tools/Test-PresentationContext.ps1",
+        "samples/Counter/Diagnostics/ComparisonPhaseTrace.cs",
+        "docs/timing-bottleneck-2026-10-24.md",
+        "samples/Counter/Diagnostics/ComparisonPresentation.cs",
+        "samples/Counter/Diagnostics/DpiCacheProbe.cs",
+        "samples/Counter/Diagnostics/CounterStartupCheck.cs",
+        "samples/Counter/Diagnostics/ComparisonEvents.cs",
+        "tools/Test-WindowStartup.ps1",
+        "tools/Collect-ComparisonTrace.ps1",
+        "tools/Summarize-TimingBottleneck.py",
+        "scripts/test-timing-bottleneck.py"
       ]
     },
     {
@@ -528,6 +552,39 @@
         "tools/Test-Documentation.ps1",
         ".github/dependabot.yml",
         "docs/releases/0.1.0-alpha.5.md"
+      ]
+    },
+    {
+      "id": "wpfstartup",
+      "label": "Application-owned WPF presentation startup",
+      "status": "implemented",
+      "summary": "The sample initializes its actual window handle before large ViewHost construction to avoid repeated native process/DPI queries while WPF process caches are unset. ViewHost remains synchronous and creates no window. Benchmarks initialize a short-lived empty presentation target on both revisions, include its cost, and retain the old cold mode diagnostically.",
+      "sources": [
+        "samples/Counter/Program.cs",
+        "samples/Counter/Diagnostics/ComparisonPresentation.cs",
+        "samples/Counter/Diagnostics/CounterStartupCheck.cs",
+        "samples/Counter/Diagnostics/DpiCacheProbe.cs",
+        "tools/Test-WindowStartup.ps1",
+        "tools/Test-Release.ps1",
+        "docs/timing-bottleneck-2026-10-24.md",
+        "docs/performance-guardrails.md"
+      ]
+    },
+    {
+      "id": "graphnavigation",
+      "label": "Revision-aware repository navigation",
+      "status": "implemented",
+      "summary": "Schema-v2 file navigation adapts the unchanged curated schema-v1 architecture and explicit XML project references. Bounded queries reconstruct Git revisions with disposable fingerprinted caches. Protected index hooks and CI enforce outputs; worktree previews include uncommitted sources. Syntax/human evidence is not a semantic call graph.",
+      "sources": [
+        "scripts/update-knowledge-graph.py",
+        "scripts/query-knowledge-graph.py",
+        "scripts/knowledge-graph-agents.md",
+        "scripts/knowledge-graph.html",
+        "scripts/test-knowledge-graph.py",
+        ".githooks/pre-commit",
+        ".github/workflows/validate.yml",
+        "AGENTS.md",
+        "docs/knowledge-graph/README.md"
       ]
     }
   ],
@@ -831,6 +888,41 @@
       "from": "navigation",
       "relation": "preserves state from",
       "to": "virtualization"
+    },
+    {
+      "from": "stress",
+      "relation": "measures native scope and lifetime work in",
+      "to": "nativeinterop"
+    },
+    {
+      "from": "demo",
+      "relation": "owns",
+      "to": "wpfstartup"
+    },
+    {
+      "from": "stress",
+      "relation": "measures",
+      "to": "wpfstartup"
+    },
+    {
+      "from": "release",
+      "relation": "checks startup editing and disposal for",
+      "to": "wpfstartup"
+    },
+    {
+      "from": "wpfstartup",
+      "relation": "avoids repeated platform discovery during construction of",
+      "to": "controls"
+    },
+    {
+      "from": "graphnavigation",
+      "relation": "preserves curated evidence for",
+      "to": "host"
+    },
+    {
+      "from": "release",
+      "relation": "checks deterministic navigation outputs through",
+      "to": "graphnavigation"
     }
   ],
   "releaseVersion": "0.1.0-alpha.5"

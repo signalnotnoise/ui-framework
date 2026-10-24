@@ -1,0 +1,11 @@
+{
+  "Kind": "actual-window-startup-check",
+  "ColdWindowStartup": false,
+  "Rows": 50,
+  "Milliseconds": 608.2483,
+  "AllocatedBytes": 23220216,
+  "BodyBuilds": 71,
+  "NativeEditingPassed": true,
+  "ActiveAfterDisposal": 0,
+  "Runtime": "10.0.13"
+}

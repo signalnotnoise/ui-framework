@@ -1,0 +1,20 @@
+{
+  "sdk": "10.0.402",
+  "runtime": "10.0.13",
+  "traceTool": "10.0.745401",
+  "decompiler": "ilspycmd 9.1.0.7988",
+  "traceReaderPackage": "Microsoft.Diagnostics.Tracing.TraceEvent 3.1.23",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "runtimeAssemblies": [
+    {
+      "name": "PresentationCore.dll",
+      "productVersion": "10.0.13-servicing.26504.104+4099f83977f4d29604a9aeb971fb0a7bc1d5f699",
+      "sha256": "0E605CCC78D7929EB8DA4473CDCB6D7EF79DB07B3F69E780745AE1F2AA5A6E31"
+    },
+    {
+      "name": "PresentationFramework.dll",
+      "productVersion": "10.0.13-servicing.26504.104+4099f83977f4d29604a9aeb971fb0a7bc1d5f699",
+      "sha256": "C6950A0D6ADDFB7A365C11FE0AA82A4677043A263102F1779AA9BE8FD3624019"
+    }
+  ]
+}

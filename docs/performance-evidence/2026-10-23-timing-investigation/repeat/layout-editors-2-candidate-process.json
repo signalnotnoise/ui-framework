@@ -1,0 +1,8 @@
+{
+  "scenario": "layout-editors",
+  "sample": 2,
+  "side": "candidate",
+  "wallSeconds": 21.0841976,
+  "cpuSeconds": 25.484375,
+  "peakWorkingSetBytes": null
+}

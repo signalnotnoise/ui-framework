@@ -1,0 +1,7 @@
+{
+  "Kind": "isolated-dpi-cache-diagnostic",
+  "QueriesPerMode": 10000,
+  "BeforeAwareness": "SystemAware",
+  "AfterAwareness": "SystemAware",
+  "Runtime": "10.0.13"
+}

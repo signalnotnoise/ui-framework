@@ -1,0 +1,47 @@
+{
+  "SchemaVersion": 2,
+  "Scenario": "native-preserve",
+  "Rows": 32,
+  "MixedOperations": 50,
+  "Presentation": "hidden-hwnd",
+  "InitialScope": "PreserveNative",
+  "MountMilliseconds": 302.7203,
+  "MountAllocatedBytes": 16475336,
+  "MountBodyBuilds": 1,
+  "Milliseconds": 519.5679,
+  "AllocatedBytes": 88117392,
+  "BodyBuilds": 50,
+  "Mounts": 80,
+  "Unmounts": 80,
+  "TotalCreates": 112,
+  "TotalReleases": 112,
+  "Phases": [
+    {
+      "Name": "retained-updates",
+      "Milliseconds": 23.5197,
+      "AllocatedBytes": 3479912
+    },
+    {
+      "Name": "outer-theme-replacement",
+      "Milliseconds": 80.9784,
+      "AllocatedBytes": 22543872
+    },
+    {
+      "Name": "scope-switch",
+      "Milliseconds": 67.6814,
+      "AllocatedBytes": 14253992
+    },
+    {
+      "Name": "scope-restore",
+      "Milliseconds": 66.4407,
+      "AllocatedBytes": 14381432
+    },
+    {
+      "Name": "remove-remount",
+      "Milliseconds": 280.9477,
+      "AllocatedBytes": 33458184
+    }
+  ],
+  "Runtime": "10.0.13",
+  "TimeUtc": "2026-10-24T16:02:23.2472322+00:00"
+}

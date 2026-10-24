@@ -12,3 +12,12 @@ indent_size = 4
 [*.{json,yml,yaml}]
 indent_style = space
 indent_size = 2
+
+[UI Framework{,.Wpf}/**.cs]
+dotnet_diagnostic.RS0016.severity = error
+dotnet_diagnostic.RS0017.severity = error
+
+# Existing alpha.4 overloads differ by a required NativeStyleScope parameter.
+# Preserve their signatures; avoid introducing further optional overloads.
+[UI Framework.Wpf/Interop/WpfUI.cs]
+dotnet_diagnostic.RS0026.severity = none

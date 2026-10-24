@@ -1,0 +1,8 @@
+{
+  "scenario": "themed-full-list",
+  "sample": 2,
+  "side": "baseline",
+  "wallSeconds": 22.6697945,
+  "cpuSeconds": 27.234375,
+  "peakWorkingSetBytes": null
+}

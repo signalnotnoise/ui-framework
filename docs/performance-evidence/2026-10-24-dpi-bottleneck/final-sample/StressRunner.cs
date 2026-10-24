@@ -1,0 +1,338 @@
+using System.Diagnostics;
+using System.IO;
+using System.Text.Json;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Threading;
+using UI_Framework;
+using UI_Framework.Wpf;
+using static UI_Framework.UI;
+
+namespace StressLab;
+
+internal static class StressRunner
+{
+    public static int Compare(string[] args)
+    {
+        var path = Path.GetFullPath(Option(args, "--report", "artifacts/stress/comparison.json"));
+        using var model = new WorkspaceModel(1000) { TelemetryEnabled = false };
+        model.Virtualized.Value = args.Contains("--virtualized");
+        using var phases = args.Contains("--trace-phases") ? new ComparisonPhaseTrace() : null;
+        phases?.CaptureDpiCache("before-mount");
+        var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
+        var mountWatch = Stopwatch.StartNew();
+        var presentationInitialized = !args.Contains("--cold-presentation");
+        if (!presentationInitialized && args.Contains("--prime-presentation"))
+            throw new ArgumentException("Choose initialized or cold presentation, not both.", nameof(args));
+        if (presentationInitialized)
+        {
+            phases?.Begin("presentation-prime", -1);
+            ComparisonPresentation.Initialize();
+            phases?.End();
+            phases?.CaptureDpiCache("after-prime");
+        }
+        phases?.Begin("mount-render", -1);
+        using var host = new ViewHost(() => Component<Dashboard>(screen => screen.Model = model));
+        if (args.Contains("--themed")) ThemeStyles.Apply(host, new UI_Framework.ThemeTokens());
+        phases?.End();
+        phases?.Begin("mount-dispatcher", -1);
+        Flush();
+        phases?.End();
+        phases?.Begin("mount-layout", -1);
+        host.Measure(new Size(1320, 1080));
+        host.Arrange(new Rect(0, 0, 1320, 1080));
+        host.UpdateLayout();
+        phases?.End();
+        mountWatch.Stop();
+        phases?.CaptureDpiCache("after-mount");
+        var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
+        var mountBuilds = model.Counters.Builds;
+        phases?.CaptureGeometry(host, "mount");
+        Console.WriteLine("Comparison tree mounted: 1,000 rows. Measuring 50 mixed operations.");
+        var before = model.Counters.Builds;
+        var beforeMounts = model.Counters.Mounts;
+        var beforeUnmounts = model.Counters.Unmounts;
+        var allocations = GC.GetAllocatedBytesForCurrentThread();
+        var watch = Stopwatch.StartNew();
+        for (var step = 0; step < 50; step++)
+        {
+            phases?.Begin("mutation", step);
+            model.MixedStep(step);
+            phases?.End();
+            phases?.Begin("dispatcher", step);
+            Flush();
+            phases?.End();
+            phases?.Begin("layout", step);
+            host.UpdateLayout();
+            phases?.End();
+        }
+        watch.Stop();
+        var result = new
+        {
+            SchemaVersion = 2,
+            PresentationPrimed = presentationInitialized,
+            PresentationProtocol = "process-dpi-initialization-v2",
+            Scenario = args.Contains("--themed") ? "themed-full-list" : model.Virtualized.Value ? "virtualized" : "full-list",
+            MountMilliseconds = mountWatch.Elapsed.TotalMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
+            Mode = args.Contains("--reference") ? "unfiltered observation, memo disabled" : "selective observation, memo enabled",
+            Rows = 1000, MixedOperations = 50, Milliseconds = watch.Elapsed.TotalMilliseconds,
+            BodyBuilds = model.Counters.Builds - before,
+            AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocations,
+            Mounts = model.Counters.Mounts - beforeMounts, Unmounts = model.Counters.Unmounts - beforeUnmounts,
+            Runtime = Environment.Version.ToString(),
+            TimeUtc = DateTimeOffset.UtcNow
+        };
+        Require(model.Items.Count == 1000, "Comparison changed the expected row count.");
+        phases?.CaptureGeometry(host, "updated");
+        host.Dispose();
+        Require(model.Counters.Active == 0, "Comparison leaked mounted components.");
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+        File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+        phases?.Save(path);
+        Console.WriteLine(JsonSerializer.Serialize(result));
+        return 0;
+    }
+
+    public static int Diagnostics(string[] args)
+    {
+        var scenario = Option(args, "--diagnostic", "");
+        if (scenario is not ("buttons-plain" or "buttons-themed" or "checkboxes-plain" or "checkboxes-themed" or "checkboxes-local" or "theme-noop" or "theme-updates"))
+            throw new ArgumentException("Use --diagnostic buttons-plain, buttons-themed, checkboxes-plain, checkboxes-themed, checkboxes-local, theme-noop, or theme-updates.", nameof(args));
+        var changed = int.Parse(Option(args, "--changed", "1000"));
+        if (changed is < 1 or > 1000) throw new ArgumentOutOfRangeException(nameof(args), "--changed must be between 1 and 1000.");
+        var path = Path.GetFullPath(Option(args, "--report", $"artifacts/diagnostics/{scenario}.json"));
+        var phase = new State<int>(0);
+        var localValues = Enumerable.Range(0, 1000).Select(_ => new State<bool>(false)).ToArray();
+        View Build() => scenario == "checkboxes-local"
+            ? Scroll(VStack(localValues.Select((value, index) => Component<DiagnosticToggle>(toggle =>
+            {
+                toggle.Label = $"Toggle item {index}";
+                toggle.Value = value;
+            }).Id($"toggle-{index}")).ToArray())).Height(1080)
+            : Scroll(VStack(Enumerable.Range(0, 1000).Select(index => DiagnosticView(scenario, index, phase.Value, changed)).ToArray())).Height(1080);
+        var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
+        var mountWatch = Stopwatch.StartNew();
+        using var host = new ViewHost(Build);
+        if (scenario is "buttons-themed" or "checkboxes-themed" or "checkboxes-local" or "theme-noop" or "theme-updates")
+            ThemeStyles.Apply(host, new UI_Framework.ThemeTokens());
+        Layout(host);
+        mountWatch.Stop();
+        var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
+        var allocation = GC.GetAllocatedBytesForCurrentThread();
+        var watch = Stopwatch.StartNew();
+        for (var step = 1; step <= 50; step++)
+        {
+            if (scenario == "checkboxes-local")
+            {
+                for (var index = 0; index < changed; index++) localValues[index].Value = step % 2 == 1;
+            }
+            else phase.Value = step;
+            Flush();
+            host.UpdateLayout();
+        }
+        watch.Stop();
+        var result = new
+        {
+            SchemaVersion = 1,
+            Scenario = scenario,
+            Rows = 1000,
+            ChangedControls = changed,
+            MixedOperations = 50,
+            MountMilliseconds = mountWatch.Elapsed.TotalMilliseconds,
+            MountAllocatedBytes = mountBytes,
+            Milliseconds = watch.Elapsed.TotalMilliseconds,
+            AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
+            Runtime = Environment.Version.ToString(),
+            TimeUtc = DateTimeOffset.UtcNow
+        };
+        host.Dispose();
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+        File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+        Console.WriteLine(JsonSerializer.Serialize(result));
+        return 0;
+    }
+
+    private static View DiagnosticView(string scenario, int index, int phase, int changed)
+    {
+        var active = index < changed;
+        return scenario switch
+        {
+            "buttons-plain" or "buttons-themed" => Button($"Open item {index}: a deliberately long label that exercises wrapped button content", static () => { })
+                .Id($"button-{index}"),
+            "checkboxes-plain" or "checkboxes-themed" => new View(ViewKind.Toggle)
+            {
+                Key = $"toggle-{index}", Content = $"Toggle item {index}", Checked = active && phase % 2 == 1
+            },
+            "theme-noop" => Button($"Theme item {index}", static () => { })
+                .ButtonStyle(ButtonStyleKind.Secondary)
+                .Id($"theme-{index}"),
+            "theme-updates" => Button($"Theme item {index}", static () => { })
+                .ButtonStyle(active && phase % 2 != 0 ? ButtonStyleKind.Primary : ButtonStyleKind.Secondary)
+                .IsEnabled(!active || phase % 4 != 0)
+                .Id($"theme-{index}"),
+            _ => throw new ArgumentOutOfRangeException(nameof(scenario))
+        };
+    }
+
+    private static void Layout(FrameworkElement element)
+    {
+        element.Measure(new Size(1320, 1080));
+        element.Arrange(new Rect(0, 0, 1320, 1080));
+        element.UpdateLayout();
+    }
+
+
+    private static void Flush() => Dispatcher.CurrentDispatcher.Invoke(() => { }, DispatcherPriority.ApplicationIdle);
+    private static void Require(bool condition, string message) { if (!condition) throw new InvalidOperationException(message); }
+    private static string Option(string[] args, string key, string fallback)
+    {
+        var index = Array.IndexOf(args, key);
+        return index >= 0 && index + 1 < args.Length ? args[index + 1] : fallback;
+    }
+
+    public static int Run(string[] args)
+    {
+        var reportPath = Path.GetFullPath(Option(args, "--report", "artifacts/stress/latest.json"));
+        var snapshotPath = Path.GetFullPath(Option(args, "--snapshot", "artifacts/stress/dashboard.png"));
+        List<Measurement> measurements = [];
+        var assertions = 0;
+        void Check(bool condition, string message) { Require(condition, message); assertions++; }
+        using var model = new WorkspaceModel(50) { TelemetryEnabled = false };
+        ViewHost? host = null;
+        void Measure(string name, Action operation, bool layout = true)
+        {
+            var builds = model.Counters.Builds;
+            var mounts = model.Counters.Mounts;
+            var unmounts = model.Counters.Unmounts;
+            var allocation = GC.GetAllocatedBytesForCurrentThread();
+            var watch = Stopwatch.StartNew();
+            operation();
+            Flush();
+            if (layout && host is not null)
+            {
+                host.Measure(new Size(1320, 1080));
+                host.Arrange(new Rect(0, 0, 1320, 1080));
+                host.UpdateLayout();
+            }
+            watch.Stop();
+            measurements.Add(new(name, watch.Elapsed.TotalMilliseconds, model.Counters.Builds - builds,
+                model.Counters.Mounts - mounts, model.Counters.Unmounts - unmounts,
+                GC.GetAllocatedBytesForCurrentThread() - allocation));
+            Console.WriteLine($"{name}: {watch.Elapsed.TotalMilliseconds:F1} ms, {model.Counters.Builds - builds:N0} body builds");
+        }
+        try
+        {
+            Measure("Initial 50-row mount + offscreen layout", () => host = new ViewHost(() => Component<Dashboard>(screen => screen.Model = model)));
+            Check(model.Counters.Active > 50, "Initial component tree did not mount.");
+
+            // Exercise actual TextBox events, not only model setters. The shared editor must mirror the row.
+            var selected = model.Selected.Value!;
+            var editor = Descendants<TextBox>(host!).First(input => input.Text == selected.Title.Value);
+            Measure("Native TextBox event + shared binding", () => editor.Text = "Edited through native TextBox");
+            Check(selected.Title.Value == "Edited through native TextBox", "Native text edit did not reach state.");
+            Check(Descendants<TextBox>(host!).Count(input => input.Text == selected.Title.Value) >= 2, "Shared row and inspector did not synchronize.");
+            var completed = Descendants<CheckBox>(host!).First(toggle => Equals(toggle.Content, "Completed"));
+            completed.IsChecked = true;
+            Flush();
+            Check(selected.Done.Value && Descendants<CheckBox>(host!).Any(toggle => Equals(toggle.Content, "Done") && toggle.IsChecked == true), "Native toggle did not update shared binding.");
+
+            Measure("Load 250 rows + layout", () => model.Load(250));
+            Measure("Load 1000 rows + layout", () => model.Load(1000));
+            Check(model.Items.Count == 1000 && model.Counters.Active >= 1000, "Large list was not fully mounted.");
+            var first = model.Items[0];
+            var firstInput = Descendants<TextBox>(host!).First(input => input.Text == first.Title.Value);
+            var expand = Descendants<Button>(host!).First(button => Equals(button.Content, "More"));
+            Measure("Expand row into nested checklist + layout", () => expand.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent)));
+            Check(Equals(expand.Content, "Less"), "Row did not expand through its native button event.");
+            first.Checklist[0].Title.Value = "Shared nested checklist edit";
+            Flush();
+            Check(Descendants<TextBox>(host!).Count(input => input.Text == first.Checklist[0].Title.Value) == 2, "Row and inspector checklist bindings did not synchronize.");
+            Measure("1000-row keyed shuffle + layout", model.Shuffle);
+            Check(Descendants<TextBox>(host!).Any(input => ReferenceEquals(input, firstInput)), "Shuffle replaced an existing input control.");
+            Check(model.Items.Any(item => ReferenceEquals(item, first)), "Shuffle replaced the data model.");
+            Check(Equals(expand.Content, "Less") && Descendants<Button>(host!).Any(button => ReferenceEquals(button, expand)), "Shuffle lost row-local expansion state.");
+
+            var beforeBurst = model.Counters.Builds;
+            Measure("10000 projected writes + one flush + layout", () => model.Burst());
+            Check(model.Counters.Builds - beforeBurst < 100, "A burst produced unbatched component work.");
+            Check(model.Items[0].Notes.Value == $"Burst mutation {10000:N0}", "Projected burst lost the final value.");
+
+            Measure("200 mixed operations with per-step render + layout", () =>
+            {
+                for (var step = 0; step < 200; step++)
+                {
+                    model.MixedStep(step);
+                    Flush();
+                    host!.UpdateLayout();
+                    if ((step + 1) % 50 == 0) Console.WriteLine($"Mixed workload: {step + 1}/200 operations complete");
+                }
+            });
+            Check(model.Items.Count == 1000, "Mixed add/remove campaign changed expected row count.");
+            Check(model.Items.Select(item => item.Id).Distinct().Count() == model.Items.Count, "Duplicate row identity after campaign.");
+            Check(model.Selected.Value is null || model.Items.Contains(model.Selected.Value), "Selection references a removed item.");
+
+            Measure("Filter to zero rows + layout", () => model.Query.Value = "__no_matches__");
+            Check(Descendants<TextBox>(host!).Count() < 40, "Filtered rows remained mounted.");
+            Measure("Clear filter + remount + layout", () => { model.Query.Value = ""; model.OnlyOpen.Value = false; });
+
+            var active = model.Counters.Active;
+            Measure("Board unmount + layout", () => model.BoardMounted.Value = false);
+            Check(active - model.Counters.Active >= 1000, "Board removal did not unmount row components.");
+            Measure("Board remount + layout", () => model.BoardMounted.Value = true);
+            Check(model.Counters.Active == active, "Board remount changed expected active component count.");
+            Measure("Expand recursive tree to depth 24 + layout", () => model.Depth.Value = 24);
+            Check(Descendants<TextBlock>(host!).Count(text => text.Text.StartsWith("Layer ", StringComparison.Ordinal)) == 23, "Recursive component tree did not reach the requested depth.");
+
+            // Capture the actual app at a readable size after the stress workload.
+            model.Load(50);
+            model.Depth.Value = 4;
+            model.CompactRows.Value = false;
+            model.RunStatus.Value = "Automated stress run passed. Ready for manual input, scrolling, and focus checks.";
+            Flush();
+            host!.Measure(new Size(1320, 1080));
+            host.Arrange(new Rect(0, 0, 1320, 1080));
+            host.UpdateLayout();
+            Directory.CreateDirectory(Path.GetDirectoryName(snapshotPath)!);
+            var bitmap = new RenderTargetBitmap(1320, 1080, 96, 96, PixelFormats.Pbgra32);
+            bitmap.Render(host);
+            var encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bitmap));
+            using (var stream = File.Create(snapshotPath)) encoder.Save(stream);
+
+            Measure("Full host disposal", host.Dispose, layout: false);
+            Check(model.Counters.Active == 0, "Components survived root host disposal.");
+            var afterDispose = model.Counters.Builds;
+            model.Items[0].Title.Value = "After disposal";
+            Flush();
+            Check(model.Counters.Builds == afterDispose, "Disposed components still respond to state.");
+            Directory.CreateDirectory(Path.GetDirectoryName(reportPath)!);
+            File.WriteAllText(reportPath, JsonSerializer.Serialize(new
+            {
+                Passed = true, Assertions = assertions, Rows = 1000, BurstWrites = 10000, MixedOperations = 200,
+                Mode = "WPF controls + dispatcher + offscreen layout; not a visible-window FPS or keyboard-focus benchmark",
+                TimeUtc = DateTimeOffset.UtcNow, Runtime = Environment.Version.ToString(),
+                TotalMounts = model.Counters.Mounts, TotalUnmounts = model.Counters.Unmounts,
+                Measurements = measurements
+            }, new JsonSerializerOptions { WriteIndented = true }));
+            Console.WriteLine($"Passed {assertions} stress assertions. Report: {reportPath}");
+            return 0;
+        }
+        catch (Exception error)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(reportPath)!);
+            File.WriteAllText(reportPath, JsonSerializer.Serialize(new { Passed = false, Assertions = assertions, Error = error.ToString(), Measurements = measurements }, new JsonSerializerOptions { WriteIndented = true }));
+            Console.Error.WriteLine(error);
+            return 1;
+        }
+        finally { host?.Dispose(); }
+    }
+
+    private static IEnumerable<T> Descendants<T>(DependencyObject root) where T : DependencyObject
+    {
+        if (root is T match) yield return match;
+        foreach (var child in LogicalTreeHelper.GetChildren(root).OfType<DependencyObject>())
+            foreach (var nested in Descendants<T>(child)) yield return nested;
+    }
+}

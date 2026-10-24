@@ -1,0 +1,669 @@
+{
+  "interpretation": "Whole-process sampled thread time attributed to nearest managed frame, including unmanaged calls and waits; not proof of CPU consumption or causality.",
+  "threads": {
+    "baseline": [
+      {
+        "thread": "Thread (31180)",
+        "unit": "milliseconds",
+        "stackDuration": 25223.773566796874,
+        "topExclusive": [
+          {
+            "method": "PresentationCore.il!MS.Internal.DpiUtil+ProcessDpiAwarenessHelper.GetProcessDpiAwarenessFromWindow(int)",
+            "duration": 11159.678921826582,
+            "percent": 44.24270179984704
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 3502.724088957012,
+            "percent": 13.886598211331064
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Thread.<PollGC>g__PollGCWorker|70_0()",
+            "duration": 2383.7366261306793,
+            "percent": 9.450356901667137
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.FullTextState,int32,int32,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags,class MS.Internal.TextFormatting.FormattedTextSymbols)",
+            "duration": 486.50479955139326,
+            "percent": 1.928755022570454
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class MS.Internal.Text.TextInterface.Font,unsigned int16,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],unsigned int32,value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,unsigned int16*,unsigned int16*,unsigned int16*,unsigned int32*,int32*,unsigned int32&)",
+            "duration": 449.23518553161466,
+            "percent": 1.7809991210948788
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int16*,unsigned int32,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int32*,unsigned int32,class MS.Internal.Text.TextInterface.Font,float64,float64,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,float32,int32*,value class MS.Internal.Text.TextInterface.GlyphOffset[]&)",
+            "duration": 399.6932966506902,
+            "percent": 1.5845896157933461
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Media.TextFormatting.CharacterBufferRange,float64,float32,unsigned int16[],value class MS.Internal.Text.TextInterface.GlyphMetrics[],value class System.Windows.Media.TextFormattingMode,bool)",
+            "duration": 395.96109214629905,
+            "percent": 1.5697932392935825
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.Composition.DUCE+Channel.SyncFlush()",
+            "duration": 381.40405271720897,
+            "percent": 1.5120816546627558
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Diagnostics.Tracing.ManifestBuilder.CreateManifest()",
+            "duration": 352.98151040077204,
+            "percent": 1.3994000916080875
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Diagnostics.Tracing.EventSource.get_CurrentThreadActivityId()",
+            "duration": 319.01417143554687,
+            "percent": 1.2647361053679882
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int32,int32)",
+            "duration": 289.3440257095335,
+            "percent": 1.1471084012996746
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine..ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags)",
+            "duration": 286.80608954316085,
+            "percent": 1.1370467181829442
+          },
+          {
+            "method": "WindowsBase.il!MS.Win32.UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG&,value class System.Runtime.InteropServices.HandleRef,int32,int32)",
+            "duration": 209.66159326782508,
+            "percent": 0.8312062931924332
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+            "duration": 190.08861482391148,
+            "percent": 0.7536089487979436
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.Native.IDWriteFactory*,bool,class System.Globalization.CultureInfo,bool,unsigned int32,class MS.Internal.Text.TextInterface.IClassification,class MS.Internal.Text.TextInterface.CreateTextAnalysisSink,class MS.Internal.Text.TextInterface.GetScriptAnalysisList,class MS.Internal.Text.TextInterface.GetNumberSubstitutionList,class MS.Internal.Text.TextInterface.CreateTextAnalysisSource)",
+            "duration": 158.99039856262243,
+            "percent": 0.6303196392942103
+          }
+        ]
+      },
+      {
+        "thread": "Thread (29880) (.NET Finalizer Thread)",
+        "unit": "milliseconds",
+        "stackDuration": 20725.28125,
+        "topExclusive": [
+          {
+            "method": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+            "duration": 9860.131896005252,
+            "percent": 47.57538282384106
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Reflection.Emit.DynamicResolver+DestroyScout.Finalize()",
+            "duration": 7828.2392578125,
+            "percent": 37.77145006325306
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 2971.801513671875,
+            "percent": 14.339016575091714
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.RuntimeTypeHandle.<InternalAllocNoChecks>g__InternalAllocNoChecksWorker|37_0(value class System.Runtime.CompilerServices.MethodTable*)",
+            "duration": 32.8714127502426,
+            "percent": 0.15860538804626642
+          },
+          {
+            "method": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+            "duration": 16.279570651244285,
+            "percent": 0.07854933525326362
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.Equals(class System.Object)",
+            "duration": 15.957599108885915,
+            "percent": 0.07699581451463254
+          },
+          {
+            "method": "Process64 dotnet (32228) Args:  \"C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003\\direct\\baseline-source\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll\" --compare --themed --report artifacts/fw003/profiles/baseline.json ",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "(Non-Activities)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Threads",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Thread (29880) (.NET Finalizer Thread)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextStore.OnDetach(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextServicesHost.UnregisterTextStore(class System.Windows.Documents.TextStore,bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.BeginInvoke(value class System.Windows.Threading.DispatcherPriority,class System.Delegate,class System.Object)",
+            "duration": 0.0,
+            "percent": 0.0
+          }
+        ]
+      }
+    ],
+    "candidate": [
+      {
+        "thread": "Thread (27316)",
+        "unit": "milliseconds",
+        "stackDuration": 24596.637132226562,
+        "topExclusive": [
+          {
+            "method": "PresentationCore.il!MS.Internal.DpiUtil+ProcessDpiAwarenessHelper.GetProcessDpiAwarenessFromWindow(int)",
+            "duration": 9589.030746632208,
+            "percent": 38.98512912591877
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 4232.192241685483,
+            "percent": 17.206385649119717
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Thread.<PollGC>g__PollGCWorker|70_0()",
+            "duration": 2556.422038612177,
+            "percent": 10.39338030182487
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Media.TextFormatting.CharacterBufferRange,float64,float32,unsigned int16[],value class MS.Internal.Text.TextInterface.GlyphMetrics[],value class System.Windows.Media.TextFormattingMode,bool)",
+            "duration": 589.7663900177058,
+            "percent": 2.3977521270376947
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int16*,unsigned int32,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int32*,unsigned int32,class MS.Internal.Text.TextInterface.Font,float64,float64,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,float32,int32*,value class MS.Internal.Text.TextInterface.GlyphOffset[]&)",
+            "duration": 543.9275901489273,
+            "percent": 2.211390066149621
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class MS.Internal.Text.TextInterface.Font,unsigned int16,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],unsigned int32,value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,unsigned int16*,unsigned int16*,unsigned int16*,unsigned int32*,int32*,unsigned int32&)",
+            "duration": 520.386990515135,
+            "percent": 2.1156834884282736
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+            "duration": 387.8677120346015,
+            "percent": 1.5769135835500718
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.FullTextState,int32,int32,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags,class MS.Internal.TextFormatting.FormattedTextSymbols)",
+            "duration": 365.38909568938834,
+            "percent": 1.485524601290535
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int32,int32)",
+            "duration": 360.2423870376533,
+            "percent": 1.4646001609938093
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine..ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags)",
+            "duration": 253.59729745940967,
+            "percent": 1.0310242660251552
+          },
+          {
+            "method": "WindowsBase.il!MS.Win32.UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG&,value class System.Runtime.InteropServices.HandleRef,int32,int32)",
+            "duration": 246.2864833236672,
+            "percent": 1.0013014462086045
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.Native.IDWriteFactory*,bool,class System.Globalization.CultureInfo,bool,unsigned int32,class MS.Internal.Text.TextInterface.IClassification,class MS.Internal.Text.TextInterface.CreateTextAnalysisSink,class MS.Internal.Text.TextInterface.GetScriptAnalysisList,class MS.Internal.Text.TextInterface.GetNumberSubstitutionList,class MS.Internal.Text.TextInterface.CreateTextAnalysisSource)",
+            "duration": 239.93079768218468,
+            "percent": 0.9754617933840511
+          },
+          {
+            "method": "System.Diagnostics.Process.il!Interop+Kernel32.CloseHandle(int)",
+            "duration": 209.25949839115697,
+            "percent": 0.8507646686261219
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.RequestBackgroundProcessing()",
+            "duration": 191.30750054016062,
+            "percent": 0.7777790903355205
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.Composition.DUCE+Channel.SyncFlush()",
+            "duration": 150.24673459129338,
+            "percent": 0.6108425870723596
+          }
+        ]
+      },
+      {
+        "thread": "Thread (18552) (.NET Finalizer Thread)",
+        "unit": "milliseconds",
+        "stackDuration": 10311.039199574281,
+        "topExclusive": [
+          {
+            "method": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+            "duration": 10168.678357618714,
+            "percent": 98.61933565375791
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.RemoveImpl(class System.Delegate)",
+            "duration": 63.325157391358516,
+            "percent": 0.61414912857642
+          },
+          {
+            "method": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+            "duration": 62.76148412475595,
+            "percent": 0.6086824316151104
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 16.27419962158092,
+            "percent": 0.15783277811855126
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+            "duration": 8.178722055163234e-07,
+            "percent": 7.932005588244602e-09
+          },
+          {
+            "method": "Process64 dotnet (3796) Args:  \"C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll\" --compare --themed --report artifacts/fw003/profiles/candidate.json ",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "(Non-Activities)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Threads",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Thread (18552) (.NET Finalizer Thread)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.remove_ShutdownFinished(class System.EventHandler)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextStore.OnDetach(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextServicesHost.UnregisterTextStore(class System.Windows.Documents.TextStore,bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.BeginInvoke(value class System.Windows.Threading.DispatcherPriority,class System.Delegate,class System.Object)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.InvokeAsyncImpl(class System.Windows.Threading.DispatcherOperation,value class System.Threading.CancellationToken)",
+            "duration": 0.0,
+            "percent": 0.0
+          }
+        ]
+      }
+    ],
+    "unattached": [
+      {
+        "thread": "Thread (23712)",
+        "unit": "milliseconds",
+        "stackDuration": 27092.1208001709,
+        "topExclusive": [
+          {
+            "method": "PresentationCore.il!MS.Internal.DpiUtil+ProcessDpiAwarenessHelper.GetProcessDpiAwarenessFromWindow(int)",
+            "duration": 10852.011988867198,
+            "percent": 40.05597077065573
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 5264.391239218148,
+            "percent": 19.43144753431389
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Thread.<PollGC>g__PollGCWorker|70_0()",
+            "duration": 2985.185454337492,
+            "percent": 11.018648101992301
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Media.TextFormatting.CharacterBufferRange,float64,float32,unsigned int16[],value class MS.Internal.Text.TextInterface.GlyphMetrics[],value class System.Windows.Media.TextFormattingMode,bool)",
+            "duration": 546.1317928527851,
+            "percent": 2.0158325620980553
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.Native.IDWriteFactory*,bool,class System.Globalization.CultureInfo,bool,unsigned int32,class MS.Internal.Text.TextInterface.IClassification,class MS.Internal.Text.TextInterface.CreateTextAnalysisSink,class MS.Internal.Text.TextInterface.GetScriptAnalysisList,class MS.Internal.Text.TextInterface.GetNumberSubstitutionList,class MS.Internal.Text.TextInterface.CreateTextAnalysisSource)",
+            "duration": 486.6489024963439,
+            "percent": 1.7962746662980853
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int32,int32)",
+            "duration": 436.19391475982775,
+            "percent": 1.6100397528017674
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class MS.Internal.Text.TextInterface.Font,unsigned int16,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],unsigned int32,value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,unsigned int16*,unsigned int16*,unsigned int16*,unsigned int32*,int32*,unsigned int32&)",
+            "duration": 418.0193920822194,
+            "percent": 1.5429555890640445
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.ExecutionContext.SetLocalValue(class System.Threading.IAsyncLocal,class System.Object,bool)",
+            "duration": 292.023585913086,
+            "percent": 1.0778911996850533
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+            "duration": 266.8717983016995,
+            "percent": 0.985053183064266
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int16*,unsigned int32,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int32*,unsigned int32,class MS.Internal.Text.TextInterface.Font,float64,float64,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,float32,int32*,value class MS.Internal.Text.TextInterface.GlyphOffset[]&)",
+            "duration": 263.0291997970562,
+            "percent": 0.9708697290150758
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.FullTextState,int32,int32,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags,class MS.Internal.TextFormatting.FormattedTextSymbols)",
+            "duration": 248.9060968963613,
+            "percent": 0.9187398016281959
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine..ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags)",
+            "duration": 219.07789563598635,
+            "percent": 0.8086406274794271
+          },
+          {
+            "method": "DirectWriteForwarder.il!<Module>.<CrtImplementationDetails>.LanguageSupport.InitializeUninitializer(optional_modifier vc.cppcli.modopts.ThisPointer value class <CrtImplementationDetails>.LanguageSupport*)",
+            "duration": 215.6557005729676,
+            "percent": 0.7960089288085826
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Globalization.GlobalizationMode.LoadIcu()",
+            "duration": 203.45379627418518,
+            "percent": 0.7509703569345586
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.IsInstanceOfClass(void*,class System.Object)",
+            "duration": 186.30829435806027,
+            "percent": 0.6876844220954641
+          }
+        ]
+      },
+      {
+        "thread": "Thread (42928) (.NET Finalizer Thread)",
+        "unit": "milliseconds",
+        "stackDuration": 16909.474609375,
+        "topExclusive": [
+          {
+            "method": "System.Private.CoreLib.il!System.Reflection.Emit.DynamicResolver+DestroyScout.Finalize()",
+            "duration": 10738.3134765625,
+            "percent": 63.5047139229798
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+            "duration": 6060.6892091552745,
+            "percent": 35.84197232121624
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.DeleteFromInvocationList(class System.Object[],int32,int32,int32)",
+            "duration": 93.29290072936783,
+            "percent": 0.5517196890176831
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextServicesHost.UnregisterTextStore(class System.Windows.Documents.TextStore,bool)",
+            "duration": 17.17902292785584,
+            "percent": 0.1015940667862702
+          },
+          {
+            "method": "Process64 dotnet (25628) Args:  \"C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003\\presentation-probe\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll\" --compare --themed --report artifacts/fw003/profiles/unattached.json ",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "(Non-Activities)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Threads",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Thread (42928) (.NET Finalizer Thread)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextStore.OnDetach(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.remove_ShutdownFinished(class System.EventHandler)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.RemoveImpl(class System.Delegate)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.AppDomain.remove_DomainUnload(class System.EventHandler)",
+            "duration": 0.0,
+            "percent": 0.0
+          }
+        ]
+      }
+    ],
+    "attached": [
+      {
+        "thread": "Thread (7236)",
+        "unit": "milliseconds",
+        "stackDuration": 20255.275390625,
+        "topExclusive": [
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Monitor.Enter_Slowpath(class System.Object)",
+            "duration": 6228.1865637516,
+            "percent": 30.7484664791784
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Threading.Thread.<PollGC>g__PollGCWorker|70_0()",
+            "duration": 4069.3368812343656,
+            "percent": 20.090256996050655
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Media.TextFormatting.CharacterBufferRange,float64,float32,unsigned int16[],value class MS.Internal.Text.TextInterface.GlyphMetrics[],value class System.Windows.Media.TextFormattingMode,bool)",
+            "duration": 612.455657643131,
+            "percent": 3.0236846739027867
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class MS.Internal.Text.TextInterface.Font,unsigned int16,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],unsigned int32,value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,unsigned int16*,unsigned int16*,unsigned int16*,unsigned int32*,int32*,unsigned int32&)",
+            "duration": 563.5654920022964,
+            "percent": 2.7823146372186005
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int32,int32)",
+            "duration": 504.6147018432621,
+            "percent": 2.491275443615144
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.FullTextState,int32,int32,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags,class MS.Internal.TextFormatting.FormattedTextSymbols)",
+            "duration": 495.0929936716095,
+            "percent": 2.4442669088604916
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.ProcessQueue()",
+            "duration": 476.6348854560847,
+            "percent": 2.3531394970650044
+          },
+          {
+            "method": "PresentationCore.il!MS.Internal.TextFormatting.TextMetrics+FullTextLine..ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int32,value class MS.Internal.TextFormatting.LineFlags)",
+            "duration": 418.00339221802096,
+            "percent": 2.063676667716355
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Runtime.CompilerServices.CastHelpers.IsInstanceOfClass(void*,class System.Object)",
+            "duration": 378.65459608307174,
+            "percent": 1.8694122335079637
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int16*,unsigned int32,optional_modifier System.Runtime.CompilerServices.IsConst unsigned int16*,unsigned int32*,unsigned int32,class MS.Internal.Text.TextInterface.Font,float64,float64,bool,bool,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.DWriteFontFeature[][],unsigned int32[],value class System.Windows.Media.TextFormattingMode,class MS.Internal.Text.TextInterface.ItemProps,float32,int32*,value class MS.Internal.Text.TextInterface.GlyphOffset[]&)",
+            "duration": 369.322196485708,
+            "percent": 1.8233383124311702
+          },
+          {
+            "method": "DirectWriteForwarder.il!MS.Internal.Text.TextInterface.TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices.IsConst wchar*,unsigned int32,class System.Globalization.CultureInfo,value class MS.Internal.Text.TextInterface.Native.IDWriteFactory*,bool,class System.Globalization.CultureInfo,bool,unsigned int32,class MS.Internal.Text.TextInterface.IClassification,class MS.Internal.Text.TextInterface.CreateTextAnalysisSink,class MS.Internal.Text.TextInterface.GetScriptAnalysisList,class MS.Internal.Text.TextInterface.GetNumberSubstitutionList,class MS.Internal.Text.TextInterface.CreateTextAnalysisSource)",
+            "duration": 302.30089691257535,
+            "percent": 1.4924551312320986
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.DependencyObject.LookupEntry(int32)",
+            "duration": 293.9073931915309,
+            "percent": 1.4510165254408918
+          },
+          {
+            "method": "WindowsBase.il!MS.Win32.UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG&,value class System.Runtime.InteropServices.HandleRef,int32,int32)",
+            "duration": 176.4670568496722,
+            "percent": 0.8712152930359497
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.DependencyProperty.GetMetadata(class System.Windows.DependencyObjectType)",
+            "duration": 139.84149281768714,
+            "percent": 0.6903954161117538
+          },
+          {
+            "method": "PresentationCore.il!System.Windows.Media.Composition.DUCE+Channel.CreateOrAddRefOnChannel(class System.Object,value class ResourceHandle&,value class ResourceType)",
+            "duration": 124.19859742279186,
+            "percent": 0.6131666690657597
+          }
+        ]
+      },
+      {
+        "thread": "Thread (44804) (.NET Finalizer Thread)",
+        "unit": "milliseconds",
+        "stackDuration": 16019.220000695803,
+        "topExclusive": [
+          {
+            "method": "System.Private.CoreLib.il!System.GC.ReRegisterForFinalize(class System.Object)",
+            "duration": 11572.5185546875,
+            "percent": 72.24146090873865
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.DeleteFromInvocationList(class System.Object[],int32,int32,int32)",
+            "duration": 4299.794921444705,
+            "percent": 26.84147493609515
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.MulticastDelegate.RemoveImpl(class System.Delegate)",
+            "duration": 68.02789878845215,
+            "percent": 0.4246642394916689
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.GC.RunFinalizers()",
+            "duration": 47.47934639282175,
+            "percent": 0.29638987660297733
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.RuntimeTypeHandle.<InternalAllocNoChecks>g__InternalAllocNoChecksWorker|37_0(value class System.Runtime.CompilerServices.MethodTable*)",
+            "duration": 31.399099349975586,
+            "percent": 0.19600891521941613
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.Finalize()",
+            "duration": 0.0001781249993655365,
+            "percent": 1.111945521428631e-06
+          },
+          {
+            "method": "WindowsBase.il!MS.Internal.ShutDownListener.StopListening()",
+            "duration": 1.9073486328125e-06,
+            "percent": 1.1906626119933763e-08
+          },
+          {
+            "method": "Process64 dotnet (44632) Args:  \"C:\\Users\\iotero\\Dev\\personal\\UI Framework\\artifacts\\fw003\\presentation-probe\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll\" --compare --themed --report artifacts/fw003/profiles/attached.json --presentation-source ",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "(Non-Activities)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Threads",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "Thread (44804) (.NET Finalizer Thread)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.Runtime.CompilerServices.ConditionalWeakTable`2+Container[System.__Canon,System.__Canon].Finalize()",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "PresentationFramework.il!System.Windows.Documents.TextEditor.DetachTextStore(bool)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "WindowsBase.il!System.Windows.Threading.Dispatcher.remove_ShutdownFinished(class System.EventHandler)",
+            "duration": 0.0,
+            "percent": 0.0
+          },
+          {
+            "method": "System.Private.CoreLib.il!System.AppDomain.remove_DomainUnload(class System.EventHandler)",
+            "duration": 0.0,
+            "percent": 0.0
+          }
+        ]
+      }
+    ]
+  }
+}

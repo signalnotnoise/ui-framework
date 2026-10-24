@@ -1,0 +1,22 @@
+test_agents_preserved_and_idempotent (__main__.GraphTests.test_agents_preserved_and_idempotent) ... ok
+test_angle_link_spaces_and_type_specific_extraction (__main__.GraphTests.test_angle_link_spaces_and_type_specific_extraction) ... ok
+test_bounded_queries_and_pagination (__main__.GraphTests.test_bounded_queries_and_pagination) ... ok
+test_cache_rebuild_and_empty_repository (__main__.GraphTests.test_cache_rebuild_and_empty_repository) ... ok
+test_curated_architecture_and_project_evidence_adapter (__main__.GraphTests.test_curated_architecture_and_project_evidence_adapter) ... ok
+test_deleted_file_impact (__main__.GraphTests.test_deleted_file_impact) ... ok
+test_deterministic_embedded_data_and_evidence (__main__.GraphTests.test_deterministic_embedded_data_and_evidence) ... ok
+test_history_rename_and_old_revision (__main__.GraphTests.test_history_rename_and_old_revision) ... ok
+test_hook_stages_only_outputs (__main__.GraphTests.test_hook_stages_only_outputs) ... ok
+test_impact_shares_caps_across_revisions (__main__.GraphTests.test_impact_shares_caps_across_revisions) ... ok
+test_index_and_worktree_separation (__main__.GraphTests.test_index_and_worktree_separation) ... ok
+test_output_protection (__main__.GraphTests.test_output_protection) ... ok
+test_protect_untracked_outputs (__main__.GraphTests.test_protect_untracked_outputs) ... ok
+test_renderer_and_vendor_staleness (__main__.GraphTests.test_renderer_and_vendor_staleness) ... ok
+test_unicode_exclusions_and_html_escaping (__main__.GraphTests.test_unicode_exclusions_and_html_escaping) ... ok
+test_unstaged_extractor_rejected (__main__.GraphTests.test_unstaged_extractor_rejected) ... ok
+test_unstaged_renderer_isolation (__main__.GraphTests.test_unstaged_renderer_isolation) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 41.103s
+
+OK

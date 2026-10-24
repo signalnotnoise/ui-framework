@@ -1,0 +1,79 @@
+{
+  "source": "artifacts\\fw004\\full-control",
+  "identicalBinaryControl": true,
+  "interpretation": "Descriptive paired variation; not a replacement gate, confidence interval or causal attribution.",
+  "comparisons": [
+    {
+      "scenario": "full-list",
+      "metric": "MountMilliseconds",
+      "pairedChangesPercent": [
+        34.463510365082705,
+        -27.90986390360478,
+        11.236272719513707,
+        -18.078823762258722,
+        -4.523988341733176,
+        -3.0673476442392267,
+        -24.41702374787489
+      ],
+      "medianPairedChangePercent": -4.523988341733176,
+      "minimumPairedChangePercent": -27.90986390360478,
+      "maximumPairedChangePercent": 34.463510365082705,
+      "positivePairs": 2,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Milliseconds",
+      "pairedChangesPercent": [
+        20.287920486198384,
+        -6.669937078132914,
+        -1.0356931194133723,
+        -47.839303130796026,
+        -6.9978683837328415,
+        -2.657076889892196,
+        -10.9793307528947
+      ],
+      "medianPairedChangePercent": -6.669937078132914,
+      "minimumPairedChangePercent": -47.839303130796026,
+      "maximumPairedChangePercent": 20.287920486198384,
+      "positivePairs": 1,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountAllocatedBytes",
+      "pairedChangesPercent": [
+        -0.006716731190825609,
+        -0.03028797939605976,
+        -0.04942113964807593,
+        0.06391885004668474,
+        0.09326056769807245,
+        0.10928731948889325,
+        0.1184782613263824
+      ],
+      "medianPairedChangePercent": 0.06391885004668474,
+      "minimumPairedChangePercent": -0.04942113964807593,
+      "maximumPairedChangePercent": 0.1184782613263824,
+      "positivePairs": 4,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "AllocatedBytes",
+      "pairedChangesPercent": [
+        0.3643262441809014,
+        0.013215644095310175,
+        0.4769820041442774,
+        0.018777980419404372,
+        0.27274907659085024,
+        0.21384390078538207,
+        0.13751905965082578
+      ],
+      "medianPairedChangePercent": 0.21384390078538207,
+      "minimumPairedChangePercent": 0.013215644095310175,
+      "maximumPairedChangePercent": 0.4769820041442774,
+      "positivePairs": 7,
+      "pairs": 7
+    }
+  ]
+}

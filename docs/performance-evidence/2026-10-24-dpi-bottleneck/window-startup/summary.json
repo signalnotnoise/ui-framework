@@ -1,0 +1,24 @@
+{
+  "kind": "actual-window-startup-order",
+  "samples": 7,
+  "releaseEligible": false,
+  "sdk": "10.0.402",
+  "rows": 50,
+  "geometryMatches": true,
+  "nativeEditingPassed": true,
+  "note": "Same sample binary and actual window; handle before versus after ViewHost construction. Includes window creation, attachment, Show and layout. No framework-owned hidden window.",
+  "comparisons": [
+    {
+      "metric": "Milliseconds",
+      "lateMedian": 758.4111,
+      "earlyMedian": 608.2483,
+      "changePercent": -19.7996574680935
+    },
+    {
+      "metric": "AllocatedBytes",
+      "lateMedian": 23816232.0,
+      "earlyMedian": 23220216.0,
+      "changePercent": -2.502562118138585
+    }
+  ]
+}

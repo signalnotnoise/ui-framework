@@ -4,10 +4,19 @@ param(
     [ValidateRange(3, 15)][int]$Samples = 7,
     [string]$OutputDirectory,
     [switch]$ReportOnly,
+    [switch]$IdenticalBinaryControl,
+    [switch]$PresentationPrimingComparison,
+    [switch]$ColdPresentation,
     [switch]$IncludeLayoutEditors,
+    [switch]$IncludeNativeIslands,
+    [ValidateSet('full-list', 'virtualized', 'themed-full-list', 'layout-editors', 'native-inherit', 'native-preserve')]
+    [string[]]$FocusedScenarios,
     [string]$DumpToolPath
 )
 $ErrorActionPreference = 'Stop'
+if ($IdenticalBinaryControl -and $PresentationPrimingComparison) { throw 'Choose either measurement control or presentation intervention.' }
+if ($PresentationPrimingComparison -and $IncludeNativeIslands) { throw 'Native-island scenarios already own a presentation source; use the standard workloads for this experiment.' }
+if ($PresentationPrimingComparison -and $ColdPresentation) { throw 'Choose a mixed priming comparison or an all-cold diagnostic run.' }
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectRoot
 try {
@@ -42,16 +51,16 @@ try {
     New-Item -ItemType Directory -Path (Split-Path $policyDestination) -Force | Out-Null
     Copy-Item -LiteralPath (Join-Path $projectRoot 'UI Framework.Wpf/WpfComCleanupPolicy.cs') -Destination $policyDestination
     foreach ($root in @($baseline, $projectRoot)) {
-        & dotnet build (Join-Path $root 'samples/Counter/Counter.csproj') -c Release --disable-build-servers -m:1 -warnaserror
+        & dotnet build (Join-Path $root 'samples/Counter/Counter.csproj') -c Release --disable-build-servers -m:1 -warnaserror "-p:NativeIslandBenchmark=$([bool]$IncludeNativeIslands)"
         if ($LASTEXITCODE -ne 0) { throw "Benchmark build failed: $root" }
     }
     # Preserve the exact dirty candidate sources, including new files, alongside
     # the raw runs. A HEAD hash alone cannot identify a working-tree benchmark.
     $candidateSource = Join-Path $output 'candidate-source'
-    $sourceFiles = @('Directory.Build.props', 'global.json', 'UI Framework.slnx') | ForEach-Object { Get-Item (Join-Path $projectRoot $_) }
+    $sourceFiles = @('Directory.Build.props', 'global.json', 'UI Framework.slnx', '.editorconfig') | ForEach-Object { Get-Item (Join-Path $projectRoot $_) }
     foreach ($folder in @('UI Framework', 'UI Framework.Wpf', 'samples', 'tools')) {
         $sourceFiles += Get-ChildItem (Join-Path $projectRoot $folder) -Recurse -File | Where-Object {
-            $_.FullName -notmatch '[\\/](bin|obj|artifacts)[\\/]' -and $_.Extension -in @('.cs', '.csproj', '.ps1', '.json')
+            $_.FullName -notmatch '[\\/](bin|obj|artifacts)[\\/]' -and $_.Extension -in @('.cs', '.csproj', '.ps1', '.json', '.txt', '.py')
         }
     }
     $manifest = foreach ($file in $sourceFiles) {
@@ -66,8 +75,43 @@ try {
         baseline = Join-Path $baseline 'samples/Counter/bin/Release/net10.0-windows/Counter.dll'
         candidate = Join-Path $projectRoot 'samples/Counter/bin/Release/net10.0-windows/Counter.dll'
     }
+    if ($IdenticalBinaryControl -or $PresentationPrimingComparison) {
+        # A separate copy avoids changing either built revision. Both sides execute
+        # the candidate payload; this is a measurement control, never a release gate.
+        $control = Join-Path $output 'identical-binary'
+        Copy-Item -LiteralPath (Split-Path $executables.candidate) -Destination $control -Recurse
+        $executables.baseline = Join-Path $control 'Counter.dll'
+        foreach ($name in @('Counter.dll', 'UI Framework.dll', 'UI Framework.Wpf.dll', 'Counter.deps.json', 'Counter.runtimeconfig.json')) {
+            if ((Get-FileHash (Join-Path $control $name)).Hash -ne
+                (Get-FileHash (Join-Path (Split-Path $executables.candidate) $name)).Hash) {
+                throw "Identical-binary control differs: $name"
+            }
+        }
+    }
+    $binaryManifest = foreach ($side in @('baseline','candidate')) {
+        foreach ($file in Get-ChildItem (Split-Path $executables[$side]) -File) {
+            [pscustomobject]@{ side = $side; name = $file.Name; sha256 = (Get-FileHash $file.FullName).Hash }
+        }
+    }
+    $binaryManifest | ConvertTo-Json | Set-Content (Join-Path $output 'binary-manifest.json')
     $scenarios = [ordered]@{ 'full-list' = @(); 'virtualized' = @('--virtualized'); 'themed-full-list' = @('--themed') }
     if ($IncludeLayoutEditors) { $scenarios['layout-editors'] = @('--layout-editors') }
+    if ($IncludeNativeIslands) {
+        $scenarios['native-inherit'] = @('--native-islands')
+        $scenarios['native-preserve'] = @('--native-islands', '--preserve-native')
+    }
+    if ($FocusedScenarios) {
+        foreach ($name in $FocusedScenarios) {
+            if (-not $scenarios.Contains($name)) { throw "Enable the optional workload before selecting it: $name" }
+        }
+        foreach ($name in @($scenarios.Keys)) {
+            if ($name -notin $FocusedScenarios) { $scenarios.Remove($name) }
+        }
+        # A focused virtual comparison must retain its full-list reference.
+        if ($scenarios.Contains('virtualized') -and -not $scenarios.Contains('full-list')) {
+            $scenarios.Insert(0, 'full-list', @())
+        }
+    }
     $runs = [System.Collections.Generic.List[object]]::new()
     foreach ($scenario in $scenarios.Keys) {
         # One discarded process per side warms filesystem/runtime caches. Measured
@@ -79,6 +123,8 @@ try {
                 $log = Join-Path $output "$scenario-$iteration-$side.log"
                 Write-Output "$scenario / sample $iteration / $side"
                 $arguments = @($executables[$side], '--compare', '--report', $report) + $scenarios[$scenario]
+                if ($PresentationPrimingComparison -and $side -eq 'candidate') { $arguments += '--prime-presentation' }
+                if ($ColdPresentation -or ($PresentationPrimingComparison -and $side -eq 'baseline')) { $arguments += '--cold-presentation' }
                 $start = [Diagnostics.ProcessStartInfo]::new((Get-Command dotnet).Source)
                 $start.UseShellExecute = $false
                 $start.CreateNoWindow = $true
@@ -114,12 +160,28 @@ try {
                     ($stdout.GetAwaiter().GetResult() + $stderr.GetAwaiter().GetResult()) | Set-Content -LiteralPath $log
                     if (-not $completed) { throw "Benchmark exceeded 120 seconds: $scenario / $iteration / $side. See $log" }
                     if ($process.ExitCode -ne 0) { throw "Benchmark failed. See $log" }
+                    [pscustomobject]@{
+                        scenario = $scenario; sample = $iteration; side = $side
+                        wallSeconds = $elapsed.Elapsed.TotalSeconds
+                        cpuSeconds = $process.TotalProcessorTime.TotalSeconds
+                    } | ConvertTo-Json | Set-Content (Join-Path $output "$scenario-$iteration-$side-process.json")
                 } finally { $process.Dispose() }
                 $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
+                if ($scenario -in @('full-list','virtualized','themed-full-list')) {
+                    $initialized = -not ($ColdPresentation -or ($PresentationPrimingComparison -and $side -eq 'baseline'))
+                    if ($result.PresentationProtocol -ne 'process-dpi-initialization-v2' -or $result.PresentationPrimed -ne $initialized) {
+                        throw "Unexpected presentation protocol: $report"
+                    }
+                }
+                if ($PresentationPrimingComparison -and $scenario -ne 'layout-editors' -and
+                    $result.PresentationPrimed -ne ($side -eq 'candidate')) {
+                    throw "Presentation intervention was not applied as expected: $report"
+                }
                 if ($scenario -eq 'layout-editors') {
                     if ($result.CleanupPolicy -ne 'application-owned') { throw "Unexpected editor cleanup policy in $report" }
                 }
-                if ($result.SchemaVersion -ne 2 -or $result.Rows -ne 1000 -or $result.MixedOperations -ne 50 -or $result.Scenario -ne $scenario) {
+                $expectedRows = if ($scenario -like 'native-*') { 32 } else { 1000 }
+                if ($result.SchemaVersion -ne 2 -or $result.Rows -ne $expectedRows -or $result.MixedOperations -ne 50 -or $result.Scenario -ne $scenario) {
                     throw "Unexpected benchmark workload in $report"
                 }
                 foreach ($metricName in @('MountMilliseconds', 'Milliseconds', 'MountAllocatedBytes', 'AllocatedBytes', 'MountBodyBuilds', 'BodyBuilds', 'Mounts', 'Unmounts')) {
@@ -172,15 +234,23 @@ try {
         candidateRevision = (& git rev-parse HEAD).Trim(); candidateDirty = [bool](& git status --porcelain)
         sdk = (& dotnet --version).Trim(); os = [Environment]::OSVersion.VersionString; processorCount = [Environment]::ProcessorCount
         samples = $Samples; warmupProcessesPerSide = 1; rows = 1000; operations = 50
+        scenarioRows = [ordered]@{ 'full-list' = 1000; virtualized = 1000; 'themed-full-list' = 1000; 'layout-editors' = 1000; 'native-inherit' = 32; 'native-preserve' = 32 }
         applicationOwnedComCleanup = [bool]$IncludeLayoutEditors
-        releaseEligible = [bool]$IncludeLayoutEditors -and $Samples -ge 7 -and
+        identicalBinaryControl = [bool]$IdenticalBinaryControl
+        presentationPrimingComparison = [bool]$PresentationPrimingComparison
+        presentationProtocol = 'process-dpi-initialization-v2'
+        coldPresentation = [bool]$ColdPresentation
+        supplementalNativeIslands = [bool]$IncludeNativeIslands
+        focusedScenarios = @($FocusedScenarios)
+        releaseEligible = -not $ColdPresentation -and -not $PresentationPrimingComparison -and -not $FocusedScenarios -and -not $IncludeNativeIslands -and -not $IdenticalBinaryControl -and [bool]$IncludeLayoutEditors -and $Samples -ge 7 -and
             $baselineCommit -eq $budget.revision -and @($comparisons | Where-Object regression).Count -eq 0
         budgetPolicy = $budget
         runtimeVersions = @($runs.result.Runtime | Sort-Object -Unique)
         passed = @($comparisons | Where-Object regression).Count -eq 0; comparisons = @($comparisons)
     }
     $summary | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $output 'summary.json')
-    $lines = @('# Paired rendering performance', '', "Baseline: $baselineCommit. Samples per side: $Samples. Negative change is an improvement.", '',
+    $heading = if ($PresentationPrimingComparison) { '# Experimental presentation cache priming' } elseif ($IdenticalBinaryControl) { '# Identical binary measurement control' } else { '# Paired rendering performance' }
+    $lines = @($heading, '', $(if ($PresentationPrimingComparison) { "Both sides execute identical candidate payloads; only candidate primes an empty presentation source. Archived setup revision $baselineCommit is not executed. Samples per side: $Samples. Experimental, never release eligible; editor workload already owns a presentation source." } elseif ($IdenticalBinaryControl) { "Both sides execute the candidate payload; archived setup revision $baselineCommit is not executed. Samples per side: $Samples. Differences measure variation, not an implementation improvement." } else { "Baseline: $baselineCommit. Samples per side: $Samples. Negative change is an improvement." }), '',
         '| Scenario | Metric | Baseline median | Candidate median | Change | Result |', '| --- | --- | ---: | ---: | ---: | --- |')
     foreach ($item in $comparisons) {
         $changeText = if ($null -eq $item.changePercent) { 'new work from zero' } else { '{0:N2}%' -f $item.changePercent }

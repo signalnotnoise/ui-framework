@@ -1,0 +1,7 @@
+{
+  "scenario": "native-preserve",
+  "sample": 2,
+  "side": "baseline",
+  "wallSeconds": 1.5847028,
+  "cpuSeconds": 1.265625
+}

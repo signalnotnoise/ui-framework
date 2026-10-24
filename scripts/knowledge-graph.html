@@ -14,6 +14,7 @@
 <label><input id="neighbors" type="checkbox"> Selected neighborhood only</label>
 <button id="fit">Fit view</button><button id="clear">Clear selection</button>
 <span id="count" aria-live="polite"></span></header>
+<p id="coverage" style="padding:0 20px"></p>
 <main><div id="viewport" tabindex="0" aria-label="Graph: arrow keys pan, plus and minus zoom, Home fits view"><div id="labels"></div><div id="hint">Blue: references / Orange: selected connections</div></div>
 <aside><label>Choose a node <select id="nodes"><option value="">Select a file or directory</option></select></label><div id="detail" aria-live="polite"><p>Select a node to inspect incoming and outgoing relationships.</p></div></aside></main>
 <script id="data" type="application/json">__GRAPH_JSON__</script>
@@ -21,6 +22,7 @@
 <script>
 const data=JSON.parse(document.getElementById('data').textContent);
 const $=id=>document.getElementById(id), viewport=$('viewport');
+$('coverage').textContent=`Syntax file map and curated architecture; ${data.coverage?.unresolvedRelativeReferences??0} unresolved relative references. C# calls and using directives are not resolved.`;
 const groups=[...new Set(data.nodes.map(n=>n.group))].sort();
 const palette=[0x67a7ff,0x50d5b3,0xba91ff,0xf5bf6a,0x6ad6ec,0xf88baa];
 for(const group of groups){const o=document.createElement('option');o.value=group;o.textContent=group;$('group').append(o)}
@@ -35,7 +37,8 @@ groups.forEach((group,index)=>{const members=data.nodes.filter(n=>n.group===grou
 function connected(){const ids=new Set([selected]);for(const e of data.edges)if(e.source===selected||e.target===selected){ids.add(e.source);ids.add(e.target)}return ids}
 function select(id){selected=id;$('nodes').value=id;const detail=$('detail');detail.replaceChildren();
  if(id){const h=document.createElement('h2');const node=data.nodes.find(n=>n.id===id);h.textContent=node?.label||id;detail.append(h);if(node?.summary){const p=document.createElement('p');p.textContent=`${node.status}: ${node.summary}`;detail.append(p);}
- for(const e of data.edges.filter(e=>e.source===id||e.target===id)){const b=document.createElement('button');b.className='link';const incoming=e.target===id,target=incoming?e.source:e.target;b.textContent=`${incoming?'From':'To'} ${target} (${e.kind})`;b.onclick=()=>{$('search').value='';$('group').value='';select(target);focusNode(target)};detail.append(b)}}
+ const path=document.createElement('p');path.textContent=`${node?.kind||'node'}: ${id}`;detail.append(path);
+ for(const e of data.edges.filter(e=>e.source===id||e.target===id)){const b=document.createElement('button');b.className='link';const incoming=e.target===id,target=incoming?e.source:e.target;b.textContent=`${incoming?'From':'To'} ${target} (${e.kind})`;b.onclick=()=>{$('search').value='';$('group').value='';select(target);focusNode(target)};detail.append(b);if(e.evidence){const p=document.createElement('p');p.textContent=e.evidence.path+(e.evidence.line?`:${e.evidence.line}`:e.evidence.jsonPointer?` ${e.evidence.jsonPointer}`:'');detail.append(p);if(e.evidence.text){const code=document.createElement('code');code.textContent=e.evidence.text;detail.append(code)}}}}
  else{detail.textContent='Select a node to inspect incoming and outgoing relationships.'}draw()}
 function focusNode(id){const p=positions.get(id);if(p){camera.position.x=p.x;camera.position.y=p.y;camera.zoom=Math.max(camera.zoom,2);camera.updateProjectionMatrix();render()}}
 function draw(){for(const object of [...layer.children]){layer.remove(object);object.geometry?.dispose();object.material?.dispose()}

@@ -17,6 +17,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Visual stress checks failed.' }
     dotnet 'samples/Counter/bin/Release/net10.0-windows/Counter.dll' --stress --report artifacts/release-validation/stress.json --snapshot artifacts/release-validation/dashboard.png
     if ($LASTEXITCODE -ne 0) { throw 'Full stress workload failed.' }
+    $startupReport = 'artifacts/release-validation/startup-' + [Guid]::NewGuid().ToString('N') + '.json'
+    dotnet 'samples/Counter/bin/Release/net10.0-windows/Counter.dll' --startup-check --report $startupReport
+    if ($LASTEXITCODE -ne 0) { throw 'Actual-window startup, editing and disposal check failed.' }
     Write-Output 'Release validation passed. This command does not publish anything.'
 } finally {
     Pop-Location

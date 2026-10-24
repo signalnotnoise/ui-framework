@@ -1,0 +1,295 @@
+{
+  "source": "artifacts\\fw003-reopened\\accepted-pairs",
+  "identicalBinaryControl": false,
+  "interpretation": "Descriptive paired variation; not a replacement gate, confidence interval or causal attribution.",
+  "comparisons": [
+    {
+      "scenario": "full-list",
+      "metric": "MountMilliseconds",
+      "pairedChangesPercent": [
+        -5.107717542298462,
+        9.99989263484553,
+        6.448301114009403,
+        31.58357563198484,
+        -3.8217002242214138,
+        7.336654182749669,
+        18.97939221873517
+      ],
+      "medianPairedChangePercent": 7.336654182749669,
+      "minimumPairedChangePercent": -5.107717542298462,
+      "maximumPairedChangePercent": 31.58357563198484,
+      "positivePairs": 5,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Milliseconds",
+      "pairedChangesPercent": [
+        -23.40559182568268,
+        -28.448919968992715,
+        -19.937192577774788,
+        -19.89960170824783,
+        -23.509279638566216,
+        -9.429064729974467,
+        -23.65215813034045
+      ],
+      "medianPairedChangePercent": -23.40559182568268,
+      "minimumPairedChangePercent": -28.448919968992715,
+      "maximumPairedChangePercent": -9.429064729974467,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountAllocatedBytes",
+      "pairedChangesPercent": [
+        -1.005049912752487,
+        -0.9887018750204257,
+        -1.0193438336939975,
+        -0.9788971916269262,
+        -1.0245741434791844,
+        -1.0077240535250054,
+        -0.9461576653964965
+      ],
+      "medianPairedChangePercent": -1.005049912752487,
+      "minimumPairedChangePercent": -1.0245741434791844,
+      "maximumPairedChangePercent": -0.9461576653964965,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "full-list",
+      "metric": "AllocatedBytes",
+      "pairedChangesPercent": [
+        -25.03154432792022,
+        -25.211808870152385,
+        -25.094720980513685,
+        -25.279004772261736,
+        -25.148936375713994,
+        -25.281411940660547,
+        -25.104399977522508
+      ],
+      "medianPairedChangePercent": -25.148936375713994,
+      "minimumPairedChangePercent": -25.281411940660547,
+      "maximumPairedChangePercent": -25.03154432792022,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "layout-editors",
+      "metric": "MountMilliseconds",
+      "pairedChangesPercent": [
+        1.7340034863787768,
+        1.8023000246254695,
+        12.99987144419006,
+        -17.261479560731864,
+        2.5050785459391767,
+        -9.837963479414324,
+        4.632973712214672
+      ],
+      "medianPairedChangePercent": 1.8023000246254695,
+      "minimumPairedChangePercent": -17.261479560731864,
+      "maximumPairedChangePercent": 12.99987144419006,
+      "positivePairs": 5,
+      "pairs": 7
+    },
+    {
+      "scenario": "layout-editors",
+      "metric": "Milliseconds",
+      "pairedChangesPercent": [
+        -3.874559040431136,
+        -2.954776163298678,
+        -6.203233999422708,
+        -3.3801603677690584,
+        -11.449214761908655,
+        -2.486422556484713,
+        -2.684911670941703
+      ],
+      "medianPairedChangePercent": -3.3801603677690584,
+      "minimumPairedChangePercent": -11.449214761908655,
+      "maximumPairedChangePercent": -2.486422556484713,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "layout-editors",
+      "metric": "MountAllocatedBytes",
+      "pairedChangesPercent": [
+        0.1322711829294665,
+        0.13499299171157997,
+        0.12800358838565007,
+        0.13703414492753918,
+        0.13128579639309912,
+        0.13828953456829218,
+        0.13523271952224913
+      ],
+      "medianPairedChangePercent": 0.13499299171157997,
+      "minimumPairedChangePercent": 0.12800358838565007,
+      "maximumPairedChangePercent": 0.13828953456829218,
+      "positivePairs": 7,
+      "pairs": 7
+    },
+    {
+      "scenario": "layout-editors",
+      "metric": "AllocatedBytes",
+      "pairedChangesPercent": [
+        -3.292569397948897,
+        -3.295208540662864,
+        -3.052706039681208,
+        -3.298731871674687,
+        -3.293140404538475,
+        -3.3236535811154932,
+        -3.292453427016484
+      ],
+      "medianPairedChangePercent": -3.293140404538475,
+      "minimumPairedChangePercent": -3.3236535811154932,
+      "maximumPairedChangePercent": -3.052706039681208,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "MountMilliseconds",
+      "pairedChangesPercent": [
+        2.4913434033188686,
+        -0.019724350374583643,
+        2.33386509496043,
+        0.16855319639226263,
+        -6.744614190175124,
+        -2.4172530019925254,
+        -5.007208251783679
+      ],
+      "medianPairedChangePercent": -0.019724350374583643,
+      "minimumPairedChangePercent": -6.744614190175124,
+      "maximumPairedChangePercent": 2.4913434033188686,
+      "positivePairs": 3,
+      "pairs": 7
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "Milliseconds",
+      "pairedChangesPercent": [
+        -54.25041933347514,
+        -54.67408137602583,
+        -55.88952870489356,
+        -55.13670487670017,
+        -56.450580266616114,
+        -52.424674417700736,
+        -53.92098010166288
+      ],
+      "medianPairedChangePercent": -54.67408137602583,
+      "minimumPairedChangePercent": -56.450580266616114,
+      "maximumPairedChangePercent": -52.424674417700736,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "MountAllocatedBytes",
+      "pairedChangesPercent": [
+        -2.9575490202540355,
+        -2.915813165106107,
+        -2.8723253954893835,
+        -2.8856839571022586,
+        -2.904696181188582,
+        -2.8113125821250584,
+        -2.9091164861014374
+      ],
+      "medianPairedChangePercent": -2.904696181188582,
+      "minimumPairedChangePercent": -2.9575490202540355,
+      "maximumPairedChangePercent": -2.8113125821250584,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "themed-full-list",
+      "metric": "AllocatedBytes",
+      "pairedChangesPercent": [
+        -57.036192046897185,
+        -57.072156221140915,
+        -57.03782808801302,
+        -56.998343680755646,
+        -57.04050334367656,
+        -57.09205136426617,
+        -57.042438995926716
+      ],
+      "medianPairedChangePercent": -57.04050334367656,
+      "minimumPairedChangePercent": -57.09205136426617,
+      "maximumPairedChangePercent": -56.998343680755646,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountMilliseconds",
+      "pairedChangesPercent": [
+        2.7722120219291657,
+        1.7142382843690962,
+        -4.957954065041459,
+        -1.6306784030611365,
+        132.58818745929406,
+        -1.7476708039929623,
+        12.75879702374423
+      ],
+      "medianPairedChangePercent": 1.7142382843690962,
+      "minimumPairedChangePercent": -4.957954065041459,
+      "maximumPairedChangePercent": 132.58818745929406,
+      "positivePairs": 4,
+      "pairs": 7
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "Milliseconds",
+      "pairedChangesPercent": [
+        -18.58130090447352,
+        -1.1496646101744057,
+        2.32367744073827,
+        0.8141777277290707,
+        8.352470697601966,
+        1.9377545081417313,
+        0.11457378551786856
+      ],
+      "medianPairedChangePercent": 0.8141777277290707,
+      "minimumPairedChangePercent": -18.58130090447352,
+      "maximumPairedChangePercent": 8.352470697601966,
+      "positivePairs": 5,
+      "pairs": 7
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "MountAllocatedBytes",
+      "pairedChangesPercent": [
+        -1.67501712738648,
+        -1.5497104055644417,
+        -1.5497104055644417,
+        -1.5497104055644417,
+        -1.5497104055644417,
+        -1.67501712738648,
+        -1.67501712738648
+      ],
+      "medianPairedChangePercent": -1.5497104055644417,
+      "minimumPairedChangePercent": -1.67501712738648,
+      "maximumPairedChangePercent": -1.5497104055644417,
+      "positivePairs": 0,
+      "pairs": 7
+    },
+    {
+      "scenario": "virtualized",
+      "metric": "AllocatedBytes",
+      "pairedChangesPercent": [
+        -5.840466873870298,
+        -5.274500259936188,
+        -5.211900512920852,
+        -5.203333425109847,
+        -5.204896445012441,
+        -4.860930017448927,
+        -4.560565083138535
+      ],
+      "medianPairedChangePercent": -5.204896445012441,
+      "minimumPairedChangePercent": -5.840466873870298,
+      "maximumPairedChangePercent": -4.560565083138535,
+      "positivePairs": 0,
+      "pairs": 7
+    }
+  ]
+}

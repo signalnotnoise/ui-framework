@@ -11,3 +11,6 @@ artifacts/
 .env.*
 !.env.example
 !docs/performance-evidence/**/*.log
+
+# Generated Python bytecode from repository tooling.
+**/__pycache__/

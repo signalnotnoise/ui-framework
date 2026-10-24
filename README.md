@@ -62,6 +62,13 @@ var host = new ViewHost(() => VStack(
 
 Place the host in a WPF window and dispose it when the window closes. Create and access observable state on the UI thread. Reads during a build become subscriptions; conditional reads are tracked again each build. Multiple changes are batched through the dispatcher.
 
+For a large initial tree, create the application's window handle before
+constructing the host: `new WindowInteropHelper(window).EnsureHandle()`
+(`System.Windows.Interop`). This lets WPF initialize its process DPI cache
+before control creation. Configure the application's DPI policy first; keep
+the window and shutdown lifetime application-owned. ViewHost does not create
+an implicit window. See [startup measurements and rationale](docs/timing-bottleneck-2026-10-24.md).
+
 Applications with substantial WPF text editing should create one
 `WpfComCleanupPolicy` on the application STA before constructing controls, then
 close it after disposing windows and native hosts but before dispatcher shutdown.
@@ -164,16 +171,27 @@ For a demo already running in Debug, stop it before rebuilding, or use `dotnet r
 
 Open the [offline interactive graph](docs/knowledge-graph/graph.html), or see its
 [JSON data](docs/knowledge-graph/graph.json) and [generation guide](docs/knowledge-graph/README.md).
-It combines the curated architecture above with file membership, Markdown links,
-and explicit .NET project references. It is not a C# semantic call graph.
+It combines the preserved curated architecture with schema-v2 file membership,
+evidenced Markdown/import links and explicit .NET project references. C# calls
+and using directives are not resolved.
 
-Python 3 and Git are required. Enable automatic graph updates once per clone:
+Use bounded queries while working; history defaults to committed HEAD:
 
 ```sh
-git config core.hooksPath .githooks
+python scripts/query-knowledge-graph.py locate native --at worktree --limit 20
+python scripts/query-knowledge-graph.py neighbors concept:wpfstartup --at worktree --limit 15
+python scripts/query-knowledge-graph.py history "UI Framework.Wpf/ViewHost.cs" --limit 10
 ```
 
-The hook reads staged files and stages only the two interactive graph outputs.
+Python 3.10+ and Git are required. With this repository's existing standalone
+hook, enable automatic graph updates once per clone:
+
+```sh
+git config --local core.hooksPath .githooks
+```
+
+The hook protects unstaged/untracked/deleted generated output, reads staged
+inputs with a matching extractor, and stages only the two interactive outputs.
 For an unstaged preview, run `python scripts/update-knowledge-graph.py --worktree`;
 validate it with the same command plus `--check`. CI checks committed outputs.
 The existing curated JSON and PowerShell/Mermaid workflow remain authoritative

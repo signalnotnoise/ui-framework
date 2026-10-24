@@ -1,0 +1,234 @@
+{
+  "kind": "native-style-scope-comparison",
+  "releaseEligible": false,
+  "samples": 7,
+  "sdk": "10.0.402",
+  "counter": "C:\\Users\\iotero\\Dev\\personal\\UI Framework\\samples\\Counter\\bin\\Release\\net10.0-windows\\Counter.dll",
+  "note": "Same binary, different intentional style policies. Describes this workload, not a renderer speedup or equivalent visual output.",
+  "comparisons": [
+    {
+      "phase": "total",
+      "metric": "MountMilliseconds",
+      "inheritMedian": 331.5991,
+      "preserveMedian": 306.8573,
+      "changePercent": -7.461359213580499,
+      "pairedChangesPercent": [
+        -7.203395412027602,
+        -9.55756169657973,
+        -5.5516226513123375,
+        -7.224143987485521,
+        -14.555305288352983,
+        -7.893356767252991,
+        -2.9611276140413145
+      ]
+    },
+    {
+      "phase": "total",
+      "metric": "MountAllocatedBytes",
+      "inheritMedian": 18778096.0,
+      "preserveMedian": 16475336.0,
+      "changePercent": -12.26301111678202,
+      "pairedChangesPercent": [
+        -12.263309336580242,
+        -12.26301111678202,
+        -12.26301111678202,
+        -12.263522350721823,
+        -12.26301111678202,
+        -12.263309336580242,
+        -12.26301111678202
+      ]
+    },
+    {
+      "phase": "total",
+      "metric": "Milliseconds",
+      "inheritMedian": 922.855,
+      "preserveMedian": 536.9341,
+      "changePercent": -41.818151280537045,
+      "pairedChangesPercent": [
+        -43.86920256274204,
+        -43.882446395856704,
+        -41.680114290592726,
+        -38.512383366629685,
+        -43.699942027729165,
+        -35.785188575687485,
+        -31.63338323948327
+      ]
+    },
+    {
+      "phase": "total",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 110650536.0,
+      "preserveMedian": 88117504.0,
+      "changePercent": -20.364141751649534,
+      "pairedChangesPercent": [
+        -20.36008573876226,
+        -20.362558388329898,
+        -20.363425984669426,
+        -20.36518286725697,
+        -20.36424297122248,
+        -20.366975899691987,
+        -20.364141751649534
+      ]
+    },
+    {
+      "phase": "retained-updates",
+      "metric": "Milliseconds",
+      "inheritMedian": 26.2386,
+      "preserveMedian": 24.4355,
+      "changePercent": -6.871936764918862,
+      "pairedChangesPercent": [
+        -6.871936764918862,
+        -12.127885499779412,
+        -1.1219616003026567,
+        -6.520931572483423,
+        -12.097904450100339,
+        6.82440368733519,
+        20.48562052263565
+      ]
+    },
+    {
+      "phase": "retained-updates",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 3493408.0,
+      "preserveMedian": 3479912.0,
+      "changePercent": -0.3863276204783439,
+      "pairedChangesPercent": [
+        -0.3863276204783439,
+        -0.3863276204783439,
+        -0.3863276204783439,
+        -0.3863276204783439,
+        -0.3863276204783439,
+        -0.3863276204783439,
+        -0.3863276204783439
+      ]
+    },
+    {
+      "phase": "outer-theme-replacement",
+      "metric": "Milliseconds",
+      "inheritMedian": 334.2891,
+      "preserveMedian": 86.4625,
+      "changePercent": -74.13541153450711,
+      "pairedChangesPercent": [
+        -77.69582133859201,
+        -79.49789378414593,
+        -72.24967350852367,
+        -73.04860524486533,
+        -76.54936386937929,
+        -68.18787097505347,
+        -69.80643401175809
+      ]
+    },
+    {
+      "phase": "outer-theme-replacement",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 42841256.0,
+      "preserveMedian": 22543872.0,
+      "changePercent": -47.378125421906404,
+      "pairedChangesPercent": [
+        -47.378125421906404,
+        -47.37844287291671,
+        -47.378125421906404,
+        -47.378125421906404,
+        -47.378125421906404,
+        -47.37807628989803,
+        -47.378125421906404
+      ]
+    },
+    {
+      "phase": "scope-switch",
+      "metric": "Milliseconds",
+      "inheritMedian": 87.3372,
+      "preserveMedian": 70.2502,
+      "changePercent": -19.564400965453423,
+      "pairedChangesPercent": [
+        -16.719976844413598,
+        -17.30032814984639,
+        -20.915113294087405,
+        -20.477027955422034,
+        -21.89357989586026,
+        -19.564400965453423,
+        -16.12682506683806
+      ]
+    },
+    {
+      "phase": "scope-switch",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 14483608.0,
+      "preserveMedian": 14254104.0,
+      "changePercent": -1.5845775444902954,
+      "pairedChangesPercent": [
+        -1.5535907903610813,
+        -1.5718182927900282,
+        -1.5791092937616047,
+        -1.5925313637320193,
+        -1.5853508324721322,
+        -1.606501345517375,
+        -1.5845775444902954
+      ]
+    },
+    {
+      "phase": "scope-restore",
+      "metric": "Milliseconds",
+      "inheritMedian": 77.3919,
+      "preserveMedian": 68.2271,
+      "changePercent": -11.84206615937845,
+      "pairedChangesPercent": [
+        -10.86136816048887,
+        -9.61332284130294,
+        -11.84206615937845,
+        -11.840747150032428,
+        -13.169275002450409,
+        -10.552347804961137,
+        -11.732398185469982
+      ]
+    },
+    {
+      "phase": "scope-restore",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 13999760.0,
+      "preserveMedian": 14381432.0,
+      "changePercent": 2.7262753075766977,
+      "pairedChangesPercent": [
+        2.7262753075766977,
+        2.7262753075766977,
+        2.7262753075766977,
+        2.7262753075766977,
+        2.7262753075766977,
+        2.7262753075766977,
+        2.7262753075766977
+      ]
+    },
+    {
+      "phase": "remove-remount",
+      "metric": "Milliseconds",
+      "inheritMedian": 396.2898,
+      "preserveMedian": 288.1745,
+      "changePercent": -27.28187805994502,
+      "pairedChangesPercent": [
+        -27.63805346914099,
+        -28.10643484387212,
+        -30.29571011672203,
+        -21.98030330328966,
+        -27.518635177239602,
+        -20.034820844421752,
+        -10.933088389562428
+      ]
+    },
+    {
+      "phase": "remove-remount",
+      "metric": "AllocatedBytes",
+      "inheritMedian": 35832504.0,
+      "preserveMedian": 33458184.0,
+      "changePercent": -6.626162659466949,
+      "pairedChangesPercent": [
+        -6.626162659466949,
+        -6.626051028976376,
+        -6.626162659466949,
+        -6.626162659466949,
+        -6.626162659466949,
+        -6.626162659466949,
+        -6.626162659466949
+      ]
+    }
+  ]
+}

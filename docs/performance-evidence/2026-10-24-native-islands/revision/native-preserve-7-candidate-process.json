@@ -1,0 +1,7 @@
+{
+  "scenario": "native-preserve",
+  "sample": 7,
+  "side": "candidate",
+  "wallSeconds": 2.2957776,
+  "cpuSeconds": 1.453125
+}

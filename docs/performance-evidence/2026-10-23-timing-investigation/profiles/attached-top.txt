@@ -1,0 +1,26 @@
+Top 25 Functions (Exclusive)                                                  Inclusive           Exclusive           
+1.  GC.ReRegisterForFinalize(class System.Object)                             31.89%              31.89%              
+2.  Monitor.Enter_Slowpath(class System.Object)                               17.16%              17.16%              
+3.  MulticastDelegate.DeleteFromInvocationList(class System.Object[],int32    11.85%              11.85%              
+4.  Thread.<PollGC>g__PollGCWorker|70_0()                                     11.21%              11.21%              
+5.  GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Medi    1.96%               1.69%               
+6.  TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServic    1.66%               1.55%               
+7.  Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int3    1.88%               1.39%               
+8.  TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.F    3.44%               1.36%               
+9.  .ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int3    6.93%               1.15%               
+10. CastHelpers.IsInstanceOfClass(void*,class System.Object)                  1.04%               1.04%               
+11. TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.Compi    1.15%               1.02%               
+12. TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices    1.14%               0.83%               
+13. DependencyObject.LookupEntry(int32)                                       0.81%               0.81%               
+14. UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG    0.49%               0.49%               
+15. DependencyProperty.GetMetadata(class System.Windows.DependencyObjectTy    0.39%               0.39%               
+16. DUCE+Channel.CreateOrAddRefOnChannel(class System.Object,value class R    0.34%               0.34%               
+17. FrameworkElement.ArrangeCore(value class System.Windows.Rect)             10.89%              0.33%               
+18. GlyphRun.ComputeInkBoundingBox()                                          0.69%               0.3%                
+19. DUCE+Channel.ReleaseOnChannel(value class ResourceHandle)                 0.3%                0.3%                
+20. FrameworkElement.EvaluateBaseValueCore(class System.Windows.Dependency    5.94%               0.3%                
+21. Enumerable.ContainsIterate(class System.Collections.Generic.IEnumerabl    0.47%               0.29%               
+22. il!<Module>.new(unsigned int64)                                           0.28%               0.28%               
+23. TextItemizer.Itemize(class System.Globalization.CultureInfo,unsigned i    0.29%               0.26%               
+24. DynamicPropertyReader.GetTypeface(class System.Windows.DependencyObjec    0.31%               0.26%               
+25. StyleHelper.GetChildValueHelper(class System.Windows.UncommonField`1<c    2.48%               0.25%               

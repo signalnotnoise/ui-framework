@@ -1,0 +1,121 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\UI Framework.Wpf\UI Framework.Wpf.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\samples\Counter\Counter.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\UI Framework\UI Framework.csproj (in 75 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired\baseline-source\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.49
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.18
+full-list / sample 0 / baseline
+full-list / sample 0 / candidate
+full-list / sample 1 / candidate
+full-list / sample 1 / baseline
+full-list / sample 2 / baseline
+full-list / sample 2 / candidate
+full-list / sample 3 / candidate
+full-list / sample 3 / baseline
+full-list / sample 4 / baseline
+full-list / sample 4 / candidate
+full-list / sample 5 / candidate
+full-list / sample 5 / baseline
+full-list / sample 6 / baseline
+full-list / sample 6 / candidate
+full-list / sample 7 / candidate
+full-list / sample 7 / baseline
+virtualized / sample 0 / baseline
+virtualized / sample 0 / candidate
+virtualized / sample 1 / candidate
+virtualized / sample 1 / baseline
+virtualized / sample 2 / baseline
+virtualized / sample 2 / candidate
+virtualized / sample 3 / candidate
+virtualized / sample 3 / baseline
+virtualized / sample 4 / baseline
+virtualized / sample 4 / candidate
+virtualized / sample 5 / candidate
+virtualized / sample 5 / baseline
+virtualized / sample 6 / baseline
+virtualized / sample 6 / candidate
+virtualized / sample 7 / candidate
+virtualized / sample 7 / baseline
+themed-full-list / sample 0 / baseline
+themed-full-list / sample 0 / candidate
+themed-full-list / sample 1 / candidate
+themed-full-list / sample 1 / baseline
+themed-full-list / sample 2 / baseline
+themed-full-list / sample 2 / candidate
+themed-full-list / sample 3 / candidate
+themed-full-list / sample 3 / baseline
+themed-full-list / sample 4 / baseline
+themed-full-list / sample 4 / candidate
+themed-full-list / sample 5 / candidate
+themed-full-list / sample 5 / baseline
+themed-full-list / sample 6 / baseline
+themed-full-list / sample 6 / candidate
+themed-full-list / sample 7 / candidate
+themed-full-list / sample 7 / baseline
+layout-editors / sample 0 / baseline
+layout-editors / sample 0 / candidate
+layout-editors / sample 1 / candidate
+layout-editors / sample 1 / baseline
+layout-editors / sample 2 / baseline
+layout-editors / sample 2 / candidate
+layout-editors / sample 3 / candidate
+layout-editors / sample 3 / baseline
+layout-editors / sample 4 / baseline
+layout-editors / sample 4 / candidate
+layout-editors / sample 5 / candidate
+layout-editors / sample 5 / baseline
+layout-editors / sample 6 / baseline
+layout-editors / sample 6 / candidate
+layout-editors / sample 7 / candidate
+layout-editors / sample 7 / baseline
+native-inherit / sample 0 / baseline
+native-inherit / sample 0 / candidate
+native-inherit / sample 1 / candidate
+native-inherit / sample 1 / baseline
+native-inherit / sample 2 / baseline
+native-inherit / sample 2 / candidate
+native-inherit / sample 3 / candidate
+native-inherit / sample 3 / baseline
+native-inherit / sample 4 / baseline
+native-inherit / sample 4 / candidate
+native-inherit / sample 5 / candidate
+native-inherit / sample 5 / baseline
+native-inherit / sample 6 / baseline
+native-inherit / sample 6 / candidate
+native-inherit / sample 7 / candidate
+native-inherit / sample 7 / baseline
+native-preserve / sample 0 / baseline
+native-preserve / sample 0 / candidate
+native-preserve / sample 1 / candidate
+native-preserve / sample 1 / baseline
+native-preserve / sample 2 / baseline
+native-preserve / sample 2 / candidate
+native-preserve / sample 3 / candidate
+native-preserve / sample 3 / baseline
+native-preserve / sample 4 / baseline
+native-preserve / sample 4 / candidate
+native-preserve / sample 5 / candidate
+native-preserve / sample 5 / baseline
+native-preserve / sample 6 / baseline
+native-preserve / sample 6 / candidate
+native-preserve / sample 7 / candidate
+native-preserve / sample 7 / baseline
+Comparison saved to C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw004\paired

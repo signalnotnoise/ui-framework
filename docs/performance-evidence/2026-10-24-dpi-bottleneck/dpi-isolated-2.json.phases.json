@@ -1,0 +1,59 @@
+{
+  "Kind": "diagnostic-not-release-gate",
+  "UiThreadId": 18972,
+  "StopwatchFrequency": 10000000,
+  "Runtime": "10.0.13",
+  "DpiCache": {
+    "cold": {
+      "IsProcessUnaware": null,
+      "IsProcessSystemAware": null,
+      "IsProcessPerMonitorDpiAware": null
+    },
+    "primed": {
+      "IsProcessUnaware": false,
+      "IsProcessSystemAware": true,
+      "IsProcessPerMonitorDpiAware": false
+    }
+  },
+  "Phases": [
+    {
+      "Phase": "cold-10000-queries",
+      "Step": -1,
+      "StartTimestamp": 2738462728552,
+      "EndTimestamp": 2738463824608,
+      "Milliseconds": 109.6056,
+      "UserCpuMilliseconds": 31.25,
+      "KernelCpuMilliseconds": 78.125,
+      "AllocatedBytes": 1041920,
+      "Gen0": 0,
+      "Gen1": 0,
+      "Gen2": 0
+    },
+    {
+      "Phase": "empty-presentation-prime",
+      "Step": -1,
+      "StartTimestamp": 2738463825640,
+      "EndTimestamp": 2738465176961,
+      "Milliseconds": 135.1321,
+      "UserCpuMilliseconds": 0,
+      "KernelCpuMilliseconds": 15.625,
+      "AllocatedBytes": 44480,
+      "Gen0": 0,
+      "Gen1": 0,
+      "Gen2": 0
+    },
+    {
+      "Phase": "primed-10000-queries",
+      "Step": -1,
+      "StartTimestamp": 2738465180335,
+      "EndTimestamp": 2738465183870,
+      "Milliseconds": 0.3535,
+      "UserCpuMilliseconds": 0,
+      "KernelCpuMilliseconds": 0,
+      "AllocatedBytes": 240000,
+      "Gen0": 0,
+      "Gen1": 0,
+      "Gen2": 0
+    }
+  ]
+}

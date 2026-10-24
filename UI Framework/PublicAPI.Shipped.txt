@@ -1,0 +1,267 @@
+#nullable enable
+UI_Framework.Binding<T>
+UI_Framework.Binding<T>.Binding(System.Func<T>! get, System.Action<T>! set) -> void
+UI_Framework.Binding<T>.Select<TValue>(System.Func<T, TValue>! get, System.Func<T, TValue, T>! set) -> UI_Framework.Binding<TValue>!
+UI_Framework.Binding<T>.Value.get -> T
+UI_Framework.Binding<T>.Value.set -> void
+UI_Framework.ButtonStyleKind
+UI_Framework.ButtonStyleKind.Primary = 1 -> UI_Framework.ButtonStyleKind
+UI_Framework.ButtonStyleKind.Quiet = 2 -> UI_Framework.ButtonStyleKind
+UI_Framework.ButtonStyleKind.Secondary = 0 -> UI_Framework.ButtonStyleKind
+UI_Framework.Component
+UI_Framework.Component.Component() -> void
+UI_Framework.Computed<T>
+UI_Framework.Computed<T>.Changed -> System.Action?
+UI_Framework.Computed<T>.Computed(System.Func<T>! get, System.Collections.Generic.IEqualityComparer<T>? comparer = null) -> void
+UI_Framework.Computed<T>.Value.get -> T
+UI_Framework.IState
+UI_Framework.IState.Changed -> System.Action?
+UI_Framework.NavigationEntry<TRoute>
+UI_Framework.NavigationEntry<TRoute>.Id.get -> long
+UI_Framework.NavigationEntry<TRoute>.Id.init -> void
+UI_Framework.NavigationEntry<TRoute>.NavigationEntry(long Id, TRoute Route) -> void
+UI_Framework.NavigationEntry<TRoute>.Route.get -> TRoute
+UI_Framework.NavigationEntry<TRoute>.Route.init -> void
+UI_Framework.NavigationStack<TRoute>
+UI_Framework.NavigationStack<TRoute>.Back() -> bool
+UI_Framework.NavigationStack<TRoute>.CanGoBack.get -> bool
+UI_Framework.NavigationStack<TRoute>.Current.get -> TRoute
+UI_Framework.NavigationStack<TRoute>.Entries.get -> System.Collections.Generic.IReadOnlyList<UI_Framework.NavigationEntry<TRoute>!>!
+UI_Framework.NavigationStack<TRoute>.NavigationStack(TRoute root) -> void
+UI_Framework.NavigationStack<TRoute>.PopToRoot() -> void
+UI_Framework.NavigationStack<TRoute>.Push(TRoute route) -> void
+UI_Framework.NavigationStack<TRoute>.Reset(TRoute root) -> void
+UI_Framework.NavigationTransition
+UI_Framework.NavigationTransition.FadeSlide = 1 -> UI_Framework.NavigationTransition
+UI_Framework.NavigationTransition.None = 0 -> UI_Framework.NavigationTransition
+UI_Framework.ObservableState
+UI_Framework.ObservableState.Changed -> System.Action?
+UI_Framework.ObservableState.NotifyChanged() -> void
+UI_Framework.ObservableState.ObservableState() -> void
+UI_Framework.ObservableState.Read() -> void
+UI_Framework.ObservableState.VerifyAccess() -> void
+UI_Framework.SplitAxis
+UI_Framework.SplitAxis.Horizontal = 0 -> UI_Framework.SplitAxis
+UI_Framework.SplitAxis.Vertical = 1 -> UI_Framework.SplitAxis
+UI_Framework.SplitPaneLayout
+UI_Framework.SplitPaneLayout.Axis.get -> UI_Framework.SplitAxis
+UI_Framework.SplitPaneLayout.Axis.init -> void
+UI_Framework.SplitPaneLayout.FirstCollapsed.get -> bool
+UI_Framework.SplitPaneLayout.FirstCollapsed.init -> void
+UI_Framework.SplitPaneLayout.FirstExtent.get -> double
+UI_Framework.SplitPaneLayout.FirstExtent.init -> void
+UI_Framework.SplitPaneLayout.MinimumFirst.get -> double
+UI_Framework.SplitPaneLayout.MinimumFirst.init -> void
+UI_Framework.SplitPaneLayout.MinimumSecond.get -> double
+UI_Framework.SplitPaneLayout.MinimumSecond.init -> void
+UI_Framework.SplitPaneLayout.ReadExtent.get -> System.Func<double>!
+UI_Framework.SplitPaneLayout.ReadExtent.init -> void
+UI_Framework.SplitPaneLayout.Resize.get -> System.Action<double>!
+UI_Framework.SplitPaneLayout.Resize.init -> void
+UI_Framework.SplitPaneLayout.SplitPaneLayout(double FirstExtent, System.Action<double>! Resize, System.Func<double>! ReadExtent, UI_Framework.SplitAxis Axis = UI_Framework.SplitAxis.Horizontal, double MinimumFirst = 100, double MinimumSecond = 100, bool FirstCollapsed = false) -> void
+UI_Framework.State<T>
+UI_Framework.State<T>.Binding() -> UI_Framework.Binding<T>!
+UI_Framework.State<T>.Binding<TValue>(System.Func<T, TValue>! get, System.Func<T, TValue, T>! set) -> UI_Framework.Binding<TValue>!
+UI_Framework.State<T>.Select<TValue>(System.Func<T, TValue>! select) -> UI_Framework.Computed<TValue>!
+UI_Framework.State<T>.State(T initial) -> void
+UI_Framework.State<T>.Value.get -> T
+UI_Framework.State<T>.Value.set -> void
+UI_Framework.StateList<T>
+UI_Framework.StateList<T>.Add(T item) -> void
+UI_Framework.StateList<T>.Clear() -> void
+UI_Framework.StateList<T>.Count.get -> int
+UI_Framework.StateList<T>.GetEnumerator() -> System.Collections.Generic.IEnumerator<T>!
+UI_Framework.StateList<T>.Move(int from, int to) -> void
+UI_Framework.StateList<T>.Remove(T item) -> bool
+UI_Framework.StateList<T>.RemoveAt(int index) -> void
+UI_Framework.StateList<T>.ReplaceAll(System.Collections.Generic.IEnumerable<T>! values) -> void
+UI_Framework.StateList<T>.StateList() -> void
+UI_Framework.StateList<T>.StateList(System.Collections.Generic.IEnumerable<T>! initial) -> void
+UI_Framework.StateList<T>.this[int index].get -> T
+UI_Framework.StateList<T>.this[int index].set -> void
+UI_Framework.ThemeTokens
+UI_Framework.ThemeTokens.Accent.get -> string!
+UI_Framework.ThemeTokens.Accent.init -> void
+UI_Framework.ThemeTokens.AccentHover.get -> string!
+UI_Framework.ThemeTokens.AccentHover.init -> void
+UI_Framework.ThemeTokens.AccentPressed.get -> string!
+UI_Framework.ThemeTokens.AccentPressed.init -> void
+UI_Framework.ThemeTokens.Border.get -> string!
+UI_Framework.ThemeTokens.Border.init -> void
+UI_Framework.ThemeTokens.Canvas.get -> string!
+UI_Framework.ThemeTokens.Canvas.init -> void
+UI_Framework.ThemeTokens.ControlPadding.get -> double
+UI_Framework.ThemeTokens.ControlPadding.init -> void
+UI_Framework.ThemeTokens.ControlRadius.get -> double
+UI_Framework.ThemeTokens.ControlRadius.init -> void
+UI_Framework.ThemeTokens.Focus.get -> string!
+UI_Framework.ThemeTokens.Focus.init -> void
+UI_Framework.ThemeTokens.Hover.get -> string!
+UI_Framework.ThemeTokens.Hover.init -> void
+UI_Framework.ThemeTokens.Ink.get -> string!
+UI_Framework.ThemeTokens.Ink.init -> void
+UI_Framework.ThemeTokens.Muted.get -> string!
+UI_Framework.ThemeTokens.Muted.init -> void
+UI_Framework.ThemeTokens.OnAccent.get -> string!
+UI_Framework.ThemeTokens.OnAccent.init -> void
+UI_Framework.ThemeTokens.Pressed.get -> string!
+UI_Framework.ThemeTokens.Pressed.init -> void
+UI_Framework.ThemeTokens.Surface.get -> string!
+UI_Framework.ThemeTokens.Surface.init -> void
+UI_Framework.UI
+UI_Framework.View
+UI_Framework.View.AccessibilityLabel(string? label) -> UI_Framework.View!
+UI_Framework.View.AccessibleName.get -> string?
+UI_Framework.View.AccessibleName.init -> void
+UI_Framework.View.Align(UI_Framework.ViewAlignment horizontal, UI_Framework.ViewAlignment vertical = UI_Framework.ViewAlignment.Stretch) -> UI_Framework.View!
+UI_Framework.View.Background(string! color) -> UI_Framework.View!
+UI_Framework.View.BackgroundColor.get -> string?
+UI_Framework.View.BackgroundColor.init -> void
+UI_Framework.View.ButtonAppearance.get -> UI_Framework.ButtonStyleKind
+UI_Framework.View.ButtonAppearance.init -> void
+UI_Framework.View.ButtonStyle(UI_Framework.ButtonStyleKind style) -> UI_Framework.View!
+UI_Framework.View.Checked.get -> bool
+UI_Framework.View.Checked.init -> void
+UI_Framework.View.Children.get -> System.Collections.Generic.IReadOnlyList<UI_Framework.View!>!
+UI_Framework.View.Children.init -> void
+UI_Framework.View.Click.get -> System.Action?
+UI_Framework.View.Click.init -> void
+UI_Framework.View.ComponentType.get -> System.Type?
+UI_Framework.View.ComponentType.init -> void
+UI_Framework.View.ConfigureComponent.get -> System.Action<UI_Framework.Component!>?
+UI_Framework.View.ConfigureComponent.init -> void
+UI_Framework.View.Content.get -> string!
+UI_Framework.View.Content.init -> void
+UI_Framework.View.CornerRadius(double value) -> UI_Framework.View!
+UI_Framework.View.CreateComponent.get -> System.Func<UI_Framework.Component!>?
+UI_Framework.View.CreateComponent.init -> void
+UI_Framework.View.DesiredHeight.get -> double
+UI_Framework.View.DesiredHeight.init -> void
+UI_Framework.View.DesiredWidth.get -> double
+UI_Framework.View.DesiredWidth.init -> void
+UI_Framework.View.Edit.get -> System.Action<string!>?
+UI_Framework.View.Edit.init -> void
+UI_Framework.View.Enabled.get -> bool
+UI_Framework.View.Enabled.init -> void
+UI_Framework.View.Flex(double weight = 1) -> UI_Framework.View!
+UI_Framework.View.FlexWeight.get -> double
+UI_Framework.View.FlexWeight.init -> void
+UI_Framework.View.FontSize(double value) -> UI_Framework.View!
+UI_Framework.View.Foreground(string! color) -> UI_Framework.View!
+UI_Framework.View.ForegroundColor.get -> string?
+UI_Framework.View.ForegroundColor.init -> void
+UI_Framework.View.Gap.get -> double
+UI_Framework.View.Gap.init -> void
+UI_Framework.View.Height(double value) -> UI_Framework.View!
+UI_Framework.View.Horizontal.get -> UI_Framework.ViewAlignment
+UI_Framework.View.Horizontal.init -> void
+UI_Framework.View.Id(string! key) -> UI_Framework.View!
+UI_Framework.View.Inset.get -> double
+UI_Framework.View.Inset.init -> void
+UI_Framework.View.IsEnabled(bool enabled) -> UI_Framework.View!
+UI_Framework.View.IsMemoized.get -> bool
+UI_Framework.View.IsMemoized.init -> void
+UI_Framework.View.IsReadOnly(bool readOnly) -> UI_Framework.View!
+UI_Framework.View.Key.get -> string?
+UI_Framework.View.Key.init -> void
+UI_Framework.View.Kind.get -> UI_Framework.ViewKind
+UI_Framework.View.Kind.init -> void
+UI_Framework.View.MaxLength(int length) -> UI_Framework.View!
+UI_Framework.View.MaximumLength.get -> int
+UI_Framework.View.MaximumLength.init -> void
+UI_Framework.View.Memo(object? inputs) -> UI_Framework.View!
+UI_Framework.View.MemoInputs.get -> object?
+UI_Framework.View.MemoInputs.init -> void
+UI_Framework.View.MinimumColumnWidth.get -> double
+UI_Framework.View.MinimumColumnWidth.init -> void
+UI_Framework.View.Options.get -> System.Collections.Generic.IReadOnlyList<string!>!
+UI_Framework.View.Options.init -> void
+UI_Framework.View.Padding(double value) -> UI_Framework.View!
+UI_Framework.View.PlatformContent.get -> object?
+UI_Framework.View.PlatformContent.init -> void
+UI_Framework.View.Radius.get -> double
+UI_Framework.View.Radius.init -> void
+UI_Framework.View.ReadChecked.get -> System.Func<bool>?
+UI_Framework.View.ReadChecked.init -> void
+UI_Framework.View.ReadOnly.get -> bool
+UI_Framework.View.ReadOnly.init -> void
+UI_Framework.View.ReadSelectedIndex.get -> System.Func<int>?
+UI_Framework.View.ReadSelectedIndex.init -> void
+UI_Framework.View.ReadText.get -> System.Func<string!>?
+UI_Framework.View.ReadText.init -> void
+UI_Framework.View.SelectedIndex.get -> int
+UI_Framework.View.SelectedIndex.init -> void
+UI_Framework.View.SelectionChanged.get -> System.Action<int>?
+UI_Framework.View.SelectionChanged.init -> void
+UI_Framework.View.Spacing(double value) -> UI_Framework.View!
+UI_Framework.View.SplitLayout.get -> UI_Framework.SplitPaneLayout?
+UI_Framework.View.SplitLayout.init -> void
+UI_Framework.View.TextSize.get -> double
+UI_Framework.View.TextSize.init -> void
+UI_Framework.View.ToggleChanged.get -> System.Action<bool>?
+UI_Framework.View.ToggleChanged.init -> void
+UI_Framework.View.Transition.get -> UI_Framework.NavigationTransition
+UI_Framework.View.Transition.init -> void
+UI_Framework.View.UndoHistoryLimit.get -> int
+UI_Framework.View.UndoHistoryLimit.init -> void
+UI_Framework.View.UndoLimit(int limit) -> UI_Framework.View!
+UI_Framework.View.Vertical.get -> UI_Framework.ViewAlignment
+UI_Framework.View.Vertical.init -> void
+UI_Framework.View.View(UI_Framework.ViewKind Kind) -> void
+UI_Framework.View.Width(double value) -> UI_Framework.View!
+UI_Framework.ViewAlignment
+UI_Framework.ViewAlignment.Center = 2 -> UI_Framework.ViewAlignment
+UI_Framework.ViewAlignment.End = 3 -> UI_Framework.ViewAlignment
+UI_Framework.ViewAlignment.Start = 1 -> UI_Framework.ViewAlignment
+UI_Framework.ViewAlignment.Stretch = 0 -> UI_Framework.ViewAlignment
+UI_Framework.ViewKind
+UI_Framework.ViewKind.AdaptiveGrid = 10 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Button = 1 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Component = 5 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.FlexColumn = 16 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.FlexRow = 9 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.HStack = 4 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Navigation = 11 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.PasswordField = 13 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Picker = 14 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Platform = 15 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Scroll = 7 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.SplitPane = 17 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Text = 0 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.TextEditor = 12 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.TextField = 2 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.Toggle = 6 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.VStack = 3 -> UI_Framework.ViewKind
+UI_Framework.ViewKind.VirtualList = 8 -> UI_Framework.ViewKind
+UI_Framework.ViewSession
+UI_Framework.ViewSession.Build() -> UI_Framework.View!
+UI_Framework.ViewSession.Dispose() -> void
+UI_Framework.ViewSession.Invalidated -> System.Action?
+UI_Framework.ViewSession.ViewSession(System.Func<UI_Framework.View!>! body) -> void
+abstract UI_Framework.Component.Body() -> UI_Framework.View!
+static UI_Framework.UI.AdaptiveGrid(double minimumColumnWidth, params UI_Framework.View![]! children) -> UI_Framework.View!
+static UI_Framework.UI.Button(string! text, System.Action! click) -> UI_Framework.View!
+static UI_Framework.UI.Component<T>(System.Action<T!>? configure = null) -> UI_Framework.View!
+static UI_Framework.UI.Dock(UI_Framework.View! center, UI_Framework.View? top = null, UI_Framework.View? bottom = null, UI_Framework.View? left = null, UI_Framework.View? right = null) -> UI_Framework.View!
+static UI_Framework.UI.FlexColumn(params UI_Framework.View![]! children) -> UI_Framework.View!
+static UI_Framework.UI.FlexRow(params UI_Framework.View![]! children) -> UI_Framework.View!
+static UI_Framework.UI.HStack(params UI_Framework.View![]! children) -> UI_Framework.View!
+static UI_Framework.UI.Navigation<TRoute>(UI_Framework.NavigationStack<TRoute>! history, System.Func<TRoute, UI_Framework.View!>! screen, UI_Framework.NavigationTransition transition = UI_Framework.NavigationTransition.FadeSlide) -> UI_Framework.View!
+static UI_Framework.UI.PasswordField(UI_Framework.Binding<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.PasswordField(UI_Framework.State<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.Picker(System.Collections.Generic.IReadOnlyList<string!>! options, UI_Framework.Binding<int>! selectedIndex) -> UI_Framework.View!
+static UI_Framework.UI.Picker(System.Collections.Generic.IReadOnlyList<string!>! options, UI_Framework.State<int>! selectedIndex) -> UI_Framework.View!
+static UI_Framework.UI.Scroll(UI_Framework.View! content) -> UI_Framework.View!
+static UI_Framework.UI.SplitPane(UI_Framework.View! first, UI_Framework.View! second, UI_Framework.Binding<double>! firstExtent, UI_Framework.SplitAxis axis = UI_Framework.SplitAxis.Horizontal, double minimumFirst = 100, double minimumSecond = 100, bool firstCollapsed = false) -> UI_Framework.View!
+static UI_Framework.UI.SplitPane(UI_Framework.View! first, UI_Framework.View! second, UI_Framework.State<double>! firstExtent, UI_Framework.SplitAxis axis = UI_Framework.SplitAxis.Horizontal, double minimumFirst = 100, double minimumSecond = 100, bool firstCollapsed = false) -> UI_Framework.View!
+static UI_Framework.UI.Text(string! text) -> UI_Framework.View!
+static UI_Framework.UI.TextEditor(UI_Framework.Binding<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.TextEditor(UI_Framework.State<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.TextField(UI_Framework.Binding<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.TextField(UI_Framework.State<string!>! value) -> UI_Framework.View!
+static UI_Framework.UI.Toggle(string! label, UI_Framework.Binding<bool>! value) -> UI_Framework.View!
+static UI_Framework.UI.Toggle(string! label, UI_Framework.State<bool>! value) -> UI_Framework.View!
+static UI_Framework.UI.VStack(params UI_Framework.View![]! children) -> UI_Framework.View!
+static UI_Framework.UI.VirtualList(System.Collections.Generic.IEnumerable<UI_Framework.View!>! rows, double height) -> UI_Framework.View!
+virtual UI_Framework.Component.OnMounted() -> void
+virtual UI_Framework.Component.OnUnmounted() -> void

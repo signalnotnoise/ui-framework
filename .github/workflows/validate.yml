@@ -24,6 +24,10 @@ jobs:
           python --version
           python scripts/test-knowledge-graph.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/test-performance-pairs.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/test-timing-bottleneck.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python scripts/update-knowledge-graph.py --check
   performance:
     runs-on: windows-latest
@@ -71,6 +75,9 @@ jobs:
       - name: Validate release candidate
         shell: pwsh
         run: ./tools/Test-Release.ps1 -NoRestore
+      - name: Verify public API compatibility guards
+        shell: pwsh
+        run: ./tools/Test-ApiCompatibility.ps1 -VerifyGuard
       - name: Upload test and stress evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

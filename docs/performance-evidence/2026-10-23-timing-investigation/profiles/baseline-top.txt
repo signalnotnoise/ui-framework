@@ -1,0 +1,26 @@
+Top 25 Functions (Exclusive)                                                  Inclusive           Exclusive           
+1.  GC.RunFinalizers()                                                        45.09%              21.45%              
+2.  DynamicResolver+DestroyScout.Finalize()                                   17.03%              17.03%              
+3.  Monitor.Enter_Slowpath(class System.Object)                               14.09%              14.09%              
+4.  Thread.<PollGC>g__PollGCWorker|70_0()                                     5.19%               5.19%               
+5.  TextMetrics+FullTextLine.FormatLine(class MS.Internal.TextFormatting.F    2.88%               1.06%               
+6.  TextAnalyzer.GetGlyphs(optional_modifier System.Runtime.CompilerServic    1.05%               0.98%               
+7.  TextAnalyzer.GetGlyphPlacements(optional_modifier System.Runtime.Compi    0.9%                0.87%               
+8.  GlyphTypeface.GetGlyphMetricsOptimized(value class System.Windows.Medi    1.13%               0.86%               
+9.  DUCE+Channel.SyncFlush()                                                  0.83%               0.83%               
+10. ManifestBuilder.CreateManifest()                                          0.77%               0.77%               
+11. EventSource.get_CurrentThreadActivityId()                                 0.69%               0.69%               
+12. Dispatcher.GetMessage(value class System.Windows.Interop.MSG&,int,int3    1.09%               0.63%               
+13. .ctor(class MS.Internal.TextFormatting.FormatSettings,int32,int32,int3    4.01%               0.62%               
+14. UnsafeNativeMethods.GetMessageW(value class System.Windows.Interop.MSG    0.46%               0.46%               
+15. TextAnalyzer.Itemize(optional_modifier System.Runtime.CompilerServices    0.66%               0.35%               
+16. DpiAwarenessContextHandle+DpiUtil.AreDpiAwarenessContextsEqual(int,int    0.34%               0.34%               
+17. .cctor()                                                                  0.26%               0.26%               
+18. GlyphRun.ComputeInkBoundingBox()                                          0.28%               0.25%               
+19. Boolean].Detach()                                                         0.21%               0.21%               
+20. FontFace.GetArrayOfGlyphIndices(optional_modifier System.Runtime.Compi    0.2%                0.2%                
+21. DependencyObject.UpdateEffectiveValue(value class System.Windows.Entry    24.56%              0.2%                
+22. il!<Module>.new(unsigned int64)                                           0.18%               0.18%               
+23. CastHelpers.IsInstanceOfClass(void*,class System.Object)                  0.18%               0.18%               
+24. FrameworkObject.get_IsLoaded()                                            0.17%               0.17%               
+25. LayoutEventList.CopyToArray()                                             0.17%               0.17%               
