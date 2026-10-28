@@ -1,0 +1,623 @@
+validate	Set up job	﻿2026-10-28T17:30:11.4740361Z Current runner version: '2.338.0'
+validate	Set up job	2026-10-28T17:30:11.4782830Z ##[group]Runner Image Provisioner
+validate	Set up job	2026-10-28T17:30:11.4784151Z Hosted Compute Agent
+validate	Set up job	2026-10-28T17:30:11.4784822Z Version: 20261021.618
+validate	Set up job	2026-10-28T17:30:11.4785462Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+validate	Set up job	2026-10-28T17:30:11.4786188Z Build Date: 2026-10-21T00:45:21Z
+validate	Set up job	2026-10-28T17:30:11.4786909Z Worker ID: {7584ed53-dfa7-4655-bde9-06eb2c106f1e}
+validate	Set up job	2026-10-28T17:30:11.4787604Z Region: westus2
+validate	Set up job	2026-10-28T17:30:11.4788168Z Cloud: Azure
+validate	Set up job	2026-10-28T17:30:11.4788695Z ##[endgroup]
+validate	Set up job	2026-10-28T17:30:11.4790201Z ##[group]Operating System
+validate	Set up job	2026-10-28T17:30:11.4790897Z Microsoft Windows Server 2025
+validate	Set up job	2026-10-28T17:30:11.4791506Z 10.0.26100
+validate	Set up job	2026-10-28T17:30:11.4792044Z Datacenter
+validate	Set up job	2026-10-28T17:30:11.4792557Z ##[endgroup]
+validate	Set up job	2026-10-28T17:30:11.4793084Z ##[group]Runner Image
+validate	Set up job	2026-10-28T17:30:11.4793736Z Image: windows-2025-vs2026
+validate	Set up job	2026-10-28T17:30:11.4794341Z Version: 20261021.278.1
+validate	Set up job	2026-10-28T17:30:11.4795481Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+validate	Set up job	2026-10-28T17:30:11.4797453Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+validate	Set up job	2026-10-28T17:30:11.4798443Z ##[endgroup]
+validate	Set up job	2026-10-28T17:30:11.4799497Z ##[group]GITHUB_TOKEN Permissions
+validate	Set up job	2026-10-28T17:30:11.4801345Z Contents: read
+validate	Set up job	2026-10-28T17:30:11.4801973Z Metadata: read
+validate	Set up job	2026-10-28T17:30:11.4802557Z ##[endgroup]
+validate	Set up job	2026-10-28T17:30:11.4805087Z Secret source: Actions
+validate	Set up job	2026-10-28T17:30:11.4806088Z Cache mode: write
+validate	Set up job	2026-10-28T17:30:11.4806806Z Prepare workflow directory
+validate	Set up job	2026-10-28T17:30:11.5219775Z Prepare all required actions
+validate	Set up job	2026-10-28T17:30:11.5285544Z Getting action download info
+validate	Set up job	2026-10-28T17:30:11.9128776Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+validate	Set up job	2026-10-28T17:30:12.0439119Z Download action repository 'actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68' (SHA:a98b56852c35b8e3190ac28c8c2271da59106c68)
+validate	Set up job	2026-10-28T17:30:12.3560829Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+validate	Set up job	2026-10-28T17:30:12.6560157Z Complete job name: validate
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-28T17:30:12.7983400Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7984607Z with:
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7985059Z   fetch-depth: 0
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7985498Z   persist-credentials: false
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7986188Z   repository: signalnotnoise/ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7990779Z   token: ***
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7991194Z   ssh-strict: true
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7991590Z   ssh-user: git
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7991964Z   clean: true
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7992359Z   sparse-checkout-cone-mode: true
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7992850Z   fetch-tags: false
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7993248Z   show-progress: true
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7993645Z   lfs: false
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7994004Z   submodules: false
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7994429Z   set-safe-directory: true
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7994881Z   allow-unsafe-pr-checkout: false
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.7995683Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.9542663Z Syncing repository: signalnotnoise/ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.9544498Z ##[group]Getting Git version info
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:12.9545246Z Working directory is 'D:\a\ui-framework\ui-framework'
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.0444094Z [command]"C:\Program Files\Git\bin\git.exe" version
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.3434808Z git version 2.56.0.windows.2
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.3491722Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.3509946Z Temporarily overriding HOME='D:\a\_temp\c6caeb1d-718a-4405-b759-7e35c4b4b2e2' before making global git config changes
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.3511859Z Adding repository directory to the temporary git global config as a safe directory
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.3519993Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ui-framework\ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.4125205Z Deleting the contents of 'D:\a\ui-framework\ui-framework'
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.4131906Z ##[group]Determining repository object format
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.4134825Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.4136947Z ##[group]Initializing the repository
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.4144919Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\ui-framework\ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.5171686Z Initialized empty Git repository in D:/a/ui-framework/ui-framework/.git/
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.5225210Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/signalnotnoise/ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6470736Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6472539Z ##[group]Disabling automatic garbage collection
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6479425Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6877759Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6880147Z ##[group]Setting up auth
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6881828Z Removing SSH command configuration
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.6890439Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:13.7303020Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.0519014Z Removing HTTP extra header
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.0530624Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.0930836Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.6647774Z Removing includeIf entries pointing to credentials config files
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.6648886Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:15.7050808Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.2743037Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.3215991Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ui-framework/ui-framework/.git.path D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.3614199Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.4070597Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.4461424Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.4861752Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.4874719Z ##[group]Fetching the repository
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:16.4876335Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9950881Z From https://github.com/signalnotnoise/ui-framework
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9952547Z  * [new branch]      dependabot/github_actions/actions/download-artifact-8.0.2 -> origin/dependabot/github_actions/actions/download-artifact-8.0.2
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9954654Z  * [new branch]      dependabot/github_actions/actions/setup-python-7.1.0 -> origin/dependabot/github_actions/actions/setup-python-7.1.0
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9957628Z  * [new branch]      dependabot/github_actions/actions/upload-artifact-7.0.2 -> origin/dependabot/github_actions/actions/upload-artifact-7.0.2
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9958865Z  * [new branch]      docs/readme-screenshot -> origin/docs/readme-screenshot
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9959671Z  * [new branch]      main                   -> origin/main
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:17.9960258Z  * [new tag]         v0.1.0-alpha.3         -> v0.1.0-alpha.3
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0015611Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0484938Z   origin/main
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0536801Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0935232Z fd725347749bcee79e29d10ac2a6de4355137be7
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0976511Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0976915Z ##[group]Determining the checkout info
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0978399Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.0992203Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.1548491Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.1947576Z ##[group]Checking out the ref
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:18.1958545Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.3357916Z Updating files:  52% (4238/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.3536863Z Updating files:  53% (4252/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.3703820Z Updating files:  54% (4332/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.3855869Z Updating files:  55% (4413/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4026127Z Updating files:  56% (4493/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4188243Z Updating files:  57% (4573/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4356840Z Updating files:  58% (4653/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4598773Z Updating files:  59% (4733/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4765961Z Updating files:  60% (4814/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.4923191Z Updating files:  61% (4894/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5090706Z Updating files:  62% (4974/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5270444Z Updating files:  63% (5054/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5458891Z Updating files:  64% (5135/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5620005Z Updating files:  65% (5215/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5779282Z Updating files:  66% (5295/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.5939792Z Updating files:  67% (5375/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6136619Z Updating files:  68% (5455/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6319008Z Updating files:  69% (5536/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6474515Z Updating files:  70% (5616/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6630532Z Updating files:  71% (5696/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6800492Z Updating files:  72% (5776/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.6961481Z Updating files:  73% (5857/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.7130614Z Updating files:  74% (5937/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.7297355Z Updating files:  75% (6017/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.7456439Z Updating files:  76% (6097/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.7667389Z Updating files:  77% (6177/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.7845917Z Updating files:  78% (6258/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8029617Z Updating files:  79% (6338/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8203440Z Updating files:  80% (6418/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8385384Z Updating files:  81% (6498/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8574754Z Updating files:  82% (6579/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8749512Z Updating files:  83% (6659/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.8960872Z Updating files:  84% (6739/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.9134575Z Updating files:  85% (6819/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.9304194Z Updating files:  86% (6899/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.9528285Z Updating files:  87% (6980/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.9694875Z Updating files:  88% (7060/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:19.9855131Z Updating files:  89% (7140/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.0042192Z Updating files:  90% (7220/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.0817967Z Updating files:  91% (7301/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.0979860Z Updating files:  92% (7381/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.1128417Z Updating files:  93% (7461/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.1308446Z Updating files:  94% (7541/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.1481502Z Updating files:  95% (7621/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.1626056Z Updating files:  96% (7702/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.1806015Z Updating files:  97% (7782/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2017544Z Updating files:  98% (7862/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2209917Z Updating files:  99% (7942/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2210514Z Updating files: 100% (8022/8022)
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2210783Z Updating files: 100% (8022/8022), done.
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2443501Z Switched to a new branch 'main'
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2461188Z branch 'main' set up to track 'origin/main'.
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.2557864Z ##[endgroup]
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3011238Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3386367Z fd725347749bcee79e29d10ac2a6de4355137be7
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3435795Z ##[group]Removing auth
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3436115Z Removing SSH command configuration
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3444793Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.3861763Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.9606884Z Removing HTTP extra header
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:20.9616292Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.0009809Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6199489Z Removing includeIf entries pointing to credentials config files
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6208833Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6561504Z includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6563034Z includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6563754Z includeif.gitdir:/github/workspace/.git.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6564334Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6610594Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.6963770Z D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.7015282Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path D\:\\a\\_temp\\git\-credentials\-a0bc15b8\-8dde\-4b12\-b6d3\-3799d535d714\.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.7433256Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.7787017Z D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.7838971Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-a0bc15b8\-8dde\-4b12\-b6d3\-3799d535d714\.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.8250409Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.8602847Z /github/runner_temp/git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.8654450Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a0bc15b8\-8dde\-4b12\-b6d3\-3799d535d714\.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.9058728Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.9410847Z /github/runner_temp/git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.9471931Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a0bc15b8\-8dde\-4b12\-b6d3\-3799d535d714\.config
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:21.9876933Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:22.5699666Z Removing credentials config 'D:\a\_temp\git-credentials-a0bc15b8-8dde-4b12-b6d3-3799d535d714.config'
+validate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:30:22.5711475Z ##[endgroup]
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	﻿2026-10-28T17:30:22.6131935Z ##[group]Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:22.6132388Z with:
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:22.6132572Z   dotnet-version: 10.0.x
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:22.6132863Z   cache: false
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:22.6133040Z ##[endgroup]
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:22.9021668Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\a98b56852c35b8e3190ac28c8c2271da59106c68\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Runtime dotnet -Channel LTS
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:24.8636056Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-win-x64.zip size is 36971047 bytes.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:24.8639806Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:24.8670602Z dotnet-install: Extracting the archive.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:25.8639049Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:25.8644895Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:25.8652040Z dotnet-install: Installed version is 10.0.14
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:25.8658508Z dotnet-install: Installation finished
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:26.0283695Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\a98b56852c35b8e3190ac28c8c2271da59106c68\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Channel 10.0
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:32.3819806Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-win-x64.zip size is 300745255 bytes.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:32.3828415Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:32.3863745Z dotnet-install: Extracting the archive.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:51.2636358Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:51.2642418Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:51.2648030Z dotnet-install: Installed version is 10.0.403
+validate	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:30:51.2653569Z dotnet-install: Installation finished
+validate	Check release version and branch	﻿2026-10-28T17:30:51.3396493Z ##[group]Run if ($env:GITHUB_REF -ne 'refs/heads/main') { throw 'Publish only from main.' }
+validate	Check release version and branch	2026-10-28T17:30:51.3397275Z ^[[36;1mif ($env:GITHUB_REF -ne 'refs/heads/main') { throw 'Publish only from main.' }^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3397773Z ^[[36;1m[xml]$props = Get-Content Directory.Build.props^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3398187Z ^[[36;1m$version = [string]$props.Project.PropertyGroup.Version^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3398753Z ^[[36;1mif ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z]+([.-][0-9A-Za-z]+)*)?$') { throw 'Invalid package version.' }^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3399476Z ^[[36;1mif ($env:REQUESTED_VERSION -cne $version) { throw 'Requested version does not match Directory.Build.props.' }^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3400012Z ^[[36;1m"version=$version" >> $env:GITHUB_OUTPUT^[[0m
+validate	Check release version and branch	2026-10-28T17:30:51.3893516Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate	Check release version and branch	2026-10-28T17:30:51.3895065Z env:
+validate	Check release version and branch	2026-10-28T17:30:51.3895352Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Check release version and branch	2026-10-28T17:30:51.3895728Z   REQUESTED_VERSION: 0.1.0-alpha.6
+validate	Check release version and branch	2026-10-28T17:30:51.3896115Z ##[endgroup]
+validate	Validate release	﻿2026-10-28T17:30:52.0571739Z ##[group]Run ./tools/Test-Release.ps1
+validate	Validate release	2026-10-28T17:30:52.0572120Z ^[[36;1m./tools/Test-Release.ps1^[[0m
+validate	Validate release	2026-10-28T17:30:52.0648083Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate	Validate release	2026-10-28T17:30:52.0648471Z env:
+validate	Validate release	2026-10-28T17:30:52.0648684Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Validate release	2026-10-28T17:30:52.0648977Z ##[endgroup]
+validate	Validate release	2026-10-28T17:30:54.9377533Z   Determining projects to restore...
+validate	Validate release	2026-10-28T17:30:55.7347049Z   Restored D:\a\ui-framework\ui-framework\samples\Counter\Counter.csproj (in 204 ms).
+validate	Validate release	2026-10-28T17:30:55.7425142Z   Restored D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\WorkspaceComparison.csproj (in 204 ms).
+validate	Validate release	2026-10-28T17:31:03.4624532Z   Restored D:\a\ui-framework\ui-framework\UI Framework\UI Framework.csproj (in 7.97 sec).
+validate	Validate release	2026-10-28T17:31:03.4629016Z   Restored D:\a\ui-framework\ui-framework\UI Framework.Wpf\UI Framework.Wpf.csproj (in 7.71 sec).
+validate	Validate release	2026-10-28T17:31:03.9126592Z   Restored D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 8.42 sec).
+validate	Validate release	2026-10-28T17:31:08.4795561Z   UI Framework -> D:\a\ui-framework\ui-framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+validate	Validate release	2026-10-28T17:31:11.3568505Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+validate	Validate release	2026-10-28T17:31:14.3509793Z   Counter -> D:\a\ui-framework\ui-framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+validate	Validate release	2026-10-28T17:31:16.9135568Z   WorkspaceComparison -> D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+validate	Validate release	2026-10-28T17:31:20.1099321Z   UI Framework.Checks -> D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+validate	Validate release	2026-10-28T17:31:20.1204011Z 
+validate	Validate release	2026-10-28T17:31:20.1211478Z Build succeeded.
+validate	Validate release	2026-10-28T17:31:20.1212664Z     0 Warning(s)
+validate	Validate release	2026-10-28T17:31:20.1213230Z     0 Error(s)
+validate	Validate release	2026-10-28T17:31:20.1214894Z 
+validate	Validate release	2026-10-28T17:31:20.1215158Z Time Elapsed 00:00:15.80
+validate	Validate release	2026-10-28T17:31:21.2761064Z Test run for D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+validate	Validate release	2026-10-28T17:31:21.5006386Z A total of 1 test files matched the specified pattern.
+validate	Validate release	2026-10-28T17:31:29.4792928Z Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
+validate	Validate release	2026-10-28T17:31:29.5565830Z Results File: D:\a\ui-framework\ui-framework\artifacts\release-validation\tests\regression.trx
+validate	Validate release	2026-10-28T17:31:29.5569612Z 
+validate	Validate release	2026-10-28T17:31:29.5616195Z Passed!  - Failed:     0, Passed:   146, Skipped:     0, Total:   146, Duration: 6 s - UI Framework.Checks.dll (net10.0)
+validate	Validate release	2026-10-28T17:31:30.3213241Z Validated 35 nodes, 71 relationships, and source paths.
+validate	Validate release	2026-10-28T17:31:30.3629698Z Documentation versions and workflow action pins are consistent.
+validate	Validate release	2026-10-28T17:31:34.0664219Z Passed 15 visual stress checks.
+validate	Validate release	2026-10-28T17:31:35.3362571Z Initial 50-row mount + offscreen layout: 744.0 ms, 72 body builds
+validate	Validate release	2026-10-28T17:31:35.3611802Z Native TextBox event + shared binding: 22.7 ms, 2 body builds
+validate	Validate release	2026-10-28T17:31:37.1629703Z Load 250 rows + layout: 1796.4 ms, 259 body builds
+validate	Validate release	2026-10-28T17:31:41.9189996Z Load 1000 rows + layout: 4756.1 ms, 1,009 body builds
+validate	Validate release	2026-10-28T17:31:41.9305750Z Expand row into nested checklist + layout: 10.6 ms, 5 body builds
+validate	Validate release	2026-10-28T17:31:42.4916666Z 1000-row keyed shuffle + layout: 531.2 ms, 2 body builds
+validate	Validate release	2026-10-28T17:31:42.5374007Z 10000 projected writes + one flush + layout: 17.6 ms, 1 body builds
+validate	Validate release	2026-10-28T17:31:47.4406147Z Mixed workload: 50/200 operations complete
+validate	Validate release	2026-10-28T17:31:53.0817383Z Mixed workload: 100/200 operations complete
+validate	Validate release	2026-10-28T17:31:57.6238967Z Mixed workload: 150/200 operations complete
+validate	Validate release	2026-10-28T17:32:03.4864654Z Mixed workload: 200/200 operations complete
+validate	Validate release	2026-10-28T17:32:03.4865357Z 200 mixed operations with per-step render + layout: 20949.1 ms, 20,559 body builds
+validate	Validate release	2026-10-28T17:32:03.8220621Z Filter to zero rows + layout: 333.6 ms, 2 body builds
+validate	Validate release	2026-10-28T17:32:07.0873638Z Clear filter + remount + layout: 3264.9 ms, 1,002 body builds
+validate	Validate release	2026-10-28T17:32:07.7187652Z Board unmount + layout: 631.3 ms, 2 body builds
+validate	Validate release	2026-10-28T17:32:11.1385856Z Board remount + layout: 3419.8 ms, 1,003 body builds
+validate	Validate release	2026-10-28T17:32:11.1668070Z Expand recursive tree to depth 24 + layout: 28.1 ms, 26 body builds
+validate	Validate release	2026-10-28T17:32:11.8578304Z Full host disposal: 76.6 ms, 0 body builds
+validate	Validate release	2026-10-28T17:32:11.8980722Z Passed 21 stress assertions. Report: D:\a\ui-framework\ui-framework\artifacts\release-validation\stress.json
+validate	Validate release	2026-10-28T17:32:13.8335834Z Release validation passed. This command does not publish anything.
+validate	Pack and verify fresh WPF installation	﻿2026-10-28T17:32:13.8788491Z ##[group]Run ./tools/Test-Packages.ps1 -NoBuild
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:13.8788973Z ^[[36;1m./tools/Test-Packages.ps1 -NoBuild^[[0m
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:13.8861925Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:13.8862282Z env:
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:13.8862492Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:13.8885095Z ##[endgroup]
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:15.6941027Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.0.1.0-alpha.6.nupkg'.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:15.6995429Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.0.1.0-alpha.6.snupkg'.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:17.2580400Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.6.nupkg'.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:17.2636663Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.6.snupkg'.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:18.2343227Z   Determining projects to restore...
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:18.7161032Z   Restored D:\a\ui-framework\ui-framework\artifacts\package-validation\6bc53b6e42774e6aa1e3a73613fb456a\PackageSmoke.csproj (in 242 ms).
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.4476293Z Package installation, transitive core dependency, rendering, click, and state update passed.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.4901805Z Packaged themed file label and interactive close content passed.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.5201035Z Native interop: 1000 retained updates, 2.28 ms, 1032040 UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.6572829Z Packaged style scope, original overload, retained selection, scope changes and cleanup passed.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.7311647Z Packaged compact input viewport, retained caret and binding passed.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:23.7810209Z Packaged compact button glyph, native padding, retheming and sizing precedence passed.
+validate	Pack and verify fresh WPF installation	2026-10-28T17:32:24.1943976Z Validated packages: D:\a\ui-framework\ui-framework\artifacts\packages
+validate	Install pinned dump collector	﻿2026-10-28T17:32:24.2713452Z ##[group]Run dotnet tool install dotnet-dump --version 10.0.745401 --tool-path artifacts/diagnostic-tools
+validate	Install pinned dump collector	2026-10-28T17:32:24.2714330Z ^[[36;1mdotnet tool install dotnet-dump --version 10.0.745401 --tool-path artifacts/diagnostic-tools^[[0m
+validate	Install pinned dump collector	2026-10-28T17:32:24.2788955Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate	Install pinned dump collector	2026-10-28T17:32:24.2789332Z env:
+validate	Install pinned dump collector	2026-10-28T17:32:24.2789538Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Install pinned dump collector	2026-10-28T17:32:24.2789791Z ##[endgroup]
+validate	Install pinned dump collector	2026-10-28T17:32:26.6242961Z You can invoke the tool using the following command: dotnet-dump
+validate	Install pinned dump collector	2026-10-28T17:32:26.6244150Z Tool 'dotnet-dump' (version '10.0.745401') was successfully installed.
+validate	Check performance before publishing	﻿2026-10-28T17:32:26.7736299Z ##[group]Run ./tools/Test-Performance.ps1 -IncludeLayoutEditors -DumpToolPath artifacts/diagnostic-tools/dotnet-dump.exe -OutputDirectory artifacts/performance/release
+validate	Check performance before publishing	2026-10-28T17:32:26.7738059Z ^[[36;1m./tools/Test-Performance.ps1 -IncludeLayoutEditors -DumpToolPath artifacts/diagnostic-tools/dotnet-dump.exe -OutputDirectory artifacts/performance/release^[[0m
+validate	Check performance before publishing	2026-10-28T17:32:26.7813384Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate	Check performance before publishing	2026-10-28T17:32:26.7813732Z env:
+validate	Check performance before publishing	2026-10-28T17:32:26.7813932Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Check performance before publishing	2026-10-28T17:32:26.7814187Z ##[endgroup]
+validate	Check performance before publishing	2026-10-28T17:32:29.0787137Z   Determining projects to restore...
+validate	Check performance before publishing	2026-10-28T17:32:29.6410489Z   Restored D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\UI Framework.Wpf\UI Framework.Wpf.csproj (in 139 ms).
+validate	Check performance before publishing	2026-10-28T17:32:29.6412407Z   Restored D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\UI Framework\UI Framework.csproj (in 118 ms).
+validate	Check performance before publishing	2026-10-28T17:32:29.6417770Z   Restored D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\samples\Counter\Counter.csproj (in 139 ms).
+validate	Check performance before publishing	2026-10-28T17:32:32.3951713Z   UI Framework -> D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\UI Framework\bin\Release\net10.0\UI Framework.dll
+validate	Check performance before publishing	2026-10-28T17:32:34.8855552Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+validate	Check performance before publishing	2026-10-28T17:32:37.8290070Z   Counter -> D:\a\ui-framework\ui-framework\artifacts\performance\release\baseline-source\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+validate	Check performance before publishing	2026-10-28T17:32:37.8356037Z 
+validate	Check performance before publishing	2026-10-28T17:32:37.8363755Z Build succeeded.
+validate	Check performance before publishing	2026-10-28T17:32:37.8365034Z     0 Warning(s)
+validate	Check performance before publishing	2026-10-28T17:32:37.8365399Z     0 Error(s)
+validate	Check performance before publishing	2026-10-28T17:32:37.8366834Z 
+validate	Check performance before publishing	2026-10-28T17:32:37.8367107Z Time Elapsed 00:00:09.27
+validate	Check performance before publishing	2026-10-28T17:32:38.7578267Z   Determining projects to restore...
+validate	Check performance before publishing	2026-10-28T17:32:39.2286755Z   All projects are up-to-date for restore.
+validate	Check performance before publishing	2026-10-28T17:32:39.7248954Z   UI Framework -> D:\a\ui-framework\ui-framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+validate	Check performance before publishing	2026-10-28T17:32:39.8123450Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+validate	Check performance before publishing	2026-10-28T17:32:39.8804204Z   Counter -> D:\a\ui-framework\ui-framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+validate	Check performance before publishing	2026-10-28T17:32:39.8872329Z 
+validate	Check performance before publishing	2026-10-28T17:32:39.8879884Z Build succeeded.
+validate	Check performance before publishing	2026-10-28T17:32:39.8881064Z     0 Warning(s)
+validate	Check performance before publishing	2026-10-28T17:32:39.8881538Z     0 Error(s)
+validate	Check performance before publishing	2026-10-28T17:32:39.8883002Z 
+validate	Check performance before publishing	2026-10-28T17:32:39.8883407Z Time Elapsed 00:00:01.64
+validate	Check performance before publishing	2026-10-28T17:32:40.3692629Z full-list / sample 0 / baseline
+validate	Check performance before publishing	2026-10-28T17:32:54.5229711Z full-list / sample 0 / candidate
+validate	Check performance before publishing	2026-10-28T17:33:07.1062163Z full-list / sample 1 / candidate
+validate	Check performance before publishing	2026-10-28T17:33:19.6415356Z full-list / sample 1 / baseline
+validate	Check performance before publishing	2026-10-28T17:33:33.4626057Z full-list / sample 2 / baseline
+validate	Check performance before publishing	2026-10-28T17:33:47.7151956Z full-list / sample 2 / candidate
+validate	Check performance before publishing	2026-10-28T17:34:01.6785771Z full-list / sample 3 / candidate
+validate	Check performance before publishing	2026-10-28T17:34:14.3477378Z full-list / sample 3 / baseline
+validate	Check performance before publishing	2026-10-28T17:34:28.1077333Z full-list / sample 4 / baseline
+validate	Check performance before publishing	2026-10-28T17:34:41.9007942Z full-list / sample 4 / candidate
+validate	Check performance before publishing	2026-10-28T17:34:54.0824124Z full-list / sample 5 / candidate
+validate	Check performance before publishing	2026-10-28T17:35:06.1991809Z full-list / sample 5 / baseline
+validate	Check performance before publishing	2026-10-28T17:35:20.0723620Z full-list / sample 6 / baseline
+validate	Check performance before publishing	2026-10-28T17:35:33.7679186Z full-list / sample 6 / candidate
+validate	Check performance before publishing	2026-10-28T17:35:46.0851156Z full-list / sample 7 / candidate
+validate	Check performance before publishing	2026-10-28T17:35:58.4093503Z full-list / sample 7 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:12.2780546Z virtualized / sample 0 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:14.5234728Z virtualized / sample 0 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:17.0459874Z virtualized / sample 1 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:19.4919943Z virtualized / sample 1 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:21.9300012Z virtualized / sample 2 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:24.3988794Z virtualized / sample 2 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:26.8980568Z virtualized / sample 3 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:29.3715579Z virtualized / sample 3 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:31.7789213Z virtualized / sample 4 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:33.9367978Z virtualized / sample 4 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:36.3595697Z virtualized / sample 5 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:38.8785524Z virtualized / sample 5 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:41.2504537Z virtualized / sample 6 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:43.7173721Z virtualized / sample 6 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:46.1930860Z virtualized / sample 7 / candidate
+validate	Check performance before publishing	2026-10-28T17:36:48.6492849Z virtualized / sample 7 / baseline
+validate	Check performance before publishing	2026-10-28T17:36:51.0981954Z themed-full-list / sample 0 / baseline
+validate	Check performance before publishing	2026-10-28T17:37:10.6496500Z themed-full-list / sample 0 / candidate
+validate	Check performance before publishing	2026-10-28T17:37:23.5833260Z themed-full-list / sample 1 / candidate
+validate	Check performance before publishing	2026-10-28T17:37:36.2670318Z themed-full-list / sample 1 / baseline
+validate	Check performance before publishing	2026-10-28T17:37:55.2184129Z themed-full-list / sample 2 / baseline
+validate	Check performance before publishing	2026-10-28T17:38:14.7425075Z themed-full-list / sample 2 / candidate
+validate	Check performance before publishing	2026-10-28T17:38:28.9306665Z themed-full-list / sample 3 / candidate
+validate	Check performance before publishing	2026-10-28T17:38:43.2932925Z themed-full-list / sample 3 / baseline
+validate	Check performance before publishing	2026-10-28T17:39:04.9048722Z themed-full-list / sample 4 / baseline
+validate	Check performance before publishing	2026-10-28T17:39:27.1201503Z themed-full-list / sample 4 / candidate
+validate	Check performance before publishing	2026-10-28T17:39:40.0648313Z themed-full-list / sample 5 / candidate
+validate	Check performance before publishing	2026-10-28T17:39:52.6853295Z themed-full-list / sample 5 / baseline
+validate	Check performance before publishing	2026-10-28T17:40:12.7971961Z themed-full-list / sample 6 / baseline
+validate	Check performance before publishing	2026-10-28T17:40:31.9660188Z themed-full-list / sample 6 / candidate
+validate	Check performance before publishing	2026-10-28T17:40:44.8515242Z themed-full-list / sample 7 / candidate
+validate	Check performance before publishing	2026-10-28T17:40:57.5166374Z themed-full-list / sample 7 / baseline
+validate	Check performance before publishing	2026-10-28T17:41:16.4434129Z layout-editors / sample 0 / baseline
+validate	Check performance before publishing	2026-10-28T17:41:35.6870631Z layout-editors / sample 0 / candidate
+validate	Check performance before publishing	2026-10-28T17:41:55.2995652Z layout-editors / sample 1 / candidate
+validate	Check performance before publishing	2026-10-28T17:42:14.5552689Z layout-editors / sample 1 / baseline
+validate	Check performance before publishing	2026-10-28T17:42:33.7821686Z layout-editors / sample 2 / baseline
+validate	Check performance before publishing	2026-10-28T17:42:53.3829455Z layout-editors / sample 2 / candidate
+validate	Check performance before publishing	2026-10-28T17:43:12.9694274Z layout-editors / sample 3 / candidate
+validate	Check performance before publishing	2026-10-28T17:43:32.9262720Z layout-editors / sample 3 / baseline
+validate	Check performance before publishing	2026-10-28T17:43:52.3125340Z layout-editors / sample 4 / baseline
+validate	Check performance before publishing	2026-10-28T17:44:11.6958685Z layout-editors / sample 4 / candidate
+validate	Check performance before publishing	2026-10-28T17:44:30.7122131Z layout-editors / sample 5 / candidate
+validate	Check performance before publishing	2026-10-28T17:44:50.2751122Z layout-editors / sample 5 / baseline
+validate	Check performance before publishing	2026-10-28T17:45:10.0924172Z layout-editors / sample 6 / baseline
+validate	Check performance before publishing	2026-10-28T17:45:29.7783880Z layout-editors / sample 6 / candidate
+validate	Check performance before publishing	2026-10-28T17:45:49.1680516Z layout-editors / sample 7 / candidate
+validate	Check performance before publishing	2026-10-28T17:46:08.3914059Z layout-editors / sample 7 / baseline
+validate	Check performance before publishing	2026-10-28T17:46:28.3898572Z Comparison saved to D:\a\ui-framework\ui-framework\artifacts\performance\release
+validate	Save performance evidence	﻿2026-10-28T17:46:28.4477931Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+validate	Save performance evidence	2026-10-28T17:46:28.4478499Z with:
+validate	Save performance evidence	2026-10-28T17:46:28.4478768Z   name: release-performance
+validate	Save performance evidence	2026-10-28T17:46:28.4479635Z   path: artifacts/performance/release/*.json
+validate	Save performance evidence	artifacts/performance/release/*.md
+validate	Save performance evidence	artifacts/performance/release/*.log
+validate	Save performance evidence	artifacts/performance/release/*.dmp
+validate	Save performance evidence	
+validate	Save performance evidence	2026-10-28T17:46:28.4480414Z   if-no-files-found: warn
+validate	Save performance evidence	2026-10-28T17:46:28.4480698Z   compression-level: 6
+validate	Save performance evidence	2026-10-28T17:46:28.4480961Z   overwrite: false
+validate	Save performance evidence	2026-10-28T17:46:28.4481227Z   include-hidden-files: false
+validate	Save performance evidence	2026-10-28T17:46:28.4481500Z   archive: true
+validate	Save performance evidence	2026-10-28T17:46:28.4481738Z env:
+validate	Save performance evidence	2026-10-28T17:46:28.4481977Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Save performance evidence	2026-10-28T17:46:28.4482283Z ##[endgroup]
+validate	Save performance evidence	2026-10-28T17:46:28.7038661Z With the provided path, there will be 196 files uploaded
+validate	Save performance evidence	2026-10-28T17:46:28.7045573Z Artifact name is valid!
+validate	Save performance evidence	2026-10-28T17:46:28.7047371Z Root directory input is valid!
+validate	Save performance evidence	2026-10-28T17:46:29.0908917Z Uploading artifact: release-performance.zip
+validate	Save performance evidence	2026-10-28T17:46:29.0949495Z Beginning upload of artifact content to blob storage
+validate	Save performance evidence	2026-10-28T17:46:29.7730996Z Uploaded bytes 83244
+validate	Save performance evidence	2026-10-28T17:46:29.8449882Z Finished uploading artifact content to blob storage!
+validate	Save performance evidence	2026-10-28T17:46:29.8451901Z SHA256 digest of uploaded artifact is 24149c6906c96ff0ea1e8ed0accc2fad88c0bd23c48b50c78d5449a28f700337
+validate	Save performance evidence	2026-10-28T17:46:29.8454559Z Finalizing artifact upload
+validate	Save performance evidence	2026-10-28T17:46:30.4613461Z Artifact release-performance successfully finalized. Artifact ID 12838308229
+validate	Save performance evidence	2026-10-28T17:46:30.4614578Z Artifact release-performance has been successfully uploaded! Final size is 83244 bytes. Artifact ID is 12838308229
+validate	Save performance evidence	2026-10-28T17:46:30.4623199Z Artifact download URL: https://github.com/signalnotnoise/ui-framework/actions/runs/40736303244/artifacts/12838308229
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	﻿2026-10-28T17:46:30.4969051Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4969562Z with:
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4969748Z   name: nuget-release
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4969983Z   path: artifacts/packages/*.*nupkg
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4970246Z   if-no-files-found: error
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4970480Z   compression-level: 6
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4970700Z   overwrite: false
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4970914Z   include-hidden-files: false
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4971148Z   archive: true
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4971344Z env:
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4971536Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.4971786Z ##[endgroup]
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.6783879Z With the provided path, there will be 4 files uploaded
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.6789296Z Artifact name is valid!
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:30.6790627Z Root directory input is valid!
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:31.0629112Z Uploading artifact: nuget-release.zip
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:31.0669085Z Beginning upload of artifact content to blob storage
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:31.8519133Z Uploaded bytes 103347
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.0723129Z Finished uploading artifact content to blob storage!
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.0724690Z SHA256 digest of uploaded artifact is b3a11539abea7fe6e9fb2e713b000241092acac3094b92c44373dbca524076f2
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.0725935Z Finalizing artifact upload
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.8522815Z Artifact nuget-release successfully finalized. Artifact ID 12838293335
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.8523842Z Artifact nuget-release has been successfully uploaded! Final size is 103347 bytes. Artifact ID is 12838293335
+validate	Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a	2026-10-28T17:46:32.8532379Z Artifact download URL: https://github.com/signalnotnoise/ui-framework/actions/runs/40736303244/artifacts/12838293335
+validate	Save validation evidence	﻿2026-10-28T17:46:32.8858584Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+validate	Save validation evidence	2026-10-28T17:46:32.8859164Z with:
+validate	Save validation evidence	2026-10-28T17:46:32.8859440Z   name: release-validation
+validate	Save validation evidence	2026-10-28T17:46:32.8859810Z   path: artifacts/release-validation/
+validate	Save validation evidence	2026-10-28T17:46:32.8860154Z   if-no-files-found: warn
+validate	Save validation evidence	2026-10-28T17:46:32.8860454Z   compression-level: 6
+validate	Save validation evidence	2026-10-28T17:46:32.8860772Z   overwrite: false
+validate	Save validation evidence	2026-10-28T17:46:32.8861051Z   include-hidden-files: false
+validate	Save validation evidence	2026-10-28T17:46:32.8861379Z   archive: true
+validate	Save validation evidence	2026-10-28T17:46:32.8861629Z env:
+validate	Save validation evidence	2026-10-28T17:46:32.8861888Z   DOTNET_ROOT: C:\Program Files\dotnet
+validate	Save validation evidence	2026-10-28T17:46:32.8862246Z ##[endgroup]
+validate	Save validation evidence	2026-10-28T17:46:33.0679285Z With the provided path, there will be 5 files uploaded
+validate	Save validation evidence	2026-10-28T17:46:33.0684993Z Artifact name is valid!
+validate	Save validation evidence	2026-10-28T17:46:33.0686547Z Root directory input is valid!
+validate	Save validation evidence	2026-10-28T17:46:33.4371688Z Uploading artifact: release-validation.zip
+validate	Save validation evidence	2026-10-28T17:46:33.4412179Z Beginning upload of artifact content to blob storage
+validate	Save validation evidence	2026-10-28T17:46:34.0714962Z Uploaded bytes 139132
+validate	Save validation evidence	2026-10-28T17:46:34.2066440Z Finished uploading artifact content to blob storage!
+validate	Save validation evidence	2026-10-28T17:46:34.2067757Z SHA256 digest of uploaded artifact is 061e415582610b08504af7050df8d3e2df9ed530c9d44aeb1d2694bc948b0655
+validate	Save validation evidence	2026-10-28T17:46:34.2068792Z Finalizing artifact upload
+validate	Save validation evidence	2026-10-28T17:46:34.9309219Z Artifact release-validation successfully finalized. Artifact ID 12837744667
+validate	Save validation evidence	2026-10-28T17:46:34.9310667Z Artifact release-validation has been successfully uploaded! Final size is 139132 bytes. Artifact ID is 12837744667
+validate	Save validation evidence	2026-10-28T17:46:34.9317695Z Artifact download URL: https://github.com/signalnotnoise/ui-framework/actions/runs/40736303244/artifacts/12837744667
+validate	Post Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	﻿2026-10-28T17:46:34.9674200Z Post job cleanup.
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-28T17:46:35.1417844Z Post job cleanup.
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.3452933Z [command]"C:\Program Files\Git\bin\git.exe" version
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.3816499Z git version 2.56.0.windows.2
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.3882323Z Temporarily overriding HOME='D:\a\_temp\e726c60c-afc8-499b-83b8-c04c37135e02' before making global git config changes
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.3883451Z Adding repository directory to the temporary git global config as a safe directory
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.3896921Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ui-framework\ui-framework
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.4275940Z Removing SSH command configuration
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.4286703Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:35.4662691Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.0336596Z Removing HTTP extra header
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.0346859Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.0727768Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.6324477Z Removing includeIf entries pointing to credentials config files
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.6335877Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-28T17:46:36.6707208Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+validate	Complete job	﻿2026-10-28T17:46:37.2432207Z Evaluate and set job outputs
+validate	Complete job	2026-10-28T17:46:37.2437853Z Set output 'version'
+validate	Complete job	2026-10-28T17:46:37.2439774Z Cleaning up orphan processes
+publish	Set up job	﻿2026-10-28T17:46:44.4885723Z Current runner version: '2.338.0'
+publish	Set up job	2026-10-28T17:46:44.4922904Z ##[group]Runner Image Provisioner
+publish	Set up job	2026-10-28T17:46:44.4924284Z Hosted Compute Agent
+publish	Set up job	2026-10-28T17:46:44.4924965Z Version: 20261021.618
+publish	Set up job	2026-10-28T17:46:44.4925669Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+publish	Set up job	2026-10-28T17:46:44.4926451Z Build Date: 2026-10-21T00:45:21Z
+publish	Set up job	2026-10-28T17:46:44.4927164Z Worker ID: {6740f08c-b634-4f72-8e36-8f6bb1923747}
+publish	Set up job	2026-10-28T17:46:44.4927948Z Region: northcentralus
+publish	Set up job	2026-10-28T17:46:44.4928558Z Cloud: Azure
+publish	Set up job	2026-10-28T17:46:44.4929153Z ##[endgroup]
+publish	Set up job	2026-10-28T17:46:44.4930703Z ##[group]Operating System
+publish	Set up job	2026-10-28T17:46:44.4931406Z Ubuntu
+publish	Set up job	2026-10-28T17:46:44.4932023Z 26.04.1
+publish	Set up job	2026-10-28T17:46:44.4932603Z LTS
+publish	Set up job	2026-10-28T17:46:44.4933454Z ##[endgroup]
+publish	Set up job	2026-10-28T17:46:44.4934120Z ##[group]Runner Image
+publish	Set up job	2026-10-28T17:46:44.4934764Z Image: ubuntu-26.04
+publish	Set up job	2026-10-28T17:46:44.4935806Z Version: 20261012.163.1
+publish	Set up job	2026-10-28T17:46:44.4936972Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261012.163/images/ubuntu/Ubuntu2604-Readme.md
+publish	Set up job	2026-10-28T17:46:44.4938892Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261012.163
+publish	Set up job	2026-10-28T17:46:44.4939906Z ##[endgroup]
+publish	Set up job	2026-10-28T17:46:44.4941136Z ##[group]GITHUB_TOKEN Permissions
+publish	Set up job	2026-10-28T17:46:44.4943777Z Contents: read
+publish	Set up job	2026-10-28T17:46:44.4944504Z Metadata: read
+publish	Set up job	2026-10-28T17:46:44.4945117Z ##[endgroup]
+publish	Set up job	2026-10-28T17:46:44.4947544Z Secret source: Actions
+publish	Set up job	2026-10-28T17:46:44.4948708Z Cache mode: write
+publish	Set up job	2026-10-28T17:46:44.4949688Z Prepare workflow directory
+publish	Set up job	2026-10-28T17:46:44.5366304Z Prepare all required actions
+publish	Set up job	2026-10-28T17:46:44.5437847Z Getting action download info
+publish	Set up job	2026-10-28T17:46:44.8098441Z Download action repository 'actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68' (SHA:a98b56852c35b8e3190ac28c8c2271da59106c68)
+publish	Set up job	2026-10-28T17:46:45.1402043Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+publish	Set up job	2026-10-28T17:46:45.4393020Z Download action repository 'NuGet/login@8d196754b4036150537f80ac539e15c2f1028841' (SHA:8d196754b4036150537f80ac539e15c2f1028841)
+publish	Set up job	2026-10-28T17:46:45.7315291Z Complete job name: publish
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	﻿2026-10-28T17:46:45.8135854Z ##[group]Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:45.8136945Z with:
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:45.8137387Z   dotnet-version: 10.0.x
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:45.8137881Z   cache: false
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:45.8138443Z ##[endgroup]
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.0958766Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --runtime dotnet --channel LTS
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.3031696Z dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-linux-x64.tar.gz
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.4394972Z dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-linux-x64.tar.gz size is 36673986 bytes.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.4406262Z dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-linux-x64.tar.gz
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.9764376Z dotnet-install: Downloaded file size is 36673986 bytes.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:46.9768605Z dotnet-install: The remote and local file sizes are equal.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0025017Z dotnet-install: Installed version is 10.0.14
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0123637Z dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0127537Z dotnet-install: Note that the script does not resolve dependencies during installation.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0131510Z dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0135285Z dotnet-install: Installation finished successfully.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.0149116Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --channel 10.0
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.1904465Z dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.7176592Z dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz size is 240199984 bytes.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:47.7180612Z dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.1212749Z dotnet-install: Downloaded file size is 240199984 bytes.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.1214298Z dotnet-install: The remote and local file sizes are equal.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.3149341Z dotnet-install: Installed version is 10.0.403
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.3261147Z dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.3262951Z dotnet-install: Note that the script does not resolve dependencies during installation.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.3264889Z dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+publish	Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	2026-10-28T17:46:51.3266304Z dotnet-install: Installation finished successfully.
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	﻿2026-10-28T17:46:51.3604485Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3605233Z with:
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3605650Z   name: nuget-release
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3606023Z   path: artifacts/packages
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3606464Z   merge-multiple: false
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3606846Z   repository: signalnotnoise/ui-framework
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3607374Z   run-id: 40736303244
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3607778Z   skip-decompress: false
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3608132Z   digest-mismatch: error
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3608542Z env:
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3608998Z   DOTNET_ROOT: /usr/share/dotnet
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.3609353Z ##[endgroup]
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.5103402Z Downloading single artifact
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.6736222Z Preparing to download the following artifacts:
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.6747499Z - nuget-release (ID: 12838293335, Size: 103347, Expected Digest: sha256:b3a11539abea7fe6e9fb2e713b000241092acac3094b92c44373dbca524076f2)
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.9349504Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/6f35ebc9-4c44-4e7d-b703-71debd81c850/workflow-job-run-1de5ac40-f8d2-5473-a7dd-dd04c93f0cba/artifacts/31361d84464b5bc3bae9424eb541e65e158bd3d9db5fa56cf780332f21af10b9.zip
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:51.9352454Z Starting download of artifact to: /home/runner/work/ui-framework/ui-framework/artifacts/packages
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4112795Z (node:2718) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4114326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4500201Z SHA256 digest of downloaded artifact is b3a11539abea7fe6e9fb2e713b000241092acac3094b92c44373dbca524076f2
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4501356Z Artifact download completed successfully.
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4501970Z Total of 1 artifact(s) downloaded
+publish	Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c	2026-10-28T17:46:52.4505600Z Download artifact has finished successfully
+publish	Check NuGet profile configuration	﻿2026-10-28T17:46:52.4667334Z ##[group]Run if ([string]::IsNullOrWhiteSpace($env:NUGET_USER)) { throw 'Set the NUGET_USER repository variable to your NuGet.org profile username.' }
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4668587Z ^[[36;1mif ([string]::IsNullOrWhiteSpace($env:NUGET_USER)) { throw 'Set the NUGET_USER repository variable to your NuGet.org profile username.' }^[[0m
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4715746Z shell: /usr/bin/pwsh -command ". '{0}'"
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4716374Z env:
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4716782Z   DOTNET_ROOT: /usr/share/dotnet
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4717599Z   NUGET_USER: signalNotNoise
+publish	Check NuGet profile configuration	2026-10-28T17:46:52.4717989Z ##[endgroup]
+publish	Get temporary NuGet publishing credential	﻿2026-10-28T17:46:53.6625322Z ##[group]Run NuGet/login@8d196754b4036150537f80ac539e15c2f1028841
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6625731Z with:
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6625951Z   user: signalNotNoise
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6626259Z   token-service-url: https://www.nuget.org/api/v2/token
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6626615Z   audience: https://www.nuget.org
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6626887Z env:
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6627116Z   DOTNET_ROOT: /usr/share/dotnet
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:53.6627384Z ##[endgroup]
+publish	Get temporary NuGet publishing credential	2026-10-28T17:46:56.2359075Z Successfully exchanged OIDC token for NuGet API key.
+publish	Publish core and WPF packages with symbols	﻿2026-10-28T17:46:56.2491587Z ##[group]Run foreach ($id in @('SignalNotNoise.UI', 'SignalNotNoise.UI.Wpf')) {
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2492192Z ^[[36;1mforeach ($id in @('SignalNotNoise.UI', 'SignalNotNoise.UI.Wpf')) {^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2492694Z ^[[36;1m  $package = "artifacts/packages/$id.$env:PACKAGE_VERSION.nupkg"^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2493531Z ^[[36;1m  if (-not (Test-Path -LiteralPath $package)) { throw "Missing package: $package" }^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2494355Z ^[[36;1m  dotnet nuget push $package --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_API_KEY --skip-duplicate^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2495009Z ^[[36;1m  if ($LASTEXITCODE -ne 0) { throw "Publish failed: $id" }^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2495380Z ^[[36;1m}^[[0m
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2532556Z shell: /usr/bin/pwsh -command ". '{0}'"
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2532908Z env:
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2533359Z   DOTNET_ROOT: /usr/share/dotnet
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2534259Z   NUGET_API_KEY: ***
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2534522Z   PACKAGE_VERSION: 0.1.0-alpha.6
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:56.2534787Z ##[endgroup]
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.4748101Z Pushing SignalNotNoise.UI.0.1.0-alpha.6.nupkg to 'https://www.nuget.org/api/v2/package'...
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.4770507Z   PUT https://www.nuget.org/api/v2/package/
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.6827278Z   Created https://www.nuget.org/api/v2/package/ 205ms
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.6841220Z Your package was pushed.
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.6845452Z Pushing SignalNotNoise.UI.0.1.0-alpha.6.snupkg to 'https://www.nuget.org/api/v2/symbolpackage'...
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.6847403Z   PUT https://www.nuget.org/api/v2/symbolpackage/
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.7742269Z   Created https://www.nuget.org/api/v2/symbolpackage/ 89ms
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:57.7743365Z Your package was pushed.
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.0378409Z Pushing SignalNotNoise.UI.Wpf.0.1.0-alpha.6.nupkg to 'https://www.nuget.org/api/v2/package'...
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.0489792Z   PUT https://www.nuget.org/api/v2/package/
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.3595014Z   Created https://www.nuget.org/api/v2/package/ 309ms
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.3612321Z Your package was pushed.
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.3617886Z Pushing SignalNotNoise.UI.Wpf.0.1.0-alpha.6.snupkg to 'https://www.nuget.org/api/v2/symbolpackage'...
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.3620563Z   PUT https://www.nuget.org/api/v2/symbolpackage/
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.4570730Z   Created https://www.nuget.org/api/v2/symbolpackage/ 94ms
+publish	Publish core and WPF packages with symbols	2026-10-28T17:46:58.4571567Z Your package was pushed.
+publish	Post Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68	﻿2026-10-28T17:46:58.5460166Z Post job cleanup.
+publish	Complete job	﻿2026-10-28T17:46:58.6781349Z Cleaning up orphan processes

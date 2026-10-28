@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-## 0.1.0-alpha.6 — release candidate, October 28, 2026
+## 0.1.0-alpha.6 — October 28, 2026
+
+Published libraries and symbols from `fd72534` after both hosted workflows
+passed correctness, package and performance gates. See the
+[release record](docs/releases/0.1.0-alpha.6.md).
 
 - Follow Windows contrast-theme colors in scoped WPF control styles without
   replacing templates. Restore supplied tokens when contrast mode ends; use

@@ -587,7 +587,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.6 is prepared with 146 passing framework tests and 32 passing local performance gates. GitHub Actions is enabled; exact-commit hosted validation and gated Trusted Publishing are required before publication. Physical contrast and IME acceptance remain open; no v1 readiness claim. Failed and successful benchmark evidence remain preserved with unchanged budgets.",
+      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. Physical contrast and IME acceptance remain open; no v1 readiness claim. Raw successful and failed evidence is preserved.",
       "sources": [
         "Directory.Build.props",
         "global.json",

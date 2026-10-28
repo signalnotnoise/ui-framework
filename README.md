@@ -16,7 +16,7 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.6` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6) (Windows renderer). Release candidate: publication is conditional on GitHub validation and Trusted Publishing. See the [release evidence](docs/releases/0.1.0-alpha.6.md). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.6` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6) (Windows renderer). Both libraries and symbols were published through Trusted Publishing after hosted validation; a fresh NuGet.org consumer passed and its DLL hashes match the hosted artifacts. See the [release evidence](docs/releases/0.1.0-alpha.6.md). The WPF package brings in the core automatically.
 
 In a .NET 10 WPF project:
 

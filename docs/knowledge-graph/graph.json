@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "af19f3be25446444de491c996a8a82b19714123ccbffa19d2f90e0f25c936fd5",
+  "inputDigest": "783fab8ce818c43d7f207113139e7f26c8bbb3a3008226146404dff99113ab69",
   "coverage": {
-    "unresolvedRelativeReferences": 34,
+    "unresolvedRelativeReferences": 35,
     "semantic": false,
     "curatedArchitectureConcepts": 35,
     "limitations": "Regex syntax evidence may include comments/examples. C# has file nodes and explicit XML project references, not resolved using directives or calls. Curated concepts/relationships are imported from schema v1, not inferred. Aliases and runtime calls are not resolved."
@@ -28607,6 +28607,1668 @@
       "kind": "file"
     },
     {
+      "id": "docs/release-evidence/2026-10-28-alpha6/Verify-Published.ps1",
+      "label": "Verify-Published.ps1",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/binary-manifest.json",
+      "label": "binary-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-baseline-process.json",
+      "label": "full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-candidate-process.json",
+      "label": "full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-baseline-process.json",
+      "label": "full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-candidate-process.json",
+      "label": "full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-baseline-process.json",
+      "label": "full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-candidate-process.json",
+      "label": "full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-baseline-process.json",
+      "label": "full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-candidate-process.json",
+      "label": "full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-baseline-process.json",
+      "label": "full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-candidate-process.json",
+      "label": "full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-baseline-process.json",
+      "label": "full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-candidate-process.json",
+      "label": "full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-baseline-process.json",
+      "label": "full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-candidate-process.json",
+      "label": "full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-baseline-process.json",
+      "label": "full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-candidate-process.json",
+      "label": "full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-baseline-process.json",
+      "label": "layout-editors-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-candidate-process.json",
+      "label": "layout-editors-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-baseline-process.json",
+      "label": "layout-editors-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-candidate-process.json",
+      "label": "layout-editors-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-baseline-process.json",
+      "label": "layout-editors-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-candidate-process.json",
+      "label": "layout-editors-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-baseline-process.json",
+      "label": "layout-editors-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-candidate-process.json",
+      "label": "layout-editors-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-baseline-process.json",
+      "label": "layout-editors-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-candidate-process.json",
+      "label": "layout-editors-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-baseline-process.json",
+      "label": "layout-editors-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-candidate-process.json",
+      "label": "layout-editors-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-baseline-process.json",
+      "label": "layout-editors-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-candidate-process.json",
+      "label": "layout-editors-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-baseline-process.json",
+      "label": "layout-editors-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-candidate-process.json",
+      "label": "layout-editors-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/summary.md",
+      "label": "summary.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-baseline-process.json",
+      "label": "themed-full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-candidate-process.json",
+      "label": "themed-full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-baseline-process.json",
+      "label": "themed-full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-candidate-process.json",
+      "label": "themed-full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-baseline-process.json",
+      "label": "themed-full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-candidate-process.json",
+      "label": "themed-full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-baseline-process.json",
+      "label": "themed-full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-candidate-process.json",
+      "label": "themed-full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-baseline-process.json",
+      "label": "themed-full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-candidate-process.json",
+      "label": "themed-full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-baseline-process.json",
+      "label": "themed-full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-candidate-process.json",
+      "label": "themed-full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-baseline-process.json",
+      "label": "themed-full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-candidate-process.json",
+      "label": "themed-full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-baseline-process.json",
+      "label": "themed-full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-candidate-process.json",
+      "label": "themed-full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-baseline-process.json",
+      "label": "virtualized-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-candidate-process.json",
+      "label": "virtualized-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-baseline-process.json",
+      "label": "virtualized-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-candidate-process.json",
+      "label": "virtualized-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-baseline-process.json",
+      "label": "virtualized-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-candidate-process.json",
+      "label": "virtualized-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-baseline-process.json",
+      "label": "virtualized-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-candidate-process.json",
+      "label": "virtualized-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-baseline-process.json",
+      "label": "virtualized-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-candidate-process.json",
+      "label": "virtualized-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-baseline-process.json",
+      "label": "virtualized-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-candidate-process.json",
+      "label": "virtualized-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-baseline-process.json",
+      "label": "virtualized-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-candidate-process.json",
+      "label": "virtualized-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-baseline-process.json",
+      "label": "virtualized-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-candidate-process.json",
+      "label": "virtualized-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/public-consumer/PackageSmoke.csproj",
+      "label": "PackageSmoke.csproj",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/public-consumer/Program.cs",
+      "label": "Program.cs",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/public-installation.json",
+      "label": "public-installation.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/binary-manifest.json",
+      "label": "binary-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-baseline-process.json",
+      "label": "full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-candidate-process.json",
+      "label": "full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-baseline-process.json",
+      "label": "full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-candidate-process.json",
+      "label": "full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-baseline-process.json",
+      "label": "full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-candidate-process.json",
+      "label": "full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-baseline-process.json",
+      "label": "full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-candidate-process.json",
+      "label": "full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-baseline-process.json",
+      "label": "full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-candidate-process.json",
+      "label": "full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-baseline-process.json",
+      "label": "full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-candidate-process.json",
+      "label": "full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-baseline-process.json",
+      "label": "full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-candidate-process.json",
+      "label": "full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-baseline-process.json",
+      "label": "full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-candidate-process.json",
+      "label": "full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-baseline-process.json",
+      "label": "layout-editors-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-candidate-process.json",
+      "label": "layout-editors-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-baseline-process.json",
+      "label": "layout-editors-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-candidate-process.json",
+      "label": "layout-editors-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-baseline-process.json",
+      "label": "layout-editors-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-candidate-process.json",
+      "label": "layout-editors-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-baseline-process.json",
+      "label": "layout-editors-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-candidate-process.json",
+      "label": "layout-editors-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-baseline-process.json",
+      "label": "layout-editors-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-candidate-process.json",
+      "label": "layout-editors-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-baseline-process.json",
+      "label": "layout-editors-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-candidate-process.json",
+      "label": "layout-editors-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-baseline-process.json",
+      "label": "layout-editors-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-candidate-process.json",
+      "label": "layout-editors-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-baseline-process.json",
+      "label": "layout-editors-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-candidate-process.json",
+      "label": "layout-editors-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/summary.md",
+      "label": "summary.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-baseline-process.json",
+      "label": "themed-full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-candidate-process.json",
+      "label": "themed-full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-baseline-process.json",
+      "label": "themed-full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-candidate-process.json",
+      "label": "themed-full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-baseline-process.json",
+      "label": "themed-full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-candidate-process.json",
+      "label": "themed-full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-baseline-process.json",
+      "label": "themed-full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-candidate-process.json",
+      "label": "themed-full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-baseline-process.json",
+      "label": "themed-full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-candidate-process.json",
+      "label": "themed-full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-baseline-process.json",
+      "label": "themed-full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-candidate-process.json",
+      "label": "themed-full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-baseline-process.json",
+      "label": "themed-full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-candidate-process.json",
+      "label": "themed-full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-baseline-process.json",
+      "label": "themed-full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-candidate-process.json",
+      "label": "themed-full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-baseline-process.json",
+      "label": "virtualized-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-candidate-process.json",
+      "label": "virtualized-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-baseline-process.json",
+      "label": "virtualized-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-candidate-process.json",
+      "label": "virtualized-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-baseline-process.json",
+      "label": "virtualized-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-candidate-process.json",
+      "label": "virtualized-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-baseline-process.json",
+      "label": "virtualized-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-candidate-process.json",
+      "label": "virtualized-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-baseline-process.json",
+      "label": "virtualized-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-candidate-process.json",
+      "label": "virtualized-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-baseline-process.json",
+      "label": "virtualized-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-candidate-process.json",
+      "label": "virtualized-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-baseline-process.json",
+      "label": "virtualized-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-candidate-process.json",
+      "label": "virtualized-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-baseline-process.json",
+      "label": "virtualized-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-candidate-process.json",
+      "label": "virtualized-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-validation/startup-6664ad6e04df4e469b9e39900cf1efa1.json",
+      "label": "startup-6664ad6e04df4e469b9e39900cf1efa1.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-validation/startup-6664ad6e04df4e469b9e39900cf1efa1.json.phases.json",
+      "label": "startup-6664ad6e04df4e469b9e39900cf1efa1.json.phases.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-validation/stress.json",
+      "label": "stress.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/release-workflow.json",
+      "label": "release-workflow.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/validate-workflow.json",
+      "label": "validate-workflow.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/windows-validation/startup-c9245e28ff8e490993eb6a91ce30d1b0.json",
+      "label": "startup-c9245e28ff8e490993eb6a91ce30d1b0.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/windows-validation/startup-c9245e28ff8e490993eb6a91ce30d1b0.json.phases.json",
+      "label": "startup-c9245e28ff8e490993eb6a91ce30d1b0.json.phases.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-10-28-alpha6/windows-validation/stress.json",
+      "label": "stress.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/releases/0.1.0-alpha.4.md",
       "label": "0.1.0-alpha.4.md",
       "group": "docs",
@@ -30377,7 +32039,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.6 is prepared with 146 passing framework tests and 32 passing local performance gates. GitHub Actions is enabled; exact-commit hosted validation and gated Trusted Publishing are required before publication. Physical contrast and IME acceptance remain open; no v1 readiness claim. Failed and successful benchmark evidence remain preserved with unchanged budgets.",
+      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. Physical contrast and IME acceptance remain open; no v1 readiness claim. Raw successful and failed evidence is preserved.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -30456,8 +32118,18 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 43,
+        "line": 47,
         "text": "](docs/releases/0.1.0-alpha.5.md)"
+      }
+    },
+    {
+      "source": "CHANGELOG.md",
+      "target": "docs/releases/0.1.0-alpha.6.md",
+      "kind": "links",
+      "evidence": {
+        "path": "CHANGELOG.md",
+        "line": 9,
+        "text": "](docs/releases/0.1.0-alpha.6.md)"
       }
     },
     {
@@ -30466,7 +32138,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 25,
+        "line": 29,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35125,7 +36797,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 560,
+        "line": 562,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -35135,7 +36807,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 357,
+        "line": 359,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -35145,7 +36817,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 359,
+        "line": 361,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -35155,7 +36827,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 442,
+        "line": 444,
         "text": "](api-contract.md)"
       }
     },
@@ -35165,7 +36837,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 568,
+        "line": 570,
         "text": "](api-contract.md)"
       }
     },
@@ -35175,7 +36847,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 152,
+        "line": 154,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -35185,7 +36857,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 246,
+        "line": 248,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -35195,7 +36867,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 566,
+        "line": 568,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -35205,7 +36877,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 361,
+        "line": 363,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -35215,7 +36887,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 341,
+        "line": 343,
         "text": "](discovery-initialization-2026-10-28.md)"
       }
     },
@@ -35225,7 +36897,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 527,
+        "line": 529,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -35235,7 +36907,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 571,
+        "line": 573,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -35245,7 +36917,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 572,
+        "line": 574,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -35255,7 +36927,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 513,
+        "line": 515,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -35265,7 +36937,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 571,
+        "line": 573,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -35275,7 +36947,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 528,
+        "line": 530,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -35285,7 +36957,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 572,
+        "line": 574,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -35295,7 +36967,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 160,
+        "line": 162,
         "text": "](layout-styling.md)"
       }
     },
@@ -35305,7 +36977,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 401,
+        "line": 403,
         "text": "](native-interop.md)"
       }
     },
@@ -35315,7 +36987,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 273,
+        "line": 275,
         "text": "](native-island-performance.md)"
       }
     },
@@ -35325,7 +36997,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 570,
+        "line": 572,
         "text": "](native-island-performance.md)"
       }
     },
@@ -35335,7 +37007,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 128,
+        "line": 130,
         "text": "](native-style-validation.md)"
       }
     },
@@ -35345,7 +37017,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 534,
+        "line": 536,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -35355,7 +37027,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 405,
+        "line": 407,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -35365,7 +37037,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 127,
+        "line": 129,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -35375,7 +37047,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 565,
+        "line": 567,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -35385,7 +37057,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 113,
+        "line": 115,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -35395,7 +37067,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 154,
+        "line": 156,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -35405,7 +37077,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 567,
+        "line": 569,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -35415,7 +37087,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 6,
+        "line": 8,
         "text": "](releases/0.1.0-alpha.6.md)"
       }
     },
@@ -35425,7 +37097,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 135,
+        "line": 137,
         "text": "](releasing.md)"
       }
     },
@@ -35435,7 +37107,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 364,
+        "line": 366,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -35445,7 +37117,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 347,
+        "line": 349,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -35455,7 +37127,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 367,
+        "line": 369,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -35465,7 +37137,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 180,
+        "line": 182,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -35475,7 +37147,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 569,
+        "line": 571,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -35485,7 +37157,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 207,
+        "line": 209,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -35495,7 +37167,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 569,
+        "line": 571,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -35505,7 +37177,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 322,
+        "line": 324,
         "text": "](virtualization.md)"
       }
     },
@@ -35515,7 +37187,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 315,
+        "line": 317,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -40085,8 +41757,48 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releases/0.1.0-alpha.6.md",
-        "line": 14,
+        "line": 17,
         "text": "](../discovery-initialization-2026-10-28.md)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.6.md",
+      "target": "docs/release-evidence/2026-10-28-alpha6/manifest.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.6.md",
+        "line": 75,
+        "text": "](../release-evidence/2026-10-28-alpha6/manifest.json)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.6.md",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/summary.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.6.md",
+        "line": 40,
+        "text": "](../release-evidence/2026-10-28-alpha6/performance/summary.md)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.6.md",
+      "target": "docs/release-evidence/2026-10-28-alpha6/public-installation.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.6.md",
+        "line": 74,
+        "text": "](../release-evidence/2026-10-28-alpha6/public-installation.json)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.6.md",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/summary.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.6.md",
+        "line": 59,
+        "text": "](../release-evidence/2026-10-28-alpha6/release-performance/summary.md)"
       }
     },
     {
@@ -40095,7 +41807,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releases/0.1.0-alpha.6.md",
-        "line": 19,
+        "line": 22,
         "text": "](../theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -64172,6 +65884,1391 @@
     {
       "source": "group:docs",
       "target": "docs/release-evidence/2026-10-23-alpha5/validate-workflow.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/Verify-Published.ps1",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/binary-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/performance/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/public-consumer/PackageSmoke.csproj",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/public-consumer/Program.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/public-installation.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/binary-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-performance/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-validation/startup-6664ad6e04df4e469b9e39900cf1efa1.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-validation/startup-6664ad6e04df4e469b9e39900cf1efa1.json.phases.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-validation/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/release-workflow.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/validate-workflow.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/windows-validation/startup-c9245e28ff8e490993eb6a91ce30d1b0.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/windows-validation/startup-c9245e28ff8e490993eb6a91ce30d1b0.json.phases.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-10-28-alpha6/windows-validation/stress.json",
       "kind": "contains"
     },
     {

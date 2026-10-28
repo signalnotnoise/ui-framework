@@ -2,8 +2,10 @@
 
 Last updated: October 28, 2026.
 
-Alpha.6 release preparation is in progress: detailed source commit, hosted
-validation and conditional Trusted Publishing. [Release record](releases/0.1.0-alpha.6.md).
+Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
+both hosted workflows passed (146 tests, 32 performance gates each). A fresh
+NuGet.org installation passed; DLL hashes match the published artifacts. A separate local Release
+build `0.1.0-alpha.6-local.1` is ready for GuidedGrade. [Release record](releases/0.1.0-alpha.6.md).
 FW-005 and FW-006 retain their pending manual acceptance requirements.
 
 This is the running, prioritized work list for the core library, WPF renderer,
