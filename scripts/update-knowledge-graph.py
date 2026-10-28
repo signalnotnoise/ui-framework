@@ -183,12 +183,20 @@ def build_graph(worktree=False, rev=None):
             'nodes': nodes, 'edges': sorted(edges, key=lambda e: (e['source'], e['target'], e['kind'], e.get('evidence', {}).get('line', 0)))}
 
 
-def render(graph, worktree=False, rev=None):
+def render(graph, worktree=False, rev=None, history=None):
     template = read('scripts/knowledge-graph.html', worktree, rev).decode('utf-8').replace('\r\n', '\n')
     three = read('scripts/knowledge-graph-vendor/three.min.js', worktree, rev).decode('utf-8').replace('\r\n', '\n')
     three = re.sub(r'</script', r'<\/script', three, flags=re.IGNORECASE)
     data = json.dumps(graph, ensure_ascii=True).replace('<', '\\u003c')
-    return template.replace('__THREE_JS__', three).replace('__GRAPH_JSON__', data)
+    history_js = read('scripts/knowledge-graph-history.js', worktree, rev).decode('utf-8').replace('\r\n', '\n')
+    history_js = re.sub(r'</script', r'<\/script', history_js, flags=re.IGNORECASE)
+    history_data = json.dumps(history, ensure_ascii=True).replace('<', '\\u003c')
+    replacements = {'__THREE_JS__': three, '__GRAPH_JSON__': data,
+                    '__HISTORY_JS__': history_js, '__GIT_HISTORY_JSON__': history_data}
+    # Substitute template slots once: filenames/messages may themselves contain
+    # slot-like text, which must remain inert data rather than be expanded again.
+    return re.sub(r'__(?:THREE_JS|GRAPH_JSON|HISTORY_JS|GIT_HISTORY_JSON)__',
+                  lambda match: replacements[match.group()], template)
 
 
 def main():

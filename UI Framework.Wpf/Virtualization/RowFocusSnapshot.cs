@@ -7,12 +7,15 @@ namespace UI_Framework.Wpf;
 
 // Keyed framework frames survive sibling reorder. Unkeyed/native segments retain
 // positional identity and require the same structure and control types.
-// Native islands own IME and any state beyond TextBox selection themselves.
-internal sealed record RowFocusSnapshot((int Index, Type Type, string? Key)[] Path, int Start, int Length)
+// Focus departure precedes capture for active editing; IME state is never serialized.
+internal sealed record RowFocusSnapshot((int Index, Type Type, string? Key)[] Path, int Start, int Length,
+    WeakReference<IInputElement> PreviousFocus)
 {
-    internal static RowFocusSnapshot? Capture(DependencyObject root)
+    internal bool Owns(IInputElement? focus) => PreviousFocus.TryGetTarget(out var previous) && ReferenceEquals(focus, previous);
+
+    internal static RowFocusSnapshot? Capture(DependencyObject root, IInputElement? originalFocus = null)
     {
-        if (Keyboard.FocusedElement is not Visual focused) return null;
+        if ((originalFocus ?? Keyboard.FocusedElement) is not Visual focused) return null;
         var path = new List<(int, Type, string?)>();
         DependencyObject current = focused;
         while (!ReferenceEquals(current, root))
@@ -26,7 +29,7 @@ internal sealed record RowFocusSnapshot((int Index, Type Type, string? Key)[] Pa
         }
         path.Reverse();
         return new(path.ToArray(), focused is TextBox text ? text.SelectionStart : 0,
-            focused is TextBox editor ? editor.SelectionLength : 0);
+            focused is TextBox editor ? editor.SelectionLength : 0, new((IInputElement)focused));
     }
 
     internal void Restore(DependencyObject root)

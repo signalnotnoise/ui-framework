@@ -1,0 +1,19 @@
+Initial 50-row mount + offscreen layout: 1273.8 ms, 72 body builds
+Native TextBox event + shared binding: 12.9 ms, 2 body builds
+Load 250 rows + layout: 1508.2 ms, 259 body builds
+Load 1000 rows + layout: 4670.4 ms, 1,009 body builds
+Expand row into nested checklist + layout: 10.9 ms, 5 body builds
+1000-row keyed shuffle + layout: 639.0 ms, 2 body builds
+10000 projected writes + one flush + layout: 9.6 ms, 1 body builds
+Mixed workload: 50/200 operations complete
+Mixed workload: 100/200 operations complete
+Mixed workload: 150/200 operations complete
+Mixed workload: 200/200 operations complete
+200 mixed operations with per-step render + layout: 17696.2 ms, 20,559 body builds
+Filter to zero rows + layout: 506.7 ms, 2 body builds
+Clear filter + remount + layout: 2691.7 ms, 1,002 body builds
+Board unmount + layout: 1016.9 ms, 2 body builds
+Board remount + layout: 3042.2 ms, 1,003 body builds
+Expand recursive tree to depth 24 + layout: 6.3 ms, 26 body builds
+Full host disposal: 165.4 ms, 0 body builds
+Passed 21 stress assertions. Report: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-textbox\stress.json

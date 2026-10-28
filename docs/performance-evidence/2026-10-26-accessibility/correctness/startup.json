@@ -1,0 +1,40 @@
+{
+  "Kind": "diagnostic-not-release-gate",
+  "UiThreadId": 22720,
+  "EventsEnabled": false,
+  "StopwatchFrequency": 10000000,
+  "Runtime": "10.0.13",
+  "DpiCache": {},
+  "Geometry": {
+    "startup": {
+      "ActualWidth": 1327,
+      "ActualHeight": 1128.6966666666667,
+      "DpiScaleX": 1,
+      "DpiScaleY": 1,
+      "Counts": {
+        "UI_Framework.Wpf.ViewHost": 72,
+        "System.Windows.Controls.ContentPresenter": 254,
+        "System.Windows.Controls.Border": 1096,
+        "System.Windows.Controls.StackPanel": 192,
+        "System.Windows.Controls.TextBlock": 427,
+        "System.Windows.Controls.Button": 119,
+        "System.Windows.Controls.TextBox": 110,
+        "System.Windows.Controls.ScrollViewer": 112,
+        "System.Windows.Controls.Grid": 232,
+        "System.Windows.Shapes.Rectangle": 177,
+        "System.Windows.Controls.ScrollContentPresenter": 112,
+        "System.Windows.Controls.TextBoxView": 110,
+        "System.Windows.Controls.TextBoxLineDrawingVisual": 110,
+        "System.Windows.Documents.AdornerLayer": 112,
+        "System.Windows.Controls.Primitives.ScrollBar": 224,
+        "System.Windows.Controls.CheckBox": 59,
+        "System.Windows.Shapes.Path": 63,
+        "System.Windows.Controls.Primitives.RepeatButton": 8,
+        "System.Windows.Controls.Primitives.Track": 2,
+        "System.Windows.Controls.Primitives.Thumb": 2
+      },
+      "Sha256": "49143060FA89CD6FE26C26994AB1F87970022DA6DD8422CDF77585B753039B59"
+    }
+  },
+  "Phases": []
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "diagnostic-phases-not-release-gate",
+  "samples": 3,
+  "medians": {
+    "accepted": {
+      "HostBytes": 13569936,
+      "AttachBytes": 53311896,
+      "ThemeBytes": 11587728,
+      "LayoutBytes": 47674808,
+      "MountAllocatedBytes": 126144368,
+      "MountMilliseconds": 2635.8219,
+      "AllocatedBytes": 1161615016,
+      "Milliseconds": 8562.7034
+    },
+    "current": {
+      "HostBytes": 12865888,
+      "AttachBytes": 53459880,
+      "ThemeBytes": 15008424,
+      "LayoutBytes": 47633488,
+      "MountAllocatedBytes": 128969240,
+      "MountMilliseconds": 2118.1965,
+      "AllocatedBytes": 1123246024,
+      "Milliseconds": 8828.1874
+    },
+    "trimmed": {
+      "HostBytes": 12865888,
+      "AttachBytes": 53458224,
+      "ThemeBytes": 15007856,
+      "LayoutBytes": 47633976,
+      "MountAllocatedBytes": 128965944,
+      "MountMilliseconds": 1827.656,
+      "AllocatedBytes": 1123294480,
+      "Milliseconds": 7892.2081
+    }
+  }
+}

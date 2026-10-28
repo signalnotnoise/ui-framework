@@ -1,0 +1,41 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\samples\Counter\Counter.csproj (in 119 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\UI Framework.Wpf\UI Framework.Wpf.csproj (in 283 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\UI Framework\UI Framework.csproj (in 283 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat\baseline-source\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.12
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.06
+full-list / sample 0 / baseline
+full-list / sample 0 / candidate
+full-list / sample 1 / candidate
+full-list / sample 1 / baseline
+full-list / sample 2 / baseline
+full-list / sample 2 / candidate
+full-list / sample 3 / candidate
+full-list / sample 3 / baseline
+full-list / sample 4 / baseline
+full-list / sample 4 / candidate
+full-list / sample 5 / candidate
+full-list / sample 5 / baseline
+full-list / sample 6 / baseline
+full-list / sample 6 / candidate
+full-list / sample 7 / candidate
+full-list / sample 7 / baseline
+Comparison saved to C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\full-list-predecessor-repeat

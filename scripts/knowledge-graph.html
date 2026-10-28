@@ -6,6 +6,9 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font:14px system-ui;background:#101827;color:#e5edf9}header{padding:20px;border-bottom:1px solid #34425a}h1{margin:0;font-size:24px}p{color:#adc0d8}input,select,button{padding:9px;margin:4px;background:#202e44;color:#e5edf9;border:1px solid #526480;border-radius:6px}button{cursor:pointer}main{display:grid;grid-template-columns:minmax(0,1fr) 320px}#viewport{position:relative;height:75vh;min-height:400px;overflow:hidden;touch-action:none}canvas{display:block}#labels{position:absolute;inset:0;pointer-events:none}.label{position:absolute;font-size:12px;white-space:nowrap;background:#101827db;padding:2px 5px;border-radius:4px}aside{padding:20px;overflow-wrap:anywhere;max-height:75vh;overflow:auto}#nodes{width:100%;margin:0}#hint{position:absolute;bottom:12px;left:12px;pointer-events:none;color:#adc0d8}.link{display:block;text-align:left;width:100%;margin:6px 0}@media(max-width:750px){main{grid-template-columns:1fr}aside{max-height:none}}
 </style>
+<style>
+.git-panel{padding:12px 20px;border-bottom:1px solid #34425a}.git-panel h2{font-size:18px;margin:0 0 8px}.git-panel code{overflow-wrap:anywhere}.timeline{display:flex;gap:6px;overflow:auto;max-height:120px}.timeline button{flex:0 0 240px;text-align:left;white-space:normal}.timeline button[aria-pressed=true]{border-color:#ffbc63;background:#354057}.git-list{max-height:220px;overflow:auto}.git-list button{display:block;width:100%;text-align:left}.git-controls select{max-width:360px}.legend{color:#adc0d8}.added{color:#70e3a5}.removed{color:#ff8a8a}.modified{color:#ffd276}#git-summary{font-weight:600}#file-history{border-top:1px solid #526480;margin-top:16px;padding-top:12px}[hidden]{display:none!important}
+</style>
 <header><h1>UI Framework knowledge graph</h1>
 <p>Scroll to zoom. Drag to pan. Select a concept or file to inspect its evidence and connections.</p>
 <label>Search <input id="search" type="search" placeholder="File or path"></label>
@@ -15,15 +18,34 @@
 <button id="fit">Fit view</button><button id="clear">Clear selection</button>
 <span id="count" aria-live="polite"></span></header>
 <p id="coverage" style="padding:0 20px"></p>
+<section class="git-panel" aria-label="Git history correlation">
+<h2>Git history</h2>
+<p id="git-status" role="status">No Git history loaded. The tracked graph stays separate from commit history.</p>
+<label>Load history JSON <input id="history-file" type="file" accept=".json,application/json"></label>
+<details><summary>Export local history</summary><p>From the repository root:</p><code>python scripts/export-knowledge-graph-history.py --worktree --force</code><p>Open artifacts/knowledge-graph-history/graph.html, or load its graph.history.json here. The export includes eight recent first-parent commits by default; use --limit 20 for a larger window. No server or network fetch is needed.</p></details>
+<div id="git-controls" class="git-controls" hidden>
+<p class="legend"><span class="added">Green: added</span> · <span class="removed">Red: removed</span> · <span class="modified">Gold: modified file or relationship evidence</span>. Connected context describes syntax/curated links, not guaranteed runtime impact.</p>
+<div id="timeline" class="timeline" aria-label="Recent commits"></div>
+<label>Commit <select id="git-commit"></select></label>
+<label>From revision <select id="git-base"></select></label>
+<label>To revision <select id="git-target"></select></label>
+<button id="git-compare">Compare revisions</button><button id="git-current">Current snapshot</button>
+<label><input id="git-context" type="checkbox" checked> Changes and connected context only</label>
+<p id="git-summary" role="status"></p>
+<details><summary>Files changed by the selected commit</summary><div id="git-files" class="git-list"></div></details>
+</div></section>
 <main><div id="viewport" tabindex="0" aria-label="Graph: arrow keys pan, plus and minus zoom, Home fits view"><div id="labels"></div><div id="hint">Blue: references / Orange: selected connections</div></div>
-<aside><label>Choose a node <select id="nodes"><option value="">Select a file or directory</option></select></label><div id="detail" aria-live="polite"><p>Select a node to inspect incoming and outgoing relationships.</p></div></aside></main>
+<aside><label>Choose a node <select id="nodes"><option value="">Select a file or directory</option></select></label><div id="detail" aria-live="polite"><p>Select a node to inspect incoming and outgoing relationships.</p></div><section id="file-history" aria-label="Selected node Git history"><h2>File / concept history</h2><div id="git-node-history">Load Git history and select a file or concept.</div></section></aside></main>
 <script id="data" type="application/json">__GRAPH_JSON__</script>
+<script id="git-data" type="application/json">__GIT_HISTORY_JSON__</script>
 <script>__THREE_JS__</script>
+<script>__HISTORY_JS__</script>
 <script>
-const data=JSON.parse(document.getElementById('data').textContent);
+const originalData=JSON.parse(document.getElementById('data').textContent);
+let data=originalData, historyController=null, historyMarks={active:false,nodes:new Map(),edges:new Map(),affected:new Set()};
 const $=id=>document.getElementById(id), viewport=$('viewport');
-$('coverage').textContent=`Syntax file map and curated architecture; ${data.coverage?.unresolvedRelativeReferences??0} unresolved relative references. C# calls and using directives are not resolved.`;
-const groups=[...new Set(data.nodes.map(n=>n.group))].sort();
+function showCoverage(){$('coverage').textContent=`Syntax file map and curated architecture; ${data.coverage?.unresolvedRelativeReferences??0} unresolved relative references. C# calls and using directives are not resolved.`}showCoverage();
+let groups=[...new Set(data.nodes.map(n=>n.group))].sort();
 const palette=[0x67a7ff,0x50d5b3,0xba91ff,0xf5bf6a,0x6ad6ec,0xf88baa];
 for(const group of groups){const o=document.createElement('option');o.value=group;o.textContent=group;$('group').append(o)}
 for(const n of data.nodes){const o=document.createElement('option');o.value=n.id;o.textContent=n.id;$('nodes').append(o)}
@@ -31,23 +53,27 @@ let selected='',visible=[],meshes=[],edgeObjects=[],labelObjects=[],renderer;
 const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-600,600,400,-400,0.1,3000);
 camera.position.z=1000;const layer=new THREE.Group();scene.add(layer);
 const positions=new Map(),raycaster=new THREE.Raycaster();
-groups.forEach((group,index)=>{const members=data.nodes.filter(n=>n.group===group),a=index*2*Math.PI/groups.length;
- const radius=Math.max(320,Math.sqrt(data.nodes.length)*38);
- members.forEach((n,i)=>{const angle=i*2.399963,r=30*Math.sqrt(i);positions.set(n.id,new THREE.Vector3(radius*Math.cos(a)+r*Math.cos(angle),radius*Math.sin(a)+r*Math.sin(angle),0))})});
+let layoutNodes=new Map(originalData.nodes.map(n=>[n.id,n])),layoutGroups=groups;
+function layoutPositions(frames=[]){for(const frame of frames)for(const node of frame.nodes)if(!layoutNodes.has(node.id))layoutNodes.set(node.id,node);
+ positions.clear();layoutGroups=[...new Set([...layoutNodes.values()].map(n=>n.group))].sort();
+ layoutGroups.forEach((group,index)=>{const members=[...layoutNodes.values()].filter(n=>n.group===group).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0),a=index*2*Math.PI/layoutGroups.length,radius=Math.max(320,Math.sqrt(layoutNodes.size)*38);
+ members.forEach((n,i)=>{const angle=i*2.399963,r=30*Math.sqrt(i);positions.set(n.id,new THREE.Vector3(radius*Math.cos(a)+r*Math.cos(angle),radius*Math.sin(a)+r*Math.sin(angle),0))})})}
+layoutPositions();
 function connected(){const ids=new Set([selected]);for(const e of data.edges)if(e.source===selected||e.target===selected){ids.add(e.source);ids.add(e.target)}return ids}
-function select(id){selected=id;$('nodes').value=id;const detail=$('detail');detail.replaceChildren();
+function select(id){selected=id;if(id&&historyMarks.active&&!historyMarks.affected.has(id))$('git-context').checked=false;$('nodes').value=id;const detail=$('detail');detail.replaceChildren();
  if(id){const h=document.createElement('h2');const node=data.nodes.find(n=>n.id===id);h.textContent=node?.label||id;detail.append(h);if(node?.summary){const p=document.createElement('p');p.textContent=`${node.status}: ${node.summary}`;detail.append(p);}
- const path=document.createElement('p');path.textContent=`${node?.kind||'node'}: ${id}`;detail.append(path);
- for(const e of data.edges.filter(e=>e.source===id||e.target===id)){const b=document.createElement('button');b.className='link';const incoming=e.target===id,target=incoming?e.source:e.target;b.textContent=`${incoming?'From':'To'} ${target} (${e.kind})`;b.onclick=()=>{$('search').value='';$('group').value='';select(target);focusNode(target)};detail.append(b);if(e.evidence){const p=document.createElement('p');p.textContent=e.evidence.path+(e.evidence.line?`:${e.evidence.line}`:e.evidence.jsonPointer?` ${e.evidence.jsonPointer}`:'');detail.append(p);if(e.evidence.text){const code=document.createElement('code');code.textContent=e.evidence.text;detail.append(code)}}}}
- else{detail.textContent='Select a node to inspect incoming and outgoing relationships.'}draw()}
+ const path=document.createElement('p');path.textContent=`${node?.kind||'node'}: ${id}${historyMarks.nodes.has(id)?' — '+historyMarks.nodes.get(id):''}`;detail.append(path);
+ for(const e of data.edges.filter(e=>e.source===id||e.target===id)){const b=document.createElement('button');b.className='link';const incoming=e.target===id,target=incoming?e.source:e.target,change=historyMarks.edges.get(GraphHistory.edgeKey(e));b.textContent=`${incoming?'From':'To'} ${target} (${e.kind}${change?' · '+change:''})`;b.onclick=()=>{$('search').value='';$('group').value='';select(target);focusNode(target)};detail.append(b);if(e.evidence){const p=document.createElement('p');p.textContent=e.evidence.path+(e.evidence.line?`:${e.evidence.line}`:e.evidence.jsonPointer?` ${e.evidence.jsonPointer}`:'');detail.append(p);if(e.evidence.text){const code=document.createElement('code');code.textContent=e.evidence.text;detail.append(code)}}}}
+ else{detail.textContent='Select a node to inspect incoming and outgoing relationships.'}historyController?.onNode(data.nodes.find(n=>n.id===id));draw()}
 function focusNode(id){const p=positions.get(id);if(p){camera.position.x=p.x;camera.position.y=p.y;camera.zoom=Math.max(camera.zoom,2);camera.updateProjectionMatrix();render()}}
 function draw(){for(const object of [...layer.children]){layer.remove(object);object.geometry?.dispose();object.material?.dispose()}
  meshes=[];edgeObjects=[];labelObjects=[];$('labels').replaceChildren();const neighbors=connected();
- visible=data.nodes.filter(n=>(!$('group').value||n.group===$('group').value)&&`${n.id} ${n.label} ${n.summary||''}`.toLowerCase().includes($('search').value.toLowerCase())&&(!$('neighbors').checked||!selected||neighbors.has(n.id)));
+ visible=data.nodes.filter(n=>(!historyMarks.active||!$('git-context').checked||historyMarks.affected.has(n.id))&&(!$('group').value||n.group===$('group').value)&&`${n.id} ${n.label} ${n.summary||''}`.toLowerCase().includes($('search').value.toLowerCase())&&(!$('neighbors').checked||!selected||neighbors.has(n.id)));
  const ids=new Set(visible.map(n=>n.id));const edges=data.edges.filter(e=>ids.has(e.source)&&ids.has(e.target)&&(e.kind!=='contains'||$('membership').checked));
  for(const e of edges){const active=e.source===selected||e.target===selected;const geometry=new THREE.BufferGeometry().setFromPoints([positions.get(e.source),positions.get(e.target)]);
- const line=new THREE.Line(geometry,new THREE.LineBasicMaterial({color:active?0xffbc63:e.kind==='contains'?0x526480:0x67a7ff,transparent:true,opacity:active?1:selected?0.12:e.kind==='contains'?0.2:0.55}));line.position.z=active?2:0;layer.add(line);edgeObjects.push(line)}
- for(const n of visible){const active=n.id===selected,mesh=new THREE.Mesh(new THREE.CircleGeometry(active?11:n.id.startsWith('group:')?9:6,20),new THREE.MeshBasicMaterial({color:active?0xffbc63:palette[groups.indexOf(n.group)%palette.length],transparent:true,opacity:selected&&!neighbors.has(n.id)?0.25:1}));mesh.position.copy(positions.get(n.id));mesh.position.z=4;mesh.userData.node=n;layer.add(mesh);meshes.push(mesh);
+ const change=historyMarks.edges.get(GraphHistory.edgeKey(e));
+ const line=new THREE.Line(geometry,new THREE.LineBasicMaterial({color:gitColor(change)??(active?0xffbc63:e.kind==='contains'?0x526480:0x67a7ff),transparent:true,opacity:change||active?1:selected?0.12:e.kind==='contains'?0.2:0.55}));line.position.z=active?2:0;layer.add(line);edgeObjects.push(line)}
+ for(const n of visible){const active=n.id===selected,change=historyMarks.nodes.get(n.id),mesh=new THREE.Mesh(new THREE.CircleGeometry(active?11:n.id.startsWith('group:')?9:6,20),new THREE.MeshBasicMaterial({color:gitColor(change)??(active?0xffbc63:palette[layoutGroups.indexOf(n.group)%palette.length]),transparent:true,opacity:selected&&!neighbors.has(n.id)&&!change?0.25:1}));mesh.position.copy(positions.get(n.id));mesh.position.z=4;mesh.userData.node=n;layer.add(mesh);meshes.push(mesh);
  const label=document.createElement('span');label.className='label';label.textContent=n.label;$('labels').append(label);labelObjects.push({label,node:n,position:mesh.position})}
  $('count').textContent=`${visible.length} nodes / ${edges.length} connections`;render()}
 function render(){if(!renderer)return;camera.updateMatrixWorld();renderer.render(scene,camera);const w=viewport.clientWidth,h=viewport.clientHeight;
@@ -63,5 +89,59 @@ try{renderer=new THREE.WebGLRenderer({antialias:true});renderer.setClearColor(0x
  viewport.addEventListener('keydown',e=>{const distance=50/camera.zoom;if(e.key==='ArrowLeft')camera.position.x-=distance;else if(e.key==='ArrowRight')camera.position.x+=distance;else if(e.key==='ArrowUp')camera.position.y+=distance;else if(e.key==='ArrowDown')camera.position.y-=distance;else if(e.key==='+'||e.key==='=')zoom(1.2);else if(e.key==='-')zoom(1/1.2);else if(e.key==='Home')fit();else return;e.preventDefault();render()});
 }catch(error){$('hint').textContent='WebGL is unavailable. Use the node selector to inspect connections.';console.error(error)}
 $('search').oninput=()=>{draw();fit()};$('group').onchange=()=>{draw();fit()};$('membership').onchange=draw;$('neighbors').onchange=()=>{draw();fit()};$('fit').onclick=fit;$('clear').onclick=()=>select('');$('nodes').onchange=()=>{$('search').value='';$('group').value='';select($('nodes').value);focusNode(selected)};
+function gitColor(change){return ({added:0x70e3a5,removed:0xff8a8a,modified:0xffd276})[change]}
+function applyHistoryGraph(graph, marks){
+ data={...originalData,...graph};showCoverage();historyMarks=marks;groups=[...new Set(data.nodes.map(n=>n.group))].sort();
+ $('group').replaceChildren(new Option('All areas',''));for(const group of groups)$('group').add(new Option(group,group));
+ $('nodes').replaceChildren(new Option('Select a file or directory',''));for(const node of data.nodes)$('nodes').add(new Option(`${marks.nodes.has(node.id)?'['+marks.nodes.get(node.id)+'] ':''}${node.id}`,node.id));
+ $('search').value='';$('neighbors').checked=false;layoutPositions([data]);
+ if(!data.nodes.some(n=>n.id===selected))selected='';select(selected);fit();
+}
+function initGitHistory(){
+ let packet=null, currentNode=null;
+ function button(text,run){const b=document.createElement('button');b.type='button';b.textContent=text;b.onclick=run;return b}
+ function goNode(path){if(!data.nodes.some(n=>n.id===path)){ $('git-summary').textContent=`${path} is not represented by this extractor at these revisions.`;return }
+  $('search').value='';$('group').value='';$('neighbors').checked=false;$('git-context').checked=false;select(path);focusNode(path)}
+ function onNode(node){currentNode=node;const box=$('git-node-history');box.replaceChildren();if(!packet){box.textContent='Load Git history and select a file or concept.';return}
+  const paths=node?.kind==='file'?[node.id]:node?.kind==='concept'?node.sources||[]:[];
+  if(!paths.length){box.textContent='Select a file or concept to see commits touching its source paths.';return}
+  const description=document.createElement('p');description.textContent=`${node.label}: history within the exported ${packet.commits.length}-commit first-parent window. Rename following is heuristic.`;box.append(description);
+  const matches=GraphHistory.fileHistory(packet,paths);if(!matches.length){const p=document.createElement('p');p.textContent='No matching changes in this export. Uncommitted edits are not commits; older or side-branch history may exist. Increase --limit or use the history CLI.';box.append(p)}
+  for(const commit of matches)box.append(button(`${commit.commit.slice(0,8)} · ${commit.subject}`,()=>chooseCommit(commit.commit)));
+ }
+ function compare(){try{
+  const base=$('git-base').value,target=$('git-target').value,marks=GraphHistory.compare(packet.frames[base],packet.frames[target]);
+  applyHistoryGraph(marks.graph,marks);
+  const count=(values,status)=>[...values.values()].filter(value=>value===status).length;
+  $('git-summary').textContent=`${base.slice(0,8)} → ${target.slice(0,8)} · nodes (files/concepts/directories): ${count(marks.nodes,'added')} added, ${count(marks.nodes,'removed')} removed, ${count(marks.nodes,'modified')} modified · relationships (including directory membership): ${count(marks.edges,'added')} added, ${count(marks.edges,'removed')} removed, ${count(marks.edges,'modified')} evidence/metadata changed. Removed nodes and edges remain visible in red.`;
+ }catch(error){$('git-summary').textContent=error.message}}
+ function showFiles(commit){const box=$('git-files');box.replaceChildren();let offset=0;
+  const note=document.createElement('p');note.textContent=commit.changesUnavailable?'Changed files are unavailable: the first parent is missing from local history. No empty-tree comparison is fabricated.':`${commit.changes.length} Git file changes, including files outside extractor coverage. Compared with the first parent.`;box.append(note);
+  function more(){const batch=commit.changes.slice(offset,offset+100);offset+=batch.length;
+   for(const change of batch){box.append(button(`${change.status} ${change.oldPath?change.oldPath+' → ':''}${change.path}`,()=>goNode(change.path)));
+    if(change.oldPath&&change.status.startsWith('R'))box.append(button(`Previous path: ${change.oldPath}`,()=>goNode(change.oldPath)))}
+   if(offset<commit.changes.length){const b=button(`Show next ${Math.min(100,commit.changes.length-offset)} changes`,()=>{b.remove();more()});box.append(b)}}more();
+ }
+ function chooseCommit(oid){const commit=packet.commits.find(c=>c.commit===oid);if(!commit)return;
+  $('git-commit').value=oid;$('git-base').value=commit.parent;$('git-target').value=oid;
+  for(const item of $('timeline').children)item.setAttribute('aria-pressed',String(item.dataset.commit===oid));
+  showFiles(commit);compare();
+ }
+ function load(value){const next=GraphHistory.validate(value);packet=next;layoutNodes=new Map(originalData.nodes.map(n=>[n.id,n]));layoutPositions(Object.values(packet.frames));
+  $('git-controls').hidden=false;$('timeline').replaceChildren();$('git-commit').replaceChildren();$('git-base').replaceChildren();$('git-target').replaceChildren();
+  for(const [oid,frame] of Object.entries(packet.frames)){const label=`${oid.slice(0,8)} · ${frame.label}${frame.unavailable?' (unavailable)':''}`;$('git-base').add(new Option(label,oid));$('git-target').add(new Option(label,oid))}
+  for(const c of packet.commits){$('git-commit').add(new Option(`${c.commit.slice(0,8)} · ${c.date} · ${c.subject}`,c.commit));
+   const b=button(`${c.commit.slice(0,8)} · ${c.date.slice(0,10)}\n${c.subject}`,()=>chooseCommit(c.commit));b.dataset.commit=c.commit;b.setAttribute('aria-pressed','false');$('timeline').append(b)}
+  $('git-status').textContent=`Local export from ${packet.basisRevision.slice(0,12)} · ${packet.viewMode} initial view${packet.workingTreeDirty?' · uncommitted changes existed at export':''} · ${packet.commits.length} first-parent commits${packet.historyTruncated?' · older commits not included':''}${packet.shallow?' · shallow clone: history incomplete':''}. Snapshots reconstructed with the current extractor. This export does not update itself.`;
+  if(packet.commits.length)chooseCommit(packet.commits[0].commit);onNode(currentNode);
+ }
+ $('history-file').onchange=async()=>{try{const file=$('history-file').files[0];if(!file)return;if(file.size>64*1024*1024)throw new Error('History bundle exceeds 64 MiB. Export fewer commits.');load(JSON.parse(await file.text()))}catch(error){$('git-status').textContent=`History load failed: ${error.message}`}};
+ $('git-commit').onchange=()=>chooseCommit($('git-commit').value);$('git-compare').onclick=compare;
+ $('git-current').onclick=()=>{applyHistoryGraph(originalData,{active:false,nodes:new Map(),edges:new Map(),affected:new Set()});$('git-summary').textContent='Initial graph snapshot restored. Uncommitted files are not Git commits.'};
+ $('git-context').onchange=()=>{draw();fit()};
+ const embedded=JSON.parse($('git-data').textContent);if(embedded)try{load(embedded)}catch(error){$('git-status').textContent=`History load failed: ${error.message}`}
+ return {onNode};
+}
+if(!renderer){draw();fit()}historyController=initGitHistory();
 </script>
 </html>

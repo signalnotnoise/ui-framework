@@ -189,7 +189,7 @@ public sealed class CompactButtonTests
             Assert.AreSame(button, Keyboard.FocusedElement);
             button.IsEnabled = false;
             Assert.IsFalse(peer.IsEnabled());
-            Assert.AreEqual(0.45, button.Opacity, 0.001);
+            Assert.AreEqual(1.0, button.Opacity, 0.001);
         }
         finally { window.Close(); }
     });

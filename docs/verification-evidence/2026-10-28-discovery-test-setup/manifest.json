@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-28",
+  "purpose": "Test-only native UIA initialization correction; no publishing",
+  "files": [
+    {
+      "path": "AccessibilityAcceptanceTests.cs",
+      "sha256": "611345f9d7b4e6af1f384815f3a3a2ceb52423158828e23c04bb80352b6080af"
+    },
+    {
+      "path": "api-guards.log",
+      "sha256": "a7e0dbfdf42ea63200bfc25c32c05b6473c02c1d29477c4d9f30844d356a3be7"
+    },
+    {
+      "path": "discovery-repeat-1.log",
+      "sha256": "eb43fdbebf5825e8399228cc3fdda900de1632aa516bcce734b8c322b4e87891"
+    },
+    {
+      "path": "discovery-repeat-2.log",
+      "sha256": "28bcb33c7e4239c2fc7ca11575b6a89f3a0f61659326316f77813feb872d0abc"
+    },
+    {
+      "path": "focused.log",
+      "sha256": "831a2c14fa5a13314a49b129a674f793757bf84c473e2f010cba6d83762c3143"
+    },
+    {
+      "path": "graph-tests.log",
+      "sha256": "4281beb7b7fbff6a80c014da0e523d3e0d11684536ef6c6f1452b302cfe8097e"
+    },
+    {
+      "path": "packages.log",
+      "sha256": "f9b04ab791c3f667623f86265a4bb0b678c83c8f5f47bcc99db1ee848edf0ffc"
+    },
+    {
+      "path": "performance-pairs-tests.log",
+      "sha256": "ec783ee1638fe8fe6209a5462089227bcfc99cb36d39c374aa398621c9a95763"
+    },
+    {
+      "path": "release.log",
+      "sha256": "735fcfe8455ebbd39c0d0baa24f3944f6114f75f86dc38d993634bdbf9d53a32"
+    },
+    {
+      "path": "startup.json",
+      "sha256": "d2765689c852aa414e2d8e77a4b201e88f25e7635a7bbb8fbb4eb312320243d0"
+    },
+    {
+      "path": "stress.json",
+      "sha256": "1ba4820501261623e72d97a7b1037191e12c8534e38472c2524faa500f5be867"
+    },
+    {
+      "path": "TestAutomationTree.cs",
+      "sha256": "c9776e3edc59624168c3c9b6e553a58d7b262ae5bd99652a78753c7639f49d06"
+    },
+    {
+      "path": "tests/discovery-repeat-1.trx",
+      "sha256": "6730d8d5493c9fdf2ead1fcf69bcf4d6752dd446337133b76c0ce0847bf9d515"
+    },
+    {
+      "path": "tests/discovery-repeat-2.trx",
+      "sha256": "a3e1e9ca97b211722a659bcc3e45bc5b414cae8326af560bd90d2dc3d544464d"
+    },
+    {
+      "path": "tests/focused.trx",
+      "sha256": "65026e9028eee36e15cb025f31a6da4e5f16ea5aa7df849cad110dce70f7435c"
+    },
+    {
+      "path": "tests/full-suite.trx",
+      "sha256": "49f4a1cab40b16d3de0835428a10d5bdae03c708f40eef5435ce06a80f26d3b3"
+    },
+    {
+      "path": "timing-tests.log",
+      "sha256": "ba586d9c52f1088bf1c7746a4dc9b838657e8ab7f5d4fde86e31de21d4955f84"
+    }
+  ]
+}

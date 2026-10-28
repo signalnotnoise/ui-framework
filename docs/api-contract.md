@@ -33,12 +33,15 @@ An intentional API redesign requires a separately reviewed migration proposal.
 | State/threading | State, list, computed and session operations belong to their creating thread; WPF controls belong to their dispatcher. Background results require explicit dispatch. Notifications complete delivery before reporting subscriber failures. See StateNotificationTests and StateSessionTests. |
 | Bindings/derived values | Bindings read accepted values back and filter projected equality. Computed reevaluates reads, including ordinary properties; caching is not implied. StateList enumeration is a snapshot; item fields are not deeply observed. See [bindings](bindings.md). |
 | Sizing/styles | View modifiers affect the outer frame. Native local values and bindings retain WPF precedence. Automatic native button height retains its theme minimum; explicit height permits compact sizing. PreserveNative isolates common implicit control styles, not all resources. See [styling](layout-styling.md) and [interop](native-interop.md). |
-| Virtualization | Bound native realization does not bound description work or visited-row logical state. Unmount creates fresh native controls on return and may restore logical components. IME preservation is not currently guaranteed. See [virtualization](virtualization.md). |
+| Virtualization | Bound native realization does not bound description work or visited-row logical state. Unmount creates fresh native controls on return and may restore logical components. Active native composition uses WPF's focus-loss path before detachment; IME sessions are not serialized. Physical IME acceptance remains pending. See [virtualization](virtualization.md). |
+| Keyboard wrappers (unreleased) | ViewHost and internal virtual-row presenters default to non-focusable/non-tab-stop wrappers; their actionable descendants own keyboard focus. Explicit native local values retain WPF precedence. See [accessibility](accessibility.md). |
 | Errors | Build/validation failures retain the previous tree; patch failures clear damaged hosts and permit explicit Refresh. No arbitrary mutation rollback. See [recovery](error-recovery.md), RendererFailureTests and ViewValidationTests. |
 | Cleanup policy | Applications opt into one WpfComCleanupPolicy on their STA before creating controls and close it after hosts, before dispatcher shutdown. Hosts do not install it implicitly. See [lifecycle](application-cleanup-policy-2026-09-25.md). |
 
-These contracts preserve existing behavior. FW-005/006 acceptance remains required
-before promising composition preservation or comprehensive assistive-technology support.
+These are the preview contracts. FW-005 physical IME acceptance and FW-006 remain
+required before promising native composition or comprehensive assistive-technology support.
+The provider-completion and focus-race fixes are unreleased; published alpha.5
+predates those FW-005 changes.
 
 ## Compatibility checks and change policy
 

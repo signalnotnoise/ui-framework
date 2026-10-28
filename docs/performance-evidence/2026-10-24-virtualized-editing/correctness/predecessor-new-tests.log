@@ -1,0 +1,72 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\UI Framework.Wpf\UI Framework.Wpf.csproj (in 238 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\UI Framework\UI Framework.csproj (in 238 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 1.08 sec).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True) [155 ms]
+  Error Message:
+   Assert.AreSame failed. 
+  Stack Trace:
+     at VirtualizationTests.<>c__DisplayClass2_0.<QueuedFocusRestorationRespectsFocusMovedOutsideTheRow>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizationTests.cs:line 88
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Boolean moveBeforeReattach) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizationTests.cs:line 71
+   at InvokeStub_VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed CompositionFinishesOnOriginalBindingBeforeDetachment ("regenerate") [162 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<1>. Actual:<0>. Use the provider's virtual completion method exactly once.
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass0_0.<CompositionFinishesOnOriginalBindingBeforeDetachment>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+
+  Failed CompositionFinishesOnOriginalBindingBeforeDetachment ("remove") [94 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<1>. Actual:<0>. Use the provider's virtual completion method exactly once.
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass0_0.<CompositionFinishesOnOriginalBindingBeforeDetachment>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16
+   at InvokeStub_VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed CompositionFinishesOnOriginalBindingBeforeDetachment ("dispose") [119 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<1>. Actual:<0>. Use the provider's virtual completion method exactly once.
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass0_0.<CompositionFinishesOnOriginalBindingBeforeDetachment>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16
+   at InvokeStub_VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+  Failed CompositionProviderFailureStillDetachesEveryRow [63 ms]
+  Error Message:
+   Assert.ThrowsException failed. Expected exception type:<System.AggregateException> but no exception was thrown. 
+  Stack Trace:
+     at VirtualizedEditingTests.<>c.<CompositionProviderFailureStillDetachesEveryRow>b__5_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 209
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.CompositionProviderFailureStillDetachesEveryRow() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 192
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\predecessor-new-tests.trx
+
+Failed!  - Failed:     5, Passed:     6, Skipped:     0, Total:    11, Duration: 2 s - UI Framework.Checks.dll (net10.0)

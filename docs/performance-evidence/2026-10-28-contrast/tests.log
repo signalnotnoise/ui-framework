@@ -1,0 +1,80 @@
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow [855 ms]
+  Error Message:
+   Assert.IsNotNull failed. 
+  Stack Trace:
+     at AccessibilityAcceptanceTests.<>c.<VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow>b__0_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 34
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 16
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse [41 ms]
+  Error Message:
+   Assert.IsNotNull failed. 
+  Stack Trace:
+     at AccessibilityAcceptanceTests.<>c.<VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse>b__1_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 60
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 48
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates [27 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected a difference no greater than <0.001> between expected value <0.45> and actual value <1>. 
+  Stack Trace:
+     at CompactButtonTests.<>c.<CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates>b__5_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 192
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at CompactButtonTests.CompactRichContentRetainsKeyboardFocusAutomationAndThemeStates() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\CompactButtonTests.cs:line 160
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding [12 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected a difference no greater than <0.001> between expected value <0.45> and actual value <1>. 
+  Stack Trace:
+     at LayoutStyleTests.<>c.<ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding>b__4_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\LayoutStyleTests.cs:line 100
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at LayoutStyleTests.ScopedThemeUpdatesRetainedControlsAndKeepsTextBinding() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\LayoutStyleTests.cs:line 84
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed ClosedAndPopupChromeUseThemeColorsAndNativeSelection (False) [77 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected a difference no greater than <0.001> between expected value <0.45> and actual value <1>. 
+  Stack Trace:
+     at PickerStyleTests.<>c__DisplayClass0_0.<ClosedAndPopupChromeUseThemeColorsAndNativeSelection>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\PickerStyleTests.cs:line 87
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at PickerStyleTests.ClosedAndPopupChromeUseThemeColorsAndNativeSelection(Boolean dark) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\PickerStyleTests.cs:line 18
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+
+  Failed ClosedAndPopupChromeUseThemeColorsAndNativeSelection (True) [56 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected a difference no greater than <0.001> between expected value <0.45> and actual value <1>. 
+  Stack Trace:
+     at PickerStyleTests.<>c__DisplayClass0_0.<ClosedAndPopupChromeUseThemeColorsAndNativeSelection>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\PickerStyleTests.cs:line 87
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at PickerStyleTests.ClosedAndPopupChromeUseThemeColorsAndNativeSelection(Boolean dark) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\PickerStyleTests.cs:line 18
+   at InvokeStub_PickerStyleTests.ClosedAndPopupChromeUseThemeColorsAndNativeSelection(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-contrast\tests\contrast.trx
+
+Failed!  - Failed:     6, Passed:   134, Skipped:     0, Total:   140, Duration: 5 s - UI Framework.Checks.dll (net10.0)

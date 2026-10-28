@@ -14,6 +14,127 @@ ASSETS = ROOT / 'scripts'
 
 
 class GraphTests(unittest.TestCase):
+    def export_history(self, *args, ok=True):
+        return self.run_cmd(sys.executable, 'scripts/export-knowledge-graph-history.py', *args, **{'ok': ok})
+
+    def test_offline_history_export_and_root_commit(self):
+        result = json.loads(self.export_history('--limit', '1').stdout)
+        packet = json.loads(Path(result['history']).read_text())
+        self.assertEqual(packet['basisRevision'], self.first)
+        self.assertIn('empty', packet['frames'])
+        self.assertFalse(packet['historyTruncated'])
+        self.assertEqual(packet['commits'][0]['parent'], 'empty')
+        html = Path(result['html']).read_text()
+        self.assertIn('id="git-base"', html)
+        self.assertIn('id="git-node-history"', html)
+        embedded = json.loads(re.search(r'<script id="git-data" type="application/json">(.*?)</script>', html).group(1))
+        self.assertEqual(embedded, packet)
+        original = Path(result['html']).read_bytes()
+        self.export_history('--limit', '1', '--force')
+        self.assertEqual(original, Path(result['html']).read_bytes())
+        self.assertNotEqual(self.export_history('--limit', '1', ok=False).returncode, 0)
+        self.assertNotEqual(self.export_history('--output', 'README.md', '--force', ok=False).returncode, 0)
+        self.assertNotEqual(self.export_history('--output', 'scripts/knowledge-graph.html', '--force', ok=False).returncode, 0)
+
+    def test_history_rename_deletion_safe_messages_and_worktree_isolation(self):
+        self.git('mv', 'src/a.ts', 'src/renamed file.ts')
+        self.git('rm', 'src/b.ts')
+        self.git('commit', '-qm', '</script><img src=x onerror=alert(1)>')
+        target = self.git('rev-parse', 'HEAD').stdout.strip()
+        self.write('src/local.ts', 'export const local = true;')
+        staged = self.git('diff', '--cached', '--name-only').stdout
+        result = json.loads(self.export_history('--limit', '1', '--worktree').stdout)
+        packet = json.loads(Path(result['history']).read_text())
+        commit = packet['commits'][0]
+        self.assertEqual(commit['commit'], target)
+        self.assertTrue(packet['historyTruncated'])
+        self.assertTrue(any(c['status'].startswith('R') and c['oldPath'] == 'src/a.ts' and c['path'] == 'src/renamed file.ts' for c in commit['changes']))
+        self.assertTrue(any(c['status'] == 'D' and c['path'] == 'src/b.ts' for c in commit['changes']))
+        before = packet['frames'][self.first]
+        after = packet['frames'][target]
+        self.assertIn('src/b.ts', {n['id'] for n in before['nodes']})
+        self.assertNotIn('src/b.ts', {n['id'] for n in after['nodes']})
+        self.assertNotIn('src/local.ts', after['blobs'])
+        html = Path(result['html']).read_text()
+        self.assertNotIn('</script><img src=x', html)
+        graph = json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>', html).group(1))
+        self.assertIn('src/local.ts', {n['id'] for n in graph['nodes']})
+        self.assertEqual(staged, self.git('diff', '--cached', '--name-only').stdout)
+
+    def test_history_merge_first_parent_and_shallow_boundary(self):
+        original = self.git('symbolic-ref', '--short', 'HEAD').stdout.strip()
+        self.git('checkout', '-qb', 'side')
+        self.write('src/side.ts', 'export const side = true;')
+        self.git('add', 'src/side.ts')
+        self.git('commit', '-qm', 'side commit')
+        self.git('checkout', '-q', original)
+        self.git('merge', '--no-ff', '-qm', 'merge side', 'side')
+        result = json.loads(self.export_history('--limit', '1').stdout)
+        packet = json.loads(Path(result['history']).read_text())
+        self.assertEqual(packet['commits'][0]['parent'], self.first)
+        self.assertTrue(any(c['path'] == 'src/side.ts' for c in packet['commits'][0]['changes']))
+        clone = self.root.parent / (self.root.name + '-shallow')
+        self.addCleanup(lambda: shutil.rmtree(clone, ignore_errors=True))
+        self.run_cmd('git', 'clone', '-q', '--depth', '1', self.root.as_uri(), str(clone))
+        p = subprocess.run([sys.executable, 'scripts/export-knowledge-graph-history.py', '--limit', '1'], cwd=clone, capture_output=True, text=True, timeout=60)
+        self.assertEqual(p.returncode, 0, p.stderr)
+        shallow = json.loads(Path(json.loads(p.stdout)['history']).read_text())
+        self.assertTrue(shallow['shallow'])
+        self.assertTrue(shallow['frames'][self.first]['unavailable'])
+        self.assertNotEqual(shallow['commits'][0]['parent'], 'empty')
+
+    def test_history_detects_file_mode_changes(self):
+        self.git('update-index', '--chmod=+x', 'src/a.ts')
+        self.git('commit', '-qm', 'change executable mode only')
+        result = json.loads(self.export_history('--limit', '1').stdout)
+        packet = json.loads(Path(result['history']).read_text())
+        target = packet['basisRevision']
+        self.assertNotEqual(packet['frames'][target]['blobs']['src/a.ts'], packet['frames'][self.first]['blobs']['src/a.ts'])
+
+    def test_template_like_paths_remain_inert_data(self):
+        path = 'src/__HISTORY_JS__-__GIT_HISTORY_JSON__.ts'
+        self.write(path, 'export const harmless = true;')
+        self.git('add', path)
+        self.generate()
+        html = (self.root / 'docs/knowledge-graph/graph.html').read_text()
+        embedded = json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>', html).group(1))
+        self.assertIn(path, {node['id'] for node in embedded['nodes']})
+
+    @unittest.skipUnless(shutil.which('node'), 'Node.js optional for browser-model checks')
+    def test_history_viewer_handlers_without_webgl(self):
+        self.git('rm', 'src/b.ts')
+        self.write('src/a.ts', 'export const a = 2;')
+        self.git('add', 'src/a.ts')
+        self.git('commit', '-qm', 'modify a and delete b')
+        result = json.loads(self.export_history('--limit', '2').stdout)
+        self.run_cmd(shutil.which('node'), str(ASSETS / 'test-knowledge-graph-viewer.cjs'), result['html'])
+
+    @unittest.skipUnless(shutil.which('node'), 'Node.js optional for browser-model checks')
+    def test_history_javascript_model_and_viewer_syntax(self):
+        js = ASSETS / 'knowledge-graph-history.js'
+        code = r'''
+const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/strict');
+vm.runInThisContext(fs.readFileSync(process.argv[1],'utf8'));
+const frame=(ids,edges=[],blobs={})=>({nodes:ids.map(id=>({id,kind:'file'})),edges,blobs});
+const old=frame(['old.ts','gone.ts'],[{source:'old.ts',target:'gone.ts',kind:'imports'}],{'old.ts':'1'});
+const next=frame(['new.ts'],[],{'new.ts':'2'});
+const diff=GraphHistory.compare(old,next);
+assert.equal(diff.nodes.get('old.ts'),'removed');assert.equal(diff.nodes.get('new.ts'),'added');
+assert.equal([...diff.edges.values()][0],'removed');assert(diff.graph.nodes.some(n=>n.id==='gone.ts'));
+assert.equal(GraphHistory.compare(frame(['a'],[],{a:'1'}),frame(['a'],[],{a:'2'})).nodes.get('a'),'modified');
+const e={source:'a',target:'b',kind:'links',evidence:{line:1}};
+assert.equal([...GraphHistory.compare(frame(['a','b'],[e]),frame(['a','b'],[{...e,evidence:{line:2}}])).edges.values()][0],'modified');
+const duplicates=GraphHistory.compare(frame(['a','b'],[e,{...e,evidence:{line:3}}]),frame(['a','b'],[e]));
+assert.equal(duplicates.graph.edges.length,2);assert.equal([...duplicates.edges.values()].filter(value=>value==='removed').length,1);
+assert.throws(()=>GraphHistory.compare({...old,unavailable:true},next),/unavailable/);
+const packet={commits:[{commit:'new',changes:[{path:'new.ts',oldPath:'old.ts',status:'R100'}]},{commit:'old',changes:[{path:'old.ts',status:'M'}]}]};
+assert.deepEqual(GraphHistory.fileHistory(packet,['new.ts']).map(c=>c.commit),['new','old']);
+assert.throws(()=>GraphHistory.validate({}),/Unsupported/);
+const html=fs.readFileSync(process.argv[2],'utf8');
+for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g)){if(!match[1].includes('__'))new vm.Script(match[1]);}
+'''
+        self.run_cmd(shutil.which('node'), '-e', code, str(js), str(ASSETS / 'knowledge-graph.html'))
+
     def test_cache_identity_is_not_authority(self):
         self.query('snapshot')
         cache = next((self.root/'.git/knowledge-graph').glob('revisions-*/*.json'))
@@ -84,7 +205,7 @@ class GraphTests(unittest.TestCase):
         self.git('config', 'core.hooksPath', '.no-hooks')
         scripts = self.root / 'scripts'
         scripts.mkdir()
-        for name in ('update-knowledge-graph.py', 'query-knowledge-graph.py', 'knowledge-graph.html', 'knowledge-graph-agents.md'):
+        for name in ('update-knowledge-graph.py', 'query-knowledge-graph.py', 'knowledge-graph.html', 'knowledge-graph-agents.md', 'knowledge-graph-history.js', 'export-knowledge-graph-history.py'):
             shutil.copyfile(ASSETS / name, scripts / name)
         vendor = scripts / 'knowledge-graph-vendor'
         vendor.mkdir()
@@ -92,6 +213,7 @@ class GraphTests(unittest.TestCase):
         self.write('src/a.ts', 'import {b} from "./b";\n')
         self.write('src/b.ts', 'export const b = 1;\n')
         self.write('README.md', '[a](src/a.ts)\n')
+        self.write('.gitignore', 'artifacts/\n')
         self.git('add', '.')
         self.generate()
         self.git('add', 'docs')

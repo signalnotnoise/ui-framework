@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="e07db619-2aaa-44b2-bbb2-2278f3ab6e05" name="iotero@IOTERO-MSI76 2026-10-26 13:37:31" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-26T13:37:31.2001295-04:00" queuing="2026-10-26T13:37:31.2001299-04:00" start="2026-10-26T13:37:29.2921182-04:00" finish="2026-10-26T13:37:31.4950315-04:00" />
+  <TestSettings name="default" id="74d591b6-ec5a-4c54-8750-fc84afc22570">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-26_13_37_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="837bc7e3-cdc3-49b7-8a31-fd7ed3918d8f" testId="05b1864a-9a6a-e0e2-80d6-a33be598736f" testName="KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder" computerName="IOTERO-MSI76" duration="00:00:00.2690270" startTime="2026-10-26T13:37:30.9653728-04:00" endTime="2026-10-26T13:37:31.2345514-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="837bc7e3-cdc3-49b7-8a31-fd7ed3918d8f" />
+    <UnitTestResult executionId="e371c41d-b649-4338-ace8-5c2cc5a66cf2" testId="3f411252-ad5a-cdae-3629-9a85233696da" testName="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" computerName="IOTERO-MSI76" duration="00:00:00.1210907" startTime="2026-10-26T13:37:31.2346334-04:00" endTime="2026-10-26T13:37:31.3567249-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e371c41d-b649-4338-ace8-5c2cc5a66cf2" />
+    <UnitTestResult executionId="64ac0dbb-f7e2-4a0f-ab5e-b41b939c17e0" testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" testName="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" computerName="IOTERO-MSI76" duration="00:00:01.0259526" startTime="2026-10-26T13:37:29.7362741-04:00" endTime="2026-10-26T13:37:30.7731662-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64ac0dbb-f7e2-4a0f-ab5e-b41b939c17e0" />
+    <UnitTestResult executionId="a6f0d28d-28f4-4006-aa32-f494404895e4" testId="7037388c-b498-2631-05a6-d0b5c652d9e9" testName="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" computerName="IOTERO-MSI76" duration="00:00:00.0963859" startTime="2026-10-26T13:37:30.8687460-04:00" endTime="2026-10-26T13:37:30.9653012-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6f0d28d-28f4-4006-aa32-f494404895e4" />
+    <UnitTestResult executionId="8f63464a-9163-4179-93f9-09c0b7193d8f" testId="2e8403b4-247f-2b5c-ca53-af5defec675d" testName="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" computerName="IOTERO-MSI76" duration="00:00:00.0912364" startTime="2026-10-26T13:37:30.7768107-04:00" endTime="2026-10-26T13:37:30.8682627-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f63464a-9163-4179-93f9-09c0b7193d8f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="2e8403b4-247f-2b5c-ca53-af5defec675d">
+      <Execution id="8f63464a-9163-4179-93f9-09c0b7193d8f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" />
+    </UnitTest>
+    <UnitTest name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="7037388c-b498-2631-05a6-d0b5c652d9e9">
+      <Execution id="a6f0d28d-28f4-4006-aa32-f494404895e4" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" />
+    </UnitTest>
+    <UnitTest name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3f411252-ad5a-cdae-3629-9a85233696da">
+      <Execution id="e371c41d-b649-4338-ace8-5c2cc5a66cf2" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" />
+    </UnitTest>
+    <UnitTest name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f05e52c1-d99d-4723-80e0-a8c56b9c102b">
+      <Execution id="64ac0dbb-f7e2-4a0f-ab5e-b41b939c17e0" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" />
+    </UnitTest>
+    <UnitTest name="KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="05b1864a-9a6a-e0e2-80d6-a33be598736f">
+      <Execution id="837bc7e3-cdc3-49b7-8a31-fd7ed3918d8f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="05b1864a-9a6a-e0e2-80d6-a33be598736f" executionId="837bc7e3-cdc3-49b7-8a31-fd7ed3918d8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f411252-ad5a-cdae-3629-9a85233696da" executionId="e371c41d-b649-4338-ace8-5c2cc5a66cf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" executionId="64ac0dbb-f7e2-4a0f-ab5e-b41b939c17e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7037388c-b498-2631-05a6-d0b5c652d9e9" executionId="a6f0d28d-28f4-4006-aa32-f494404895e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e8403b4-247f-2b5c-ca53-af5defec675d" executionId="8f63464a-9163-4179-93f9-09c0b7193d8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

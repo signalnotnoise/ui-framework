@@ -4,7 +4,7 @@ The [framework backlog](backlog.md) is the current prioritized work list. This
 document retains virtualization design questions and acceptance criteria;
 implemented milestones below are not new work items.
 
-Status: basic viewport virtualization, incremental list updates, and focused-row restoration implemented. See [current behavior and verification](virtualization.md). Remaining work includes stronger IME preservation, custom accessibility metadata/UI Automation coverage, large-shuffle optimization and comparative performance measurements.
+Status: basic viewport virtualization, incremental list updates, focused-row restoration and provider completion before editor detachment implemented. See [current behavior and verification](virtualization.md). Remaining work includes physical IME acceptance, UI Automation coverage, large-shuffle optimization and broader performance acceptance.
 
 ## Objective
 
@@ -17,10 +17,10 @@ Keep large lists responsive by mounting only rows near the visible viewport. Cur
 | Item identity | Keep keys stable independently of visible indices and container reuse. |
 | State lifetime | Define whether offscreen component-local state is retained or reset. External item state must persist. |
 | Row heights | Support expanded checklist rows without incorrect scroll extents or jumping offsets. |
-| Focus and editing | Define behavior when an actively edited row leaves the viewport; preserve selection and IME composition where feasible. |
+| Focus and editing | Retain the active editor while WPF keeps its container; finish composition through the original provider before detachment, then save logical state/selection. Physical IME acceptance remains pending. |
 | Lifecycle | Distinguish offscreen virtualization from actual data removal, with documented hook behavior. |
 | Recycling | Prevent a recycled native control from writing through the previous item's binding. |
-| Accessibility | Preserve keyboard navigation and screen-reader access to list items. |
+| Accessibility | Unreleased: logical row peers support offscreen discovery/realization; lifetime wrappers no longer interrupt Tab traversal. Narrator, system contrast integration and physical scaling remain FW-006 work. See [acceptance](accessibility-2026-10-26.md). |
 
 ## Suggested implementation sequence
 

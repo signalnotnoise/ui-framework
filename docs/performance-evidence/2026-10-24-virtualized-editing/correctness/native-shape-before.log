@@ -1,0 +1,110 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\UI Framework.Wpf.csproj (in 763 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework\UI Framework.csproj (in 763 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 1.29 sec).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed EndEventWithANewCompositionObjectDoesNotCompleteTheOldSnapshot [642 ms]
+  Error Message:
+   Test method VirtualizedEditingTests.EndEventWithANewCompositionObjectDoesNotCompleteTheOldSnapshot threw exception: 
+System.ArgumentException: 'composition' has not yet started.
+  Stack Trace:
+      at System.Windows.Input.TextCompositionManager.UnsafeCompleteComposition(TextComposition composition)
+   at System.Windows.Input.TextComposition.Complete()
+   at TrackedTextComposition.Complete() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\Probes\TrackedTextComposition.cs:line 21
+   at UI_Framework.Wpf.VirtualRowPresenter.CompleteComposition() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 54
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 115
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 127
+   at UI_Framework.Wpf.VirtualListControl.ClearContainerForItemOverride(DependencyObject element, Object item) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 45
+   at System.Windows.Controls.ItemsControl.MS.Internal.Controls.IGeneratorHost.ClearContainerForItem(DependencyObject container, Object item)
+   at System.Windows.Controls.ItemContainerGenerator.UnlinkContainerFromItem(DependencyObject container, Object item, IGeneratorHost host)
+   at System.Windows.Controls.ItemContainerGenerator.RemoveAllInternal(Boolean saveRecycleQueue)
+   at System.Windows.Controls.ItemContainerGenerator.OnRefresh()
+   at System.Windows.Controls.ItemContainerGenerator.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(Object sender, EventArgs e, Type managerType)
+   at System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.RefreshInternal()
+   at VirtualizedEditingTests.<>c.<EndEventWithANewCompositionObjectDoesNotCompleteTheOldSnapshot>b__8_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 292
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.EndEventWithANewCompositionObjectDoesNotCompleteTheOldSnapshot() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 275
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed FocusLossFinishesAttachedEditorBeforeCapturingSelection (False) [44 ms]
+  Error Message:
+   Assert.IsTrue failed. Native-shaped providers finish from focus loss, not a delayed snapshot call.
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass9_2.<FocusLossFinishesAttachedEditorBeforeCapturingSelection>b__2() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 322
+   at TrackedTextComposition.Complete() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\Probes\TrackedTextComposition.cs:line 20
+   at UI_Framework.Wpf.VirtualRowPresenter.CompleteComposition() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 54
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 115
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 127
+   at UI_Framework.Wpf.VirtualListControl.ClearContainerForItemOverride(DependencyObject element, Object item) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 45
+   at System.Windows.Controls.ItemsControl.MS.Internal.Controls.IGeneratorHost.ClearContainerForItem(DependencyObject container, Object item)
+   at System.Windows.Controls.ItemContainerGenerator.UnlinkContainerFromItem(DependencyObject container, Object item, IGeneratorHost host)
+   at System.Windows.Controls.ItemContainerGenerator.RemoveAllInternal(Boolean saveRecycleQueue)
+   at System.Windows.Controls.ItemContainerGenerator.OnRefresh()
+   at System.Windows.Controls.ItemContainerGenerator.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(Object sender, EventArgs e, Type managerType)
+   at System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.RefreshInternal()
+   at VirtualizedEditingTests.<>c__DisplayClass9_0.<FocusLossFinishesAttachedEditorBeforeCapturingSelection>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 334
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.FocusLossFinishesAttachedEditorBeforeCapturingSelection(Boolean nested) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 303
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+
+  Failed FocusLossFinishesAttachedEditorBeforeCapturingSelection (True) [33 ms]
+  Error Message:
+   Test method VirtualizedEditingTests.FocusLossFinishesAttachedEditorBeforeCapturingSelection threw exception: 
+System.AggregateException: Component cleanup failed. (Virtual row cleanup failed. (Assert.IsTrue failed. Native-shaped providers finish from focus loss, not a delayed snapshot call.)) ---> System.AggregateException: Virtual row cleanup failed. (Assert.IsTrue failed. Native-shaped providers finish from focus loss, not a delayed snapshot call.) ---> Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException: Assert.IsTrue failed. Native-shaped providers finish from focus loss, not a delayed snapshot call.
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass9_2.<FocusLossFinishesAttachedEditorBeforeCapturingSelection>b__2() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 322
+   at TrackedTextComposition.Complete() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\Probes\TrackedTextComposition.cs:line 20
+   at UI_Framework.Wpf.VirtualRowPresenter.CompleteComposition() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 54
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 115
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 127
+   at UI_Framework.Wpf.VirtualListControl.Dispose() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 108
+--- End of inner exception stack trace ---
+    at UI_Framework.Wpf.VirtualListControl.Dispose() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 115
+   at UI_Framework.Wpf.Node.<Dispose>g__Cleanup|15_0(Action action, <>c__DisplayClass15_0&) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Rendering\Node.cs:line 153
+--- End of inner exception stack trace ---
+    at UI_Framework.Wpf.Node.Dispose() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Rendering\Node.cs:line 163
+   at UI_Framework.Wpf.ViewHost.Dispose() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\ViewHost.cs:line 440
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 121
+   at UI_Framework.Wpf.VirtualListControl.ClearContainerForItemOverride(DependencyObject element, Object item) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 45
+   at System.Windows.Controls.ItemsControl.MS.Internal.Controls.IGeneratorHost.ClearContainerForItem(DependencyObject container, Object item)
+   at System.Windows.Controls.ItemContainerGenerator.UnlinkContainerFromItem(DependencyObject container, Object item, IGeneratorHost host)
+   at System.Windows.Controls.ItemContainerGenerator.RemoveAllInternal(Boolean saveRecycleQueue)
+   at System.Windows.Controls.ItemContainerGenerator.OnRefresh()
+   at System.Windows.Controls.ItemContainerGenerator.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(Object sender, EventArgs e, Type managerType)
+   at System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.RefreshInternal()
+   at VirtualizedEditingTests.<>c__DisplayClass9_0.<FocusLossFinishesAttachedEditorBeforeCapturingSelection>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 334
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.FocusLossFinishesAttachedEditorBeforeCapturingSelection(Boolean nested) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 303
+   at InvokeStub_VirtualizedEditingTests.FocusLossFinishesAttachedEditorBeforeCapturingSelection(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\native-shape-before.trx
+
+Failed!  - Failed:     3, Passed:     0, Skipped:     0, Total:     3, Duration: 737 ms - UI Framework.Checks.dll (net10.0)

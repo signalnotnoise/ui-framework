@@ -1,0 +1,5 @@
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-test-setup\tests\discovery-repeat-2.trx
+
+Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 1 s - UI Framework.Checks.dll (net10.0)

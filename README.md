@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.5 preview · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.6 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
@@ -16,12 +16,12 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.5` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.5) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.5) (Windows renderer). Both were published through Trusted Publishing and verified in a fresh package-only consumer. See the [release evidence](docs/releases/0.1.0-alpha.5.md). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.6` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6) (Windows renderer). Release candidate: publication is conditional on GitHub validation and Trusted Publishing. See the [release evidence](docs/releases/0.1.0-alpha.6.md). The WPF package brings in the core automatically.
 
 In a .NET 10 WPF project:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.5
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.6
 ```
 
 See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md). To build and verify local packages instead, run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
@@ -159,7 +159,8 @@ This is an initial working foundation, not a production SwiftUI replacement.
 | Binding | Direct/composed projections notify only when the selected value changes; raw State.Value reads still observe the whole state. |
 | Styling | Theme tokens, scoped button/input styles, weighted rows, adaptive columns, alignment, and entry transitions; no general animation API. |
 | Threading | State belongs to its creating thread; no concurrent state or automatic marshaling. |
-| Focus | Controls, text, and selection retained in tested reorders; uninterrupted keyboard focus/IME behavior still needs visible-window testing. |
+| Focus | Tested selection restoration, actual row recycling and rejection of stale input; active native composition uses WPF's focus-loss path before detachment. Physical IME acceptance remains pending. See [editing policy](docs/virtualization.md). |
+| Accessibility | Explicit native names and patterns. Logical row peers support offscreen name discovery and realization. Narrator and physical scaling were reported passing; manual contrast acceptance remains open. See [acceptance](docs/accessibility-2026-10-26.md). |
 | Errors | Failed builds preserve the previous tree; patch failures clear the affected host and allow explicit rebuild. See [failure and recovery contracts](docs/error-recovery.md). No rollback of application side effects or built-in recovery UI. |
 | Virtualization | Viewport controls plus a buffer; offscreen logical state retained; some large shuffles have quadratic cost. See [contracts](docs/virtualization.md). |
 | Navigation | Typed history, Back/PopToRoot/Reset, logical screen snapshots, and WPF entry transitions. See [navigation](docs/navigation.md). |
@@ -174,6 +175,12 @@ Open the [offline interactive graph](docs/knowledge-graph/graph.html), or see it
 It combines the preserved curated architecture with schema-v2 file membership,
 evidenced Markdown/import links and explicit .NET project references. C# calls
 and using directives are not resolved.
+
+For visual Git correlation, run
+`python scripts/export-knowledge-graph-history.py --worktree --force` and open
+`artifacts/knowledge-graph-history/graph.html`. Select files/concepts to see their
+recent commits, click commits to highlight changes, or compare two revisions.
+See [history views and export limits](docs/knowledge-graph/README.md#visual-git-history).
 
 Use bounded queries while working; history defaults to committed HEAD:
 

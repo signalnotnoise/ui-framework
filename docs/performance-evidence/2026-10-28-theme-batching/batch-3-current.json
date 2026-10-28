@@ -1,0 +1,21 @@
+{
+  "HostBytes": 12878224,
+  "AttachBytes": 53457928,
+  "ThemeBytes": 15008424,
+  "LayoutBytes": 47634680,
+  "SchemaVersion": 2,
+  "Scenario": "layout-editors",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "CleanupPolicy": "application-owned",
+  "MountMilliseconds": 2067.1172,
+  "MountAllocatedBytes": 128979256,
+  "MountBodyBuilds": 1,
+  "Milliseconds": 7913.4842,
+  "AllocatedBytes": 1123299512,
+  "BodyBuilds": 50,
+  "Mounts": 0,
+  "Unmounts": 0,
+  "Runtime": "10.0.13",
+  "TimeUtc": "2026-10-28T16:18:44.0210887+00:00"
+}

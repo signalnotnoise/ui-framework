@@ -65,8 +65,10 @@ public sealed class VirtualizationTests
         finally { window.Close(); }
     });
 
-    [TestMethod]
-    public void QueuedFocusRestorationRespectsFocusMovedOutsideTheRow() => StaTestRunner.Run(() =>
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public void QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(bool moveBeforeReattach) => StaTestRunner.Run(() =>
     {
         var outside = new State<string>("outside");
         var inside = new State<string>("inside");
@@ -78,9 +80,10 @@ public sealed class VirtualizationTests
             TestVisualTree.Layout(host);
             Assert.IsTrue(TestVisualTree.Find<TextBox>(host).Last().Focus());
             TestVisualTree.Find<ItemsControl>(host).Single().Items.Refresh();
-            host.UpdateLayout(); // Reattach synchronously, leaving the Input callback queued.
             var external = TestVisualTree.Find<TextBox>(host).First();
+            if (!moveBeforeReattach) host.UpdateLayout(); // Leave the Input callback queued.
             Assert.IsTrue(external.Focus());
+            if (moveBeforeReattach) host.UpdateLayout();
             TestVisualTree.Flush();
             Assert.AreSame(external, Keyboard.FocusedElement);
         }

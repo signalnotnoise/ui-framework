@@ -1,0 +1,3 @@
+Comparison tree mounted: 1,000 rows. Measuring 50 mixed operations.
+{"SchemaVersion":2,"PresentationPrimed":true,"PresentationProtocol":"process-dpi-initialization-v2","Scenario":"full-list","MountMilliseconds":3861.4041,"MountAllocatedBytes":333107888,"MountBodyBuilds":1022,"Mode":"selective observation, memo enabled","Rows":1000,"MixedOperations":50,"Milliseconds":3919.8104,"BodyBuilds":5141,"AllocatedBytes":466199520,"Mounts":456,"Unmounts":658,"Runtime":"10.0.13","TimeUtc":"2026-10-28T06:47:43.9512348+00:00"}
+

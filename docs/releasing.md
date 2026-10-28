@@ -1,6 +1,6 @@
 # Experimental release process
 
-The project name is ui-framework and the license is MIT, credited to UI Framework contributors. The current version is 0.1.0-alpha.5, defined in Directory.Build.props, published October 23, 2026 from `fbf5204` by [Publish NuGet](https://github.com/signalnotnoise/ui-framework/actions/runs/39923750184). Both indexed packages passed fresh NuGet.org installation checks, including compact button sizing; installed assemblies match the hosted artifacts. See the [release record](releases/0.1.0-alpha.5.md). Source archives and NuGet packages are intended for experimental evaluation.
+The current release candidate is 0.1.0-alpha.6, defined in Directory.Build.props. Publication requires successful GitHub validation on the committed source and the gated Trusted Publishing workflow. See the [alpha.6 release record](releases/0.1.0-alpha.6.md). Alpha.5 remains the last verified published version until that process completes. Packages are experimental Windows/.NET 10 previews under MIT.
 
 ## Required owner decisions
 

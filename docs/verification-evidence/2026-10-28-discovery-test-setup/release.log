@@ -1,0 +1,41 @@
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+  WorkspaceComparison -> C:\Users\iotero\Dev\personal\UI Framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.69
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
+WARNING: Overwriting results file: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\tests\regression.trx
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\tests\regression.trx
+
+Passed!  - Failed:     0, Passed:   146, Skipped:     0, Total:   146, Duration: 6 s - UI Framework.Checks.dll (net10.0)
+Validated 35 nodes, 71 relationships, and source paths.
+Documentation versions and workflow action pins are consistent.
+Passed 15 visual stress checks.
+Initial 50-row mount + offscreen layout: 707.6 ms, 72 body builds
+Native TextBox event + shared binding: 14.2 ms, 2 body builds
+Load 250 rows + layout: 1410.1 ms, 259 body builds
+Load 1000 rows + layout: 5208.2 ms, 1,009 body builds
+Expand row into nested checklist + layout: 34.2 ms, 5 body builds
+1000-row keyed shuffle + layout: 930.1 ms, 2 body builds
+10000 projected writes + one flush + layout: 10.2 ms, 1 body builds
+Mixed workload: 50/200 operations complete
+Mixed workload: 100/200 operations complete
+Mixed workload: 150/200 operations complete
+Mixed workload: 200/200 operations complete
+200 mixed operations with per-step render + layout: 23532.1 ms, 20,559 body builds
+Filter to zero rows + layout: 707.5 ms, 2 body builds
+Clear filter + remount + layout: 3796.1 ms, 1,002 body builds
+Board unmount + layout: 1432.1 ms, 2 body builds
+Board remount + layout: 3966.6 ms, 1,003 body builds
+Expand recursive tree to depth 24 + layout: 32.0 ms, 26 body builds
+Full host disposal: 145.8 ms, 0 body builds
+Passed 21 stress assertions. Report: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-validation\stress.json
+Release validation passed. This command does not publish anything.

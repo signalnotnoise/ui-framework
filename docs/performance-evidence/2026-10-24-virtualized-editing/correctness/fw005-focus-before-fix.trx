@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="d09211ba-6ed1-4d18-a562-56c73a85131b" name="iotero@IOTERO-MSI76 2026-10-24 15:44:30" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-24T15:44:30.3422840-04:00" queuing="2026-10-24T15:44:30.3422845-04:00" start="2026-10-24T15:44:28.9472000-04:00" finish="2026-10-24T15:44:30.3504261-04:00" />
+  <TestSettings name="default" id="ef4d183f-3727-4dc3-950b-fbafafcf8b24">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-24_15_44_30" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b17957cc-2c32-4758-a4c7-805b530f3652" testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" computerName="IOTERO-MSI76" duration="00:00:00.1217398" startTime="2026-10-24T15:44:30.0005400-04:00" endTime="2026-10-24T15:44:30.1236574-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b17957cc-2c32-4758-a4c7-805b530f3652">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreSame failed. </Message>
+          <StackTrace>   at VirtualizationTests.&lt;&gt;c__DisplayClass2_0.&lt;QueuedFocusRestorationRespectsFocusMovedOutsideTheRow&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\VirtualizationTests.cs:line 88&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Boolean moveBeforeReattach) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\VirtualizationTests.cs:line 71&#xD;
+   at InvokeStub_VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8ebfa2e6-8c3f-4b31-9a07-bbcd528d525c" testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" computerName="IOTERO-MSI76" duration="00:00:00.5743169" startTime="2026-10-24T15:44:29.4099952-04:00" endTime="2026-10-24T15:44:29.9964682-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ebfa2e6-8c3f-4b31-9a07-bbcd528d525c" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b3430cf0-8265-f4f8-7ba0-2f97b75069fb">
+      <Execution id="b17957cc-2c32-4758-a4c7-805b530f3652" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7">
+      <Execution id="8ebfa2e6-8c3f-4b31-9a07-bbcd528d525c" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" executionId="b17957cc-2c32-4758-a4c7-805b530f3652" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" executionId="8ebfa2e6-8c3f-4b31-9a07-bbcd528d525c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

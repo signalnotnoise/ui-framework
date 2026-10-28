@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "timeUtc": "2026-10-24T20:06:27.8983660Z",
+  "baselineRevision": "be6e1d1349f2b264e672daa2609bf14c5fc51a03",
+  "candidateRevision": "be6e1d1349f2b264e672daa2609bf14c5fc51a03",
+  "candidateDirty": true,
+  "sdk": "10.0.402",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "processorCount": 20,
+  "samples": 7,
+  "warmupProcessesPerSide": 1,
+  "rows": 1000,
+  "operations": 50,
+  "scenarioRows": {
+    "full-list": 1000,
+    "virtualized": 1000,
+    "themed-full-list": 1000,
+    "layout-editors": 1000,
+    "native-inherit": 32,
+    "native-preserve": 32
+  },
+  "applicationOwnedComCleanup": false,
+  "identicalBinaryControl": false,
+  "presentationPrimingComparison": false,
+  "presentationProtocol": "process-dpi-initialization-v2",
+  "coldPresentation": false,
+  "supplementalNativeIslands": false,
+  "focusedScenarios": [
+    "full-list"
+  ],
+  "releaseEligible": false,
+  "budgetPolicy": {
+    "revision": "78c88fb901c202e3c2e49b6de300d1ce2369e00b",
+    "description": "Published 0.1.0-alpha.1 source. Retain until an evidence-backed baseline promotion is explicitly justified.",
+    "timeRegressionPercent": 10,
+    "allocationRegressionPercent": 2,
+    "componentWorkRegressionPercent": 0,
+    "scenarioMetricBudgets": {
+      "themed-full-list": {
+        "AllocatedBytes": 7,
+        "Milliseconds": 12
+      }
+    },
+    "exceptionReason": "2026-09-21: user explicitly accepted approximately 7% extra allocation and 12% extra update latency for themed updates for now. Across 11-sample paired benchmarks, core list update allocations improved by 5.02% (32 MB saved) and virtualized by 5.84%, while mount allocations and times improved across all scenarios. The residual 6.45% themed allocation overhead reflects the verified cost of supporting rich native button content via ButtonContentPresenter (ca428c7) and accessible CheckBox styling (800e1b8). All other budgets remain unchanged."
+  },
+  "runtimeVersions": [
+    "10.0.13"
+  ],
+  "passed": true,
+  "comparisons": [
+    {
+      "scenario": "full-list",
+      "metric": "MountMilliseconds",
+      "baselineMedian": 5344.1176,
+      "candidateMedian": 5578.4178,
+      "changePercent": 4.384263549888967,
+      "budgetPercent": 10,
+      "baselineMin": 5022.8236,
+      "baselineMax": 5758.8731,
+      "candidateMin": 5066.7406,
+      "candidateMax": 6732.7114,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Milliseconds",
+      "baselineMedian": 6522.1938,
+      "candidateMedian": 6807.4766,
+      "changePercent": 4.374031326698691,
+      "budgetPercent": 10,
+      "baselineMin": 6300.485,
+      "baselineMax": 7565.3485,
+      "candidateMin": 6252.4114,
+      "candidateMax": 7449.4561,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountAllocatedBytes",
+      "baselineMedian": 332964984.0,
+      "candidateMedian": 332998280.0,
+      "changePercent": 0.009999850314601488,
+      "budgetPercent": 2,
+      "baselineMin": 332921152.0,
+      "baselineMax": 333092816.0,
+      "candidateMin": 332881096.0,
+      "candidateMax": 333083176.0,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "AllocatedBytes",
+      "baselineMedian": 463524544.0,
+      "candidateMedian": 463262336.0,
+      "changePercent": -0.05656830978943983,
+      "budgetPercent": 2,
+      "baselineMin": 463094536.0,
+      "baselineMax": 465676672.0,
+      "candidateMin": 462633408.0,
+      "candidateMax": 465416280.0,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "MountBodyBuilds",
+      "baselineMedian": 1022.0,
+      "candidateMedian": 1022.0,
+      "changePercent": 0.0,
+      "budgetPercent": 0,
+      "baselineMin": 1022.0,
+      "baselineMax": 1022.0,
+      "candidateMin": 1022.0,
+      "candidateMax": 1022.0,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "BodyBuilds",
+      "baselineMedian": 5141.0,
+      "candidateMedian": 5141.0,
+      "changePercent": 0.0,
+      "budgetPercent": 0,
+      "baselineMin": 5141.0,
+      "baselineMax": 5141.0,
+      "candidateMin": 5141.0,
+      "candidateMax": 5141.0,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Mounts",
+      "baselineMedian": 456.0,
+      "candidateMedian": 456.0,
+      "changePercent": 0.0,
+      "budgetPercent": 0,
+      "baselineMin": 456.0,
+      "baselineMax": 456.0,
+      "candidateMin": 456.0,
+      "candidateMax": 456.0,
+      "regression": false
+    },
+    {
+      "scenario": "full-list",
+      "metric": "Unmounts",
+      "baselineMedian": 658.0,
+      "candidateMedian": 658.0,
+      "changePercent": 0.0,
+      "budgetPercent": 0,
+      "baselineMin": 658.0,
+      "baselineMax": 658.0,
+      "candidateMin": 658.0,
+      "candidateMax": 658.0,
+      "regression": false
+    }
+  ]
+}

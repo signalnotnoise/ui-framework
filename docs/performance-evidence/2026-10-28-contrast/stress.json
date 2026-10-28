@@ -1,0 +1,126 @@
+{
+  "Passed": true,
+  "Assertions": 21,
+  "Rows": 1000,
+  "BurstWrites": 10000,
+  "MixedOperations": 200,
+  "Mode": "WPF controls \u002B dispatcher \u002B offscreen layout; not a visible-window FPS or keyboard-focus benchmark",
+  "TimeUtc": "2026-10-28T13:45:44.816644+00:00",
+  "Runtime": "10.0.13",
+  "TotalMounts": 5706,
+  "TotalUnmounts": 5706,
+  "Measurements": [
+    {
+      "Scenario": "Initial 50-row mount \u002B offscreen layout",
+      "Milliseconds": 747.7417,
+      "BodyBuilds": 72,
+      "Mounts": 71,
+      "Unmounts": 0,
+      "AllocatedBytes": 22390392
+    },
+    {
+      "Scenario": "Native TextBox event \u002B shared binding",
+      "Milliseconds": 14.5927,
+      "BodyBuilds": 2,
+      "Mounts": 0,
+      "Unmounts": 0,
+      "AllocatedBytes": 194296
+    },
+    {
+      "Scenario": "Load 250 rows \u002B layout",
+      "Milliseconds": 1336.5024,
+      "BodyBuilds": 259,
+      "Mounts": 255,
+      "Unmounts": 55,
+      "AllocatedBytes": 78570824
+    },
+    {
+      "Scenario": "Load 1000 rows \u002B layout",
+      "Milliseconds": 4385.9025,
+      "BodyBuilds": 1009,
+      "Mounts": 1005,
+      "Unmounts": 255,
+      "AllocatedBytes": 319586616
+    },
+    {
+      "Scenario": "Expand row into nested checklist \u002B layout",
+      "Milliseconds": 9.0199,
+      "BodyBuilds": 5,
+      "Mounts": 4,
+      "Unmounts": 0,
+      "AllocatedBytes": 635960
+    },
+    {
+      "Scenario": "1000-row keyed shuffle \u002B layout",
+      "Milliseconds": 623.4919,
+      "BodyBuilds": 2,
+      "Mounts": 0,
+      "Unmounts": 0,
+      "AllocatedBytes": 33706872
+    },
+    {
+      "Scenario": "10000 projected writes \u002B one flush \u002B layout",
+      "Milliseconds": 13.7825,
+      "BodyBuilds": 1,
+      "Mounts": 0,
+      "Unmounts": 0,
+      "AllocatedBytes": 1788672
+    },
+    {
+      "Scenario": "200 mixed operations with per-step render \u002B layout",
+      "Milliseconds": 18257.456,
+      "BodyBuilds": 20559,
+      "Mounts": 2295,
+      "Unmounts": 2295,
+      "AllocatedBytes": 2047297448
+    },
+    {
+      "Scenario": "Filter to zero rows \u002B layout",
+      "Milliseconds": 588.0659,
+      "BodyBuilds": 2,
+      "Mounts": 0,
+      "Unmounts": 1004,
+      "AllocatedBytes": 36539056
+    },
+    {
+      "Scenario": "Clear filter \u002B remount \u002B layout",
+      "Milliseconds": 2697.0463,
+      "BodyBuilds": 1002,
+      "Mounts": 1000,
+      "Unmounts": 0,
+      "AllocatedBytes": 298558112
+    },
+    {
+      "Scenario": "Board unmount \u002B layout",
+      "Milliseconds": 1037.6625,
+      "BodyBuilds": 2,
+      "Mounts": 0,
+      "Unmounts": 1001,
+      "AllocatedBytes": 56597080
+    },
+    {
+      "Scenario": "Board remount \u002B layout",
+      "Milliseconds": 3041.2112,
+      "BodyBuilds": 1003,
+      "Mounts": 1001,
+      "Unmounts": 0,
+      "AllocatedBytes": 306604392
+    },
+    {
+      "Scenario": "Expand recursive tree to depth 24 \u002B layout",
+      "Milliseconds": 5.9482,
+      "BodyBuilds": 26,
+      "Mounts": 20,
+      "Unmounts": 0,
+      "AllocatedBytes": 940888
+    },
+    {
+      "Scenario": "Full host disposal",
+      "Milliseconds": 123.8426,
+      "BodyBuilds": 0,
+      "Mounts": 0,
+      "Unmounts": 71,
+      "AllocatedBytes": 6175464
+    }
+  ]
+}

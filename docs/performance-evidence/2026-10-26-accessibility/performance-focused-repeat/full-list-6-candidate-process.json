@@ -1,0 +1,7 @@
+{
+  "scenario": "full-list",
+  "sample": 6,
+  "side": "candidate",
+  "wallSeconds": 9.2129862,
+  "cpuSeconds": 11.59375
+}

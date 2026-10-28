@@ -11,10 +11,10 @@ namespace UI_Framework.Wpf;
 /// <summary>Scoped checkbox visuals; native CheckBox retains input and automation behavior.</summary>
 internal static class ToggleStyles
 {
-    internal static Style Create(ThemeTokens theme)
+    internal static Style Create(ThemeTokens theme, ThemePalette palette)
     {
         var style = new Style(typeof(CheckBox));
-        style.Setters.Add(new Setter(Control.ForegroundProperty, Brush(theme.Ink)));
+        style.Setters.Add(new Setter(Control.ForegroundProperty, palette[nameof(ThemeTokens.Ink)]));
         style.Setters.Add(new Setter(Control.PaddingProperty, new Thickness(2)));
         // The template supplies a theme-colored focus outline instead of system black.
         style.Setters.Add(new Setter(Control.FocusVisualStyleProperty, null));
@@ -34,13 +34,13 @@ internal static class ToggleStyles
         indicator.SetValue(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
         indicator.SetValue(Border.CornerRadiusProperty, new CornerRadius(3));
         indicator.SetValue(Border.BorderThicknessProperty, new Thickness(1));
-        indicator.SetValue(Border.BorderBrushProperty, Brush(theme.Border));
-        indicator.SetValue(Border.BackgroundProperty, Brush(theme.Surface));
+        indicator.SetValue(Border.BorderBrushProperty, palette[nameof(ThemeTokens.Border)]);
+        indicator.SetValue(Border.BackgroundProperty, palette[nameof(ThemeTokens.Surface)]);
         var mark = new FrameworkElementFactory(typeof(Path), "CheckMark");
         var checkGeometry = Geometry.Parse("M 3,8 L 7,12 L 15,4");
         checkGeometry.Freeze();
         mark.SetValue(Path.DataProperty, checkGeometry);
-        mark.SetValue(Shape.StrokeProperty, Brush(theme.OnAccent));
+        mark.SetValue(Shape.StrokeProperty, palette[nameof(ThemeTokens.OnAccent)]);
         mark.SetValue(Shape.StrokeThicknessProperty, 2.0);
         mark.SetValue(Shape.StrokeStartLineCapProperty, PenLineCap.Round);
         mark.SetValue(Shape.StrokeEndLineCapProperty, PenLineCap.Round);
@@ -56,24 +56,24 @@ internal static class ToggleStyles
         row.AppendChild(label);
         focus.AppendChild(row);
         template.VisualTree = focus;
-        State(template, UIElement.IsMouseOverProperty, true, "Indicator", Border.BackgroundProperty, Brush(theme.Hover));
-        State(template, ButtonBase.IsPressedProperty, true, "Indicator", Border.BackgroundProperty, Brush(theme.Pressed));
-        State(template, ToggleButton.IsCheckedProperty, true, "Indicator", Border.BackgroundProperty, Brush(theme.Accent));
+        State(template, UIElement.IsMouseOverProperty, true, "Indicator", Border.BackgroundProperty, palette[nameof(ThemeTokens.Hover)]);
+        State(template, ButtonBase.IsPressedProperty, true, "Indicator", Border.BackgroundProperty, palette[nameof(ThemeTokens.Pressed)]);
+        State(template, ToggleButton.IsCheckedProperty, true, "Indicator", Border.BackgroundProperty, palette[nameof(ThemeTokens.Accent)]);
         State(template, ToggleButton.IsCheckedProperty, true, "CheckMark", UIElement.VisibilityProperty, Visibility.Visible);
-        foreach (var (property, color) in new[] { (UIElement.IsMouseOverProperty, theme.AccentHover), (ButtonBase.IsPressedProperty, theme.AccentPressed) })
+        foreach (var (property, color) in new[] { (UIElement.IsMouseOverProperty, nameof(ThemeTokens.AccentHover)), (ButtonBase.IsPressedProperty, nameof(ThemeTokens.AccentPressed)) })
         {
             var state = new MultiTrigger();
             state.Conditions.Add(new Condition(ToggleButton.IsCheckedProperty, true));
             state.Conditions.Add(new Condition(property, true));
-            state.Setters.Add(new Setter(Border.BackgroundProperty, Brush(color), "Indicator"));
+            state.Setters.Add(new Setter(Border.BackgroundProperty, palette[color], "Indicator"));
             template.Triggers.Add(state);
         }
-        State(template, UIElement.IsKeyboardFocusWithinProperty, true, "FocusChrome", Border.BorderBrushProperty, Brush(theme.Focus));
+        State(template, UIElement.IsKeyboardFocusWithinProperty, true, "FocusChrome", Border.BorderBrushProperty, palette[nameof(ThemeTokens.Focus)]);
         var disabled = new Trigger { Property = UIElement.IsEnabledProperty, Value = false };
-        disabled.Setters.Add(new Setter(Control.ForegroundProperty, Brush(theme.Muted)));
-        disabled.Setters.Add(new Setter(Border.BackgroundProperty, Brush(theme.Surface), "Indicator"));
-        disabled.Setters.Add(new Setter(Border.BorderBrushProperty, Brush(theme.Muted), "Indicator"));
-        disabled.Setters.Add(new Setter(Shape.StrokeProperty, Brush(theme.Muted), "CheckMark"));
+        disabled.Setters.Add(new Setter(Control.ForegroundProperty, palette[nameof(ThemeTokens.Muted)]));
+        disabled.Setters.Add(new Setter(Border.BackgroundProperty, palette[nameof(ThemeTokens.Surface)], "Indicator"));
+        disabled.Setters.Add(new Setter(Border.BorderBrushProperty, palette[nameof(ThemeTokens.Muted)], "Indicator"));
+        disabled.Setters.Add(new Setter(Shape.StrokeProperty, palette[nameof(ThemeTokens.Muted)], "CheckMark"));
         template.Triggers.Add(disabled);
         style.Setters.Add(new Setter(Control.TemplateProperty, template));
         return style;
@@ -86,10 +86,5 @@ internal static class ToggleStyles
         template.Triggers.Add(state);
     }
 
-    private static SolidColorBrush Brush(string color)
-    {
-        var brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(color));
-        brush.Freeze();
-        return brush;
-    }
+
 }

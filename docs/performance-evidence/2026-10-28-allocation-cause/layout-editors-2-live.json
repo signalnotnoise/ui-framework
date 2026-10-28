@@ -1,0 +1,17 @@
+{
+  "SchemaVersion": 2,
+  "Scenario": "layout-editors",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "CleanupPolicy": "application-owned",
+  "MountMilliseconds": 2229.0907,
+  "MountAllocatedBytes": 134880792,
+  "MountBodyBuilds": 1,
+  "Milliseconds": 8728.7621,
+  "AllocatedBytes": 1134322096,
+  "BodyBuilds": 50,
+  "Mounts": 0,
+  "Unmounts": 0,
+  "Runtime": "10.0.13",
+  "TimeUtc": "2026-10-28T14:16:44.6611234+00:00"
+}

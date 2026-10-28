@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="51de7ae7-5075-4ac4-991f-c53d5e7071a9" name="iotero@IOTERO-MSI76 2026-10-24 16:17:23" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-24T16:17:23.8586315-04:00" queuing="2026-10-24T16:17:23.8586319-04:00" start="2026-10-24T16:17:20.9247656-04:00" finish="2026-10-24T16:17:24.1942202-04:00" />
+  <TestSettings name="default" id="80d31fad-712e-4f3e-b577-8cc1b853b461">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-24_16_17_23" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="894539eb-e8f9-42df-aa70-59ed9fc9e4c3" testId="50cc3cf4-5f24-37bc-b0cf-47e11298977b" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;dispose&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.1659582" startTime="2026-10-24T16:17:23.1968886-04:00" endTime="2026-10-24T16:17:23.3630589-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="894539eb-e8f9-42df-aa70-59ed9fc9e4c3">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;0&gt;. Use the provider's virtual completion method exactly once.</Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c__DisplayClass0_0.&lt;CompositionFinishesOnOriginalBindingBeforeDetachment&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16&#xD;
+   at InvokeStub_VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d48b9473-832d-4456-b6ad-f1b5a1dfd8e5" testId="3ce164ee-8264-994b-3a02-d47088ed6053" testName="CompletedOrCanceledCompositionIsNotCompletedAgain (False)" computerName="IOTERO-MSI76" duration="00:00:00.0450874" startTime="2026-10-24T16:17:23.3632570-04:00" endTime="2026-10-24T16:17:23.4085609-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d48b9473-832d-4456-b6ad-f1b5a1dfd8e5" />
+    <UnitTestResult executionId="a4b7e1d7-10b5-48da-acee-c7ade70ba080" testId="f1d83360-bad2-7961-512f-885259e04069" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;remove&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.0513857" startTime="2026-10-24T16:17:23.1452345-04:00" endTime="2026-10-24T16:17:23.1968180-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4b7e1d7-10b5-48da-acee-c7ade70ba080">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;0&gt;. Use the provider's virtual completion method exactly once.</Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c__DisplayClass0_0.&lt;CompositionFinishesOnOriginalBindingBeforeDetachment&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16&#xD;
+   at InvokeStub_VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="49ffe7ab-c3fa-4e28-adfd-f1efc88417a0" testId="5bbb6b81-c50b-3232-a8e1-0f936c6fde97" testName="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" computerName="IOTERO-MSI76" duration="00:00:00.0414750" startTime="2026-10-24T16:17:23.9560821-04:00" endTime="2026-10-24T16:17:23.9991844-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49ffe7ab-c3fa-4e28-adfd-f1efc88417a0">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;0&gt;. </Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c.&lt;InnerRowRemovalCompletesCompositionWhileOuterRowRemains&gt;b__7_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 264&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.InnerRowRemovalCompletesCompositionWhileOuterRowRemains() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 244&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6b3777a-3faf-4b05-a2c5-bf339ba4c14b" testId="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;regenerate&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.0825006" startTime="2026-10-24T16:17:23.0621831-04:00" endTime="2026-10-24T16:17:23.1450512-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6b3777a-3faf-4b05-a2c5-bf339ba4c14b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;0&gt;. Use the provider's virtual completion method exactly once.</Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c__DisplayClass0_0.&lt;CompositionFinishesOnOriginalBindingBeforeDetachment&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 37&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.CompositionFinishesOnOriginalBindingBeforeDetachment(String operation) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 16&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9726add9-1056-473c-841a-789f4033da5e" testId="d5681cef-ee68-1718-31c1-23962bcae03e" testName="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" computerName="IOTERO-MSI76" duration="00:00:00.0376775" startTime="2026-10-24T16:17:23.9182133-04:00" endTime="2026-10-24T16:17:23.9560111-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9726add9-1056-473c-841a-789f4033da5e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.ThrowsException failed. Expected exception type:&lt;System.AggregateException&gt; but no exception was thrown. </Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c.&lt;NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails&gt;b__6_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 235&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 220&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="16a49fae-7b14-4c28-aed5-2e72f9371f30" testId="38352eb9-6f02-bd58-8ff4-6406f85b96ce" testName="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" computerName="IOTERO-MSI76" duration="00:00:00.2866542" startTime="2026-10-24T16:17:23.4509158-04:00" endTime="2026-10-24T16:17:23.7386310-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16a49fae-7b14-4c28-aed5-2e72f9371f30" />
+    <UnitTestResult executionId="dd18d75f-62a1-464c-9129-d190efd02ba9" testId="d0441333-8363-6d4e-c043-febecea5829b" testName="CompositionProviderFailureStillDetachesEveryRow" computerName="IOTERO-MSI76" duration="00:00:00.0388007" startTime="2026-10-24T16:17:23.8791950-04:00" endTime="2026-10-24T16:17:23.9181478-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd18d75f-62a1-464c-9129-d190efd02ba9">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.ThrowsException failed. Expected exception type:&lt;System.AggregateException&gt; but no exception was thrown. </Message>
+          <StackTrace>   at VirtualizedEditingTests.&lt;&gt;c.&lt;CompositionProviderFailureStillDetachesEveryRow&gt;b__5_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 209&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizedEditingTests.CompositionProviderFailureStillDetachesEveryRow() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 192&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2521b41f-9456-4971-80f7-0f1a73dc53a7" testId="85fd8096-7974-1de7-3633-c6b26e6128e1" testName="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" computerName="IOTERO-MSI76" duration="00:00:00.0815840" startTime="2026-10-24T16:17:23.7387152-04:00" endTime="2026-10-24T16:17:23.8204675-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2521b41f-9456-4971-80f7-0f1a73dc53a7" />
+    <UnitTestResult executionId="e5ba124c-fa66-410a-bc4a-967973105682" testId="0d5896ce-7116-6703-70d8-e071481c1166" testName="RemovedRowCannotRestoreFocusIntoReinsertedKey" computerName="IOTERO-MSI76" duration="00:00:00.0510061" startTime="2026-10-24T16:17:23.8279507-04:00" endTime="2026-10-24T16:17:23.8791206-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5ba124c-fa66-410a-bc4a-967973105682" />
+    <UnitTestResult executionId="c4a5fc0d-1d81-46b9-b1ab-c6ecce1c9470" testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" computerName="IOTERO-MSI76" duration="00:00:01.2747407" startTime="2026-10-24T16:17:21.6830247-04:00" endTime="2026-10-24T16:17:22.9686255-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4a5fc0d-1d81-46b9-b1ab-c6ecce1c9470" />
+    <UnitTestResult executionId="0702e278-1c96-48dd-b226-9cc416fb6524" testId="be16aaa9-ddc0-b2eb-51b9-338833c89c93" testName="CompletedOrCanceledCompositionIsNotCompletedAgain (True)" computerName="IOTERO-MSI76" duration="00:00:00.0420393" startTime="2026-10-24T16:17:23.4086270-04:00" endTime="2026-10-24T16:17:23.4508456-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0702e278-1c96-48dd-b226-9cc416fb6524" />
+    <UnitTestResult executionId="422902e0-207e-4bd2-b93b-058f1cf280d1" testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" computerName="IOTERO-MSI76" duration="00:00:00.0894482" startTime="2026-10-24T16:17:22.9718645-04:00" endTime="2026-10-24T16:17:23.0618336-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="422902e0-207e-4bd2-b93b-058f1cf280d1">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreSame failed. </Message>
+          <StackTrace>   at VirtualizationTests.&lt;&gt;c__DisplayClass2_0.&lt;QueuedFocusRestorationRespectsFocusMovedOutsideTheRow&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizationTests.cs:line 88&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Boolean moveBeforeReattach) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\VirtualizationTests.cs:line 71&#xD;
+   at InvokeStub_VirtualizationTests.QueuedFocusRestorationRespectsFocusMovedOutsideTheRow(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7">
+      <Execution id="c4a5fc0d-1d81-46b9-b1ab-c6ecce1c9470" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+    <UnitTest name="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d5681cef-ee68-1718-31c1-23962bcae03e">
+      <Execution id="9726add9-1056-473c-841a-789f4033da5e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;remove&quot;)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f1d83360-bad2-7961-512f-885259e04069">
+      <Execution id="a4b7e1d7-10b5-48da-acee-c7ade70ba080" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b3430cf0-8265-f4f8-7ba0-2f97b75069fb">
+      <Execution id="422902e0-207e-4bd2-b93b-058f1cf280d1" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+    <UnitTest name="CompletedOrCanceledCompositionIsNotCompletedAgain (False)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3ce164ee-8264-994b-3a02-d47088ed6053">
+      <Execution id="d48b9473-832d-4456-b6ad-f1b5a1dfd8e5" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompletedOrCanceledCompositionIsNotCompletedAgain" />
+    </UnitTest>
+    <UnitTest name="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="5bbb6b81-c50b-3232-a8e1-0f936c6fde97">
+      <Execution id="49ffe7ab-c3fa-4e28-adfd-f1efc88417a0" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" />
+    </UnitTest>
+    <UnitTest name="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="38352eb9-6f02-bd58-8ff4-6406f85b96ce">
+      <Execution id="16a49fae-7b14-4c28-aed5-2e72f9371f30" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" />
+    </UnitTest>
+    <UnitTest name="CompositionProviderFailureStillDetachesEveryRow" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d0441333-8363-6d4e-c043-febecea5829b">
+      <Execution id="dd18d75f-62a1-464c-9129-d190efd02ba9" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionProviderFailureStillDetachesEveryRow" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;dispose&quot;)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="50cc3cf4-5f24-37bc-b0cf-47e11298977b">
+      <Execution id="894539eb-e8f9-42df-aa70-59ed9fc9e4c3" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="85fd8096-7974-1de7-3633-c6b26e6128e1">
+      <Execution id="2521b41f-9456-4971-80f7-0f1a73dc53a7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;regenerate&quot;)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b">
+      <Execution id="e6b3777a-3faf-4b05-a2c5-bf339ba4c14b" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="CompletedOrCanceledCompositionIsNotCompletedAgain (True)" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="be16aaa9-ddc0-b2eb-51b9-338833c89c93">
+      <Execution id="0702e278-1c96-48dd-b226-9cc416fb6524" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompletedOrCanceledCompositionIsNotCompletedAgain" />
+    </UnitTest>
+    <UnitTest name="RemovedRowCannotRestoreFocusIntoReinsertedKey" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw005\regression-before\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="0d5896ce-7116-6703-70d8-e071481c1166">
+      <Execution id="e5ba124c-fa66-410a-bc4a-967973105682" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw005\regression-before\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="RemovedRowCannotRestoreFocusIntoReinsertedKey" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="50cc3cf4-5f24-37bc-b0cf-47e11298977b" executionId="894539eb-e8f9-42df-aa70-59ed9fc9e4c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ce164ee-8264-994b-3a02-d47088ed6053" executionId="d48b9473-832d-4456-b6ad-f1b5a1dfd8e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1d83360-bad2-7961-512f-885259e04069" executionId="a4b7e1d7-10b5-48da-acee-c7ade70ba080" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5bbb6b81-c50b-3232-a8e1-0f936c6fde97" executionId="49ffe7ab-c3fa-4e28-adfd-f1efc88417a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b" executionId="e6b3777a-3faf-4b05-a2c5-bf339ba4c14b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5681cef-ee68-1718-31c1-23962bcae03e" executionId="9726add9-1056-473c-841a-789f4033da5e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38352eb9-6f02-bd58-8ff4-6406f85b96ce" executionId="16a49fae-7b14-4c28-aed5-2e72f9371f30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0441333-8363-6d4e-c043-febecea5829b" executionId="dd18d75f-62a1-464c-9129-d190efd02ba9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85fd8096-7974-1de7-3633-c6b26e6128e1" executionId="2521b41f-9456-4971-80f7-0f1a73dc53a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d5896ce-7116-6703-70d8-e071481c1166" executionId="e5ba124c-fa66-410a-bc4a-967973105682" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" executionId="c4a5fc0d-1d81-46b9-b1ab-c6ecce1c9470" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be16aaa9-ddc0-b2eb-51b9-338833c89c93" executionId="0702e278-1c96-48dd-b226-9cc416fb6524" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" executionId="422902e0-207e-4bd2-b93b-058f1cf280d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="13" executed="13" passed="6" failed="7" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

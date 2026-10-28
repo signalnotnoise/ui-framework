@@ -97,7 +97,7 @@ public sealed class LayoutStyleTests
         TestVisualTree.Flush();
         Assert.AreSame(button, TestVisualTree.Find<Button>(host).Single());
         Assert.IsFalse(button.IsEnabled);
-        Assert.AreEqual(0.45, button.Opacity, 0.001);
+        Assert.AreEqual(1.0, button.Opacity, 0.001);
         var input = TestVisualTree.Find<TextBox>(host).Single();
         input.Text = "after";
         Assert.AreEqual("after", text.Value);

@@ -2,6 +2,38 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.6 — release candidate, October 28, 2026
+
+- Follow Windows contrast-theme colors in scoped WPF control styles without
+  replacing templates. Restore supplied tokens when contrast mode ends; use
+  opaque disabled colors instead of fading controls. Local application overrides
+  retain precedence. Physical contrast acceptance remains pending; all 32 local performance gates pass.
+
+- Expose virtual-row automation names before realization through WPF item peers,
+  allowing name-based discovery and realization of offscreen rows. Add retained
+  state and keyboard traversal checks plus an accessibility acceptance window.
+  Narrator and physical scaling were reported passing; manual system contrast acceptance remains pending.
+- Keep ViewHost and virtual-row lifetime wrappers out of default keyboard focus
+  traversal, so Tab reaches the actionable descendants instead of invisible wrappers.
+- End focus on actively composing editors before a virtual row detaches, using
+  WPF's TSF/IMM focus-loss path and source identity across native phase objects.
+  Preserve the original binding during completion and finish row
+  cleanup if the provider fails. Composition sessions are not serialized.
+- Prevent regenerated rows from stealing focus selected in another editor before
+  reattachment. Add visible-window checks for actual recycling, detached input,
+  routed composition commit/cancel, reorder, removal and disposal. Physical IME
+  acceptance remains pending; see [editing policy](docs/virtualization.md).
+
+- Share frozen TextBox brushes in normal mode and batch theme resource publication
+  to avoid repeated invalidation walks. Respect caller-owned initialization scopes.
+  Local seven-pair comparison: editor mount allocations -3.72%, themed mount
+  allocations +0.20%; unchanged budgets, workload and component work.
+- Initialize native UIA before refreshing test peer caches; preserve all discovery
+  and row-identity assertions. All 146 framework tests pass locally, alongside
+  visual, stress, API guard and package smoke checks.
+- Add offline knowledge-graph Git history views for visual code/history correlation.
+  Preserve failed experiments and raw performance evidence for reproducibility.
+
 ## 0.1.0-alpha.5 — October 23, 2026
 
 Published both libraries and symbol packages from `fbf5204` through Trusted

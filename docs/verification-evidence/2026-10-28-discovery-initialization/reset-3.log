@@ -1,0 +1,9 @@
+Logical count=1000; last name=Record 999; parent=
+Handles before: root=0 list=0
+Before native query: False
+Native root query: Window
+Native descendant query: True
+Handles after native query: root=6620602 list=0
+Handles after reset: root=6620602 list=6620602
+After native query: True
+Virtualized pattern: True

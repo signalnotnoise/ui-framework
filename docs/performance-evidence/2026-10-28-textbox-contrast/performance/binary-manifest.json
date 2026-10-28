@@ -1,0 +1,92 @@
+[
+  {
+    "side": "baseline",
+    "name": "Counter.deps.json",
+    "sha256": "81B434862687C61950688A774885F79927FC024DB2FC8E798E6573EDB063C249"
+  },
+  {
+    "side": "baseline",
+    "name": "Counter.dll",
+    "sha256": "1926C83653C6D7A6B5EEAAEBC4A6C1D1224EDF3C8854E5096DA002480234A871"
+  },
+  {
+    "side": "baseline",
+    "name": "Counter.exe",
+    "sha256": "B00687C58DF9990C60DEE73D077B06FF4220B43A9FA9D68BEDAB432396983093"
+  },
+  {
+    "side": "baseline",
+    "name": "Counter.pdb",
+    "sha256": "B542B5310AB9565D7920B5D4B4C5F056BD59F341E78DB2E30DF2F2A0DB7A2A93"
+  },
+  {
+    "side": "baseline",
+    "name": "Counter.runtimeconfig.json",
+    "sha256": "96BC2946DFF8790400D652EC7F8DE7BB043E954980D59470C112788B68A1FBD3"
+  },
+  {
+    "side": "baseline",
+    "name": "UI Framework.dll",
+    "sha256": "4CE45345D513E179C1A7F13D8E3C1F7E8ADCE58F68104A72827F28BF85CB50FF"
+  },
+  {
+    "side": "baseline",
+    "name": "UI Framework.pdb",
+    "sha256": "F267C7B18008D99286F6716D8D772F101507EF740F8884EC6CE0C0B4187C7BFD"
+  },
+  {
+    "side": "baseline",
+    "name": "UI Framework.Wpf.dll",
+    "sha256": "40126D3CE7266D3E584CE7EE03CFEEE8BFD95B03C7096B3A7A0282F5F8C3620A"
+  },
+  {
+    "side": "baseline",
+    "name": "UI Framework.Wpf.pdb",
+    "sha256": "1E36F8B5C568F72244F98B27C4D820F520913E5A9CA0034E1237B3512A8FA641"
+  },
+  {
+    "side": "candidate",
+    "name": "Counter.deps.json",
+    "sha256": "D0E9ABB692C7F27715C0F9EA086BBC2A48126FE76394F0BB49DA7CB480AD7F84"
+  },
+  {
+    "side": "candidate",
+    "name": "Counter.dll",
+    "sha256": "371635757871082BB13F62744879C286256D079A30DB73CA480B7964479B79AC"
+  },
+  {
+    "side": "candidate",
+    "name": "Counter.exe",
+    "sha256": "4BA89B2F662DA7969FD2E8D42976150840D7079EFDF6F06D148A8ACF087CB104"
+  },
+  {
+    "side": "candidate",
+    "name": "Counter.pdb",
+    "sha256": "01BE7F98CDC673062313BAF694F07982CBA06D2F396AA8C0A17EF49F894A4F88"
+  },
+  {
+    "side": "candidate",
+    "name": "Counter.runtimeconfig.json",
+    "sha256": "96BC2946DFF8790400D652EC7F8DE7BB043E954980D59470C112788B68A1FBD3"
+  },
+  {
+    "side": "candidate",
+    "name": "UI Framework.dll",
+    "sha256": "8C490FF6F33A4F85F0873B3DA40470F99998C4910A4CD77AEA136A1F2AE08999"
+  },
+  {
+    "side": "candidate",
+    "name": "UI Framework.pdb",
+    "sha256": "86EC234D25D5FED7D582DA1CB1A1B3B434CF006959CE664DEE5987CB842DF5EE"
+  },
+  {
+    "side": "candidate",
+    "name": "UI Framework.Wpf.dll",
+    "sha256": "62D0859E8EEB8DB237154182C9015FC3A98F49A20CD4375C8571F61CF9DC1FA7"
+  },
+  {
+    "side": "candidate",
+    "name": "UI Framework.Wpf.pdb",
+    "sha256": "A6D0562292F123F12D3AFA8A5365A64F17D0487C39AA6114B6661CE1C2D4943D"
+  }
+]

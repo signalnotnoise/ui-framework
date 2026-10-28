@@ -1,0 +1,19 @@
+Initial 50-row mount + offscreen layout: 747.7 ms, 72 body builds
+Native TextBox event + shared binding: 14.6 ms, 2 body builds
+Load 250 rows + layout: 1336.5 ms, 259 body builds
+Load 1000 rows + layout: 4385.9 ms, 1,009 body builds
+Expand row into nested checklist + layout: 9.0 ms, 5 body builds
+1000-row keyed shuffle + layout: 623.5 ms, 2 body builds
+10000 projected writes + one flush + layout: 13.8 ms, 1 body builds
+Mixed workload: 50/200 operations complete
+Mixed workload: 100/200 operations complete
+Mixed workload: 150/200 operations complete
+Mixed workload: 200/200 operations complete
+200 mixed operations with per-step render + layout: 18257.5 ms, 20,559 body builds
+Filter to zero rows + layout: 588.1 ms, 2 body builds
+Clear filter + remount + layout: 2697.0 ms, 1,002 body builds
+Board unmount + layout: 1037.7 ms, 2 body builds
+Board remount + layout: 3041.2 ms, 1,003 body builds
+Expand recursive tree to depth 24 + layout: 5.9 ms, 26 body builds
+Full host disposal: 123.8 ms, 0 body builds
+Passed 21 stress assertions. Report: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-contrast\stress.json

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="8f7ff1f6-1334-4ad2-8ce3-a8861e387e21" name="iotero@IOTERO-MSI76 2026-10-26 13:21:20" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-26T13:21:20.9267312-04:00" queuing="2026-10-26T13:21:20.9267315-04:00" start="2026-10-26T13:21:19.3243362-04:00" finish="2026-10-26T13:21:20.9318561-04:00" />
+  <TestSettings name="default" id="13b38f16-1c6a-4c59-9c70-7cd5bd88c08a">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-26_13_21_20" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="c282ea09-1ac0-4b64-b018-1595ff842744" testId="2e8403b4-247f-2b5c-ca53-af5defec675d" testName="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" computerName="IOTERO-MSI76" duration="00:00:00.1624301" startTime="2026-10-26T13:21:20.3762941-04:00" endTime="2026-10-26T13:21:20.5389854-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c282ea09-1ac0-4b64-b018-1595ff842744" />
+    <UnitTestResult executionId="3ff166b2-9146-4cc2-baf5-0f1f85f72956" testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" testName="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" computerName="IOTERO-MSI76" duration="00:00:00.5518747" startTime="2026-10-26T13:21:19.8087231-04:00" endTime="2026-10-26T13:21:20.3717805-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ff166b2-9146-4cc2-baf5-0f1f85f72956" />
+    <UnitTestResult executionId="d77e0df7-5058-4577-90f8-1bca77ea67b7" testId="3f411252-ad5a-cdae-3629-9a85233696da" testName="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" computerName="IOTERO-MSI76" duration="00:00:00.0561508" startTime="2026-10-26T13:21:20.6573884-04:00" endTime="2026-10-26T13:21:20.7144626-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d77e0df7-5058-4577-90f8-1bca77ea67b7" />
+    <UnitTestResult executionId="51ef7970-3fd7-4b74-bdb2-1c69eae2e11a" testId="7037388c-b498-2631-05a6-d0b5c652d9e9" testName="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" computerName="IOTERO-MSI76" duration="00:00:00.1177360" startTime="2026-10-26T13:21:20.5394576-04:00" endTime="2026-10-26T13:21:20.6573290-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51ef7970-3fd7-4b74-bdb2-1c69eae2e11a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="2e8403b4-247f-2b5c-ca53-af5defec675d">
+      <Execution id="c282ea09-1ac0-4b64-b018-1595ff842744" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" />
+    </UnitTest>
+    <UnitTest name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="7037388c-b498-2631-05a6-d0b5c652d9e9">
+      <Execution id="51ef7970-3fd7-4b74-bdb2-1c69eae2e11a" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" />
+    </UnitTest>
+    <UnitTest name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3f411252-ad5a-cdae-3629-9a85233696da">
+      <Execution id="d77e0df7-5058-4577-90f8-1bca77ea67b7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" />
+    </UnitTest>
+    <UnitTest name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f05e52c1-d99d-4723-80e0-a8c56b9c102b">
+      <Execution id="3ff166b2-9146-4cc2-baf5-0f1f85f72956" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2e8403b4-247f-2b5c-ca53-af5defec675d" executionId="c282ea09-1ac0-4b64-b018-1595ff842744" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" executionId="3ff166b2-9146-4cc2-baf5-0f1f85f72956" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f411252-ad5a-cdae-3629-9a85233696da" executionId="d77e0df7-5058-4577-90f8-1bca77ea67b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7037388c-b498-2631-05a6-d0b5c652d9e9" executionId="51ef7970-3fd7-4b74-bdb2-1c69eae2e11a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

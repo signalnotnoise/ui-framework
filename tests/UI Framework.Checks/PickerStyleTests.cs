@@ -84,8 +84,8 @@ public sealed class PickerStyleTests
         }
         finally { picker.IsDropDownOpen = false; }
         picker.IsEnabled = false;
-        Assert.AreEqual(0.45, picker.Opacity, 0.001);
-        AssertColor(theme.Ink, picker.Foreground);
+        Assert.AreEqual(1.0, picker.Opacity, 0.001);
+        AssertColor(theme.Muted, picker.Foreground);
         using var other = new ViewHost(() => Picker(["unscoped"], new State<int>(0)));
         Assert.IsFalse(other.Resources.Contains(typeof(ComboBox)));
     });

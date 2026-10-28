@@ -1,6 +1,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Collections.ObjectModel;
+using System.Windows.Automation.Peers;
 
 namespace UI_Framework.Wpf;
 
@@ -34,6 +35,7 @@ internal sealed class VirtualListControl : ItemsControl, IDisposable
         ItemsSource = ordered;
     }
 
+    protected override AutomationPeer OnCreateAutomationPeer() => new VirtualListAutomationPeer(this);
     protected override bool IsItemItsOwnContainerOverride(object item) => false;
     protected override DependencyObject GetContainerForItemOverride() => new VirtualRowPresenter();
     protected override void PrepareContainerForItemOverride(DependencyObject element, object item)

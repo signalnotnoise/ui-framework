@@ -11,7 +11,7 @@ namespace UI_Framework.Wpf;
 /// <summary>Theme-owned visuals around the native non-editable ComboBox behavior.</summary>
 internal static class PickerStyles
 {
-    internal static Style Create(Style style, ThemeTokens theme)
+    internal static Style Create(Style style, ThemeTokens theme, ThemePalette palette)
     {
         var template = new ControlTemplate(typeof(ComboBox));
         var root = new FrameworkElementFactory(typeof(Grid));
@@ -24,7 +24,7 @@ internal static class PickerStyles
         var toggleTemplate = new ControlTemplate(typeof(ToggleButton));
         var chrome = Chrome(theme, "Chrome");
         toggleTemplate.VisualTree = chrome;
-        Trigger(toggleTemplate, ButtonBase.IsPressedProperty, true, Control.BackgroundProperty, Brush(theme.Pressed));
+        Trigger(toggleTemplate, ButtonBase.IsPressedProperty, true, Control.BackgroundProperty, palette[nameof(ThemeTokens.Pressed)]);
         toggle.SetValue(Control.TemplateProperty, toggleTemplate);
         root.AppendChild(toggle);
 
@@ -56,8 +56,8 @@ internal static class PickerStyles
         popup.SetBinding(Popup.PlacementTargetProperty, Parent(""));
         popup.SetBinding(Popup.IsOpenProperty, Parent("IsDropDownOpen"));
         var dropDown = new FrameworkElementFactory(typeof(Border), "DropDownChrome");
-        dropDown.SetValue(Border.BackgroundProperty, Brush(theme.Surface));
-        dropDown.SetValue(Border.BorderBrushProperty, Brush(theme.Border));
+        dropDown.SetValue(Border.BackgroundProperty, palette[nameof(ThemeTokens.Surface)]);
+        dropDown.SetValue(Border.BorderBrushProperty, palette[nameof(ThemeTokens.Border)]);
         dropDown.SetValue(Border.BorderThicknessProperty, new Thickness(1));
         dropDown.SetValue(Border.CornerRadiusProperty, new CornerRadius(theme.ControlRadius));
         dropDown.SetBinding(FrameworkElement.MinWidthProperty, Parent("ActualWidth"));
@@ -71,20 +71,21 @@ internal static class PickerStyles
         popup.AppendChild(dropDown);
         root.AppendChild(popup);
         template.VisualTree = root;
-        Trigger(template, UIElement.IsMouseOverProperty, true, Control.BackgroundProperty, Brush(theme.Hover));
-        Trigger(template, ComboBox.IsDropDownOpenProperty, true, Control.BackgroundProperty, Brush(theme.Pressed));
-        Trigger(template, UIElement.IsKeyboardFocusWithinProperty, true, Control.BorderBrushProperty, Brush(theme.Focus));
-        Trigger(template, UIElement.IsEnabledProperty, false, UIElement.OpacityProperty, 0.45);
+        Trigger(template, UIElement.IsMouseOverProperty, true, Control.BackgroundProperty, palette[nameof(ThemeTokens.Hover)]);
+        Trigger(template, ComboBox.IsDropDownOpenProperty, true, Control.BackgroundProperty, palette[nameof(ThemeTokens.Pressed)]);
+        Trigger(template, UIElement.IsKeyboardFocusWithinProperty, true, Control.BorderBrushProperty, palette[nameof(ThemeTokens.Focus)]);
+        Trigger(template, UIElement.IsEnabledProperty, false, Control.ForegroundProperty, palette[nameof(ThemeTokens.Muted)]);
+        Trigger(template, UIElement.IsEnabledProperty, false, Control.BackgroundProperty, palette[nameof(ThemeTokens.Surface)]);
         style.Setters.Add(new Setter(Control.TemplateProperty, template));
-        style.Setters.Add(new Setter(ItemsControl.ItemContainerStyleProperty, ItemStyle(theme)));
+        style.Setters.Add(new Setter(ItemsControl.ItemContainerStyleProperty, ItemStyle(theme, palette)));
         return style;
     }
 
-    private static Style ItemStyle(ThemeTokens theme)
+    private static Style ItemStyle(ThemeTokens theme, ThemePalette palette)
     {
         var style = new Style(typeof(ComboBoxItem));
-        style.Setters.Add(new Setter(Control.BackgroundProperty, Brush(theme.Surface)));
-        style.Setters.Add(new Setter(Control.ForegroundProperty, Brush(theme.Ink)));
+        style.Setters.Add(new Setter(Control.BackgroundProperty, palette[nameof(ThemeTokens.Surface)]));
+        style.Setters.Add(new Setter(Control.ForegroundProperty, palette[nameof(ThemeTokens.Ink)]));
         style.Setters.Add(new Setter(Control.BorderBrushProperty, Brushes.Transparent));
         style.Setters.Add(new Setter(Control.BorderThicknessProperty, new Thickness(1)));
         style.Setters.Add(new Setter(Control.PaddingProperty, new Thickness(theme.ControlPadding)));
@@ -96,16 +97,17 @@ internal static class PickerStyles
         content.SetValue(ContentPresenter.ContentSourceProperty, "Content");
         chrome.AppendChild(content);
         template.VisualTree = chrome;
-        Trigger(template, ComboBoxItem.IsHighlightedProperty, true, Control.BackgroundProperty, Brush(theme.Hover));
-        Trigger(template, ComboBoxItem.IsSelectedProperty, true, Control.BackgroundProperty, Brush(theme.Accent));
-        Trigger(template, ComboBoxItem.IsSelectedProperty, true, Control.ForegroundProperty, Brush(theme.OnAccent));
+        Trigger(template, ComboBoxItem.IsHighlightedProperty, true, Control.BackgroundProperty, palette[nameof(ThemeTokens.Hover)]);
+        Trigger(template, ComboBoxItem.IsSelectedProperty, true, Control.BackgroundProperty, palette[nameof(ThemeTokens.Accent)]);
+        Trigger(template, ComboBoxItem.IsSelectedProperty, true, Control.ForegroundProperty, palette[nameof(ThemeTokens.OnAccent)]);
         var selectedHighlight = new MultiTrigger();
         selectedHighlight.Conditions.Add(new Condition(ComboBoxItem.IsSelectedProperty, true));
         selectedHighlight.Conditions.Add(new Condition(ComboBoxItem.IsHighlightedProperty, true));
-        selectedHighlight.Setters.Add(new Setter(Control.BackgroundProperty, Brush(theme.AccentHover)));
+        selectedHighlight.Setters.Add(new Setter(Control.BackgroundProperty, palette[nameof(ThemeTokens.AccentHover)]));
         template.Triggers.Add(selectedHighlight);
-        Trigger(template, UIElement.IsKeyboardFocusWithinProperty, true, Control.BorderBrushProperty, Brush(theme.Focus));
-        Trigger(template, UIElement.IsEnabledProperty, false, UIElement.OpacityProperty, 0.45);
+        Trigger(template, UIElement.IsKeyboardFocusWithinProperty, true, Control.BorderBrushProperty, palette[nameof(ThemeTokens.Focus)]);
+        Trigger(template, UIElement.IsEnabledProperty, false, Control.ForegroundProperty, palette[nameof(ThemeTokens.Muted)]);
+        Trigger(template, UIElement.IsEnabledProperty, false, Control.BackgroundProperty, palette[nameof(ThemeTokens.Surface)]);
         style.Setters.Add(new Setter(Control.TemplateProperty, template));
         return style;
     }
@@ -130,10 +132,5 @@ internal static class PickerStyles
         template.Triggers.Add(trigger);
     }
 
-    private static SolidColorBrush Brush(string color)
-    {
-        var brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(color));
-        brush.Freeze();
-        return brush;
-    }
+
 }

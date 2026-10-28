@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\samples\Counter\Counter.csproj (in 100 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\UI Framework\UI Framework.csproj (in 174 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\UI Framework.Wpf\UI Framework.Wpf.csproj (in 174 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006-editor-residual\batched\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.52

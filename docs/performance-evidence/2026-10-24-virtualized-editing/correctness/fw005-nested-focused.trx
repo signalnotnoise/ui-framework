@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="8494ca82-c9d8-48a2-bc41-a5fbcd51ffc0" name="iotero@IOTERO-MSI76 2026-10-24 16:14:17" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-24T16:14:17.0995019-04:00" queuing="2026-10-24T16:14:17.0995023-04:00" start="2026-10-24T16:14:15.5922371-04:00" finish="2026-10-24T16:14:20.0117933-04:00" />
+  <TestSettings name="default" id="82032673-7207-4ca7-9ba5-20fbbb55375e">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-24_16_14_17" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="a7f14329-730e-4610-9d79-902465f3bff5" testId="5bbb6b81-c50b-3232-a8e1-0f936c6fde97" testName="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" computerName="IOTERO-MSI76" duration="00:00:00.0511308" startTime="2026-10-24T16:14:19.7887935-04:00" endTime="2026-10-24T16:14:19.8413379-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7f14329-730e-4610-9d79-902465f3bff5" />
+    <UnitTestResult executionId="d604b1fc-999c-4caf-aa4b-7b26380c891a" testId="d0441333-8363-6d4e-c043-febecea5829b" testName="CompositionProviderFailureStillDetachesEveryRow" computerName="IOTERO-MSI76" duration="00:00:00.0438735" startTime="2026-10-24T16:14:19.6967517-04:00" endTime="2026-10-24T16:14:19.7408131-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d604b1fc-999c-4caf-aa4b-7b26380c891a" />
+    <UnitTestResult executionId="7e5c54c5-171a-4325-90ff-f3909470279b" testId="935c320a-2d56-f857-f92f-277649ef6a86" testName="RegenerationUsesEditorKeysWhenSiblingsReorder" computerName="IOTERO-MSI76" duration="00:00:00.0413692" startTime="2026-10-24T16:14:16.6336311-04:00" endTime="2026-10-24T16:14:16.6752100-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e5c54c5-171a-4325-90ff-f3909470279b" />
+    <UnitTestResult executionId="6c1f50d1-2f86-4508-87c9-44d485bd34c7" testId="20fc006c-6b2e-1fe7-710c-bc996ece72bf" testName="MovingOffscreenRowRetainsVisibleInputs" computerName="IOTERO-MSI76" duration="00:00:00.0250432" startTime="2026-10-24T16:14:17.0124771-04:00" endTime="2026-10-24T16:14:17.0376647-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c1f50d1-2f86-4508-87c9-44d485bd34c7" />
+    <UnitTestResult executionId="cd65731b-dfee-4968-8c96-01c9a86bd264" testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" computerName="IOTERO-MSI76" duration="00:00:00.1424441" startTime="2026-10-24T16:14:16.7144629-04:00" endTime="2026-10-24T16:14:16.8571127-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd65731b-dfee-4968-8c96-01c9a86bd264" />
+    <UnitTestResult executionId="fbffc2cb-3892-40cd-82ad-062db799dc94" testId="0d5896ce-7116-6703-70d8-e071481c1166" testName="RemovedRowCannotRestoreFocusIntoReinsertedKey" computerName="IOTERO-MSI76" duration="00:00:00.0847627" startTime="2026-10-24T16:14:19.6116793-04:00" endTime="2026-10-24T16:14:19.6966561-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fbffc2cb-3892-40cd-82ad-062db799dc94" />
+    <UnitTestResult executionId="6f6b7f11-bb1b-47dd-98d9-b7aff09702ae" testId="1b49d127-ed1e-2e35-4b32-ae54f327effc" testName="ThrowingRowCleanupStillReleasesEveryRealizedIsland" computerName="IOTERO-MSI76" duration="00:00:00.0189460" startTime="2026-10-24T16:14:16.9239807-04:00" endTime="2026-10-24T16:14:16.9430721-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f6b7f11-bb1b-47dd-98d9-b7aff09702ae" />
+    <UnitTestResult executionId="e4613270-f2db-4f1e-af5a-13780700cd72" testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" testName="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" computerName="IOTERO-MSI76" duration="00:00:00.0361043" startTime="2026-10-24T16:14:16.6756190-04:00" endTime="2026-10-24T16:14:16.7144094-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4613270-f2db-4f1e-af5a-13780700cd72" />
+    <UnitTestResult executionId="d0036d00-8909-4365-bffe-ffbb142cf257" testId="d5681cef-ee68-1718-31c1-23962bcae03e" testName="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" computerName="IOTERO-MSI76" duration="00:00:00.0461719" startTime="2026-10-24T16:14:19.7423637-04:00" endTime="2026-10-24T16:14:19.7887199-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0036d00-8909-4365-bffe-ffbb142cf257" />
+    <UnitTestResult executionId="cb4295ef-ecae-478b-9370-beea9014990e" testId="3c94f855-4eca-1211-fc13-a7864ddbb998" testName="RegenerationRestoresSecondEditorAndSelection" computerName="IOTERO-MSI76" duration="00:00:00.5936985" startTime="2026-10-24T16:14:16.0258724-04:00" endTime="2026-10-24T16:14:16.6301118-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb4295ef-ecae-478b-9370-beea9014990e" />
+    <UnitTestResult executionId="db4296be-f5e5-4bb4-a194-b8e18dbba910" testId="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;regenerate&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.5107544" startTime="2026-10-24T16:14:18.1915541-04:00" endTime="2026-10-24T16:14:18.7027082-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db4296be-f5e5-4bb4-a194-b8e18dbba910" />
+    <UnitTestResult executionId="3201c1b1-0fc2-46ff-b0ef-3600b8ce8ae6" testId="01f16d46-6552-ada5-ef27-7e66a5512947" testName="RealWindowRestoresFocusAfterContainerRegeneration" computerName="IOTERO-MSI76" duration="00:00:00.1694365" startTime="2026-10-24T16:14:17.9367364-04:00" endTime="2026-10-24T16:14:18.1063242-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3201c1b1-0fc2-46ff-b0ef-3600b8ce8ae6" />
+    <UnitTestResult executionId="c831ff75-0357-41d0-a4ca-8c469f4f972e" testId="b7baa0fa-de15-557f-f5f8-7cccddc51010" testName="VirtualRowsRequireUniqueKeys" computerName="IOTERO-MSI76" duration="00:00:00.0027644" startTime="2026-10-24T16:14:18.1884833-04:00" endTime="2026-10-24T16:14:18.1915066-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c831ff75-0357-41d0-a4ca-8c469f4f972e" />
+    <UnitTestResult executionId="3d34e650-ef1b-45ef-9abe-0ed7e5562034" testId="3ce164ee-8264-994b-3a02-d47088ed6053" testName="CompletedOrCanceledCompositionIsNotCompletedAgain (False)" computerName="IOTERO-MSI76" duration="00:00:00.0761725" startTime="2026-10-24T16:14:18.8848789-04:00" endTime="2026-10-24T16:14:18.9613597-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d34e650-ef1b-45ef-9abe-0ed7e5562034" />
+    <UnitTestResult executionId="ba180e76-e8a8-46da-957f-ca425b31e3e1" testId="f1d83360-bad2-7961-512f-885259e04069" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;remove&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.0918113" startTime="2026-10-24T16:14:18.7029146-04:00" endTime="2026-10-24T16:14:18.7949835-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba180e76-e8a8-46da-957f-ca425b31e3e1" />
+    <UnitTestResult executionId="0b91d943-9097-428c-bf45-470593f5d6bd" testId="85fd8096-7974-1de7-3633-c6b26e6128e1" testName="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" computerName="IOTERO-MSI76" duration="00:00:00.1177452" startTime="2026-10-24T16:14:19.4936534-04:00" endTime="2026-10-24T16:14:19.6115954-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b91d943-9097-428c-bf45-470593f5d6bd" />
+    <UnitTestResult executionId="f201ba41-7593-456d-b7e8-c4d4f51fc57e" testId="d76be2e4-fde2-5c21-49b6-deafe3ee2c4c" testName="OffscreenInsertAndRemovalRetainVisibleInputs" computerName="IOTERO-MSI76" duration="00:00:00.0406106" startTime="2026-10-24T16:14:16.9716419-04:00" endTime="2026-10-24T16:14:17.0123997-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f201ba41-7593-456d-b7e8-c4d4f51fc57e" />
+    <UnitTestResult executionId="650f8dab-39fe-4764-b5e9-e7b6bf544550" testId="382007ab-bb50-671a-c2d2-7149ea1cb7f0" testName="ThousandRowsMountOnlyViewportAndBuffer" computerName="IOTERO-MSI76" duration="00:00:00.0282955" startTime="2026-10-24T16:14:16.9431367-04:00" endTime="2026-10-24T16:14:16.9715709-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="650f8dab-39fe-4764-b5e9-e7b6bf544550" />
+    <UnitTestResult executionId="42cebe35-aa89-43f1-80dd-4914bf4bf112" testId="50cc3cf4-5f24-37bc-b0cf-47e11298977b" testName="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;dispose&quot;)" computerName="IOTERO-MSI76" duration="00:00:00.0894401" startTime="2026-10-24T16:14:18.7950615-04:00" endTime="2026-10-24T16:14:18.8847616-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42cebe35-aa89-43f1-80dd-4914bf4bf112" />
+    <UnitTestResult executionId="1d98dbbc-b83f-4b20-8ce8-78be3af30006" testId="2618dcf0-f7a9-88df-d1bd-4719cffdaf96" testName="RealWindowRetainsFocusAfterScrollRoundTrip" computerName="IOTERO-MSI76" duration="00:00:00.8046491" startTime="2026-10-24T16:14:17.1318459-04:00" endTime="2026-10-24T16:14:17.9366476-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d98dbbc-b83f-4b20-8ce8-78be3af30006" />
+    <UnitTestResult executionId="daf1eb81-907f-45a4-85db-d0791b0673ce" testId="be16aaa9-ddc0-b2eb-51b9-338833c89c93" testName="CompletedOrCanceledCompositionIsNotCompletedAgain (True)" computerName="IOTERO-MSI76" duration="00:00:00.0512601" startTime="2026-10-24T16:14:18.9614459-04:00" endTime="2026-10-24T16:14:19.0129608-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="daf1eb81-907f-45a4-85db-d0791b0673ce" />
+    <UnitTestResult executionId="56b8b750-b464-434c-a663-3132cd218b00" testId="fb7bfcfc-79a0-4e9f-428b-ece9deb9b93a" testName="ScrollingRestoresLocalStateAndReleasesObservers" computerName="IOTERO-MSI76" duration="00:00:00.0679165" startTime="2026-10-24T16:14:17.0637143-04:00" endTime="2026-10-24T16:14:17.1317765-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="56b8b750-b464-434c-a663-3132cd218b00" />
+    <UnitTestResult executionId="7db1d3d7-927f-454f-8c90-f19d46dbae03" testId="64252cf5-e88f-18df-7c7a-0ecdf6d43717" testName="VisibleMoveRetainsUnaffectedRowControls" computerName="IOTERO-MSI76" duration="00:00:00.0427957" startTime="2026-10-24T16:14:18.1063975-04:00" endTime="2026-10-24T16:14:18.1493277-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7db1d3d7-927f-454f-8c90-f19d46dbae03" />
+    <UnitTestResult executionId="d3ed42c8-dd3a-46f2-bd5d-d9f7513d11a4" testId="38352eb9-6f02-bd58-8ff4-6406f85b96ce" testName="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" computerName="IOTERO-MSI76" duration="00:00:00.4801933" startTime="2026-10-24T16:14:19.0130426-04:00" endTime="2026-10-24T16:14:19.4935205-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3ed42c8-dd3a-46f2-bd5d-d9f7513d11a4" />
+    <UnitTestResult executionId="df973524-f340-407a-989c-81a418f6cd5d" testId="6d580d1e-a68e-e331-e8fa-8ce39f58414f" testName="NativeRowsReleaseOnRecycleAndRecreateFromApplicationState" computerName="IOTERO-MSI76" duration="00:00:00.0665501" startTime="2026-10-24T16:14:16.8571863-04:00" endTime="2026-10-24T16:14:16.9239030-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df973524-f340-407a-989c-81a418f6cd5d" />
+    <UnitTestResult executionId="6583e85a-2c85-4b80-9ef4-a7594a8d087f" testId="ae2fb243-731a-12c9-d8df-111577a1f59e" testName="RemovedKeyGetsFreshStateOnReinsertion" computerName="IOTERO-MSI76" duration="00:00:00.0388796" startTime="2026-10-24T16:14:18.1493926-04:00" endTime="2026-10-24T16:14:18.1884203-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6583e85a-2c85-4b80-9ef4-a7594a8d087f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7">
+      <Execution id="e4613270-f2db-4f1e-af5a-13780700cd72" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+    <UnitTest name="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d5681cef-ee68-1718-31c1-23962bcae03e">
+      <Execution id="d0036d00-8909-4365-bffe-ffbb142cf257" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="NestedRowsHaveOneCompositionOwnerEvenWhenProviderFails" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;remove&quot;)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f1d83360-bad2-7961-512f-885259e04069">
+      <Execution id="ba180e76-e8a8-46da-957f-ca425b31e3e1" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="VisibleMoveRetainsUnaffectedRowControls" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="64252cf5-e88f-18df-7c7a-0ecdf6d43717">
+      <Execution id="7db1d3d7-927f-454f-8c90-f19d46dbae03" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="VisibleMoveRetainsUnaffectedRowControls" />
+    </UnitTest>
+    <UnitTest name="ThousandRowsMountOnlyViewportAndBuffer" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="382007ab-bb50-671a-c2d2-7149ea1cb7f0">
+      <Execution id="650f8dab-39fe-4764-b5e9-e7b6bf544550" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="ThousandRowsMountOnlyViewportAndBuffer" />
+    </UnitTest>
+    <UnitTest name="RegenerationUsesEditorKeysWhenSiblingsReorder" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="935c320a-2d56-f857-f92f-277649ef6a86">
+      <Execution id="7e5c54c5-171a-4325-90ff-f3909470279b" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="RegenerationUsesEditorKeysWhenSiblingsReorder" />
+    </UnitTest>
+    <UnitTest name="CompletedOrCanceledCompositionIsNotCompletedAgain (False)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3ce164ee-8264-994b-3a02-d47088ed6053">
+      <Execution id="3d34e650-ef1b-45ef-9abe-0ed7e5562034" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompletedOrCanceledCompositionIsNotCompletedAgain" />
+    </UnitTest>
+    <UnitTest name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow (True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b3430cf0-8265-f4f8-7ba0-2f97b75069fb">
+      <Execution id="cd65731b-dfee-4968-8c96-01c9a86bd264" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="QueuedFocusRestorationRespectsFocusMovedOutsideTheRow" />
+    </UnitTest>
+    <UnitTest name="RemovedKeyGetsFreshStateOnReinsertion" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="ae2fb243-731a-12c9-d8df-111577a1f59e">
+      <Execution id="6583e85a-2c85-4b80-9ef4-a7594a8d087f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="RemovedKeyGetsFreshStateOnReinsertion" />
+    </UnitTest>
+    <UnitTest name="ThrowingRowCleanupStillReleasesEveryRealizedIsland" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="1b49d127-ed1e-2e35-4b32-ae54f327effc">
+      <Execution id="6f6b7f11-bb1b-47dd-98d9-b7aff09702ae" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="ThrowingRowCleanupStillReleasesEveryRealizedIsland" />
+    </UnitTest>
+    <UnitTest name="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="5bbb6b81-c50b-3232-a8e1-0f936c6fde97">
+      <Execution id="a7f14329-730e-4610-9d79-902465f3bff5" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="InnerRowRemovalCompletesCompositionWhileOuterRowRemains" />
+    </UnitTest>
+    <UnitTest name="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="38352eb9-6f02-bd58-8ff4-6406f85b96ce">
+      <Execution id="d3ed42c8-dd3a-46f2-bd5d-d9f7513d11a4" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="ActualScrollingRecyclesEditorsWithoutRedirectingLateInput" />
+    </UnitTest>
+    <UnitTest name="VirtualRowsRequireUniqueKeys" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="b7baa0fa-de15-557f-f5f8-7cccddc51010">
+      <Execution id="c831ff75-0357-41d0-a4ca-8c469f4f972e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="VirtualRowsRequireUniqueKeys" />
+    </UnitTest>
+    <UnitTest name="CompositionProviderFailureStillDetachesEveryRow" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d0441333-8363-6d4e-c043-febecea5829b">
+      <Execution id="d604b1fc-999c-4caf-aa4b-7b26380c891a" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionProviderFailureStillDetachesEveryRow" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;dispose&quot;)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="50cc3cf4-5f24-37bc-b0cf-47e11298977b">
+      <Execution id="42cebe35-aa89-43f1-80dd-4914bf4bf112" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="ScrollingRestoresLocalStateAndReleasesObservers" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="fb7bfcfc-79a0-4e9f-428b-ece9deb9b93a">
+      <Execution id="56b8b750-b464-434c-a663-3132cd218b00" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="ScrollingRestoresLocalStateAndReleasesObservers" />
+    </UnitTest>
+    <UnitTest name="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="85fd8096-7974-1de7-3633-c6b26e6128e1">
+      <Execution id="0b91d943-9097-428c-bf45-470593f5d6bd" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling" />
+    </UnitTest>
+    <UnitTest name="RegenerationRestoresSecondEditorAndSelection" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3c94f855-4eca-1211-fc13-a7864ddbb998">
+      <Execution id="cb4295ef-ecae-478b-9370-beea9014990e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="RegenerationRestoresSecondEditorAndSelection" />
+    </UnitTest>
+    <UnitTest name="CompositionFinishesOnOriginalBindingBeforeDetachment (&quot;regenerate&quot;)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b">
+      <Execution id="db4296be-f5e5-4bb4-a194-b8e18dbba910" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompositionFinishesOnOriginalBindingBeforeDetachment" />
+    </UnitTest>
+    <UnitTest name="MovingOffscreenRowRetainsVisibleInputs" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="20fc006c-6b2e-1fe7-710c-bc996ece72bf">
+      <Execution id="6c1f50d1-2f86-4508-87c9-44d485bd34c7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="MovingOffscreenRowRetainsVisibleInputs" />
+    </UnitTest>
+    <UnitTest name="CompletedOrCanceledCompositionIsNotCompletedAgain (True)" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="be16aaa9-ddc0-b2eb-51b9-338833c89c93">
+      <Execution id="daf1eb81-907f-45a4-85db-d0791b0673ce" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="CompletedOrCanceledCompositionIsNotCompletedAgain" />
+    </UnitTest>
+    <UnitTest name="RealWindowRestoresFocusAfterContainerRegeneration" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="01f16d46-6552-ada5-ef27-7e66a5512947">
+      <Execution id="3201c1b1-0fc2-46ff-b0ef-3600b8ce8ae6" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="RealWindowRestoresFocusAfterContainerRegeneration" />
+    </UnitTest>
+    <UnitTest name="RemovedRowCannotRestoreFocusIntoReinsertedKey" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="0d5896ce-7116-6703-70d8-e071481c1166">
+      <Execution id="fbffc2cb-3892-40cd-82ad-062db799dc94" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizedEditingTests" name="RemovedRowCannotRestoreFocusIntoReinsertedKey" />
+    </UnitTest>
+    <UnitTest name="RealWindowRetainsFocusAfterScrollRoundTrip" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="2618dcf0-f7a9-88df-d1bd-4719cffdaf96">
+      <Execution id="1d98dbbc-b83f-4b20-8ce8-78be3af30006" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="RealWindowRetainsFocusAfterScrollRoundTrip" />
+    </UnitTest>
+    <UnitTest name="NativeRowsReleaseOnRecycleAndRecreateFromApplicationState" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="6d580d1e-a68e-e331-e8fa-8ce39f58414f">
+      <Execution id="df973524-f340-407a-989c-81a418f6cd5d" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="NativeRowsReleaseOnRecycleAndRecreateFromApplicationState" />
+    </UnitTest>
+    <UnitTest name="OffscreenInsertAndRemovalRetainVisibleInputs" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d76be2e4-fde2-5c21-49b6-deafe3ee2c4c">
+      <Execution id="f201ba41-7593-456d-b7e8-c4d4f51fc57e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="VirtualizationTests" name="OffscreenInsertAndRemovalRetainVisibleInputs" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5bbb6b81-c50b-3232-a8e1-0f936c6fde97" executionId="a7f14329-730e-4610-9d79-902465f3bff5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0441333-8363-6d4e-c043-febecea5829b" executionId="d604b1fc-999c-4caf-aa4b-7b26380c891a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="935c320a-2d56-f857-f92f-277649ef6a86" executionId="7e5c54c5-171a-4325-90ff-f3909470279b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20fc006c-6b2e-1fe7-710c-bc996ece72bf" executionId="6c1f50d1-2f86-4508-87c9-44d485bd34c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3430cf0-8265-f4f8-7ba0-2f97b75069fb" executionId="cd65731b-dfee-4968-8c96-01c9a86bd264" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d5896ce-7116-6703-70d8-e071481c1166" executionId="fbffc2cb-3892-40cd-82ad-062db799dc94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b49d127-ed1e-2e35-4b32-ae54f327effc" executionId="6f6b7f11-bb1b-47dd-98d9-b7aff09702ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fd06ff8-6ecc-43d8-9d6e-e4a5d730d2f7" executionId="e4613270-f2db-4f1e-af5a-13780700cd72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5681cef-ee68-1718-31c1-23962bcae03e" executionId="d0036d00-8909-4365-bffe-ffbb142cf257" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c94f855-4eca-1211-fc13-a7864ddbb998" executionId="cb4295ef-ecae-478b-9370-beea9014990e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6cb3aac-08bd-7064-8781-c5cfe76e4c2b" executionId="db4296be-f5e5-4bb4-a194-b8e18dbba910" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01f16d46-6552-ada5-ef27-7e66a5512947" executionId="3201c1b1-0fc2-46ff-b0ef-3600b8ce8ae6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7baa0fa-de15-557f-f5f8-7cccddc51010" executionId="c831ff75-0357-41d0-a4ca-8c469f4f972e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ce164ee-8264-994b-3a02-d47088ed6053" executionId="3d34e650-ef1b-45ef-9abe-0ed7e5562034" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1d83360-bad2-7961-512f-885259e04069" executionId="ba180e76-e8a8-46da-957f-ca425b31e3e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85fd8096-7974-1de7-3633-c6b26e6128e1" executionId="0b91d943-9097-428c-bf45-470593f5d6bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d76be2e4-fde2-5c21-49b6-deafe3ee2c4c" executionId="f201ba41-7593-456d-b7e8-c4d4f51fc57e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="382007ab-bb50-671a-c2d2-7149ea1cb7f0" executionId="650f8dab-39fe-4764-b5e9-e7b6bf544550" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50cc3cf4-5f24-37bc-b0cf-47e11298977b" executionId="42cebe35-aa89-43f1-80dd-4914bf4bf112" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2618dcf0-f7a9-88df-d1bd-4719cffdaf96" executionId="1d98dbbc-b83f-4b20-8ce8-78be3af30006" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be16aaa9-ddc0-b2eb-51b9-338833c89c93" executionId="daf1eb81-907f-45a4-85db-d0791b0673ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb7bfcfc-79a0-4e9f-428b-ece9deb9b93a" executionId="56b8b750-b464-434c-a663-3132cd218b00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64252cf5-e88f-18df-7c7a-0ecdf6d43717" executionId="7db1d3d7-927f-454f-8c90-f19d46dbae03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38352eb9-6f02-bd58-8ff4-6406f85b96ce" executionId="d3ed42c8-dd3a-46f2-bd5d-d9f7513d11a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d580d1e-a68e-e331-e8fa-8ce39f58414f" executionId="df973524-f340-407a-989c-81a418f6cd5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae2fb243-731a-12c9-d8df-111577a1f59e" executionId="6583e85a-2c85-4b80-9ef4-a7594a8d087f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="26" executed="26" passed="26" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

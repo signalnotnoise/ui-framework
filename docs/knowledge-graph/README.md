@@ -127,6 +127,55 @@ by default. Arrow keys pan; plus/minus zoom; Home fits. The native selector and 
 remain usable without WebGL. Three.js and its MIT license are pinned locally and embedded
 in HTML, so no server or CDN is required. For large maps, prefer the query interface.
 
+## Visual Git history
+
+Export an offline history-enabled viewer from the repository root:
+
+```powershell
+python scripts/export-knowledge-graph-history.py --worktree --force
+Invoke-Item -LiteralPath ".\artifacts\knowledge-graph-history\graph.html"
+```
+
+The standalone HTML already contains Git data. Alternatively, refresh the
+tracked `graph.html`, click **Load history JSON**, and choose
+`artifacts/knowledge-graph-history/graph.history.json`.
+
+- Select a file to see touching commits in the right-hand history panel.
+  Select a concept to correlate commits with its curated source paths.
+- Click a timeline commit to highlight its changes against its first parent.
+  Green means added, red removed, gold modified. Removed files remain selectable;
+  source/relationship evidence stays available in the inspector.
+- Select **From revision** and **To revision**, then **Compare revisions**, to
+  see file content/metadata changes and added, removed or changed relationship
+  evidence. Repeated references between the same pair of files remain distinct.
+  Unchanged files keep stable layout positions across the exported revisions.
+- **Changes and connected context only** narrows the canvas to changed nodes
+  and one-hop syntax/curated neighbors. These are candidate relationships,
+  not proof of runtime impact. **Current snapshot** restores the initial view.
+
+The export defaults to eight recent **first-parent** commits plus their parent
+snapshots; `--limit 20` expands the window (hard maximum 20). File history is
+limited to that window; renames follow Git heuristics. Merge changes are compared
+with the first parent, not every merged branch. Missing shallow-clone parents
+are labeled unavailable rather than fabricated as empty trees. No fetch occurs.
+Both initial commit-tree export and `--worktree` preview are supported; the
+banner distinguishes uncommitted edits from actual commits.
+
+History is separate from the canonical schema-v2 file graph. The tracked graph
+contains no enclosing commit ID; snapshots are reconstructed with the installed
+extractor, using disposable Git-directory caches. Exported HTML/JSON live in
+ignored artifacts (or an explicitly named path outside the repository), never
+overwrite tracked sources, and do not update automatically. Rerun the export
+after commits or relevant edits. The bundle cap is 64 MiB; revision frames are
+limited to 30,000 nodes and 150,000 edges. Oversized exports fail explicitly
+without writing partial views. No server, CDN, browser extension or network
+connection is needed. Commit messages and paths are displayed as text.
+
+Python fixtures cover export and Git behavior. If Node.js is available, the
+suite also tests the comparison model and actual viewer handlers in a DOM
+fixture with real embedded Three.js and no WebGL. This is not a visual browser
+inspection. The local-file URL policy currently prevents agent browser review.
+
 ## Preserved UI Framework adapters
 
 The generated file graph is schema v2. `docs/knowledge-graph.json` remains the

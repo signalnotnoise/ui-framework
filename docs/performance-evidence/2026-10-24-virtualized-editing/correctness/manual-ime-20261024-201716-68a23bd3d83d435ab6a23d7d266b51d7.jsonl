@@ -1,0 +1,5 @@
+{"utc":"2026-10-24T20:17:17.0633226Z","kind":"environment","detail":{"runtime":"10.0.13","os":"Microsoft Windows NT 10.0.26200.0","language":"en-US","smoke":true,"coreSha256":"8C490FF6F33A4F85F0873B3DA40470F99998C4910A4CD77AEA136A1F2AE08999","wpfSha256":"44B35EADF88E22FDE4DEE42EC366CC1773FDD022EB0ED7512C93F5F0D22B0B71"}}
+{"utc":"2026-10-24T20:17:17.1493483Z","kind":"reset","detail":null}
+{"utc":"2026-10-24T20:17:17.2553451Z","kind":"binding-write","detail":{"id":0,"text":"smoke edit"}}
+{"utc":"2026-10-24T20:17:17.2905401Z","kind":"smoke-passed","detail":"Window/binding/regeneration/scroll setup only; physical IME was not tested."}
+{"utc":"2026-10-24T20:17:17.3013112Z","kind":"closed","detail":null}

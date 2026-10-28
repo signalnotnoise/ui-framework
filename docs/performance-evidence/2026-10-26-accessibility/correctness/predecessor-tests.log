@@ -1,0 +1,62 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow [544 ms]
+  Error Message:
+   Assert.IsNotNull failed. 
+  Stack Trace:
+     at AccessibilityAcceptanceTests.<>c.<VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow>b__0_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 34
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 16
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse [121 ms]
+  Error Message:
+   Assert.IsNotNull failed. 
+  Stack Trace:
+     at AccessibilityAcceptanceTests.<>c.<VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse>b__1_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 60
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 48
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder [88 ms]
+  Error Message:
+   Assert.IsInstanceOfType failed.  Expected type:<System.Windows.Controls.Button>. Actual type:<UI_Framework.Wpf.VirtualRowPresenter>.
+  Stack Trace:
+     at AccessibilityAcceptanceTests.<>c.<KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder>b__3_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 133
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.KeyboardTraversalReachesRowsBeyondTheInitialViewportInOrder() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 118
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+  Failed RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates [162 ms]
+  Error Message:
+   Test method AccessibilityAcceptanceTests.RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates threw exception: 
+System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+  Stack Trace:
+      at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Func`2 predicate, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at AccessibilityAcceptanceTests.<>c.<RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates>b__4_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 176
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at AccessibilityAcceptanceTests.RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 151
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\fw006-predecessor-five.trx
+
+Failed!  - Failed:     4, Passed:     1, Skipped:     0, Total:     5, Duration: 1 s - UI Framework.Checks.dll (net10.0)

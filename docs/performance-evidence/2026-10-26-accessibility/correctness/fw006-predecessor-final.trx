@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="e6614a19-3864-4910-ab48-7210180fe688" name="iotero@IOTERO-MSI76 2026-10-26 13:22:13" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-26T13:22:13.4431384-04:00" queuing="2026-10-26T13:22:13.4431387-04:00" start="2026-10-26T13:22:11.5061956-04:00" finish="2026-10-26T13:22:13.4485919-04:00" />
+  <TestSettings name="default" id="8293e9cd-3922-4dbf-aae0-4dae634efbe7">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-10-26_13_22_13" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="02c4df36-91ab-4d62-bbfc-34711c314fd9" testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" testName="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" computerName="IOTERO-MSI76" duration="00:00:00.6350256" startTime="2026-10-26T13:22:11.9717356-04:00" endTime="2026-10-26T13:22:12.6188803-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02c4df36-91ab-4d62-bbfc-34711c314fd9">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNotNull failed. </Message>
+          <StackTrace>   at AccessibilityAcceptanceTests.&lt;&gt;c.&lt;VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow&gt;b__0_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 34&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at AccessibilityAcceptanceTests.VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 16&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bfc11a0a-67d0-4eef-927f-eaea854eca4f" testId="3f411252-ad5a-cdae-3629-9a85233696da" testName="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" computerName="IOTERO-MSI76" duration="00:00:00.1781643" startTime="2026-10-26T13:22:13.0603941-04:00" endTime="2026-10-26T13:22:13.2395174-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfc11a0a-67d0-4eef-927f-eaea854eca4f" />
+    <UnitTestResult executionId="12966eae-b2ad-411d-ad27-e8e70c22800f" testId="7037388c-b498-2631-05a6-d0b5c652d9e9" testName="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" computerName="IOTERO-MSI76" duration="00:00:00.1296362" startTime="2026-10-26T13:22:12.9305181-04:00" endTime="2026-10-26T13:22:13.0603201-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12966eae-b2ad-411d-ad27-e8e70c22800f" />
+    <UnitTestResult executionId="5058163d-84d7-445e-8a7d-11f2412fc09d" testId="2e8403b4-247f-2b5c-ca53-af5defec675d" testName="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" computerName="IOTERO-MSI76" duration="00:00:00.3064580" startTime="2026-10-26T13:22:12.6234469-04:00" endTime="2026-10-26T13:22:12.9300833-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5058163d-84d7-445e-8a7d-11f2412fc09d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNotNull failed. </Message>
+          <StackTrace>   at AccessibilityAcceptanceTests.&lt;&gt;c.&lt;VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse&gt;b__1_0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 60&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at AccessibilityAcceptanceTests.VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse() in C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\AccessibilityAcceptanceTests.cs:line 48&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw006\predecessor\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="2e8403b4-247f-2b5c-ca53-af5defec675d">
+      <Execution id="5058163d-84d7-445e-8a7d-11f2412fc09d" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualDiscoveryUsesCurrentNamesAfterReorderRemovalAndKeyReuse" />
+    </UnitTest>
+    <UnitTest name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw006\predecessor\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="7037388c-b498-2631-05a6-d0b5c652d9e9">
+      <Execution id="12966eae-b2ad-411d-ad27-e8e70c22800f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="KeyboardTraversalSkipsDisabledControlsAndSurvivesThemeReplacement" />
+    </UnitTest>
+    <UnitTest name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw006\predecessor\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="3f411252-ad5a-cdae-3629-9a85233696da">
+      <Execution id="bfc11a0a-67d0-4eef-927f-eaea854eca4f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="RetainedPeersReportCurrentEnabledReadOnlyAndSelectionStates" />
+    </UnitTest>
+    <UnitTest name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" storage="c:\users\iotero\dev\personal\ui framework\artifacts\fw006\predecessor\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f05e52c1-d99d-4723-80e0-a8c56b9c102b">
+      <Execution id="02c4df36-91ab-4d62-bbfc-34711c314fd9" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw006\predecessor\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="AccessibilityAcceptanceTests" name="VirtualListExposesDiscoveryAndRealizesOffscreenRowWithoutMountingEveryRow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f05e52c1-d99d-4723-80e0-a8c56b9c102b" executionId="02c4df36-91ab-4d62-bbfc-34711c314fd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f411252-ad5a-cdae-3629-9a85233696da" executionId="bfc11a0a-67d0-4eef-927f-eaea854eca4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7037388c-b498-2631-05a6-d0b5c652d9e9" executionId="12966eae-b2ad-411d-ad27-e8e70c22800f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e8403b4-247f-2b5c-ca53-af5defec675d" executionId="5058163d-84d7-445e-8a7d-11f2412fc09d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="2" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

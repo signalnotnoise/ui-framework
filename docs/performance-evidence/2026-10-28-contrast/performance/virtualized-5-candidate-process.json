@@ -1,0 +1,7 @@
+{
+  "scenario": "virtualized",
+  "sample": 5,
+  "side": "candidate",
+  "wallSeconds": 1.8777597,
+  "cpuSeconds": 1.71875
+}

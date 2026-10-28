@@ -8,6 +8,12 @@ namespace UI_Framework.Wpf;
 
 public sealed class ViewHost : ContentControl, IDisposable
 {
+    static ViewHost()
+    {
+        FocusableProperty.OverrideMetadata(typeof(ViewHost), new FrameworkPropertyMetadata(false));
+        IsTabStopProperty.OverrideMetadata(typeof(ViewHost), new FrameworkPropertyMetadata(false));
+    }
+
     private static readonly bool ignoreMemo = AppContext.TryGetSwitch("UI_Framework.IgnoreMemo", out var enabled) && enabled;
     private readonly ViewSession session;
     private Node? root;

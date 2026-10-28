@@ -1,0 +1,7 @@
+{
+  "scenario": "virtualized",
+  "sample": 0,
+  "side": "baseline",
+  "wallSeconds": 1.8966594,
+  "cpuSeconds": 1.71875
+}

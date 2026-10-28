@@ -1,0 +1,26 @@
+{
+  "kind": "diagnostic-phase-comparison-not-release-gate",
+  "samples": 3,
+  "medians": {
+    "current": {
+      "HostBytes": 12865888,
+      "AttachBytes": 53457928,
+      "ThemeBytes": 15008424,
+      "LayoutBytes": 47633672,
+      "MountAllocatedBytes": 128968632,
+      "MountMilliseconds": 2480.5024,
+      "AllocatedBytes": 1123201552,
+      "Milliseconds": 7913.4842
+    },
+    "batched": {
+      "HostBytes": 12878224,
+      "AttachBytes": 53458224,
+      "ThemeBytes": 7529240,
+      "LayoutBytes": 47639352,
+      "MountAllocatedBytes": 121505040,
+      "MountMilliseconds": 2514.5745,
+      "AllocatedBytes": 1123289456,
+      "Milliseconds": 8497.199
+    }
+  }
+}

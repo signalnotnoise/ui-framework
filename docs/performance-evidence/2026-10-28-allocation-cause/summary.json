@@ -1,0 +1,74 @@
+{
+  "kind": "diagnostic-only-live-colors-disabled-in-frozen-arm",
+  "samples": 3,
+  "warmups": 1,
+  "releaseEligible": false,
+  "metrics": {
+    "full-list": {
+      "MountAllocatedBytes": {
+        "live": 333194200,
+        "frozen": 333082688,
+        "deltaPercent": -0.03346756936345452
+      },
+      "AllocatedBytes": {
+        "live": 467603272,
+        "frozen": 467177040,
+        "deltaPercent": -0.09115248449330648
+      },
+      "MountMilliseconds": {
+        "live": 4164.9287,
+        "frozen": 4002.1132,
+        "deltaPercent": -3.9092025753046045
+      },
+      "Milliseconds": {
+        "live": 3090.6332,
+        "frozen": 3160.2605,
+        "deltaPercent": 2.2528490278302726
+      }
+    },
+    "themed-full-list": {
+      "MountAllocatedBytes": {
+        "live": 356124384,
+        "frozen": 321563248,
+        "deltaPercent": -9.704793480246499
+      },
+      "AllocatedBytes": {
+        "live": 487285664,
+        "frozen": 461033024,
+        "deltaPercent": -5.387525621931699
+      },
+      "MountMilliseconds": {
+        "live": 4125.3884,
+        "frozen": 4231.3837,
+        "deltaPercent": 2.56934110737308
+      },
+      "Milliseconds": {
+        "live": 3659.0929,
+        "frozen": 3402.5407,
+        "deltaPercent": -7.011360657172716
+      }
+    },
+    "layout-editors": {
+      "MountAllocatedBytes": {
+        "live": 134880792,
+        "frozen": 128945920,
+        "deltaPercent": -4.400086855954999
+      },
+      "AllocatedBytes": {
+        "live": 1134322096,
+        "frozen": 1123347352,
+        "deltaPercent": -0.967515667613339
+      },
+      "MountMilliseconds": {
+        "live": 2004.9297,
+        "frozen": 1931.6679,
+        "deltaPercent": -3.6540832329432837
+      },
+      "Milliseconds": {
+        "live": 8711.5339,
+        "frozen": 7663.2279,
+        "deltaPercent": -12.03354095884308
+      }
+    }
+  }
+}

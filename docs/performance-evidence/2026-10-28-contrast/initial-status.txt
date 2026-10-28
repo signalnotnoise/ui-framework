@@ -1,0 +1,35 @@
+ M CHANGELOG.md
+ M README.md
+ M "UI Framework.Wpf/ViewHost.cs"
+ M "UI Framework.Wpf/Virtualization/RowFocusSnapshot.cs"
+ M "UI Framework.Wpf/Virtualization/VirtualListControl.cs"
+ M "UI Framework.Wpf/Virtualization/VirtualRowPresenter.cs"
+ M docs/accessibility.md
+ M docs/api-contract.md
+ M docs/backlog.md
+ M docs/knowledge-graph.json
+ M docs/knowledge-graph.md
+ M docs/knowledge-graph/README.md
+ M docs/knowledge-graph/graph.html
+ M docs/knowledge-graph/graph.json
+ M docs/roadmap.md
+ M docs/virtualization.md
+ M scripts/knowledge-graph.html
+ M scripts/test-knowledge-graph.py
+ M scripts/update-knowledge-graph.py
+ M "tests/UI Framework.Checks/VirtualizationTests.cs"
+?? "UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs"
+?? "UI Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs"
+?? docs/accessibility-2026-10-26.md
+?? docs/knowledge-graph/validation/2026-10-27.md
+?? docs/performance-evidence/2026-10-24-virtualized-editing/
+?? docs/performance-evidence/2026-10-26-accessibility/
+?? docs/virtualized-editing-2026-10-24.md
+?? scripts/export-knowledge-graph-history.py
+?? scripts/knowledge-graph-history.js
+?? scripts/test-knowledge-graph-viewer.cjs
+?? "tests/UI Framework.Checks/AccessibilityAcceptanceTests.cs"
+?? "tests/UI Framework.Checks/Probes/TrackedTextComposition.cs"
+?? "tests/UI Framework.Checks/VirtualizedEditingTests.cs"
+?? tools/AccessibilityAcceptance/
+?? tools/VirtualizedEditingAcceptance/

@@ -1,0 +1,1 @@
+PASS: interleaved sampler/GC pauses stay separate, events sort, phase intervals clip and incomplete suspensions remain visible
