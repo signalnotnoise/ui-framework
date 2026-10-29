@@ -1,0 +1,8 @@
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-initial\tests\final.trx
+
+Passed!  - Failed:     0, Passed:   148, Skipped:     0, Total:   148, Duration: 7 s - UI Framework.Checks.dll (net10.0)

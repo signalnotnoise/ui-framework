@@ -17,6 +17,21 @@ internal sealed class VirtualRowPresenter : ContentControl
     private Exception? compositionFailure;
     private bool completingComposition;
 
+    // A move may detach this presenter before WPF asks us to release it. Only
+    // inactive trees may take that path; nested rows own their own compositions.
+    internal bool CanMoveOutsideViewport => !HasPendingInteraction(this);
+
+    private static bool HasPendingInteraction(DependencyObject element)
+    {
+        if (element is UIElement { IsKeyboardFocusWithin: true } or UIElement { IsMouseCaptureWithin: true }) return true;
+        if (element is VirtualRowPresenter presenter && (presenter.composition is not null
+            || presenter.compositionFailure is not null || presenter.completingComposition
+            || presenter.focusOperation is not null)) return true;
+        for (var i = 0; i < VisualTreeHelper.GetChildrenCount(element); i++)
+            if (HasPendingInteraction(VisualTreeHelper.GetChild(element, i))) return true;
+        return false;
+    }
+
     static VirtualRowPresenter()
     {
         // This is a lifetime wrapper, not an actionable keyboard destination.

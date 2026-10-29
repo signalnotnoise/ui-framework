@@ -1,0 +1,26 @@
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\tools\KeyedShuffleDiagnostics\KeyedShuffleDiagnostics.csproj (in 235 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\UI Framework\UI Framework.csproj (in 467 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\UI Framework.Wpf\UI Framework.Wpf.csproj (in 468 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  KeyedShuffleDiagnostics -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\baseline\tools\KeyedShuffleDiagnostics\bin\Release\net10.0-windows\KeyedShuffleDiagnostics.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.43
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\tools\KeyedShuffleDiagnostics\KeyedShuffleDiagnostics.csproj (in 109 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\UI Framework\UI Framework.csproj (in 190 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\UI Framework.Wpf\UI Framework.Wpf.csproj (in 190 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  KeyedShuffleDiagnostics -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-pairs\candidate-source\tools\KeyedShuffleDiagnostics\bin\Release\net10.0-windows\KeyedShuffleDiagnostics.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.04

@@ -1,0 +1,1 @@
+{"count":1000,"scenario":"rotate","milliseconds":3.7412,"allocated":1261648,"moves":999,"inserts":0,"removes":0,"resets":0,"scope":"Detached logical collection only; excludes realization/layout; not a release gate","runtime":"10.0.13"}

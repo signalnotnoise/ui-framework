@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: October 28, 2026.
+Last updated: October 29, 2026.
 
 Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
 both hosted workflows passed (146 tests, 32 performance gates each). A fresh
@@ -28,7 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 | ---: | --- | --- | --- | --- |
 | 1 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Awaiting physical IME acceptance |
 | 2 | FW-006 | P1 | Expand UI Automation and accessibility coverage | In progress |
-| 3 | FW-007 | P2 | Improve large keyed shuffles | Open |
+| 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
 | 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
 | 6 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
@@ -46,7 +46,7 @@ checks. Previously published alpha.5 evidence remains preserved. P1 addresses kn
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
 implementation. Proposed and Investigation items do not commit to a new API.
 
-## Draft v1 scope — October 23, 2026
+## Draft v1 scope â€” October 23, 2026
 
 Proposed direction for discussion: a stable declarative C# UI layer for Windows
 and WPF, with retained components, predictable state/bindings, workspace layout,
@@ -56,7 +56,7 @@ This is a scope proposal, not a v1 readiness claim or an implementation commitme
 Candidate release requirements: explain and control performance variability
 (FW-003/004/007), define editing and IME behavior during recycling (FW-005),
 verify keyboard/UI Automation and assistive-technology behavior (FW-006),
-and establish API, visual, diagnostic and adoption contracts (FW-016–019).
+and establish API, visual, diagnostic and adoption contracts (FW-016â€“019).
 Existing successful alpha.5 gates remain valid evidence for that preview;
 they do not establish all of these broader guarantees.
 
@@ -76,14 +76,14 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 
 | Contract / backlog | Workload | Required outcome | Evidence / current gap | Owner role |
 | --- | --- | --- | --- | --- |
-| API and compatibility — FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; binary upgrade/RC platform acceptance remains FW-019 | Core/API maintainer |
-| Performance — FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. Keyed shuffles and broader memory/startup acceptance remain open | Performance maintainer |
-| Virtualized editing — FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. Physical IME acceptance pending | Codex / WPF/input maintainer |
-| Accessibility — FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated peers provide partial evidence; dated manual acceptance required | Accessibility reviewer |
-| Native ownership — FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Existing retained-host tests; failure/race integration and resource-retention evidence pending | WPF interop maintainer |
-| Memory — FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Callback balance is partial evidence; collectability and retained-state budgets pending | Runtime maintainer |
-| Default appearance — FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
-| Adoption and upgrades — FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Package smoke tests pass; independent upgrade acceptance pending | Release/sample maintainer |
+| API and compatibility â€” FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; binary upgrade/RC platform acceptance remains FW-019 | Core/API maintainer |
+| Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. Keyed shuffles and broader memory/startup acceptance remain open | Performance maintainer |
+| Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. Physical IME acceptance pending | Codex / WPF/input maintainer |
+| Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated peers provide partial evidence; dated manual acceptance required | Accessibility reviewer |
+| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Existing retained-host tests; failure/race integration and resource-retention evidence pending | WPF interop maintainer |
+| Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Callback balance is partial evidence; collectability and retained-state budgets pending | Runtime maintainer |
+| Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
+| Adoption and upgrades â€” FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Package smoke tests pass; independent upgrade acceptance pending | Release/sample maintainer |
 
 Basic actionable error context and clear ownership are v1 requirements. A full
 rebuild inspector, sophisticated theme customization, broad control catalog,
@@ -146,11 +146,11 @@ passing correctness tests, 15 visual checks, 21 stress assertions and passing
 accepted-baseline CI gates. Chrome respects native Padding and live bindings;
 automatic native Height keeps the 36-DIP minimum, explicit Height permits
 compact controls, and local MinHeight wins. Normal native theme spacing,
-retained content, focus and automation are covered at simulated 100–200% DPI.
+retained content, focus and automation are covered at simulated 100â€“200% DPI.
 
 The first direct full-list update gate failed (+28.86%). It is retained;
 an identical-binary control showed substantial variability and a seven-sample
-focused repeat did not reproduce it (−4.57% update median). FW-003 retains the
+focused repeat did not reproduce it (âˆ’4.57% update median). FW-003 retains the
 timing concern. See [validation evidence](compact-button-validation.md).
 Published in `0.1.0-alpha.5` from `fbf5204`; exact-source release gates and
 fresh public package checks passed. See [release evidence](releases/0.1.0-alpha.5.md).
@@ -240,9 +240,9 @@ the accepted baseline or relax budgets to clear this item.
 
 October 23 follow-up: FW-002's first local direct run flagged unthemed full-list
 updates (+28.86%) with essentially unchanged allocations/work. A seven-sample
-identical-binary control showed broad timing ranges and a −5.79% median
+identical-binary control showed broad timing ranges and a âˆ’5.79% median
 difference between paths. The flag is retained, not dismissed as proof of
-noise. A seven-sample focused before/after repeat measured −4.57% full-list
+noise. A seven-sample focused before/after repeat measured âˆ’4.57% full-list
 update time with wide timing ranges, and all accepted-baseline CI gates passed.
 Investigate the unstable measurements without claiming a reliable speedup or
 zero regression; see [compact button performance investigation](compact-button-validation.md).
@@ -373,10 +373,46 @@ Preserved investigation history:
 
 ### FW-007 Improve large keyed shuffles
 
-Measure the collection-edit cost of large reorder/filter workloads, then reduce
-the documented potentially quadratic move work without losing identity,
-bindings, selection, state or cleanup. Compare latency, allocations and
-component work with the same full-list and virtualized data and operations.
+Status: **Done**. Owner: Codex. Started October 28; completed/last updated
+October 29, 2026. Implementation and validation complete; not yet published.
+
+- Indexed AVL storage removes linear rank searches and array shifts. Row-embedded
+  links replace separate nodes and a redundant membership dictionary. Successor
+  traversal and a read cursor serve unchanged/WPF reads. Removal/disposal sever
+  links, verified by stale-iterator retention and membership tests.
+- Initial mounts omit the permutation buffer. Optional component/focus snapshots
+  share sparse storage; the presenter retains lifecycle and composition ownership.
+  Per-row collection notifications remain. Batch initialization was rejected:
+  lower mount allocations shifted Gen 1 GC pauses into the first update.
+- Guarded single forward moves preserve active-editor safeguards. Own/nested
+  focus, capture, pending restoration, composition and failures keep the safe path.
+- Seven-pair 10,000-row mount allocations fall **680,216 bytes / 2.56%** versus the
+  preceding guarded source, and **22,416 bytes** below phase one. This removes
+  the previous approximately 0.66 MB mount-allocation regression. Real-window
+  reversal/shuffle improve **84.16% / 72.31%** versus phase one; rotation improves
+  **90.84%**. Versus the guard, updates range from -1.46% to +1.15%. At 1,000 rows,
+  mount allocations remain 7,104 bytes / 0.13% above phase one; saved-state holder
+  and detached-filter allocation increases are disclosed in the report.
+- Full release validation passes: **159 tests**, **15 visual checks**, **21 stress
+  assertions**, zero build warnings/errors, documentation checks and actual-window
+  startup/editing/disposal. Final source manifests and supplemental snapshots match.
+- Broad alpha.6 comparison is **31/32**, with editor mount time +14.74%. That
+  workload does not use virtualization. A seven-pair same-binary control shows
+  +6.39% mount variation; the separate unchanged-source editor confirmation passes
+  **8/8** (mount -14.03%). Preserve the original failure; do not claim a retroactive
+  32/32 broad pass or an editor speedup. Mixed virtualized updates improve **51.04%**
+  and allocate **20.09%** less. Full-list update timing is +5.59%, within budget.
+- Accepted revision and budgets are unchanged. These direct alpha.6/supplemental
+  comparisons are not a public-release gate. Physical IME/contrast acceptance
+  remains FW-005/FW-006 work.
+
+Evidence and history:
+
+- [Final allocation investigation, Git history and validation](fw007-mount-allocations-2026-10-29.md).
+- [Immutable raw results and source snapshots](performance-evidence/2026-10-29-mount-allocations/README.md).
+- [Guarded move and previous validation](fw007-guarded-move-2026-10-28.md).
+- [Indexed investigation and preserved mixed-update failure](fw007-indexed-shuffles-2026-10-28.md).
+- [Initial keyed-move work and composition-safe narrowing](fw007-keyed-shuffles-2026-10-28.md).
 
 ### FW-008 Add text submission
 

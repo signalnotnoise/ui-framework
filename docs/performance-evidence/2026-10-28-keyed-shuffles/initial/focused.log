@@ -1,0 +1,70 @@
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+Test run for C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling [245 ms]
+  Error Message:
+   Assert.IsNotNull failed. 
+  Stack Trace:
+     at VirtualizedEditingTests.<>c__DisplayClass3_1.<FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling>b__4() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 144
+   at TrackedTextComposition.Complete() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\Probes\TrackedTextComposition.cs:line 20
+   at UI_Framework.Wpf.VirtualRowPresenter.CompleteComposition() in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 83
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 154
+--- End of stack trace from previous location ---
+   at UI_Framework.Wpf.VirtualRowPresenter.Release() in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\Virtualization\VirtualRowPresenter.cs:line 166
+   at UI_Framework.Wpf.VirtualListControl.ClearContainerForItemOverride(DependencyObject element, Object item) in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\Virtualization\VirtualListControl.cs:line 47
+   at System.Windows.Controls.ItemsControl.MS.Internal.Controls.IGeneratorHost.ClearContainerForItem(DependencyObject container, Object item)
+   at System.Windows.Controls.ItemContainerGenerator.UnlinkContainerFromItem(DependencyObject container, Object item, IGeneratorHost host)
+   at System.Windows.Controls.ItemContainerGenerator.OnItemMoved(Object item, Int32 oldIndex, Int32 newIndex)
+   at System.Windows.Controls.ItemContainerGenerator.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(Object sender, EventArgs e, Type managerType)
+   at System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.WeakEventManager.ListenerList`1.DeliverEvent(Object sender, EventArgs e, Type managerType)
+   at System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChangedWithAdjustedIndex(NotifyCollectionChangedEventArgs args, Int32 adjustedOldIndex, Int32 adjustedNewIndex)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at UI_Framework.Wpf.VirtualListControl.Update(IReadOnlyList`1 views, Double spacing)
+   at UI_Framework.Wpf.ViewHost.Patch(Node node, View view, NodeSnapshot snapshot) in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\ViewHost.cs:line 401
+   at UI_Framework.Wpf.ViewHost.Refresh() in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\ViewHost.cs:line 69
+   at UI_Framework.Wpf.ViewHost.<Schedule>b__11_0() in C:\Users\iotero\Dev\personal\UI Framework\UI Framework.Wpf\ViewHost.cs:line 52
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   at System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   at MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Threading.DispatcherOperation.Invoke()
+   at System.Windows.Threading.Dispatcher.ProcessQueue()
+   at System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   at System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   at System.Windows.Threading.Dispatcher.Invoke(DispatcherPriority priority, Delegate method, Object arg)
+   at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   at System.Windows.Threading.DispatcherOperation.Wait(TimeSpan timeout)
+   at System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherOperation operation, CancellationToken cancellationToken, TimeSpan timeout)
+   at System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   at System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority)
+   at TestVisualTree.Flush() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\TestVisualTree.cs:line 7
+   at TestVisualTree.Layout(FrameworkElement element) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\TestVisualTree.cs:line 10
+   at VirtualizedEditingTests.<>c.<FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling>b__3_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 148
+   at StaTestRunner.<>c__DisplayClass0_0.<Run>b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18
+--- End of stack trace from previous location ---
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36
+   at VirtualizedEditingTests.FocusedCompositionSurvivesScrollingAndReorderOrFinishesBeforeRecycling() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\VirtualizedEditingTests.cs:line 128
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\fw007-initial\tests\focused.trx
+
+Failed!  - Failed:     1, Passed:    35, Skipped:     0, Total:    36, Duration: 4 s - UI Framework.Checks.dll (net10.0)

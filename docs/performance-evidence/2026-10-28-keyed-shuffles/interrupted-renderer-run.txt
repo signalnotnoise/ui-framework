@@ -1,0 +1,1 @@
+Interrupted after first baseline warm-up to refine the new-row lookup; incomplete run, not performance evidence.

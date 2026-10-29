@@ -335,7 +335,7 @@
       "id": "focus",
       "label": "Focus and IME",
       "status": "partial",
-      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; physical IME and accessibility acceptance remain pending.",
+      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; physical IME and accessibility acceptance remain pending. Guarded forward moves require no presenter or descendant composition, focus, mouse capture, pending restoration or completion failure; the check does not change composition ownership.",
       "sources": [
         "README.md",
         "tests/UI Framework.Checks/ComponentChecks.cs",
@@ -351,7 +351,8 @@
         "tools/VirtualizedEditingAcceptance/Program.cs",
         "tools/VirtualizedEditingAcceptance/VirtualizedEditingAcceptance.csproj",
         "docs/virtualization.md",
-        "docs/virtualized-editing-2026-10-24.md"
+        "docs/virtualized-editing-2026-10-24.md",
+        "tests/UI Framework.Checks/GuardedMoveTests.cs"
       ]
     },
     {
@@ -406,7 +407,7 @@
       "id": "virtualization",
       "label": "List virtualization",
       "status": "partial",
-      "summary": "WPF viewport realization, keyed snapshots and incremental collection updates; row automation peers expose logical names for offscreen discovery and WPF-owned realization. The nearest row owns nested-editor composition, detached edits are rejected and focus restoration respects newer focus. Physical IME and accessibility acceptance remain.",
+      "summary": "WPF owns logical ordering and realization; VirtualRowPresenter owns composition, focus and snapshots. VirtualRowCollection uses row-embedded AVL links, root-verified membership and a mutation-invalidated successor cursor. Removal/disposal sever links. Empty mounts omit the permutation buffer but retain per-row notifications; optional component/focus snapshots share sparse storage. Guarded moves preserve active-editor safeguards. FW-007 is complete locally: 159 tests, 15 visual checks, 21 stress assertions and actual-window validation pass. Seven-pair 10,000-row mounts save 680,216 bytes versus the guard and 22,416 versus phase one; large reorder gains remain. Broad alpha.6 comparison is 31/32 with editor mount +14.74%; a same-binary control and separate 8/8 editor confirmation preserve and contextualize that failure, not erase it. Mixed updates improve 51.04%, allocations 20.09%. Initial-Reset batching was rejected for first-update Gen 1 pauses. Source hashes and archived evidence are verified. Budgets, accepted revision and pending physical IME/contrast acceptance are unchanged.",
       "sources": [
         "UI Framework.Wpf/Virtualization/VirtualListControl.cs",
         "UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
@@ -416,7 +417,21 @@
         "tests/UI Framework.Checks/VirtualizationTests.cs",
         "tests/UI Framework.Checks/AccessibilityAcceptanceTests.cs",
         "tests/UI Framework.Checks/VirtualizedEditingTests.cs",
-        "docs/virtualization.md"
+        "docs/virtualization.md",
+        "tools/KeyedShuffleDiagnostics/Program.cs",
+        "tests/UI Framework.Checks/KeyedReorderTests.cs",
+        "tools/Test-KeyedShuffles.ps1",
+        "docs/fw007-keyed-shuffles-2026-10-28.md",
+        "UI Framework.Wpf/Virtualization/VirtualRowCollection.cs",
+        "UI Framework.Wpf/Virtualization/VirtualRow.cs",
+        "docs/fw007-indexed-shuffles-2026-10-28.md",
+        "docs/performance-evidence/2026-10-28-indexed-shuffles/README.md",
+        "tests/UI Framework.Checks/GuardedMoveTests.cs",
+        "docs/fw007-guarded-move-2026-10-28.md",
+        "docs/performance-evidence/2026-10-28-guarded-move/README.md",
+        "UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
+        "docs/fw007-mount-allocations-2026-10-29.md",
+        "docs/performance-evidence/2026-10-29-mount-allocations/README.md"
       ]
     },
     {
@@ -513,7 +528,12 @@
         "tools/Test-WindowStartup.ps1",
         "tools/Collect-ComparisonTrace.ps1",
         "tools/Summarize-TimingBottleneck.py",
-        "scripts/test-timing-bottleneck.py"
+        "scripts/test-timing-bottleneck.py",
+        "tools/Test-KeyedShuffles.ps1",
+        "tools/KeyedShuffleDiagnostics/Program.cs",
+        "tools/KeyedShuffleDiagnostics/ShuffleRow.cs",
+        "tools/KeyedShuffleDiagnostics/ShuffleCounters.cs",
+        "docs/fw007-indexed-shuffles-2026-10-28.md"
       ]
     },
     {

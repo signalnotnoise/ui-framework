@@ -1,0 +1,1 @@
+{"count":1000,"scenario":"filter","milliseconds":1.6522,"allocated":758120,"moves":0,"inserts":0,"removes":500,"resets":0,"scope":"Detached logical collection only; excludes realization/layout; not a release gate","runtime":"10.0.13"}
