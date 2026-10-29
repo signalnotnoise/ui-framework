@@ -25,6 +25,21 @@ Width, height, padding, alignment, background and enabled modifiers apply throug
 
 Core carries only `ViewKind.Platform` and an opaque `PlatformContent` descriptor. WPF's `Interop` layer owns creation, identity and cleanup. The common renderer owns outer layout and reconciliation.
 
+## Asynchronous ownership verification
+
+[FW-010/FW-018 controlled lifetime checks](native-lifetime-2026-10-29.md) exercise
+late initialization, faults, cancellation, remount and collectability using the
+existing callbacks. Keep asynchronous initialization in an application-owned
+adapter with an observed task; cancellation alone is insufficient when a provider
+can complete after removal. Check disposal on the UI dispatcher before applying
+results, release late-acquired resources, and report failures explicitly.
+A factory must clean its own partial resources if it throws before returning.
+
+The dispatcher must remain available for the adapter's completion/cleanup work;
+this initial fixture does not establish dispatcher-shutdown or third-party popup,
+airspace or provider guarantees. No async-void create/update/release contract is
+introduced. Further integration and memory acceptance remains in the backlog.
+
 ## Preserving native styles
 
 Specialist controls can depend on their own templates. Host or application
@@ -102,3 +117,17 @@ Build and verify an isolated local feed with a distinct version:
 ```
 
 Both packages receive the same version override; the script verifies a fresh package-only consumer and 1,000 retained native updates. Existing custom package versions are not overwritten. Use the feed with a matching exact WPF package version and retain its core dependency, source revision, license and checksums. Do not republish `0.1.0-alpha.1` or reuse a local version for changed binaries.
+
+## Controlled real-window shutdown evidence — October 29, 2026
+
+The [NativeLifetime sample](../samples/NativeLifetime/NativeWindowSession.cs) defers
+window close while the application adapter cancels and drains initialization. It
+disposes/detaches the host before accepting late results, releases late resources
+on the UI thread, then closes the window before dispatcher shutdown. A timeout
+leaves the dispatcher/window alive for retry; observed cleanup errors are surfaced.
+This is application-owned policy using existing callbacks, not a new framework API.
+
+Real-window focus, selection, WPF popup HWND release, resize, managed overlay and
+five shutdown cases pass. Repeated memory checks distinguish bounded native
+realization from retained visited-key state. See the [measurements and limitations](native-window-memory-2026-10-29.md).
+These checks do not establish HwndHost/native-airspace or browser-provider support.

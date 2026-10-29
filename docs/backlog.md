@@ -26,17 +26,17 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| 1 | FW-010 | P1 | Verify asynchronous native host ownership | In progress |
+| 2 | FW-018 | P1 | Verify resource lifetime and improve diagnostics | In progress |
 | Done | FW-005 | P1 | Strengthen editing through virtualized row recycling | Done — user-confirmed physical IME pass |
 | Done | FW-006 | P1 | Expand UI Automation and accessibility coverage | Done — user-confirmed contrast pass |
 | Done | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Done — exact-commit hosted gate passed |
 | 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
 | 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
-| 6 | FW-010 | P2 | Evaluate asynchronous native host integration gaps | Investigation |
 | 7 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
 | 8 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
 | 9 | FW-017 | P2 | Establish cohesive theme and visual acceptance | Proposed |
-| 10 | FW-018 | P2 | Improve runtime diagnostics and lifetime verification | Proposed |
 | 11 | FW-019 | P2 | Validate independent sample adoption and upgrades | Proposed |
 | 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
@@ -81,8 +81,8 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 | Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; broader memory/RC acceptance remains open | Performance maintainer |
 | Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. User confirmed physical IME pass October 29; provider/build details not supplied | Codex / WPF/input maintainer |
 | Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated checks pass; user reported Narrator/scaling October 28 and contrast switching October 29 | Accessibility reviewer |
-| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Existing retained-host tests; failure/race integration and resource-retention evidence pending | WPF interop maintainer |
-| Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Callback balance is partial evidence; collectability and retained-state budgets pending | Runtime maintainer |
+| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Controlled async races and real-window shutdown pass; provider-specific/native airspace acceptance open | WPF interop maintainer |
+| Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Repeated collectability, native buffers and visited-key measurements pass; representative memory budgets remain open | Runtime maintainer |
 | Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
 | Adoption and upgrades â€” FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Package smoke tests pass; independent upgrade acceptance pending | Release/sample maintainer |
 
@@ -484,6 +484,20 @@ has focused correctness, theme and accessibility acceptance criteria.
 
 ### FW-010 Evaluate asynchronous native hosting
 
+Status: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
+and first in the active queue at the user's request. Initial slice: controlled
+async completion/removal races, partial initialization and failure cleanup through
+existing native callbacks. Keep native resources and cancellation application-owned.
+Thirteen focused native/lifetime checks pass without framework runtime changes;
+full Release validation passes 172 tests, 15 visual checks, 21 stress assertions
+and startup/editing/disposal. Updated October 29, 2026: real-window focus, selection,
+popup HWND release, resizing and managed overlay checks pass, alongside five
+shutdown cases (late success/fault, cancellation, throwing cancellation callback,
+timeout/retry). Existing callbacks suffice for this controlled WPF adapter.
+Provider-specific/native-airspace acceptance or an explicit v1 scope decision
+remains open. [Window and memory evidence](native-window-memory-2026-10-29.md).
+[First-slice evidence](native-lifetime-2026-10-29.md).
+
 Use a framework-owned integration sample to test native initialization that
 completes after unmount, initialization failure, retained identity, explicit
 disposal, focus, child popup ownership and sizing/overlay boundaries. Establish
@@ -565,6 +579,22 @@ its glyph is not by itself a visually coherent application. Integrate with
 FW-006 accessibility acceptance and retain theme/local-value precedence.
 
 ### FW-018 Improve runtime diagnostics and lifetime verification
+
+Status: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
+and second in the active queue, alongside FW-010. Initial slice: weak-reference
+collectability with live external publishers, queued refreshes, native removal
+and repeated disposal. Callback balance alone is insufficient.
+The initial checks collect disposed hosts, visited native rows and late async
+controls with external publishers/tasks still alive; an intentional unsubscribe
+omission confirms probe sensitivity. Sustained budgets and diagnostic decisions
+remain open. Updated October 29, 2026: three sustained runs pass across 756
+workspace cycles and 57,456 native mounts including warmup, with zero tracked
+survivors/owned native bytes after each batch and orderly dispatcher shutdown.
+After visiting 500 keys, 500 logical states and 10 native editors remain; removing
+keys releases state. Post-GC heap grows 25,344–77,168 bytes across measured batches;
+process trends are observations, not approved budgets or whole-process leak proof.
+[Window and memory evidence](native-window-memory-2026-10-29.md).
+[First-slice evidence](native-lifetime-2026-10-29.md).
 
 Proposed October 23, 2026. Existing failure recovery and benchmark tooling are
 implemented; evaluate what application developers still need to locate invalid

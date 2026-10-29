@@ -38,7 +38,7 @@
       "id": "nativeinterop",
       "label": "Retained native WPF islands",
       "status": "implemented",
-      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary for common native controls. Apps own native contents, local styles and durable state.",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary for common native controls. Apps own native contents, local styles and durable state. FW-010 is active at P1: controlled asynchronous initialization and failure/removal races are being verified using application-owned cancellation and cleanup with the existing callbacks; no new API is justified yet. First slice: 13 controlled async/lifetime checks pass against unchanged runtime. Application adapter owns cancellation, fault reporting, late-resource disposal and subscriptions; weak-reference probes include live publishers/tasks and a deliberately retained negative control. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and startup/editing/disposal. Both backlog items remain in progress; no runtime/API or performance claims change. Follow-up: the framework-owned NativeLifetime sample verifies real-window focus/selection, popup HWND release, resize/managed overlay and five app-owned close/drain cases including timeout retry and throwing cancellation. Three sustained runs cover 756 workspace cycles and 57,456 native mounts including warmup with zero observed survivors or owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removing keys releases state. Process heap growth remains an observation, not a memory budget or leak-free proof. Provider-specific native airspace, representative budgets and diagnostic API decisions remain open.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework/ViewKind.cs",
@@ -53,7 +53,24 @@
         "docs/native-style-validation.md",
         "samples/Counter/Diagnostics/NativeStyleComparison.cs",
         "tools/Test-NativeStyleIsolation.ps1",
-        "docs/native-island-performance.md"
+        "docs/native-island-performance.md",
+        "tests/UI Framework.Checks/NativeLifetime/NativeAsyncLifetimeTests.cs",
+        "tests/UI Framework.Checks/NativeLifetime/HostCollectabilityTests.cs",
+        "tests/UI Framework.Checks/NativeLifetime/AsyncNativeTestControl.cs",
+        "tests/UI Framework.Checks/NativeLifetime/NativeInitializationLease.cs",
+        "tests/UI Framework.Checks/NativeLifetime/SubscribedNativeTestControl.cs",
+        "tests/UI Framework.Checks/NativeLifetime/DispatcherTaskPump.cs",
+        "docs/native-lifetime-2026-10-29.md",
+        "docs/verification-evidence/2026-10-29-native-lifetime/README.md",
+        "samples/NativeLifetime/NativeWindowSession.cs",
+        "samples/NativeLifetime/LifetimeEditor.cs",
+        "samples/NativeLifetime/WindowChecks.cs",
+        "samples/NativeLifetime/MemoryWorkload.cs",
+        "samples/NativeLifetime/RetentionWorkload.cs",
+        "tools/Test-NativeLifetime.ps1",
+        "tools/Summarize-NativeMemory.py",
+        "scripts/test-native-memory.py",
+        "docs/native-window-memory-2026-10-29.md"
       ]
     },
     {
@@ -242,11 +259,28 @@
       "id": "lifecycle",
       "label": "Mount and cleanup",
       "status": "implemented",
-      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released.",
+      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released. FW-018 is active at P1: weak-reference checks with live publishers and repeated removal/disposal will distinguish callback balance from collectability. Broader memory budgets and diagnostic API decisions remain open. First slice: 13 controlled async/lifetime checks pass against unchanged runtime. Application adapter owns cancellation, fault reporting, late-resource disposal and subscriptions; weak-reference probes include live publishers/tasks and a deliberately retained negative control. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and startup/editing/disposal. Both backlog items remain in progress; no runtime/API or performance claims change. Follow-up: the framework-owned NativeLifetime sample verifies real-window focus/selection, popup HWND release, resize/managed overlay and five app-owned close/drain cases including timeout retry and throwing cancellation. Three sustained runs cover 756 workspace cycles and 57,456 native mounts including warmup with zero observed survivors or owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removing keys releases state. Process heap growth remains an observation, not a memory budget or leak-free proof. Provider-specific native airspace, representative budgets and diagnostic API decisions remain open.",
       "sources": [
         "UI Framework/Component.cs",
         "UI Framework.Wpf/ViewHost.cs",
-        "UI Framework.Wpf/Rendering/Node.cs"
+        "UI Framework.Wpf/Rendering/Node.cs",
+        "tests/UI Framework.Checks/NativeLifetime/NativeAsyncLifetimeTests.cs",
+        "tests/UI Framework.Checks/NativeLifetime/HostCollectabilityTests.cs",
+        "tests/UI Framework.Checks/NativeLifetime/AsyncNativeTestControl.cs",
+        "tests/UI Framework.Checks/NativeLifetime/NativeInitializationLease.cs",
+        "tests/UI Framework.Checks/NativeLifetime/SubscribedNativeTestControl.cs",
+        "tests/UI Framework.Checks/NativeLifetime/DispatcherTaskPump.cs",
+        "docs/native-lifetime-2026-10-29.md",
+        "docs/verification-evidence/2026-10-29-native-lifetime/README.md",
+        "samples/NativeLifetime/NativeWindowSession.cs",
+        "samples/NativeLifetime/LifetimeEditor.cs",
+        "samples/NativeLifetime/WindowChecks.cs",
+        "samples/NativeLifetime/MemoryWorkload.cs",
+        "samples/NativeLifetime/RetentionWorkload.cs",
+        "tools/Test-NativeLifetime.ps1",
+        "tools/Summarize-NativeMemory.py",
+        "scripts/test-native-memory.py",
+        "docs/native-window-memory-2026-10-29.md"
       ]
     },
     {
@@ -1029,6 +1063,16 @@
       "from": "release",
       "relation": "checks deterministic navigation outputs through",
       "to": "graphnavigation"
+    },
+    {
+      "from": "nativeinterop",
+      "relation": "uses detach-before-release ownership from",
+      "to": "lifecycle"
+    },
+    {
+      "from": "lifecycle",
+      "relation": "checks post-disposal collectability of visited native rows in",
+      "to": "virtualization"
     }
   ],
   "releaseVersion": "0.1.0-alpha.6"

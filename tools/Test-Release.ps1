@@ -20,6 +20,9 @@ try {
     $startupReport = 'artifacts/release-validation/startup-' + [Guid]::NewGuid().ToString('N') + '.json'
     dotnet 'samples/Counter/bin/Release/net10.0-windows/Counter.dll' --startup-check --report $startupReport
     if ($LASTEXITCODE -ne 0) { throw 'Actual-window startup, editing and disposal check failed.' }
+    $nativeReport = 'artifacts/release-validation/native-window-' + [Guid]::NewGuid().ToString('N') + '.json'
+    dotnet 'samples/NativeLifetime/bin/Release/net10.0-windows/NativeLifetime.dll' --mode window --report $nativeReport
+    if ($LASTEXITCODE -ne 0) { throw 'Native real-window ownership and shutdown checks failed.' }
     Write-Output 'Release validation passed. This command does not publish anything.'
 } finally {
     Pop-Location

@@ -4,6 +4,7 @@
   <Folder Name="/samples/">
     <Project Path="samples/Counter/Counter.csproj" />
     <Project Path="samples/WorkspaceComparison/WorkspaceComparison.csproj" />
+    <Project Path="samples/NativeLifetime/NativeLifetime.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/UI Framework.Checks/UI Framework.Checks.csproj" />

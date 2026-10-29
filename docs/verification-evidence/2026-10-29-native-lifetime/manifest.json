@@ -1,0 +1,109 @@
+{
+  "frameworkRevision": "1c4cb5538d5c256c0323ae6885f5a8cbad741d93",
+  "runtimeSourceChanged": false,
+  "sdk": "10.0.402",
+  "entries": [
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-2026-10-29/focused-final.trx",
+      "bytes": 18604,
+      "sha256": "8cb197d3cc02e9a3d71080e978d9783b3bcae6d36369eb4a3721e90a63ecc4de"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-2026-10-29/focused.trx",
+      "bytes": 17248,
+      "sha256": "4681a4af08dd4cf3e65d6a829b78cfb9cf8d5aa8ba0fe62228af4c1167807073"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-2026-10-29/initial.trx",
+      "bytes": 16133,
+      "sha256": "deccc57d412d7f36e51054a2e4fa8c906c069b85b738df65ea506650ffb702ca"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-focused-final.log",
+      "bytes": 920,
+      "sha256": "d30948e16c94768278538e9b34f500d447917d49dcac6940a80b9e8af8268f73"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-focused.log",
+      "bytes": 917,
+      "sha256": "5f7b7cab7a28c180e8f6f8b58b7b7fb5b25256d14f7600a9e09e5ec447bbcfb5"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-initial.log",
+      "bytes": 2546,
+      "sha256": "472a8dd80f9f3f469ab6b10c1167d1b35ebf8602e786d803e77cb42e8a1f0958"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/fw010-fw018-release.log",
+      "bytes": 2864,
+      "sha256": "44798d6afa648ea77ed92312c09851055cfbaf85f2bc0a128d0944d973bea138"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/release-validation/startup-4f9b992d786f41ac9aba7f9d551a1ef9.json",
+      "bytes": 258,
+      "sha256": "7641410e849e94ff9e42c6ff092d01cf6af38321906fc87ce866b0ab9ec9aad9"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/release-validation/startup-4f9b992d786f41ac9aba7f9d551a1ef9.json.phases.json",
+      "bytes": 1534,
+      "sha256": "3af55003563803eb67be811507841bbfd1ed95f05be57b25dbaf6dcee5a5a28d"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3352,
+      "sha256": "470037892401c6bfa547d015538487bc8819cd65b79a2244ce42d2dad61b1956"
+    },
+    {
+      "archive": "validation.zip",
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "916e0b6316ab537da37ca64b6080cae1903f30c56497848b53cfb4c6349cf839"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/AsyncNativeTestControl.cs",
+      "bytes": 2026,
+      "sha256": "6db3e0db5908c7ef207a5a63f265acca8eda821cadb2f7bae15fb84a5a5bf486"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/DispatcherTaskPump.cs",
+      "bytes": 1209,
+      "sha256": "d0c9c45e6b2c2a21c2d498dcd13fdae89fde7b1279f283ca35502bcf55711ba0"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/HostCollectabilityTests.cs",
+      "bytes": 5471,
+      "sha256": "c2685455b3f5654e7120662b8dbe2f5b29d0155683a0d74eb99c9b25e901b088"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/NativeAsyncLifetimeTests.cs",
+      "bytes": 8021,
+      "sha256": "69f6c5dad6912f9f34a89d1e96aa1d5d63fd4b3c2d162553316e6ec632bd9975"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/NativeInitializationLease.cs",
+      "bytes": 218,
+      "sha256": "4ba79b55ed600f7aa050f3c618bf1d25c9cfeb72b6054294e148c69b862c7d24"
+    },
+    {
+      "archive": "test-source.zip",
+      "path": "tests/UI Framework.Checks/NativeLifetime/SubscribedNativeTestControl.cs",
+      "bytes": 647,
+      "sha256": "cf8fec31d083692f6015ae14160dcb0b79bca5f805be822aaf297a91a1bf817c"
+    }
+  ]
+}
