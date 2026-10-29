@@ -4,9 +4,16 @@ param(
     [ValidateSet('cold','initialized')][string]$Mode = 'initialized',
     [string]$CounterDll = 'samples/Counter/bin/Release/net10.0-windows/Counter.dll',
     [string]$TraceTool = 'artifacts/diagnostic-tools/dotnet-trace.exe',
-    [switch]$Themed
+    [switch]$Themed,
+    [switch]$LayoutEditors,
+    [switch]$EditorSourceFirst,
+    [switch]$EditorHostFirst
 )
 $ErrorActionPreference='Stop'
+if ($EditorSourceFirst -and $EditorHostFirst) { throw 'Choose one editor initialization order.' }
+if ($EditorHostFirst -and -not $LayoutEditors) { throw 'EditorHostFirst requires LayoutEditors.' }
+if ($EditorSourceFirst -and -not $LayoutEditors) { throw 'EditorSourceFirst requires LayoutEditors.' }
+if ($LayoutEditors -and $Themed) { throw 'LayoutEditors already applies its theme.' }
 $counter=(Resolve-Path -LiteralPath $CounterDll).Path
 $tool=(Resolve-Path -LiteralPath $TraceTool).Path
 $output=[IO.Path]::GetFullPath($OutputDirectory)
@@ -19,8 +26,12 @@ $start.UseShellExecute=$false; $start.CreateNoWindow=$true
 $start.RedirectStandardOutput=$true; $start.RedirectStandardError=$true
 $arguments=@('collect','--profile','dotnet-sampled-thread-time','--providers',
     'Microsoft-Windows-DotNETRuntime:0x1C001:4,SignalNotNoise-Comparison:0xFFFFFFFFFFFFFFFF:5',
-    '--output',$trace,'--',(Get-Command dotnet).Source,$counter,'--compare','--trace-phases','--report',$report)
-if($Mode -eq 'cold') { $arguments+='--cold-presentation' }
+    '--output',$trace,'--',(Get-Command dotnet).Source,$counter)
+if ($LayoutEditors) { $arguments += '--layout-editors' } else { $arguments += '--compare' }
+$arguments += @('--trace-phases','--report',$report)
+if ($EditorSourceFirst) { $arguments += '--editor-source-first' }
+if ($EditorHostFirst) { $arguments += '--editor-host-first' }
+if(-not $LayoutEditors -and $Mode -eq 'cold') { $arguments+='--cold-presentation' }
 if($Themed) { $arguments+='--themed' }
 foreach($argument in $arguments) { $start.ArgumentList.Add($argument) }
 $arguments | ConvertTo-Json | Set-Content (Join-Path $output 'arguments.json')
@@ -34,10 +45,16 @@ try {
 } finally { $process.Dispose() }
 $result=Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
 $phases=Get-Content -LiteralPath ($report+'.phases.json') -Raw | ConvertFrom-Json
-if($result.PresentationProtocol -ne 'process-dpi-initialization-v2' -or $result.PresentationPrimed -ne ($Mode -eq 'initialized') -or -not $phases.EventsEnabled) {
+$conditionMatches = if ($LayoutEditors) {
+    $result.InitializationOrder -eq $(if ($EditorHostFirst) { 'host-first' } else { 'source-first' }) -and $result.PhaseTracing
+} else {
+    $result.PresentationProtocol -eq 'process-dpi-initialization-v2' -and $result.PresentationPrimed -eq ($Mode -eq 'initialized')
+}
+if (-not $conditionMatches -or -not $phases.EventsEnabled) {
     throw 'Trace condition or phase provider did not match the requested experiment.'
 }
 Get-ChildItem -LiteralPath (Split-Path $counter) -File | ForEach-Object {
     [pscustomobject]@{ name=$_.Name; sha256=(Get-FileHash -LiteralPath $_.FullName).Hash }
 } | ConvertTo-Json | Set-Content (Join-Path $output 'binary-manifest.json')
-Write-Output "Validated $Mode trace: $trace"
+$label = if ($LayoutEditors) { $result.InitializationOrder } else { $Mode }
+Write-Output "Validated $label trace: $trace"

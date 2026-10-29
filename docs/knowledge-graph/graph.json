@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "0583e4b37d44243c06038e66d4b0c9cd2646d0239644c0b341080f0804e72190",
+  "inputDigest": "2ea00dc2705fbd45b2a79de92d21447e4ce92923249a76a315f849fbbf86e362",
   "coverage": {
     "unresolvedRelativeReferences": 35,
     "semantic": false,
@@ -505,6 +505,12 @@
     {
       "id": "docs/editor-com-cleanup-2026-09-25.md",
       "label": "editor-com-cleanup-2026-09-25.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/editor-mount-investigation-2026-10-29.md",
+      "label": "editor-mount-investigation-2026-10-29.md",
       "group": "docs",
       "kind": "file"
     },
@@ -29327,6 +29333,30 @@
       "kind": "file"
     },
     {
+      "id": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-mount/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-source-first/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/performance-evidence/2026-10-29-mount-allocations/README.md",
       "label": "README.md",
       "group": "docs",
@@ -33287,6 +33317,12 @@
       "kind": "file"
     },
     {
+      "id": "scripts/test-editor-mount.py",
+      "label": "test-editor-mount.py",
+      "group": "scripts",
+      "kind": "file"
+    },
+    {
       "id": "scripts/test-knowledge-graph-viewer.cjs",
       "label": "test-knowledge-graph-viewer.cjs",
       "group": "scripts",
@@ -33683,6 +33719,12 @@
       "kind": "file"
     },
     {
+      "id": "tools/Summarize-EditorMount.py",
+      "label": "Summarize-EditorMount.py",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
       "id": "tools/Summarize-PerformancePairs.py",
       "label": "Summarize-PerformancePairs.py",
       "group": "tools",
@@ -33727,6 +33769,12 @@
     {
       "id": "tools/Test-Documentation.ps1",
       "label": "Test-Documentation.ps1",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
+      "id": "tools/Test-EditorMount.ps1",
+      "label": "Test-EditorMount.ps1",
       "group": "tools",
       "kind": "file"
     },
@@ -34402,7 +34450,7 @@
       "id": "concept:stress",
       "label": "Stress workload",
       "status": "implemented",
-      "summary": "Full-list, virtualized, themed and editor workloads retain 1000 rows and 50 paired operations. Supplemental 32-island measurements separate retained updates, theme replacement, scope changes and native removal, checking local style precedence and exact release balance. Focused and supplemental runs cannot qualify a release. The editor workload uses the application-owned COM cleanup policy.",
+      "summary": "Full-list, virtualized, themed and editor workloads retain 1000 rows and 50 paired operations. Supplemental 32-island measurements separate retained updates, theme replacement, scope changes and native removal, checking local style precedence and exact release balance. Focused and supplemental runs cannot qualify a release. The editor workload uses the application-owned COM cleanup policy. FW-022 now investigates editor mount phases and host/source initialization order; diagnostic attribution is separate from release gates. FW-007 5fd4a2a passed hosted correctness, packages, graphs and all 32 accepted-baseline checks. Three-pair editor phases and sampled stacks identify repeated native DPI discovery during host-first construction before HwndTarget cache initialization. Source-first removes the sampled fallback; seven untraced pairs measure mount -8.43% and allocation -0.60%, with update time +2.00% and allocation +0.87%. Geometry and 1000 native editors match. Timing remains variable; this does not wholly attribute the historical +14.74% source-version difference. Local 159 tests, 15 visual checks, 21 stress assertions and 8/8 focused editor checks pass. User-authorized source-before-editors-v1 is now the editor benchmark default on both comparison sides; host-first remains an explicit cold diagnostic. Full seven-pair protocol validation passes 30/32 gates: themed mount +13.94% and editor mount +10.97% fail the unchanged 10% budget; these remain preserved local diagnostic failures. The user designated the full exact-commit GitHub Actions run as the performance release gate; hosted validation of the changed protocol is pending. Local evidence remains mandatory; correctness and manual acceptance remain separate. Explicit default/cold phase checks match geometry and 1000 native editors. Framework runtime and accepted baseline are unchanged.",
       "sources": [
         "samples/Counter/StressRunner.cs",
         "samples/Counter/Diagnostics/LayoutEditorComparison.cs",
@@ -34455,7 +34503,13 @@
         "tools/KeyedShuffleDiagnostics/Program.cs",
         "tools/KeyedShuffleDiagnostics/ShuffleRow.cs",
         "tools/KeyedShuffleDiagnostics/ShuffleCounters.cs",
-        "docs/fw007-indexed-shuffles-2026-10-28.md"
+        "docs/fw007-indexed-shuffles-2026-10-28.md",
+        "tools/Test-EditorMount.ps1",
+        "tools/Summarize-EditorMount.py",
+        "scripts/test-editor-mount.py",
+        "docs/editor-mount-investigation-2026-10-29.md",
+        "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+        "docs/performance-evidence/2026-10-29-editor-source-first/README.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -34606,7 +34660,7 @@
       "kind": "links",
       "evidence": {
         "path": "AGENTS.md",
-        "line": 32,
+        "line": 33,
         "text": "](docs/knowledge-graph/README.md)"
       }
     },
@@ -37800,6 +37854,15 @@
     },
     {
       "source": "concept:stress",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/55"
+      }
+    },
+    {
+      "source": "concept:stress",
       "target": "docs/editor-timeout-investigation.md",
       "kind": "evidenced by",
       "evidence": {
@@ -37841,6 +37904,24 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/28/sources/35"
+      }
+    },
+    {
+      "source": "concept:stress",
+      "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/56"
+      }
+    },
+    {
+      "source": "concept:stress",
+      "target": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/57"
       }
     },
     {
@@ -38052,6 +38133,15 @@
     },
     {
       "source": "concept:stress",
+      "target": "scripts/test-editor-mount.py",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/54"
+      }
+    },
+    {
+      "source": "concept:stress",
       "target": "scripts/test-performance-pairs.py",
       "kind": "evidenced by",
       "evidence": {
@@ -38115,6 +38205,15 @@
     },
     {
       "source": "concept:stress",
+      "target": "tools/Summarize-EditorMount.py",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/53"
+      }
+    },
+    {
+      "source": "concept:stress",
       "target": "tools/Summarize-PerformancePairs.py",
       "kind": "evidenced by",
       "evidence": {
@@ -38156,6 +38255,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/28/sources/16"
+      }
+    },
+    {
+      "source": "concept:stress",
+      "target": "tools/Test-EditorMount.ps1",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/52"
       }
     },
     {
@@ -39475,7 +39583,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 598,
+        "line": 639,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -39485,7 +39593,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 359,
+        "line": 360,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -39495,7 +39603,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 361,
+        "line": 362,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -39505,7 +39613,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 480,
+        "line": 521,
         "text": "](api-contract.md)"
       }
     },
@@ -39515,7 +39623,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 606,
+        "line": 647,
         "text": "](api-contract.md)"
       }
     },
@@ -39525,7 +39633,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 154,
+        "line": 155,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -39535,7 +39643,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 248,
+        "line": 249,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -39545,7 +39653,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 604,
+        "line": 645,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -39555,7 +39663,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 363,
+        "line": 364,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -39565,8 +39673,38 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 343,
+        "line": 344,
         "text": "](discovery-initialization-2026-10-28.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 408,
+        "text": "](editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 456,
+        "text": "](editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 652,
+        "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
     {
@@ -39575,7 +39713,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 413,
+        "line": 417,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -39585,7 +39723,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 414,
+        "line": 418,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -39595,7 +39733,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 415,
+        "line": 419,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -39605,7 +39743,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 411,
+        "line": 415,
+        "text": "](fw007-mount-allocations-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/fw007-mount-allocations-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 652,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -39615,7 +39763,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 565,
+        "line": 606,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39625,7 +39773,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 609,
+        "line": 650,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -39635,7 +39783,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 610,
+        "line": 651,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39645,7 +39793,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 551,
+        "line": 592,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39655,7 +39803,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 609,
+        "line": 650,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39665,7 +39813,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 566,
+        "line": 607,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39675,7 +39823,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 610,
+        "line": 651,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39685,7 +39833,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 162,
+        "line": 163,
         "text": "](layout-styling.md)"
       }
     },
@@ -39695,7 +39843,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 439,
+        "line": 480,
         "text": "](native-interop.md)"
       }
     },
@@ -39705,7 +39853,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 275,
+        "line": 276,
         "text": "](native-island-performance.md)"
       }
     },
@@ -39715,7 +39863,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 608,
+        "line": 649,
         "text": "](native-island-performance.md)"
       }
     },
@@ -39725,7 +39873,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 130,
+        "line": 131,
         "text": "](native-style-validation.md)"
       }
     },
@@ -39735,7 +39883,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 412,
+        "line": 416,
         "text": "](performance-evidence/2026-10-29-mount-allocations/README.md)"
       }
     },
@@ -39745,7 +39893,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 572,
+        "line": 613,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -39755,7 +39903,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 443,
+        "line": 484,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -39765,7 +39913,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 129,
+        "line": 130,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -39775,7 +39923,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 603,
+        "line": 644,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -39785,7 +39933,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 115,
+        "line": 116,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -39795,7 +39943,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 156,
+        "line": 157,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -39805,7 +39953,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 605,
+        "line": 646,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -39825,7 +39973,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 137,
+        "line": 138,
         "text": "](releasing.md)"
       }
     },
@@ -39835,7 +39983,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 366,
+        "line": 367,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -39845,7 +39993,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 349,
+        "line": 350,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -39855,7 +40003,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 369,
+        "line": 370,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -39865,7 +40013,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 182,
+        "line": 183,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -39875,7 +40023,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 607,
+        "line": 648,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -39885,7 +40033,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 209,
+        "line": 210,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -39895,7 +40043,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 607,
+        "line": 648,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -39905,7 +40053,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 324,
+        "line": 325,
         "text": "](virtualization.md)"
       }
     },
@@ -39915,7 +40063,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 317,
+        "line": 318,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -40107,6 +40255,36 @@
         "path": "docs/editor-com-cleanup-2026-09-25.md",
         "line": 33,
         "text": "](performance-evidence/2026-09-25-editor-com-cleanup/summary.json)"
+      }
+    },
+    {
+      "source": "docs/editor-mount-investigation-2026-10-29.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/editor-mount-investigation-2026-10-29.md",
+        "line": 121,
+        "text": "](performance-evidence/2026-10-29-editor-mount/README.md)"
+      }
+    },
+    {
+      "source": "docs/editor-mount-investigation-2026-10-29.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/editor-mount-investigation-2026-10-29.md",
+        "line": 167,
+        "text": "](performance-evidence/2026-10-29-editor-source-first/README.md)"
+      }
+    },
+    {
+      "source": "docs/editor-mount-investigation-2026-10-29.md",
+      "target": "docs/performance-guardrails.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/editor-mount-investigation-2026-10-29.md",
+        "line": 182,
+        "text": "](performance-guardrails.md#release-gate-policy--october-29-2026)"
       }
     },
     {
@@ -41731,6 +41909,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../docs/editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "docs/editor-timeout-investigation.md",
       "kind": "links",
       "evidence": {
@@ -41937,6 +42125,26 @@
         "path": "docs/knowledge-graph.md",
         "line": 156,
         "text": "](../docs/performance-evidence/2026-10-28-indexed-shuffles/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../docs/performance-evidence/2026-10-29-editor-mount/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../docs/performance-evidence/2026-10-29-editor-source-first/README.md)"
       }
     },
     {
@@ -43161,6 +43369,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "scripts/test-editor-mount.py",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../scripts/test-editor-mount.py)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "scripts/test-knowledge-graph-viewer.cjs",
       "kind": "links",
       "evidence": {
@@ -43891,6 +44109,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tools/Summarize-EditorMount.py",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../tools/Summarize-EditorMount.py)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tools/Summarize-PerformancePairs.py",
       "kind": "links",
       "evidence": {
@@ -43957,6 +44185,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 165,
         "text": "](../tools/Test-Documentation.ps1)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tools/Test-EditorMount.ps1",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../tools/Test-EditorMount.ps1)"
       }
     },
     {
@@ -44520,6 +44758,26 @@
       }
     },
     {
+      "source": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+        "line": 3,
+        "text": "](../../editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+        "line": 3,
+        "text": "](../../editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
       "source": "docs/performance-evidence/2026-10-29-mount-allocations/README.md",
       "target": "docs/fw007-mount-allocations-2026-10-29.md",
       "kind": "links",
@@ -44565,7 +44823,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 31,
+        "line": 51,
         "text": "](../AGENTS.md)"
       }
     },
@@ -44575,8 +44833,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 46,
+        "line": 66,
         "text": "](application-cleanup-policy-2026-09-25.md)"
+      }
+    },
+    {
+      "source": "docs/performance-guardrails.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/performance-guardrails.md",
+        "line": 40,
+        "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
     {
@@ -44585,7 +44853,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 73,
+        "line": 93,
         "text": "](editor-timeout-investigation.md)"
       }
     },
@@ -44595,7 +44863,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 7,
+        "line": 20,
         "text": "](native-island-performance.md)"
       }
     },
@@ -44605,7 +44873,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 27,
+        "line": 47,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -44615,7 +44883,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 100,
+        "line": 120,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -44625,7 +44893,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/performance-guardrails.md",
-        "line": 67,
+        "line": 87,
         "text": "](../tools/performance-baseline.json)"
       }
     },
@@ -45557,6 +45825,11 @@
     {
       "source": "group:docs",
       "target": "docs/editor-com-cleanup-2026-09-25.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
       "kind": "contains"
     },
     {
@@ -69576,6 +69849,26 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-mount/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-source-first/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/performance-evidence/2026-10-29-mount-allocations/README.md",
       "kind": "contains"
     },
@@ -72911,6 +73204,11 @@
     },
     {
       "source": "group:scripts",
+      "target": "scripts/test-editor-mount.py",
+      "kind": "contains"
+    },
+    {
+      "source": "group:scripts",
       "target": "scripts/test-knowledge-graph-viewer.cjs",
       "kind": "contains"
     },
@@ -73241,6 +73539,11 @@
     },
     {
       "source": "group:tools",
+      "target": "tools/Summarize-EditorMount.py",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
       "target": "tools/Summarize-PerformancePairs.py",
       "kind": "contains"
     },
@@ -73277,6 +73580,11 @@
     {
       "source": "group:tools",
       "target": "tools/Test-Documentation.ps1",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
+      "target": "tools/Test-EditorMount.ps1",
       "kind": "contains"
     },
     {

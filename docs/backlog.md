@@ -28,6 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 | ---: | --- | --- | --- | --- |
 | 1 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Awaiting physical IME acceptance |
 | 2 | FW-006 | P1 | Expand UI Automation and accessibility coverage | In progress |
+| Active | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Source-first adopted; exact-commit hosted validation pending |
 | 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
 | 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
@@ -402,6 +403,9 @@ October 29, 2026. Implementation and validation complete; not yet published.
   **8/8** (mount -14.03%). Preserve the original failure; do not claim a retroactive
   32/32 broad pass or an editor speedup. Mixed virtualized updates improve **51.04%**
   and allocate **20.09%** less. Full-list update timing is +5.59%, within budget.
+- Hosted verification on October 29: `5fd4a2a` passed all three Validate jobs,
+  including API/package/graph checks and **32/32 accepted-baseline performance
+  gates**. Hosted editor mount is -0.21%. See [FW-022 and hosted evidence](editor-mount-investigation-2026-10-29.md).
 - Accepted revision and budgets are unchanged. These direct alpha.6/supplemental
   comparisons are not a public-release gate. Physical IME/contrast acceptance
   remains FW-005/FW-006 work.
@@ -413,6 +417,43 @@ Evidence and history:
 - [Guarded move and previous validation](fw007-guarded-move-2026-10-28.md).
 - [Indexed investigation and preserved mixed-update failure](fw007-indexed-shuffles-2026-10-28.md).
 - [Initial keyed-move work and composition-safe narrowing](fw007-keyed-shuffles-2026-10-28.md).
+
+### FW-022 Identify editor mount cost and initialization-order effects
+
+Status: **Source-first adopted; exact-commit hosted validation pending**. Owner: Codex. Updated October 29, 2026.
+FW-007 commit `5fd4a2a` passed [hosted Validate](https://github.com/signalnotnoise/ui-framework/actions/runs/40839920952):
+all three jobs succeed, including API/package/graph checks and 32/32 accepted-baseline
+performance gates. Hosted editor mount time is -0.21%; the local +14.74% failure
+and focused confirmation remain preserved.
+
+Measure host construction, native-source creation/attachment, themes, dispatcher
+and layout with UI CPU/allocation and process GC telemetry. Compare host-first
+with source-first initialization of the same 1,000-editor/50-update workload,
+including both startup costs. Verify geometry and work; separate traced attribution
+from untraced repeated comparisons. Profile the dominant phase before changing
+framework behavior. Keep the accepted baseline and all budgets unchanged.
+
+Finding: host-first editor construction repeats native DPI discovery before
+HwndTarget cache initialization. Source-first avoids the sampled fallback and
+reduces construction CPU. Seven untraced pairs measure mount **-8.43%**, mount
+allocations **-0.60%**; updates are **+2.00%** and allocate **+0.87%**. Five of seven
+mount pairs improve; all traced geometry/native-editor counts match. The prior
++14.74% source-version difference is not wholly attributed to this shared path.
+Local validation passes: 159 tests, 15 visual checks, 21 stress assertions and
+8/8 focused editor checks. The latter overlays the same harness and is not an
+instrumentation-overhead comparison. Diagnostic analysis fixtures pass.
+User authorized source-first as the benchmark default on October 29.
+Protocol `source-before-editors-v1` applies to both framework revisions; the
+runner rejects cold or traced editor reports. Full seven-pair revalidation passes
+30/32: themed mount +13.94% and editor mount +10.97% exceed the 10% limit.
+Editor update time improves 9.35% and allocations improve 3.78%. Themed mount
+is slower in 6/7 pairs and editor mount in 4/7; variation does not clear either
+failure. Preserve these local mount differences as diagnostic follow-up;
+no automatic retry or baseline reset. The user designated GitHub Actions as
+the release performance gate on October 29. Require the full hosted job on the
+new exact commit; local timing failures alone will not block after it passes. Default/cold phase order and geometry
+checks pass, retaining 1,000 native editors. After adoption, 159 tests, 15 visual
+checks, 21 stress assertions and startup/editing/disposal pass. [Investigation and reproduction](editor-mount-investigation-2026-10-29.md).
 
 ### FW-008 Add text submission
 
@@ -608,3 +649,4 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-004 | October 24, 2026 | Measured native scope phases, retained identity/styles and exact release balance; existing PreserveNative policy lowers measured theme-update cost. Full-list failure and presentation startup tradeoff retained; no runtime change or release clearance. | [Methods, repeated runs and validation](native-island-performance.md) |
 | FW-020 | October 24, 2026 | Installed revision-aware bounded navigation, protected generation and preserved architecture/XML adapters. Committed/pushed in be6e1d1; browser inspection blocked. | [Guide](knowledge-graph/README.md), [validation](knowledge-graph/validation/2026-10-24.md) |
 | FW-021 | October 27, 2026 | Added offline visual Git history, commit highlights and revision comparisons; 25 fixtures pass. Local changes uncommitted; visual browser review blocked by file-URL policy. | [Usage](knowledge-graph/README.md#visual-git-history), [validation](knowledge-graph/validation/2026-10-27.md) |
+| FW-007 | October 29, 2026 | Committed/pushed as `5fd4a2a`; indexed keyed moves, active-editor safeguards and lower 10,000-row mount allocation. Hosted correctness/package/graph jobs and 32/32 accepted-baseline checks pass. Local timing caveats retained. | [Implementation/evidence](fw007-mount-allocations-2026-10-29.md), [hosted verification](editor-mount-investigation-2026-10-29.md) |

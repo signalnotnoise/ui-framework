@@ -25,3 +25,14 @@ assert module.overlap(2, 10, 10, 15) == 0
 assert module.overlap(2, 10, 0, 1) == 0
 assert module.suspension_intervals(events[:1])[1] == 1
 print("PASS: interleaved sampler/GC pauses stay separate, events sort, phase intervals clip and incomplete suspensions remain visible")
+
+assert module.presentation_state({"PresentationPrimed": False}) is False
+assert module.presentation_state({"Scenario": "layout-editors", "InitializationOrder": "source-first"}) is True
+assert module.presentation_state({"Scenario": "layout-editors", "InitializationOrder": "host-first"}) is False
+try:
+    module.presentation_state({"Scenario": "layout-editors", "InitializationOrder": "unknown"})
+except ValueError:
+    pass
+else:
+    raise AssertionError("Unknown initialization condition must fail")
+print("PASS: editor initialization conditions are explicit and unknown conditions fail")

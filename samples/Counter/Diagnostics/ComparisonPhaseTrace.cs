@@ -26,12 +26,14 @@ internal sealed class ComparisonPhaseTrace : IDisposable
     private int step;
     private long started, user, kernel, allocation;
     private int gc0, gc1, gc2;
+    private TimeSpan gcPause;
 
     internal void Begin(string name, int operation)
     {
         phase = name; step = operation;
         events.Boundary(name, operation, true);
         allocation = GC.GetAllocatedBytesForCurrentThread();
+        gcPause = GC.GetTotalPauseDuration();
         gc0 = GC.CollectionCount(0); gc1 = GC.CollectionCount(1); gc2 = GC.CollectionCount(2);
         ReadCpu(out kernel, out user);
         started = Stopwatch.GetTimestamp();
@@ -49,7 +51,8 @@ internal sealed class ComparisonPhaseTrace : IDisposable
             UserCpuMilliseconds = (endUser - user) / 10000d,
             KernelCpuMilliseconds = (endKernel - kernel) / 10000d,
             AllocatedBytes = bytes, Gen0 = GC.CollectionCount(0) - gc0,
-            Gen1 = GC.CollectionCount(1) - gc1, Gen2 = GC.CollectionCount(2) - gc2
+            Gen1 = GC.CollectionCount(1) - gc1, Gen2 = GC.CollectionCount(2) - gc2,
+            GcPauseMilliseconds = (GC.GetTotalPauseDuration() - gcPause).TotalMilliseconds
         });
         events.Boundary(phase, step, false);
     }

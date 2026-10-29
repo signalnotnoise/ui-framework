@@ -1,5 +1,18 @@
 # Performance guardrails
 
+## Release gate policy — October 29, 2026
+
+The user designated the full GitHub Actions performance job as the release gate.
+Require success for the exact candidate commit, using the accepted baseline and
+existing budgets. A pass for an earlier commit does not clear changed benchmark
+or framework code. Local comparisons remain required diagnostic evidence: retain
+failed runs, disclose variability and investigate reproducible regressions. A
+local timing failure alone does not block release once that candidate passes the
+hosted gate. This policy does not waive correctness, package or manual acceptance.
+Do not rerun a failed hosted gate until green without investigating and recording
+the cause; neither budgets nor the accepted baseline change with this decision.
+
+
 Supplemental native style measurements use `-IncludeNativeIslands` with a
 reference revision supporting native scopes. They add two 32-island workloads
 beside the existing scenarios and are always ineligible for release. The native
@@ -18,6 +31,13 @@ the detached tree **on both revisions**. Its time and UI allocations are inside
 mount measurements. This is protocol `process-dpi-initialization-v2`; the
 accepted source revision and all budgets are unchanged. Existing editor/native
 cases already own a presentation source. No ViewHost implicitly creates a window.
+
+On October 29, the editor benchmark adopted `source-before-editors-v1`: its real
+HwndSource is created before the 1,000 editors, inside the measured mount, on
+**both revisions**. This avoids repeated cold DPI discovery during construction.
+The runner rejects editor reports with the wrong protocol/order or enabled phase
+tracing. `--editor-host-first` retains the old cold order for standalone diagnostics;
+it is not used by performance gates. See [measurements and limitations](editor-mount-investigation-2026-10-29.md).
 
 `-ColdPresentation` retains the previous cold renderer setup as an ineligible
 diagnostic run. `-PresentationPrimingComparison` runs verified identical

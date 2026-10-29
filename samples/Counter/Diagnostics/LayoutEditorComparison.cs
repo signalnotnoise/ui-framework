@@ -27,6 +27,11 @@ internal static class LayoutEditorComparison
         var reportIndex = Array.IndexOf(args, "--report");
         var path = Path.GetFullPath(reportIndex >= 0 ? args[reportIndex + 1] : "artifacts/layout-editors.json");
         var trace = args.Contains("--trace-layout");
+        if (args.Contains("--editor-host-first") && args.Contains("--editor-source-first"))
+            throw new ArgumentException("Choose one editor initialization order.");
+        var sourceFirst = !args.Contains("--editor-host-first");
+        using var phases = args.Contains("--trace-phases") ? new ComparisonPhaseTrace() : null;
+        phases?.CaptureDpiCache("before-mount");
         var phase = new State<int>(0);
         var builds = 0;
         View Build()
@@ -45,27 +50,51 @@ internal static class LayoutEditorComparison
         }
         var mountAllocation = GC.GetAllocatedBytesForCurrentThread();
         var watch = Stopwatch.StartNew();
+        phases?.Begin("cleanup-policy", 0);
         using var policy = new WpfComCleanupPolicy(Dispatcher.CurrentDispatcher);
-        try
+        phases?.End();
+        ViewHost? host = null;
+        HwndSource? source = null;
+        HwndSource CreateSource()
         {
-            using var host = new ViewHost(Build);
-            using var source = new HwndSource(new HwndSourceParameters("Layout/editor benchmark")
+            phases?.Begin("source-creation", 0);
+            var result = new HwndSource(new HwndSourceParameters("Layout/editor benchmark")
             {
                 Width = 1320, Height = 1080, PositionX = -10000, PositionY = -10000,
                 WindowStyle = unchecked((int)0x80000000)
             });
+            phases?.End();
+            phases?.CaptureDpiCache("after-source");
+            return result;
+        }
+        try
+        {
+            if (sourceFirst) source = CreateSource();
+            phases?.Begin("host-construction", 0);
+            host = new ViewHost(Build);
+            phases?.End();
+            phases?.CaptureDpiCache("after-host");
+            source ??= CreateSource();
+            phases?.Begin("native-attachment", 0);
             source.RootVisual = host;
+            phases?.End();
+            phases?.Begin("theme-application", 0);
             ThemeStyles.Apply(host, new ThemeTokens());
+            phases?.End();
             async Task Layout(int step)
             {
                 var started = trace ? Stopwatch.GetTimestamp() : 0;
                 if (trace) Console.Error.WriteLine($"Step {step}: waiting for dispatcher");
+                phases?.Begin("dispatcher", step);
                 await Dispatcher.Yield(DispatcherPriority.ApplicationIdle);
+                phases?.End();
+                phases?.Begin("explicit-layout", step);
                 var resumed = trace ? Stopwatch.GetTimestamp() : 0;
                 var width = step % 2 == 0 ? 1320 : 1040;
                 host.Measure(new Size(width, 1080));
                 host.Arrange(new Rect(0, 0, width, 1080));
                 host.UpdateLayout();
+                phases?.End();
                 if (trace) Console.Error.WriteLine($"Step {step}: dispatcher {Stopwatch.GetElapsedTime(started, resumed).TotalMilliseconds:F1} ms; layout {Stopwatch.GetElapsedTime(resumed).TotalMilliseconds:F1} ms");
             }
             await Layout(0);
@@ -73,18 +102,30 @@ internal static class LayoutEditorComparison
             var mountMilliseconds = watch.Elapsed.TotalMilliseconds;
             var mountBytes = GC.GetAllocatedBytesForCurrentThread() - mountAllocation;
             var mountBuilds = builds;
+            phases?.CaptureGeometry(host, "mount");
             var allocation = GC.GetAllocatedBytesForCurrentThread();
             watch.Restart();
-            for (var step = 1; step <= 50; step++) { phase.Value = step; await Layout(step); }
+            for (var step = 1; step <= 50; step++)
+            {
+                phases?.Begin("mutation", step);
+                phase.Value = step;
+                phases?.End();
+                await Layout(step);
+            }
+            phases?.Begin("disposal", 51);
             source.RootVisual = null;
             source.Dispose();
             host.Dispose();
             policy.CloseBeforeDispatcherShutdown();
             watch.Stop();
+            phases?.End();
             var result = new
             {
                 SchemaVersion = 2, Scenario = "layout-editors", Rows = 1000, MixedOperations = 50,
                 CleanupPolicy = "application-owned",
+                EditorInitializationProtocol = "source-before-editors-v1",
+                InitializationOrder = sourceFirst ? "source-first" : "host-first",
+                PhaseTracing = phases is not null,
                 MountMilliseconds = mountMilliseconds, MountAllocatedBytes = mountBytes, MountBodyBuilds = mountBuilds,
                 Milliseconds = watch.Elapsed.TotalMilliseconds, AllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - allocation,
                 BodyBuilds = builds - mountBuilds, Mounts = 0, Unmounts = 0,
@@ -92,8 +133,17 @@ internal static class LayoutEditorComparison
             };
             Directory.CreateDirectory(Path.GetDirectoryName(path)!);
             File.WriteAllText(path, JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+            phases?.Save(path);
             return 0;
         }
-        finally { policy.CloseBeforeDispatcherShutdown(); }
+        finally
+        {
+            try { source?.Dispose(); }
+            finally
+            {
+                try { host?.Dispose(); }
+                finally { policy.CloseBeforeDispatcherShutdown(); }
+            }
+        }
     }
 }

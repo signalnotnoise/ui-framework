@@ -28,6 +28,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python scripts/test-timing-bottleneck.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/test-editor-mount.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python scripts/update-knowledge-graph.py --check
   performance:
     runs-on: windows-latest

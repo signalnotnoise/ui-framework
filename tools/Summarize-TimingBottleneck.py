@@ -29,6 +29,14 @@ def suspension_intervals(events):
     return intervals, len(pending)
 
 
+def presentation_state(report):
+    if "PresentationPrimed" in report:
+        return report["PresentationPrimed"]
+    if report.get("Scenario") == "layout-editors" and report.get("InitializationOrder") in ("host-first", "source-first"):
+        return report["InitializationOrder"] == "source-first"
+    raise ValueError("Missing validated presentation condition")
+
+
 def profile(directory):
     directory = Path(directory)
     report = read(directory / "report.json")
@@ -89,7 +97,7 @@ def profile(directory):
             duration = float(event["Payload"]["DurationNs"]) / 1e6
             aggregate["recordedContentionMs"] += overlap(event["Milliseconds"] - duration,
                 event["Milliseconds"], phase["start"], phase["end"])
-    return {"presentationInitialized": report["PresentationPrimed"], "uiThreadId": ui,
+    return {"presentationInitialized": presentation_state(report), "uiThreadId": ui,
             "unmatchedSuspensionStarts": unmatched,
             "phaseCount": len(phases), "dpiCache": telemetry["DpiCache"], "geometry": telemetry["Geometry"],
             "phases": grouped}

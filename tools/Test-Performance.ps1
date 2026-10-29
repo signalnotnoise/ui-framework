@@ -178,6 +178,10 @@ try {
                     throw "Presentation intervention was not applied as expected: $report"
                 }
                 if ($scenario -eq 'layout-editors') {
+                    if ($result.EditorInitializationProtocol -ne 'source-before-editors-v1' -or
+                        $result.InitializationOrder -ne 'source-first' -or $result.PhaseTracing -ne $false) {
+                        throw "Unexpected editor initialization protocol in $report"
+                    }
                     if ($result.CleanupPolicy -ne 'application-owned') { throw "Unexpected editor cleanup policy in $report" }
                 }
                 $expectedRows = if ($scenario -like 'native-*') { 32 } else { 1000 }
