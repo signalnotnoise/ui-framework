@@ -1,0 +1,370 @@
+2026-10-29T11:43:14.6706392Z Current runner version: '2.338.0'
+2026-10-29T11:43:14.6738625Z ##[group]Runner Image Provisioner
+2026-10-29T11:43:14.6739636Z Hosted Compute Agent
+2026-10-29T11:43:14.6740298Z Version: 20261021.618
+2026-10-29T11:43:14.6741025Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T11:43:14.6741842Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T11:43:14.6742619Z Worker ID: {5fcfd90d-f7da-45c1-8c9d-6de969863371}
+2026-10-29T11:43:14.6743428Z Region: centralus
+2026-10-29T11:43:14.6744057Z Cloud: Azure
+2026-10-29T11:43:14.6744667Z ##[endgroup]
+2026-10-29T11:43:14.6746635Z ##[group]Operating System
+2026-10-29T11:43:14.6747465Z Microsoft Windows Server 2025
+2026-10-29T11:43:14.6748183Z 10.0.26100
+2026-10-29T11:43:14.6748784Z Datacenter
+2026-10-29T11:43:14.6749486Z ##[endgroup]
+2026-10-29T11:43:14.6750099Z ##[group]Runner Image
+2026-10-29T11:43:14.6750886Z Image: windows-2025-vs2026
+2026-10-29T11:43:14.6751655Z Version: 20261021.278.1
+2026-10-29T11:43:14.6753582Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+2026-10-29T11:43:14.6755657Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+2026-10-29T11:43:14.6756886Z ##[endgroup]
+2026-10-29T11:43:14.6758167Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T11:43:14.6760229Z Contents: read
+2026-10-29T11:43:14.6760801Z Metadata: read
+2026-10-29T11:43:14.6761383Z ##[endgroup]
+2026-10-29T11:43:14.6763876Z Secret source: Actions
+2026-10-29T11:43:14.6764621Z Cache mode: write
+2026-10-29T11:43:14.6765236Z Prepare workflow directory
+2026-10-29T11:43:14.7148539Z Prepare all required actions
+2026-10-29T11:43:14.7204776Z Getting action download info
+2026-10-29T11:43:14.9444954Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-29T11:43:15.0585701Z Download action repository 'actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68' (SHA:a98b56852c35b8e3190ac28c8c2271da59106c68)
+2026-10-29T11:43:15.5165027Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-10-29T11:43:15.7283966Z Complete job name: windows
+2026-10-29T11:43:15.8833261Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-29T11:43:15.8834709Z with:
+2026-10-29T11:43:15.8835107Z   repository: signalnotnoise/ui-framework
+2026-10-29T11:43:15.8838874Z   token: ***
+2026-10-29T11:43:15.8839230Z   ssh-strict: true
+2026-10-29T11:43:15.8839594Z   ssh-user: git
+2026-10-29T11:43:15.8839957Z   persist-credentials: true
+2026-10-29T11:43:15.8840349Z   clean: true
+2026-10-29T11:43:15.8840696Z   sparse-checkout-cone-mode: true
+2026-10-29T11:43:15.8841106Z   fetch-depth: 1
+2026-10-29T11:43:15.8841444Z   fetch-tags: false
+2026-10-29T11:43:15.8841812Z   show-progress: true
+2026-10-29T11:43:15.8842163Z   lfs: false
+2026-10-29T11:43:15.8842494Z   submodules: false
+2026-10-29T11:43:15.8842898Z   set-safe-directory: true
+2026-10-29T11:43:15.8843316Z   allow-unsafe-pr-checkout: false
+2026-10-29T11:43:15.8843961Z ##[endgroup]
+2026-10-29T11:43:16.0488382Z Syncing repository: signalnotnoise/ui-framework
+2026-10-29T11:43:16.0491228Z ##[group]Getting Git version info
+2026-10-29T11:43:16.0492205Z Working directory is 'D:\a\ui-framework\ui-framework'
+2026-10-29T11:43:16.1440017Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-29T11:43:16.5927192Z git version 2.56.0.windows.2
+2026-10-29T11:43:16.5973897Z ##[endgroup]
+2026-10-29T11:43:16.5989659Z Temporarily overriding HOME='D:\a\_temp\274971ef-1e94-4a6f-b524-040194ef5444' before making global git config changes
+2026-10-29T11:43:16.5992056Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:43:16.5998982Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ui-framework\ui-framework
+2026-10-29T11:43:16.6652307Z Deleting the contents of 'D:\a\ui-framework\ui-framework'
+2026-10-29T11:43:16.6671015Z ##[group]Determining repository object format
+2026-10-29T11:43:16.6673031Z ##[endgroup]
+2026-10-29T11:43:16.6674357Z ##[group]Initializing the repository
+2026-10-29T11:43:16.6676037Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\ui-framework\ui-framework
+2026-10-29T11:43:16.9517489Z Initialized empty Git repository in D:/a/ui-framework/ui-framework/.git/
+2026-10-29T11:43:16.9570982Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/signalnotnoise/ui-framework
+2026-10-29T11:43:17.0300457Z ##[endgroup]
+2026-10-29T11:43:17.0302387Z ##[group]Disabling automatic garbage collection
+2026-10-29T11:43:17.0310882Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-29T11:43:17.0697555Z ##[endgroup]
+2026-10-29T11:43:17.0699321Z ##[group]Setting up auth
+2026-10-29T11:43:17.0700622Z Removing SSH command configuration
+2026-10-29T11:43:17.0709644Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:43:17.1103117Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-29T11:43:19.3871695Z Removing HTTP extra header
+2026-10-29T11:43:19.3882199Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:43:19.4254561Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-29T11:43:19.9630573Z Removing includeIf entries pointing to credentials config files
+2026-10-29T11:43:19.9640490Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:43:20.0021194Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-29T11:43:20.5240691Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-29T11:43:20.5604159Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ui-framework/ui-framework/.git.path D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:43:20.5957353Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:43:20.6365833Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:43:20.6715636Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:43:20.7112061Z ##[endgroup]
+2026-10-29T11:43:20.7112575Z ##[group]Fetching the repository
+2026-10-29T11:43:20.7123989Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f7c7320dfa118839efc41f1b8477c4f08ac5ad9a:refs/remotes/origin/main
+2026-10-29T11:43:23.3449899Z From https://github.com/signalnotnoise/ui-framework
+2026-10-29T11:43:23.3496563Z  * [new ref]         f7c7320dfa118839efc41f1b8477c4f08ac5ad9a -> origin/main
+2026-10-29T11:43:23.3506710Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-10-29T11:43:23.3954778Z   origin/main
+2026-10-29T11:43:23.4007025Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-10-29T11:43:23.4396126Z f7c7320dfa118839efc41f1b8477c4f08ac5ad9a
+2026-10-29T11:43:23.4433274Z ##[endgroup]
+2026-10-29T11:43:23.4433628Z ##[group]Determining the checkout info
+2026-10-29T11:43:23.4434400Z ##[endgroup]
+2026-10-29T11:43:23.4443435Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-29T11:43:23.4975555Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-29T11:43:23.5388492Z ##[group]Checking out the ref
+2026-10-29T11:43:23.5399560Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-29T11:43:24.6150761Z Updating files:  57% (5141/8953)
+2026-10-29T11:43:24.6296578Z Updating files:  58% (5193/8953)
+2026-10-29T11:43:24.6441733Z Updating files:  59% (5283/8953)
+2026-10-29T11:43:24.6587533Z Updating files:  60% (5372/8953)
+2026-10-29T11:43:24.6774532Z Updating files:  61% (5462/8953)
+2026-10-29T11:43:24.6929281Z Updating files:  62% (5551/8953)
+2026-10-29T11:43:24.7065583Z Updating files:  63% (5641/8953)
+2026-10-29T11:43:24.7209280Z Updating files:  64% (5730/8953)
+2026-10-29T11:43:24.7356917Z Updating files:  65% (5820/8953)
+2026-10-29T11:43:24.7560975Z Updating files:  66% (5909/8953)
+2026-10-29T11:43:24.7691447Z Updating files:  67% (5999/8953)
+2026-10-29T11:43:24.7827873Z Updating files:  68% (6089/8953)
+2026-10-29T11:43:25.0182741Z Updating files:  69% (6178/8953)
+2026-10-29T11:43:25.0321702Z Updating files:  70% (6268/8953)
+2026-10-29T11:43:25.0463556Z Updating files:  71% (6357/8953)
+2026-10-29T11:43:25.0608610Z Updating files:  72% (6447/8953)
+2026-10-29T11:43:25.0763316Z Updating files:  73% (6536/8953)
+2026-10-29T11:43:25.0892314Z Updating files:  74% (6626/8953)
+2026-10-29T11:43:25.1206535Z Updating files:  75% (6715/8953)
+2026-10-29T11:43:25.1376853Z Updating files:  76% (6805/8953)
+2026-10-29T11:43:25.1536163Z Updating files:  77% (6894/8953)
+2026-10-29T11:43:25.1700470Z Updating files:  78% (6984/8953)
+2026-10-29T11:43:25.1858567Z Updating files:  79% (7073/8953)
+2026-10-29T11:43:25.2005860Z Updating files:  80% (7163/8953)
+2026-10-29T11:43:25.2181108Z Updating files:  81% (7252/8953)
+2026-10-29T11:43:25.2322941Z Updating files:  82% (7342/8953)
+2026-10-29T11:43:25.2472523Z Updating files:  83% (7431/8953)
+2026-10-29T11:43:25.2626125Z Updating files:  84% (7521/8953)
+2026-10-29T11:43:25.2756867Z Updating files:  85% (7611/8953)
+2026-10-29T11:43:25.3225979Z Updating files:  86% (7700/8953)
+2026-10-29T11:43:25.3353034Z Updating files:  87% (7790/8953)
+2026-10-29T11:43:25.3475417Z Updating files:  88% (7879/8953)
+2026-10-29T11:43:25.3605068Z Updating files:  89% (7969/8953)
+2026-10-29T11:43:25.3760965Z Updating files:  90% (8058/8953)
+2026-10-29T11:43:25.3902799Z Updating files:  91% (8148/8953)
+2026-10-29T11:43:25.4025706Z Updating files:  92% (8237/8953)
+2026-10-29T11:43:25.4174525Z Updating files:  93% (8327/8953)
+2026-10-29T11:43:25.4313183Z Updating files:  94% (8416/8953)
+2026-10-29T11:43:25.4458560Z Updating files:  95% (8506/8953)
+2026-10-29T11:43:25.4606836Z Updating files:  96% (8595/8953)
+2026-10-29T11:43:25.4775976Z Updating files:  97% (8685/8953)
+2026-10-29T11:43:25.4979373Z Updating files:  98% (8774/8953)
+2026-10-29T11:43:25.5145783Z Updating files:  99% (8864/8953)
+2026-10-29T11:43:25.5146135Z Updating files: 100% (8953/8953)
+2026-10-29T11:43:25.5146336Z Updating files: 100% (8953/8953), done.
+2026-10-29T11:43:25.5357542Z Switched to a new branch 'main'
+2026-10-29T11:43:25.5378118Z branch 'main' set up to track 'origin/main'.
+2026-10-29T11:43:25.5467314Z ##[endgroup]
+2026-10-29T11:43:25.5927008Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-29T11:43:25.6263636Z f7c7320dfa118839efc41f1b8477c4f08ac5ad9a
+2026-10-29T11:43:25.6761135Z ##[group]Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+2026-10-29T11:43:25.6761512Z with:
+2026-10-29T11:43:25.6761673Z   dotnet-version: 10.0.x
+2026-10-29T11:43:25.6762081Z   cache: false
+2026-10-29T11:43:25.6762235Z ##[endgroup]
+2026-10-29T11:43:25.9118253Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\a98b56852c35b8e3190ac28c8c2271da59106c68\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Runtime dotnet -Channel LTS
+2026-10-29T11:43:28.4583253Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-win-x64.zip size is 36971047 bytes.
+2026-10-29T11:43:28.4587201Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+2026-10-29T11:43:28.4609938Z dotnet-install: Extracting the archive.
+2026-10-29T11:43:30.1426469Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+2026-10-29T11:43:30.1428847Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+2026-10-29T11:43:30.1433537Z dotnet-install: Installed version is 10.0.14
+2026-10-29T11:43:30.1438697Z dotnet-install: Installation finished
+2026-10-29T11:43:30.2611486Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\a98b56852c35b8e3190ac28c8c2271da59106c68\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Channel 10.0
+2026-10-29T11:43:39.2615530Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-win-x64.zip size is 300745255 bytes.
+2026-10-29T11:43:39.2616699Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+2026-10-29T11:43:39.2617222Z dotnet-install: Extracting the archive.
+2026-10-29T11:44:00.1168549Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+2026-10-29T11:44:00.1172650Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+2026-10-29T11:44:00.1177500Z dotnet-install: Installed version is 10.0.403
+2026-10-29T11:44:00.1181661Z dotnet-install: Installation finished
+2026-10-29T11:44:00.1921458Z ##[group]Run dotnet restore "UI Framework.slnx"
+2026-10-29T11:44:00.1921844Z [36;1mdotnet restore "UI Framework.slnx"[0m
+2026-10-29T11:44:00.2358008Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-29T11:44:00.2358374Z env:
+2026-10-29T11:44:00.2358558Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:44:00.2358769Z ##[endgroup]
+2026-10-29T11:44:03.3198611Z   Determining projects to restore...
+2026-10-29T11:44:03.9766563Z   Restored D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\WorkspaceComparison.csproj (in 156 ms).
+2026-10-29T11:44:03.9787293Z   Restored D:\a\ui-framework\ui-framework\samples\Counter\Counter.csproj (in 156 ms).
+2026-10-29T11:44:13.8668010Z   Restored D:\a\ui-framework\ui-framework\UI Framework.Wpf\UI Framework.Wpf.csproj (in 10.07 sec).
+2026-10-29T11:44:13.8668798Z   Restored D:\a\ui-framework\ui-framework\UI Framework\UI Framework.csproj (in 10.07 sec).
+2026-10-29T11:44:15.1267822Z   Restored D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 11.14 sec).
+2026-10-29T11:44:15.2730417Z ##[group]Run ./tools/Test-Release.ps1 -NoRestore
+2026-10-29T11:44:15.2730796Z [36;1m./tools/Test-Release.ps1 -NoRestore[0m
+2026-10-29T11:44:15.2792071Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-29T11:44:15.2792357Z env:
+2026-10-29T11:44:15.2792530Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:44:15.2792737Z ##[endgroup]
+2026-10-29T11:44:19.1936707Z   UI Framework -> D:\a\ui-framework\ui-framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+2026-10-29T11:44:21.5410956Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+2026-10-29T11:44:23.9951602Z   Counter -> D:\a\ui-framework\ui-framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+2026-10-29T11:44:25.9526500Z   WorkspaceComparison -> D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+2026-10-29T11:44:28.5785377Z   UI Framework.Checks -> D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+2026-10-29T11:44:28.5865625Z 
+2026-10-29T11:44:28.5871710Z Build succeeded.
+2026-10-29T11:44:28.5872694Z     0 Warning(s)
+2026-10-29T11:44:28.5872955Z     0 Error(s)
+2026-10-29T11:44:28.5874536Z 
+2026-10-29T11:44:28.5874756Z Time Elapsed 00:00:12.67
+2026-10-29T11:44:29.6216982Z Test run for D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+2026-10-29T11:44:29.8248657Z A total of 1 test files matched the specified pattern.
+2026-10-29T11:44:39.0024606Z Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
+2026-10-29T11:44:39.0727664Z Results File: D:\a\ui-framework\ui-framework\artifacts\release-validation\tests\regression.trx
+2026-10-29T11:44:39.0732228Z 
+2026-10-29T11:44:39.0775122Z Passed!  - Failed:     0, Passed:   159, Skipped:     0, Total:   159, Duration: 8 s - UI Framework.Checks.dll (net10.0)
+2026-10-29T11:44:39.7541348Z Validated 35 nodes, 71 relationships, and source paths.
+2026-10-29T11:44:39.8029793Z Documentation versions and workflow action pins are consistent.
+2026-10-29T11:44:43.0929933Z Passed 15 visual stress checks.
+2026-10-29T11:44:44.1425855Z Initial 50-row mount + offscreen layout: 543.8 ms, 72 body builds
+2026-10-29T11:44:44.1613483Z Native TextBox event + shared binding: 17.2 ms, 2 body builds
+2026-10-29T11:44:45.3642457Z Load 250 rows + layout: 1199.4 ms, 259 body builds
+2026-10-29T11:44:49.1340674Z Load 1000 rows + layout: 3769.8 ms, 1,009 body builds
+2026-10-29T11:44:49.1453004Z Expand row into nested checklist + layout: 10.2 ms, 5 body builds
+2026-10-29T11:44:49.6353177Z 1000-row keyed shuffle + layout: 461.5 ms, 2 body builds
+2026-10-29T11:44:49.6801722Z 10000 projected writes + one flush + layout: 18.2 ms, 1 body builds
+2026-10-29T11:44:54.0965861Z Mixed workload: 50/200 operations complete
+2026-10-29T11:44:58.6843687Z Mixed workload: 100/200 operations complete
+2026-10-29T11:45:02.5683120Z Mixed workload: 150/200 operations complete
+2026-10-29T11:45:07.5514292Z Mixed workload: 200/200 operations complete
+2026-10-29T11:45:07.5515377Z 200 mixed operations with per-step render + layout: 17871.3 ms, 20,559 body builds
+2026-10-29T11:45:07.8529905Z Filter to zero rows + layout: 299.9 ms, 2 body builds
+2026-10-29T11:45:10.4858505Z Clear filter + remount + layout: 2632.4 ms, 1,002 body builds
+2026-10-29T11:45:11.1459906Z Board unmount + layout: 660.1 ms, 2 body builds
+2026-10-29T11:45:13.3535593Z Board remount + layout: 2207.5 ms, 1,003 body builds
+2026-10-29T11:45:13.3617780Z Expand recursive tree to depth 24 + layout: 8.2 ms, 26 body builds
+2026-10-29T11:45:13.9698241Z Full host disposal: 67.2 ms, 0 body builds
+2026-10-29T11:45:14.0062649Z Passed 21 stress assertions. Report: D:\a\ui-framework\ui-framework\artifacts\release-validation\stress.json
+2026-10-29T11:45:15.6707242Z Release validation passed. This command does not publish anything.
+2026-10-29T11:45:15.7164761Z ##[group]Run ./tools/Test-ApiCompatibility.ps1 -VerifyGuard
+2026-10-29T11:45:15.7165420Z [36;1m./tools/Test-ApiCompatibility.ps1 -VerifyGuard[0m
+2026-10-29T11:45:15.7229286Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-29T11:45:15.7229583Z env:
+2026-10-29T11:45:15.7229758Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:45:15.7229971Z ##[endgroup]
+2026-10-29T11:45:16.9591563Z   Determining projects to restore...
+2026-10-29T11:45:17.3745507Z   All projects are up-to-date for restore.
+2026-10-29T11:45:17.7980588Z   UI Framework -> D:\a\ui-framework\ui-framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+2026-10-29T11:45:17.8595752Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+2026-10-29T11:45:17.9686903Z   Counter -> D:\a\ui-framework\ui-framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+2026-10-29T11:45:18.0596527Z   WorkspaceComparison -> D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+2026-10-29T11:45:18.1567090Z   UI Framework.Checks -> D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+2026-10-29T11:45:18.1637634Z 
+2026-10-29T11:45:18.1643517Z Build succeeded.
+2026-10-29T11:45:18.1644316Z     0 Warning(s)
+2026-10-29T11:45:18.1644532Z     0 Error(s)
+2026-10-29T11:45:18.1645898Z 
+2026-10-29T11:45:18.1646099Z Time Elapsed 00:00:01.77
+2026-10-29T11:45:21.4993361Z PASS: RS0016 rejected an unreviewed API baseline change.
+2026-10-29T11:45:25.2061490Z PASS: RS0017 rejected an unreviewed API baseline change.
+2026-10-29T11:45:28.0879936Z   UI Framework -> D:\a\ui-framework\ui-framework\UI Framework\bin\Release\net10.0\UI Framework.dll
+2026-10-29T11:45:28.2059688Z   UI Framework.Wpf -> D:\a\ui-framework\ui-framework\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+2026-10-29T11:45:28.3525261Z   Counter -> D:\a\ui-framework\ui-framework\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+2026-10-29T11:45:28.4540027Z   WorkspaceComparison -> D:\a\ui-framework\ui-framework\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+2026-10-29T11:45:28.5946450Z   UI Framework.Checks -> D:\a\ui-framework\ui-framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+2026-10-29T11:45:28.6042718Z 
+2026-10-29T11:45:28.6055136Z Build succeeded.
+2026-10-29T11:45:28.6056960Z     0 Warning(s)
+2026-10-29T11:45:28.6058653Z     0 Error(s)
+2026-10-29T11:45:28.6059830Z 
+2026-10-29T11:45:28.6060049Z Time Elapsed 00:00:03.11
+2026-10-29T11:45:29.1648525Z Public API validation passed.
+2026-10-29T11:45:29.2116302Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-29T11:45:29.2116679Z with:
+2026-10-29T11:45:29.2116845Z   name: windows-validation
+2026-10-29T11:45:29.2117050Z   path: artifacts/release-validation/
+2026-10-29T11:45:29.2117261Z   if-no-files-found: warn
+2026-10-29T11:45:29.2117434Z   compression-level: 6
+2026-10-29T11:45:29.2117605Z   overwrite: false
+2026-10-29T11:45:29.2117767Z   include-hidden-files: false
+2026-10-29T11:45:29.2117946Z   archive: true
+2026-10-29T11:45:29.2118088Z env:
+2026-10-29T11:45:29.2118236Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:45:29.2118428Z ##[endgroup]
+2026-10-29T11:45:29.3778793Z With the provided path, there will be 5 files uploaded
+2026-10-29T11:45:29.3783486Z Artifact name is valid!
+2026-10-29T11:45:29.3789769Z Root directory input is valid!
+2026-10-29T11:45:29.6932752Z Uploading artifact: windows-validation.zip
+2026-10-29T11:45:29.6984141Z Beginning upload of artifact content to blob storage
+2026-10-29T11:45:29.9655965Z Uploaded bytes 141626
+2026-10-29T11:45:30.0031711Z Finished uploading artifact content to blob storage!
+2026-10-29T11:45:30.0032536Z SHA256 digest of uploaded artifact is a94fc905e1acc6a7f35fb100c8d938b44478108e02d302394112717718fe63e1
+2026-10-29T11:45:30.0033176Z Finalizing artifact upload
+2026-10-29T11:45:30.5364359Z Artifact windows-validation successfully finalized. Artifact ID 12894108691
+2026-10-29T11:45:30.5365315Z Artifact windows-validation has been successfully uploaded! Final size is 141626 bytes. Artifact ID is 12894108691
+2026-10-29T11:45:30.5374073Z Artifact download URL: https://github.com/signalnotnoise/ui-framework/actions/runs/40867541344/artifacts/12894108691
+2026-10-29T11:45:30.5685097Z ##[group]Run ./tools/Test-Packages.ps1 -NoBuild
+2026-10-29T11:45:30.5685645Z [36;1m./tools/Test-Packages.ps1 -NoBuild[0m
+2026-10-29T11:45:30.5748802Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-29T11:45:30.5749100Z env:
+2026-10-29T11:45:30.5749283Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:45:30.5749489Z ##[endgroup]
+2026-10-29T11:45:32.1336859Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.0.1.0-alpha.6.nupkg'.
+2026-10-29T11:45:32.1397557Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.0.1.0-alpha.6.snupkg'.
+2026-10-29T11:45:33.4490297Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.6.nupkg'.
+2026-10-29T11:45:33.4550424Z   Successfully created package 'D:\a\ui-framework\ui-framework\artifacts\packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.6.snupkg'.
+2026-10-29T11:45:34.2531994Z   Determining projects to restore...
+2026-10-29T11:45:34.6682196Z   Restored D:\a\ui-framework\ui-framework\artifacts\package-validation\00fbbfa4a69943058b18d856c739048a\PackageSmoke.csproj (in 209 ms).
+2026-10-29T11:45:38.5796050Z Package installation, transitive core dependency, rendering, click, and state update passed.
+2026-10-29T11:45:38.6165051Z Packaged themed file label and interactive close content passed.
+2026-10-29T11:45:38.6419628Z Native interop: 1000 retained updates, 2.02 ms, 1032040 UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.
+2026-10-29T11:45:38.7751938Z Packaged style scope, original overload, retained selection, scope changes and cleanup passed.
+2026-10-29T11:45:38.8461069Z Packaged compact input viewport, retained caret and binding passed.
+2026-10-29T11:45:38.9066066Z Packaged compact button glyph, native padding, retheming and sizing precedence passed.
+2026-10-29T11:45:39.3091469Z Validated packages: D:\a\ui-framework\ui-framework\artifacts\packages
+2026-10-29T11:45:39.3769353Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-29T11:45:39.3769748Z with:
+2026-10-29T11:45:39.3769912Z   name: nuget-preview
+2026-10-29T11:45:39.3770091Z   path: artifacts/packages/
+2026-10-29T11:45:39.3770287Z   if-no-files-found: warn
+2026-10-29T11:45:39.3770462Z   compression-level: 6
+2026-10-29T11:45:39.3770621Z   overwrite: false
+2026-10-29T11:45:39.3770783Z   include-hidden-files: false
+2026-10-29T11:45:39.3770968Z   archive: true
+2026-10-29T11:45:39.3771107Z env:
+2026-10-29T11:45:39.3771256Z   DOTNET_ROOT: C:\Program Files\dotnet
+2026-10-29T11:45:39.3771447Z ##[endgroup]
+2026-10-29T11:45:39.5505407Z With the provided path, there will be 4 files uploaded
+2026-10-29T11:45:39.5510007Z Artifact name is valid!
+2026-10-29T11:45:39.5510857Z Root directory input is valid!
+2026-10-29T11:45:39.8545528Z Uploading artifact: nuget-preview.zip
+2026-10-29T11:45:39.8576805Z Beginning upload of artifact content to blob storage
+2026-10-29T11:45:40.1034355Z Uploaded bytes 108474
+2026-10-29T11:45:40.1409429Z Finished uploading artifact content to blob storage!
+2026-10-29T11:45:40.1410693Z SHA256 digest of uploaded artifact is 4cfba3d8f4fc601241ce2fbb74f00fbb959272f2909fa655ab337cc1f8a72d26
+2026-10-29T11:45:40.1411603Z Finalizing artifact upload
+2026-10-29T11:45:40.6450027Z Artifact nuget-preview successfully finalized. Artifact ID 12894895963
+2026-10-29T11:45:40.6451005Z Artifact nuget-preview has been successfully uploaded! Final size is 108474 bytes. Artifact ID is 12894895963
+2026-10-29T11:45:40.6460101Z Artifact download URL: https://github.com/signalnotnoise/ui-framework/actions/runs/40867541344/artifacts/12894895963
+2026-10-29T11:45:40.6753534Z Post job cleanup.
+2026-10-29T11:45:40.8380586Z Post job cleanup.
+2026-10-29T11:45:40.9988203Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-29T11:45:41.0310914Z git version 2.56.0.windows.2
+2026-10-29T11:45:41.0382146Z Temporarily overriding HOME='D:\a\_temp\7eb03e0c-8aa2-4fb3-8de0-e7b481219cbd' before making global git config changes
+2026-10-29T11:45:41.0383330Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:45:41.0392604Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ui-framework\ui-framework
+2026-10-29T11:45:41.0745172Z Removing SSH command configuration
+2026-10-29T11:45:41.0755734Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:45:41.1110166Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-29T11:45:41.6857085Z Removing HTTP extra header
+2026-10-29T11:45:41.6867334Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:45:41.7263359Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-29T11:45:42.2819731Z Removing includeIf entries pointing to credentials config files
+2026-10-29T11:45:42.2834928Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:45:42.3164975Z includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path
+2026-10-29T11:45:42.3165537Z includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path
+2026-10-29T11:45:42.3166350Z includeif.gitdir:/github/workspace/.git.path
+2026-10-29T11:45:42.3166857Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T11:45:42.3214903Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path
+2026-10-29T11:45:42.3550452Z D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:45:42.3599835Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ui-framework/ui-framework/.git.path D\:\\a\\_temp\\git\-credentials\-bc62a8cb\-2883\-4c05\-a1bf\-75c71ec73e02\.config
+2026-10-29T11:45:42.3993005Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path
+2026-10-29T11:45:42.4327949Z D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:45:42.4377080Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ui-framework/ui-framework/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-bc62a8cb\-2883\-4c05\-a1bf\-75c71ec73e02\.config
+2026-10-29T11:45:42.4739778Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-29T11:45:42.5049908Z /github/runner_temp/git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:45:42.5093620Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-bc62a8cb\-2883\-4c05\-a1bf\-75c71ec73e02\.config
+2026-10-29T11:45:42.5448802Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T11:45:42.5776901Z /github/runner_temp/git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config
+2026-10-29T11:45:42.5824867Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-bc62a8cb\-2883\-4c05\-a1bf\-75c71ec73e02\.config
+2026-10-29T11:45:42.6168324Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-29T11:45:43.2216153Z Removing credentials config 'D:\a\_temp\git-credentials-bc62a8cb-2883-4c05-a1bf-75c71ec73e02.config'
+2026-10-29T11:45:43.2442472Z Cleaning up orphan processes
+2026-10-29T11:45:43.2571841Z Terminate orphan process: pid (5912) (dotnet)
+2026-10-29T11:45:43.2684909Z Terminate orphan process: pid (1084) (dotnet)
+2026-10-29T11:45:43.2760507Z Terminate orphan process: pid (8640) (dotnet)
+2026-10-29T11:45:43.2819919Z Terminate orphan process: pid (1548) (conhost)
+

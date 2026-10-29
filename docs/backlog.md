@@ -28,7 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 | ---: | --- | --- | --- | --- |
 | 1 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Awaiting physical IME acceptance |
 | 2 | FW-006 | P1 | Expand UI Automation and accessibility coverage | In progress |
-| Active | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Source-first adopted; exact-commit hosted validation pending |
+| Done | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Done — exact-commit hosted gate passed |
 | 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
 | 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
@@ -78,7 +78,7 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 | Contract / backlog | Workload | Required outcome | Evidence / current gap | Owner role |
 | --- | --- | --- | --- | --- |
 | API and compatibility â€” FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; binary upgrade/RC platform acceptance remains FW-019 | Core/API maintainer |
-| Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. Keyed shuffles and broader memory/startup acceptance remain open | Performance maintainer |
+| Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; broader memory/RC acceptance remains open | Performance maintainer |
 | Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. Physical IME acceptance pending | Codex / WPF/input maintainer |
 | Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated peers provide partial evidence; dated manual acceptance required | Accessibility reviewer |
 | Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Existing retained-host tests; failure/race integration and resource-retention evidence pending | WPF interop maintainer |
@@ -420,7 +420,7 @@ Evidence and history:
 
 ### FW-022 Identify editor mount cost and initialization-order effects
 
-Status: **Source-first adopted; exact-commit hosted validation pending**. Owner: Codex. Updated October 29, 2026.
+Status: **Done — exact-commit hosted gate passed**. Owner: Codex. Updated October 29, 2026.
 FW-007 commit `5fd4a2a` passed [hosted Validate](https://github.com/signalnotnoise/ui-framework/actions/runs/40839920952):
 all three jobs succeed, including API/package/graph checks and 32/32 accepted-baseline
 performance gates. Hosted editor mount time is -0.21%; the local +14.74% failure
@@ -454,6 +454,16 @@ the release performance gate on October 29. Require the full hosted job on the
 new exact commit; local timing failures alone will not block after it passes. Default/cold phase order and geometry
 checks pass, retaining 1,000 native editors. After adoption, 159 tests, 15 visual
 checks, 21 stress assertions and startup/editing/disposal pass. [Investigation and reproduction](editor-mount-investigation-2026-10-29.md).
+
+Hosted completion: `f7c7320` passed [Validate run 40867541344](https://github.com/signalnotnoise/ui-framework/actions/runs/40867541344)
+on October 29: all three jobs green, **32/32 performance gates**, 159 tests,
+15 visual checks, 21 stress assertions, startup, API guards and package checks.
+Themed mount **+2.36%** and editor mount **+2.59%** are within the unchanged 10%
+budget. The user-approved hosted performance gate is satisfied for this exact
+implementation. Local 30/32 failures remain diagnostic evidence; different hosted
+SDK/runtime/hardware means this is not proof that background activity caused them.
+FW-022 is complete within its investigation, protocol and validation scope;
+FW-005/FW-006 manual acceptance remains separate. [Preserved hosted evidence](performance-evidence/2026-10-29-editor-hosted/README.md).
 
 ### FW-008 Add text submission
 
@@ -650,3 +660,4 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-020 | October 24, 2026 | Installed revision-aware bounded navigation, protected generation and preserved architecture/XML adapters. Committed/pushed in be6e1d1; browser inspection blocked. | [Guide](knowledge-graph/README.md), [validation](knowledge-graph/validation/2026-10-24.md) |
 | FW-021 | October 27, 2026 | Added offline visual Git history, commit highlights and revision comparisons; 25 fixtures pass. Local changes uncommitted; visual browser review blocked by file-URL policy. | [Usage](knowledge-graph/README.md#visual-git-history), [validation](knowledge-graph/validation/2026-10-27.md) |
 | FW-007 | October 29, 2026 | Committed/pushed as `5fd4a2a`; indexed keyed moves, active-editor safeguards and lower 10,000-row mount allocation. Hosted correctness/package/graph jobs and 32/32 accepted-baseline checks pass. Local timing caveats retained. | [Implementation/evidence](fw007-mount-allocations-2026-10-29.md), [hosted verification](editor-mount-investigation-2026-10-29.md) |
+| FW-022 | October 29, 2026 | Identified cold DPI lookup, adopted measured source-first editor initialization and designated exact-commit hosted performance as release gate. `f7c7320` passes all three hosted jobs and 32/32 performance checks; local failures preserved. | [Investigation](editor-mount-investigation-2026-10-29.md), [hosted evidence](performance-evidence/2026-10-29-editor-hosted/README.md) |

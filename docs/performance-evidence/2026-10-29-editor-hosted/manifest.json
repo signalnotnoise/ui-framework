@@ -1,0 +1,22 @@
+[
+  {
+    "path": "performance-comparison.zip",
+    "sha256": "253c73b09439d9cc860ab2b5f0a3c9be266575a8f5e260594fd025ed9372bc1a",
+    "bytes": 84727
+  },
+  {
+    "path": "run.json",
+    "sha256": "97bcc4233f64c5446f1a034471eff78d55eaa38f7b1e7c6abd26b9c921669bba",
+    "bytes": 6185
+  },
+  {
+    "path": "summary.json",
+    "sha256": "3b6d60650a65b060c9f65a5547476b54002b8ba66df1e8c535a7968989c2aeb4",
+    "bytes": 13985
+  },
+  {
+    "path": "windows.log",
+    "sha256": "bbcdf391560b2a6bf21eeac7462da8d480cf9198a7dee23e8b17932f0359a1b2",
+    "bytes": 32746
+  }
+]

@@ -177,6 +177,25 @@ On October 29 the user designated GitHub Actions as the performance release gate
 The local 30/32 result remains a failed diagnostic comparison and is not erased.
 A full passing hosted run for the new exact candidate commit will satisfy the
 performance gate; an earlier FW-007 pass cannot qualify the changed protocol.
-Correctness, packages and manual acceptance remain separate. Hosted validation
-is pending; the backlog will record the exact commit, run and outcome after it
-finishes. See [policy](performance-guardrails.md#release-gate-policy--october-29-2026).
+Correctness, packages and manual acceptance remain separate. Hosted validation passed for `f7c7320`; see the completion record below. See [policy](performance-guardrails.md#release-gate-policy--october-29-2026).
+
+## Hosted completion
+
+[Run 40867541344](https://github.com/signalnotnoise/ui-framework/actions/runs/40867541344)
+passed all three jobs for clean commit `f7c7320dfa118839efc41f1b8477c4f08ac5ad9a`.
+All **32/32** performance gates pass: themed mount **+2.36%**, editor mount
+**+2.59%**, editor updates **-1.05%**, editor mount/update allocations
+**-3.76%/-3.78%**. Baseline and budgets are unchanged. All 16 raw editor reports
+confirm the new protocol/order and disabled phase tracing.
+
+Correctness/API/package and graph jobs pass: 159 tests, 15 visual checks,
+21 stress assertions, startup and package installation/rendering checks.
+[Archived hosted evidence](performance-evidence/2026-10-29-editor-hosted/README.md)
+includes the original artifact with GitHub-matching SHA-256, exact-head job
+metadata, summary and Windows log.
+
+This satisfies the user-designated performance gate for the implementation and
+completes FW-022. Earlier local failures remain failed diagnostic runs. Hosted
+SDK 10.0.403/runtime 10.0.14 differs from local 10.0.402/10.0.13, as do hardware
+and OS, so the pass does not establish the cause of local variability. Physical
+IME/contrast acceptance and later release candidate validation remain separate.

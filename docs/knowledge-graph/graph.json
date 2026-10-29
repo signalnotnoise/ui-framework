@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "2ea00dc2705fbd45b2a79de92d21447e4ce92923249a76a315f849fbbf86e362",
+  "inputDigest": "528de60c9e73ae050d77dcd0358d6e5959dcb6e7ff9ac3f2a546e20894ae78c9",
   "coverage": {
     "unresolvedRelativeReferences": 35,
     "semantic": false,
@@ -29333,6 +29333,30 @@
       "kind": "file"
     },
     {
+      "id": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-hosted/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-hosted/run.json",
+      "label": "run.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-10-29-editor-hosted/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
       "label": "README.md",
       "group": "docs",
@@ -34450,7 +34474,7 @@
       "id": "concept:stress",
       "label": "Stress workload",
       "status": "implemented",
-      "summary": "Full-list, virtualized, themed and editor workloads retain 1000 rows and 50 paired operations. Supplemental 32-island measurements separate retained updates, theme replacement, scope changes and native removal, checking local style precedence and exact release balance. Focused and supplemental runs cannot qualify a release. The editor workload uses the application-owned COM cleanup policy. FW-022 now investigates editor mount phases and host/source initialization order; diagnostic attribution is separate from release gates. FW-007 5fd4a2a passed hosted correctness, packages, graphs and all 32 accepted-baseline checks. Three-pair editor phases and sampled stacks identify repeated native DPI discovery during host-first construction before HwndTarget cache initialization. Source-first removes the sampled fallback; seven untraced pairs measure mount -8.43% and allocation -0.60%, with update time +2.00% and allocation +0.87%. Geometry and 1000 native editors match. Timing remains variable; this does not wholly attribute the historical +14.74% source-version difference. Local 159 tests, 15 visual checks, 21 stress assertions and 8/8 focused editor checks pass. User-authorized source-before-editors-v1 is now the editor benchmark default on both comparison sides; host-first remains an explicit cold diagnostic. Full seven-pair protocol validation passes 30/32 gates: themed mount +13.94% and editor mount +10.97% fail the unchanged 10% budget; these remain preserved local diagnostic failures. The user designated the full exact-commit GitHub Actions run as the performance release gate; hosted validation of the changed protocol is pending. Local evidence remains mandatory; correctness and manual acceptance remain separate. Explicit default/cold phase checks match geometry and 1000 native editors. Framework runtime and accepted baseline are unchanged.",
+      "summary": "Full-list, virtualized, themed and editor workloads retain 1000 rows and 50 paired operations. Supplemental 32-island measurements separate retained updates, theme replacement, scope changes and native removal, checking local style precedence and exact release balance. Focused and supplemental runs cannot qualify a release. The editor workload uses the application-owned COM cleanup policy. FW-022 now investigates editor mount phases and host/source initialization order; diagnostic attribution is separate from release gates. FW-007 5fd4a2a passed hosted correctness, packages, graphs and all 32 accepted-baseline checks. Three-pair editor phases and sampled stacks identify repeated native DPI discovery during host-first construction before HwndTarget cache initialization. Source-first removes the sampled fallback; seven untraced pairs measure mount -8.43% and allocation -0.60%, with update time +2.00% and allocation +0.87%. Geometry and 1000 native editors match. Timing remains variable; this does not wholly attribute the historical +14.74% source-version difference. Local 159 tests, 15 visual checks, 21 stress assertions and 8/8 focused editor checks pass. User-authorized source-before-editors-v1 is now the editor benchmark default on both comparison sides; host-first remains an explicit cold diagnostic. Full seven-pair protocol validation passes 30/32 gates: themed mount +13.94% and editor mount +10.97% fail the unchanged 10% budget; these remain preserved local diagnostic failures. The user designated the full exact-commit GitHub Actions run as the performance release gate; clean commit f7c7320 passes all three hosted jobs and 32/32 performance gates in run 40867541344. Themed/editor mount +2.36%/+2.59% are within budget. FW-022 is complete within scope; earlier local failures remain diagnostic evidence. Hosted SDK/runtime/hardware differ, so this does not prove local noise causation. Local evidence remains mandatory; correctness and manual acceptance remain separate. Explicit default/cold phase checks match geometry and 1000 native editors. Framework runtime and accepted baseline are unchanged.",
       "sources": [
         "samples/Counter/StressRunner.cs",
         "samples/Counter/Diagnostics/LayoutEditorComparison.cs",
@@ -34509,7 +34533,8 @@
         "scripts/test-editor-mount.py",
         "docs/editor-mount-investigation-2026-10-29.md",
         "docs/performance-evidence/2026-10-29-editor-mount/README.md",
-        "docs/performance-evidence/2026-10-29-editor-source-first/README.md"
+        "docs/performance-evidence/2026-10-29-editor-source-first/README.md",
+        "docs/performance-evidence/2026-10-29-editor-hosted/README.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -37908,6 +37933,15 @@
     },
     {
       "source": "concept:stress",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/28/sources/58"
+      }
+    },
+    {
+      "source": "concept:stress",
       "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
       "kind": "evidenced by",
       "evidence": {
@@ -39583,7 +39617,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 639,
+        "line": 649,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -39613,7 +39647,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 521,
+        "line": 531,
         "text": "](api-contract.md)"
       }
     },
@@ -39623,7 +39657,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 647,
+        "line": 657,
         "text": "](api-contract.md)"
       }
     },
@@ -39653,7 +39687,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 645,
+        "line": 655,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -39703,7 +39737,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 652,
+        "line": 662,
+        "text": "](editor-mount-investigation-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/editor-mount-investigation-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 663,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -39753,7 +39797,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 652,
+        "line": 662,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -39763,7 +39807,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 606,
+        "line": 616,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39773,7 +39817,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 650,
+        "line": 660,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -39783,7 +39827,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 651,
+        "line": 661,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39793,7 +39837,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 592,
+        "line": 602,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39803,7 +39847,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 650,
+        "line": 660,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39813,7 +39857,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 607,
+        "line": 617,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39823,7 +39867,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 651,
+        "line": 661,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39843,7 +39887,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 480,
+        "line": 490,
         "text": "](native-interop.md)"
       }
     },
@@ -39863,7 +39907,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 649,
+        "line": 659,
         "text": "](native-island-performance.md)"
       }
     },
@@ -39875,6 +39919,26 @@
         "path": "docs/backlog.md",
         "line": 131,
         "text": "](native-style-validation.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 466,
+        "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 663,
+        "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
     {
@@ -39893,7 +39957,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 613,
+        "line": 623,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -39903,7 +39967,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 484,
+        "line": 494,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -39923,7 +39987,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 644,
+        "line": 654,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -39953,7 +40017,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 646,
+        "line": 656,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -40023,7 +40087,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 648,
+        "line": 658,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -40043,7 +40107,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 648,
+        "line": 658,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -40259,6 +40323,16 @@
     },
     {
       "source": "docs/editor-mount-investigation-2026-10-29.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/editor-mount-investigation-2026-10-29.md",
+        "line": 193,
+        "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
+      }
+    },
+    {
+      "source": "docs/editor-mount-investigation-2026-10-29.md",
       "target": "docs/performance-evidence/2026-10-29-editor-mount/README.md",
       "kind": "links",
       "evidence": {
@@ -40283,7 +40357,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/editor-mount-investigation-2026-10-29.md",
-        "line": 182,
+        "line": 180,
         "text": "](performance-guardrails.md#release-gate-policy--october-29-2026)"
       }
     },
@@ -42125,6 +42199,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 156,
         "text": "](../docs/performance-evidence/2026-10-28-indexed-shuffles/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 161,
+        "text": "](../docs/performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
     {
@@ -69845,6 +69929,26 @@
     {
       "source": "group:docs",
       "target": "docs/performance-evidence/2026-10-28-theme-batching/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/run.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/summary.json",
       "kind": "contains"
     },
     {
