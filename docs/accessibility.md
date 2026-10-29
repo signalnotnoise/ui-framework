@@ -50,17 +50,19 @@ shared brushes on their owning dispatcher without replacing control templates.
 Leaving contrast mode restores the supplied tokens. Disabled controls use opaque
 muted text and surface colors rather than fading their entire visual tree.
 Explicit local styles/colors and application-owned backgrounds remain the
-application’s responsibility, including native islands. Physical Windows
-contrast-theme acceptance remains outstanding; injected palette tests do not
-replace that check. These additions are not in published alpha.5.
+application’s responsibility, including native islands. The user confirmed a passing physical Windows contrast-switching check on
+October 29, closing FW-006 alongside earlier Narrator/scaling passes. See the
+[manual acceptance record](manual-acceptance-2026-10-29.md); injected palette tests
+remain separate evidence. These additions are not in published alpha.5.
 
 
 TextBox now uses shared frozen normal colors and conditional system-color triggers,
 while other controls retain the bound palette path. See the [TextBox prototype
 results](textbox-contrast-2026-10-28.md) for correctness and remaining allocation
-gates; this is unreleased work and does not close FW-006.
+gates at that stage; subsequent validation and manual acceptance close FW-006.
 
 
 The subsequent [resource-batching change](theme-resource-batching-2026-10-28.md)
 clears both remaining allocation gates in the latest seven-pair run (32/32).
-Correctness and physical acceptance gaps remain tracked in FW-006.
+The subsequent discovery-test corrections and user-confirmed physical acceptance
+complete FW-006; see the dated acceptance record above.

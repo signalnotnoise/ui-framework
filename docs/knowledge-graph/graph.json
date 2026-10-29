@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "528de60c9e73ae050d77dcd0358d6e5959dcb6e7ff9ac3f2a546e20894ae78c9",
+  "inputDigest": "164a704883aa4fe503179c6aa2ce35d385a1b397764d94764573277a199e42b0",
   "coverage": {
     "unresolvedRelativeReferences": 35,
     "semantic": false,
@@ -613,6 +613,12 @@
     {
       "id": "docs/layout-styling.md",
       "label": "layout-styling.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/manual-acceptance-2026-10-29.md",
+      "label": "manual-acceptance-2026-10-29.md",
       "group": "docs",
       "kind": "file"
     },
@@ -33943,8 +33949,8 @@
     {
       "id": "concept:accessibility",
       "label": "UI Automation and accessibility acceptance",
-      "status": "partial",
-      "summary": "Core names and native peers support actionable patterns and virtual-row discovery. Host wrappers skip Tab stops. User reports Narrator/scaling acceptance. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. All 146 framework tests pass, including five accessibility acceptance tests and two resource-ownership checks. Discovery setup initializes native UIA on an MTA client while pumping the window dispatcher, then refreshes cached peers; original assertions pass in the full suite and two additional fresh hosts. Latest seven-pair runtime performance passes 32/32; test-only correction does not change that candidate. Physical contrast acceptance remains open and FW-005 separately awaits IME acceptance. FW-006 is not complete.",
+      "status": "implemented",
+      "summary": "Core names and native peers support actionable patterns and virtual-row discovery. Host wrappers skip Tab stops. User reports Narrator/scaling acceptance. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. All 146 framework tests pass, including five accessibility acceptance tests and two resource-ownership checks. Discovery setup initializes native UIA on an MTA client while pumping the window dispatcher, then refreshes cached peers; original assertions pass in the full suite and two additional fresh hosts. Latest seven-pair runtime performance passes 32/32; test-only correction does not change that candidate. User confirmed passing physical Windows contrast switching and physical IME editing/recycling on October 29; FW-005/FW-006 are complete within scope. Provider/build details and per-case logs were not supplied.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework.Wpf/ViewHost.cs",
@@ -33968,7 +33974,8 @@
         "tests/UI Framework.Checks/ThemeResourceUpdateTests.cs",
         "docs/theme-resource-batching-2026-10-28.md",
         "docs/discovery-initialization-2026-10-28.md",
-        "tests/UI Framework.Checks/TestAutomationTree.cs"
+        "tests/UI Framework.Checks/TestAutomationTree.cs",
+        "docs/manual-acceptance-2026-10-29.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -34310,8 +34317,8 @@
     {
       "id": "concept:focus",
       "label": "Focus and IME",
-      "status": "partial",
-      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; physical IME and accessibility acceptance remain pending. Guarded forward moves require no presenter or descendant composition, focus, mouse capture, pending restoration or completion failure; the check does not change composition ownership.",
+      "status": "implemented",
+      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; user-confirmed physical IME and Windows contrast acceptance closes FW-005/FW-006 on October 29; exact provider/build and logs were not supplied. Guarded forward moves require no presenter or descendant composition, focus, mouse capture, pending restoration or completion failure; the check does not change composition ownership.",
       "sources": [
         "README.md",
         "tests/UI Framework.Checks/ComponentChecks.cs",
@@ -34328,7 +34335,8 @@
         "tools/VirtualizedEditingAcceptance/VirtualizedEditingAcceptance.csproj",
         "docs/virtualization.md",
         "docs/virtualized-editing-2026-10-24.md",
-        "tests/UI Framework.Checks/GuardedMoveTests.cs"
+        "tests/UI Framework.Checks/GuardedMoveTests.cs",
+        "docs/manual-acceptance-2026-10-29.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -34391,7 +34399,7 @@
       "id": "concept:virtualization",
       "label": "List virtualization",
       "status": "partial",
-      "summary": "WPF owns logical ordering and realization; VirtualRowPresenter owns composition, focus and snapshots. VirtualRowCollection uses row-embedded AVL links, root-verified membership and a mutation-invalidated successor cursor. Removal/disposal sever links. Empty mounts omit the permutation buffer but retain per-row notifications; optional component/focus snapshots share sparse storage. Guarded moves preserve active-editor safeguards. FW-007 is complete locally: 159 tests, 15 visual checks, 21 stress assertions and actual-window validation pass. Seven-pair 10,000-row mounts save 680,216 bytes versus the guard and 22,416 versus phase one; large reorder gains remain. Broad alpha.6 comparison is 31/32 with editor mount +14.74%; a same-binary control and separate 8/8 editor confirmation preserve and contextualize that failure, not erase it. Mixed updates improve 51.04%, allocations 20.09%. Initial-Reset batching was rejected for first-update Gen 1 pauses. Source hashes and archived evidence are verified. Budgets, accepted revision and pending physical IME/contrast acceptance are unchanged.",
+      "summary": "WPF owns logical ordering and realization; VirtualRowPresenter owns composition, focus and snapshots. VirtualRowCollection uses row-embedded AVL links, root-verified membership and a mutation-invalidated successor cursor. Removal/disposal sever links. Empty mounts omit the permutation buffer but retain per-row notifications; optional component/focus snapshots share sparse storage. Guarded moves preserve active-editor safeguards. FW-007 is complete locally: 159 tests, 15 visual checks, 21 stress assertions and actual-window validation pass. Seven-pair 10,000-row mounts save 680,216 bytes versus the guard and 22,416 versus phase one; large reorder gains remain. Broad alpha.6 comparison is 31/32 with editor mount +14.74%; a same-binary control and separate 8/8 editor confirmation preserve and contextualize that failure, not erase it. Mixed updates improve 51.04%, allocations 20.09%. Initial-Reset batching was rejected for first-update Gen 1 pauses. Source hashes and archived evidence are verified. Budgets and accepted revision are unchanged. User confirmed passing physical IME/contrast checks on October 29, closing FW-005/FW-006; exact provider/build and logs were not supplied.",
       "sources": [
         "UI Framework.Wpf/Virtualization/VirtualListControl.cs",
         "UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
@@ -34415,7 +34423,8 @@
         "docs/performance-evidence/2026-10-28-guarded-move/README.md",
         "UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
         "docs/fw007-mount-allocations-2026-10-29.md",
-        "docs/performance-evidence/2026-10-29-mount-allocations/README.md"
+        "docs/performance-evidence/2026-10-29-mount-allocations/README.md",
+        "docs/manual-acceptance-2026-10-29.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -34616,7 +34625,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. Physical contrast and IME acceptance remain open; no v1 readiness claim. Raw successful and failed evidence is preserved.",
+      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -34632,7 +34641,8 @@
         "tools/Test-Documentation.ps1",
         ".github/dependabot.yml",
         "docs/releases/0.1.0-alpha.5.md",
-        "docs/releases/0.1.0-alpha.6.md"
+        "docs/releases/0.1.0-alpha.6.md",
+        "docs/manual-acceptance-2026-10-29.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -35130,6 +35140,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/0/sources/21"
+      }
+    },
+    {
+      "source": "concept:accessibility",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/0/sources/23"
       }
     },
     {
@@ -36300,6 +36319,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/edges/29"
+      }
+    },
+    {
+      "source": "concept:focus",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/19/sources/16"
       }
     },
     {
@@ -37591,6 +37619,15 @@
     },
     {
       "source": "concept:release",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/32/sources/15"
+      }
+    },
+    {
+      "source": "concept:release",
       "target": "docs/releases/0.1.0-alpha.5.md",
       "kind": "evidenced by",
       "evidence": {
@@ -38635,6 +38672,15 @@
     },
     {
       "source": "concept:virtualization",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/23/sources/23"
+      }
+    },
+    {
+      "source": "concept:virtualization",
       "target": "docs/performance-evidence/2026-10-28-guarded-move/README.md",
       "kind": "evidenced by",
       "evidence": {
@@ -39503,11 +39549,21 @@
     },
     {
       "source": "docs/accessibility.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/accessibility.md",
+        "line": 55,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/accessibility.md",
       "target": "docs/textbox-contrast-2026-10-28.md",
       "kind": "links",
       "evidence": {
         "path": "docs/accessibility.md",
-        "line": 60,
+        "line": 61,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -39517,7 +39573,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/accessibility.md",
-        "line": 64,
+        "line": 65,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -39617,7 +39673,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 649,
+        "line": 652,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -39627,7 +39683,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 360,
+        "line": 363,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -39637,7 +39693,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 362,
+        "line": 365,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -39647,7 +39703,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 531,
+        "line": 534,
         "text": "](api-contract.md)"
       }
     },
@@ -39657,7 +39713,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 657,
+        "line": 660,
         "text": "](api-contract.md)"
       }
     },
@@ -39687,7 +39743,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 655,
+        "line": 658,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -39697,7 +39753,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 364,
+        "line": 367,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -39707,7 +39763,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 344,
+        "line": 347,
         "text": "](discovery-initialization-2026-10-28.md)"
       }
     },
@@ -39717,7 +39773,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 408,
+        "line": 411,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -39727,7 +39783,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 456,
+        "line": 459,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -39737,7 +39793,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 662,
+        "line": 665,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -39747,7 +39803,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 663,
+        "line": 666,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -39757,7 +39813,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 417,
+        "line": 420,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -39767,7 +39823,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 418,
+        "line": 421,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -39777,7 +39833,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 419,
+        "line": 422,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -39787,7 +39843,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 415,
+        "line": 418,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -39797,7 +39853,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 662,
+        "line": 665,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -39807,7 +39863,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 616,
+        "line": 619,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39817,7 +39873,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 660,
+        "line": 663,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -39827,7 +39883,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 661,
+        "line": 664,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -39837,7 +39893,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 602,
+        "line": 605,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39847,7 +39903,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 660,
+        "line": 663,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -39857,7 +39913,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 617,
+        "line": 620,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39867,7 +39923,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 661,
+        "line": 664,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -39883,11 +39939,61 @@
     },
     {
       "source": "docs/backlog.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 10,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 320,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 359,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 667,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 668,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
       "target": "docs/native-interop.md",
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 490,
+        "line": 493,
         "text": "](native-interop.md)"
       }
     },
@@ -39907,7 +40013,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 659,
+        "line": 662,
         "text": "](native-island-performance.md)"
       }
     },
@@ -39927,7 +40033,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 466,
+        "line": 469,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -39937,7 +40043,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 663,
+        "line": 666,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -39947,7 +40053,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 416,
+        "line": 419,
         "text": "](performance-evidence/2026-10-29-mount-allocations/README.md)"
       }
     },
@@ -39957,7 +40063,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 623,
+        "line": 626,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -39967,7 +40073,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 494,
+        "line": 497,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -39987,7 +40093,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 654,
+        "line": 657,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -40017,7 +40123,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 656,
+        "line": 659,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -40047,7 +40153,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 367,
+        "line": 370,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -40057,7 +40163,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 350,
+        "line": 353,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -40067,7 +40173,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 370,
+        "line": 373,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -40087,7 +40193,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 658,
+        "line": 661,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -40107,7 +40213,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 658,
+        "line": 661,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -40117,7 +40223,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 325,
+        "line": 328,
         "text": "](virtualization.md)"
       }
     },
@@ -40127,7 +40233,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 318,
+        "line": 321,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -42119,6 +42225,46 @@
         "path": "docs/knowledge-graph.md",
         "line": 136,
         "text": "](../docs/layout-styling.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 133,
+        "text": "](../docs/manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 152,
+        "text": "](../docs/manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../docs/manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 165,
+        "text": "](../docs/manual-acceptance-2026-10-29.md)"
       }
     },
     {
@@ -44592,6 +44738,56 @@
       }
     },
     {
+      "source": "docs/manual-acceptance-2026-10-29.md",
+      "target": "docs/accessibility.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/manual-acceptance-2026-10-29.md",
+        "line": 25,
+        "text": "](accessibility.md)"
+      }
+    },
+    {
+      "source": "docs/manual-acceptance-2026-10-29.md",
+      "target": "docs/discovery-initialization-2026-10-28.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/manual-acceptance-2026-10-29.md",
+        "line": 26,
+        "text": "](discovery-initialization-2026-10-28.md)"
+      }
+    },
+    {
+      "source": "docs/manual-acceptance-2026-10-29.md",
+      "target": "docs/performance-evidence/2026-10-29-editor-hosted/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/manual-acceptance-2026-10-29.md",
+        "line": 27,
+        "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
+      }
+    },
+    {
+      "source": "docs/manual-acceptance-2026-10-29.md",
+      "target": "docs/virtualization.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/manual-acceptance-2026-10-29.md",
+        "line": 24,
+        "text": "](virtualization.md#physical-ime-acceptance-checklist)"
+      }
+    },
+    {
+      "source": "docs/manual-acceptance-2026-10-29.md",
+      "target": "docs/virtualized-editing-2026-10-24.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/manual-acceptance-2026-10-29.md",
+        "line": 23,
+        "text": "](virtualized-editing-2026-10-24.md)"
+      }
+    },
+    {
       "source": "docs/native-interop-validation.md",
       "target": "docs/performance-evidence/2026-09-20-native-interop-repeat.json",
       "kind": "links",
@@ -45457,7 +45653,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/virtualization.md",
-        "line": 86,
+        "line": 90,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -45467,7 +45663,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/virtualization.md",
-        "line": 85,
+        "line": 89,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -45477,7 +45673,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/virtualization.md",
-        "line": 84,
+        "line": 88,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -45487,8 +45683,28 @@
       "kind": "links",
       "evidence": {
         "path": "docs/virtualization.md",
-        "line": 83,
+        "line": 87,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/virtualization.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/virtualization.md",
+        "line": 38,
+        "text": "](manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/virtualized-editing-2026-10-24.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/virtualized-editing-2026-10-24.md",
+        "line": 188,
+        "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
     {
@@ -45498,7 +45714,7 @@
       "evidence": {
         "path": "docs/virtualized-editing-2026-10-24.md",
         "line": 175,
-        "text": "](virtualization.md#physical-ime-acceptance-still-required)"
+        "text": "](virtualization.md#physical-ime-acceptance-checklist)"
       }
     },
     {
@@ -45999,6 +46215,11 @@
     {
       "source": "group:docs",
       "target": "docs/layout-styling.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/manual-acceptance-2026-10-29.md",
       "kind": "contains"
     },
     {

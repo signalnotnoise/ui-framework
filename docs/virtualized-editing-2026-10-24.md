@@ -168,14 +168,22 @@ archives. `archive-manifest-before-final.json` retains the first packaging recor
 and runtime-binary hashes are checked against the current tree before packaging.
 No failed or interrupted report is overwritten or reclassified.
 
-## Remaining physical IME acceptance
+## Physical IME acceptance — historical pending state (October 24)
 
 The current user's language list reports only `en-US`. Actual Japanese/Chinese candidate
 selection, TSF commit/cancel and candidate-window lifetime were not exercised.
-Follow the [visible-window checklist](virtualization.md#physical-ime-acceptance-still-required)
+Follow the [visible-window checklist](virtualization.md#physical-ime-acceptance-checklist)
 on the intended release candidate. Record input language, Windows/runtime/package
 versions, resulting text ownership, selection/focus and shutdown behavior.
 
 FW-005 must retain this pending acceptance explicitly; routed event tests do not
 justify a native IME readiness claim. No additional backlog item is started by
 this change.
+
+## October 29 completion
+
+The user explicitly confirmed the physical IME editing/recycling check passed.
+FW-005 is complete within scope. This is user-performed acceptance, separate from
+routed tests; provider/build details and logs were not supplied. See the
+[dated acceptance record](manual-acceptance-2026-10-29.md). The earlier pending
+state above is preserved as investigation history.

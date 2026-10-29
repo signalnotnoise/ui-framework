@@ -5,8 +5,8 @@
     {
       "id": "accessibility",
       "label": "UI Automation and accessibility acceptance",
-      "status": "partial",
-      "summary": "Core names and native peers support actionable patterns and virtual-row discovery. Host wrappers skip Tab stops. User reports Narrator/scaling acceptance. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. All 146 framework tests pass, including five accessibility acceptance tests and two resource-ownership checks. Discovery setup initializes native UIA on an MTA client while pumping the window dispatcher, then refreshes cached peers; original assertions pass in the full suite and two additional fresh hosts. Latest seven-pair runtime performance passes 32/32; test-only correction does not change that candidate. Physical contrast acceptance remains open and FW-005 separately awaits IME acceptance. FW-006 is not complete.",
+      "status": "implemented",
+      "summary": "Core names and native peers support actionable patterns and virtual-row discovery. Host wrappers skip Tab stops. User reports Narrator/scaling acceptance. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. All 146 framework tests pass, including five accessibility acceptance tests and two resource-ownership checks. Discovery setup initializes native UIA on an MTA client while pumping the window dispatcher, then refreshes cached peers; original assertions pass in the full suite and two additional fresh hosts. Latest seven-pair runtime performance passes 32/32; test-only correction does not change that candidate. User confirmed passing physical Windows contrast switching and physical IME editing/recycling on October 29; FW-005/FW-006 are complete within scope. Provider/build details and per-case logs were not supplied.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework.Wpf/ViewHost.cs",
@@ -30,7 +30,8 @@
         "tests/UI Framework.Checks/ThemeResourceUpdateTests.cs",
         "docs/theme-resource-batching-2026-10-28.md",
         "docs/discovery-initialization-2026-10-28.md",
-        "tests/UI Framework.Checks/TestAutomationTree.cs"
+        "tests/UI Framework.Checks/TestAutomationTree.cs",
+        "docs/manual-acceptance-2026-10-29.md"
       ]
     },
     {
@@ -334,8 +335,8 @@
     {
       "id": "focus",
       "label": "Focus and IME",
-      "status": "partial",
-      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; physical IME and accessibility acceptance remain pending. Guarded forward moves require no presenter or descendant composition, focus, mouse capture, pending restoration or completion failure; the check does not change composition ownership.",
+      "status": "implemented",
+      "summary": "The nearest WPF row tracks composition by editor source, since native phase objects change. Focus departure lets WPF finalize native TSF/IMM before detachment; generic providers retain a fallback. Nested editors deactivate before final snapshots. Weak original-focus identity respects newer focus. Routed/native-shape tests and a delayed-action window provide partial evidence; user-confirmed physical IME and Windows contrast acceptance closes FW-005/FW-006 on October 29; exact provider/build and logs were not supplied. Guarded forward moves require no presenter or descendant composition, focus, mouse capture, pending restoration or completion failure; the check does not change composition ownership.",
       "sources": [
         "README.md",
         "tests/UI Framework.Checks/ComponentChecks.cs",
@@ -352,7 +353,8 @@
         "tools/VirtualizedEditingAcceptance/VirtualizedEditingAcceptance.csproj",
         "docs/virtualization.md",
         "docs/virtualized-editing-2026-10-24.md",
-        "tests/UI Framework.Checks/GuardedMoveTests.cs"
+        "tests/UI Framework.Checks/GuardedMoveTests.cs",
+        "docs/manual-acceptance-2026-10-29.md"
       ]
     },
     {
@@ -407,7 +409,7 @@
       "id": "virtualization",
       "label": "List virtualization",
       "status": "partial",
-      "summary": "WPF owns logical ordering and realization; VirtualRowPresenter owns composition, focus and snapshots. VirtualRowCollection uses row-embedded AVL links, root-verified membership and a mutation-invalidated successor cursor. Removal/disposal sever links. Empty mounts omit the permutation buffer but retain per-row notifications; optional component/focus snapshots share sparse storage. Guarded moves preserve active-editor safeguards. FW-007 is complete locally: 159 tests, 15 visual checks, 21 stress assertions and actual-window validation pass. Seven-pair 10,000-row mounts save 680,216 bytes versus the guard and 22,416 versus phase one; large reorder gains remain. Broad alpha.6 comparison is 31/32 with editor mount +14.74%; a same-binary control and separate 8/8 editor confirmation preserve and contextualize that failure, not erase it. Mixed updates improve 51.04%, allocations 20.09%. Initial-Reset batching was rejected for first-update Gen 1 pauses. Source hashes and archived evidence are verified. Budgets, accepted revision and pending physical IME/contrast acceptance are unchanged.",
+      "summary": "WPF owns logical ordering and realization; VirtualRowPresenter owns composition, focus and snapshots. VirtualRowCollection uses row-embedded AVL links, root-verified membership and a mutation-invalidated successor cursor. Removal/disposal sever links. Empty mounts omit the permutation buffer but retain per-row notifications; optional component/focus snapshots share sparse storage. Guarded moves preserve active-editor safeguards. FW-007 is complete locally: 159 tests, 15 visual checks, 21 stress assertions and actual-window validation pass. Seven-pair 10,000-row mounts save 680,216 bytes versus the guard and 22,416 versus phase one; large reorder gains remain. Broad alpha.6 comparison is 31/32 with editor mount +14.74%; a same-binary control and separate 8/8 editor confirmation preserve and contextualize that failure, not erase it. Mixed updates improve 51.04%, allocations 20.09%. Initial-Reset batching was rejected for first-update Gen 1 pauses. Source hashes and archived evidence are verified. Budgets and accepted revision are unchanged. User confirmed passing physical IME/contrast checks on October 29, closing FW-005/FW-006; exact provider/build and logs were not supplied.",
       "sources": [
         "UI Framework.Wpf/Virtualization/VirtualListControl.cs",
         "UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
@@ -431,7 +433,8 @@
         "docs/performance-evidence/2026-10-28-guarded-move/README.md",
         "UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
         "docs/fw007-mount-allocations-2026-10-29.md",
-        "docs/performance-evidence/2026-10-29-mount-allocations/README.md"
+        "docs/performance-evidence/2026-10-29-mount-allocations/README.md",
+        "docs/manual-acceptance-2026-10-29.md"
       ]
     },
     {
@@ -614,7 +617,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. Physical contrast and IME acceptance remain open; no v1 readiness claim. Raw successful and failed evidence is preserved.",
+      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -630,7 +633,8 @@
         "tools/Test-Documentation.ps1",
         ".github/dependabot.yml",
         "docs/releases/0.1.0-alpha.5.md",
-        "docs/releases/0.1.0-alpha.6.md"
+        "docs/releases/0.1.0-alpha.6.md",
+        "docs/manual-acceptance-2026-10-29.md"
       ]
     },
     {

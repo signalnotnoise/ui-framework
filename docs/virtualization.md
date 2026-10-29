@@ -32,7 +32,11 @@ Coverage includes primitive edits, current callbacks, duplicate keys, conditiona
 
 Most other tests arrange WPF controls offscreen. The suite does not establish physical IME, accessibility, frame-rate or whole-application acceptance. Historical 90-check/21-stress-assertion results in performance-results.md predate this change. The three original suites remain grouped in Test Explorer; new checks are individually discoverable.
 
-### Physical IME acceptance still required
+### Physical IME acceptance checklist
+
+The user confirmed a passing physical IME editing/recycling check on October 29;
+see the [acceptance record](manual-acceptance-2026-10-29.md). The checklist below
+remains available for future release candidates.
 
 Run the dedicated acceptance window from the repository root:
 

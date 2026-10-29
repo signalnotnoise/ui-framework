@@ -6,7 +6,8 @@ Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
 both hosted workflows passed (146 tests, 32 performance gates each). A fresh
 NuGet.org installation passed; DLL hashes match the published artifacts. A separate local Release
 build `0.1.0-alpha.6-local.1` is ready for GuidedGrade. [Release record](releases/0.1.0-alpha.6.md).
-FW-005 and FW-006 retain their pending manual acceptance requirements.
+FW-005 and FW-006 are complete after the user confirmed passing physical IME
+and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
 This is the running, prioritized work list for the core library, WPF renderer,
 framework tests, samples, documentation and package releases. GuidedGrade UI,
@@ -15,8 +16,7 @@ application's backlog.
 
 FW-003 was reopened October 24 and is now resolved with an identified startup
 bottleneck, a tested initialization-order fix and passing local gates. No later
-backlog item was started during that investigation. FW-005 now awaits physical
-IME acceptance, and FW-006 started October 26 while language packs install.
+backlog item was started during that investigation. FW-005 and FW-006 now have user-confirmed physical acceptance and are complete.
 FW-001, FW-002, FW-004,
 FW-015, FW-016 and FW-020 are also complete within their recorded scopes. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
@@ -26,8 +26,8 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-005 | P1 | Strengthen editing through virtualized row recycling | Awaiting physical IME acceptance |
-| 2 | FW-006 | P1 | Expand UI Automation and accessibility coverage | In progress |
+| Done | FW-005 | P1 | Strengthen editing through virtualized row recycling | Done — user-confirmed physical IME pass |
+| Done | FW-006 | P1 | Expand UI Automation and accessibility coverage | Done — user-confirmed contrast pass |
 | Done | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Done — exact-commit hosted gate passed |
 | 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
@@ -79,8 +79,8 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 | --- | --- | --- | --- | --- |
 | API and compatibility â€” FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; binary upgrade/RC platform acceptance remains FW-019 | Core/API maintainer |
 | Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; broader memory/RC acceptance remains open | Performance maintainer |
-| Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. Physical IME acceptance pending | Codex / WPF/input maintainer |
-| Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated peers provide partial evidence; dated manual acceptance required | Accessibility reviewer |
+| Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. User confirmed physical IME pass October 29; provider/build details not supplied | Codex / WPF/input maintainer |
+| Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated checks pass; user reported Narrator/scaling October 28 and contrast switching October 29 | Accessibility reviewer |
 | Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Existing retained-host tests; failure/race integration and resource-retention evidence pending | WPF interop maintainer |
 | Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Callback balance is partial evidence; collectability and retained-state budgets pending | Runtime maintainer |
 | Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
@@ -284,6 +284,8 @@ island. Validate lifecycle and local style precedence after any optimization.
 
 ### FW-005 Strengthen virtualized editing
 
+Status: **Done**. Completed October 29, 2026; user-confirmed physical IME acceptance.
+
 Started October 24, 2026 after commit/push `be6e1d1`. Owner: Codex (WPF/input maintainer).
 Focus-driven native completion before detachment, source identity across native
 event objects and original-focus ownership are implemented. Nested editors
@@ -312,10 +314,11 @@ unchanged component work. Editor mount +3.57% and mount allocation +0.14% remain
 within their unchanged budgets. These cumulative accepted-source comparisons do
 not isolate FW-005's contribution. No baseline or budgets were advanced.
 
-Physical IME acceptance must be recorded separately from programmatic composition
-events; the current user's language list reports only `en-US`. FW-005 is not
-marked complete and no subsequent item is started. See the
-[implementation and acceptance record](virtualized-editing-2026-10-24.md).
+The user explicitly confirmed passing the physical IME editing/recycling check
+on October 29. This is separate from the routed composition tests and closes the
+remaining acceptance requirement. Exact provider/build and per-case logs were
+not supplied. See [manual acceptance](manual-acceptance-2026-10-29.md) and the
+[implementation record](virtualized-editing-2026-10-24.md).
 
 Define the behavior of active edits when a row leaves the viewport. Exercise
 actual recycling, forced regeneration, scrolling, reorder, removal and disposal
@@ -326,7 +329,7 @@ Keep the existing retained-state and lifecycle contracts explicit. See
 
 ### FW-006 Expand accessibility coverage
 
-Status: **In progress**. Owner: Codex. Started October 26; last updated October 28, 2026.
+Status: **Done**. Owner: Codex. Started October 26; completed October 29, 2026.
 
 Current implementation provides logical virtual-row discovery, keyboard traversal
 without wrapper focus stops, live scoped contrast colors and shared frozen
@@ -349,11 +352,11 @@ allocations +0.20% (within 2%), component work unchanged. This correction change
 only tests and documentation, so no additional runtime benchmark was required.
 See [resource batching and verification](theme-resource-batching-2026-10-28.md).
 
-**Remaining:** physical Windows contrast-switching acceptance. The user reported
-successful Narrator and physical scaling checks on October 28; detailed
-scale/monitor logs were not supplied. FW-005's separate physical IME acceptance
-remains pending and is not counted as FW-006 evidence. This item is not complete;
-local package smoke validation did not publish a package.
+**Manual acceptance complete:** the user confirmed passing physical Windows
+contrast switching on October 29, following reported Narrator and scaling passes
+on October 28. FW-005 has its own separately confirmed IME pass. These are
+user-reported results; exact build/theme and per-case logs were not supplied.
+See [dated acceptance](manual-acceptance-2026-10-29.md).
 
 Preserved investigation history:
 
@@ -408,7 +411,7 @@ October 29, 2026. Implementation and validation complete; not yet published.
   gates**. Hosted editor mount is -0.21%. See [FW-022 and hosted evidence](editor-mount-investigation-2026-10-29.md).
 - Accepted revision and budgets are unchanged. These direct alpha.6/supplemental
   comparisons are not a public-release gate. Physical IME/contrast acceptance
-  remains FW-005/FW-006 work.
+  was subsequently confirmed by the user on October 29 (FW-005/FW-006).
 
 Evidence and history:
 
@@ -661,3 +664,5 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-021 | October 27, 2026 | Added offline visual Git history, commit highlights and revision comparisons; 25 fixtures pass. Local changes uncommitted; visual browser review blocked by file-URL policy. | [Usage](knowledge-graph/README.md#visual-git-history), [validation](knowledge-graph/validation/2026-10-27.md) |
 | FW-007 | October 29, 2026 | Committed/pushed as `5fd4a2a`; indexed keyed moves, active-editor safeguards and lower 10,000-row mount allocation. Hosted correctness/package/graph jobs and 32/32 accepted-baseline checks pass. Local timing caveats retained. | [Implementation/evidence](fw007-mount-allocations-2026-10-29.md), [hosted verification](editor-mount-investigation-2026-10-29.md) |
 | FW-022 | October 29, 2026 | Identified cold DPI lookup, adopted measured source-first editor initialization and designated exact-commit hosted performance as release gate. `f7c7320` passes all three hosted jobs and 32/32 performance checks; local failures preserved. | [Investigation](editor-mount-investigation-2026-10-29.md), [hosted evidence](performance-evidence/2026-10-29-editor-hosted/README.md) |
+| FW-005 | October 29, 2026 | Existing editing safeguards and automated checks supplemented by user-confirmed physical IME editing/recycling pass. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
+| FW-006 | October 29, 2026 | Existing accessibility/contrast implementation and checks supplemented by user-confirmed Windows contrast pass; earlier Narrator/scaling passes retained. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
