@@ -16,21 +16,22 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.7` is the release candidate. Publication and fresh public
-installation are pending; see the [release record](docs/releases/0.1.0-alpha.7.md).
-The latest verified public version is `0.1.0-alpha.6`:
-[SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6)
-and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6).
+Version `0.1.0-alpha.7` packages:
+[SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.7)
+and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.7).
+Both libraries and symbols were published through Trusted Publishing after
+exact-commit hosted validation. A fresh NuGet.org consumer passed and its DLL
+hashes match the published artifacts. See the [release evidence](docs/releases/0.1.0-alpha.7.md).
 
-In a .NET 10 WPF project, install the current published preview:
+In a .NET 10 WPF project:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.6
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.7
 ```
 
 The WPF package brings in the core automatically. See the
 [package getting-started guide](docs/package-readme.md) and
-[publishing instructions](docs/releasing.md). To validate local candidate packages,
+[publishing instructions](docs/releasing.md). To validate local packages,
 run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
 
 ## Run from source

@@ -1,0 +1,19 @@
+{
+  "SchemaVersion": 2,
+  "PresentationPrimed": true,
+  "PresentationProtocol": "process-dpi-initialization-v2",
+  "Scenario": "full-list",
+  "MountMilliseconds": 4475.5807,
+  "MountAllocatedBytes": 336356064,
+  "MountBodyBuilds": 1022,
+  "Mode": "selective observation, memo enabled",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "Milliseconds": 5191.3516,
+  "BodyBuilds": 5141,
+  "AllocatedBytes": 622614512,
+  "Mounts": 456,
+  "Unmounts": 658,
+  "Runtime": "10.0.15",
+  "TimeUtc": "2026-11-13T10:44:56.9883766+00:00"
+}

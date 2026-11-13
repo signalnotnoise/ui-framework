@@ -4,7 +4,9 @@
 
 ## 0.1.0-alpha.7 — November 13, 2026
 
-Release candidate; publication pending. See the [release record](docs/releases/0.1.0-alpha.7.md).
+Published both libraries and symbols from `c5d639b` after local validation and
+both exact-commit hosted workflows passed. Fresh NuGet.org installation and
+assembly hash verification passed. See the [release record](docs/releases/0.1.0-alpha.7.md).
 
 - Use indexed keyed virtual-row storage for large reorders and reduce initial
   mount allocations while preserving active editors, logical state and cleanup.

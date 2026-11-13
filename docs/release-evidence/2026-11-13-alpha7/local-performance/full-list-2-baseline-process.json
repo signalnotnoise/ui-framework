@@ -1,0 +1,7 @@
+{
+  "scenario": "full-list",
+  "sample": 2,
+  "side": "baseline",
+  "wallSeconds": 9.1770585,
+  "cpuSeconds": 12.171875
+}

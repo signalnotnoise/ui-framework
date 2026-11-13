@@ -2,10 +2,12 @@
 
 Last updated: November 13, 2026.
 
-Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
-both hosted workflows passed (146 tests, 32 performance gates each). A fresh
-NuGet.org installation passed; DLL hashes match the published artifacts. A separate local Release
-build `0.1.0-alpha.6-local.1` is ready for GuidedGrade. [Release record](releases/0.1.0-alpha.6.md).
+Alpha.7 libraries and symbols were published from `c5d639b` on November 13, 2026.
+Local release/package checks and 32/32 performance checks passed; both hosted
+workflows passed all gates on that exact source. Fresh public installation and
+assembly hash verification passed. [Release record](releases/0.1.0-alpha.7.md).
+The earlier GuidedGrade local package remains separate; this release does not
+upgrade consuming applications automatically.
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
 and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
@@ -758,12 +760,17 @@ documentation are included in this commit; no package published.
 
 ### FW-024 Publish alpha.7
 
-Status: **In progress**. Owner: Codex. Started November 13, 2026 at user request.
-Publish both library/symbol packages after local correctness/package/performance
-checks and exact-candidate hosted gates, then verify an isolated NuGet.org
-consumer. Consulted the release concept and generated neighborhood, workflows,
-package scripts and existing acceptance evidence before preparing the candidate.
-Baseline and budgets remain unchanged. [Release record](releases/0.1.0-alpha.7.md).
+Status: **Done**. Owner: Codex. Started and completed November 13, 2026.
+Published both library and symbol packages from `c5d639b` through Trusted
+Publishing. Local zero-warning Release validation passed 172 tests, 15 visual
+checks, 21 stress assertions, actual-window lifecycle checks and isolated
+package checks. Seven alternating local pairs and both exact-candidate hosted
+comparisons passed 32/32 unchanged performance budgets. Fresh NuGet.org-only
+installation and hosted-to-installed DLL hash comparison passed after indexing;
+the initial NU1102 restore is preserved. No publication retry or baseline change.
+Release concept, source neighborhood, package ownership and gates were verified
+before preparation. Evidence updates use an isolated worktree to preserve
+concurrent FW-018 edits. [Release record and raw evidence](releases/0.1.0-alpha.7.md).
 
 ## Definition of done
 
@@ -813,3 +820,4 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-005 | October 29, 2026 | Existing editing safeguards and automated checks supplemented by user-confirmed physical IME editing/recycling pass. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
 | FW-006 | October 29, 2026 | Existing accessibility/contrast implementation and checks supplemented by user-confirmed Windows contrast pass; earlier Narrator/scaling passes retained. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
 | FW-023 | November 13, 2026 | Portable C# UI skill, local installation and reproducible native before/after GIF; build, visual inspection, skill/media, docs and graph checks pass. Included in this commit. | [Usage and evidence](agent-skill.md) |
+| FW-024 | November 13, 2026 | Published alpha.7 libraries/symbols from `c5d639b`; exact-commit hosted gates, public installation and assembly hashes pass. | [Release record and evidence](releases/0.1.0-alpha.7.md) |

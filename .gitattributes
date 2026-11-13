@@ -10,3 +10,4 @@ docs/verification-evidence/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at
 docs/release-evidence/2026-10-28-alpha6/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
 docs/performance-evidence/2026-10-28-keyed-shuffles/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
 docs/performance-evidence/2026-10-29-editor-hosted/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+docs/release-evidence/2026-11-13-alpha7/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol

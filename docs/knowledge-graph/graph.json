@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "b88a71c62c0c2f289853412e6549c434d00603b976bea6cb54f95ad8c3bfdf68",
+  "inputDigest": "d69633c006da1df58cd073153d10b34faa370e9df43e0f9d457867cba0da3f30",
   "coverage": {
-    "unresolvedRelativeReferences": 38,
+    "unresolvedRelativeReferences": 42,
     "semantic": false,
     "curatedArchitectureConcepts": 36,
     "limitations": "Regex syntax evidence may include comments/examples. C# has file nodes and explicit XML project references, not resolved using directives or calls. Curated concepts/relationships are imported from schema v1, not inferred. Aliases and runtime calls are not resolved."
@@ -32789,6 +32789,2424 @@
       "kind": "file"
     },
     {
+      "id": "docs/release-evidence/2026-11-13-alpha7/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/binary-manifest.json",
+      "label": "binary-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-baseline-process.json",
+      "label": "full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-candidate-process.json",
+      "label": "full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-baseline-process.json",
+      "label": "full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-candidate-process.json",
+      "label": "full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-baseline-process.json",
+      "label": "full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-candidate-process.json",
+      "label": "full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-baseline-process.json",
+      "label": "full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-candidate-process.json",
+      "label": "full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-baseline-process.json",
+      "label": "full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-candidate-process.json",
+      "label": "full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-baseline-process.json",
+      "label": "full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-candidate-process.json",
+      "label": "full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-baseline-process.json",
+      "label": "full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-candidate-process.json",
+      "label": "full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-baseline-process.json",
+      "label": "full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-candidate-process.json",
+      "label": "full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-baseline-process.json",
+      "label": "layout-editors-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-candidate-process.json",
+      "label": "layout-editors-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-baseline-process.json",
+      "label": "layout-editors-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-candidate-process.json",
+      "label": "layout-editors-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-baseline-process.json",
+      "label": "layout-editors-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-candidate-process.json",
+      "label": "layout-editors-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-baseline-process.json",
+      "label": "layout-editors-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-candidate-process.json",
+      "label": "layout-editors-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-baseline-process.json",
+      "label": "layout-editors-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-candidate-process.json",
+      "label": "layout-editors-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-baseline-process.json",
+      "label": "layout-editors-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-candidate-process.json",
+      "label": "layout-editors-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-baseline-process.json",
+      "label": "layout-editors-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-candidate-process.json",
+      "label": "layout-editors-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-baseline-process.json",
+      "label": "layout-editors-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-candidate-process.json",
+      "label": "layout-editors-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/summary.md",
+      "label": "summary.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-baseline-process.json",
+      "label": "themed-full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-candidate-process.json",
+      "label": "themed-full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-baseline-process.json",
+      "label": "themed-full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-candidate-process.json",
+      "label": "themed-full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-baseline-process.json",
+      "label": "themed-full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-candidate-process.json",
+      "label": "themed-full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-baseline-process.json",
+      "label": "themed-full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-candidate-process.json",
+      "label": "themed-full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-baseline-process.json",
+      "label": "themed-full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-candidate-process.json",
+      "label": "themed-full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-baseline-process.json",
+      "label": "themed-full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-candidate-process.json",
+      "label": "themed-full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-baseline-process.json",
+      "label": "themed-full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-candidate-process.json",
+      "label": "themed-full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-baseline-process.json",
+      "label": "themed-full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-candidate-process.json",
+      "label": "themed-full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-baseline-process.json",
+      "label": "virtualized-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-candidate-process.json",
+      "label": "virtualized-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-baseline-process.json",
+      "label": "virtualized-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-candidate-process.json",
+      "label": "virtualized-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-baseline-process.json",
+      "label": "virtualized-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-candidate-process.json",
+      "label": "virtualized-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-baseline-process.json",
+      "label": "virtualized-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-candidate-process.json",
+      "label": "virtualized-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-baseline-process.json",
+      "label": "virtualized-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-candidate-process.json",
+      "label": "virtualized-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-baseline-process.json",
+      "label": "virtualized-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-candidate-process.json",
+      "label": "virtualized-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-baseline-process.json",
+      "label": "virtualized-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-candidate-process.json",
+      "label": "virtualized-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-baseline-process.json",
+      "label": "virtualized-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-candidate-process.json",
+      "label": "virtualized-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/indexing-observation.json",
+      "label": "indexing-observation.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/binary-manifest.json",
+      "label": "binary-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-baseline-process.json",
+      "label": "full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-candidate-process.json",
+      "label": "full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-baseline-process.json",
+      "label": "full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-candidate-process.json",
+      "label": "full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-baseline-process.json",
+      "label": "full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-candidate-process.json",
+      "label": "full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-baseline-process.json",
+      "label": "full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-candidate-process.json",
+      "label": "full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-baseline-process.json",
+      "label": "full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-candidate-process.json",
+      "label": "full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-baseline-process.json",
+      "label": "full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-candidate-process.json",
+      "label": "full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-baseline-process.json",
+      "label": "full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-candidate-process.json",
+      "label": "full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-baseline-process.json",
+      "label": "full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-candidate-process.json",
+      "label": "full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-baseline-process.json",
+      "label": "layout-editors-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-candidate-process.json",
+      "label": "layout-editors-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-baseline-process.json",
+      "label": "layout-editors-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-candidate-process.json",
+      "label": "layout-editors-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-baseline-process.json",
+      "label": "layout-editors-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-candidate-process.json",
+      "label": "layout-editors-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-baseline-process.json",
+      "label": "layout-editors-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-candidate-process.json",
+      "label": "layout-editors-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-baseline-process.json",
+      "label": "layout-editors-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-candidate-process.json",
+      "label": "layout-editors-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-baseline-process.json",
+      "label": "layout-editors-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-candidate-process.json",
+      "label": "layout-editors-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-baseline-process.json",
+      "label": "layout-editors-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-candidate-process.json",
+      "label": "layout-editors-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-baseline-process.json",
+      "label": "layout-editors-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-candidate-process.json",
+      "label": "layout-editors-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/summary.md",
+      "label": "summary.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-baseline-process.json",
+      "label": "themed-full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-candidate-process.json",
+      "label": "themed-full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-baseline-process.json",
+      "label": "themed-full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-candidate-process.json",
+      "label": "themed-full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-baseline-process.json",
+      "label": "themed-full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-candidate-process.json",
+      "label": "themed-full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-baseline-process.json",
+      "label": "themed-full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-candidate-process.json",
+      "label": "themed-full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-baseline-process.json",
+      "label": "themed-full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-candidate-process.json",
+      "label": "themed-full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-baseline-process.json",
+      "label": "themed-full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-candidate-process.json",
+      "label": "themed-full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-baseline-process.json",
+      "label": "themed-full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-candidate-process.json",
+      "label": "themed-full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-baseline-process.json",
+      "label": "themed-full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-candidate-process.json",
+      "label": "themed-full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-baseline-process.json",
+      "label": "virtualized-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-candidate-process.json",
+      "label": "virtualized-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-baseline-process.json",
+      "label": "virtualized-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-candidate-process.json",
+      "label": "virtualized-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-baseline-process.json",
+      "label": "virtualized-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-candidate-process.json",
+      "label": "virtualized-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-baseline-process.json",
+      "label": "virtualized-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-candidate-process.json",
+      "label": "virtualized-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-baseline-process.json",
+      "label": "virtualized-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-candidate-process.json",
+      "label": "virtualized-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-baseline-process.json",
+      "label": "virtualized-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-candidate-process.json",
+      "label": "virtualized-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-baseline-process.json",
+      "label": "virtualized-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-candidate-process.json",
+      "label": "virtualized-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-baseline-process.json",
+      "label": "virtualized-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-candidate-process.json",
+      "label": "virtualized-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/local-source-verification.json",
+      "label": "local-source-verification.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/public-installation.json",
+      "label": "public-installation.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/publish-run.json",
+      "label": "publish-run.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/binary-manifest.json",
+      "label": "binary-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/candidate-source-manifest.json",
+      "label": "candidate-source-manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-baseline-process.json",
+      "label": "full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-baseline.json",
+      "label": "full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-candidate-process.json",
+      "label": "full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-candidate.json",
+      "label": "full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-baseline-process.json",
+      "label": "full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-baseline.json",
+      "label": "full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-candidate-process.json",
+      "label": "full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-candidate.json",
+      "label": "full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-baseline-process.json",
+      "label": "full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-baseline.json",
+      "label": "full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-candidate-process.json",
+      "label": "full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-candidate.json",
+      "label": "full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-baseline-process.json",
+      "label": "full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-baseline.json",
+      "label": "full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-candidate-process.json",
+      "label": "full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-candidate.json",
+      "label": "full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-baseline-process.json",
+      "label": "full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-baseline.json",
+      "label": "full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-candidate-process.json",
+      "label": "full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-candidate.json",
+      "label": "full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-baseline-process.json",
+      "label": "full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-baseline.json",
+      "label": "full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-candidate-process.json",
+      "label": "full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-candidate.json",
+      "label": "full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-baseline-process.json",
+      "label": "full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-baseline.json",
+      "label": "full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-candidate-process.json",
+      "label": "full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-candidate.json",
+      "label": "full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-baseline-process.json",
+      "label": "full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-baseline.json",
+      "label": "full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-candidate-process.json",
+      "label": "full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-candidate.json",
+      "label": "full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-baseline-process.json",
+      "label": "layout-editors-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-baseline.json",
+      "label": "layout-editors-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-candidate-process.json",
+      "label": "layout-editors-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-candidate.json",
+      "label": "layout-editors-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-baseline-process.json",
+      "label": "layout-editors-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-baseline.json",
+      "label": "layout-editors-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-candidate-process.json",
+      "label": "layout-editors-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-candidate.json",
+      "label": "layout-editors-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-baseline-process.json",
+      "label": "layout-editors-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-baseline.json",
+      "label": "layout-editors-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-candidate-process.json",
+      "label": "layout-editors-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-candidate.json",
+      "label": "layout-editors-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-baseline-process.json",
+      "label": "layout-editors-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-baseline.json",
+      "label": "layout-editors-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-candidate-process.json",
+      "label": "layout-editors-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-candidate.json",
+      "label": "layout-editors-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-baseline-process.json",
+      "label": "layout-editors-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-baseline.json",
+      "label": "layout-editors-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-candidate-process.json",
+      "label": "layout-editors-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-candidate.json",
+      "label": "layout-editors-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-baseline-process.json",
+      "label": "layout-editors-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-baseline.json",
+      "label": "layout-editors-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-candidate-process.json",
+      "label": "layout-editors-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-candidate.json",
+      "label": "layout-editors-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-baseline-process.json",
+      "label": "layout-editors-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-baseline.json",
+      "label": "layout-editors-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-candidate-process.json",
+      "label": "layout-editors-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-candidate.json",
+      "label": "layout-editors-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-baseline-process.json",
+      "label": "layout-editors-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-baseline.json",
+      "label": "layout-editors-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-candidate-process.json",
+      "label": "layout-editors-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-candidate.json",
+      "label": "layout-editors-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/summary.json",
+      "label": "summary.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/summary.md",
+      "label": "summary.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-baseline-process.json",
+      "label": "themed-full-list-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-baseline.json",
+      "label": "themed-full-list-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-candidate-process.json",
+      "label": "themed-full-list-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-candidate.json",
+      "label": "themed-full-list-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-baseline-process.json",
+      "label": "themed-full-list-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-baseline.json",
+      "label": "themed-full-list-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-candidate-process.json",
+      "label": "themed-full-list-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-candidate.json",
+      "label": "themed-full-list-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-baseline-process.json",
+      "label": "themed-full-list-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-baseline.json",
+      "label": "themed-full-list-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-candidate-process.json",
+      "label": "themed-full-list-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-candidate.json",
+      "label": "themed-full-list-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-baseline-process.json",
+      "label": "themed-full-list-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-baseline.json",
+      "label": "themed-full-list-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-candidate-process.json",
+      "label": "themed-full-list-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-candidate.json",
+      "label": "themed-full-list-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-baseline-process.json",
+      "label": "themed-full-list-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-baseline.json",
+      "label": "themed-full-list-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-candidate-process.json",
+      "label": "themed-full-list-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-candidate.json",
+      "label": "themed-full-list-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-baseline-process.json",
+      "label": "themed-full-list-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-baseline.json",
+      "label": "themed-full-list-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-candidate-process.json",
+      "label": "themed-full-list-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-candidate.json",
+      "label": "themed-full-list-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-baseline-process.json",
+      "label": "themed-full-list-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-baseline.json",
+      "label": "themed-full-list-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-candidate-process.json",
+      "label": "themed-full-list-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-candidate.json",
+      "label": "themed-full-list-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-baseline-process.json",
+      "label": "themed-full-list-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-baseline.json",
+      "label": "themed-full-list-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-candidate-process.json",
+      "label": "themed-full-list-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-candidate.json",
+      "label": "themed-full-list-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-baseline-process.json",
+      "label": "virtualized-0-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-baseline.json",
+      "label": "virtualized-0-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-candidate-process.json",
+      "label": "virtualized-0-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-candidate.json",
+      "label": "virtualized-0-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-baseline-process.json",
+      "label": "virtualized-1-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-baseline.json",
+      "label": "virtualized-1-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-candidate-process.json",
+      "label": "virtualized-1-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-candidate.json",
+      "label": "virtualized-1-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-baseline-process.json",
+      "label": "virtualized-2-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-baseline.json",
+      "label": "virtualized-2-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-candidate-process.json",
+      "label": "virtualized-2-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-candidate.json",
+      "label": "virtualized-2-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-baseline-process.json",
+      "label": "virtualized-3-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-baseline.json",
+      "label": "virtualized-3-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-candidate-process.json",
+      "label": "virtualized-3-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-candidate.json",
+      "label": "virtualized-3-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-baseline-process.json",
+      "label": "virtualized-4-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-baseline.json",
+      "label": "virtualized-4-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-candidate-process.json",
+      "label": "virtualized-4-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-candidate.json",
+      "label": "virtualized-4-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-baseline-process.json",
+      "label": "virtualized-5-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-baseline.json",
+      "label": "virtualized-5-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-candidate-process.json",
+      "label": "virtualized-5-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-candidate.json",
+      "label": "virtualized-5-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-baseline-process.json",
+      "label": "virtualized-6-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-baseline.json",
+      "label": "virtualized-6-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-candidate-process.json",
+      "label": "virtualized-6-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-candidate.json",
+      "label": "virtualized-6-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-baseline-process.json",
+      "label": "virtualized-7-baseline-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-baseline.json",
+      "label": "virtualized-7-baseline.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-candidate-process.json",
+      "label": "virtualized-7-candidate-process.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-candidate.json",
+      "label": "virtualized-7-candidate.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/release-evidence/2026-11-13-alpha7/validate-run.json",
+      "label": "validate-run.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/releases/0.1.0-alpha.4.md",
       "label": "0.1.0-alpha.4.md",
       "group": "docs",
@@ -35174,7 +37592,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.7 candidate prepared November 13, 2026; local validation, exact-commit hosted gates and publication verification pending. Baseline and budgets remain unchanged. Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
+      "summary": "Alpha.7 libraries and symbols published November 13, 2026 from c5d639bcff707ff1a75b23f2a60135d6be6cb7b2. Local zero-warning Release validation passes 172 tests, 15 visual checks, 21 stress assertions, real-window lifecycle and isolated package checks. Seven-pair local and both exact-commit hosted comparisons pass 32/32 unchanged performance budgets. Initial public restore preceded indexing and failed; subsequent fresh NuGet.org-only installation passes and both DLL hashes match hosted artifacts. All evidence retained. Concurrent FW-018 work was excluded; captured local sources match the release commit despite its dirty flag. Historical user-confirmed IME/contrast acceptance remains scoped; no v1 readiness claim. The source skill/media are distributed through the repository, not NuGet library payloads.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -35272,7 +37690,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 65,
+        "line": 67,
         "text": "](docs/releases/0.1.0-alpha.5.md)"
       }
     },
@@ -35282,7 +37700,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 27,
+        "line": 29,
         "text": "](docs/releases/0.1.0-alpha.6.md)"
       }
     },
@@ -35292,7 +37710,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 7,
+        "line": 9,
         "text": "](docs/releases/0.1.0-alpha.7.md)"
       }
     },
@@ -35302,7 +37720,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 47,
+        "line": 49,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35352,7 +37770,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 178,
+        "line": 179,
         "text": "](docs/accessibility-2026-10-26.md)"
       }
     },
@@ -35362,7 +37780,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 60,
+        "line": 61,
         "text": "](docs/agent-skill.md)"
       }
     },
@@ -35372,7 +37790,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 91,
+        "line": 92,
         "text": "](docs/application-cleanup-policy-2026-09-25.md)"
       }
     },
@@ -35382,7 +37800,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 133,
+        "line": 134,
         "text": "](docs/bindings.md)"
       }
     },
@@ -35392,7 +37810,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 179,
+        "line": 180,
         "text": "](docs/error-recovery.md)"
       }
     },
@@ -35402,7 +37820,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 157,
+        "line": 158,
         "text": "](docs/knowledge-graph.md)"
       }
     },
@@ -35412,7 +37830,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 189,
+        "line": 190,
         "text": "](docs/knowledge-graph/README.md)"
       }
     },
@@ -35422,7 +37840,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 198,
+        "line": 199,
         "text": "](docs/knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -35432,7 +37850,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 54,
+        "line": 55,
         "text": "](docs/launchpad.md)"
       }
     },
@@ -35442,7 +37860,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 141,
+        "line": 142,
         "text": "](docs/layout-styling.md)"
       }
     },
@@ -35452,7 +37870,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 181,
+        "line": 182,
         "text": "](docs/navigation.md)"
       }
     },
@@ -35462,7 +37880,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 32,
+        "line": 33,
         "text": "](docs/package-readme.md)"
       }
     },
@@ -35472,7 +37890,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 137,
+        "line": 138,
         "text": "](docs/performance-results.md)"
       }
     },
@@ -35482,7 +37900,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 135,
+        "line": 136,
         "text": "](docs/performance.md)"
       }
     },
@@ -35492,7 +37910,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 20,
+        "line": 24,
         "text": "](docs/releases/0.1.0-alpha.7.md)"
       }
     },
@@ -35512,7 +37930,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 33,
+        "line": 34,
         "text": "](docs/releasing.md)"
       }
     },
@@ -35522,7 +37940,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 139,
+        "line": 140,
         "text": "](docs/stress-lab.md)"
       }
     },
@@ -35532,7 +37950,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 85,
+        "line": 86,
         "text": "](docs/timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -35542,7 +37960,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 139,
+        "line": 140,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35552,7 +37970,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 177,
+        "line": 178,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35562,7 +37980,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 180,
+        "line": 181,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35572,7 +37990,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 58,
+        "line": 59,
         "text": "](skills/ui-framework/SKILL.md)"
       }
     },
@@ -41102,7 +43520,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 798,
+        "line": 805,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -41112,7 +43530,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 363,
+        "line": 365,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -41122,7 +43540,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 365,
+        "line": 367,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -41132,7 +43550,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 745,
+        "line": 747,
         "text": "](agent-skill.md)"
       }
     },
@@ -41142,7 +43560,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 815,
+        "line": 822,
         "text": "](agent-skill.md)"
       }
     },
@@ -41152,7 +43570,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 634,
+        "line": 636,
         "text": "](api-contract.md)"
       }
     },
@@ -41162,7 +43580,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 806,
+        "line": 813,
         "text": "](api-contract.md)"
       }
     },
@@ -41172,7 +43590,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 155,
+        "line": 157,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -41182,7 +43600,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 249,
+        "line": 251,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -41192,7 +43610,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 804,
+        "line": 811,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -41202,7 +43620,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 367,
+        "line": 369,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -41212,7 +43630,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 347,
+        "line": 349,
         "text": "](discovery-initialization-2026-10-28.md)"
       }
     },
@@ -41222,7 +43640,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 411,
+        "line": 413,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41232,7 +43650,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 459,
+        "line": 461,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41242,7 +43660,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 811,
+        "line": 818,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41252,7 +43670,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 812,
+        "line": 819,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41262,7 +43680,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 420,
+        "line": 422,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -41272,7 +43690,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 421,
+        "line": 423,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -41282,7 +43700,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 422,
+        "line": 424,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -41292,7 +43710,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 418,
+        "line": 420,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -41302,7 +43720,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 811,
+        "line": 818,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -41312,7 +43730,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 735,
+        "line": 737,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -41322,7 +43740,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 809,
+        "line": 816,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -41332,7 +43750,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 810,
+        "line": 817,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -41342,7 +43760,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 721,
+        "line": 723,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -41352,7 +43770,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 809,
+        "line": 816,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -41362,7 +43780,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 736,
+        "line": 738,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -41372,7 +43790,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 810,
+        "line": 817,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -41382,7 +43800,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 163,
+        "line": 165,
         "text": "](layout-styling.md)"
       }
     },
@@ -41392,7 +43810,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 10,
+        "line": 12,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41402,7 +43820,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 320,
+        "line": 322,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41412,7 +43830,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 359,
+        "line": 361,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41422,7 +43840,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 813,
+        "line": 820,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41432,7 +43850,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 814,
+        "line": 821,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41442,7 +43860,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 593,
+        "line": 595,
         "text": "](native-interop.md)"
       }
     },
@@ -41452,7 +43870,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 276,
+        "line": 278,
         "text": "](native-island-performance.md)"
       }
     },
@@ -41462,7 +43880,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 808,
+        "line": 815,
         "text": "](native-island-performance.md)"
       }
     },
@@ -41472,7 +43890,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 534,
+        "line": 536,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -41482,7 +43900,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 683,
+        "line": 685,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -41492,7 +43910,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 487,
+        "line": 489,
         "text": "](native-provider-stall-policy.md)"
       }
     },
@@ -41502,7 +43920,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 131,
+        "line": 133,
         "text": "](native-style-validation.md)"
       }
     },
@@ -41512,7 +43930,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 533,
+        "line": 535,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -41522,7 +43940,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 682,
+        "line": 684,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -41532,7 +43950,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 469,
+        "line": 471,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -41542,7 +43960,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 812,
+        "line": 819,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -41552,7 +43970,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 419,
+        "line": 421,
         "text": "](performance-evidence/2026-10-29-mount-allocations/README.md)"
       }
     },
@@ -41562,7 +43980,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 772,
+        "line": 779,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -41572,7 +43990,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 597,
+        "line": 599,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -41582,7 +44000,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 130,
+        "line": 132,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -41592,7 +44010,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 803,
+        "line": 810,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -41602,7 +44020,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 116,
+        "line": 118,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -41612,7 +44030,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 157,
+        "line": 159,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -41622,18 +44040,8 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 805,
+        "line": 812,
         "text": "](releases/0.1.0-alpha.5.md)"
-      }
-    },
-    {
-      "source": "docs/backlog.md",
-      "target": "docs/releases/0.1.0-alpha.6.md",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/backlog.md",
-        "line": 8,
-        "text": "](releases/0.1.0-alpha.6.md)"
       }
     },
     {
@@ -41642,7 +44050,27 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 766,
+        "line": 8,
+        "text": "](releases/0.1.0-alpha.7.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 773,
+        "text": "](releases/0.1.0-alpha.7.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 823,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -41652,7 +44080,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 138,
+        "line": 140,
         "text": "](releasing.md)"
       }
     },
@@ -41662,7 +44090,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 370,
+        "line": 372,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -41672,7 +44100,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 353,
+        "line": 355,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -41682,7 +44110,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 373,
+        "line": 375,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -41692,7 +44120,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 183,
+        "line": 185,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -41702,7 +44130,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 807,
+        "line": 814,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -41712,7 +44140,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 210,
+        "line": 212,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -41722,7 +44150,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 807,
+        "line": 814,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -41732,7 +44160,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 328,
+        "line": 330,
         "text": "](virtualization.md)"
       }
     },
@@ -41742,7 +44170,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 321,
+        "line": 323,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -41752,7 +44180,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 551,
+        "line": 553,
         "text": "](webview2-acceptance-2026-10-29.md)"
       }
     },
@@ -41762,7 +44190,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 492,
+        "line": 494,
         "text": "](webview2-final-2026-11-11.md)"
       }
     },
@@ -41772,7 +44200,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 557,
+        "line": 559,
         "text": "](webview2-interaction-2026-10-29.md)"
       }
     },
@@ -41782,7 +44210,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 570,
+        "line": 572,
         "text": "](webview2-recovery-2026-10-29.md)"
       }
     },
@@ -41792,7 +44220,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 512,
+        "line": 514,
         "text": "](webview2-retention-2026-11-11.md)"
       }
     },
@@ -41802,7 +44230,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 538,
+        "line": 540,
         "text": "](webview2-review-2026-10-29.md)"
       }
     },
@@ -41812,7 +44240,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 520,
+        "line": 522,
         "text": "](webview2-shutdown-2026-11-11.md)"
       }
     },
@@ -47847,6 +50275,16 @@
       }
     },
     {
+      "source": "docs/release-evidence/2026-11-13-alpha7/README.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/release-evidence/2026-11-13-alpha7/README.md",
+        "line": 4,
+        "text": "](../../releases/0.1.0-alpha.7.md)"
+      }
+    },
+    {
       "source": "docs/releases/0.1.0-alpha.4.md",
       "target": "docs/backlog.md",
       "kind": "links",
@@ -47997,12 +50435,72 @@
       }
     },
     {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/summary.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 69,
+        "text": "](../release-evidence/2026-11-13-alpha7/hosted-performance/summary.md)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/indexing-observation.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 77,
+        "text": "](../release-evidence/2026-11-13-alpha7/indexing-observation.json)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/summary.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 49,
+        "text": "](../release-evidence/2026-11-13-alpha7/local-performance/summary.md)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-source-verification.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 54,
+        "text": "](../release-evidence/2026-11-13-alpha7/local-source-verification.json)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/public-installation.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 96,
+        "text": "](../release-evidence/2026-11-13-alpha7/public-installation.json)"
+      }
+    },
+    {
+      "source": "docs/releases/0.1.0-alpha.7.md",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/summary.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/0.1.0-alpha.7.md",
+        "line": 86,
+        "text": "](../release-evidence/2026-11-13-alpha7/release-performance/summary.md)"
+      }
+    },
+    {
       "source": "docs/releasing.md",
       "target": "docs/releases/0.1.0-alpha.6.md",
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 7,
+        "line": 9,
         "text": "](releases/0.1.0-alpha.6.md)"
       }
     },
@@ -48012,7 +50510,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 4,
+        "line": 7,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -75894,6 +78392,2021 @@
     {
       "source": "group:docs",
       "target": "docs/release-evidence/2026-10-28-alpha6/windows-validation/stress.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/binary-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/hosted-performance/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/indexing-observation.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/binary-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-performance/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/local-source-verification.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/public-installation.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/publish-run.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/binary-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/candidate-source-manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/layout-editors-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/summary.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/summary.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/themed-full-list-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-0-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-1-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-2-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-3-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-4-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-5-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-6-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-baseline-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-baseline.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-candidate-process.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/release-performance/virtualized-7-candidate.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/release-evidence/2026-11-13-alpha7/validate-run.json",
       "kind": "contains"
     },
     {

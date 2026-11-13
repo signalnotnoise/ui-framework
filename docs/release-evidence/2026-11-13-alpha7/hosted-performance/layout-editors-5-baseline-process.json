@@ -1,0 +1,7 @@
+{
+  "scenario": "layout-editors",
+  "sample": 5,
+  "side": "baseline",
+  "wallSeconds": 17.1305123,
+  "cpuSeconds": 25.3125
+}

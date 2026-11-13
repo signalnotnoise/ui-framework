@@ -1,0 +1,20 @@
+{
+  "SchemaVersion": 2,
+  "Scenario": "layout-editors",
+  "Rows": 1000,
+  "MixedOperations": 50,
+  "CleanupPolicy": "application-owned",
+  "EditorInitializationProtocol": "source-before-editors-v1",
+  "InitializationOrder": "source-first",
+  "PhaseTracing": false,
+  "MountMilliseconds": 2834.837,
+  "MountAllocatedBytes": 120777280,
+  "MountBodyBuilds": 1,
+  "Milliseconds": 13666.7128,
+  "AllocatedBytes": 1123056216,
+  "BodyBuilds": 50,
+  "Mounts": 0,
+  "Unmounts": 0,
+  "Runtime": "10.0.15",
+  "TimeUtc": "2026-11-13T10:42:12.4296035+00:00"
+}
