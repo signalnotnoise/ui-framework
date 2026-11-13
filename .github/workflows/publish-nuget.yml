@@ -55,7 +55,7 @@ jobs:
         run: ./tools/Test-Performance.ps1 -IncludeLayoutEditors -DumpToolPath artifacts/diagnostic-tools/dotnet-dump.exe -OutputDirectory artifacts/performance/release
       - name: Save performance evidence
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-performance
           path: |
@@ -64,14 +64,14 @@ jobs:
             artifacts/performance/release/*.log
             artifacts/performance/release/*.dmp
           if-no-files-found: warn
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: nuget-release
           path: artifacts/packages/*.*nupkg
           if-no-files-found: error
       - name: Save validation evidence
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-validation
           path: artifacts/release-validation/
