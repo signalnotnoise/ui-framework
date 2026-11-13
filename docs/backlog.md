@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: October 29, 2026.
+Last updated: November 11, 2026.
 
 Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
 both hosted workflows passed (146 tests, 32 performance gates each). A fresh
@@ -18,7 +18,7 @@ FW-003 was reopened October 24 and is now resolved with an identified startup
 bottleneck, a tested initialization-order fix and passing local gates. No later
 backlog item was started during that investigation. FW-005 and FW-006 now have user-confirmed physical acceptance and are complete.
 FW-001, FW-002, FW-004,
-FW-015, FW-016 and FW-020 are also complete within their recorded scopes. Work within each priority follows the order below; performance
+FW-010, FW-015, FW-016 and FW-020 are also complete within their recorded scopes. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -26,8 +26,8 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-010 | P1 | Verify asynchronous native host ownership | In progress |
-| 2 | FW-018 | P1 | Verify resource lifetime and improve diagnostics | In progress |
+| 1 | FW-018 | P1 | Verify resource lifetime and improve diagnostics | In progress |
+| Done | FW-010 | P1 | Verify asynchronous native host ownership | Done — scoped native/WebView2 acceptance |
 | Done | FW-005 | P1 | Strengthen editing through virtualized row recycling | Done — user-confirmed physical IME pass |
 | Done | FW-006 | P1 | Expand UI Automation and accessibility coverage | Done — user-confirmed contrast pass |
 | Done | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Done — exact-commit hosted gate passed |
@@ -81,7 +81,7 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 | Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; broader memory/RC acceptance remains open | Performance maintainer |
 | Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. User confirmed physical IME pass October 29; provider/build details not supplied | Codex / WPF/input maintainer |
 | Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated checks pass; user reported Narrator/scaling October 28 and contrast switching October 29 | Accessibility reviewer |
-| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | Controlled async races and real-window shutdown pass; provider-specific/native airspace acceptance open | WPF interop maintainer |
+| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | FW-010 complete within documented standard-WebView2 scope: repeated interaction, lifetime/recovery and retention pass; permanent-stall policy defined. Representative budgets/diagnostics remain FW-018 | WPF interop maintainer |
 | Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Repeated collectability, native buffers and visited-key measurements pass; representative memory budgets remain open | Runtime maintainer |
 | Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
 | Adoption and upgrades â€” FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Package smoke tests pass; independent upgrade acceptance pending | Release/sample maintainer |
@@ -484,7 +484,42 @@ has focused correctness, theme and accessibility acceptance criteria.
 
 ### FW-010 Evaluate asynchronous native hosting
 
-Status: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
+Completed November 11, 2026 within the [v1 native-provider and interaction contract](native-provider-stall-policy.md).
+Final interactive acceptance passes **9/9** fresh-process cases: keyboard/three-theme
+retention, airspace/resize, native/HTML pointer routing, scrolling and sampled
+rectangular bounds. Full Release validation passes **172 tests, 15 visual checks,
+21 stress assertions**, startup/editing/disposal and native-window lifetime checks.
+Both knowledge graph checks pass. [Final acceptance and evidence](webview2-final-2026-11-11.md).
+
+Permanent stalls have an explicit support limit: timeout reports and retains pending
+ownership; close cannot be declared complete while provider work is pending. Hard
+shutdown deadlines require app-owned process isolation, outside the v1 native-host
+API. Standard WebView2 sibling-overlay/arbitrary-clip limitations are documented.
+No framework API/runtime change was justified. GuidedGrade adoption and FW-018
+budgets/diagnostics remain separate; this is not package/hosted release validation.
+
+The dated notes below preserve the investigation history; the closure above is the
+current acceptance status.
+
+Resource-retention slice completed November 11: **six final runs pass**, fresh and
+reused profiles, 270 parent/popup cycles including six negative controls, 540 owners
+released exactly once, 1,350 captured process exits and 2,970 tracked references
+collected. All 42 existing WebView2 cases also pass; two aggregate-error assertions
+now reject unrelated extra cleanup errors. The initial cycle-count reporting
+mismatch and raw runs are retained. Heap/handle trends are observations, not universal
+budgets; FW-018 retains that work. Full Release validation passes 172 tests,
+15 visual checks, 21 stress assertions and actual-window startup/disposal.
+[Retention results and exception-test review](webview2-retention-2026-11-11.md).
+
+November 11 continuation: **42/42 repeated WebView2 checks pass**, including 12 new
+bounded-wait/late-success/late-fault and real script-close checks. The sample retains
+pending ownership, reports deadline failures, rejects same-owner restart and drains
+script-requested parent/child close exactly once. Controlled pending operations do
+not prove recovery from a genuinely hung provider. Full Release validation passes 172 tests, visual checks, 21 stress assertions
+and actual-window startup/disposal.
+[Policy, scope and evidence](webview2-shutdown-2026-11-11.md).
+
+Status: **Done**. Owner: Codex. Started October 29, 2026. Promoted to P1
 and first in the active queue at the user's request. Initial slice: controlled
 async completion/removal races, partial initialization and failure cleanup through
 existing native callbacks. Keep native resources and cancellation application-owned.
@@ -497,6 +532,57 @@ timeout/retry). Existing callbacks suffice for this controlled WPF adapter.
 Provider-specific/native-airspace acceptance or an explicit v1 scope decision
 remains open. [Window and memory evidence](native-window-memory-2026-10-29.md).
 [First-slice evidence](native-lifetime-2026-10-29.md).
+
+Source review October 29: **GuidedGrade already has WebView2 integration**, pinned
+to WebView2 1.0.4314.35 and framework alpha.7-local.1 in its dirty working tree.
+[Reviewed implementation, source fingerprints and acceptance plan](webview2-review-2026-10-29.md).
+App-side risks: pending initialization/popup tasks are not drained on close, popup
+completion lacks closed-owner/error handling, and sequential cleanup can stop on
+an exception. Child environment compatibility and event/resource release need
+evidence. These are review findings, not reproduced framework defects.
+
+Real-browser slice completed October 29: **15/15 cases** pass (three fresh-process
+repetitions each) using local parent/child pages and isolated profiles, with WebView2
+SDK 1.0.4314.35/runtime 156.0.4314.50. Tests cover environment-to-control application
+boundary close, actual pending control initialization close, successful owned popup,
+and parent/child close during actual pending child initialization. Deferrals complete,
+late assignments are prevented, hosts release once and dispatcher cleanup completes.
+Environment creation was synchronous here; its controlled boundary test is not
+reported as a provider race. [Results and preserved evidence](webview2-acceptance-2026-10-29.md).
+
+Interaction pilot October 29: forward/reverse WPF/browser Tab traversal, real text
+input/Enter, and refresh/theme focus/selection retention pass once. Resize and
+screen-pixel airspace checks also pass once: standard WebView2 covers WPF sibling
+overlays; hiding it reveals the overlay, and a separate popup HWND appears above it.
+[Interaction evidence and desktop-use limits](webview2-interaction-2026-10-29.md).
+The initial foreground setup failure is retained. Further foreground tests stopped
+when the user questioned desktop use; repetitions have not yet been run. Desktop
+interaction was subsequently reauthorized for the recovery continuation. Interactive
+cases still require opt-in and are excluded from the default runner. No framework
+runtime or GuidedGrade code changed.
+
+Failure/recovery slice completed October 29: **15/15 checks** pass (three profile
+preflight checks plus twelve real missing-runtime/navigation/renderer/browser
+failure-and-recovery cases). Original lifetime/popup cases also pass **15/15** on
+the final sample. Crash cleanup now uses the cached subscribed core object; a known
+invalid profile path is rejected before entering provider initialization. Earlier
+invalid-profile timeout, DevTools command timeout and cleanup failures are retained.
+[Detailed outcomes, changed probe and evidence](webview2-recovery-2026-10-29.md).
+Generic stalled-provider policy remains unverified; no budget was relaxed. Full
+framework regression passes 172 tests, 15 visual checks and 21 stress assertions.
+User authorized desktop interaction for this continuation; these cases needed no
+foreground input. Core/WPF runtime and GuidedGrade code are unchanged.
+
+Final interaction and local-page resource acceptance are complete within the
+linked policy. Broader budgets remain FW-018; forced provider termination is an
+application/process-isolation responsibility, not a supported in-process promise.
+GuidedGrade still needs application-side lifecycle hardening from the source review;
+this standalone sample does not change or validate its current shutdown code.
+No framework defect or new API requirement was reproduced. Framework runtime and
+GuidedGrade are unchanged. The explicit browser command is not yet a CI release gate;
+172 framework tests, 15 visual checks and 21 stress assertions pass during this work.
+Existing hosted 32/32 performance evidence belongs to `64bd242`, not a browser benchmark.
+
 
 Use a framework-owned integration sample to test native initialization that
 completes after unmount, initialization failure, retained identity, explicit
@@ -581,7 +667,7 @@ FW-006 accessibility acceptance and retain theme/local-value precedence.
 ### FW-018 Improve runtime diagnostics and lifetime verification
 
 Status: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
-and second in the active queue, alongside FW-010. Initial slice: weak-reference
+and now first in the active queue after FW-010 closed November 11. Initial slice: weak-reference
 collectability with live external publishers, queued refreshes, native removal
 and repeated disposal. Callback balance alone is insufficient.
 The initial checks collect disposed hosts, visited native rows and late async

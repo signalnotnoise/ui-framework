@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "2fccfe32254342945f2881eab5edd2720c7d83696d2f08e8671db3173dcc32ff",
+  "inputDigest": "d3293edfbdaf86e4a6d923d78f38a50ae5a1e3968e31d60203038d188c593ecb",
   "coverage": {
     "unresolvedRelativeReferences": 35,
     "semantic": false,
@@ -643,6 +643,12 @@
     {
       "id": "docs/native-lifetime-2026-10-29.md",
       "label": "native-lifetime-2026-10-29.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/native-provider-stall-policy.md",
+      "label": "native-provider-stall-policy.md",
       "group": "docs",
       "kind": "file"
     },
@@ -32933,6 +32939,78 @@
       "kind": "file"
     },
     {
+      "id": "docs/verification-evidence/2026-10-29-webview2-interaction/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-10-29-webview2-interaction/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-10-29-webview2-recovery/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-10-29-webview2-recovery/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-10-29-webview2/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-10-29-webview2/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-final/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-final/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-retention/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-retention/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-shutdown/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/verification-evidence/2026-11-11-webview2-shutdown/manifest.json",
+      "label": "manifest.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/virtualization.md",
       "label": "virtualization.md",
       "group": "docs",
@@ -32941,6 +33019,54 @@
     {
       "id": "docs/virtualized-editing-2026-10-24.md",
       "label": "virtualized-editing-2026-10-24.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-acceptance-2026-10-29.md",
+      "label": "webview2-acceptance-2026-10-29.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-final-2026-11-11.md",
+      "label": "webview2-final-2026-11-11.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-interaction-2026-10-29.md",
+      "label": "webview2-interaction-2026-10-29.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-recovery-2026-10-29.md",
+      "label": "webview2-recovery-2026-10-29.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-retention-2026-11-11.md",
+      "label": "webview2-retention-2026-11-11.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-review-2026-10-29.md",
+      "label": "webview2-review-2026-10-29.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-review-source.json",
+      "label": "webview2-review-source.json",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/webview2-shutdown-2026-11-11.md",
+      "label": "webview2-shutdown-2026-11-11.md",
       "group": "docs",
       "kind": "file"
     },
@@ -33397,6 +33523,126 @@
     {
       "id": "samples/NativeLifetime/WindowChecks.cs",
       "label": "WindowChecks.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "label": "AcceptanceSuite.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/BrowserSession.cs",
+      "label": "BrowserSession.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/FailureChecks.cs",
+      "label": "FailureChecks.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/InteractionChecks.cs",
+      "label": "InteractionChecks.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "label": "InteractionWorkspace.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/KeyboardPacket.cs",
+      "label": "KeyboardPacket.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/KeyboardProbe.cs",
+      "label": "KeyboardProbe.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/Pages/child.html",
+      "label": "child.html",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/Pages/interaction.html",
+      "label": "interaction.html",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/Pages/parent.html",
+      "label": "parent.html",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/Probe.cs",
+      "label": "Probe.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/ProcessFault.cs",
+      "label": "ProcessFault.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/Program.cs",
+      "label": "Program.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/README.md",
+      "label": "README.md",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "label": "RetentionChecks.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "label": "RetentionCycle.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "label": "RetentionTelemetry.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/ScreenProbe.cs",
+      "label": "ScreenProbe.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "label": "ShutdownChecks.cs",
+      "group": "samples",
+      "kind": "file"
+    },
+    {
+      "id": "samples/WebViewAcceptance/WebViewAcceptance.csproj",
+      "label": "WebViewAcceptance.csproj",
       "group": "samples",
       "kind": "file"
     },
@@ -34013,6 +34259,12 @@
       "kind": "file"
     },
     {
+      "id": "tools/Test-WebViewAcceptance.ps1",
+      "label": "Test-WebViewAcceptance.ps1",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
       "id": "tools/Test-WindowStartup.ps1",
       "label": "Test-WindowStartup.ps1",
       "group": "tools",
@@ -34146,7 +34398,7 @@
       "id": "concept:nativeinterop",
       "label": "Retained native WPF islands",
       "status": "implemented",
-      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary for common native controls. Apps own native contents, local styles and durable state. FW-010 is active at P1: controlled asynchronous initialization and failure/removal races are being verified using application-owned cancellation and cleanup with the existing callbacks; no new API is justified yet. First slice: 13 controlled async/lifetime checks pass against unchanged runtime. Application adapter owns cancellation, fault reporting, late-resource disposal and subscriptions; weak-reference probes include live publishers/tasks and a deliberately retained negative control. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and startup/editing/disposal. Both backlog items remain in progress; no runtime/API or performance claims change. Follow-up: the framework-owned NativeLifetime sample verifies real-window focus/selection, popup HWND release, resize/managed overlay and five app-owned close/drain cases including timeout retry and throwing cancellation. Three sustained runs cover 756 workspace cycles and 57,456 native mounts including warmup with zero observed survivors or owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removing keys releases state. Process heap growth remains an observation, not a memory budget or leak-free proof. Provider-specific native airspace, representative budgets and diagnostic API decisions remain open.",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary; applications own native contents, asynchronous provider work and durable state. FW-010 completed November 11, 2026 within the documented standard-WPF/WebView2 contract; existing callbacks suffice and no new runtime API is justified. Controlled ownership, partial-failure and late-completion checks, real-window shutdown, real-browser initialization/popup races, failure/recovery and script-close pass. Final interactive acceptance passes 9/9 fresh-process cases: keyboard traversal, three-theme identity/focus/text/selection, native/HTML trusted pointer, scrolling, sampled rectangular bounds, resize and verified HWND overlay limits. Retention passes six final runs: 270 parent/popup cycles including negative controls, 540 one-time releases, 1,350 captured process exits and 2,970 collected weak references. Timeout bounds the caller wait while retaining owner/dispatcher and one drain task; a permanently unsettled provider keeps close pending. Hard deadlines require app-owned process isolation; forced in-process disposal/cancellation is not promised. Arbitrary WPF clipping/sibling overlays, composition control, arbitrary websites/SSO and GuidedGrade adoption are outside this acceptance. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and real-window startup/disposal. Raw source snapshots, pilot issues and per-case evidence are preserved. FW-018 retains representative memory budgets and diagnostics; no new performance-release claim.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework/ViewKind.cs",
@@ -34178,7 +34430,35 @@
         "tools/Test-NativeLifetime.ps1",
         "tools/Summarize-NativeMemory.py",
         "scripts/test-native-memory.py",
-        "docs/native-window-memory-2026-10-29.md"
+        "docs/native-window-memory-2026-10-29.md",
+        "docs/webview2-review-2026-10-29.md",
+        "docs/webview2-review-source.json",
+        "samples/WebViewAcceptance/BrowserSession.cs",
+        "samples/WebViewAcceptance/AcceptanceSuite.cs",
+        "samples/WebViewAcceptance/Program.cs",
+        "samples/WebViewAcceptance/Pages/parent.html",
+        "samples/WebViewAcceptance/Pages/child.html",
+        "tools/Test-WebViewAcceptance.ps1",
+        "docs/webview2-acceptance-2026-10-29.md",
+        "samples/WebViewAcceptance/README.md",
+        "samples/WebViewAcceptance/InteractionChecks.cs",
+        "samples/WebViewAcceptance/InteractionWorkspace.cs",
+        "samples/WebViewAcceptance/KeyboardProbe.cs",
+        "samples/WebViewAcceptance/KeyboardPacket.cs",
+        "samples/WebViewAcceptance/ScreenProbe.cs",
+        "samples/WebViewAcceptance/Pages/interaction.html",
+        "docs/webview2-interaction-2026-10-29.md",
+        "samples/WebViewAcceptance/FailureChecks.cs",
+        "samples/WebViewAcceptance/ProcessFault.cs",
+        "docs/webview2-recovery-2026-10-29.md",
+        "samples/WebViewAcceptance/ShutdownChecks.cs",
+        "docs/webview2-shutdown-2026-11-11.md",
+        "samples/WebViewAcceptance/RetentionChecks.cs",
+        "samples/WebViewAcceptance/RetentionCycle.cs",
+        "samples/WebViewAcceptance/RetentionTelemetry.cs",
+        "docs/webview2-retention-2026-11-11.md",
+        "docs/native-provider-stall-policy.md",
+        "docs/webview2-final-2026-11-11.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -34393,7 +34673,7 @@
       "id": "concept:lifecycle",
       "label": "Mount and cleanup",
       "status": "implemented",
-      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released. FW-018 is active at P1: weak-reference checks with live publishers and repeated removal/disposal will distinguish callback balance from collectability. Broader memory budgets and diagnostic API decisions remain open. First slice: 13 controlled async/lifetime checks pass against unchanged runtime. Application adapter owns cancellation, fault reporting, late-resource disposal and subscriptions; weak-reference probes include live publishers/tasks and a deliberately retained negative control. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and startup/editing/disposal. Both backlog items remain in progress; no runtime/API or performance claims change. Follow-up: the framework-owned NativeLifetime sample verifies real-window focus/selection, popup HWND release, resize/managed overlay and five app-owned close/drain cases including timeout retry and throwing cancellation. Three sustained runs cover 756 workspace cycles and 57,456 native mounts including warmup with zero observed survivors or owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removing keys releases state. Process heap growth remains an observation, not a memory budget or leak-free proof. Provider-specific native airspace, representative budgets and diagnostic API decisions remain open.",
+      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released. FW-010 is complete within the November 11 native-provider contract: applications own async tasks, faults, cancellation and retained ownership across deadlines; late completion cannot attach to a closing owner, and cleanup drains before detachment/release. Permanently unsettled providers keep close pending; hard shutdown deadlines require app-owned process isolation. Controlled async/collectability and real-window shutdown checks pass; repeated WebView2 lifetime/recovery, script-close, final interactive and retention evidence is preserved. Browser retention covers 270 parent/popup pairs, 540 releases, 1,350 captured process exits and 2,970 collected references with deliberate-root negative controls. Earlier native-memory runs cover 756 workspace cycles and 57,456 native mounts with zero observed survivors/owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removal releases state. Heap/handle trends remain observations, not universal budgets. Full Release regression passes 172 tests, 15 visual checks and 21 stress assertions. FW-018 remains the first active P1 item for representative budgets and useful diagnostic API decisions. GuidedGrade application adoption remains separate.",
       "sources": [
         "UI Framework/Component.cs",
         "UI Framework.Wpf/ViewHost.cs",
@@ -34414,7 +34694,20 @@
         "tools/Test-NativeLifetime.ps1",
         "tools/Summarize-NativeMemory.py",
         "scripts/test-native-memory.py",
-        "docs/native-window-memory-2026-10-29.md"
+        "docs/native-window-memory-2026-10-29.md",
+        "docs/webview2-review-2026-10-29.md",
+        "docs/webview2-review-source.json",
+        "samples/WebViewAcceptance/FailureChecks.cs",
+        "samples/WebViewAcceptance/ProcessFault.cs",
+        "docs/webview2-recovery-2026-10-29.md",
+        "samples/WebViewAcceptance/ShutdownChecks.cs",
+        "docs/webview2-shutdown-2026-11-11.md",
+        "samples/WebViewAcceptance/RetentionChecks.cs",
+        "samples/WebViewAcceptance/RetentionCycle.cs",
+        "samples/WebViewAcceptance/RetentionTelemetry.cs",
+        "docs/webview2-retention-2026-11-11.md",
+        "docs/native-provider-stall-policy.md",
+        "docs/webview2-final-2026-11-11.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -37383,6 +37676,15 @@
     },
     {
       "source": "concept:lifecycle",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/31"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
       "target": "docs/native-window-memory-2026-10-29.md",
       "kind": "evidenced by",
       "evidence": {
@@ -37397,6 +37699,60 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/14/sources/10"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/32"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/24"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/30"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/20"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-review-source.json",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/21"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/26"
       }
     },
     {
@@ -37442,6 +37798,60 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/14/sources/13"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/FailureChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/22"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/ProcessFault.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/23"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/27"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/28"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/29"
+      }
+    },
+    {
+      "source": "concept:lifecycle",
+      "target": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/14/sources/25"
       }
     },
     {
@@ -37734,6 +38144,15 @@
     },
     {
       "source": "concept:nativeinterop",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/57"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
       "target": "docs/native-style-validation.md",
       "kind": "evidenced by",
       "evidence": {
@@ -37757,6 +38176,78 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/1/sources/21"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/39"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/58"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/47"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/50"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/56"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/31"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-review-source.json",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/32"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/52"
       }
     },
     {
@@ -37811,6 +38302,168 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/1/sources/24"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/34"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/BrowserSession.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/33"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/FailureChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/48"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/InteractionChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/41"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/42"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/KeyboardPacket.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/44"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/KeyboardProbe.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/43"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/Pages/child.html",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/37"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/Pages/interaction.html",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/46"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/Pages/parent.html",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/36"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/ProcessFault.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/49"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/Program.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/35"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/40"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/53"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/54"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/55"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/ScreenProbe.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/45"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/51"
       }
     },
     {
@@ -37919,6 +38572,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/1/sources/12"
+      }
+    },
+    {
+      "source": "concept:nativeinterop",
+      "target": "tools/Test-WebViewAcceptance.ps1",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/1/sources/38"
       }
     },
     {
@@ -40193,7 +40855,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 682,
+        "line": 768,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -40223,7 +40885,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 548,
+        "line": 634,
         "text": "](api-contract.md)"
       }
     },
@@ -40233,7 +40895,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 690,
+        "line": 776,
         "text": "](api-contract.md)"
       }
     },
@@ -40263,7 +40925,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 688,
+        "line": 774,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -40313,7 +40975,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 695,
+        "line": 781,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -40323,7 +40985,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 696,
+        "line": 782,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -40373,7 +41035,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 695,
+        "line": 781,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -40383,7 +41045,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 649,
+        "line": 735,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -40393,7 +41055,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 693,
+        "line": 779,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -40403,7 +41065,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 694,
+        "line": 780,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -40413,7 +41075,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 635,
+        "line": 721,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -40423,7 +41085,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 693,
+        "line": 779,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -40433,7 +41095,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 650,
+        "line": 736,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -40443,7 +41105,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 694,
+        "line": 780,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -40493,7 +41155,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 697,
+        "line": 783,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -40503,7 +41165,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 698,
+        "line": 784,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -40513,7 +41175,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 507,
+        "line": 593,
         "text": "](native-interop.md)"
       }
     },
@@ -40533,7 +41195,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 692,
+        "line": 778,
         "text": "](native-island-performance.md)"
       }
     },
@@ -40543,7 +41205,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 499,
+        "line": 534,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -40553,8 +41215,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 597,
+        "line": 683,
         "text": "](native-lifetime-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 487,
+        "text": "](native-provider-stall-policy.md)"
       }
     },
     {
@@ -40573,7 +41245,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 498,
+        "line": 533,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -40583,7 +41255,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 596,
+        "line": 682,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -40603,7 +41275,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 696,
+        "line": 782,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -40623,7 +41295,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 656,
+        "line": 742,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -40633,7 +41305,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 511,
+        "line": 597,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -40653,7 +41325,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 687,
+        "line": 773,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -40683,7 +41355,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 689,
+        "line": 775,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -40753,7 +41425,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 691,
+        "line": 777,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -40773,7 +41445,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 691,
+        "line": 777,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -40795,6 +41467,76 @@
         "path": "docs/backlog.md",
         "line": 321,
         "text": "](virtualized-editing-2026-10-24.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 551,
+        "text": "](webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 492,
+        "text": "](webview2-final-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 557,
+        "text": "](webview2-interaction-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 570,
+        "text": "](webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 512,
+        "text": "](webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 538,
+        "text": "](webview2-review-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 520,
+        "text": "](webview2-shutdown-2026-11-11.md)"
       }
     },
     {
@@ -42879,6 +43621,26 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/native-provider-stall-policy.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/native-provider-stall-policy.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "docs/native-style-validation.md",
       "kind": "links",
       "evidence": {
@@ -43225,6 +43987,146 @@
         "path": "docs/knowledge-graph.md",
         "line": 154,
         "text": "](../docs/virtualized-editing-2026-10-24.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-final-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-final-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-interaction-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-review-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-review-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-review-source.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-review-source.json)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-review-source.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-review-source.json)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../docs/webview2-shutdown-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../docs/webview2-shutdown-2026-11-11.md)"
       }
     },
     {
@@ -44235,6 +45137,246 @@
         "path": "docs/knowledge-graph.md",
         "line": 149,
         "text": "](../samples/NativeLifetime/WindowChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/AcceptanceSuite.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/BrowserSession.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/BrowserSession.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/FailureChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/FailureChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/FailureChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/FailureChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/InteractionChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/InteractionChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/InteractionWorkspace.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/KeyboardPacket.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/KeyboardPacket.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/KeyboardProbe.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/KeyboardProbe.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/Pages/child.html",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/Pages/child.html)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/Pages/interaction.html",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/Pages/interaction.html)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/Pages/parent.html",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/Pages/parent.html)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/ProcessFault.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/ProcessFault.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/ProcessFault.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/ProcessFault.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/Program.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/Program.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/RetentionChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/RetentionChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/RetentionCycle.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/RetentionCycle.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/RetentionTelemetry.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/RetentionTelemetry.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/ScreenProbe.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/ScreenProbe.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../samples/WebViewAcceptance/ShutdownChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/ShutdownChecks.cs)"
       }
     },
     {
@@ -45429,6 +46571,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tools/Test-WebViewAcceptance.ps1",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 136,
+        "text": "](../tools/Test-WebViewAcceptance.ps1)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tools/Test-WindowStartup.ps1",
       "kind": "links",
       "evidence": {
@@ -45739,6 +46891,16 @@
     },
     {
       "source": "docs/native-interop.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 202,
+        "text": "](native-provider-stall-policy.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
       "target": "docs/native-style-validation.md",
       "kind": "links",
       "evidence": {
@@ -45759,12 +46921,92 @@
     },
     {
       "source": "docs/native-interop.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 153,
+        "text": "](webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 201,
+        "text": "](webview2-final-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 158,
+        "text": "](webview2-interaction-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 167,
+        "text": "](webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 195,
+        "text": "](webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 137,
+        "text": "](webview2-review-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 184,
+        "text": "](webview2-shutdown-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
       "target": "samples/NativeLifetime/NativeWindowSession.cs",
       "kind": "links",
       "evidence": {
         "path": "docs/native-interop.md",
         "line": 123,
         "text": "](../samples/NativeLifetime/NativeWindowSession.cs)"
+      }
+    },
+    {
+      "source": "docs/native-interop.md",
+      "target": "samples/WebViewAcceptance/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/native-interop.md",
+        "line": 149,
+        "text": "](../samples/WebViewAcceptance/README.md)"
       }
     },
     {
@@ -46658,6 +47900,66 @@
       }
     },
     {
+      "source": "docs/verification-evidence/2026-10-29-webview2-interaction/README.md",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-10-29-webview2-interaction/README.md",
+        "line": 3,
+        "text": "](../../webview2-interaction-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/verification-evidence/2026-10-29-webview2-recovery/README.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-10-29-webview2-recovery/README.md",
+        "line": 3,
+        "text": "](../../webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/verification-evidence/2026-10-29-webview2/README.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-10-29-webview2/README.md",
+        "line": 3,
+        "text": "](../../webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/verification-evidence/2026-11-11-webview2-final/README.md",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-11-11-webview2-final/README.md",
+        "line": 18,
+        "text": "](../../webview2-final-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/verification-evidence/2026-11-11-webview2-retention/README.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-11-11-webview2-retention/README.md",
+        "line": 21,
+        "text": "](../../webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/verification-evidence/2026-11-11-webview2-shutdown/README.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/verification-evidence/2026-11-11-webview2-shutdown/README.md",
+        "line": 14,
+        "text": "](../../webview2-shutdown-2026-11-11.md)"
+      }
+    },
+    {
       "source": "docs/virtualization.md",
       "target": "docs/fw007-guarded-move-2026-10-28.md",
       "kind": "links",
@@ -46725,6 +48027,196 @@
         "path": "docs/virtualized-editing-2026-10-24.md",
         "line": 175,
         "text": "](virtualization.md#physical-ime-acceptance-checklist)"
+      }
+    },
+    {
+      "source": "docs/webview2-acceptance-2026-10-29.md",
+      "target": "docs/verification-evidence/2026-10-29-webview2/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-acceptance-2026-10-29.md",
+        "line": 71,
+        "text": "](verification-evidence/2026-10-29-webview2/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-acceptance-2026-10-29.md",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-acceptance-2026-10-29.md",
+        "line": 80,
+        "text": "](webview2-review-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-acceptance-2026-10-29.md",
+      "target": "samples/WebViewAcceptance/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-acceptance-2026-10-29.md",
+        "line": 55,
+        "text": "](../samples/WebViewAcceptance/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 33,
+        "text": "](native-provider-stall-policy.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/verification-evidence/2026-11-11-webview2-final/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 52,
+        "text": "](verification-evidence/2026-11-11-webview2-final/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 44,
+        "text": "](webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 45,
+        "text": "](webview2-recovery-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 47,
+        "text": "](webview2-retention-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-final-2026-11-11.md",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-final-2026-11-11.md",
+        "line": 46,
+        "text": "](webview2-shutdown-2026-11-11.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-interaction-2026-10-29.md",
+      "target": "docs/verification-evidence/2026-10-29-webview2-interaction/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-interaction-2026-10-29.md",
+        "line": 72,
+        "text": "](verification-evidence/2026-10-29-webview2-interaction/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-interaction-2026-10-29.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-interaction-2026-10-29.md",
+        "line": 77,
+        "text": "](webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-recovery-2026-10-29.md",
+      "target": "docs/verification-evidence/2026-10-29-webview2-recovery/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-recovery-2026-10-29.md",
+        "line": 81,
+        "text": "](verification-evidence/2026-10-29-webview2-recovery/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-retention-2026-11-11.md",
+      "target": "docs/verification-evidence/2026-11-11-webview2-retention/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-retention-2026-11-11.md",
+        "line": 81,
+        "text": "](verification-evidence/2026-11-11-webview2-retention/README.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-review-2026-10-29.md",
+      "target": "docs/backlog.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-review-2026-10-29.md",
+        "line": 85,
+        "text": "](backlog.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-review-2026-10-29.md",
+      "target": "docs/native-interop.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-review-2026-10-29.md",
+        "line": 85,
+        "text": "](native-interop.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-review-2026-10-29.md",
+      "target": "docs/native-window-memory-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-review-2026-10-29.md",
+        "line": 86,
+        "text": "](native-window-memory-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-review-2026-10-29.md",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-review-2026-10-29.md",
+        "line": 90,
+        "text": "](webview2-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/webview2-review-2026-10-29.md",
+      "target": "docs/webview2-review-source.json",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-review-2026-10-29.md",
+        "line": 13,
+        "text": "](webview2-review-source.json)"
+      }
+    },
+    {
+      "source": "docs/webview2-shutdown-2026-11-11.md",
+      "target": "docs/verification-evidence/2026-11-11-webview2-shutdown/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/webview2-shutdown-2026-11-11.md",
+        "line": 54,
+        "text": "](verification-evidence/2026-11-11-webview2-shutdown/README.md)"
       }
     },
     {
@@ -47250,6 +48742,11 @@
     {
       "source": "group:docs",
       "target": "docs/native-lifetime-2026-10-29.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/native-provider-stall-policy.md",
       "kind": "contains"
     },
     {
@@ -74159,12 +75656,112 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2-interaction/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2-interaction/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2-recovery/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2-recovery/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-10-29-webview2/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-final/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-final/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-retention/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-retention/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-shutdown/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/verification-evidence/2026-11-11-webview2-shutdown/manifest.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/virtualization.md",
       "kind": "contains"
     },
     {
       "source": "group:docs",
       "target": "docs/virtualized-editing-2026-10-24.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-acceptance-2026-10-29.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-final-2026-11-11.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-interaction-2026-10-29.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-recovery-2026-10-29.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-retention-2026-11-11.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-review-2026-10-29.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-review-source.json",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/webview2-shutdown-2026-11-11.md",
       "kind": "contains"
     },
     {
@@ -74580,6 +76177,106 @@
     {
       "source": "group:samples",
       "target": "samples/NativeLifetime/WindowChecks.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/BrowserSession.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/FailureChecks.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/InteractionChecks.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/KeyboardPacket.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/KeyboardProbe.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/Pages/child.html",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/Pages/interaction.html",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/Pages/parent.html",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/Probe.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/ProcessFault.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/Program.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/RetentionChecks.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/RetentionCycle.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/ScreenProbe.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/ShutdownChecks.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:samples",
+      "target": "samples/WebViewAcceptance/WebViewAcceptance.csproj",
       "kind": "contains"
     },
     {
@@ -75094,6 +76791,11 @@
     },
     {
       "source": "group:tools",
+      "target": "tools/Test-WebViewAcceptance.ps1",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
       "target": "tools/Test-WindowStartup.ps1",
       "kind": "contains"
     },
@@ -75159,6 +76861,26 @@
       "evidence": {
         "path": "samples/NativeLifetime/NativeLifetime.csproj",
         "line": 9,
+        "text": "<ProjectReference Include=\"../../UI Framework.Wpf/UI Framework.Wpf.csproj\""
+      }
+    },
+    {
+      "source": "samples/WebViewAcceptance/README.md",
+      "target": "docs/native-provider-stall-policy.md",
+      "kind": "links",
+      "evidence": {
+        "path": "samples/WebViewAcceptance/README.md",
+        "line": 161,
+        "text": "](../../docs/native-provider-stall-policy.md)"
+      }
+    },
+    {
+      "source": "samples/WebViewAcceptance/WebViewAcceptance.csproj",
+      "target": "UI Framework.Wpf/UI Framework.Wpf.csproj",
+      "kind": "project reference",
+      "evidence": {
+        "path": "samples/WebViewAcceptance/WebViewAcceptance.csproj",
+        "line": 10,
         "text": "<ProjectReference Include=\"../../UI Framework.Wpf/UI Framework.Wpf.csproj\""
       }
     },

@@ -1,0 +1,49 @@
+{
+  "reviewDate": "2026-10-29",
+  "repository": "C:\\Users\\iotero\\source\\repos\\GuidedGrade",
+  "baseRevision": "b7c68a1789b01353f1efa89f1dc1efeb44cc8e71",
+  "workingTreeDirty": true,
+  "kind": "source-review-not-browser-validation",
+  "files": [
+    {
+      "path": "GuidedGrade/GuidedGrade.csproj",
+      "sha256": "36c4a37eb58728548152e85604e7a4eca9ea49522f36106f0dced948e939cafc"
+    },
+    {
+      "path": "GuidedGrade/App.cs",
+      "sha256": "d0d5408756814d5a9a9735870c4aa56d0611c806ea6312c551f7e10d2bbfe9c0"
+    },
+    {
+      "path": "GuidedGrade/MainWindow.FullSail.cs",
+      "sha256": "fa0034c89f1cc34f10586be48aa34f876ecedb8f613cbcd0299ebad256a49bd7"
+    },
+    {
+      "path": "GuidedGrade/ViewModels/FullSailBrowserViewModel.cs",
+      "sha256": "c50145e3cec12ae9a51e61467bf209bf1f6382d9627923c32fb18a2ac560112b"
+    },
+    {
+      "path": "GuidedGrade/Windows/FullSailBrowserWindow.cs",
+      "sha256": "a391701e7a2e385ae592713f3bea188242fecec3a5f212f7d8b5d6e05118a0de"
+    },
+    {
+      "path": "GuidedGrade/Views/FullSailBrowserView.cs",
+      "sha256": "cfb0f31ad3dde2670a9bb5bab8f0cc2e26001b5892ae69f0a076b408756d5ef7"
+    },
+    {
+      "path": "GuidedGrade.Tests/GuidedGrade.Tests.csproj",
+      "sha256": "6305d54b1ff0b05e99eb8f72eedbe9d1102853e3f1cf36f6a21149c125635671"
+    },
+    {
+      "path": "GuidedGrade.Tests/Services/FullSailFieldMapTests.cs",
+      "sha256": "420a1081c090ab69008d26f0aff2832e0508d51a568a06d98255806eb66cd69a"
+    },
+    {
+      "path": "scripts/test-full-sail-fields.cjs",
+      "sha256": "dffb132ff755202840c96f86f95b850bacd4b2f02b8ac61a5ec4d50646e2f0f2"
+    },
+    {
+      "path": "KNOWLEDGE_GRAPH.md",
+      "sha256": "3a3c31823aa784be6e0e478d0bc24d793b7787ea552c39c2d600cf4fa2bb1207"
+    }
+  ]
+}

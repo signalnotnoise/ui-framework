@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Framework local interaction</title>
+<style>html,body{margin:0;background:rgb(0,96,192);color:white;font:18px sans-serif}main{padding:24px}input,button{font:18px sans-serif;margin:8px}</style>
+<main><h1>Local keyboard and airspace acceptance</h1>
+<input id="first" aria-label="First input" value="seed"><input id="second" aria-label="Second input" value="second">
+<button id="last" onclick="window.activations++">Activate</button></main>
+<script>window.activations=0;window.keys=[];document.addEventListener('keydown',e=>window.keys.push({key:e.key,target:e.target.id,trusted:e.isTrusted}));</script></html>

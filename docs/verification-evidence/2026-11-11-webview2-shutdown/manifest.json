@@ -1,0 +1,1121 @@
+{
+  "baseRevision": "64bd242",
+  "workingTreeSource": true,
+  "files": [
+    {
+      "path": "artifacts/release-validation/native-window-a02ecd9739da4fd2a6f4d11844abd47f.json",
+      "bytes": 1716,
+      "sha256": "1f5398741c61f04da8fe21b6c7d094a6113fa43f114caabbef2e66809f8eef6c"
+    },
+    {
+      "path": "artifacts/release-validation/startup-0afb34c746d04000b1287145c17aa1af.json.phases.json",
+      "bytes": 1534,
+      "sha256": "80cf4545b3e2cfc70b50ff9e58edfe9c044adfb76cb16e45a4e3c5cf9c9cbbaa"
+    },
+    {
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3351,
+      "sha256": "83d2709c04643f3e495474b1c4d5a36aac660636d9924d472a968d6504878744"
+    },
+    {
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "cc685d6167010fd945fa6e174f3fe16a481c46f9839fe5074d24f31adecca488"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11-pilot-2.log",
+      "bytes": 794,
+      "sha256": "9e0cacbb9132d8a5968b0ec734c6b90d6f0bc5fec3b3f7faa4262dea2caa6931"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11-pilot.log",
+      "bytes": 1600,
+      "sha256": "ebfae4b786caed81906ecb41e7dacf1f6b552d565cf822ddeba47a0957de8526"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11-release.log",
+      "bytes": 3136,
+      "sha256": "61c27baefe09658ab260810cf04990d74350a83d153c2e59a4cb24ec99255ddb"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11-repeated.log",
+      "bytes": 2419,
+      "sha256": "dbe68466d09387d22093412ee5c9391b2a2840c1043a9e650b0e8094b297c504"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/1-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/campaign.json",
+      "bytes": 331,
+      "sha256": "a5de7c2963332ffa54ce11bd2cab31bd95902dbbe492c0ef6b7b6fd9c9f1bee1"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/source-manifest.json",
+      "bytes": 10620,
+      "sha256": "80f9d77e3aba54dbb734aa54d912698c46fe9ad048fd3dec8c82430daab74b6f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/pilot-2/summary.json",
+      "bytes": 2903,
+      "sha256": "2afff8a34383d0b9589aea29af73d8577f5910ea4c2e1c1ce565cf03076d93b6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-browser-recovery.log",
+      "bytes": 179,
+      "sha256": "23cd66a09b630338ab081cee3ad0e38f9d50276d3c1cc590ac7257c95669c575"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-browser-recovery/report.json",
+      "bytes": 650,
+      "sha256": "0d65a6cdc36161264c74028c7eda63de5074383782a20cab2b0810bdfe2f09a4"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-control-close/report.json",
+      "bytes": 969,
+      "sha256": "2d525439d87ba9cebea147d52040d412d3f4ed7915e32ea4c78de3ffccb03b35"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-environment-boundary-close/report.json",
+      "bytes": 1009,
+      "sha256": "c9d138c8bcdec57fec6b18234d8d68b286b6784e605aeaff7c79d9be7c046bb3"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-initialization-recovery.log",
+      "bytes": 446,
+      "sha256": "eff4d6c045f5c1b1bc2bef9d71a0f80cbfb4870ec90f2bf1f6f298f79fb1d6b8"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-child-close/report.json",
+      "bytes": 981,
+      "sha256": "c607391970a506ddfad665f9db3b94883367d5215ce016258fb5e1f3e7b1f1c1"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-parent-close/report.json",
+      "bytes": 984,
+      "sha256": "c3ce84ae7900ace25c09325359d7427620fcb5af4add024ba376cf3bc741a4fa"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-popup-success/report.json",
+      "bytes": 969,
+      "sha256": "69ac3155aa0c7927d717ddc31732b4d54d528c370c0ceaca540a1ceabf244a27"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-renderer-recovery.log",
+      "bytes": 181,
+      "sha256": "2ca7a30e29180790db3e616e62c42f1330b2fccb344f6dc1f852d40f3b548572"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-renderer-recovery/report.json",
+      "bytes": 419,
+      "sha256": "3ce334388772540b3e843004c42bed9dd468dfbbcc394120e180e15a364277a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/1-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-browser-recovery.log",
+      "bytes": 179,
+      "sha256": "efd8238566fe164052b317725f9b4a1fe52400e53bef8583a790bf117ba95df7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-browser-recovery/report.json",
+      "bytes": 650,
+      "sha256": "4878cc202547a09e3f731bf92caf0feb4e2c06e8b3bc488a735b6fb8803982f4"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-control-close/report.json",
+      "bytes": 969,
+      "sha256": "6b355b23b83771cd523d0ea302ec9acd460f7299e5f36268d27a5e9fc34fabe8"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-environment-boundary-close/report.json",
+      "bytes": 1009,
+      "sha256": "8290f7680293f2d4aca6a1e9428bbe39ad976b08211a9f44b8b3ee250e38a8d7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-initialization-recovery.log",
+      "bytes": 446,
+      "sha256": "a7c5bb582c8693dfca49a3e211b920a4ea11a6712b7d61693e799289b5e1da77"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-child-close/report.json",
+      "bytes": 981,
+      "sha256": "d32f76625c8cc1434fd99f817011bace926a4c6960fe8c74fff91513f81865b0"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-parent-close/report.json",
+      "bytes": 984,
+      "sha256": "36382be14a6c18dd62d5f43dccf283eaf2437fe7ec7b99261acb3fed2c39ad4d"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-popup-success/report.json",
+      "bytes": 969,
+      "sha256": "874c8add40673ba0cbda2031f4ff407bd96a56a8771e4182d84cb672aa565211"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-renderer-recovery.log",
+      "bytes": 181,
+      "sha256": "e584941eb76cf80b1d91c711ec053539eaff25b40d85641bc64af2b7e331e86e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-renderer-recovery/report.json",
+      "bytes": 419,
+      "sha256": "561eedf6d37240a231a6ad707eef14bf5320d80b2c5c5a8e1641e22f57f4ecde"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/2-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-browser-recovery.log",
+      "bytes": 179,
+      "sha256": "90b0fa7f54a833b28f0ec189f8ebc0c42cc4dcb6386ae90c30db3527de2acc3e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-browser-recovery/report.json",
+      "bytes": 650,
+      "sha256": "0cb599a15f76d1dc9684f0294a141425c960c676dd83b646d8fd0ded47742cd4"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-control-close/report.json",
+      "bytes": 969,
+      "sha256": "d87de4f432ab7c16b2eef66f0748909403c4a66867c0be5b900d2e62b8ae8322"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-environment-boundary-close/report.json",
+      "bytes": 1009,
+      "sha256": "818c5668293234f9f124299ca28c99cbd85328c16607d84671ca790cd70a2995"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-initialization-recovery.log",
+      "bytes": 446,
+      "sha256": "f06c5e324d2007c7f8d919a98e68ac846082e9465c1bee56b06f6068c4e2228c"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-child-close/report.json",
+      "bytes": 981,
+      "sha256": "a6eab120c74b5407df918256846939d48c4e8bc8727a43cb6461f7c7301bc428"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-parent-close/report.json",
+      "bytes": 984,
+      "sha256": "5db498d62b7959710ad791c05ff2f4fc15388fe21f45fa123e6622eead06be1e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-popup-success/report.json",
+      "bytes": 969,
+      "sha256": "385ee7abfbb1016d7507a4a041aa66cb9acfd25618efd6b51ba8720d12ad6e5b"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-renderer-recovery.log",
+      "bytes": 180,
+      "sha256": "9d1e04865df45d2eaa0077504f484cee6d7c43bed23648539d2f162fbcc457a7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-renderer-recovery/report.json",
+      "bytes": 418,
+      "sha256": "197e6baa3c77ebeee6b5d3b46486c343cd2f205f26e3e1081033f7f3ed69d940"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/3-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/campaign.json",
+      "bytes": 607,
+      "sha256": "7b7c3102e4d80f693f51b7d700ae485f66575e423168b990c47c383401f7baf6"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/source-manifest.json",
+      "bytes": 10620,
+      "sha256": "80f9d77e3aba54dbb734aa54d912698c46fe9ad048fd3dec8c82430daab74b6f"
+    },
+    {
+      "path": "artifacts/webview-shutdown-2026-11-11/repeated/summary.json",
+      "bytes": 35254,
+      "sha256": "a712bba3d4a70f36ba1b1bced231944b290befe86a1d12a19b3e5c7799cb4c91"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeControlHost.cs",
+      "bytes": 1845,
+      "sha256": "fbac6a2b4a64fd80dfd09cfc3ed1f21ac94d52802d75d58c82acd9acd5909cc2"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "bytes": 1263,
+      "sha256": "38329d31f345184ca65c3d72f5c9a71aff543a3330dd3222394c21d489485b76"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "bytes": 177,
+      "sha256": "80cf8cf71781d5fbc84906d2675e7910ac114702a44bb16a2ed6dbf2597fc550"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
+      "bytes": 279,
+      "sha256": "2497aa4444d836b136d9384e85566d6ecb6004039828df47354d75e33b6b83dc"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/WpfUI.cs",
+      "bytes": 1356,
+      "sha256": "17583710668fd22d5791fd42d0c07111c063600fa7cab2562f35a76e5ce92987"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/AdaptivePanel.cs",
+      "bytes": 2024,
+      "sha256": "8fd2d5a3ff7c8f54674206db42ae0f3507bf757e405834da0553338a35d29ef9"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/FlexColumnPanel.cs",
+      "bytes": 883,
+      "sha256": "afd3df354361f688a473925220878e7562a36e95cbcdc14c5e713f9e50d2c62e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/SplitPanePanel.cs",
+      "bytes": 4475,
+      "sha256": "65ea83094166928682f139072b24905a34809c908c3cc3f6afcf8225bab1c33c"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Navigation/NavigationSnapshot.cs",
+      "bytes": 123,
+      "sha256": "a1ac0703cc77d123727b37f2fa86f33936cada85055fefa925adeba3b010b112"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Navigation/NavigationSurface.cs",
+      "bytes": 3345,
+      "sha256": "1b3ad43233fb54133e1626bb34df90dcbecd55b972d269327652f49c58853a72"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/FocusIdentity.cs",
+      "bytes": 515,
+      "sha256": "1b39939d285ee136e6b103ce3b3287b9fc0979a35473ac54affe1eea99e4327d"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/Node.cs",
+      "bytes": 8062,
+      "sha256": "d7e9c04faa1cfb83c97d27606ffde894c2919f46c36700bdab9adf80efcc2a0b"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/NodeSnapshot.cs",
+      "bytes": 512,
+      "sha256": "56750c0eb42e3c217db0d8442ca010e329fcd13fbd203b0ea7731908779c3dcd"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ButtonContentPresenter.cs",
+      "bytes": 909,
+      "sha256": "1198e0375ee94fbeb5028777c205ce5abd8745eeb8ad9e00e1d03f539039c65c"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/PickerStyles.cs",
+      "bytes": 9510,
+      "sha256": "8f773a5ecae2421170c8fd05f5f5b22d1b92f86a2bfac34b9c44f3249b73696f"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/TextBoxStyles.cs",
+      "bytes": 4934,
+      "sha256": "3488ada41bdb4b6c7130917a966f65852fd90ec878e65d4d7e2266856f2ab6b3"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemeColor.cs",
+      "bytes": 487,
+      "sha256": "ee5308e8fc77d8dc3f978df5f7e3bafee93b14ac0f75c4351f977b3dea871101"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemePalette.cs",
+      "bytes": 3473,
+      "sha256": "e8b69f1da338e6b1444d517782ed99a6f245100f255aaa6c7a8a2d08c23005e6"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemeStyles.cs",
+      "bytes": 9500,
+      "sha256": "86b3de17408fca7cb3bf6c5dd85f6a5f89c491897777bda3c0e31e40b7246821"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ToggleStyles.cs",
+      "bytes": 5997,
+      "sha256": "95498053a7968e67a5a0e17313e60c9b0755b33414f8afc2ef2a39eac3937f79"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/UI Framework.Wpf.csproj",
+      "bytes": 1105,
+      "sha256": "ed7bd91848a06c46697280cee054d11d329ee2cddae9cac3524ec92567aef44e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/ViewHost.cs",
+      "bytes": 26100,
+      "sha256": "9126d9c97777ef5320f13e1368b4229673b3424c57a43a0d3c71d73085fe1ded"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/RowFocusSnapshot.cs",
+      "bytes": 2796,
+      "sha256": "dd9fe207979ddb89fc80a823758087931cb1a416dc22f6dc4e5309ec6d36c886"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
+      "bytes": 568,
+      "sha256": "36b14b7a6672fb0b55e6aa37a1387aaa483e3e74454ffe7af6c5ffe537125ecb"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListControl.cs",
+      "bytes": 7335,
+      "sha256": "0560e2c0b51d32a99b0ef432a63a053a00c98da42f18eb7908b82fddc8437130"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListSnapshot.cs",
+      "bytes": 121,
+      "sha256": "6947fa3f0ba2e9b5303edfc3102571155607a04950c48d6606e0e4ea08c537ff"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRow.cs",
+      "bytes": 1366,
+      "sha256": "760a3e047306fda60d45e70562d5345d17f744f865b917b44704be63fa6dcd3e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs",
+      "bytes": 702,
+      "sha256": "b258811f04ebc1101db6330b60c57177ca46a5e07e31f89e78655e6fa77ffacb"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowCollection.cs",
+      "bytes": 10585,
+      "sha256": "39217d54e35b3176fc117555f135159613312cfee42e7ba04e1738e52c876cbc"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowPresenter.cs",
+      "bytes": 7868,
+      "sha256": "27ff07aec94b4a512c26e81bb2cd0762dd6b0ab7a3e95bc54abdbe669e67818f"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
+      "bytes": 238,
+      "sha256": "eb9b926256cdeca185988d65e4b0aeddeab85d6059095c5a62d39726aa0be749"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/WpfComCleanupPolicy.cs",
+      "bytes": 4225,
+      "sha256": "ceb48c2b6d88d215548288c4f57985576ee9d7fbd32e1eb3326dff79646e8978"
+    },
+    {
+      "path": "tested-source/UI Framework/Binding.cs",
+      "bytes": 1334,
+      "sha256": "566c0e871055778345fbed2ac4f744b12cf8b3bf0f646f02250a90b95bdb6e1d"
+    },
+    {
+      "path": "tested-source/UI Framework/Component.cs",
+      "bytes": 508,
+      "sha256": "5bc78429499713784025706a8b7dce888d678c676e9fe5e5d6332d13b565c9bc"
+    },
+    {
+      "path": "tested-source/UI Framework/Computed.cs",
+      "bytes": 4592,
+      "sha256": "6bdd6173d689a165e11979f51766c4777e4d9c4927591d0a3a6b48788362d40e"
+    },
+    {
+      "path": "tested-source/UI Framework/Dependencies.cs",
+      "bytes": 956,
+      "sha256": "6fadbf442bc3d7fc50d099c4ebb488b6602719a289c2cfacc9ffa20e5b015224"
+    },
+    {
+      "path": "tested-source/UI Framework/IState.cs",
+      "bytes": 86,
+      "sha256": "1a1e426442541a17a2bdb7733add8b27bf61ad6beb9aa50f7bd7930565521cb8"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/SplitAxis.cs",
+      "bytes": 72,
+      "sha256": "3265d57614d6e1804cc3f03a100a1ccb44e72e80ee0f84d30dc423d4d0ba6b97"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/SplitPaneLayout.cs",
+      "bytes": 369,
+      "sha256": "6ca60fb6a0677ed9da815666db87e7a046a1cd9f46a9bee4ea764952ea0fe385"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/ViewAlignment.cs",
+      "bytes": 83,
+      "sha256": "b6dd915729f42fb8419e9f60872461571dae95189085fd7996b9449a826c6077"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationEntry.cs",
+      "bytes": 94,
+      "sha256": "69aa6012f399114d0160d9b8a4462b2ede14e2a5b98232394a04a8d74f43e562"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationStack.cs",
+      "bytes": 1479,
+      "sha256": "d359a617c404710fa5ac0fdcae8bd16d9c1780b7839c095da95dc15d8e7181bf"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationTransition.cs",
+      "bytes": 78,
+      "sha256": "6cdc53175b9e2c96ef9b7cb474063a52943da47dea56548d7f2f19d1b0185dda"
+    },
+    {
+      "path": "tested-source/UI Framework/ObservableState.cs",
+      "bytes": 693,
+      "sha256": "aa9ff307e5f301b80c261913438cd9da315044eff79ce511152589d5fd71c5e8"
+    },
+    {
+      "path": "tested-source/UI Framework/State.cs",
+      "bytes": 913,
+      "sha256": "7b456332f93567e0b9e5159f3bc4289a7c0325acbf3a1a98be4e68ef52fd951a"
+    },
+    {
+      "path": "tested-source/UI Framework/StateList.cs",
+      "bytes": 2474,
+      "sha256": "ff4db976babdde75cf769861856b67aa519f003e62c2ac4a824740b6893f0dce"
+    },
+    {
+      "path": "tested-source/UI Framework/StateNotifications.cs",
+      "bytes": 750,
+      "sha256": "fb8e1d0ee08c9630df94424d7b81fd5a70e73f67a9c78fd0874b2bd8887932f7"
+    },
+    {
+      "path": "tested-source/UI Framework/Styling/ButtonStyleKind.cs",
+      "bytes": 83,
+      "sha256": "90ba5a95f25ca0aeac22447f1b37f64e8633c596aff38f95a50214737abe0798"
+    },
+    {
+      "path": "tested-source/UI Framework/Styling/ThemeTokens.cs",
+      "bytes": 922,
+      "sha256": "ded33f526a53d237bc276c74918a66fd6bf1afea4abb41b4388c9dabe09d77f4"
+    },
+    {
+      "path": "tested-source/UI Framework/UI Framework.csproj",
+      "bytes": 971,
+      "sha256": "93342aeae9cd5d10492241e3c7851126701f5177a1c8255d9c9fdc6ca417f748"
+    },
+    {
+      "path": "tested-source/UI Framework/UI.cs",
+      "bytes": 6672,
+      "sha256": "fe377b60fb24e8283e73a160dc80ff88c25d709d5e30d9b7d3f55c8a6f3d43b9"
+    },
+    {
+      "path": "tested-source/UI Framework/View.cs",
+      "bytes": 5193,
+      "sha256": "5b1f7efbf788b39963884e0c0e2d21284c8406ef99abde3b291061f5b65afcb4"
+    },
+    {
+      "path": "tested-source/UI Framework/ViewKind.cs",
+      "bytes": 235,
+      "sha256": "e9efbbff9685c23012a61c7a18bf8ae6b312bb0232677b39b021209c82c5a4b8"
+    },
+    {
+      "path": "tested-source/UI Framework/ViewSession.cs",
+      "bytes": 1958,
+      "sha256": "a70b4e9a8148b13d5f2dfe206416a16cc4f62a15bbe2ee6f796da49db1017577"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "bytes": 4664,
+      "sha256": "492794a946347cb6e8ca85153fa2fb58021f05a0baa63c1e80bf4e84cce76692"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/BrowserSession.cs",
+      "bytes": 10841,
+      "sha256": "c6214e61883eec9b9acb534cef6425349e6ddd8e72816afeb53be4452c84174f"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/FailureChecks.cs",
+      "bytes": 9533,
+      "sha256": "c8cbe0085202e2c1d5de3d676d53c5718fe0cac41c8b96985b3753672c60f1bf"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/InteractionChecks.cs",
+      "bytes": 8452,
+      "sha256": "91a7602c0ec19a8322a29be18ffe6332de338b182b9e48f3744fdeed37a5427c"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "bytes": 1718,
+      "sha256": "58dfbf369a2743d454cbcc4715dcf86e00f5831e6750b8758f95689ab4d87b36"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/KeyboardPacket.cs",
+      "bytes": 474,
+      "sha256": "da051c487def19b7b997a602c9b7e05c1c96adf509863360e51b3d7c62a19443"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/KeyboardProbe.cs",
+      "bytes": 2121,
+      "sha256": "370e1589e093306c823df2e84ab47bb7874e21d6a60a9115aa9b81f081ba0e1e"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/child.html",
+      "bytes": 145,
+      "sha256": "41f06547a521ef061df780c6d808c78e52a0e7ea46ad327b132a928ac2ce3294"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/interaction.html",
+      "bytes": 667,
+      "sha256": "640937dff6264bc57d853299c3f9ec37ac8738ae1b75e69a5c09b7c9b2aa1785"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/parent.html",
+      "bytes": 310,
+      "sha256": "e2303df10f58daf7339bbf20c76b67bfded46199ab9dc0cffc3c3b2a87f9c4a3"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Probe.cs",
+      "bytes": 553,
+      "sha256": "fa0c7ea8f49f635f962b5cef60743559b95c748c2a13cf6b8f881c57bec156fd"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ProcessFault.cs",
+      "bytes": 1532,
+      "sha256": "4451f9e4e4938876cf9c0f623e033def683c9ce3660ed5c38a72ea3c5f70aa76"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Program.cs",
+      "bytes": 3316,
+      "sha256": "c5f3269fe9b2898394d2e1b601183c45de487ade8c3ac00fcc6f7614f97a7e55"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ScreenProbe.cs",
+      "bytes": 2768,
+      "sha256": "c0de14a58ab36300439bb90c20890fd9e12f2c6a6ad66a6cc88cb9c1c922c4d0"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ShutdownChecks.cs",
+      "bytes": 5062,
+      "sha256": "b3d850b7239c4160fbdba5f6f1dcbd3f7f62ba2f3ba2d22b31afbb3dc8cf1c44"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/WebViewAcceptance.csproj",
+      "bytes": 537,
+      "sha256": "e1180da3d92cacb2151ec9f1b101bac6265f0e75d1e52e5608a7f48442f5fd70"
+    },
+    {
+      "path": "tested-source/tools/Test-WebViewAcceptance.ps1",
+      "bytes": 4780,
+      "sha256": "3a15c59ee9bbe902386336195285ff305fb5c1e9fcd36b2940e458da7627f373"
+    }
+  ]
+}

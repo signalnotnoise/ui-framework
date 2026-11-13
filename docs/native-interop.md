@@ -77,7 +77,7 @@ See [validation and performance evidence](native-style-validation.md).
 
 ## Migration follow-ups
 
-### Proposed browser integration — October 20, 2026
+### Historical browser proposal — October 20, 2026
 
 GuidedGrade reported a request to embed the Full Sail Online grading workspace
 using an app-owned WebView2 adapter. Its reported package pin is
@@ -131,3 +131,75 @@ Real-window focus, selection, WPF popup HWND release, resize, managed overlay an
 five shutdown cases pass. Repeated memory checks distinguish bounded native
 realization from retained visited-key state. See the [measurements and limitations](native-window-memory-2026-10-29.md).
 These checks do not establish HwndHost/native-airspace or browser-provider support.
+
+## Verified GuidedGrade source review — October 29, 2026
+
+The historical proposal above is superseded by the [current source review](webview2-review-2026-10-29.md).
+GuidedGrade already hosts WebView2 through a keyed native DockPanel, owns browser
+initialization/navigation/popups/disposal and pins WebView2 1.0.4314.35 with framework
+alpha.7-local.1 in its reviewed working tree. Browser-specific acceptance remains
+missing: pending initialization/child requests at close, cleanup failure isolation,
+child environment compatibility, native airspace and repeated process/resource
+measurements. No framework API limitation has been reproduced. The application
+window currently owns disposal; the native view supplies no release callback, so
+framework detachment does not by itself dispose the browser.
+
+## Real WebView2 acceptance slice — October 29, 2026
+
+The [real-browser sample](../samples/WebViewAcceptance/README.md) passes 15/15
+local-page/isolated-profile initialization and owned-popup close cases with the
+existing host. It demonstrates app-owned draining before detach/release, not forced
+provider cancellation or acceptance of GuidedGrade's current synchronous cleanup.
+See [case outcomes and limits](webview2-acceptance-2026-10-29.md). Focus/airspace,
+failure/recovery and browser-process memory still need acceptance.
+
+## Preliminary keyboard and airspace evidence — October 29, 2026
+
+[Interaction checks](webview2-interaction-2026-10-29.md) pass once per mode with
+real keyboard input and screen pixels. Standard WPF WebView2 covers WPF sibling
+overlays despite their Z-order; a separate popup HWND can appear above it. This is
+a provider/platform boundary, not a demonstrated framework defect. Forward/reverse
+Tab, text/Enter and refresh/theme retention passed. Repetitions require explicit
+interactive approval; default test runs exclude foreground interaction cases.
+
+## Failure and recovery evidence — October 29, 2026
+
+The [recovery slice](webview2-recovery-2026-10-29.md) passes profile validation, real
+missing-runtime/navigation failure, renderer recovery on the same controller, and
+browser recreation after an observed process exit. Application cleanup must avoid
+querying CoreWebView2 through an already crashed control; retain the subscribed
+core for handler removal and attempt all cleanup steps while surfacing errors.
+The sample rejects file/profile conflicts before provider startup after one
+unguarded attempt timed out. Generic provider hangs remain unverified. These are
+sample ownership policies, not automatic framework recovery or GuidedGrade fixes.
+
+
+## November 11 bounded waits and script-close
+
+The WebView2 sample now verifies bounded initialization/close waits without abandoning
+pending provider ownership, exact late-fault propagation, fresh-owner retry and real
+parent/child script-close. All 42 repeated acceptance cases pass. A timeout does not
+cancel WebView2 or authorize dispatcher shutdown before drain. Permanently hung
+provider termination and browser resource budgets remain outside this evidence.
+See [policy and validation](webview2-shutdown-2026-11-11.md).
+
+
+## November 11 browser resource retention
+
+Six fresh-process retention runs pass for fresh/reused isolated profiles: 270 normal
+parent/popup pairs including negative controls, 540 one-time owner releases, 1,350
+captured process exits and 2,970 weak references collected. The deliberately rooted
+owners remain visible to the probe until released. No process is killed by these
+retention modes. Heap/handle observations remain separate from strict release checks
+and do not establish arbitrary-site budgets. See [results and reviewed exception
+coverage](webview2-retention-2026-11-11.md).
+
+
+## V1 acceptance boundary
+
+The final interactive campaign passes 9/9 repeated cases. See the
+[final acceptance](webview2-final-2026-11-11.md) and [permanent-stall/interaction
+contract](native-provider-stall-policy.md). Timeout retains pending ownership; hard
+shutdown deadlines require app-owned process isolation. Standard browser HWND
+overlay/arbitrary-clip limitations are explicit. FW-018 budgets and GuidedGrade
+adoption remain separate.

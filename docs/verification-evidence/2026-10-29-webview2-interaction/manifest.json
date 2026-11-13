@@ -1,0 +1,116 @@
+{
+  "baseRevision": "64bd242",
+  "workingTreeSource": true,
+  "files": [
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot/1-focus-keyboard/report.json",
+      "bytes": 1320,
+      "sha256": "d1ac59b60b24526f308d72675a43f86bc07196a3996ba6ba3ef0985db4a2b371"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot/1-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "42959a5401bee55bfa6d91e9d17fe9e33b6ab46befc29b36c0f3a684ab4afd0c"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot/1-focus-keyboard.log",
+      "bytes": 1123,
+      "sha256": "dff5366900bff921aa604a3b639909f111c68ca248f452f649ff7b504526cf05"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot/campaign.json",
+      "bytes": 258,
+      "sha256": "fa8171f77a30d81792445bc05b2c97a9a1b60797a15bc925461f47deb275f03a"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot/source-manifest.json",
+      "bytes": 10158,
+      "sha256": "5e208c3daab76b2e9b5692e76f553ba6afe6619b8d2f2acea44488082efc8343"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace/hidden-browser-reveals-wpf.png",
+      "bytes": 5841,
+      "sha256": "c78b2961a0961753165148719b1ae8e1be5ec268da0812e2be5a76d4f3cb0848"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace/native-covers-wpf.png",
+      "bytes": 17022,
+      "sha256": "815affea47ced92e79f3f0c060b2fd05bb5f69510ccccce8810edc911bb41222"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace/popup-above-browser.png",
+      "bytes": 17054,
+      "sha256": "64b6e12c1a1992f343fafb0cc6d5b1c1f5b4b7737f7b3fd8ac81741e7dcf5672"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace/report.json",
+      "bytes": 801,
+      "sha256": "63acde60c59ae6f8478f0bd46ad1a0ded5150aa950f4b1af1d9035981dd36a40"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace-process.json",
+      "bytes": 68,
+      "sha256": "94d7f68637eb84fc381198ccda8f3c79a5a0ce48aa01637f309e80666f04bce7"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-airspace.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-focus-keyboard/keyboard.png",
+      "bytes": 20334,
+      "sha256": "5aeed19ad5f95c80d0f836e48e4cd344bf134d029cc1d68540c8e174dbd37bbc"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-focus-keyboard/report.json",
+      "bytes": 4470,
+      "sha256": "6b4905da8526124d5b77f62650f398430a4ddfa837bfbc71c5d665e5e67e4178"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "92ae0f05adc58ea1f5a5aa49538987b2c71eb99bf539d2bb5c9faf8d43a0692b"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/1-focus-keyboard.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/campaign.json",
+      "bytes": 258,
+      "sha256": "fa8171f77a30d81792445bc05b2c97a9a1b60797a15bc925461f47deb275f03a"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/source-manifest.json",
+      "bytes": 10158,
+      "sha256": "41a9614f8844d944b3712a2293bb11affa0261888ccd8134dfebd02313a2b661"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/summary.json",
+      "bytes": 4274,
+      "sha256": "2620211d2812efb18a6a546fc1531112ee78e787d8e1d7969cedfc98c5e04ef8"
+    },
+    {
+      "path": "artifacts/webview-interaction-2026-10-29/pilot-2/tested-source.zip",
+      "bytes": 68204,
+      "sha256": "a897749b9e92e2adb0bd21c235fc0e56abf14816e4eb66d3963428433c7f5c64"
+    },
+    {
+      "path": "artifacts/webview-interaction-build.log",
+      "bytes": 548,
+      "sha256": "94392a5251bf3b859db1513c20c46d9e729885909f24049fe98d6ba41dfed0c2"
+    },
+    {
+      "path": "artifacts/webview-interaction-pilot-2.log",
+      "bytes": 691,
+      "sha256": "3b8396c51e99239775e881dcb28bbd27a7bb5f17e7dde1c50e3618f85f432c3c"
+    },
+    {
+      "path": "artifacts/webview-interaction-pilot.log",
+      "bytes": 586,
+      "sha256": "868e286fcd250dcfe1b7893e0199b503c8191b0e17599d66e1744712bc63ba20"
+    }
+  ]
+}

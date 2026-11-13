@@ -1,0 +1,741 @@
+{
+  "baseRevision": "64bd242",
+  "workingTreeSource": true,
+  "files": [
+    {
+      "path": "artifacts/release-validation/native-window-cb6dec1902dd4cf688cd727d8c1640be.json",
+      "bytes": 1716,
+      "sha256": "d4447ab9738c3c7027f059541e6c1eabd118ca5f9987a6f347825683acb10293"
+    },
+    {
+      "path": "artifacts/release-validation/startup-153b9a9ebaa9409cba98a6af3e552a86.json.phases.json",
+      "bytes": 1534,
+      "sha256": "19a4c359619697849e11a5d24903a9c1a4a065206a43b560ed77c66a0d3ec4d0"
+    },
+    {
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3345,
+      "sha256": "58efed940f8cb485622d047e85a2216e5bd350da7881b4a8e3c4cf3bba745f1b"
+    },
+    {
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "97c05184052b444c77bc89ff05e98cf586375a90f4e18a7f610baab2f528fc7a"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11-pilot.log",
+      "bytes": 729,
+      "sha256": "598cdbab3b7ac27c2f7dcbac146987b5d91c3f15dda3687d5b5cfb92a489b352"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11-release.log",
+      "bytes": 3133,
+      "sha256": "c3644b2c51bc43c8937b7edbb8e391733392384251ec7c33efe918170714491d"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11-repeated.log",
+      "bytes": 945,
+      "sha256": "7d946733a4e45bce9747edf40324dc6c5892473f2f311a6148213f8e391f326a"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace-process.json",
+      "bytes": 68,
+      "sha256": "94d7f68637eb84fc381198ccda8f3c79a5a0ce48aa01637f309e80666f04bce7"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace/hidden-browser-reveals-wpf.png",
+      "bytes": 5866,
+      "sha256": "e24bc5679ffe331c5fdcd088e0c032f055a9b6a4acd4ec317608c38482ddbf2c"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace/native-covers-wpf.png",
+      "bytes": 17041,
+      "sha256": "e263ee62f9a67571d51d09a9937d3c02f313597cfd059c36a4337799ca09d0e3"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace/popup-above-browser.png",
+      "bytes": 17074,
+      "sha256": "1804684ee721403aa4200c69f82a6e26864d07c1ed77274ba49f2705778ffd1f"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-airspace/report.json",
+      "bytes": 793,
+      "sha256": "de248abd2f80f75543879f9b027e33b4fe822e69a4a5057dee7eb1d5ffa2723a"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "92ae0f05adc58ea1f5a5aa49538987b2c71eb99bf539d2bb5c9faf8d43a0692b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-focus-keyboard.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-focus-keyboard/keyboard.png",
+      "bytes": 20316,
+      "sha256": "95739f886f589955af6380cda8bd06c3810f01ee73702995e65715ef937e5e83"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-focus-keyboard/report.json",
+      "bytes": 4462,
+      "sha256": "c09f1d8f6933ac6c9ada64cd9cfd2665bf3d7f339c2e4c3c9f01d90e2ba0569f"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-pointer-bounds-process.json",
+      "bytes": 74,
+      "sha256": "d1ca51d394fecbad42dc96564587e8d543a7b20f384b1957f044d1edb163db8b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-pointer-bounds.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-pointer-bounds/interaction-phase.txt",
+      "bytes": 27,
+      "sha256": "61ce841c4ee71afdb1969f401fff0d3eb36d474e5c9e52ec86c7b39684732699"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-pointer-bounds/pointer-bounds.png",
+      "bytes": 15573,
+      "sha256": "98e6b9eca33eddfdbd4229b2cfb2aaa2bae853ee0f2feeb0fc174ff92df1f96f"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/1-pointer-bounds/report.json",
+      "bytes": 843,
+      "sha256": "019ae8ad377d19c5eb29535a6bc6edd7525f8a4c8254891c173d9c4dfc3c15fd"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/campaign.json",
+      "bytes": 281,
+      "sha256": "298c92f977cc2969af232d152baf8c86c636419973c5585a1f323b7784948f1e"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/source-manifest.json",
+      "bytes": 11090,
+      "sha256": "c0f42cc383892d1aaca03f02651606723b829fd26e7ae92263ae7dfe79c626ae"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/pilot/summary.json",
+      "bytes": 5180,
+      "sha256": "dce5ac1b8ad78093b65adb9c0871200f1f91d579f1bc0c038ae9c93208049501"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace-process.json",
+      "bytes": 68,
+      "sha256": "94d7f68637eb84fc381198ccda8f3c79a5a0ce48aa01637f309e80666f04bce7"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace/hidden-browser-reveals-wpf.png",
+      "bytes": 15044,
+      "sha256": "1ebd8ee17315467e530a4a9371503e32d39a0d72b65ea7a17fab60a9b8bcb77c"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace/native-covers-wpf.png",
+      "bytes": 26780,
+      "sha256": "25b891320dc2d3849adc599341de23b65e3786084b3c20dd1a6ff086d8e2f990"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace/popup-above-browser.png",
+      "bytes": 26807,
+      "sha256": "cc15001b32a73a13248f7a96fae592b5e8958ad01f9ee1223cc62c5dfdc1db44"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-airspace/report.json",
+      "bytes": 796,
+      "sha256": "51363e8f4f9952430fe5533f4ecdb26c3a9f5f6131342e541a2c57a149d94695"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "92ae0f05adc58ea1f5a5aa49538987b2c71eb99bf539d2bb5c9faf8d43a0692b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-focus-keyboard.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-focus-keyboard/keyboard.png",
+      "bytes": 30017,
+      "sha256": "c976b13e43fbfdcdb8da48249a5493988dcf50f510370e6c148582af26cd9a26"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-focus-keyboard/report.json",
+      "bytes": 4465,
+      "sha256": "710ef6714b16aa0c1b6145c756e7d2ae429090b4f4bbdb0b79b1210d6883970c"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-pointer-bounds-process.json",
+      "bytes": 74,
+      "sha256": "d1ca51d394fecbad42dc96564587e8d543a7b20f384b1957f044d1edb163db8b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-pointer-bounds.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-pointer-bounds/interaction-phase.txt",
+      "bytes": 27,
+      "sha256": "61ce841c4ee71afdb1969f401fff0d3eb36d474e5c9e52ec86c7b39684732699"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-pointer-bounds/pointer-bounds.png",
+      "bytes": 13742,
+      "sha256": "6ecb57f21c21d111a9bea6570c81a418f313b4f177015f07af0a7bb288ddeafd"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/1-pointer-bounds/report.json",
+      "bytes": 846,
+      "sha256": "ba6897fbd44cd16019954bf6a85bed041dd7653e9e11ad478afcd1d533743ab9"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace-process.json",
+      "bytes": 68,
+      "sha256": "94d7f68637eb84fc381198ccda8f3c79a5a0ce48aa01637f309e80666f04bce7"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace/hidden-browser-reveals-wpf.png",
+      "bytes": 15044,
+      "sha256": "1ebd8ee17315467e530a4a9371503e32d39a0d72b65ea7a17fab60a9b8bcb77c"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace/native-covers-wpf.png",
+      "bytes": 26780,
+      "sha256": "25b891320dc2d3849adc599341de23b65e3786084b3c20dd1a6ff086d8e2f990"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace/popup-above-browser.png",
+      "bytes": 26807,
+      "sha256": "cc15001b32a73a13248f7a96fae592b5e8958ad01f9ee1223cc62c5dfdc1db44"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-airspace/report.json",
+      "bytes": 796,
+      "sha256": "157baba206360a776d474e994e4109123046202294f347dd75b8cc012153e36f"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "92ae0f05adc58ea1f5a5aa49538987b2c71eb99bf539d2bb5c9faf8d43a0692b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-focus-keyboard.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-focus-keyboard/keyboard.png",
+      "bytes": 30017,
+      "sha256": "c976b13e43fbfdcdb8da48249a5493988dcf50f510370e6c148582af26cd9a26"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-focus-keyboard/report.json",
+      "bytes": 4465,
+      "sha256": "b94c9a57b6c12abb3237b1076cfb8ecf246f562441abadda03f0f432b7a22a01"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-pointer-bounds-process.json",
+      "bytes": 74,
+      "sha256": "d1ca51d394fecbad42dc96564587e8d543a7b20f384b1957f044d1edb163db8b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-pointer-bounds.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-pointer-bounds/interaction-phase.txt",
+      "bytes": 27,
+      "sha256": "61ce841c4ee71afdb1969f401fff0d3eb36d474e5c9e52ec86c7b39684732699"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-pointer-bounds/pointer-bounds.png",
+      "bytes": 16267,
+      "sha256": "876b725f6e4afab0990ceec7470d47191a98edaf1bde26583aa410617ae9daea"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/2-pointer-bounds/report.json",
+      "bytes": 846,
+      "sha256": "51a5679f0bf2b849c7f33aa4b8a3906e731a2f29094fa4b421ac9c920e368282"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace-process.json",
+      "bytes": 68,
+      "sha256": "94d7f68637eb84fc381198ccda8f3c79a5a0ce48aa01637f309e80666f04bce7"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace/hidden-browser-reveals-wpf.png",
+      "bytes": 15044,
+      "sha256": "1ebd8ee17315467e530a4a9371503e32d39a0d72b65ea7a17fab60a9b8bcb77c"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace/native-covers-wpf.png",
+      "bytes": 26780,
+      "sha256": "25b891320dc2d3849adc599341de23b65e3786084b3c20dd1a6ff086d8e2f990"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace/popup-above-browser.png",
+      "bytes": 26807,
+      "sha256": "cc15001b32a73a13248f7a96fae592b5e8958ad01f9ee1223cc62c5dfdc1db44"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-airspace/report.json",
+      "bytes": 796,
+      "sha256": "7e638182a3aa1baf69f79a0a55be1bf7354083dcee0c8cee08541cd7dd84b64b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-focus-keyboard-process.json",
+      "bytes": 74,
+      "sha256": "92ae0f05adc58ea1f5a5aa49538987b2c71eb99bf539d2bb5c9faf8d43a0692b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-focus-keyboard.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-focus-keyboard/keyboard.png",
+      "bytes": 30017,
+      "sha256": "c976b13e43fbfdcdb8da48249a5493988dcf50f510370e6c148582af26cd9a26"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-focus-keyboard/report.json",
+      "bytes": 4465,
+      "sha256": "feedaa765e379e69a473b3fa6f27f7831ded253862c9430e6b9af7fc93275f66"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-pointer-bounds-process.json",
+      "bytes": 74,
+      "sha256": "d1ca51d394fecbad42dc96564587e8d543a7b20f384b1957f044d1edb163db8b"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-pointer-bounds.log",
+      "bytes": 86,
+      "sha256": "d33c4f12213bb2dba4466b9d8c4077f9541ce440db63b89fd05b76f614ed6d17"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-pointer-bounds/interaction-phase.txt",
+      "bytes": 27,
+      "sha256": "61ce841c4ee71afdb1969f401fff0d3eb36d474e5c9e52ec86c7b39684732699"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-pointer-bounds/pointer-bounds.png",
+      "bytes": 15832,
+      "sha256": "02c398f31c8890a13e0973b73aa7eb45e98c0472e20ebb72ed129d7562e933e4"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/3-pointer-bounds/report.json",
+      "bytes": 846,
+      "sha256": "9c0f50668de74fa60f36cc8ac781cb6a95d4bcccdfce780c83107952cb5a9d3a"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/campaign.json",
+      "bytes": 281,
+      "sha256": "b18878f74cb0fbe57dc4b470ffe0b36e4798e2e4c4a275a7554595ae56352251"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/source-manifest.json",
+      "bytes": 11090,
+      "sha256": "c0f42cc383892d1aaca03f02651606723b829fd26e7ae92263ae7dfe79c626ae"
+    },
+    {
+      "path": "artifacts/webview-final-2026-11-11/repeated/summary.json",
+      "bytes": 15397,
+      "sha256": "9984b6955cb4830ccd5e534548b683b85ae17f5bac193a5e29fbeb2a8bde3e86"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeControlHost.cs",
+      "bytes": 1845,
+      "sha256": "fbac6a2b4a64fd80dfd09cfc3ed1f21ac94d52802d75d58c82acd9acd5909cc2"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "bytes": 1263,
+      "sha256": "38329d31f345184ca65c3d72f5c9a71aff543a3330dd3222394c21d489485b76"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "bytes": 177,
+      "sha256": "80cf8cf71781d5fbc84906d2675e7910ac114702a44bb16a2ed6dbf2597fc550"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
+      "bytes": 279,
+      "sha256": "2497aa4444d836b136d9384e85566d6ecb6004039828df47354d75e33b6b83dc"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Interop/WpfUI.cs",
+      "bytes": 1356,
+      "sha256": "17583710668fd22d5791fd42d0c07111c063600fa7cab2562f35a76e5ce92987"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/AdaptivePanel.cs",
+      "bytes": 2024,
+      "sha256": "8fd2d5a3ff7c8f54674206db42ae0f3507bf757e405834da0553338a35d29ef9"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/FlexColumnPanel.cs",
+      "bytes": 883,
+      "sha256": "afd3df354361f688a473925220878e7562a36e95cbcdc14c5e713f9e50d2c62e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Layout/SplitPanePanel.cs",
+      "bytes": 4475,
+      "sha256": "65ea83094166928682f139072b24905a34809c908c3cc3f6afcf8225bab1c33c"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Navigation/NavigationSnapshot.cs",
+      "bytes": 123,
+      "sha256": "a1ac0703cc77d123727b37f2fa86f33936cada85055fefa925adeba3b010b112"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Navigation/NavigationSurface.cs",
+      "bytes": 3345,
+      "sha256": "1b3ad43233fb54133e1626bb34df90dcbecd55b972d269327652f49c58853a72"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/FocusIdentity.cs",
+      "bytes": 515,
+      "sha256": "1b39939d285ee136e6b103ce3b3287b9fc0979a35473ac54affe1eea99e4327d"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/Node.cs",
+      "bytes": 8062,
+      "sha256": "d7e9c04faa1cfb83c97d27606ffde894c2919f46c36700bdab9adf80efcc2a0b"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Rendering/NodeSnapshot.cs",
+      "bytes": 512,
+      "sha256": "56750c0eb42e3c217db0d8442ca010e329fcd13fbd203b0ea7731908779c3dcd"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ButtonContentPresenter.cs",
+      "bytes": 909,
+      "sha256": "1198e0375ee94fbeb5028777c205ce5abd8745eeb8ad9e00e1d03f539039c65c"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/PickerStyles.cs",
+      "bytes": 9510,
+      "sha256": "8f773a5ecae2421170c8fd05f5f5b22d1b92f86a2bfac34b9c44f3249b73696f"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/TextBoxStyles.cs",
+      "bytes": 4934,
+      "sha256": "3488ada41bdb4b6c7130917a966f65852fd90ec878e65d4d7e2266856f2ab6b3"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemeColor.cs",
+      "bytes": 487,
+      "sha256": "ee5308e8fc77d8dc3f978df5f7e3bafee93b14ac0f75c4351f977b3dea871101"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemePalette.cs",
+      "bytes": 3473,
+      "sha256": "e8b69f1da338e6b1444d517782ed99a6f245100f255aaa6c7a8a2d08c23005e6"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ThemeStyles.cs",
+      "bytes": 9500,
+      "sha256": "86b3de17408fca7cb3bf6c5dd85f6a5f89c491897777bda3c0e31e40b7246821"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Styling/ToggleStyles.cs",
+      "bytes": 5997,
+      "sha256": "95498053a7968e67a5a0e17313e60c9b0755b33414f8afc2ef2a39eac3937f79"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/UI Framework.Wpf.csproj",
+      "bytes": 1105,
+      "sha256": "ed7bd91848a06c46697280cee054d11d329ee2cddae9cac3524ec92567aef44e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/ViewHost.cs",
+      "bytes": 26100,
+      "sha256": "9126d9c97777ef5320f13e1368b4229673b3424c57a43a0d3c71d73085fe1ded"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/RowFocusSnapshot.cs",
+      "bytes": 2796,
+      "sha256": "dd9fe207979ddb89fc80a823758087931cb1a416dc22f6dc4e5309ec6d36c886"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
+      "bytes": 568,
+      "sha256": "36b14b7a6672fb0b55e6aa37a1387aaa483e3e74454ffe7af6c5ffe537125ecb"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListControl.cs",
+      "bytes": 7335,
+      "sha256": "0560e2c0b51d32a99b0ef432a63a053a00c98da42f18eb7908b82fddc8437130"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualListSnapshot.cs",
+      "bytes": 121,
+      "sha256": "6947fa3f0ba2e9b5303edfc3102571155607a04950c48d6606e0e4ea08c537ff"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRow.cs",
+      "bytes": 1366,
+      "sha256": "760a3e047306fda60d45e70562d5345d17f744f865b917b44704be63fa6dcd3e"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs",
+      "bytes": 702,
+      "sha256": "b258811f04ebc1101db6330b60c57177ca46a5e07e31f89e78655e6fa77ffacb"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowCollection.cs",
+      "bytes": 10585,
+      "sha256": "39217d54e35b3176fc117555f135159613312cfee42e7ba04e1738e52c876cbc"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowPresenter.cs",
+      "bytes": 7868,
+      "sha256": "27ff07aec94b4a512c26e81bb2cd0762dd6b0ab7a3e95bc54abdbe669e67818f"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
+      "bytes": 238,
+      "sha256": "eb9b926256cdeca185988d65e4b0aeddeab85d6059095c5a62d39726aa0be749"
+    },
+    {
+      "path": "tested-source/UI Framework.Wpf/WpfComCleanupPolicy.cs",
+      "bytes": 4225,
+      "sha256": "ceb48c2b6d88d215548288c4f57985576ee9d7fbd32e1eb3326dff79646e8978"
+    },
+    {
+      "path": "tested-source/UI Framework/Binding.cs",
+      "bytes": 1334,
+      "sha256": "566c0e871055778345fbed2ac4f744b12cf8b3bf0f646f02250a90b95bdb6e1d"
+    },
+    {
+      "path": "tested-source/UI Framework/Component.cs",
+      "bytes": 508,
+      "sha256": "5bc78429499713784025706a8b7dce888d678c676e9fe5e5d6332d13b565c9bc"
+    },
+    {
+      "path": "tested-source/UI Framework/Computed.cs",
+      "bytes": 4592,
+      "sha256": "6bdd6173d689a165e11979f51766c4777e4d9c4927591d0a3a6b48788362d40e"
+    },
+    {
+      "path": "tested-source/UI Framework/Dependencies.cs",
+      "bytes": 956,
+      "sha256": "6fadbf442bc3d7fc50d099c4ebb488b6602719a289c2cfacc9ffa20e5b015224"
+    },
+    {
+      "path": "tested-source/UI Framework/IState.cs",
+      "bytes": 86,
+      "sha256": "1a1e426442541a17a2bdb7733add8b27bf61ad6beb9aa50f7bd7930565521cb8"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/SplitAxis.cs",
+      "bytes": 72,
+      "sha256": "3265d57614d6e1804cc3f03a100a1ccb44e72e80ee0f84d30dc423d4d0ba6b97"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/SplitPaneLayout.cs",
+      "bytes": 369,
+      "sha256": "6ca60fb6a0677ed9da815666db87e7a046a1cd9f46a9bee4ea764952ea0fe385"
+    },
+    {
+      "path": "tested-source/UI Framework/Layout/ViewAlignment.cs",
+      "bytes": 83,
+      "sha256": "b6dd915729f42fb8419e9f60872461571dae95189085fd7996b9449a826c6077"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationEntry.cs",
+      "bytes": 94,
+      "sha256": "69aa6012f399114d0160d9b8a4462b2ede14e2a5b98232394a04a8d74f43e562"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationStack.cs",
+      "bytes": 1479,
+      "sha256": "d359a617c404710fa5ac0fdcae8bd16d9c1780b7839c095da95dc15d8e7181bf"
+    },
+    {
+      "path": "tested-source/UI Framework/Navigation/NavigationTransition.cs",
+      "bytes": 78,
+      "sha256": "6cdc53175b9e2c96ef9b7cb474063a52943da47dea56548d7f2f19d1b0185dda"
+    },
+    {
+      "path": "tested-source/UI Framework/ObservableState.cs",
+      "bytes": 693,
+      "sha256": "aa9ff307e5f301b80c261913438cd9da315044eff79ce511152589d5fd71c5e8"
+    },
+    {
+      "path": "tested-source/UI Framework/State.cs",
+      "bytes": 913,
+      "sha256": "7b456332f93567e0b9e5159f3bc4289a7c0325acbf3a1a98be4e68ef52fd951a"
+    },
+    {
+      "path": "tested-source/UI Framework/StateList.cs",
+      "bytes": 2474,
+      "sha256": "ff4db976babdde75cf769861856b67aa519f003e62c2ac4a824740b6893f0dce"
+    },
+    {
+      "path": "tested-source/UI Framework/StateNotifications.cs",
+      "bytes": 750,
+      "sha256": "fb8e1d0ee08c9630df94424d7b81fd5a70e73f67a9c78fd0874b2bd8887932f7"
+    },
+    {
+      "path": "tested-source/UI Framework/Styling/ButtonStyleKind.cs",
+      "bytes": 83,
+      "sha256": "90ba5a95f25ca0aeac22447f1b37f64e8633c596aff38f95a50214737abe0798"
+    },
+    {
+      "path": "tested-source/UI Framework/Styling/ThemeTokens.cs",
+      "bytes": 922,
+      "sha256": "ded33f526a53d237bc276c74918a66fd6bf1afea4abb41b4388c9dabe09d77f4"
+    },
+    {
+      "path": "tested-source/UI Framework/UI Framework.csproj",
+      "bytes": 971,
+      "sha256": "93342aeae9cd5d10492241e3c7851126701f5177a1c8255d9c9fdc6ca417f748"
+    },
+    {
+      "path": "tested-source/UI Framework/UI.cs",
+      "bytes": 6672,
+      "sha256": "fe377b60fb24e8283e73a160dc80ff88c25d709d5e30d9b7d3f55c8a6f3d43b9"
+    },
+    {
+      "path": "tested-source/UI Framework/View.cs",
+      "bytes": 5193,
+      "sha256": "5b1f7efbf788b39963884e0c0e2d21284c8406ef99abde3b291061f5b65afcb4"
+    },
+    {
+      "path": "tested-source/UI Framework/ViewKind.cs",
+      "bytes": 235,
+      "sha256": "e9efbbff9685c23012a61c7a18bf8ae6b312bb0232677b39b021209c82c5a4b8"
+    },
+    {
+      "path": "tested-source/UI Framework/ViewSession.cs",
+      "bytes": 1958,
+      "sha256": "a70b4e9a8148b13d5f2dfe206416a16cc4f62a15bbe2ee6f796da49db1017577"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "bytes": 4664,
+      "sha256": "492794a946347cb6e8ca85153fa2fb58021f05a0baa63c1e80bf4e84cce76692"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/BrowserSession.cs",
+      "bytes": 10841,
+      "sha256": "c6214e61883eec9b9acb534cef6425349e6ddd8e72816afeb53be4452c84174f"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/FailureChecks.cs",
+      "bytes": 9714,
+      "sha256": "1bbd855180cfd132c8cee1e20b8de926155e855648ecee2a44fb81f03ed8853d"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/InteractionChecks.cs",
+      "bytes": 11048,
+      "sha256": "51413f26b549f019e096e5a23bf7abcfc1021ca1ab3f9e9f641d07446e589dc9"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "bytes": 1718,
+      "sha256": "58dfbf369a2743d454cbcc4715dcf86e00f5831e6750b8758f95689ab4d87b36"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/KeyboardPacket.cs",
+      "bytes": 474,
+      "sha256": "da051c487def19b7b997a602c9b7e05c1c96adf509863360e51b3d7c62a19443"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/KeyboardProbe.cs",
+      "bytes": 2121,
+      "sha256": "370e1589e093306c823df2e84ab47bb7874e21d6a60a9115aa9b81f081ba0e1e"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/child.html",
+      "bytes": 145,
+      "sha256": "41f06547a521ef061df780c6d808c78e52a0e7ea46ad327b132a928ac2ce3294"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/interaction.html",
+      "bytes": 667,
+      "sha256": "640937dff6264bc57d853299c3f9ec37ac8738ae1b75e69a5c09b7c9b2aa1785"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Pages/parent.html",
+      "bytes": 310,
+      "sha256": "e2303df10f58daf7339bbf20c76b67bfded46199ab9dc0cffc3c3b2a87f9c4a3"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Probe.cs",
+      "bytes": 553,
+      "sha256": "fa0c7ea8f49f635f962b5cef60743559b95c748c2a13cf6b8f881c57bec156fd"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ProcessFault.cs",
+      "bytes": 1532,
+      "sha256": "4451f9e4e4938876cf9c0f623e033def683c9ce3660ed5c38a72ea3c5f70aa76"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/Program.cs",
+      "bytes": 3603,
+      "sha256": "7e7698e5afdc53ef252b1083f5300137200419de6347a07e4f7de3ac169ab79b"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/RetentionChecks.cs",
+      "bytes": 6914,
+      "sha256": "465f6a8198f2e4c477a5d709ca6cff87e48ffd66bd1e3dbb7f3cbe8c565e22c2"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/RetentionCycle.cs",
+      "bytes": 439,
+      "sha256": "378726d8e7bdf7811782685f7b0485dce27f8f52845f500c6c00881202af4762"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "bytes": 629,
+      "sha256": "c506c7d4658e1346180538e98d37069d842e25e5499aef2a6e454073357944fd"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ScreenProbe.cs",
+      "bytes": 2768,
+      "sha256": "c0de14a58ab36300439bb90c20890fd9e12f2c6a6ad66a6cc88cb9c1c922c4d0"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/ShutdownChecks.cs",
+      "bytes": 5182,
+      "sha256": "da31e9ac1c2bbcfd82fee6e34505daa4a1812ca28ea1824841a56267060f11de"
+    },
+    {
+      "path": "tested-source/samples/WebViewAcceptance/WebViewAcceptance.csproj",
+      "bytes": 537,
+      "sha256": "e1180da3d92cacb2151ec9f1b101bac6265f0e75d1e52e5608a7f48442f5fd70"
+    },
+    {
+      "path": "tested-source/tools/Test-WebViewAcceptance.ps1",
+      "bytes": 4906,
+      "sha256": "2a41cf95ff2fda9739389645f93d961a0c3fa5d704c2c5ba09c84b22dd7dfb86"
+    }
+  ]
+}

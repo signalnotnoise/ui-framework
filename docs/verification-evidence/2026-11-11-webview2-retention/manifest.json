@@ -1,0 +1,4031 @@
+{
+  "baseRevision": "64bd242",
+  "workingTreeSource": true,
+  "files": [
+    {
+      "path": "artifacts/release-validation/native-window-22f285c8ad0a499bb2a4f9bb46e9a46f.json",
+      "bytes": 1716,
+      "sha256": "57a2503959ca3e25673972380c9718e57e38be3dec07c61bffe4f3f6ab2a2812"
+    },
+    {
+      "path": "artifacts/release-validation/startup-3e671799f7d4484db877611fa44fc2c8.json.phases.json",
+      "bytes": 1534,
+      "sha256": "e8befbe48f4b68c180569745a3d27d3fca6938f1cdf7c6f61160eada0a9be2e5"
+    },
+    {
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3343,
+      "sha256": "e7d5a85d584330e316865729cec535e69e84398e2566056caef752a0e0f211ce"
+    },
+    {
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "d20072e1e1897a059aef04678117a4f38ebb276d22749ff546d946ce80e0b7ca"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11-final.log",
+      "bytes": 858,
+      "sha256": "7378acb61ab0bf8f34e4a64d00933983ad961ec4e83e211d78544b6c572360bd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11-pilot.log",
+      "bytes": 700,
+      "sha256": "fc2b0c1b80a4e2f2dd80a4dcdd3da828f3c88f03bf3650413598d03666b5ca2e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11-release.log",
+      "bytes": 3132,
+      "sha256": "d23d77958f619b4e2d5296d44c2bce7d719641f882d33e1f99e3e3f9c3d287ef"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11-repeated.log",
+      "bytes": 2656,
+      "sha256": "81c2ae8aed646b4193421a476f21f70d04de80cd6a33308b36def4fb8a674ea4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "ad5f8b966bdcd9e6b8013e10e58ce7ecbf68581edd4a9f9c160a44979c029090"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/report.json",
+      "bytes": 84319,
+      "sha256": "9f5ba632813161b2077818cba43a242cc7c2f6c7b1578322920646548922922b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-0.json",
+      "bytes": 1503,
+      "sha256": "7c1fe92729ae8818b67e00975abaf6589cb745e0872ee9ce08ecda20abb87084"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-1.json",
+      "bytes": 1505,
+      "sha256": "d1b7842141ebad2339e7b6a23f564132bb67fa9a37ec0c0e772bbbd82fb3cae2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-10.json",
+      "bytes": 1508,
+      "sha256": "f46e86037db601438fb3605b279fc0206d4e3c4123e4dc79518f4483f7ffd16e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-11.json",
+      "bytes": 1506,
+      "sha256": "cf675e185fccd1ac586b0bb26f913f05d3a9d9c530c0d8099957d4a0d0b0fe8c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-12.json",
+      "bytes": 1507,
+      "sha256": "226c49f6910eb4a90f69c932e781864445fcbd36004cfcd5a13964d02e0ca089"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-13.json",
+      "bytes": 1508,
+      "sha256": "daabcdc0d3fee0cd04d79ffa30ea528e4a039a5f029f77da21d4d035d1aeba35"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-14.json",
+      "bytes": 1506,
+      "sha256": "044705e5c75116666f56855ade030a6e7527571e99f655c075b7a2833c758a0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-15.json",
+      "bytes": 1507,
+      "sha256": "2dd91f15cb0a2c6846a99e15ade97f856cb0a6217285b2ba43d534b12fb2f1ca"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-16.json",
+      "bytes": 1508,
+      "sha256": "f2d5063418347940534e9cd57046343ace97347f52ed2f295f7c4938635527c0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-17.json",
+      "bytes": 1507,
+      "sha256": "208e6d8b9a837162b681a51246dad5245902344c7e78b542db225add2e3dbeaa"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-18.json",
+      "bytes": 1508,
+      "sha256": "2ab1b5e431ab4631344a452f7f4b9d1112696ceec81cf82ed345f0be20274827"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-19.json",
+      "bytes": 1508,
+      "sha256": "8141a19ec08d58359fb225e968f34c6271d7c0eb093f7decc10e17d4a80c6a09"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-2.json",
+      "bytes": 1502,
+      "sha256": "363e6c62eb6a88008c7717bf141d95b054993e85460c503ba2a49525e5558fae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-20.json",
+      "bytes": 1508,
+      "sha256": "5334ee79284305de00488628b774ff8bdbc40d6980b5a78d50e6f438fcf3a2fc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-21.json",
+      "bytes": 1508,
+      "sha256": "a06d1d7d81392b936e09e2f67be43bd60dd9dbc5656f2e54c65807ae690e7107"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-22.json",
+      "bytes": 1508,
+      "sha256": "e6559497c174e48f79d3ad6bd3b423813228788112eb305e475ab5acd2dcf76d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-23.json",
+      "bytes": 1508,
+      "sha256": "5360f78bec8022b68308280457a6120f9b2950e3c84148ba5c5a8f40ed7b9f69"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-24.json",
+      "bytes": 1507,
+      "sha256": "9d7caaa1861a4d41894fd5097e4d73c8870c6cd6e18c78c7b12fa0cfa523bae5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-25.json",
+      "bytes": 1506,
+      "sha256": "248ecea25e30757063d3c38462e3e90e22bfae7b658831b984b4819e46f2c90f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-26.json",
+      "bytes": 1507,
+      "sha256": "a15e2d0f57e17269f81b51aae1e1326e404bfecb40e71ae2239e7efee186118c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-27.json",
+      "bytes": 1507,
+      "sha256": "0997f976efd2acf2bfd11bef0279bf9c3640f7b266d399d000ec973a59a3ee19"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-28.json",
+      "bytes": 1507,
+      "sha256": "e1c86f0333f9ce06a205440b265ad17b8f3afd2247a92d579c42dc929f046e79"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-29.json",
+      "bytes": 1506,
+      "sha256": "085963d05c9d287b2374f0e9ac463950a39b5f44573316f76836f773964d5c05"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-3.json",
+      "bytes": 1504,
+      "sha256": "c13891f25e9529ff636fdf87f9521df9ead47ad56e7f91f3f5188546035a257a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-30.json",
+      "bytes": 1508,
+      "sha256": "ce5d2b87e78da01aeef5a5f51501b65026b1692eb35c93cfd9a0aa1cd92e9257"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-31.json",
+      "bytes": 1508,
+      "sha256": "3254e913be16a591ca12a45a9766504adbb2ff083057726ed00f9a4a46ff38e5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-32.json",
+      "bytes": 1507,
+      "sha256": "75af4664fc282f0070d1d6f5e992972b5478bce44ab8733da964a6509964dd67"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-33.json",
+      "bytes": 1507,
+      "sha256": "5181b8f42c65c8858822ea844a2f47187cf8a3b8decf161693f43a522ce50e57"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-34.json",
+      "bytes": 1508,
+      "sha256": "1d25b710938b2b25cb029c10627550f224cebbbb9d79ecfa728216001f59a3b7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-35.json",
+      "bytes": 1507,
+      "sha256": "3792fa4b53f206c9289a2d4a372c8b629d93321f4521b250e51886fcc922db8c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-36.json",
+      "bytes": 1507,
+      "sha256": "7766b1950dace0017230217d86976b57c596ed79e78734b60da1922c8d81051a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-37.json",
+      "bytes": 1505,
+      "sha256": "07845e45c29947436cfbabf0f2e4e3564ff699b4a10eec8a9d95ceeb27f5e3ef"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-38.json",
+      "bytes": 1508,
+      "sha256": "bcb0ca34eb3a65659dc42c1c9024fd656369294fe8f99b16207a864ac144fe24"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-39.json",
+      "bytes": 1505,
+      "sha256": "ab5a678b6ec3b963e46286ff5d622136b3b5a134f97d100d0bc599f3caf806f7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-4.json",
+      "bytes": 1506,
+      "sha256": "6b4c89a870b34d24af303104c956a21fbc14aee5b16c907156fd61fc2b63b9d8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-40.json",
+      "bytes": 1506,
+      "sha256": "02fb257d58c53ec4fd8fd6b82ba6a3ecb82ef86ed7366be198b672922cd3770c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-41.json",
+      "bytes": 1506,
+      "sha256": "6e6eb5aa6d85889467a0e2d563b1fae4b6e0a98460529f47b555d0f6415a2fbb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-42.json",
+      "bytes": 1508,
+      "sha256": "26169597425623b54c7d07cefbb42a9a17a9167d38725e25f4798a84c71b8c4f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-43.json",
+      "bytes": 1507,
+      "sha256": "cc6e5de68438a78aa8b2424052d2c47a60e5f431f8fcc4c87c90fb5d1eaab494"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-5.json",
+      "bytes": 1503,
+      "sha256": "3b1301806cd16f9190ea030e6b6fde054fdd4492bc4e196e3c978a12bf8fc7ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-6.json",
+      "bytes": 1505,
+      "sha256": "c46907e05db0814a33f9611fb81db243876632fe69f1f6818a90e289695b2dad"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-7.json",
+      "bytes": 1504,
+      "sha256": "214f3b844e37f1fc4270a1755e00bf24ee42ccd43f2c6de96b1d6a9e5ee3ebf2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-8.json",
+      "bytes": 1504,
+      "sha256": "7eec0e38ea9cbc87693e5bdd58566ff1f25581743b640ebb33f65a8b50164569"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-fresh/retention-9.json",
+      "bytes": 1506,
+      "sha256": "65f70fea7a692c2a9be1808aee943851274b631fc7da07d09635ec15f07e186a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused.log",
+      "bytes": 1754,
+      "sha256": "ca1ad1fc6756628747952d0416412cae3ca80c18884b4ddafaa01a9549b03195"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/report.json",
+      "bytes": 84252,
+      "sha256": "fb7d620c1c092cee7f52d06d86d42d60875e6c8111ba37c21ac77181c0893ac1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-0.json",
+      "bytes": 1503,
+      "sha256": "063719665bd1559dc2ecfb8563a92db144b0591062139a5fadce905579a7965c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-1.json",
+      "bytes": 1503,
+      "sha256": "79f63446e52edf39aafc20dc8513dc2758441a3c4d7ada81cbc0d7acb83cda83"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-10.json",
+      "bytes": 1506,
+      "sha256": "f70f4d2d59658a46ac581a1f7c5b584fd2ff25d1ad483acd5ba1bc4d2c028204"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-11.json",
+      "bytes": 1503,
+      "sha256": "f50ebf143b84b737ab01e366b18c1628e4a319a69598ee030c683c1b38dbeacc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-12.json",
+      "bytes": 1506,
+      "sha256": "2b7ec34476e23d5ce2e85f216cdf898efebe9341a86750ca6d67b5ec64a60173"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-13.json",
+      "bytes": 1506,
+      "sha256": "45da651b512e0c3c63bb592721ed2a987beef630f1a61d21640f894c0e09fb55"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-14.json",
+      "bytes": 1505,
+      "sha256": "5d4e15dd2b0bd04fd02e0d07687119325b6c5651cff36b3aae6b76162e29f5ec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-15.json",
+      "bytes": 1506,
+      "sha256": "8144093e90bea6c97cb7c270b27a0027f2cf55dcff298263144b1642b1ec40ae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-16.json",
+      "bytes": 1506,
+      "sha256": "7fef91f66181e2d4d0d5a2ead69df4fa96ce64ddf640a0baa2d8f604a5b23e86"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-17.json",
+      "bytes": 1505,
+      "sha256": "620a140eeb4c5381e429beabe070e3f8f8c520efccb727cf77b3035c11e7c6ff"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-18.json",
+      "bytes": 1506,
+      "sha256": "e283b8d8619351202cdee5e7e1034c9a68d1c9a74f00ccbe3c4d9812dd1b6042"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-19.json",
+      "bytes": 1503,
+      "sha256": "b0f3b216a0a26ccad4c32d557ee80933df07d3add46cb6fdf25cf39a7cc37fb3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-2.json",
+      "bytes": 1502,
+      "sha256": "4091c6f65140e50914c5ebf12eed35c3c201edbb80e45654c275773a302b7d98"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-20.json",
+      "bytes": 1506,
+      "sha256": "0482474847f6292393b1fff868db2f4682c38ec137dc53df3ffc3bdb79f119df"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-21.json",
+      "bytes": 1505,
+      "sha256": "181185c5efa36d4667aa8c22e60b2b1e76b05b2a69fc1139f1d7551c1c286f27"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-22.json",
+      "bytes": 1507,
+      "sha256": "4a82c8d107e0de3011d1402992e5b1aee975ee57a19f92ccf463538ccb60a9c2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-23.json",
+      "bytes": 1506,
+      "sha256": "af1fa90792d135610f04b9ff9c61ce572ca2a0513427347e9e3139a6ffc6715c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-24.json",
+      "bytes": 1504,
+      "sha256": "2e006548281e0a24962cf43d6b8f577a216fefb81d6a0106b2d0c49fce1a8365"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-25.json",
+      "bytes": 1506,
+      "sha256": "eb6f72b8f4f63fb92ac423bb11a3989a97ba424820594d2cb1ab052ee18db900"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-26.json",
+      "bytes": 1506,
+      "sha256": "22567d94ef906dc7e59605066a72ae133c9b9b5c9ddd217a1adc907c018ff786"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-27.json",
+      "bytes": 1506,
+      "sha256": "44afe8174d8ddf2489d133a55fcb8f8145ea76d44af3299dddf3da8a86f99e1f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-28.json",
+      "bytes": 1504,
+      "sha256": "bdec20ab2c028fba237a84d6be38f15a4ce8a43df92dba9ba94eb60b9058febf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-29.json",
+      "bytes": 1506,
+      "sha256": "9a62977f460e097eafbffdac4343fa8163871f622599f1ea558a7d89fb523f60"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-3.json",
+      "bytes": 1503,
+      "sha256": "b1d7788025c475e214376280eb61def22cb9905eb0c708458949a888a0cb153c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-30.json",
+      "bytes": 1504,
+      "sha256": "e3eac3bcaae1fbd8c81b1a4eda9e2acb3ad5312e2abeb816d1ce1326d700b296"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-31.json",
+      "bytes": 1504,
+      "sha256": "e343ef072ad9179d00f2e9e73a0000002d59256b6a9dfe86bebf33c323f21915"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-32.json",
+      "bytes": 1505,
+      "sha256": "fd53025249c8f46cd57608e5decbf2b26e6413a4c593b2a27ee064fa5bda4ea6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-33.json",
+      "bytes": 1504,
+      "sha256": "080359a0bad7594e934d215a27ee14f93b73782593cbf5e56cbcf5fbda8059b9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-34.json",
+      "bytes": 1505,
+      "sha256": "53b353bf90e5383aca5f4de505473167c160e91f6e359c390cd86e1e2763e621"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-35.json",
+      "bytes": 1505,
+      "sha256": "0285cf169aed2c622e8122c17dfb9596a0cb96cea373e6a01501501ad4454cb0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-36.json",
+      "bytes": 1504,
+      "sha256": "1f0c854e9a5cc5ab4311e6396369bdcbc0040fe5bdd51a2e2a3aa11364d9f4fe"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-37.json",
+      "bytes": 1506,
+      "sha256": "9409494efb7d94046261e671fcdd029ea08876c3de093c503c5feb37ebb61c09"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-38.json",
+      "bytes": 1506,
+      "sha256": "1cd87250022a40dbac09e2c0a1defd5c60a7a599ecb389c4e9ebaf8adee7a5f4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-39.json",
+      "bytes": 1505,
+      "sha256": "dfbfdeb8c4914d3f60069c3c4c7cf2026678249075f19743b903a0f1ec0759ef"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-4.json",
+      "bytes": 1505,
+      "sha256": "c0f93f94b640260129ec44b4aafaef786f25865257dc80a1578bc9b0ba10d6aa"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-40.json",
+      "bytes": 1506,
+      "sha256": "9c808979f0678f33a3580c4972a23227d95248bea1927105651513c3f854a370"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-41.json",
+      "bytes": 1506,
+      "sha256": "a896d994e5ed394ac1ed8fbe5a7376d4cb60f5b6c55d6632f951a406cb547f09"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-42.json",
+      "bytes": 1504,
+      "sha256": "e4c8615a94aef715b8912bf4b80adcc452c7b451b67d263ba87d656aa17a7dc0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-43.json",
+      "bytes": 1503,
+      "sha256": "42d5530d07bf370b6b0db9be46af42b27ba9b70e22fc6b59995a711dc890fd69"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-5.json",
+      "bytes": 1504,
+      "sha256": "fe034647a4e30b24575e59216521ccb384c6c482435ed9db8c7a42badf4eeda8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-6.json",
+      "bytes": 1505,
+      "sha256": "442263cf2d12d11a661b31e2d4e5f1331a550c28fa786916f94e0d2a3edc03d7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-7.json",
+      "bytes": 1505,
+      "sha256": "e8f9b93e386099f0281a85e1821bf60f4c1d28c94992af3919616dd874d269c5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-8.json",
+      "bytes": 1505,
+      "sha256": "c9989f823c1da5f2084a0e77bbd3bce1c33ae2abbb33a08fdc823e4ec9552832"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/1-retention-reused/retention-9.json",
+      "bytes": 1504,
+      "sha256": "690ecea1af3bd47f7d4e695d5f5c43f4ee4af52ca430482f79696639b6acf9e7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh.log",
+      "bytes": 1757,
+      "sha256": "80cc2a75403885348e5f95d6c863d38e1632862a805bfac45d932d8027ce3cdb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/report.json",
+      "bytes": 84349,
+      "sha256": "3f5d11cc452132f68e5bb47c43046db792191e230a0460cb1b591e84367faa84"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-0.json",
+      "bytes": 1504,
+      "sha256": "0e00b07e9801855dc5511ca77a15082adefedcc2932feb45d338d5b8a25e0a02"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-1.json",
+      "bytes": 1505,
+      "sha256": "4c1a6c19cfa08698e1b67c947228ef22958a6f6ac3af55e31614b6836b9e1d24"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-10.json",
+      "bytes": 1507,
+      "sha256": "d38b8bc80c2e6de65481c6ea7b956286c9d646a1facfca30115c66bf2046b542"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-11.json",
+      "bytes": 1507,
+      "sha256": "0278869666c54c9ef800dd9257c723e4d2e15d765734fc0a678920b2f76686e5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-12.json",
+      "bytes": 1508,
+      "sha256": "61d8050c8f1cd7b8bc8ec65a93b0c66b2fd944b620012fdac46c38cbe1384dd8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-13.json",
+      "bytes": 1508,
+      "sha256": "d66461d44c8595a9ff5d1608fb498d3fe23423a68c623e8bc7b0428d89d09d69"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-14.json",
+      "bytes": 1507,
+      "sha256": "c64e88b1b643035ab5e4612b88cb6bdea9743dffce4c33ed7b3b277f0414442f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-15.json",
+      "bytes": 1508,
+      "sha256": "f26b1559b455a4845c6aed76df1736da9d1e107704d498170e6fb67881cea51b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-16.json",
+      "bytes": 1508,
+      "sha256": "c6805cff3c16245f295b0449964d45a83b631322bec279084c5f9e001c71160e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-17.json",
+      "bytes": 1508,
+      "sha256": "57ee56f7a76574381bf875a8d7ea1144eeeb4c858fa0a6593266431443ffbe12"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-18.json",
+      "bytes": 1508,
+      "sha256": "bcb8ee1eaaa1ba6c82a457666d40060d8d3f43da22c63a6a5dedad63ce045dd4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-19.json",
+      "bytes": 1508,
+      "sha256": "41d132841b7724762273a3973637dd900471bd230a55e44094472eab59858c99"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-2.json",
+      "bytes": 1505,
+      "sha256": "41d5d858f4925bcaff82e3eb10cde523b7ed935a5ea47bc3246985f621444186"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-20.json",
+      "bytes": 1507,
+      "sha256": "90dc27b41b271561ed234b1a7008166a2b2d315e2ee2a9237698232be0f060c0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-21.json",
+      "bytes": 1507,
+      "sha256": "1384a077c4984e089c3ed862ea0d966981d377b18011384e226917e5be77aab8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-22.json",
+      "bytes": 1507,
+      "sha256": "b1af23efe67561c93d2a4330ef457a5b1726a61871fc2e3f21a2cf22c2a72a9a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-23.json",
+      "bytes": 1508,
+      "sha256": "b30a392a9235beacb8b741a959863ac4d2daabdc6ce15c8a8f8563f000026a8f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-24.json",
+      "bytes": 1506,
+      "sha256": "a62e15a97c92202b8d4d6a7bf7e77807823a8be833ebca3eb801d2e86babf25e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-25.json",
+      "bytes": 1507,
+      "sha256": "5c92385ce7ded4151b70537c08d81ce646578843cc3486b70cddaf4554618b4a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-26.json",
+      "bytes": 1508,
+      "sha256": "a39af478ba6d3564ad6aa4fdd2ba1842da1741487df36f5d422b80d99faa30d0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-27.json",
+      "bytes": 1507,
+      "sha256": "1eb59ce4f15592e3946dc23f8375f8ef6ed55f06a803af17160258ffb18006a3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-28.json",
+      "bytes": 1508,
+      "sha256": "71ec1c801d4bff95353ff985acc6a3fe4f199adefbc24423fb229d42451d957e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-29.json",
+      "bytes": 1508,
+      "sha256": "ddf459c5c287e09baa0db42a7842ccbdcfd405ea308e456af45de170dc750e5a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-3.json",
+      "bytes": 1505,
+      "sha256": "4ed09af3d347d12ae0f00378bad310282ab431c6ffa6a606d0466a5b81589683"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-30.json",
+      "bytes": 1509,
+      "sha256": "91afffe55738ad75c8050dbe76aa7d357a9a3395dfe4f407d5e151b957146ffc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-31.json",
+      "bytes": 1509,
+      "sha256": "9494174beb51b70301302d05f9322e8e848c8f44e455db2d26f00a169817a6cb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-32.json",
+      "bytes": 1508,
+      "sha256": "53d3868666927cab5772ba0e5312fbc1be354240c1e81bf0b28ff738870bd05c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-33.json",
+      "bytes": 1508,
+      "sha256": "2459c77db6a8e447e2ed54fd8d19ff0aa90c4e8dfeb58731138b37a23d3259ce"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-34.json",
+      "bytes": 1508,
+      "sha256": "4837a3d578d54e481519a0021da4fcddca1241257ddd305b7ac97975313d4367"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-35.json",
+      "bytes": 1508,
+      "sha256": "f09c3220b500e006436716eeba947d93f6b6096c903b241edb4ffbb8ee4d5974"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-36.json",
+      "bytes": 1508,
+      "sha256": "f240878b8d0157343419ae446029e2d40f4e0b823b4971b83ff348996507f1fc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-37.json",
+      "bytes": 1508,
+      "sha256": "35f7caf94eced697933a23f7f8d67a569e4a3d15d11692f1b3d817757440c5e4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-38.json",
+      "bytes": 1507,
+      "sha256": "bf5087036124b4a125327e8b0c55a41e6373a1479bc7c467f2f3ff5e2da998bc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-39.json",
+      "bytes": 1507,
+      "sha256": "562480cab7011e3e9a968d27651a060aa941178459cae308378b03b676a04139"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-4.json",
+      "bytes": 1505,
+      "sha256": "f84fca922286af37e0ed5d153ebaf778797e0f49736f24ab02a67a1615918a33"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-40.json",
+      "bytes": 1508,
+      "sha256": "68accbb09d7db9863131fdc4ba3fdd4a6b377f960bfe2d7eed24d6d40b3f2273"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-41.json",
+      "bytes": 1508,
+      "sha256": "e2bd88d774e608c613ae8f8e150c285a10860d6744c39bfb20a9058ebe78531b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-42.json",
+      "bytes": 1508,
+      "sha256": "8139b104c04196ede6820fa0d71c03ef93751e0009dfa8a77283b682509c46bf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-43.json",
+      "bytes": 1507,
+      "sha256": "e1c4dc87fb2f249d00596197058bd3a85d5df733a5bf497d53164df6f7ff730a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-5.json",
+      "bytes": 1506,
+      "sha256": "9198fc13a1d39375ae661a57a2ae62e6d085685d2c822effa8c28570a2d82c47"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-6.json",
+      "bytes": 1506,
+      "sha256": "5ac6770c09a69f56b4d9cca9907fa14add04ab99d3af0b2a3f8f5cf5da4bf975"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-7.json",
+      "bytes": 1506,
+      "sha256": "fa99c449ae5c5fbb22041a0ea7862d97161d166eda72569f2042128d0e07daa4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-8.json",
+      "bytes": 1505,
+      "sha256": "6767fa8eb1f5f005261a7f3ec1f67ab9c81069c58a6e6df3afb54b1c09354cde"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-fresh/retention-9.json",
+      "bytes": 1505,
+      "sha256": "c56a3834fdf9520b25071eb8c984565efd8aeb448859448bc47c7d794de85aad"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "0bd60f8834b4182b14e01610be3bc6b6378a024fd45ca157a4e1e7f7eac95df3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/report.json",
+      "bytes": 84257,
+      "sha256": "7dcd3db4c33c18a553261ca5ecff327ee3c066f4e75575bd085a7349f7644d64"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-0.json",
+      "bytes": 1502,
+      "sha256": "7692adfc8ad3d4316e00b102ae0c739af83d559a6b222bb0a83d8da4670434ef"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-1.json",
+      "bytes": 1504,
+      "sha256": "dbecd517731550aff61e088b429ffe6aa555f8bf1a0917d499b1cdd28b99822b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-10.json",
+      "bytes": 1506,
+      "sha256": "3f24b5fdd6588276c92cfac4cd8e9fe58f53d4bf82bc7e1374778608afc92fce"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-11.json",
+      "bytes": 1503,
+      "sha256": "79369f554a835b2cd6f1fe6c8bcfd712a5478644723a3c2a91be3b31435d4df1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-12.json",
+      "bytes": 1506,
+      "sha256": "9992821855aa629c776b9b2c0bc93764a983e9a4db086200cf130776960f39ed"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-13.json",
+      "bytes": 1506,
+      "sha256": "a63ed7c991e70b1ecee218d95059f0eb1723f01320df0c78791c42f72787010e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-14.json",
+      "bytes": 1505,
+      "sha256": "c523e176f0c007f705b3fd5b689c7c6648e6483912b2e4d368d35622aafccc1c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-15.json",
+      "bytes": 1504,
+      "sha256": "0ec309641facb63f1bf5a433f701c3e33fd9c10b835361a5c62386ab2c9a6d9d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-16.json",
+      "bytes": 1506,
+      "sha256": "fcc9217f412fd7ecc3476b2f6cb58a80c0f65ace1bcc8930cad3ffd3184c8de9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-17.json",
+      "bytes": 1506,
+      "sha256": "bb405467c5e2256558f7220c986f57fcec8093369781c8bfdd075c9531a3c061"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-18.json",
+      "bytes": 1503,
+      "sha256": "f36ca9af9c6858d69d21709110dd8fa6d2c77aed99867e21bcac7ed5d43eec0e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-19.json",
+      "bytes": 1506,
+      "sha256": "768667109470e5957fb00dfaae3fe6f1aa9cfb134d08fbf58239fa6a9b266261"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-2.json",
+      "bytes": 1502,
+      "sha256": "1bf92f8d20899c373d9eff99f6f405519b68a37e2ef8f54fe28cf1b9a0fda5ae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-20.json",
+      "bytes": 1506,
+      "sha256": "efdfec5ad4910b4448908d02e5a199eed40a60e9d1cea9a86112e502d04a7bea"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-21.json",
+      "bytes": 1506,
+      "sha256": "bd641924dcc8dffc87d8392c20ab537428356ebf353f97094e5a119e875b82e2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-22.json",
+      "bytes": 1506,
+      "sha256": "257a0721da6d311b36fd35e1a452e8de1c859aa95ef1fbd4e2e85ff307adcb67"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-23.json",
+      "bytes": 1505,
+      "sha256": "880c83f24eb0756e40ddc763b233c308ac990f9f0aa107b0485b00f730fe644f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-24.json",
+      "bytes": 1503,
+      "sha256": "bf435ef1b64e6ac2199831e3480663031fa6f6ce16d3e6035e8753a6346aff85"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-25.json",
+      "bytes": 1505,
+      "sha256": "152a2c4451e37a687bfdc662949480c186931a2d7dd25d2c4acae3c9b013d469"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-26.json",
+      "bytes": 1506,
+      "sha256": "cf5cea76f73efb02e3ff1f307e0e843c5c7eddbaa14608abb0bbc0f3e60f4502"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-27.json",
+      "bytes": 1505,
+      "sha256": "f44eab3793e664f923bb3d2a5106881516fd1b9cf0828afeb03d12600f14fc1f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-28.json",
+      "bytes": 1506,
+      "sha256": "ace4ab923e995320c08367131a5607dc3ca264fb5de9c3690a7f5d5e32ebe434"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-29.json",
+      "bytes": 1506,
+      "sha256": "1898d9b21ba7ee5b95278a21987054d775e9813c9dbe4fac6bd0d29aa0b52ae9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-3.json",
+      "bytes": 1503,
+      "sha256": "759677189eb5f8452fea108b577022bcfcff4b2f4e0af75eb89a3207f3765046"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-30.json",
+      "bytes": 1506,
+      "sha256": "47a47bc3b8c214e09a5f7ee60059c234af17afaeea70a999652ae08da38a926a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-31.json",
+      "bytes": 1506,
+      "sha256": "6e7fdab4aa604970eac69a2d15d8cd079982f5a3fe9089b0fbd4891b43afdeac"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-32.json",
+      "bytes": 1506,
+      "sha256": "e0237d63b9310621d956e5de10203a90420cabbe3e9ffcefdf823f285a9e5eb2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-33.json",
+      "bytes": 1506,
+      "sha256": "b173f86191ef044c24ef96a0f62a5e977edcc6963d0cecba3511c1fdedcba654"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-34.json",
+      "bytes": 1506,
+      "sha256": "d6bae3c05a3deb20571e58f5b1bc0e50daf7235c3bc878ef39115f8c3c298996"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-35.json",
+      "bytes": 1506,
+      "sha256": "86882fe6c407545151464ee6048e72b35c565f2b138e0bd13871b286ef2cd94c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-36.json",
+      "bytes": 1503,
+      "sha256": "86b65d320d4a5c0688d1bf242f2b3f8fda0ab46f64e8b73733f5c058cc4cc48c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-37.json",
+      "bytes": 1505,
+      "sha256": "ff9a0f408ea5adf7b630625f179e70edde99e699ea476b1761dc5a7a64908b9c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-38.json",
+      "bytes": 1506,
+      "sha256": "87d49f2c289a40f586f3a7f6924a9b1a82bc77e6de9bb9af3254bdded13bd703"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-39.json",
+      "bytes": 1506,
+      "sha256": "c1be6849f472dc9ab1d60b21831f4fc14fe572b4ab1c2d2156b98d033b08abd7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-4.json",
+      "bytes": 1505,
+      "sha256": "95c848e1d5f33e71acf6a00490673c5ddd8404aaed4fcde02046de2956ecc712"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-40.json",
+      "bytes": 1505,
+      "sha256": "8c6f6949bb414066d6652e9247d6ab7dc61a27fadb383f3e937ddddb4d42e66e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-41.json",
+      "bytes": 1504,
+      "sha256": "64f5583e9e5cd0a033df7dd35826b961f8e0b8aa2368e9ed429991c2225ba8a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-42.json",
+      "bytes": 1505,
+      "sha256": "d1b59ec7817fcebd9338d8eeef5af5f741aa16bad7cebada38d459cb931739b3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-43.json",
+      "bytes": 1506,
+      "sha256": "0a88bdc462106ce7d8418dc8d289b860f5cc57c4174b941f294c5035fe16d182"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-5.json",
+      "bytes": 1505,
+      "sha256": "6bfd99c66b745ef7fb115f5623b71643329d1ee52d3fc59d0e511beb004024f0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-6.json",
+      "bytes": 1504,
+      "sha256": "2f2ea8ea6f80e3eaf3ba18e3d8a338db248ea4f7be8638247712838682ab790e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-7.json",
+      "bytes": 1504,
+      "sha256": "6c84dd8a1a97a9052ccb7e6284a6fa7461e1fe0aa876fd20add2e8d7d592a89e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-8.json",
+      "bytes": 1505,
+      "sha256": "14779094ae80a21d42a7688f0389763e494c009863846322ed2dbc34e951899c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/2-retention-reused/retention-9.json",
+      "bytes": 1505,
+      "sha256": "9796f1e5b6927cf25ea4688d7e816810b2d827d41fac0d68ebd4c4231271336b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "275bb7e4a4c1d4c20d6a594cc2c262b8b56ccd47354a4f1a7eb3d7d771b5398b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/report.json",
+      "bytes": 84337,
+      "sha256": "617c6056ccd1bb004ed2ea0c4c3ead87796a23ebf30f37b52aaf26e9a19fab3a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-0.json",
+      "bytes": 1502,
+      "sha256": "b7f36c7eb8e2f19697e9bacb2732d85c25e65c78969cb47ea7b05f345414d505"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-1.json",
+      "bytes": 1504,
+      "sha256": "8cdbdf2dc7e4a8dac7ad57291a79ddc75997d0d1391ba83c4ae153dea7b33296"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-10.json",
+      "bytes": 1506,
+      "sha256": "71d213768b80232566b3c371eff07f3afc8d525c34ece2af25b2c678476364fd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-11.json",
+      "bytes": 1507,
+      "sha256": "96985d7e8a13b333431782781e974c41c7eaad2270aff09ff81e2d1c84ab5ee5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-12.json",
+      "bytes": 1508,
+      "sha256": "11b72f169fbd796f46e130957ac185d337342207dd6cdedbdfc00bdd5120eedf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-13.json",
+      "bytes": 1508,
+      "sha256": "d257b4d170586aa6c9bfbb390541c878c24c9921a538ffff29958839dc61c41b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-14.json",
+      "bytes": 1507,
+      "sha256": "b876c609d504d0997d1044c235f2d61ecfe36bd69d584f2ffeb881eaadb16f5a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-15.json",
+      "bytes": 1508,
+      "sha256": "8183bafc1e9116e2908cac344c9aa277c3179c0116fb1fc130bd72192e020fbd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-16.json",
+      "bytes": 1508,
+      "sha256": "793696158eb7bd29a9d8c17efff6b406ba9074bb0a4be557262dc8e2e077c827"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-17.json",
+      "bytes": 1508,
+      "sha256": "aa4107a2247fe815642fff4f959ca95f46fbc32f11effc2462c7638cd45f6688"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-18.json",
+      "bytes": 1508,
+      "sha256": "a1887f6274adb6badd860d11603c692dedb833382e629e53d341e96c0faaff58"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-19.json",
+      "bytes": 1505,
+      "sha256": "d2abc72b520633d72c22214f956365c0efa6013498aed760a910f91211604d2b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-2.json",
+      "bytes": 1505,
+      "sha256": "936f752ddcfb955fc690a118906961c9f8a0f8a323d49c3c237c2fe38f12e5df"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-20.json",
+      "bytes": 1508,
+      "sha256": "1fcfac10cc3b9f489a6b4a8df9b79d2adcd7b9842b1ae60cd8236bf1aea34214"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-21.json",
+      "bytes": 1507,
+      "sha256": "0d7ea66da89dc147c4537649595a6d06a83e5f8f3a6617a72c910815cbadf73f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-22.json",
+      "bytes": 1507,
+      "sha256": "1cc1cc299c57a078e7c5598aad487395540ff36dbd883ede0d2fb938f42981ae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-23.json",
+      "bytes": 1508,
+      "sha256": "07a295a591b5f52b988c8042d7b6849fa2888dd57665ccc552ec97028639aca8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-24.json",
+      "bytes": 1508,
+      "sha256": "515de9fafb5dabf6cceeca0350b0f6f1c0316c5485bfe056474fa48f5eabc186"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-25.json",
+      "bytes": 1508,
+      "sha256": "65a97af98f0043d9381cceb516bd728e6542b2f055eea6d3308ed6686d0b1f92"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-26.json",
+      "bytes": 1507,
+      "sha256": "d24fa3282a2030dd76a0a0594daf003aae5a8b2363769d23f1072168469d9c7f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-27.json",
+      "bytes": 1508,
+      "sha256": "385dade6b05c95642558b0c69942ea176bc4f303e85b2c60534e48c09209bce5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-28.json",
+      "bytes": 1506,
+      "sha256": "9f9df55c75a792aa20dad01fdc6279dba351c8a272553818a1861d7b7dc73a3c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-29.json",
+      "bytes": 1507,
+      "sha256": "754b3a83a0f7283c015c6ed05e36141524287b5e934a3271ed9623aed01e3e07"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-3.json",
+      "bytes": 1505,
+      "sha256": "b7b96c7c1c5429cc7c37a2d7f1787b9a03d41bc0bff9f3c50d65dfe8ce93a68c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-30.json",
+      "bytes": 1508,
+      "sha256": "b737775e86cce5d7b7c33b68c79b4ba9f20afed9491763815a80d7eed3489113"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-31.json",
+      "bytes": 1507,
+      "sha256": "68c0f20b15abf8164f90fbd07cf01b2df8f1b0f9284b11014c37d70d9155022b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-32.json",
+      "bytes": 1508,
+      "sha256": "15c3e710e580931620aa1e51d62412461f7423b8e05e0192bc0a91eedd660747"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-33.json",
+      "bytes": 1508,
+      "sha256": "4fd0d530e470a91eaf59f73510f57f70cd21219044378371c0404cd0d6fd004c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-34.json",
+      "bytes": 1508,
+      "sha256": "baae5e343e43f026ac8464a515a87dff160536f99c4bee5529a0aca888f1cd2a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-35.json",
+      "bytes": 1508,
+      "sha256": "614380459e4583baf2c1d3eb34340083d53555b89f9db14b48bd47ceaca2fff1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-36.json",
+      "bytes": 1507,
+      "sha256": "3a1edabd30b9c5667a1fb10548a53f9c2a17225f9548d92542e4aa7651887875"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-37.json",
+      "bytes": 1507,
+      "sha256": "4297876170d6bf0ac4e3ba2a6bd3ad54cd0e5112a7564334894c6c678e96e4f7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-38.json",
+      "bytes": 1508,
+      "sha256": "56d2d089e32846504b76402357f5bf25be04d8b55684685a17ad826b29223c45"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-39.json",
+      "bytes": 1508,
+      "sha256": "f9691265acc0896d0fa9913e954663530aa2b5e022a2efbb55735ef6f62738fa"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-4.json",
+      "bytes": 1505,
+      "sha256": "4c41a34ac959b9dd1397e1b61195365fd24748f0e4030c0ec5e275a5be6dbdf9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-40.json",
+      "bytes": 1508,
+      "sha256": "5d013056720871f6a70210b97f0af92f6de6e2d7bb457778204a8be00371cb4f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-41.json",
+      "bytes": 1507,
+      "sha256": "d2975325762362193125d84128a128c6fb445414fde9af0443ed28d932f739b9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-42.json",
+      "bytes": 1508,
+      "sha256": "a15130afd4c301831c97d5093a394d6e1eacb2a40ed788db825d25b428f69ccf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-43.json",
+      "bytes": 1508,
+      "sha256": "871e3a319d7406dbd95dbdf3fd64ee13fce6ee4dfc2f71184dd14171c57f56b4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-5.json",
+      "bytes": 1506,
+      "sha256": "a01ffbd79f2d498a40b7fe7f8ac682a7176ce0f4c7a11a0e2d6ceb68fe16d9a8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-6.json",
+      "bytes": 1506,
+      "sha256": "05cc8dcfd798f1986b04493c2addbffb813dc4e67d4b58c9784ad78b47fe82c1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-7.json",
+      "bytes": 1505,
+      "sha256": "682ae5c6e426744ceb35752b50bfbc91cd2be553802eb08cadf8372d357824ba"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-8.json",
+      "bytes": 1506,
+      "sha256": "e7b6746cd3362f0bf4f639b1fe0a75d9e2a9a8d96929a027976822d475aa6b5e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-fresh/retention-9.json",
+      "bytes": 1502,
+      "sha256": "67a80f4aa29c8c76a85cd625f5f3bd3070614f2bf9af406da150572d774034ae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "10b98c2e3512e7d1e7e590e71cbe52f2da9ed8bff290c68d3309c1cbf712569c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/report.json",
+      "bytes": 84249,
+      "sha256": "a7056671e513ba9e92e8abac50121114407c2e6a03671fa930f75ef57826049b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-0.json",
+      "bytes": 1503,
+      "sha256": "473758353ab54310766a6541655de4ea9b43c7b475f0b486542a82a8a5f3a4f1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-1.json",
+      "bytes": 1502,
+      "sha256": "0cf57a91ad2c421eeadb03ff22a93603b19a26ccd9549ab74de311140fa89f16"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-10.json",
+      "bytes": 1504,
+      "sha256": "0dd4a902f605988a4ad8744ef39d339d7200356ce9d4d21c6fccc5057b0680d3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-11.json",
+      "bytes": 1506,
+      "sha256": "a3020b955234849529facfff544a555cf38f32e99edd9613410b22860871cb6e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-12.json",
+      "bytes": 1505,
+      "sha256": "dfe242c4884b610088502b2c8b81ff09f4a149fc4a5dc36914b9dbfb37d9d93d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-13.json",
+      "bytes": 1506,
+      "sha256": "c077578a5ec64df146ae57c985bd1b87017f8fcffb33f7fb8b7e80b8ae24342a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-14.json",
+      "bytes": 1505,
+      "sha256": "3f749a8043eaee397042df6a603719760099f6e9be6c026ad2a0c1b32d60e71c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-15.json",
+      "bytes": 1504,
+      "sha256": "18f826c86b6a07f59405d028407ffc5d0e25007f5e14d6c2a63a4626c2cd3dcc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-16.json",
+      "bytes": 1506,
+      "sha256": "823a2dede472bf4df0b98bdd2b41d1f9cd069ad731e010cac8aaf44198c3ea4c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-17.json",
+      "bytes": 1506,
+      "sha256": "c95b5d86dcb3cd2677a49c069890f18b9b78791f2b770c9c57f1594e0bfb2ff7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-18.json",
+      "bytes": 1504,
+      "sha256": "1efae61c66d6012660d269383345c28ff2db7b4c49d92da6eaa4c02607fa99cf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-19.json",
+      "bytes": 1506,
+      "sha256": "c1d22da81156699c8cb18d282c606870fac637445f490b6838da9210c8af84dd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-2.json",
+      "bytes": 1504,
+      "sha256": "2eab0373cf15da7dc12d24e76fc9aed4055e81986fc0b1a561f8e8d9200501ba"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-20.json",
+      "bytes": 1505,
+      "sha256": "90ef55907d6c615da0329b5e7cb1e4ce6857eb5f10b735a144bb509e1900ebaa"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-21.json",
+      "bytes": 1506,
+      "sha256": "e2b76d8bd6f559c92d06b3af658abfd57c6146ef10c0d3f6326c300d6a42694b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-22.json",
+      "bytes": 1503,
+      "sha256": "dc1d8e11a58ae5ae09165977a6615399205ff260b0f07ef1fd4f00dde78754a4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-23.json",
+      "bytes": 1506,
+      "sha256": "4cfef6a94ed6d0e2589517263d747dbbb988ea4c69b4bab3427b3a1af092a1f9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-24.json",
+      "bytes": 1505,
+      "sha256": "686ce2adbe31587f9043e5f5b1386fee77f97e647986d4296444e3797f75a7bb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-25.json",
+      "bytes": 1505,
+      "sha256": "fe5586ca4cdb5e68c97c208134d0be5b5a47ba003024e3ed420ee8ce14271280"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-26.json",
+      "bytes": 1506,
+      "sha256": "740f0968a26a605ee72c0b9540d3992d687851b6d973a4f3df3b8bf6ee474960"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-27.json",
+      "bytes": 1504,
+      "sha256": "eb23f34fb3acbe67c735eb9452e65eb976d02099ce40bc6a7d574bcaf1cb1fdf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-28.json",
+      "bytes": 1506,
+      "sha256": "00e565b2710cec9b774c82410d73003040507d9d97c3242d62725dd883ef8515"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-29.json",
+      "bytes": 1506,
+      "sha256": "ef5796ffd3c1975eb3d139f4e1c7da39603f1f09684c52ba64e5a7290eb18cf1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-3.json",
+      "bytes": 1504,
+      "sha256": "4ec7c92bb9764cd67dd69b678b2deab0b60538562fe49d18cd237398f57840cf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-30.json",
+      "bytes": 1506,
+      "sha256": "da850f00b57c44831fea4ab58094936913676ea5c5d0f2464e16cce9b9d7627c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-31.json",
+      "bytes": 1506,
+      "sha256": "8f65366f7af980561a2f7aa2e2c637095124d888e63ecc996c1dfab3ab27beb5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-32.json",
+      "bytes": 1506,
+      "sha256": "00a82299c01d280ca02449de07c467aabc32a663b5f0745facdcbe0e3d273b1f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-33.json",
+      "bytes": 1505,
+      "sha256": "ecc63315df8c1fa925a161260fcc86f4def854373a9454d8f5831d6dde7eda5c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-34.json",
+      "bytes": 1505,
+      "sha256": "13065156bbc5d08e5dd944b5535a779dd4617d1fe3233e2b8c6c0b07f3eabdfb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-35.json",
+      "bytes": 1505,
+      "sha256": "c8f667c81bd8ec47a9ed9bc702defa3e613abf5eaadc3023e985fa15d0ae11da"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-36.json",
+      "bytes": 1505,
+      "sha256": "1525606d9f9ad70a2121e39e7598151395092c408797c52a5e9f7a962f7bd85b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-37.json",
+      "bytes": 1503,
+      "sha256": "af6d6e89cfa8d3f38605e65691baf2efc00a9bed9c690aac4a7fd914d7478719"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-38.json",
+      "bytes": 1506,
+      "sha256": "3fe14e0fb6b57fbdb2a0598dc4c2b9cab1cda7ad907735103d4681ff9998deed"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-39.json",
+      "bytes": 1504,
+      "sha256": "c295f171739369d029ae95b9ade0b1e2278eb27f1611ee55cf15b56e92067627"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-4.json",
+      "bytes": 1504,
+      "sha256": "d62c2f0e267aa6a40faf1e6bbf4677bac666287d71687a939ff78d1c1197dfc1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-40.json",
+      "bytes": 1505,
+      "sha256": "ff70051c463a50f3dae709c446061fac01cf7d237fb519123aa3c80ec64b4e50"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-41.json",
+      "bytes": 1506,
+      "sha256": "edf094aefc2ad88e98462d664c601a24541d60e69e8dd0a14d21d8775d12722a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-42.json",
+      "bytes": 1503,
+      "sha256": "6bf8b7fb57d35a2c84c9d871b8345d52fccdec9c8691692be20cc581821d81c8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-43.json",
+      "bytes": 1503,
+      "sha256": "c418a60a973ba5b8e3d7ba246313f1483ca09c8791c872fc7cd71f0cf4708052"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-5.json",
+      "bytes": 1505,
+      "sha256": "c2abb59b88843869773e97824f0579bd2e0794df36480ec1ce0000fca85c0443"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-6.json",
+      "bytes": 1505,
+      "sha256": "8486c9dce85c1774c7c9d573a69f0c0810e782e0176ff5d7dc94067b60adee9c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-7.json",
+      "bytes": 1504,
+      "sha256": "caf3064173114697e8bb1a5c0b71fd103b8f9501689f25ce398c2a3aa92a0cd0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-8.json",
+      "bytes": 1505,
+      "sha256": "dcaf5e2700053f594056f44b289527569ffd4f69b5b24f5250443466bbc6769f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/3-retention-reused/retention-9.json",
+      "bytes": 1505,
+      "sha256": "6a2ade85ad4b25b3eabdf262872dfcc204cb85e748d2a9f4e6ee8e75c200a242"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/campaign.json",
+      "bytes": 267,
+      "sha256": "3f0cca003e45083702ebfcf4b04249cda1f4c370523243011b80385af2f8492c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/retention-analysis.json",
+      "bytes": 5073,
+      "sha256": "90386a43a8b6d150e0b76283094ca3c6d328141b335d0b45ebf15649d10a0bc3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/source-manifest.json",
+      "bytes": 11090,
+      "sha256": "dee1cff89ea4de199ad43749713c30e8277b936d8121e96e76c60f1a2d2a7f46"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/final/summary.json",
+      "bytes": 570954,
+      "sha256": "eb11a6de26ab11cb1f0c0faf6d9e5ce8f95a00ad272eaed6f7366c4b22865434"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh.log",
+      "bytes": 314,
+      "sha256": "503f0e5c03cb0528c731bd3b749ac3e404396e5d76620bfa266cd0928b680392"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/report.json",
+      "bytes": 15513,
+      "sha256": "81dc3cf93b9da8281ebe367cb6342d5b027d2b8f862500eacea1d1a2e0895d89"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-0.json",
+      "bytes": 1504,
+      "sha256": "fc6e6eeaef2be78238a1ac1c577beb258889d10884705802a401566450a7d5dc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-1.json",
+      "bytes": 1505,
+      "sha256": "3457ab07a18d9250a0c05eae81d2ccad8ba001e3462e85a2bd280685476a3fa8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-2.json",
+      "bytes": 1504,
+      "sha256": "4e3181442744f7c7b6842f3e6a5a755483f814ddb1a3abdc13b57a82e4486ee7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-3.json",
+      "bytes": 1504,
+      "sha256": "152b97cd610247fa20a9f8c31e2eef565495f581534ad7bc07bb87b66921393e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-4.json",
+      "bytes": 1504,
+      "sha256": "f9018cd0225bc04b4fdff130c3cdf9d257e4d24b0f0c00802f176e2c5f1af772"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-5.json",
+      "bytes": 1505,
+      "sha256": "d79986fccf4abbc2f546510d4826d860aa0cc7527fa15d00afeb79d7ca569ea7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-6.json",
+      "bytes": 1504,
+      "sha256": "889c0509a1418a2b2b1c1d9a0ed4e45d41b103f0456a6c813e748152bd95c2e8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-fresh/retention-7.json",
+      "bytes": 1505,
+      "sha256": "1910ffeafa29ab037566d8c3cd3ed8d0081b3181ef8933e12aacd63be25f1907"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused.log",
+      "bytes": 314,
+      "sha256": "0dd7507096f12f1fee4bdedc4aface83d0647c4acd40c9d4b013309d7a4c4a4c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/report.json",
+      "bytes": 15515,
+      "sha256": "7063a244ba52a53ba5363a5482e576479a6337e679c96c67cc2ea4393bf88854"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-0.json",
+      "bytes": 1503,
+      "sha256": "1e72acb66a0916ac7ae8c2e70f90ac94be60dd20b68988c7349c24730a91f89f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-1.json",
+      "bytes": 1504,
+      "sha256": "3ecbd429e7202a743f4f7aa632466e61f4535fbffca8d1839c6f0226072eb07f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-2.json",
+      "bytes": 1504,
+      "sha256": "9d47de4fbaff940780f6373fda6ea447e7f2114c93609421815873727e2b2e03"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-3.json",
+      "bytes": 1505,
+      "sha256": "184ac7bb6f72dd4e19d881e74ecdec09f40843a0d25fa5f261c2def313613da2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-4.json",
+      "bytes": 1505,
+      "sha256": "de922f267e99c71466520ab2b745356474f64d52cc0ee4617219626598c4fcab"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-5.json",
+      "bytes": 1505,
+      "sha256": "6ad195cdc0a5c2f4f155951731bdc927a86a42a26901a05017f5ce8f5454c261"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-6.json",
+      "bytes": 1504,
+      "sha256": "5c0b98c80faa83cf0de6cf84ea17dd04f2e35b19c3498342fd0fa215c8b5f119"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/1-retention-reused/retention-7.json",
+      "bytes": 1505,
+      "sha256": "d4bdecd6479120fb08812c3d7ea8c6403a53effc43f040365164d357c5598c5b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/campaign.json",
+      "bytes": 267,
+      "sha256": "24a98ae2ceebb9ac8ec0b48f81f33b8133b51be32c49b427788d517c487f1994"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/source-manifest.json",
+      "bytes": 11090,
+      "sha256": "b2db5a2cf4e730285fbef0f1148da8adfc724551723af7ffa681e21aaa91312a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/pilot/summary.json",
+      "bytes": 35127,
+      "sha256": "0618d3627fa1078be9c88b402752fc286de60e468a4f03b14f07a05b381d18c9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-browser-recovery.log",
+      "bytes": 180,
+      "sha256": "fc78ef3f65caaa70ba6989421823ef2e5c568e58564a724fac6e20b65cc7eb5e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-browser-recovery/report.json",
+      "bytes": 649,
+      "sha256": "5541a78b53f960e6cc72d2a8893bc8b6e5321d0d245495ab43ec2b979b8881dc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-control-close/report.json",
+      "bytes": 970,
+      "sha256": "d6faacf525e9e465a6c80bdfe1cec51e1b5698507fb482b3ea0319b469ef4d83"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-environment-boundary-close/report.json",
+      "bytes": 1010,
+      "sha256": "f67ee1b88ad1934bc7b9da2c9e47ae75ea22f382a250da6e85e21d4ba13f5c25"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-initialization-recovery.log",
+      "bytes": 447,
+      "sha256": "3b007ceba131e4e52b47edd26dd01ace716728bffedcc9f98f0d3cf45d31407e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-child-close/report.json",
+      "bytes": 982,
+      "sha256": "9818e8eeeeb6d444b31569909f53971d7bb7e5b2c7d67557700031688b70dba2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-parent-close/report.json",
+      "bytes": 985,
+      "sha256": "f255b5404b2e431fd46d7ff0a2615ae12a98f48e61aaaf79219865b7e4caa043"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-popup-success/report.json",
+      "bytes": 970,
+      "sha256": "848e7e1592ec03a2248869fbeff323aeac8a724328865f4db7d797b61a412074"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-renderer-recovery.log",
+      "bytes": 182,
+      "sha256": "30d1581de0067a1457af857a5232d9d948989afee06d67928a4878eff81b4d74"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-renderer-recovery/report.json",
+      "bytes": 419,
+      "sha256": "43b4102d3b0a3275200bd2b879b4a0d849e679d0a3e57ea92d19fd5f46a8d040"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "0a7ed69cf18d3da1c0f41437eb213068a7510cfd174f0c5dff477ad2e57ccc25"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/report.json",
+      "bytes": 82976,
+      "sha256": "d6afea3532aecffaa07934e6f2a1b3e7725206ec1853a8d34b550c0608637191"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-0.json",
+      "bytes": 1508,
+      "sha256": "f6cff6e04d5191fc903b8544ba4f339749e0765dc145897a6bb6fcd4b7a12a6f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-1.json",
+      "bytes": 1505,
+      "sha256": "622e91a155079361219cdde4c5a20a3fa1833e3a0fae88b3528726c6b75293be"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-10.json",
+      "bytes": 1510,
+      "sha256": "879217da70b1dcc066fcce42a3c47be5fa48fb21745771998b6424ecaedde9b1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-11.json",
+      "bytes": 1511,
+      "sha256": "7b5d2df7c0d2e21e21b9ce9dd21fd7e8fb778929a877ffc1590d313acaa05cfe"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-12.json",
+      "bytes": 1510,
+      "sha256": "aaac2cc8b61f5127d4eeea4e3dea46e0f589270be0b17a42b919600b95bdd697"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-13.json",
+      "bytes": 1509,
+      "sha256": "e75530be22e400c8391e944bb68ed460e52dd5fa1d3e0b09f52b87856c89296c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-14.json",
+      "bytes": 1510,
+      "sha256": "7542b38359db4a752910e12734706dae774c7bf7b5dcfeee39b2b8dbe83deea7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-15.json",
+      "bytes": 1510,
+      "sha256": "fd8cdb8f1bb7997e5266caef5d7e734d3f396eda638a368712cb86ffde91388e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-16.json",
+      "bytes": 1511,
+      "sha256": "f65e576ed5c3e37d6fa290e4ab6de4770d651fe5f4def6862262ef579ba4b920"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-17.json",
+      "bytes": 1511,
+      "sha256": "afc16b8ef6877d153bbcd971419d59c8a63417e819e7aed93ee6413b8c7a9458"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-18.json",
+      "bytes": 1511,
+      "sha256": "615899646b4a69b7407d446405547189e241966d6d48ad8693987a415c7e59d2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-19.json",
+      "bytes": 1510,
+      "sha256": "b065a6a3167b391fc80f0d9503956594e6d87a0bf9e750db05a78fe026388a59"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-2.json",
+      "bytes": 1508,
+      "sha256": "8773eb0278b6b126d49ca74741b6ce1da53a2328ad3fcdeecd20f078ee520379"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-20.json",
+      "bytes": 1510,
+      "sha256": "6a8af5486f7f3a671c07313bfb293baa904e5b72ad90cd4c73a348413f1d739a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-21.json",
+      "bytes": 1511,
+      "sha256": "dc8058abcd62244a46215173bfdafc713f47c3d959a4773b0021105bfb0f6a7c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-22.json",
+      "bytes": 1510,
+      "sha256": "0b73d842d9ecc702f9e4c6e246b508516bd31c01aceac9ea09f770d9af3b9a77"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-23.json",
+      "bytes": 1511,
+      "sha256": "5565eabf5d2ee9dde8dce95f950abe49e5fe1785d2ec7a3d0d8034c469f55a67"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-24.json",
+      "bytes": 1511,
+      "sha256": "c3196bda441d8ac10cb9fb99e4e613992e65794c09343377cb84ed9424b42ed8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-25.json",
+      "bytes": 1509,
+      "sha256": "c3d38307e5d998c14434384586f839a0671bc62a452e220df95ada6e57168f80"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-26.json",
+      "bytes": 1510,
+      "sha256": "2c567ec5d29ff8c28cfbc4c4ce41683377245a409bfbba3e1254d246e67c5be7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-27.json",
+      "bytes": 1509,
+      "sha256": "c4e27c4e9cfcf9d737cfba874f3dc4a61c7949459a863414f3fa93f81feec42d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-28.json",
+      "bytes": 1509,
+      "sha256": "e1925328588f04d81d1ddf461da932a1f4fa66fb84bf4322e2b8f3ef8e412ed6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-29.json",
+      "bytes": 1511,
+      "sha256": "912aed8a8e6dca7bcc2660bcf2da6d790d36efefebed521f0b36c434e9db530a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-3.json",
+      "bytes": 1508,
+      "sha256": "9e714c77b7bd75cb91553c0b16600e7f84f5b1453a477532202330d02f1cbbe5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-30.json",
+      "bytes": 1511,
+      "sha256": "2252b7936210dddd9eef818adb4ec500b6735549c6480a11eba222a08c49e23a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-31.json",
+      "bytes": 1510,
+      "sha256": "daa0bd2b331503853e821da615de6e5dc618362c06063da4a5ccc9b38b227a93"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-32.json",
+      "bytes": 1510,
+      "sha256": "cd2ae517fa43018b908a6f5abc885cee084c344ad308efc224f923a9964a4e49"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-33.json",
+      "bytes": 1511,
+      "sha256": "53fe2625cbc799f70d39f853e8468fe204a7f891fe3e5942886ce38b89b6e872"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-34.json",
+      "bytes": 1508,
+      "sha256": "8d100687494b28f1b3325a88b3635618ff5b9be80b8f5cd02fa1bcde4af9ee1a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-35.json",
+      "bytes": 1510,
+      "sha256": "b5e04b374860e9316cfd06c71bd78ab7983eff705db302308b95ce03cf98d994"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-36.json",
+      "bytes": 1510,
+      "sha256": "9edf1dda0f9081dbd415bf397123df04d44ab9f8ec252aff87c22d0da0ab896a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-37.json",
+      "bytes": 1511,
+      "sha256": "2c988355c31ed5f698881e9d325c378f893bdafd813a7e31535df74110feefb1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-38.json",
+      "bytes": 1510,
+      "sha256": "0e48e217c967ec52511bb367fa596dccefa949cbedbe930ec16bdd168ad6e2be"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-39.json",
+      "bytes": 1511,
+      "sha256": "381b4e550d1d52ea0a4ec3f474df5beb268798dc46008e7c80498d4829e17c69"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-4.json",
+      "bytes": 1509,
+      "sha256": "742753987774d9314ea04c21fc52e345c5bae26d8e99f135802c79e22ebf841c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-40.json",
+      "bytes": 1510,
+      "sha256": "eb5f79a125c9e5b4842f01e72a8ecd7d76130e57d7c7bccbfc8c81248e5d2882"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-41.json",
+      "bytes": 1511,
+      "sha256": "106bca58870826f90dc1d6bbb144e70de14d99b3189698c879f121072a97d42e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-42.json",
+      "bytes": 1511,
+      "sha256": "08865e5edf7ea6f9ed3ed46a549502ae2eb03b8628dab1408b9c47220e77b169"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-43.json",
+      "bytes": 1511,
+      "sha256": "ec67a34fd85f7375763109845f54c322e6e16712177fc2110631934cbab0f2a2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-5.json",
+      "bytes": 1509,
+      "sha256": "2d5fb973acc546a5b91f2a486fb94e45033b97489c934dc808a0382800c98d79"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-6.json",
+      "bytes": 1508,
+      "sha256": "18051d102c448b9341cc66ea9816f0d6f15c6f515d8abac0db43bab94dc253c3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-7.json",
+      "bytes": 1508,
+      "sha256": "feaddaa08424efb33bf663c0ee8e258770a653e38778b177020bd9b3e8c65979"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-8.json",
+      "bytes": 1509,
+      "sha256": "fd563665b7ec6122c5be88da403358e0b5b20158c152843ad1e4eeae0b6ec116"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-fresh/retention-9.json",
+      "bytes": 1508,
+      "sha256": "ff11f26777f5c73ca9211302fc4798f4630666e2efad267142e3346371321a03"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "0345d3f59fe7d0e268fe97d471fd02a00e097a5ccf9fef79621b8abad2b5b4ab"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/report.json",
+      "bytes": 82885,
+      "sha256": "d8068bfdad1a4b9cdbcf3a9e31bf7b73c5981767cef7dfccce122becb4255dec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-0.json",
+      "bytes": 1507,
+      "sha256": "44a2fe4f9f6e61598df460d8a2a189d54be94fadc931567897bfc327864ec291"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-1.json",
+      "bytes": 1505,
+      "sha256": "429a270b9b6ecf30c72d18ff47e56c64db9daf4573fa768f6fbf66068e59f4bf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-10.json",
+      "bytes": 1509,
+      "sha256": "387fb2c13aac32eec1ed34051707769177923707af7560c336798de7200db0c8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-11.json",
+      "bytes": 1509,
+      "sha256": "69d0f02927ba7694e36a290ee07895188de773ff2fda73f92e5eba86255f13b1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-12.json",
+      "bytes": 1509,
+      "sha256": "e6f7996c845ee35e8a009c1e8d7660bb9f25eecff88ad6278c0205ec9eacf00c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-13.json",
+      "bytes": 1508,
+      "sha256": "d2c10c6f66084f156bdb851e8654b2d57d239ab89f245934c66f20337491c9bd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-14.json",
+      "bytes": 1509,
+      "sha256": "5a415e094bb4d1b94cfc2da9218e975738a19e35d5acde2204ea4eda540cf2e3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-15.json",
+      "bytes": 1509,
+      "sha256": "e4b8cfcfb0e9ebaaf54f22f20e167ff3a4ca5ba95a0a851d4ab50483681cea2b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-16.json",
+      "bytes": 1509,
+      "sha256": "25184cb61a96234b4fa863b796b3ca72404589d3490dfb77c75352b4e8fcee90"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-17.json",
+      "bytes": 1509,
+      "sha256": "269330cc91dad81f2b161d682834384a4ac071a48c7a9ec6bae1f28a005dd564"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-18.json",
+      "bytes": 1508,
+      "sha256": "e337d74d171e0d0598cd36893aa1c95fc5ed19a3543046021f90c26d8adced40"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-19.json",
+      "bytes": 1507,
+      "sha256": "b8c9edd9aa08d1038d30df609a287e582aff8771d99ecfe5cfa1ae5b3f819b0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-2.json",
+      "bytes": 1506,
+      "sha256": "1449cfa659442901a4993bd8cd6314fbe7bbf35473d505eeaee1e6d197e2f9c6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-20.json",
+      "bytes": 1507,
+      "sha256": "67a7528e492a6b0698840c40c5cf2b60ce52e67955bc34ec24a3a679e59a2e4e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-21.json",
+      "bytes": 1505,
+      "sha256": "e2e47fb8332c8f7ea7234d4e7953308bb0af38b61ea49211c340c1c544bef8d0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-22.json",
+      "bytes": 1508,
+      "sha256": "f9ba386f25475978a1093ab4e1cbf3991fb6d84eddc199fafa3e287a09c5bd2c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-23.json",
+      "bytes": 1506,
+      "sha256": "d3079df19c838511f7f1a54693b0769271f56e8466cdc1dcb594fc66fc0fed0c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-24.json",
+      "bytes": 1509,
+      "sha256": "2b364e3bb7bedc40751bf37166ab7b351306fa3e66b39e7c51fd1ad49367c871"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-25.json",
+      "bytes": 1509,
+      "sha256": "39a8f50ac5c308c02e0c45fd63fdd1976e7e91044bc2f6dc2cbf6b2c7fdef5e1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-26.json",
+      "bytes": 1508,
+      "sha256": "29f7921677239ffe42e58c70983c5f2be8688b794db3990f5fa7cdea765e2e13"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-27.json",
+      "bytes": 1508,
+      "sha256": "baaaf2b5619ad22f71b97da6025c8bf2449b45285e24284c078c59709147f0e3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-28.json",
+      "bytes": 1508,
+      "sha256": "93f5449196cf086cae82e1533da8dfb7994ba7214855138b852bba72ed1b2525"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-29.json",
+      "bytes": 1508,
+      "sha256": "0f6742a17cae560356373714f8e563d92c8fc35ab08adb26ad52f091f955fb80"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-3.json",
+      "bytes": 1507,
+      "sha256": "8000025e847493ee84ca3757b5aef29b5db97b2bec0cdbc8315442616e54bfe4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-30.json",
+      "bytes": 1509,
+      "sha256": "c2604fe943acb2358fe42672522f6900bfbe4c4e3076dbbfaf11eaaaa2799b9d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-31.json",
+      "bytes": 1509,
+      "sha256": "a645e1f51eb53c537f769d8e8fb7834dabd18694d91ae931366aa78ac6fcc9b7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-32.json",
+      "bytes": 1508,
+      "sha256": "d3a9041a937fd69d71937107102003cb64bb575101474388c8cc422dfa32c296"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-33.json",
+      "bytes": 1508,
+      "sha256": "3149ae7d84e577574031d1bc9364ddbb5323b0c8c069680f08dc0c892700079f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-34.json",
+      "bytes": 1506,
+      "sha256": "716836636b42fd26c176882a45a8d3aa88307652804b7ecb7edce0bfe6063305"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-35.json",
+      "bytes": 1509,
+      "sha256": "7d4ed53f88abf54cf09b8204d8757d5d3ba43e33b835b8b2ed79a9890d0d2bc2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-36.json",
+      "bytes": 1508,
+      "sha256": "32321b3481afa7b967e69f365b355ad10a90dc9e3960608b0154faabfe061f3c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-37.json",
+      "bytes": 1509,
+      "sha256": "f3fabcd8a5dd3bd0cf5d0c272810cdcc4bfabe0f8f2d3ee26ad422cff450e048"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-38.json",
+      "bytes": 1507,
+      "sha256": "df4a4a9027a34187c4b8dce0e334dfc8d20817e46f23932201f1f5859bb04317"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-39.json",
+      "bytes": 1509,
+      "sha256": "c02378a2a5122eb230d9868e7bc50d066763bdd8d2249fed14c4e41923b67e49"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-4.json",
+      "bytes": 1507,
+      "sha256": "f26a12012049785970317ca485b7e3a4b31ee1ff65fc95eda2a3645f5bdfad8d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-40.json",
+      "bytes": 1508,
+      "sha256": "d46f8938ac2ccac08e84de2a3d7a1388905e492985053b74fd8565cf5caa69e2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-41.json",
+      "bytes": 1507,
+      "sha256": "2dd040d45e30925297a219016f1e75cba8626e26599f902595d5397137542fd1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-42.json",
+      "bytes": 1508,
+      "sha256": "470709075a0988c0d162dfca333528fc3cd240512b67951556a08835a5d689fc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-43.json",
+      "bytes": 1507,
+      "sha256": "fa4ac7dd9511d93c63db6ec92cab6862629bff07c11697de0be7ee42caa8b7e2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-5.json",
+      "bytes": 1506,
+      "sha256": "df6161c15dddb709ea99902089cb323d2c0d36be3ebbea3a84290e2fd468a688"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-6.json",
+      "bytes": 1505,
+      "sha256": "89204dffa295f328dbbd036f427dd3ae5565ae22b57e455d68e8793055e11766"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-7.json",
+      "bytes": 1507,
+      "sha256": "05d29644e917a495141b20eecda38cfa282ec3e83092d621ba5f10e7f1a61e07"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-8.json",
+      "bytes": 1507,
+      "sha256": "0377e15d2b0372a45ad67eade2277c3467430d07117d792b7f27b39c9cf2f636"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-retention-reused/retention-9.json",
+      "bytes": 1505,
+      "sha256": "78fa08a39e8de8645a3a69824b1c7418c2fae344a3ee7dab43077079d74dd113"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/1-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-browser-recovery.log",
+      "bytes": 180,
+      "sha256": "e2fb0e4cb651e15a9271edddfab46102d30d3a413bd1580663acfe81db0ed244"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-browser-recovery/report.json",
+      "bytes": 650,
+      "sha256": "f06ad7ea7d3f9c413746c44e9a15375ace283402f35c0ab21f9adfd9229425ac"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-control-close/report.json",
+      "bytes": 970,
+      "sha256": "96d7b1e2b6c2c2bb2bae0b4c4fe538bee0b771f0b50a3ea29e7b538ef5f7a176"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-environment-boundary-close/report.json",
+      "bytes": 1010,
+      "sha256": "91af9a6baaf1a6e6be6ac6ab9af054bab0d87343e057c8174945a903f1902d98"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-initialization-recovery.log",
+      "bytes": 447,
+      "sha256": "1a638fa648d1d8be94c020a1903e7683eb1c72d68a67fc81f1c4352881e27727"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-child-close/report.json",
+      "bytes": 982,
+      "sha256": "0e46d798307a90bb8789f22bebff6cab93b535351226aad3ac4d10542dd6a991"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-parent-close/report.json",
+      "bytes": 985,
+      "sha256": "199e19c8ab6dc23882c478d0fd6c2ef1fdef103e5bea509216aaaff31693d6db"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-popup-success/report.json",
+      "bytes": 970,
+      "sha256": "23a15d87088c94f1b509f9d7675938133b79d0184874fe4cc71dbc40debb73c9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-renderer-recovery.log",
+      "bytes": 182,
+      "sha256": "1ac53a66180a75ba7113082eac1f73ad9735e6a355e1f14fe04c3061f0bf135f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-renderer-recovery/report.json",
+      "bytes": 419,
+      "sha256": "1612bd9bb7ce6ccd916d4afb433dc1380faac90de25244ec9abf4415efe186ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "b6843857cd4a8ed00994c462355fbac9f2006eeb748140a6a3c4500809fbe532"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/report.json",
+      "bytes": 82969,
+      "sha256": "cbc959de75d66ed86e93d70aa2224ffdfbaab0f5a654c17c83b0ead23660040c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-0.json",
+      "bytes": 1507,
+      "sha256": "47ea9ef89e850f66910d47eda3456dd0a0b04b62f4f90282ec636ade81bccc50"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-1.json",
+      "bytes": 1508,
+      "sha256": "f45d72545ce5710fba39a04cc7f6b5cb158e5cdd38aada5ce176ea447e92d73c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-10.json",
+      "bytes": 1511,
+      "sha256": "3f3e50ffdac5b437c6044aea2985d5a1bb88f4cbd07cd92604495576073872ec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-11.json",
+      "bytes": 1509,
+      "sha256": "60fb3d8faa3de246274d46b73a309fa9233034bbc134387d54adf0a0a118304c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-12.json",
+      "bytes": 1510,
+      "sha256": "20a98800881915a1c3938428ba5d0c1b267f0f1850393d12771aad2e68e57d5c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-13.json",
+      "bytes": 1510,
+      "sha256": "f9191d9c8134a3ecae6aa315ec4a41b94de2cd27a797e511c1629861ec2b33e5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-14.json",
+      "bytes": 1509,
+      "sha256": "3f57cf7908586780b39e484bdb2972ad461079eba3c2301fe9e2fceb11479962"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-15.json",
+      "bytes": 1511,
+      "sha256": "7f2ab817b74fe0fb1d499df09f4450a266b2f5f4c53f836cded434b12119d4d9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-16.json",
+      "bytes": 1511,
+      "sha256": "f27297905d7854bffe84de20830bcf9b5704d39be30a992a2c4a5a221c067cad"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-17.json",
+      "bytes": 1511,
+      "sha256": "28b629345e0e7ab1505ece389d942f3a4703dff574041487c8de993edbabe431"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-18.json",
+      "bytes": 1510,
+      "sha256": "9167a619ba84fb1930da2435fd5fb011ae57275276cd2e5732b972d65e3aa30e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-19.json",
+      "bytes": 1511,
+      "sha256": "2d6bfca48bece67c5227173bd620b2395244c2805d9f85310c1d5b94925c81ef"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-2.json",
+      "bytes": 1507,
+      "sha256": "83d882b4426b5c94cc17ebcf38737738e29852dd80486a7acebeb83cae426f21"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-20.json",
+      "bytes": 1511,
+      "sha256": "b5c8f317b9943e5bbc38741b632b4e6409b5a32532d42045e8b57164c4e5ff38"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-21.json",
+      "bytes": 1511,
+      "sha256": "57e70a6513b1bbe8ba3a36829578149fcaa328b3d58291274105ff8bbf060255"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-22.json",
+      "bytes": 1511,
+      "sha256": "9e749445d0e9615d7d1df809ef1bd8ab7c7d79996be490ace89e33d2b73b3703"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-23.json",
+      "bytes": 1510,
+      "sha256": "1107d2d7cd22d2458c50b5979ac386f11d5990fd7fbd93d12d890ee6eeaf3edd"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-24.json",
+      "bytes": 1510,
+      "sha256": "619380f6431b7f05da7049540317edcaba12cf0645c586425266c7c170d1c3a2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-25.json",
+      "bytes": 1511,
+      "sha256": "017ae20874f8dd54800d03d1d41ed832f45bf0225ed81b2004acdfe21f0447c5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-26.json",
+      "bytes": 1511,
+      "sha256": "1229e031060828746585dc41c2856f78132b8277f9ab62a8dd326ecc81460ab6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-27.json",
+      "bytes": 1510,
+      "sha256": "09219c660c99e110578369c742ab95cca2c507d495abb11c0384bb1d84989718"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-28.json",
+      "bytes": 1509,
+      "sha256": "bf7464d684bf01468e51c231868fbe4f67e57a0ddeee51cbbbcee1b885703328"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-29.json",
+      "bytes": 1511,
+      "sha256": "e7dc068e3692e13aa90f7266d3ea8e88767873aeacfcecc67890c3d630b4c2a2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-3.json",
+      "bytes": 1507,
+      "sha256": "ae2752cb07b47e7e423ac5b4fcb2c62a94313c48196276bff5273c9c84b4e812"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-30.json",
+      "bytes": 1511,
+      "sha256": "14fbca238e1522a6b5df3cc16f8699404a90d31a66d3182abd1a8319410fc2a8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-31.json",
+      "bytes": 1509,
+      "sha256": "b0f37b026b7b8a657596fe183ad142586c2c3e6d2c5aa7b952a23f784d4fe556"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-32.json",
+      "bytes": 1506,
+      "sha256": "5690d834a20030f37c4b38e2d8b715200ef76d388db4b0e6f1e0dadc12cfbfd2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-33.json",
+      "bytes": 1510,
+      "sha256": "a5e1792d273b57e96c34d4d0963e8375f20a3ddcc525d90b1eb42f5f1e263183"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-34.json",
+      "bytes": 1511,
+      "sha256": "5c0aa6fda553a5affbcbbf888faaacd6ba409a0fa5ed9dd72f7ddefb0d08bae9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-35.json",
+      "bytes": 1511,
+      "sha256": "9b7d60b3df4e55dd1a9d33d48ee409076be3cdeb9b4e22391afc1fe6c393b3de"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-36.json",
+      "bytes": 1509,
+      "sha256": "3422e8dd83007bf71b005444e727251a807b94df6139d27bb019e98f2a83c715"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-37.json",
+      "bytes": 1511,
+      "sha256": "ae929fd6c8d978c18539c16833e317dd29807c7db77fcf77f969be96ff08d505"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-38.json",
+      "bytes": 1511,
+      "sha256": "89cd3eefc35f55d43353d755f612e0808b79a09a97c7f8085888e93f4105d958"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-39.json",
+      "bytes": 1510,
+      "sha256": "fdce365ba2f38b7746c7aca281f36c2aeb3afbf5c8544b50e49b1e4881f89ac1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-4.json",
+      "bytes": 1508,
+      "sha256": "f35a537dc94a3c8eb5855c4eb6326a75eaf19ca370a73e4e29db610961ab3091"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-40.json",
+      "bytes": 1511,
+      "sha256": "1ef06c6e58b4f4f8e861cb93b36033e8348c4ac326cddc7c8a265ae7346723a9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-41.json",
+      "bytes": 1510,
+      "sha256": "3d7887bcd7e204b89936267d46702f0fd4bcdd8dc92e4516e22b3877fef75dc3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-42.json",
+      "bytes": 1509,
+      "sha256": "766ca2f33e895dce949c7a1fb6fbcc836e3f4436f6e90830df5573d1301df160"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-43.json",
+      "bytes": 1511,
+      "sha256": "d50cb11d7b51daf3bce758d196990b376472197234e9a51c84994e115a29011b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-5.json",
+      "bytes": 1506,
+      "sha256": "c83c9342bd3dc6dd4532d8c5494aecf24ed78a4f2e0f0cde1f084a9b3916fe0f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-6.json",
+      "bytes": 1507,
+      "sha256": "c2b32dd3886805d1cd6daab88d77c148e98eb25c94290b6fb3d68ece8d6fe04e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-7.json",
+      "bytes": 1507,
+      "sha256": "d53cd4bf38612a839e4c3e133065a833e20053cad8fa3dd6a7d562b9e9ed1f4d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-8.json",
+      "bytes": 1508,
+      "sha256": "ee7bfabccf1f730f091c9481cd3b4a611f404b376b91f77690147653199c1310"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-fresh/retention-9.json",
+      "bytes": 1509,
+      "sha256": "f0fe83ee361463b2c62085504e98aa98b8fc907e21b048d781a76f890441d733"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused.log",
+      "bytes": 1753,
+      "sha256": "cf7665fcdf0bc274ae461c3068a39a30ce85104bbe6f62c33380e62c7adaa9a4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/report.json",
+      "bytes": 82900,
+      "sha256": "f335d93a2e1a6ea249c99d1c7ed7dc9ea932e8a7488060598603bb3bc8d17601"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-0.json",
+      "bytes": 1506,
+      "sha256": "719df93ba85e7d86fa8321fdd28313b4182869e274f2016afd4fcba54680ce71"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-1.json",
+      "bytes": 1507,
+      "sha256": "8e2d7e6d1843857315af55309e5ce1c7a8348798da22aa0088ab38b5408d7df0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-10.json",
+      "bytes": 1509,
+      "sha256": "717f720e7067c5e5e9c6b167fe98f3b4ad78d569c11ac2a75de6e0876aaba479"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-11.json",
+      "bytes": 1509,
+      "sha256": "4bc720cdd1779af3ab158a3c8354df39712e889e69547c822366b1a5d76ab4d9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-12.json",
+      "bytes": 1507,
+      "sha256": "3a6c59bdb919c0e6d7b441dae45acb8eae05b61e776ddffc885a2bc9f9093c07"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-13.json",
+      "bytes": 1507,
+      "sha256": "f35b9b790c338ade94593f5aac30ee5688647b4dbd0f0f53b482b30d11851a6c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-14.json",
+      "bytes": 1508,
+      "sha256": "d128519c20a0da67abfa3eb0ca831029d4cbd79560cbcfae19e5be0dd4b4ff77"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-15.json",
+      "bytes": 1509,
+      "sha256": "8fc78b41d06d8269e718ac300feae599831c97c91383471c176a42873868c5a3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-16.json",
+      "bytes": 1509,
+      "sha256": "9a96f678193d2d517923b2aa3887dd53fa12e5f54b233efefa007fd10938a89a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-17.json",
+      "bytes": 1507,
+      "sha256": "09c06c9fab552ca47ca3ab458b9c102768fda4f2544f0c5b727caed9179703d1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-18.json",
+      "bytes": 1508,
+      "sha256": "227ec1f4693a89a4a278164420c026d706f88af3afa45de70a4db13489870882"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-19.json",
+      "bytes": 1509,
+      "sha256": "8dcf3da1ae87c3b33ca540c5a06c9e60d6d0cb415a0172525a73257d140830fc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-2.json",
+      "bytes": 1506,
+      "sha256": "3f737cf20ca45c250bf15276dec667dd04bf9919ba703bd400d86242e3296187"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-20.json",
+      "bytes": 1508,
+      "sha256": "e92c206d691cb023f0f3e08bb76d5a60c755c47e8404c66e9872ee2ed81607af"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-21.json",
+      "bytes": 1507,
+      "sha256": "43673cea92709856a5d6d7f355841547418c51ddbe41d1f0dd7977ddd34020b2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-22.json",
+      "bytes": 1507,
+      "sha256": "7afdf0de98ad7cb954cff2091b1e95ec102c318c5f46f0fe57805c6bd53df81a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-23.json",
+      "bytes": 1508,
+      "sha256": "630829155f6833cfc66ec3d4d09ebf9082d7b75433a266a1cf155d36add9934b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-24.json",
+      "bytes": 1509,
+      "sha256": "34f0ae94f51dbfb5a591c5aacc648cffe63049c7318f99dd11eab10c280a1144"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-25.json",
+      "bytes": 1509,
+      "sha256": "2e987589b8fe08fa19ddb1e08709b33654b140a783738ea2e58285e076cf1369"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-26.json",
+      "bytes": 1509,
+      "sha256": "4886a60fe443627877a1a1f59e4b9dff5717b58f6d96af330fe771ee190e46ba"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-27.json",
+      "bytes": 1508,
+      "sha256": "16cc4d1bf422db2a2712ad154592f9b498ad188a541f9322bc17922db334e60c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-28.json",
+      "bytes": 1507,
+      "sha256": "a9564478322e075b624e1ae180ab8f8d401c82c69ac330694fbdbe8cbf69c2ae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-29.json",
+      "bytes": 1509,
+      "sha256": "d50b0585b31fc981df649554c8b22ff4288fbc50d8d7bb7c3a2fb26acade3e14"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-3.json",
+      "bytes": 1507,
+      "sha256": "f3929c894d978b3f601379c4325b84445713fc8d88312fd9d3c0053524ea7634"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-30.json",
+      "bytes": 1509,
+      "sha256": "7bb522a7fec4c0243cb6837a33f9c9c21f8e6e3c17128bef6729fa65380a941a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-31.json",
+      "bytes": 1509,
+      "sha256": "ff7dda924c82c037ce78df47431987e9d443196629484fb3f1a5f09b8cc2e46c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-32.json",
+      "bytes": 1508,
+      "sha256": "1de0810d713ab3506fc328a213e6e6577754e60b3e60db475af1b98e6cc0b9eb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-33.json",
+      "bytes": 1509,
+      "sha256": "103c9d9f05d84306720461f553774372447220c4f0e7949aeb59b6f261b569ce"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-34.json",
+      "bytes": 1507,
+      "sha256": "d6e2b93b3230c02dc7260fcb983e8d3b9796be54a60fe257b202ebbc7d86a999"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-35.json",
+      "bytes": 1506,
+      "sha256": "8e945cd2cef0f59a1b4aa44ae861693446e60e6dcf8fc4395cd1ff6eed2c2c82"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-36.json",
+      "bytes": 1509,
+      "sha256": "e0ae9745fdf94cbaa3098fc65f83fcc4bd1c518a7483eb358975b620d60db12a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-37.json",
+      "bytes": 1509,
+      "sha256": "72a6ffda0136225a9b80a2fd2393d26b73c3cd947c5870b62f9722b2f6fb15e4"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-38.json",
+      "bytes": 1509,
+      "sha256": "5959579a81358fe1ad4271f6fcdbfa795d5c4878274663beed0551e0ca892447"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-39.json",
+      "bytes": 1508,
+      "sha256": "298defb50c1cd67750744c4c3cee181cc739c02fd2b4b3f16ef09d48d20daa9e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-4.json",
+      "bytes": 1508,
+      "sha256": "3ba49865b2f6d67cc148104435c7bdc5a5767e9290fbe05c0fa7d0e0c14e53fb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-40.json",
+      "bytes": 1509,
+      "sha256": "9f553c718cfc617e4ff9dbe43d323ba1f26459bc5905ec4be42905f476f5a3e7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-41.json",
+      "bytes": 1508,
+      "sha256": "a7d0fdb5c0fbe397faf82f88dfb0321374789d6492addefffce713800f1e1b5a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-42.json",
+      "bytes": 1508,
+      "sha256": "2426180bf5b4eae2a73f8e48cc0086d2371989ffb3366684eef338fef805b5cf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-43.json",
+      "bytes": 1509,
+      "sha256": "b6d9e1d681d9a4b6ec67c9e0e347a93f1c3180eafaf8f395ac4056c64e544a41"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-5.json",
+      "bytes": 1507,
+      "sha256": "16252441ada541e44d89373ceda20bf0a27beaa9a8a23c53ce31905886f0af0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-6.json",
+      "bytes": 1508,
+      "sha256": "e2b1427fdab649fcc8c65f8a39362ca008beb9ab6fd7faa792397df6aa41e241"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-7.json",
+      "bytes": 1507,
+      "sha256": "c0dd56f90b4ff0ef25f7e122c668cdf0e09e2d84d777aae9eb63eac30f8203c5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-8.json",
+      "bytes": 1507,
+      "sha256": "83337006dc464fdff4d6e7f549903cd324e1bee07ab94caa50c05e2e8eee08fb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-retention-reused/retention-9.json",
+      "bytes": 1508,
+      "sha256": "02a16f35a30140758cd337954e2c327bc6cff1f27cd3c564f022fdd4cf081d54"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/2-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-browser-recovery-process.json",
+      "bytes": 76,
+      "sha256": "b588bc72c1cca60dea3d173b26226eaa2995cd923fd87098d1b0b5adf0838b6d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-browser-recovery.log",
+      "bytes": 180,
+      "sha256": "1c34b51bcaf7b4996d03ee471268a8d6ac6712830f9c61ccf63c29bc47c94b50"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-browser-recovery/report.json",
+      "bytes": 649,
+      "sha256": "db6597e7d9a72e19d9702c87bc79fb01e543788d3bcfd7afff6d4baeeb5673a7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-control-close-process.json",
+      "bytes": 73,
+      "sha256": "1cc6a34f7ccfc3219514a0cbd6fb5aefa6e234deefcb4951ce78208f596599c2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-control-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-control-close/report.json",
+      "bytes": 970,
+      "sha256": "71877a76feab9b02541155a4fcde0873a6ae768ab957229e86c763c0406757b1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-environment-boundary-close-process.json",
+      "bytes": 86,
+      "sha256": "b46e9f55e158bdb4a9d2e50710ec3ea5ee3925c581f925ff6421af973c061835"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-environment-boundary-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-environment-boundary-close/report.json",
+      "bytes": 1010,
+      "sha256": "a939e5e5d6eb82808a4696af2e3de84e7551199f18ff114f2abdcce79b357f2d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-initialization-recovery-process.json",
+      "bytes": 83,
+      "sha256": "c5ce83ab096a31830707ec07e6c029cc142f92dd99ff63a8ea2d4cc975eda902"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-initialization-recovery.log",
+      "bytes": 447,
+      "sha256": "f28bfde23b7cec7252ae38bf377d25cb325fedbdb56839a8b6c2e1a50f5967e0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-initialization-recovery/report.json",
+      "bytes": 703,
+      "sha256": "93b939c4da9ea531470da8196b0d1039073ae848e24c33d5f624be0dc64aa98f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-navigation-recovery-process.json",
+      "bytes": 79,
+      "sha256": "ad84e30e9238eed4641c72e669e5f931345a97c4a66f4d74b92f15dc4a549370"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-navigation-recovery.log",
+      "bytes": 64,
+      "sha256": "388f189983e572d5b13a66ec657df33eda10e210c3fa057a27ea675806c3868f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-navigation-recovery/report.json",
+      "bytes": 490,
+      "sha256": "0f485759e81076a4d9a33a607f5ca1207026f32aa6a4d913d85f559cba170e4f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-child-close-process.json",
+      "bytes": 77,
+      "sha256": "895f5c263a75067ac49393dff832d4038cad589c371a72594be917c6401c2cd9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-child-close/report.json",
+      "bytes": 982,
+      "sha256": "8c580bc517255a0837cc3bc9c2b08df5c2847bf2eaf8ad57a449a4cb65f0ae54"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-parent-close-process.json",
+      "bytes": 78,
+      "sha256": "d5054244e95c744a3ea20343b3ef027356493d6b4354193d316753ba312bfb29"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-parent-close/report.json",
+      "bytes": 985,
+      "sha256": "3f4b3388b6839b0cf933b146fccdff494593266d16c0cfb6b312f5d0b865ce7b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-success-process.json",
+      "bytes": 73,
+      "sha256": "80749c8351ee556d56ca9b93d9d53a998b3c32f8f6654a38962a1f321427bf0a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-success.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-popup-success/report.json",
+      "bytes": 970,
+      "sha256": "80f683519a50070db07b92117dce9ac54a20a991ca6a38d2e9b646b30d39449e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-renderer-recovery-process.json",
+      "bytes": 77,
+      "sha256": "fee6c2cb5c22cb9c090842ea9dd02ad92c33326c5338ca41d6b2ff3fc95c2439"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-renderer-recovery.log",
+      "bytes": 182,
+      "sha256": "18ae1161f7d58f4439ad13f6f58c116152e3828f8339bfd1a406b51fd5e8baa6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-renderer-recovery/report.json",
+      "bytes": 419,
+      "sha256": "b78a314fcd38472d77a691219914afa4a09de18a57e2a2c4c0b3a36ef33b50ab"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "32c5de410347f59b1de204a159c5ff6f9cfcd94f0114566da8e74ecbe18e3c4b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/report.json",
+      "bytes": 82977,
+      "sha256": "bc9a25306be74f3f978b07817c85c903eeff91298a60aa4500a578a76650e96c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-0.json",
+      "bytes": 1506,
+      "sha256": "eb4e1e7c3a1474a361b47b18e6d53e52341e4bb859662a725df495a1ff5127ec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-1.json",
+      "bytes": 1508,
+      "sha256": "4cb29178735607d3459e6fe5c6908166669464ebde30980fa651273a06464b2e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-10.json",
+      "bytes": 1511,
+      "sha256": "3cfb9ea902f197412b49bdf6ca476ed4e4c2f53fe0f8b3b22d090dc2544a1a73"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-11.json",
+      "bytes": 1511,
+      "sha256": "868168bb878286a8ba8e88b0ad334346024a6e776a669f7aa9c706e44fb39e72"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-12.json",
+      "bytes": 1510,
+      "sha256": "e9bc5a8aca87ccf4460037e26ca59bc0ab26120475ecd3cfecb940779b4dbfdf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-13.json",
+      "bytes": 1509,
+      "sha256": "0e12ca0cab8e2b96d9d7bee4c50e5a56f6a730b6b2414f4620409c93eb2359ce"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-14.json",
+      "bytes": 1511,
+      "sha256": "8405bd7749d39d3fd806ebbb62e86a32fa147be62bf9d5bec4392659b0d822e2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-15.json",
+      "bytes": 1511,
+      "sha256": "a9210bb9a12f0d94edd0cf883928cdbbf887b89239ed48284402273157cb6c78"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-16.json",
+      "bytes": 1511,
+      "sha256": "a06b4f41ba3583905a66dea02d81f1fd4a5ca7e4b47738d67f264b236049394f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-17.json",
+      "bytes": 1509,
+      "sha256": "e52ed85425dccb5747041d894a6033a82451364c4d89c957af8c451798e72daf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-18.json",
+      "bytes": 1511,
+      "sha256": "e653f785bb0650ae695a09c346809107546c7e62f504d46284618e47a96c3fc1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-19.json",
+      "bytes": 1511,
+      "sha256": "483ce0365275ad458ef32eb98bda1f675e604ba316cc07d20ff1646be3dfc54d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-2.json",
+      "bytes": 1508,
+      "sha256": "06977dcd2bd66c3c6f6ac60d96191b96e0b05af7ed396af27bd61f1ffe715fde"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-20.json",
+      "bytes": 1508,
+      "sha256": "799855424e337c673bcd513d0b99cbc91189e1c57bccb7fcdddf5d633192e144"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-21.json",
+      "bytes": 1510,
+      "sha256": "a602803559f3886d1600071e4a6abbe18646d233caa6e49be2773461b5180f78"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-22.json",
+      "bytes": 1511,
+      "sha256": "5486e958bfbc5e4d34629235aeefda1f623c392472e57ca40e4bcfc3b956b566"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-23.json",
+      "bytes": 1510,
+      "sha256": "440a988399c943ecb86a84368b22f46647d68da3cc5b5ce09217ab289ebc9bae"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-24.json",
+      "bytes": 1511,
+      "sha256": "e071e37eab13add1abe63a00d110b7173205915ab3940783aa4607f694de7f60"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-25.json",
+      "bytes": 1510,
+      "sha256": "5a3c4364a98472bc6948aa22eb14cce30e693ff5c3c5262d177dbb732db186ac"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-26.json",
+      "bytes": 1511,
+      "sha256": "db71d4153f4078d9d728751b1eaea5c7deb44f97bc5952f0d11e6b3ba2aed655"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-27.json",
+      "bytes": 1511,
+      "sha256": "d530d90b538a10a0e4826d72b98475764b6e47ef0e7254da89884bb76b70d10b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-28.json",
+      "bytes": 1510,
+      "sha256": "1c5addac90264f0cd6dfd58771ffc8a156f24f6420d9d747b964de43b73ea1d5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-29.json",
+      "bytes": 1511,
+      "sha256": "7fb119e52e6658992c092c27ab6d31841e813941cb5caa499c838e43d90c6fc5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-3.json",
+      "bytes": 1507,
+      "sha256": "a710c9f98e3e0c69501d908f600ccc13e6b6c36cda0488a6cdc0484f8fa52d9f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-30.json",
+      "bytes": 1510,
+      "sha256": "c7af54c054b9c5989da0b8dd6941efe69b381393deaac0bc3639343347c84628"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-31.json",
+      "bytes": 1510,
+      "sha256": "8461a072473d3389eb67c2d758aef3f510b2b96308f74cac19b0c99f5e257dbc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-32.json",
+      "bytes": 1510,
+      "sha256": "ccde4815e88902a411d9068f70f51a2b2424a89dd225dd5402efbd1aee323d96"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-33.json",
+      "bytes": 1511,
+      "sha256": "17ede64e862994da4ae36e32010267d1509b1c34105d45ecd60c54b7dc128c6b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-34.json",
+      "bytes": 1511,
+      "sha256": "a0f9a45601ecb34c4ebf3dbe2c605969660c083888017e9564bbe7248cc73c34"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-35.json",
+      "bytes": 1511,
+      "sha256": "55742b2c0072948cbaa5a963bf83a52fb51f5ac3f21b6798071acdbedceae040"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-36.json",
+      "bytes": 1511,
+      "sha256": "d71f31a3bc70684684b8212f08d513a99b0cd05ef03f0eccebe83c46ca891bd1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-37.json",
+      "bytes": 1511,
+      "sha256": "9128923c1b0400509fb412eea5467290c735d57462f2cbaec8e177771d4ac3b6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-38.json",
+      "bytes": 1509,
+      "sha256": "adba1ece4ab964638eda21c8df901ba92e463d34660355bc54598886f671e468"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-39.json",
+      "bytes": 1511,
+      "sha256": "ab59fb18c69fdadb62ce9b2c4d636830ef0129fa890d46705bbf97e5b6d23450"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-4.json",
+      "bytes": 1507,
+      "sha256": "c8a15d935033e53929a2bd806affd63db25954c459886bcc2846ea9c55831872"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-40.json",
+      "bytes": 1511,
+      "sha256": "b083654b1872b9a703809478253c4d352917ef69235dd8ea91bd81c0b773c5ac"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-41.json",
+      "bytes": 1511,
+      "sha256": "6a3cb73a598cd86faa96dacd1294ba0d2aceca1c53dc92d87626a3126dac10d6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-42.json",
+      "bytes": 1510,
+      "sha256": "1faf7cd0d27be04e64d595dc2ddf37e20d66d948072b4ee89d163ca519a5e878"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-43.json",
+      "bytes": 1511,
+      "sha256": "100177b5a33b9b3ded273c928fd159d44555a3e7bfbedc6fa6314357ed5aca75"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-5.json",
+      "bytes": 1507,
+      "sha256": "8f21a8dedece595b40e8fb52b19402a8d88a51f957520b9c3c3f91fefa5cff94"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-6.json",
+      "bytes": 1508,
+      "sha256": "6aee976697ff03cc64cd696c769ec9d0e8201d87f351a3faece7503b0bfc343a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-7.json",
+      "bytes": 1509,
+      "sha256": "9f5317c75a2083abc0dcf7e349ec4d2652339b4caecc874aae0e6ad696921afb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-8.json",
+      "bytes": 1508,
+      "sha256": "80fe06ab2852bb8301c6641717a2a6a9f9927f96b61f2e53ec3337cbbb2634dc"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-fresh/retention-9.json",
+      "bytes": 1506,
+      "sha256": "570300104237905378cc8015df61d93cbad02b49a723f0f0106af16c19bb859d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "050f7ee504c0646e42798e696c70b822bfa1dd5cf4657ed4bb20942d16af3a46"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/report.json",
+      "bytes": 82891,
+      "sha256": "44a5f3cd557633272987a4927ced9f54ea308beb7556b9c612e8814e7f34e073"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-0.json",
+      "bytes": 1507,
+      "sha256": "b87e4f9d6959269f76465dbbd9977db2bcfe159927b086b8bd4601ebd9103847"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-1.json",
+      "bytes": 1507,
+      "sha256": "75359bd92bb643749b7aa52c648b3365757c51f8599e7f27bcad0c79e0ad5903"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-10.json",
+      "bytes": 1508,
+      "sha256": "bcdd4b4b0396b055e5574c410c2b5d272d4fdd163b738dcddb19af27b7cbc32e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-11.json",
+      "bytes": 1508,
+      "sha256": "499d32cf1f5a9f0d914bc9356508561d035034e9714f38dd99b0ca2ba457308b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-12.json",
+      "bytes": 1509,
+      "sha256": "bea4683e8b2e7ecb0923c4e6dc23dd3d7bbf21a1f64546a381c1dd5197b50699"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-13.json",
+      "bytes": 1509,
+      "sha256": "2adcb71594f3f7290000d9b3ea77d8db0c11ff635c455966666d89cad2d94adf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-14.json",
+      "bytes": 1507,
+      "sha256": "6d15eee8f218ed46fc66dbca245abc7f8a633102d60326ab2a5edbb46ec398a2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-15.json",
+      "bytes": 1505,
+      "sha256": "cda9fbb1488dce32ce7231d2c7b76def060d327e1cb65a2985af3f26bd97305d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-16.json",
+      "bytes": 1508,
+      "sha256": "e111039493ece97b2de1eb4baa916fa2467f19f392cdff62ad4cacbc30d70a0e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-17.json",
+      "bytes": 1507,
+      "sha256": "5394aa093265afdc33fbe4220e902481cdb376bb1a4ffdb880471da655186417"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-18.json",
+      "bytes": 1507,
+      "sha256": "009c01b4721ccdfbc07deff2c5a59822193a352f84ecf2ae7e7e27b2901e19ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-19.json",
+      "bytes": 1508,
+      "sha256": "b14c242b5391e7eec1b7084354afa39f55942d60165f8ede4afddbf64e72b26c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-2.json",
+      "bytes": 1507,
+      "sha256": "40d9fd6ddbfa91e8b634dcdb7afc5072a16d1c622b98a042c90c6a77ac680a9b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-20.json",
+      "bytes": 1509,
+      "sha256": "b3d5cb8dc505ff975dd2d9c927cdf60614299fea8e79b2e1b8b65fd40c270250"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-21.json",
+      "bytes": 1509,
+      "sha256": "6c810394eaff74b7e673548bd492f6c1a9d0077afded56e520b2b46d9ec487f9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-22.json",
+      "bytes": 1507,
+      "sha256": "1bc2440f912631a9752d726d6692fed61d5e20c62ca15b5409940cc4d15ae0b8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-23.json",
+      "bytes": 1507,
+      "sha256": "5a52eeaeee9225bb780a0efcdb586258059a343aaf6cb97cf577b3732cb000b7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-24.json",
+      "bytes": 1509,
+      "sha256": "0e77eba258c568fddff1876c08a51b88dd3a550371960940123aaa24146d776e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-25.json",
+      "bytes": 1509,
+      "sha256": "a82da6884f58baaa514ac254443703b8e735c8de6b3320c3ced3f15e3cb32600"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-26.json",
+      "bytes": 1509,
+      "sha256": "53d6a58ee0035262903bb72ba1581affb8d8f18078c456c8882abc50fa3af5b0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-27.json",
+      "bytes": 1507,
+      "sha256": "ba6421dba1e560348d7c1369ad2e94d4acd644faca7053c84aac7327ddab13bf"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-28.json",
+      "bytes": 1508,
+      "sha256": "66cc0ce7b3bc6f965889fec8f096659d3c0fd9402595a42b3fa568170f090432"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-29.json",
+      "bytes": 1509,
+      "sha256": "fd3f06fab45a56651dd0493bcc7d3b40bc170489aa097ca7b949133fcff0423b"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-3.json",
+      "bytes": 1506,
+      "sha256": "ea8c324fc662bf3662fba1063581b69b37d3905618f1d4bac66bacf46639edff"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-30.json",
+      "bytes": 1508,
+      "sha256": "f6a0311263c5b94de4b368751a2d61ec9e10bc08e0414248a80a15cb6f967b13"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-31.json",
+      "bytes": 1508,
+      "sha256": "2dcfbf7f3ee80ae299de312857995e84ce86624808b616403d03170832ff75f8"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-32.json",
+      "bytes": 1509,
+      "sha256": "9892b878d47fa72702983d96720d79969059076265203c4d0e97dcc0bdd26f0d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-33.json",
+      "bytes": 1509,
+      "sha256": "93e11fb95997a324bfe66f775a967f1b0452aca36a1d90cc1ae2072f0206c38e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-34.json",
+      "bytes": 1508,
+      "sha256": "f1806c5b7e46f1d35506aa316988f5207439a5a609a174ad5f8f0868a29e1e31"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-35.json",
+      "bytes": 1508,
+      "sha256": "d2f7bb0441b32ddf9841946a9f04dc07718383a763b776a67beb994e1dc68201"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-36.json",
+      "bytes": 1509,
+      "sha256": "86b739083c57a6578a4969bec4a17d969262bd8e7a4327fec07e2d3cfdfd1ad2"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-37.json",
+      "bytes": 1507,
+      "sha256": "b8c7c40c0f977a482c3942958559d9eb1a80a088a28a1b0b034e3846d2a4f42c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-38.json",
+      "bytes": 1508,
+      "sha256": "27ee0aac43fe05879bc5c1fd60aece7e496e794a6d0e61e6d45ebab36398295a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-39.json",
+      "bytes": 1508,
+      "sha256": "c9cdc267c3e3ccbb80ebdb69e3a6be194fd6982be7fe6dfa4a211aaa13e8b22d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-4.json",
+      "bytes": 1507,
+      "sha256": "c99582e2419f0d03abcaa96e26de7c5362eab592877ede9c27dfb895b55bb75c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-40.json",
+      "bytes": 1509,
+      "sha256": "eead11da19533a80cfb20fae63aa090114efc926622996ca2ae79e4f9196f99a"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-41.json",
+      "bytes": 1509,
+      "sha256": "10805191aec25a78e15cac4b9e25edfbbf1d6e9a51b4fd80aafeeaf0c4cde112"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-42.json",
+      "bytes": 1509,
+      "sha256": "d8c52b004bc783c2397662bdd278fa666a71e2254cc2a5048542c85fbeeda78d"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-43.json",
+      "bytes": 1509,
+      "sha256": "359d24e3ac1c5e93014eb99158538142de263152f9a5573d1486782780a82c8f"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-5.json",
+      "bytes": 1503,
+      "sha256": "3e88e27fe39efbd76fde0673db6be8c447614e6786470405e4eb633522b09b90"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-6.json",
+      "bytes": 1506,
+      "sha256": "24fdeb8d814bfe8789e0382c320530066cd01f2b4fbaaed6d62673611f6c47a0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-7.json",
+      "bytes": 1508,
+      "sha256": "d13da104b3ade616d36fc928132f0f3d6876a54a12fbce6bc17b76c51e93c625"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-8.json",
+      "bytes": 1506,
+      "sha256": "bba8c888b2499aa21c5ab7c489781d939ea3481c8581c9f622d9b957f6e9629c"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-retention-reused/retention-9.json",
+      "bytes": 1508,
+      "sha256": "a0569dd8bf6fdb8fdacf57958e800df46ab394a5b40a4da51966107ca1953937"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-runtime-missing-recovery-process.json",
+      "bytes": 84,
+      "sha256": "3c774d71488d6a35a238b491d5635d7d18942f2b6904c38ee7215fec494d03a0"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-runtime-missing-recovery.log",
+      "bytes": 691,
+      "sha256": "8b945eb2d8c58fbb4f0363be3e27647adb990b805c5fb38f12cbefc5cb1aa8d9"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-runtime-missing-recovery/report.json",
+      "bytes": 733,
+      "sha256": "801dbea079a19f632a6e8f2e48bad36d90bded66e32180421384fe284b90b5a7"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-child-close-process.json",
+      "bytes": 78,
+      "sha256": "de02540bd24470f2061e4939a2e74c1b586368fa441f928a565690350847db35"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-child-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-child-close/report.json",
+      "bytes": 447,
+      "sha256": "ce24efdeb44bc485b35818134f2ba343eb291c1b2c290af4bc8e786b6b296738"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-parent-close-process.json",
+      "bytes": 79,
+      "sha256": "542b0b4a77b52df12ef0019277a41b70c8d99eea8987a8777959bca6a7883409"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-parent-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-script-parent-close/report.json",
+      "bytes": 447,
+      "sha256": "057cc1029cd411cc0ac11fbf9717d3c75b26c2147a52e66a4d21861386e9101e"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-fault-close-process.json",
+      "bytes": 79,
+      "sha256": "fc041c77d690392a712b7b79bf5291255a685227ea6a13b7ddb022fce183a5ee"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-fault-close.log",
+      "bytes": 301,
+      "sha256": "3d8440688261784e3c85d95e1b635ec9e1bda4a8eb3c3bfcee823ed399e730b3"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-fault-close/report.json",
+      "bytes": 782,
+      "sha256": "053a929e492fc4400161d5d06823a0d933bd8784f22bea8bf82fb33b3eefadf5"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-success-close-process.json",
+      "bytes": 81,
+      "sha256": "c5b127196a995f358f97534a788db84f671f4bca2c86475fd649832986616aec"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-success-close.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/3-stalled-success-close/report.json",
+      "bytes": 786,
+      "sha256": "372825e7dc329b1183d21c2bc02b705521767d066b5f771daed2cb72930e8904"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/campaign.json",
+      "bytes": 656,
+      "sha256": "de32187fb849b0e80bcacc64de4167506471d099f65f935fc239e04bc397ccc1"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/source-manifest.json",
+      "bytes": 11090,
+      "sha256": "7c638e2ad9801f10ea487d36df6d2268c6204db1fa8f2d22af1c6ce63e702cdb"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/summary.json",
+      "bytes": 596748,
+      "sha256": "eea2b4fe57bca1721c951913fd430d6cb3cc7e441e6947f7f50e10d03d535dda"
+    },
+    {
+      "path": "artifacts/webview-retention-2026-11-11/repeated/tested-source.zip",
+      "bytes": 76330,
+      "sha256": "c4d6f9dfa93474a5848136370e29135955b429d77ed2c1533ce9544c468b50e6"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Interop/NativeControlHost.cs",
+      "bytes": 1845,
+      "sha256": "fbac6a2b4a64fd80dfd09cfc3ed1f21ac94d52802d75d58c82acd9acd5909cc2"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Interop/NativeStyleResources.cs",
+      "bytes": 1263,
+      "sha256": "38329d31f345184ca65c3d72f5c9a71aff543a3330dd3222394c21d489485b76"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Interop/NativeStyleScope.cs",
+      "bytes": 177,
+      "sha256": "80cf8cf71781d5fbc84906d2675e7910ac114702a44bb16a2ed6dbf2597fc550"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Interop/NativeViewDescriptor.cs",
+      "bytes": 279,
+      "sha256": "2497aa4444d836b136d9384e85566d6ecb6004039828df47354d75e33b6b83dc"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Interop/WpfUI.cs",
+      "bytes": 1356,
+      "sha256": "17583710668fd22d5791fd42d0c07111c063600fa7cab2562f35a76e5ce92987"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Layout/AdaptivePanel.cs",
+      "bytes": 2024,
+      "sha256": "8fd2d5a3ff7c8f54674206db42ae0f3507bf757e405834da0553338a35d29ef9"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Layout/FlexColumnPanel.cs",
+      "bytes": 883,
+      "sha256": "afd3df354361f688a473925220878e7562a36e95cbcdc14c5e713f9e50d2c62e"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Layout/SplitPanePanel.cs",
+      "bytes": 4475,
+      "sha256": "65ea83094166928682f139072b24905a34809c908c3cc3f6afcf8225bab1c33c"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Navigation/NavigationSnapshot.cs",
+      "bytes": 123,
+      "sha256": "a1ac0703cc77d123727b37f2fa86f33936cada85055fefa925adeba3b010b112"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Navigation/NavigationSurface.cs",
+      "bytes": 3345,
+      "sha256": "1b3ad43233fb54133e1626bb34df90dcbecd55b972d269327652f49c58853a72"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Rendering/FocusIdentity.cs",
+      "bytes": 515,
+      "sha256": "1b39939d285ee136e6b103ce3b3287b9fc0979a35473ac54affe1eea99e4327d"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Rendering/Node.cs",
+      "bytes": 8062,
+      "sha256": "d7e9c04faa1cfb83c97d27606ffde894c2919f46c36700bdab9adf80efcc2a0b"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Rendering/NodeSnapshot.cs",
+      "bytes": 512,
+      "sha256": "56750c0eb42e3c217db0d8442ca010e329fcd13fbd203b0ea7731908779c3dcd"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/ButtonContentPresenter.cs",
+      "bytes": 909,
+      "sha256": "1198e0375ee94fbeb5028777c205ce5abd8745eeb8ad9e00e1d03f539039c65c"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/PickerStyles.cs",
+      "bytes": 9510,
+      "sha256": "8f773a5ecae2421170c8fd05f5f5b22d1b92f86a2bfac34b9c44f3249b73696f"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/TextBoxStyles.cs",
+      "bytes": 4934,
+      "sha256": "3488ada41bdb4b6c7130917a966f65852fd90ec878e65d4d7e2266856f2ab6b3"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/ThemeColor.cs",
+      "bytes": 487,
+      "sha256": "ee5308e8fc77d8dc3f978df5f7e3bafee93b14ac0f75c4351f977b3dea871101"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/ThemePalette.cs",
+      "bytes": 3473,
+      "sha256": "e8b69f1da338e6b1444d517782ed99a6f245100f255aaa6c7a8a2d08c23005e6"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/ThemeStyles.cs",
+      "bytes": 9500,
+      "sha256": "86b3de17408fca7cb3bf6c5dd85f6a5f89c491897777bda3c0e31e40b7246821"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Styling/ToggleStyles.cs",
+      "bytes": 5997,
+      "sha256": "95498053a7968e67a5a0e17313e60c9b0755b33414f8afc2ef2a39eac3937f79"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/UI Framework.Wpf.csproj",
+      "bytes": 1105,
+      "sha256": "ed7bd91848a06c46697280cee054d11d329ee2cddae9cac3524ec92567aef44e"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/ViewHost.cs",
+      "bytes": 26100,
+      "sha256": "9126d9c97777ef5320f13e1368b4229673b3424c57a43a0d3c71d73085fe1ded"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/RowFocusSnapshot.cs",
+      "bytes": 2796,
+      "sha256": "dd9fe207979ddb89fc80a823758087931cb1a416dc22f6dc4e5309ec6d36c886"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs",
+      "bytes": 568,
+      "sha256": "36b14b7a6672fb0b55e6aa37a1387aaa483e3e74454ffe7af6c5ffe537125ecb"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualListControl.cs",
+      "bytes": 7335,
+      "sha256": "0560e2c0b51d32a99b0ef432a63a053a00c98da42f18eb7908b82fddc8437130"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualListSnapshot.cs",
+      "bytes": 121,
+      "sha256": "6947fa3f0ba2e9b5303edfc3102571155607a04950c48d6606e0e4ea08c537ff"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualRow.cs",
+      "bytes": 1366,
+      "sha256": "760a3e047306fda60d45e70562d5345d17f744f865b917b44704be63fa6dcd3e"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs",
+      "bytes": 702,
+      "sha256": "b258811f04ebc1101db6330b60c57177ca46a5e07e31f89e78655e6fa77ffacb"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualRowCollection.cs",
+      "bytes": 10585,
+      "sha256": "39217d54e35b3176fc117555f135159613312cfee42e7ba04e1738e52c876cbc"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualRowPresenter.cs",
+      "bytes": 7868,
+      "sha256": "27ff07aec94b4a512c26e81bb2cd0762dd6b0ab7a3e95bc54abdbe669e67818f"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/Virtualization/VirtualRowSavedState.cs",
+      "bytes": 238,
+      "sha256": "eb9b926256cdeca185988d65e4b0aeddeab85d6059095c5a62d39726aa0be749"
+    },
+    {
+      "path": "final-tested-source/UI Framework.Wpf/WpfComCleanupPolicy.cs",
+      "bytes": 4225,
+      "sha256": "ceb48c2b6d88d215548288c4f57985576ee9d7fbd32e1eb3326dff79646e8978"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Binding.cs",
+      "bytes": 1334,
+      "sha256": "566c0e871055778345fbed2ac4f744b12cf8b3bf0f646f02250a90b95bdb6e1d"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Component.cs",
+      "bytes": 508,
+      "sha256": "5bc78429499713784025706a8b7dce888d678c676e9fe5e5d6332d13b565c9bc"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Computed.cs",
+      "bytes": 4592,
+      "sha256": "6bdd6173d689a165e11979f51766c4777e4d9c4927591d0a3a6b48788362d40e"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Dependencies.cs",
+      "bytes": 956,
+      "sha256": "6fadbf442bc3d7fc50d099c4ebb488b6602719a289c2cfacc9ffa20e5b015224"
+    },
+    {
+      "path": "final-tested-source/UI Framework/IState.cs",
+      "bytes": 86,
+      "sha256": "1a1e426442541a17a2bdb7733add8b27bf61ad6beb9aa50f7bd7930565521cb8"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Layout/SplitAxis.cs",
+      "bytes": 72,
+      "sha256": "3265d57614d6e1804cc3f03a100a1ccb44e72e80ee0f84d30dc423d4d0ba6b97"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Layout/SplitPaneLayout.cs",
+      "bytes": 369,
+      "sha256": "6ca60fb6a0677ed9da815666db87e7a046a1cd9f46a9bee4ea764952ea0fe385"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Layout/ViewAlignment.cs",
+      "bytes": 83,
+      "sha256": "b6dd915729f42fb8419e9f60872461571dae95189085fd7996b9449a826c6077"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Navigation/NavigationEntry.cs",
+      "bytes": 94,
+      "sha256": "69aa6012f399114d0160d9b8a4462b2ede14e2a5b98232394a04a8d74f43e562"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Navigation/NavigationStack.cs",
+      "bytes": 1479,
+      "sha256": "d359a617c404710fa5ac0fdcae8bd16d9c1780b7839c095da95dc15d8e7181bf"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Navigation/NavigationTransition.cs",
+      "bytes": 78,
+      "sha256": "6cdc53175b9e2c96ef9b7cb474063a52943da47dea56548d7f2f19d1b0185dda"
+    },
+    {
+      "path": "final-tested-source/UI Framework/ObservableState.cs",
+      "bytes": 693,
+      "sha256": "aa9ff307e5f301b80c261913438cd9da315044eff79ce511152589d5fd71c5e8"
+    },
+    {
+      "path": "final-tested-source/UI Framework/State.cs",
+      "bytes": 913,
+      "sha256": "7b456332f93567e0b9e5159f3bc4289a7c0325acbf3a1a98be4e68ef52fd951a"
+    },
+    {
+      "path": "final-tested-source/UI Framework/StateList.cs",
+      "bytes": 2474,
+      "sha256": "ff4db976babdde75cf769861856b67aa519f003e62c2ac4a824740b6893f0dce"
+    },
+    {
+      "path": "final-tested-source/UI Framework/StateNotifications.cs",
+      "bytes": 750,
+      "sha256": "fb8e1d0ee08c9630df94424d7b81fd5a70e73f67a9c78fd0874b2bd8887932f7"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Styling/ButtonStyleKind.cs",
+      "bytes": 83,
+      "sha256": "90ba5a95f25ca0aeac22447f1b37f64e8633c596aff38f95a50214737abe0798"
+    },
+    {
+      "path": "final-tested-source/UI Framework/Styling/ThemeTokens.cs",
+      "bytes": 922,
+      "sha256": "ded33f526a53d237bc276c74918a66fd6bf1afea4abb41b4388c9dabe09d77f4"
+    },
+    {
+      "path": "final-tested-source/UI Framework/UI Framework.csproj",
+      "bytes": 971,
+      "sha256": "93342aeae9cd5d10492241e3c7851126701f5177a1c8255d9c9fdc6ca417f748"
+    },
+    {
+      "path": "final-tested-source/UI Framework/UI.cs",
+      "bytes": 6672,
+      "sha256": "fe377b60fb24e8283e73a160dc80ff88c25d709d5e30d9b7d3f55c8a6f3d43b9"
+    },
+    {
+      "path": "final-tested-source/UI Framework/View.cs",
+      "bytes": 5193,
+      "sha256": "5b1f7efbf788b39963884e0c0e2d21284c8406ef99abde3b291061f5b65afcb4"
+    },
+    {
+      "path": "final-tested-source/UI Framework/ViewKind.cs",
+      "bytes": 235,
+      "sha256": "e9efbbff9685c23012a61c7a18bf8ae6b312bb0232677b39b021209c82c5a4b8"
+    },
+    {
+      "path": "final-tested-source/UI Framework/ViewSession.cs",
+      "bytes": 1958,
+      "sha256": "a70b4e9a8148b13d5f2dfe206416a16cc4f62a15bbe2ee6f796da49db1017577"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/AcceptanceSuite.cs",
+      "bytes": 4664,
+      "sha256": "492794a946347cb6e8ca85153fa2fb58021f05a0baa63c1e80bf4e84cce76692"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/BrowserSession.cs",
+      "bytes": 10841,
+      "sha256": "c6214e61883eec9b9acb534cef6425349e6ddd8e72816afeb53be4452c84174f"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/FailureChecks.cs",
+      "bytes": 9714,
+      "sha256": "1bbd855180cfd132c8cee1e20b8de926155e855648ecee2a44fb81f03ed8853d"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/InteractionChecks.cs",
+      "bytes": 8452,
+      "sha256": "91a7602c0ec19a8322a29be18ffe6332de338b182b9e48f3744fdeed37a5427c"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/InteractionWorkspace.cs",
+      "bytes": 1718,
+      "sha256": "58dfbf369a2743d454cbcc4715dcf86e00f5831e6750b8758f95689ab4d87b36"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/KeyboardPacket.cs",
+      "bytes": 474,
+      "sha256": "da051c487def19b7b997a602c9b7e05c1c96adf509863360e51b3d7c62a19443"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/KeyboardProbe.cs",
+      "bytes": 2121,
+      "sha256": "370e1589e093306c823df2e84ab47bb7874e21d6a60a9115aa9b81f081ba0e1e"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/Pages/child.html",
+      "bytes": 145,
+      "sha256": "41f06547a521ef061df780c6d808c78e52a0e7ea46ad327b132a928ac2ce3294"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/Pages/interaction.html",
+      "bytes": 667,
+      "sha256": "640937dff6264bc57d853299c3f9ec37ac8738ae1b75e69a5c09b7c9b2aa1785"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/Pages/parent.html",
+      "bytes": 310,
+      "sha256": "e2303df10f58daf7339bbf20c76b67bfded46199ab9dc0cffc3c3b2a87f9c4a3"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/Probe.cs",
+      "bytes": 553,
+      "sha256": "fa0c7ea8f49f635f962b5cef60743559b95c748c2a13cf6b8f881c57bec156fd"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/ProcessFault.cs",
+      "bytes": 1532,
+      "sha256": "4451f9e4e4938876cf9c0f623e033def683c9ce3660ed5c38a72ea3c5f70aa76"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/Program.cs",
+      "bytes": 3543,
+      "sha256": "11c08086a5a135de76a121022f90c383b45f579ed88598883cb26393cf9944ac"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/RetentionChecks.cs",
+      "bytes": 6914,
+      "sha256": "465f6a8198f2e4c477a5d709ca6cff87e48ffd66bd1e3dbb7f3cbe8c565e22c2"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/RetentionCycle.cs",
+      "bytes": 439,
+      "sha256": "378726d8e7bdf7811782685f7b0485dce27f8f52845f500c6c00881202af4762"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/RetentionTelemetry.cs",
+      "bytes": 629,
+      "sha256": "c506c7d4658e1346180538e98d37069d842e25e5499aef2a6e454073357944fd"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/ScreenProbe.cs",
+      "bytes": 2768,
+      "sha256": "c0de14a58ab36300439bb90c20890fd9e12f2c6a6ad66a6cc88cb9c1c922c4d0"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/ShutdownChecks.cs",
+      "bytes": 5182,
+      "sha256": "da31e9ac1c2bbcfd82fee6e34505daa4a1812ca28ea1824841a56267060f11de"
+    },
+    {
+      "path": "final-tested-source/samples/WebViewAcceptance/WebViewAcceptance.csproj",
+      "bytes": 537,
+      "sha256": "e1180da3d92cacb2151ec9f1b101bac6265f0e75d1e52e5608a7f48442f5fd70"
+    },
+    {
+      "path": "final-tested-source/tools/Test-WebViewAcceptance.ps1",
+      "bytes": 4817,
+      "sha256": "476095695175f526e5c617adc43ee15998a5a4a6ca3c3f0bcd6300737cf0e061"
+    }
+  ]
+}
