@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "afbd077db5b22a0d4a852298b95cde2b55be3a0a80bdf934dc934168c93f8b8c",
+  "inputDigest": "b88a71c62c0c2f289853412e6549c434d00603b976bea6cb54f95ad8c3bfdf68",
   "coverage": {
     "unresolvedRelativeReferences": 38,
     "semantic": false,
@@ -32807,6 +32807,12 @@
       "kind": "file"
     },
     {
+      "id": "docs/releases/0.1.0-alpha.7.md",
+      "label": "0.1.0-alpha.7.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/releasing.md",
       "label": "releasing.md",
       "group": "docs",
@@ -35168,7 +35174,7 @@
       "id": "concept:release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
+      "summary": "Alpha.7 candidate prepared November 13, 2026; local validation, exact-commit hosted gates and publication verification pending. Baseline and budgets remain unchanged. Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -35185,7 +35191,8 @@
         ".github/dependabot.yml",
         "docs/releases/0.1.0-alpha.5.md",
         "docs/releases/0.1.0-alpha.6.md",
-        "docs/manual-acceptance-2026-10-29.md"
+        "docs/manual-acceptance-2026-10-29.md",
+        "docs/releases/0.1.0-alpha.7.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -35265,7 +35272,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 47,
+        "line": 65,
         "text": "](docs/releases/0.1.0-alpha.5.md)"
       }
     },
@@ -35275,8 +35282,18 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 9,
+        "line": 27,
         "text": "](docs/releases/0.1.0-alpha.6.md)"
+      }
+    },
+    {
+      "source": "CHANGELOG.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "CHANGELOG.md",
+        "line": 7,
+        "text": "](docs/releases/0.1.0-alpha.7.md)"
       }
     },
     {
@@ -35285,7 +35302,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 29,
+        "line": 47,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35335,7 +35352,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 171,
+        "line": 178,
         "text": "](docs/accessibility-2026-10-26.md)"
       }
     },
@@ -35345,7 +35362,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 53,
+        "line": 60,
         "text": "](docs/agent-skill.md)"
       }
     },
@@ -35355,7 +35372,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 84,
+        "line": 91,
         "text": "](docs/application-cleanup-policy-2026-09-25.md)"
       }
     },
@@ -35365,7 +35382,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 126,
+        "line": 133,
         "text": "](docs/bindings.md)"
       }
     },
@@ -35375,7 +35392,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 172,
+        "line": 179,
         "text": "](docs/error-recovery.md)"
       }
     },
@@ -35385,7 +35402,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 150,
+        "line": 157,
         "text": "](docs/knowledge-graph.md)"
       }
     },
@@ -35395,7 +35412,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 182,
+        "line": 189,
         "text": "](docs/knowledge-graph/README.md)"
       }
     },
@@ -35405,7 +35422,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 191,
+        "line": 198,
         "text": "](docs/knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -35415,7 +35432,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 47,
+        "line": 54,
         "text": "](docs/launchpad.md)"
       }
     },
@@ -35425,7 +35442,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 134,
+        "line": 141,
         "text": "](docs/layout-styling.md)"
       }
     },
@@ -35435,7 +35452,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 174,
+        "line": 181,
         "text": "](docs/navigation.md)"
       }
     },
@@ -35445,7 +35462,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 27,
+        "line": 32,
         "text": "](docs/package-readme.md)"
       }
     },
@@ -35455,7 +35472,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 130,
+        "line": 137,
         "text": "](docs/performance-results.md)"
       }
     },
@@ -35465,18 +35482,18 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 128,
+        "line": 135,
         "text": "](docs/performance.md)"
       }
     },
     {
       "source": "README.md",
-      "target": "docs/releases/0.1.0-alpha.6.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 19,
-        "text": "](docs/releases/0.1.0-alpha.6.md)"
+        "line": 20,
+        "text": "](docs/releases/0.1.0-alpha.7.md)"
       }
     },
     {
@@ -35495,7 +35512,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 27,
+        "line": 33,
         "text": "](docs/releasing.md)"
       }
     },
@@ -35505,7 +35522,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 132,
+        "line": 139,
         "text": "](docs/stress-lab.md)"
       }
     },
@@ -35515,7 +35532,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 78,
+        "line": 85,
         "text": "](docs/timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -35525,7 +35542,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 132,
+        "line": 139,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35535,7 +35552,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 170,
+        "line": 177,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35545,7 +35562,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 173,
+        "line": 180,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35555,7 +35572,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 51,
+        "line": 58,
         "text": "](skills/ui-framework/SKILL.md)"
       }
     },
@@ -39009,6 +39026,15 @@
     },
     {
       "source": "concept:release",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/32/sources/16"
+      }
+    },
+    {
+      "source": "concept:release",
       "target": "docs/releasing.md",
       "kind": "evidenced by",
       "evidence": {
@@ -41076,7 +41102,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 789,
+        "line": 798,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -41116,7 +41142,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 806,
+        "line": 815,
         "text": "](agent-skill.md)"
       }
     },
@@ -41136,7 +41162,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 797,
+        "line": 806,
         "text": "](api-contract.md)"
       }
     },
@@ -41166,7 +41192,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 795,
+        "line": 804,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -41216,7 +41242,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 802,
+        "line": 811,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41226,7 +41252,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 803,
+        "line": 812,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41276,7 +41302,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 802,
+        "line": 811,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -41296,7 +41322,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 800,
+        "line": 809,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -41306,7 +41332,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 801,
+        "line": 810,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -41326,7 +41352,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 800,
+        "line": 809,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -41346,7 +41372,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 801,
+        "line": 810,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -41396,7 +41422,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 804,
+        "line": 813,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41406,7 +41432,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 805,
+        "line": 814,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41436,7 +41462,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 799,
+        "line": 808,
         "text": "](native-island-performance.md)"
       }
     },
@@ -41516,7 +41542,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 803,
+        "line": 812,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -41536,7 +41562,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 763,
+        "line": 772,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -41566,7 +41592,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 794,
+        "line": 803,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -41596,7 +41622,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 796,
+        "line": 805,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -41608,6 +41634,16 @@
         "path": "docs/backlog.md",
         "line": 8,
         "text": "](releases/0.1.0-alpha.6.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 766,
+        "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
     {
@@ -41666,7 +41702,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 798,
+        "line": 807,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -41686,7 +41722,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 798,
+        "line": 807,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -44068,6 +44104,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 171,
         "text": "](../docs/releases/0.1.0-alpha.6.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 171,
+        "text": "](../docs/releases/0.1.0-alpha.7.md)"
       }
     },
     {
@@ -47956,8 +48002,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 3,
+        "line": 7,
         "text": "](releases/0.1.0-alpha.6.md)"
+      }
+    },
+    {
+      "source": "docs/releasing.md",
+      "target": "docs/releases/0.1.0-alpha.7.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releasing.md",
+        "line": 4,
+        "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
     {
@@ -75853,6 +75909,11 @@
     {
       "source": "group:docs",
       "target": "docs/releases/0.1.0-alpha.6.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/releases/0.1.0-alpha.7.md",
       "kind": "contains"
     },
     {

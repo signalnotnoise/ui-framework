@@ -756,6 +756,15 @@ changes; no performance improvement or release acceptance claim. Static captures
 do not establish keyboard, IME or accessibility acceptance. Source, media and
 documentation are included in this commit; no package published.
 
+### FW-024 Publish alpha.7
+
+Status: **In progress**. Owner: Codex. Started November 13, 2026 at user request.
+Publish both library/symbol packages after local correctness/package/performance
+checks and exact-candidate hosted gates, then verify an isolated NuGet.org
+consumer. Consulted the release concept and generated neighborhood, workflows,
+package scripts and existing acceptance evidence before preparing the candidate.
+Baseline and budgets remain unchanged. [Release record](releases/0.1.0-alpha.7.md).
+
 ## Definition of done
 
 - Behavior changes have focused regression checks and updated API documentation.

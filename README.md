@@ -2,7 +2,7 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.6 preview · Windows renderer · .NET 10**
+**Experimental · 0.1.0-alpha.7 preview · Windows renderer · .NET 10**
 
 APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
 
@@ -16,15 +16,22 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.6` packages: [SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6) (core) and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6) (Windows renderer). Both libraries and symbols were published through Trusted Publishing after hosted validation; a fresh NuGet.org consumer passed and its DLL hashes match the hosted artifacts. See the [release evidence](docs/releases/0.1.0-alpha.6.md). The WPF package brings in the core automatically.
+Version `0.1.0-alpha.7` is the release candidate. Publication and fresh public
+installation are pending; see the [release record](docs/releases/0.1.0-alpha.7.md).
+The latest verified public version is `0.1.0-alpha.6`:
+[SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6)
+and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6).
 
-In a .NET 10 WPF project:
+In a .NET 10 WPF project, install the current published preview:
 
 ```powershell
 dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.6
 ```
 
-See the [package getting-started guide](docs/package-readme.md) and [publishing instructions](docs/releasing.md). To build and verify local packages instead, run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
+The WPF package brings in the core automatically. See the
+[package getting-started guide](docs/package-readme.md) and
+[publishing instructions](docs/releasing.md). To validate local candidate packages,
+run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
 
 ## Run from source
 

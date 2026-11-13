@@ -1,6 +1,11 @@
 # Experimental release process
 
-The current version is 0.1.0-alpha.6, defined in Directory.Build.props and published October 28, 2026 from `fd725347749bcee79e29d10ac2a6de4355137be7` through Trusted Publishing after both hosted workflows passed. A fresh NuGet.org installation passed; installed DLL hashes match the hosted release artifacts. See the [alpha.6 release record](releases/0.1.0-alpha.6.md). Packages remain experimental Windows/.NET 10 previews under MIT.
+The current candidate is 0.1.0-alpha.7, defined in Directory.Build.props.
+Publication is pending; see the [alpha.7 release record](releases/0.1.0-alpha.7.md).
+The latest verified public release is alpha.6, published October 28, 2026 from
+`fd725347749bcee79e29d10ac2a6de4355137be7`; its
+[release record](releases/0.1.0-alpha.6.md) preserves publication and installation evidence.
+Packages remain experimental Windows/.NET 10 previews under MIT.
 
 ## Required owner decisions
 

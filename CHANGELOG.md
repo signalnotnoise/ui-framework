@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.7 — November 13, 2026
+
+Release candidate; publication pending. See the [release record](docs/releases/0.1.0-alpha.7.md).
+
+- Use indexed keyed virtual-row storage for large reorders and reduce initial
+  mount allocations while preserving active editors, logical state and cleanup.
+  Retain individual collection notifications and the full-list comparison.
+- Establish the exact-commit hosted performance release gate, with unchanged
+  accepted baseline/budgets and source-first editor benchmark initialization.
+- Add real-window/native lifetime and scoped WebView2 ownership acceptance
+  evidence, including asynchronous close, popup ownership and failure recovery.
+  Provider work and shutdown remain application-owned; no new interop API.
+- Record user-confirmed physical IME and Windows contrast acceptance from
+  October 29; these historical results do not imply every application is verified.
+- Add the portable UI Framework coding-agent skill, composition recipe and a
+  reproducible before/after GIF from native WPF renders. The skill and media
+  live in the source repository; NuGet packages contain the core/WPF libraries.
+
 ## 0.1.0-alpha.6 — October 28, 2026
 
 Published libraries and symbols from `fd72534` after both hosted workflows
