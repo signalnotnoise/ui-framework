@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: November 11, 2026.
+Last updated: November 13, 2026.
 
 Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
 both hosted workflows passed (146 tests, 32 performance gates each). A fresh
@@ -735,6 +735,27 @@ FW-005/006 changes were altered by this item. Changes remain uncommitted.
 See [usage](knowledge-graph/README.md#visual-git-history) and
 [validation/limits](knowledge-graph/validation/2026-10-27.md).
 
+### FW-023 Ship an agent skill and visual before/after
+
+Status: **Done**. Owner: Codex. Started and completed November 13, 2026
+at user request. Added the portable `skills/ui-framework` skill and composition
+recipe, optional discovery metadata, and a local Codex installation. An isolated
+capture fixture renders the same release workspace before/after at 1040 DIP and
+at 640 DIP; a reproducible two-frame GIF holds each real native render with a
+presentation caption. README and [usage/evidence](agent-skill.md) link the result.
+
+Consulted layoutstyle, state/component and host ownership in the curated graph
+and the layout guide's interactive neighborhood, then verified source factories,
+tokens and capture behavior. Added the agent-skill concept and ownership links.
+Validation: Release build/captures with .NET SDK 10.0.402, visual inspection of
+wide before/after and narrow after, skill validator, GIF frame/timing checks,
+`tools/Update-KnowledgeGraph.ps1 -Check`, generated graph `--check` and
+`tools/Test-Documentation.ps1` pass. System SDK mismatch is documented; the
+repository pin remains unchanged. No framework runtime/template or benchmark
+changes; no performance improvement or release acceptance claim. Static captures
+do not establish keyboard, IME or accessibility acceptance. Source, media and
+documentation are included in this commit; no package published.
+
 ## Definition of done
 
 - Behavior changes have focused regression checks and updated API documentation.
@@ -782,3 +803,4 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-022 | October 29, 2026 | Identified cold DPI lookup, adopted measured source-first editor initialization and designated exact-commit hosted performance as release gate. `f7c7320` passes all three hosted jobs and 32/32 performance checks; local failures preserved. | [Investigation](editor-mount-investigation-2026-10-29.md), [hosted evidence](performance-evidence/2026-10-29-editor-hosted/README.md) |
 | FW-005 | October 29, 2026 | Existing editing safeguards and automated checks supplemented by user-confirmed physical IME editing/recycling pass. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
 | FW-006 | October 29, 2026 | Existing accessibility/contrast implementation and checks supplemented by user-confirmed Windows contrast pass; earlier Narrator/scaling passes retained. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
+| FW-023 | November 13, 2026 | Portable C# UI skill, local installation and reproducible native before/after GIF; build, visual inspection, skill/media, docs and graph checks pass. Included in this commit. | [Usage and evidence](agent-skill.md) |

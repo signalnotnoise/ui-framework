@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Framework"
+  short_description: "Build clean native C# UIs with UI Framework"
+  default_prompt: "Use $ui-framework to build or refine this C# interface with clear hierarchy, retained state, and native WPF controls."

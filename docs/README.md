@@ -61,3 +61,7 @@ An earlier implementation pass completed a clean Release build, 90 regression ch
 Update API contracts when behavior changes. Keep measured results dated and distinguish historical measurements from fresh test results. Edit knowledge-graph.json, then run tools/Update-KnowledgeGraph.ps1 to regenerate its Markdown map; use -Check to verify it is current. Planned items in the roadmap and graph are not implemented features.
 
 See [public API and compatibility contracts](api-contract.md) for the reviewed surface, baseline rules and intended v1 policy.
+
+## Coding agents
+
+[UI Framework skill, installation and native before/after demonstration](agent-skill.md).

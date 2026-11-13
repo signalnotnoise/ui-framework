@@ -2,11 +2,11 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "d3293edfbdaf86e4a6d923d78f38a50ae5a1e3968e31d60203038d188c593ecb",
+  "inputDigest": "afbd077db5b22a0d4a852298b95cde2b55be3a0a80bdf934dc934168c93f8b8c",
   "coverage": {
-    "unresolvedRelativeReferences": 35,
+    "unresolvedRelativeReferences": 38,
     "semantic": false,
-    "curatedArchitectureConcepts": 35,
+    "curatedArchitectureConcepts": 36,
     "limitations": "Regex syntax evidence may include comments/examples. C# has file nodes and explicit XML project references, not resolved using directives or calls. Curated concepts/relationships are imported from schema v1, not inferred. Aliases and runtime calls are not resolved."
   },
   "nodes": [
@@ -421,6 +421,12 @@
     {
       "id": "docs/accessibility.md",
       "label": "accessibility.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/agent-skill.md",
+      "label": "agent-skill.md",
       "group": "docs",
       "kind": "file"
     },
@@ -33743,6 +33749,24 @@
       "kind": "file"
     },
     {
+      "id": "skills/ui-framework/SKILL.md",
+      "label": "SKILL.md",
+      "group": "skills",
+      "kind": "file"
+    },
+    {
+      "id": "skills/ui-framework/agents/openai.yaml",
+      "label": "openai.yaml",
+      "group": "skills",
+      "kind": "file"
+    },
+    {
+      "id": "skills/ui-framework/references/composition.md",
+      "label": "composition.md",
+      "group": "skills",
+      "kind": "file"
+    },
+    {
       "id": "tests/UI Framework.Checks/AccessibilityAcceptanceTests.cs",
       "label": "AccessibilityAcceptanceTests.cs",
       "group": "tests",
@@ -34133,6 +34157,12 @@
       "kind": "file"
     },
     {
+      "id": "tools/New-SkillPreviewGif.py",
+      "label": "New-SkillPreviewGif.py",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
       "id": "tools/New-SourceArchive.ps1",
       "label": "New-SourceArchive.ps1",
       "group": "tools",
@@ -34141,6 +34171,24 @@
     {
       "id": "tools/Save-BenchmarkDump.ps1",
       "label": "Save-BenchmarkDump.ps1",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
+      "id": "tools/SkillPreview/Program.cs",
+      "label": "Program.cs",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
+      "id": "tools/SkillPreview/ReleaseScreen.cs",
+      "label": "ReleaseScreen.cs",
+      "group": "tools",
+      "kind": "file"
+    },
+    {
+      "id": "tools/SkillPreview/SkillPreview.csproj",
+      "label": "SkillPreview.csproj",
       "group": "tools",
       "kind": "file"
     },
@@ -34346,6 +34394,12 @@
       "id": "group:scripts",
       "label": "scripts",
       "group": "scripts",
+      "kind": "directory"
+    },
+    {
+      "id": "group:skills",
+      "label": "skills",
+      "group": "skills",
       "kind": "directory"
     },
     {
@@ -35175,6 +35229,23 @@
       ],
       "group": "architecture",
       "kind": "concept"
+    },
+    {
+      "id": "concept:agentskill",
+      "label": "Agent UI composition skill",
+      "status": "implemented",
+      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes.",
+      "sources": [
+        "skills/ui-framework/SKILL.md",
+        "skills/ui-framework/references/composition.md",
+        "tools/SkillPreview/Program.cs",
+        "tools/SkillPreview/ReleaseScreen.cs",
+        "tools/SkillPreview/SkillPreview.csproj",
+        "tools/New-SkillPreviewGif.py",
+        "docs/agent-skill.md"
+      ],
+      "group": "architecture",
+      "kind": "concept"
     }
   ],
   "edges": [
@@ -35264,8 +35335,18 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 163,
+        "line": 171,
         "text": "](docs/accessibility-2026-10-26.md)"
+      }
+    },
+    {
+      "source": "README.md",
+      "target": "docs/agent-skill.md",
+      "kind": "links",
+      "evidence": {
+        "path": "README.md",
+        "line": 53,
+        "text": "](docs/agent-skill.md)"
       }
     },
     {
@@ -35274,7 +35355,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 76,
+        "line": 84,
         "text": "](docs/application-cleanup-policy-2026-09-25.md)"
       }
     },
@@ -35284,7 +35365,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 118,
+        "line": 126,
         "text": "](docs/bindings.md)"
       }
     },
@@ -35294,7 +35375,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 164,
+        "line": 172,
         "text": "](docs/error-recovery.md)"
       }
     },
@@ -35304,7 +35385,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 142,
+        "line": 150,
         "text": "](docs/knowledge-graph.md)"
       }
     },
@@ -35314,7 +35395,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 174,
+        "line": 182,
         "text": "](docs/knowledge-graph/README.md)"
       }
     },
@@ -35324,7 +35405,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 183,
+        "line": 191,
         "text": "](docs/knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -35344,7 +35425,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 126,
+        "line": 134,
         "text": "](docs/layout-styling.md)"
       }
     },
@@ -35354,7 +35435,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 166,
+        "line": 174,
         "text": "](docs/navigation.md)"
       }
     },
@@ -35374,7 +35455,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 122,
+        "line": 130,
         "text": "](docs/performance-results.md)"
       }
     },
@@ -35384,7 +35465,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 120,
+        "line": 128,
         "text": "](docs/performance.md)"
       }
     },
@@ -35424,7 +35505,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 124,
+        "line": 132,
         "text": "](docs/stress-lab.md)"
       }
     },
@@ -35434,7 +35515,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 70,
+        "line": 78,
         "text": "](docs/timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -35444,7 +35525,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 124,
+        "line": 132,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35454,7 +35535,7 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 162,
+        "line": 170,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -35464,8 +35545,18 @@
       "kind": "links",
       "evidence": {
         "path": "README.md",
-        "line": 165,
+        "line": 173,
         "text": "](docs/virtualization.md)"
+      }
+    },
+    {
+      "source": "README.md",
+      "target": "skills/ui-framework/SKILL.md",
+      "kind": "links",
+      "evidence": {
+        "path": "README.md",
+        "line": 51,
+        "text": "](skills/ui-framework/SKILL.md)"
       }
     },
     {
@@ -35719,6 +35810,96 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/0/sources/8"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "concept:host",
+      "kind": "preserves ownership of",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/edges/74"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "concept:layoutstyle",
+      "kind": "teaches composition with",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/edges/73"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "concept:wpfstartup",
+      "kind": "documents application lifetime through",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/edges/75"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "docs/agent-skill.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/6"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "skills/ui-framework/SKILL.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/0"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/1"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "tools/New-SkillPreviewGif.py",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/5"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "tools/SkillPreview/Program.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/2"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "tools/SkillPreview/ReleaseScreen.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/3"
+      }
+    },
+    {
+      "source": "concept:agentskill",
+      "target": "tools/SkillPreview/SkillPreview.csproj",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/35/sources/4"
       }
     },
     {
@@ -40351,6 +40532,16 @@
     },
     {
       "source": "docs/README.md",
+      "target": "docs/agent-skill.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/README.md",
+        "line": 67,
+        "text": "](agent-skill.md)"
+      }
+    },
+    {
+      "source": "docs/README.md",
       "target": "docs/api-contract.md",
       "kind": "links",
       "evidence": {
@@ -40760,6 +40951,36 @@
       }
     },
     {
+      "source": "docs/agent-skill.md",
+      "target": "skills/ui-framework/SKILL.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 3,
+        "text": "](../skills/ui-framework/SKILL.md)"
+      }
+    },
+    {
+      "source": "docs/agent-skill.md",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 7,
+        "text": "](../skills/ui-framework/references/composition.md)"
+      }
+    },
+    {
+      "source": "docs/agent-skill.md",
+      "target": "tools/SkillPreview/ReleaseScreen.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 41,
+        "text": "](../tools/SkillPreview/ReleaseScreen.cs)"
+      }
+    },
+    {
       "source": "docs/api-contract.md",
       "target": "docs/accessibility.md",
       "kind": "links",
@@ -40855,7 +41076,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 768,
+        "line": 789,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -40881,6 +41102,26 @@
     },
     {
       "source": "docs/backlog.md",
+      "target": "docs/agent-skill.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 745,
+        "text": "](agent-skill.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/agent-skill.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 806,
+        "text": "](agent-skill.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
       "target": "docs/api-contract.md",
       "kind": "links",
       "evidence": {
@@ -40895,7 +41136,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 776,
+        "line": 797,
         "text": "](api-contract.md)"
       }
     },
@@ -40925,7 +41166,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 774,
+        "line": 795,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -40975,7 +41216,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 781,
+        "line": 802,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -40985,7 +41226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 782,
+        "line": 803,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -41035,7 +41276,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 781,
+        "line": 802,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -41055,7 +41296,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 779,
+        "line": 800,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -41065,7 +41306,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 780,
+        "line": 801,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -41085,7 +41326,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 779,
+        "line": 800,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -41105,7 +41346,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 780,
+        "line": 801,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -41155,7 +41396,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 783,
+        "line": 804,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41165,7 +41406,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 784,
+        "line": 805,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -41195,7 +41436,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 778,
+        "line": 799,
         "text": "](native-island-performance.md)"
       }
     },
@@ -41275,7 +41516,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 782,
+        "line": 803,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -41295,7 +41536,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 742,
+        "line": 763,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -41325,7 +41566,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 773,
+        "line": 794,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -41355,7 +41596,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 775,
+        "line": 796,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -41425,7 +41666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 777,
+        "line": 798,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -41445,7 +41686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 777,
+        "line": 798,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -41985,7 +42226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../.githooks/pre-commit)"
       }
     },
@@ -41995,7 +42236,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../.github/dependabot.yml)"
       }
     },
@@ -42005,7 +42246,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../.github/workflows/publish-nuget.yml)"
       }
     },
@@ -42015,7 +42256,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../.github/workflows/validate.yml)"
       }
     },
@@ -42025,7 +42266,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../.github/workflows/validate.yml)"
       }
     },
@@ -42035,7 +42276,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../AGENTS.md)"
       }
     },
@@ -42045,7 +42286,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -42055,7 +42296,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../CONTRIBUTING.md)"
       }
     },
@@ -42065,7 +42306,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../Directory.Build.props)"
       }
     },
@@ -42075,7 +42316,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../LICENSE)"
       }
     },
@@ -42085,7 +42326,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../README.md)"
       }
     },
@@ -42095,17 +42336,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
-        "text": "](../README.md)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "README.md",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 156,
+        "line": 159,
         "text": "](../README.md)"
       }
     },
@@ -42125,7 +42356,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 161,
+        "line": 164,
+        "text": "](../README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 165,
         "text": "](../README.md)"
       }
     },
@@ -42135,7 +42376,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../UI%20Framework.Wpf/Interop/NativeControlHost.cs)"
       }
     },
@@ -42145,7 +42386,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../UI%20Framework.Wpf/Interop/NativeStyleResources.cs)"
       }
     },
@@ -42155,7 +42396,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../UI%20Framework.Wpf/Interop/NativeStyleScope.cs)"
       }
     },
@@ -42165,7 +42406,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../UI%20Framework.Wpf/Interop/NativeViewDescriptor.cs)"
       }
     },
@@ -42175,7 +42416,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../UI%20Framework.Wpf/Interop/WpfUI.cs)"
       }
     },
@@ -42185,7 +42426,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Layout/AdaptivePanel.cs)"
       }
     },
@@ -42195,7 +42436,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Layout/FlexColumnPanel.cs)"
       }
     },
@@ -42205,7 +42446,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Layout/SplitPanePanel.cs)"
       }
     },
@@ -42215,7 +42456,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework.Wpf/Navigation/NavigationSnapshot.cs)"
       }
     },
@@ -42225,7 +42466,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework.Wpf/Navigation/NavigationSurface.cs)"
       }
     },
@@ -42235,7 +42476,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 159,
+        "line": 163,
         "text": "](../UI%20Framework.Wpf/Navigation/NavigationSurface.cs)"
       }
     },
@@ -42245,7 +42486,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../UI%20Framework.Wpf/Rendering/FocusIdentity.cs)"
       }
     },
@@ -42255,47 +42496,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
-        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/Rendering/Node.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 146,
-        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/Rendering/Node.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 147,
-        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/Rendering/Node.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 148,
-        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/Rendering/Node.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 141,
         "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
       }
     },
@@ -42315,6 +42516,26 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
+        "line": 151,
+        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Rendering/Node.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 152,
+        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Rendering/Node.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
         "line": 153,
         "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
       }
@@ -42325,7 +42546,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 156,
+        "line": 154,
         "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
       }
     },
@@ -42335,7 +42556,27 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 157,
+        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Rendering/Node.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 160,
+        "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Rendering/Node.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 169,
         "text": "](../UI%20Framework.Wpf/Rendering/Node.cs)"
       }
     },
@@ -42345,7 +42586,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework.Wpf/Rendering/NodeSnapshot.cs)"
       }
     },
@@ -42355,7 +42596,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Rendering/NodeSnapshot.cs)"
       }
     },
@@ -42365,7 +42606,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/ButtonContentPresenter.cs)"
       }
     },
@@ -42375,7 +42616,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../UI%20Framework.Wpf/Styling/PickerStyles.cs)"
       }
     },
@@ -42385,7 +42626,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Styling/TextBoxStyles.cs)"
       }
     },
@@ -42395,7 +42636,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/TextBoxStyles.cs)"
       }
     },
@@ -42405,7 +42646,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Styling/ThemeColor.cs)"
       }
     },
@@ -42415,7 +42656,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/ThemeColor.cs)"
       }
     },
@@ -42425,7 +42666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Styling/ThemePalette.cs)"
       }
     },
@@ -42435,7 +42676,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/ThemePalette.cs)"
       }
     },
@@ -42445,7 +42686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Styling/ThemeStyles.cs)"
       }
     },
@@ -42455,7 +42696,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../UI%20Framework.Wpf/Styling/ThemeStyles.cs)"
       }
     },
@@ -42465,7 +42706,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/ThemeStyles.cs)"
       }
     },
@@ -42475,7 +42716,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework.Wpf/Styling/ToggleStyles.cs)"
       }
     },
@@ -42485,7 +42726,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 140,
+        "line": 144,
         "text": "](../UI%20Framework.Wpf/UI%20Framework.Wpf.csproj)"
       }
     },
@@ -42495,7 +42736,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
     },
@@ -42505,47 +42746,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
-        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/ViewHost.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 146,
-        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/ViewHost.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 147,
-        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/ViewHost.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 148,
-        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework.Wpf/ViewHost.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 141,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
     },
@@ -42565,6 +42766,26 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
+        "line": 151,
+        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/ViewHost.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 152,
+        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/ViewHost.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
         "line": 153,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
@@ -42575,7 +42796,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 154,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
     },
@@ -42585,7 +42806,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 156,
+        "line": 157,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
     },
@@ -42595,7 +42816,27 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 159,
+        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/ViewHost.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 160,
+        "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/ViewHost.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 169,
         "text": "](../UI%20Framework.Wpf/ViewHost.cs)"
       }
     },
@@ -42605,7 +42846,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../UI%20Framework.Wpf/Virtualization/RowFocusSnapshot.cs)"
       }
     },
@@ -42615,7 +42856,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs)"
       }
     },
@@ -42625,7 +42866,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualListAutomationPeer.cs)"
       }
     },
@@ -42635,7 +42876,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualListControl.cs)"
       }
     },
@@ -42645,7 +42886,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualListControl.cs)"
       }
     },
@@ -42655,7 +42896,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualListSnapshot.cs)"
       }
     },
@@ -42665,7 +42906,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRow.cs)"
       }
     },
@@ -42675,7 +42916,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs)"
       }
     },
@@ -42685,7 +42926,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowAutomationPeer.cs)"
       }
     },
@@ -42695,7 +42936,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowCollection.cs)"
       }
     },
@@ -42705,7 +42946,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowPresenter.cs)"
       }
     },
@@ -42715,7 +42956,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowPresenter.cs)"
       }
     },
@@ -42725,7 +42966,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../UI%20Framework.Wpf/Virtualization/VirtualRowSavedState.cs)"
       }
     },
@@ -42735,7 +42976,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../UI%20Framework.Wpf/WpfComCleanupPolicy.cs)"
       }
     },
@@ -42745,7 +42986,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 162,
+        "line": 166,
         "text": "](../UI%20Framework/Binding.cs)"
       }
     },
@@ -42755,7 +42996,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 164,
+        "line": 168,
         "text": "](../UI%20Framework/Binding.cs)"
       }
     },
@@ -42765,7 +43006,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 142,
+        "line": 146,
         "text": "](../UI%20Framework/Component.cs)"
       }
     },
@@ -42775,7 +43016,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../UI%20Framework/Component.cs)"
       }
     },
@@ -42785,7 +43026,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 153,
+        "line": 157,
         "text": "](../UI%20Framework/Computed.cs)"
       }
     },
@@ -42795,7 +43036,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 164,
+        "line": 168,
         "text": "](../UI%20Framework/Computed.cs)"
       }
     },
@@ -42805,7 +43046,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../UI%20Framework/Dependencies.cs)"
       }
     },
@@ -42815,7 +43056,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 145,
+        "line": 149,
         "text": "](../UI%20Framework/Dependencies.cs)"
       }
     },
@@ -42825,7 +43066,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../UI%20Framework/Dependencies.cs)"
       }
     },
@@ -42835,7 +43076,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../UI%20Framework/IState.cs)"
       }
     },
@@ -42845,7 +43086,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 145,
+        "line": 149,
         "text": "](../UI%20Framework/IState.cs)"
       }
     },
@@ -42855,7 +43096,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../UI%20Framework/IState.cs)"
       }
     },
@@ -42865,7 +43106,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework/Layout/SplitAxis.cs)"
       }
     },
@@ -42875,7 +43116,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework/Layout/SplitPaneLayout.cs)"
       }
     },
@@ -42885,7 +43126,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework/Layout/ViewAlignment.cs)"
       }
     },
@@ -42895,7 +43136,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework/Navigation/NavigationEntry.cs)"
       }
     },
@@ -42905,7 +43146,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../UI%20Framework/Navigation/NavigationStack.cs)"
       }
     },
@@ -42915,7 +43156,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 159,
+        "line": 163,
         "text": "](../UI%20Framework/Navigation/NavigationTransition.cs)"
       }
     },
@@ -42925,7 +43166,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../UI%20Framework/ObservableState.cs)"
       }
     },
@@ -42935,7 +43176,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 145,
+        "line": 149,
         "text": "](../UI%20Framework/ObservableState.cs)"
       }
     },
@@ -42945,7 +43186,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../UI%20Framework/ObservableState.cs)"
       }
     },
@@ -42955,7 +43196,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../UI%20Framework/State.cs)"
       }
     },
@@ -42965,7 +43206,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 145,
+        "line": 149,
         "text": "](../UI%20Framework/State.cs)"
       }
     },
@@ -42975,7 +43216,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../UI%20Framework/State.cs)"
       }
     },
@@ -42985,7 +43226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 144,
+        "line": 148,
         "text": "](../UI%20Framework/StateList.cs)"
       }
     },
@@ -42995,7 +43236,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../UI%20Framework/StateNotifications.cs)"
       }
     },
@@ -43005,7 +43246,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework/Styling/ButtonStyleKind.cs)"
       }
     },
@@ -43015,7 +43256,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../UI%20Framework/Styling/ThemeTokens.cs)"
       }
     },
@@ -43025,7 +43266,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 140,
+        "line": 144,
         "text": "](../UI%20Framework/UI%20Framework.csproj)"
       }
     },
@@ -43035,26 +43276,6 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
-        "text": "](../UI%20Framework/UI.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/UI.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 140,
-        "text": "](../UI%20Framework/UI.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/UI.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
         "line": 141,
         "text": "](../UI%20Framework/UI.cs)"
       }
@@ -43065,167 +43286,177 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 156,
+        "line": 144,
         "text": "](../UI%20Framework/UI.cs)"
       }
     },
     {
       "source": "docs/knowledge-graph.md",
       "target": "UI Framework/UI.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 165,
-        "text": "](../UI%20Framework/UI.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 135,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 136,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 137,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 140,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 141,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 156,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/View.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 165,
-        "text": "](../UI%20Framework/View.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 136,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 137,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 140,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 141,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 156,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewKind.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 165,
-        "text": "](../UI%20Framework/ViewKind.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewSession.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 143,
-        "text": "](../UI%20Framework/ViewSession.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "UI Framework/ViewSession.cs",
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
         "line": 145,
+        "text": "](../UI%20Framework/UI.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/UI.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 160,
+        "text": "](../UI%20Framework/UI.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/UI.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 169,
+        "text": "](../UI%20Framework/UI.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 139,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 140,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 141,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 144,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 145,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 160,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/View.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 169,
+        "text": "](../UI%20Framework/View.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 140,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 141,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 144,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 145,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 160,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewKind.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 169,
+        "text": "](../UI%20Framework/ViewKind.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewSession.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 147,
         "text": "](../UI%20Framework/ViewSession.cs)"
       }
     },
@@ -43235,7 +43466,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 149,
+        "text": "](../UI%20Framework/ViewSession.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/ViewSession.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 159,
         "text": "](../UI%20Framework/ViewSession.cs)"
       }
     },
@@ -43245,7 +43486,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/accessibility-2026-10-26.md)"
       }
     },
@@ -43255,7 +43496,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/accessibility-2026-10-28.md)"
       }
     },
@@ -43265,7 +43506,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/accessibility-2026-10-28.md)"
       }
     },
@@ -43275,8 +43516,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/accessibility.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/agent-skill.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../docs/agent-skill.md)"
       }
     },
     {
@@ -43285,7 +43536,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 140,
+        "line": 144,
         "text": "](../docs/api-contract.md)"
       }
     },
@@ -43295,7 +43546,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/application-cleanup-policy-2026-09-25.md)"
       }
     },
@@ -43305,7 +43556,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 162,
+        "line": 166,
         "text": "](../docs/bindings.md)"
       }
     },
@@ -43315,7 +43566,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/compact-button-validation.md)"
       }
     },
@@ -43325,7 +43576,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 142,
+        "line": 146,
         "text": "](../docs/components.md)"
       }
     },
@@ -43335,7 +43586,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 148,
+        "line": 152,
         "text": "](../docs/components.md)"
       }
     },
@@ -43345,7 +43596,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/consumer-layout-2026-09-24.md)"
       }
     },
@@ -43355,7 +43606,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/consumer-package-2026-09-25.md)"
       }
     },
@@ -43365,7 +43616,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -43375,7 +43626,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -43385,7 +43636,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/discovery-initialization-2026-10-28.md)"
       }
     },
@@ -43395,7 +43646,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -43405,7 +43656,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/editor-timeout-investigation.md)"
       }
     },
@@ -43415,7 +43666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../docs/editors.md)"
       }
     },
@@ -43425,7 +43676,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../docs/error-recovery.md)"
       }
     },
@@ -43435,7 +43686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/file-tree-virtualization-2026-09-24.md)"
       }
     },
@@ -43445,7 +43696,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -43455,7 +43706,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -43465,7 +43716,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -43475,7 +43726,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -43485,7 +43736,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -43495,7 +43746,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../docs/knowledge-graph/README.md)"
       }
     },
@@ -43505,7 +43756,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../docs/launchpad.md)"
       }
     },
@@ -43515,7 +43766,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/layout-isolation-2026-09-24.md)"
       }
     },
@@ -43525,7 +43776,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/layout-styling.md)"
       }
     },
@@ -43535,17 +43786,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
-        "text": "](../docs/manual-acceptance-2026-10-29.md)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "docs/manual-acceptance-2026-10-29.md",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 139,
         "text": "](../docs/manual-acceptance-2026-10-29.md)"
       }
     },
@@ -43565,7 +43806,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 162,
+        "text": "](../docs/manual-acceptance-2026-10-29.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/manual-acceptance-2026-10-29.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 171,
         "text": "](../docs/manual-acceptance-2026-10-29.md)"
       }
     },
@@ -43575,7 +43826,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-interop.md)"
       }
     },
@@ -43585,7 +43836,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-island-performance.md)"
       }
     },
@@ -43595,7 +43846,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/native-island-performance.md)"
       }
     },
@@ -43605,7 +43856,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-lifetime-2026-10-29.md)"
       }
     },
@@ -43615,7 +43866,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/native-lifetime-2026-10-29.md)"
       }
     },
@@ -43625,7 +43876,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-provider-stall-policy.md)"
       }
     },
@@ -43635,7 +43886,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/native-provider-stall-policy.md)"
       }
     },
@@ -43645,7 +43896,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-style-validation.md)"
       }
     },
@@ -43655,7 +43906,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/native-window-memory-2026-10-29.md)"
       }
     },
@@ -43665,7 +43916,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/native-window-memory-2026-10-29.md)"
       }
     },
@@ -43675,7 +43926,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../docs/navigation.md)"
       }
     },
@@ -43685,7 +43936,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 159,
+        "line": 163,
         "text": "](../docs/navigation.md)"
       }
     },
@@ -43695,7 +43946,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/performance-evidence/2026-10-28-guarded-move/README.md)"
       }
     },
@@ -43705,7 +43956,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/performance-evidence/2026-10-28-indexed-shuffles/README.md)"
       }
     },
@@ -43715,7 +43966,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -43725,7 +43976,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/performance-evidence/2026-10-29-editor-mount/README.md)"
       }
     },
@@ -43735,7 +43986,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/performance-evidence/2026-10-29-editor-source-first/README.md)"
       }
     },
@@ -43745,7 +43996,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/performance-evidence/2026-10-29-mount-allocations/README.md)"
       }
     },
@@ -43755,7 +44006,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/performance-guardrails.md)"
       }
     },
@@ -43765,7 +44016,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../docs/performance-guardrails.md)"
       }
     },
@@ -43775,7 +44026,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/performance-results.md)"
       }
     },
@@ -43785,7 +44036,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 153,
+        "line": 157,
         "text": "](../docs/performance.md)"
       }
     },
@@ -43795,7 +44046,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 164,
+        "line": 168,
         "text": "](../docs/performance.md)"
       }
     },
@@ -43805,7 +44056,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../docs/releases/0.1.0-alpha.5.md)"
       }
     },
@@ -43815,7 +44066,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../docs/releases/0.1.0-alpha.6.md)"
       }
     },
@@ -43825,7 +44076,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../docs/releasing.md)"
       }
     },
@@ -43835,7 +44086,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/stress-lab.md)"
       }
     },
@@ -43845,7 +44096,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../docs/stress-lab.md)"
       }
     },
@@ -43855,7 +44106,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/submission-virtualization-2026-09-24.md)"
       }
     },
@@ -43865,7 +44116,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/textbox-contrast-2026-10-28.md)"
       }
     },
@@ -43875,7 +44126,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/textbox-contrast-2026-10-28.md)"
       }
     },
@@ -43885,7 +44136,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../docs/theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -43895,7 +44146,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -43905,7 +44156,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 146,
+        "line": 150,
         "text": "](../docs/themed-reconciliation-2026-09-25.md)"
       }
     },
@@ -43915,7 +44166,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -43925,7 +44176,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../docs/timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -43935,7 +44186,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../docs/timing-variance-investigation.md)"
       }
     },
@@ -43945,7 +44196,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/verification-evidence/2026-10-29-native-lifetime/README.md)"
       }
     },
@@ -43955,7 +44206,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/verification-evidence/2026-10-29-native-lifetime/README.md)"
       }
     },
@@ -43965,7 +44216,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../docs/virtualization.md)"
       }
     },
@@ -43975,7 +44226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../docs/virtualization.md)"
       }
     },
@@ -43985,7 +44236,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../docs/virtualized-editing-2026-10-24.md)"
       }
     },
@@ -43995,7 +44246,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-acceptance-2026-10-29.md)"
       }
     },
@@ -44005,7 +44256,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-final-2026-11-11.md)"
       }
     },
@@ -44015,7 +44266,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-final-2026-11-11.md)"
       }
     },
@@ -44025,7 +44276,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-interaction-2026-10-29.md)"
       }
     },
@@ -44035,7 +44286,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-recovery-2026-10-29.md)"
       }
     },
@@ -44045,7 +44296,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-recovery-2026-10-29.md)"
       }
     },
@@ -44055,7 +44306,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-retention-2026-11-11.md)"
       }
     },
@@ -44065,7 +44316,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-retention-2026-11-11.md)"
       }
     },
@@ -44075,7 +44326,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-review-2026-10-29.md)"
       }
     },
@@ -44085,7 +44336,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-review-2026-10-29.md)"
       }
     },
@@ -44095,7 +44346,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-review-source.json)"
       }
     },
@@ -44105,7 +44356,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-review-source.json)"
       }
     },
@@ -44115,7 +44366,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../docs/webview2-shutdown-2026-11-11.md)"
       }
     },
@@ -44125,7 +44376,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../docs/webview2-shutdown-2026-11-11.md)"
       }
     },
@@ -44135,7 +44386,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../docs/workspace-layout.md)"
       }
     },
@@ -44145,7 +44396,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../global.json)"
       }
     },
@@ -44155,7 +44406,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/ComCleanupLifecycle/ComLifetimeProbe.cpp)"
       }
     },
@@ -44165,7 +44416,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/ComCleanupLifecycle/Program.cs)"
       }
     },
@@ -44175,7 +44426,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/ConsumerDiagnostics/FileTreeChecks.cs)"
       }
     },
@@ -44185,7 +44436,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/ConsumerDiagnostics/Program.cs)"
       }
     },
@@ -44195,7 +44446,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/ActivityPanel.cs)"
       }
     },
@@ -44205,7 +44456,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/ActivityPanel.cs)"
       }
     },
@@ -44215,7 +44466,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/BoardSlot.cs)"
       }
     },
@@ -44225,7 +44476,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/BoardSlot.cs)"
       }
     },
@@ -44235,7 +44486,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/ChecklistPanel.cs)"
       }
     },
@@ -44245,7 +44496,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/ChecklistPanel.cs)"
       }
     },
@@ -44255,7 +44506,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/ChecklistRow.cs)"
       }
     },
@@ -44265,7 +44516,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/ChecklistRow.cs)"
       }
     },
@@ -44275,7 +44526,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/CommandBar.cs)"
       }
     },
@@ -44285,7 +44536,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/CommandBar.cs)"
       }
     },
@@ -44295,7 +44546,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/Dashboard.cs)"
       }
     },
@@ -44305,7 +44556,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/Dashboard.cs)"
       }
     },
@@ -44315,7 +44566,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/DepthNode.cs)"
       }
     },
@@ -44325,7 +44576,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/DepthNode.cs)"
       }
     },
@@ -44335,7 +44586,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/DepthPanel.cs)"
       }
     },
@@ -44345,7 +44596,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/DepthPanel.cs)"
       }
     },
@@ -44355,7 +44606,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/FilterPanel.cs)"
       }
     },
@@ -44365,7 +44616,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/FilterPanel.cs)"
       }
     },
@@ -44375,7 +44626,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/Inspector.cs)"
       }
     },
@@ -44385,7 +44636,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/Inspector.cs)"
       }
     },
@@ -44395,7 +44646,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/ItemEditor.cs)"
       }
     },
@@ -44405,7 +44656,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/ItemEditor.cs)"
       }
     },
@@ -44415,7 +44666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/LabComponent.cs)"
       }
     },
@@ -44425,7 +44676,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/LabComponent.cs)"
       }
     },
@@ -44435,7 +44686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Components/LaunchBoard.cs)"
       }
     },
@@ -44445,7 +44696,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Components/LaunchDetails.cs)"
       }
     },
@@ -44455,7 +44706,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Components/LaunchOverview.cs)"
       }
     },
@@ -44465,7 +44716,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Components/Launchpad.cs)"
       }
     },
@@ -44475,7 +44726,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/ProjectPanel.cs)"
       }
     },
@@ -44485,7 +44736,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/ProjectPanel.cs)"
       }
     },
@@ -44495,7 +44746,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/SummaryPanel.cs)"
       }
     },
@@ -44505,7 +44756,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/SummaryPanel.cs)"
       }
     },
@@ -44515,7 +44766,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/TelemetryPanel.cs)"
       }
     },
@@ -44525,7 +44776,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/TelemetryPanel.cs)"
       }
     },
@@ -44535,7 +44786,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/VisualStressPanel.cs)"
       }
     },
@@ -44545,7 +44796,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/VisualStressPanel.cs)"
       }
     },
@@ -44555,7 +44806,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/WorkList.cs)"
       }
     },
@@ -44565,7 +44816,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/WorkList.cs)"
       }
     },
@@ -44575,7 +44826,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Components/WorkRow.cs)"
       }
     },
@@ -44585,7 +44836,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Components/WorkRow.cs)"
       }
     },
@@ -44595,7 +44846,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/ComparisonEvents.cs)"
       }
     },
@@ -44605,7 +44856,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/ComparisonPhaseTrace.cs)"
       }
     },
@@ -44615,7 +44866,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/ComparisonPresentation.cs)"
       }
     },
@@ -44625,7 +44876,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../samples/Counter/Diagnostics/ComparisonPresentation.cs)"
       }
     },
@@ -44635,7 +44886,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/CounterStartupCheck.cs)"
       }
     },
@@ -44645,7 +44896,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../samples/Counter/Diagnostics/CounterStartupCheck.cs)"
       }
     },
@@ -44655,7 +44906,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/DpiCacheProbe.cs)"
       }
     },
@@ -44665,7 +44916,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../samples/Counter/Diagnostics/DpiCacheProbe.cs)"
       }
     },
@@ -44675,7 +44926,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Diagnostics/LaunchNavigationChecks.cs)"
       }
     },
@@ -44685,7 +44936,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/LayoutEditorComparison.cs)"
       }
     },
@@ -44695,7 +44946,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/Measurement.cs)"
       }
     },
@@ -44705,7 +44956,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/Counter/Diagnostics/NativeStyleComparison.cs)"
       }
     },
@@ -44715,7 +44966,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/Diagnostics/NativeStyleComparison.cs)"
       }
     },
@@ -44725,7 +44976,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/LaunchpadWindow.cs)"
       }
     },
@@ -44735,7 +44986,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/ChecklistItem.cs)"
       }
     },
@@ -44745,7 +44996,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/ChecklistItem.cs)"
       }
     },
@@ -44755,7 +45006,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/Counters.cs)"
       }
     },
@@ -44765,7 +45016,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/Counters.cs)"
       }
     },
@@ -44775,7 +45026,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Models/LaunchItem.cs)"
       }
     },
@@ -44785,7 +45036,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Models/LaunchModel.cs)"
       }
     },
@@ -44795,7 +45046,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Models/LaunchRoute.cs)"
       }
     },
@@ -44805,7 +45056,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Models/LaunchScreen.cs)"
       }
     },
@@ -44815,7 +45066,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 139,
+        "line": 143,
         "text": "](../samples/Counter/Models/LaunchStage.cs)"
       }
     },
@@ -44825,7 +45076,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../samples/Counter/Models/LaunchTheme.cs)"
       }
     },
@@ -44835,7 +45086,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/Preferences.cs)"
       }
     },
@@ -44845,7 +45096,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/Preferences.cs)"
       }
     },
@@ -44855,7 +45106,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/ProjectSettings.cs)"
       }
     },
@@ -44865,7 +45116,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/ProjectSettings.cs)"
       }
     },
@@ -44875,7 +45126,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/StepData.cs)"
       }
     },
@@ -44885,7 +45136,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/StepData.cs)"
       }
     },
@@ -44895,7 +45146,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/VisualStressState.cs)"
       }
     },
@@ -44905,7 +45156,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/VisualStressState.cs)"
       }
     },
@@ -44915,7 +45166,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/WorkData.cs)"
       }
     },
@@ -44925,7 +45176,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/WorkData.cs)"
       }
     },
@@ -44935,7 +45186,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/WorkDetails.cs)"
       }
     },
@@ -44945,7 +45196,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/WorkDetails.cs)"
       }
     },
@@ -44955,7 +45206,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/WorkItem.cs)"
       }
     },
@@ -44965,7 +45216,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/WorkItem.cs)"
       }
     },
@@ -44975,7 +45226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Models/WorkspaceModel.cs)"
       }
     },
@@ -44985,7 +45236,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/Models/WorkspaceModel.cs)"
       }
     },
@@ -44995,7 +45246,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 152,
+        "line": 156,
         "text": "](../samples/Counter/Program.cs)"
       }
     },
@@ -45005,7 +45256,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../samples/Counter/Program.cs)"
       }
     },
@@ -45015,7 +45266,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/Counter/StressRunner.cs)"
       }
     },
@@ -45025,7 +45276,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 166,
+        "line": 170,
         "text": "](../samples/Counter/VisualStressChecks.cs)"
       }
     },
@@ -45035,7 +45286,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/EditorWaitDiagnostics/Program.cs)"
       }
     },
@@ -45045,7 +45296,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/NativeLifetime/LifetimeEditor.cs)"
       }
     },
@@ -45055,7 +45306,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/NativeLifetime/LifetimeEditor.cs)"
       }
     },
@@ -45065,7 +45316,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/NativeLifetime/MemoryWorkload.cs)"
       }
     },
@@ -45075,7 +45326,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/NativeLifetime/MemoryWorkload.cs)"
       }
     },
@@ -45085,7 +45336,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/NativeLifetime/NativeWindowSession.cs)"
       }
     },
@@ -45095,7 +45346,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/NativeLifetime/NativeWindowSession.cs)"
       }
     },
@@ -45105,7 +45356,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/NativeLifetime/RetentionWorkload.cs)"
       }
     },
@@ -45115,7 +45366,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/NativeLifetime/RetentionWorkload.cs)"
       }
     },
@@ -45125,7 +45376,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/NativeLifetime/WindowChecks.cs)"
       }
     },
@@ -45135,7 +45386,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/NativeLifetime/WindowChecks.cs)"
       }
     },
@@ -45145,7 +45396,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/AcceptanceSuite.cs)"
       }
     },
@@ -45155,7 +45406,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/BrowserSession.cs)"
       }
     },
@@ -45165,7 +45416,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/FailureChecks.cs)"
       }
     },
@@ -45175,7 +45426,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/FailureChecks.cs)"
       }
     },
@@ -45185,7 +45436,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/InteractionChecks.cs)"
       }
     },
@@ -45195,7 +45446,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/InteractionWorkspace.cs)"
       }
     },
@@ -45205,7 +45456,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/KeyboardPacket.cs)"
       }
     },
@@ -45215,7 +45466,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/KeyboardProbe.cs)"
       }
     },
@@ -45225,7 +45476,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/Pages/child.html)"
       }
     },
@@ -45235,7 +45486,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/Pages/interaction.html)"
       }
     },
@@ -45245,7 +45496,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/Pages/parent.html)"
       }
     },
@@ -45255,7 +45506,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/ProcessFault.cs)"
       }
     },
@@ -45265,7 +45516,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/ProcessFault.cs)"
       }
     },
@@ -45275,7 +45526,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/Program.cs)"
       }
     },
@@ -45285,7 +45536,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/README.md)"
       }
     },
@@ -45295,7 +45546,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/RetentionChecks.cs)"
       }
     },
@@ -45305,7 +45556,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/RetentionChecks.cs)"
       }
     },
@@ -45315,7 +45566,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/RetentionCycle.cs)"
       }
     },
@@ -45325,7 +45576,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/RetentionCycle.cs)"
       }
     },
@@ -45335,7 +45586,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/RetentionTelemetry.cs)"
       }
     },
@@ -45345,7 +45596,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/RetentionTelemetry.cs)"
       }
     },
@@ -45355,7 +45606,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/ScreenProbe.cs)"
       }
     },
@@ -45365,7 +45616,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../samples/WebViewAcceptance/ShutdownChecks.cs)"
       }
     },
@@ -45375,7 +45626,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../samples/WebViewAcceptance/ShutdownChecks.cs)"
       }
     },
@@ -45385,7 +45636,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/WorkspaceComparison/LayoutProbe.cs)"
       }
     },
@@ -45395,7 +45646,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/WorkspaceComparison/Program.cs)"
       }
     },
@@ -45405,7 +45656,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../samples/WorkspaceComparison/SubmissionListScenario.cs)"
       }
     },
@@ -45415,7 +45666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/export-knowledge-graph-history.py)"
       }
     },
@@ -45425,7 +45676,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/knowledge-graph-agents.md)"
       }
     },
@@ -45435,7 +45686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/knowledge-graph-history.js)"
       }
     },
@@ -45445,7 +45696,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/knowledge-graph.html)"
       }
     },
@@ -45455,7 +45706,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/query-knowledge-graph.py)"
       }
     },
@@ -45465,7 +45716,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../scripts/test-editor-mount.py)"
       }
     },
@@ -45475,7 +45726,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/test-knowledge-graph-viewer.cjs)"
       }
     },
@@ -45485,7 +45736,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/test-knowledge-graph.py)"
       }
     },
@@ -45495,7 +45746,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../scripts/test-native-memory.py)"
       }
     },
@@ -45505,7 +45756,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../scripts/test-native-memory.py)"
       }
     },
@@ -45515,7 +45766,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../scripts/test-performance-pairs.py)"
       }
     },
@@ -45525,7 +45776,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../scripts/test-timing-bottleneck.py)"
       }
     },
@@ -45535,8 +45786,28 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 169,
+        "line": 173,
         "text": "](../scripts/update-knowledge-graph.py)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "skills/ui-framework/SKILL.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../skills/ui-framework/SKILL.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../skills/ui-framework/references/composition.md)"
       }
     },
     {
@@ -45545,7 +45816,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tests/UI%20Framework.Checks/AccessibilityAcceptanceTests.cs)"
       }
     },
@@ -45555,7 +45826,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tests/UI%20Framework.Checks/AccessibilityAcceptanceTests.cs)"
       }
     },
@@ -45565,7 +45836,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tests/UI%20Framework.Checks/AccessibilityTests.cs)"
       }
     },
@@ -45575,7 +45846,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/BindingChecks.cs)"
       }
     },
@@ -45585,7 +45856,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 162,
+        "line": 166,
         "text": "](../tests/UI%20Framework.Checks/BindingChecks.cs)"
       }
     },
@@ -45595,7 +45866,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/ButtonContentTests.cs)"
       }
     },
@@ -45605,7 +45876,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/CompactButtonTests.cs)"
       }
     },
@@ -45615,7 +45886,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../tests/UI%20Framework.Checks/CompactInputTests.cs)"
       }
     },
@@ -45625,7 +45896,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/ComponentChecks.cs)"
       }
     },
@@ -45635,7 +45906,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/ComponentChecks.cs)"
       }
     },
@@ -45645,7 +45916,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tests/UI%20Framework.Checks/ContrastThemeTests.cs)"
       }
     },
@@ -45655,7 +45926,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/ContrastThemeTests.cs)"
       }
     },
@@ -45665,7 +45936,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../tests/UI%20Framework.Checks/EditorTests.cs)"
       }
     },
@@ -45675,7 +45946,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/FrameworkTests.cs)"
       }
     },
@@ -45685,7 +45956,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/GuardedMoveTests.cs)"
       }
     },
@@ -45695,7 +45966,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tests/UI%20Framework.Checks/GuardedMoveTests.cs)"
       }
     },
@@ -45705,7 +45976,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tests/UI%20Framework.Checks/KeyedReorderTests.cs)"
       }
     },
@@ -45715,7 +45986,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/LayoutStyleTests.cs)"
       }
     },
@@ -45725,7 +45996,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeHostTests.cs)"
       }
     },
@@ -45735,7 +46006,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/AsyncNativeTestControl.cs)"
       }
     },
@@ -45745,7 +46016,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/AsyncNativeTestControl.cs)"
       }
     },
@@ -45755,7 +46026,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/DispatcherTaskPump.cs)"
       }
     },
@@ -45765,7 +46036,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/DispatcherTaskPump.cs)"
       }
     },
@@ -45775,7 +46046,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/HostCollectabilityTests.cs)"
       }
     },
@@ -45785,7 +46056,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/HostCollectabilityTests.cs)"
       }
     },
@@ -45795,7 +46066,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/NativeAsyncLifetimeTests.cs)"
       }
     },
@@ -45805,7 +46076,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/NativeAsyncLifetimeTests.cs)"
       }
     },
@@ -45815,7 +46086,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/NativeInitializationLease.cs)"
       }
     },
@@ -45825,7 +46096,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/NativeInitializationLease.cs)"
       }
     },
@@ -45835,7 +46106,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/SubscribedNativeTestControl.cs)"
       }
     },
@@ -45845,7 +46116,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tests/UI%20Framework.Checks/NativeLifetime/SubscribedNativeTestControl.cs)"
       }
     },
@@ -45855,7 +46126,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tests/UI%20Framework.Checks/NativeStyleTests.cs)"
       }
     },
@@ -45865,7 +46136,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 157,
+        "line": 161,
         "text": "](../tests/UI%20Framework.Checks/NavigationTests.cs)"
       }
     },
@@ -45875,7 +46146,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/OptimizationChecks.cs)"
       }
     },
@@ -45885,7 +46156,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 169,
         "text": "](../tests/UI%20Framework.Checks/OptimizationChecks.cs)"
       }
     },
@@ -45895,7 +46166,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 146,
+        "line": 150,
         "text": "](../tests/UI%20Framework.Checks/PanelReorderTests.cs)"
       }
     },
@@ -45905,7 +46176,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 137,
+        "line": 141,
         "text": "](../tests/UI%20Framework.Checks/PickerStyleTests.cs)"
       }
     },
@@ -45915,7 +46186,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/PrimitiveTests.cs)"
       }
     },
@@ -45925,7 +46196,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/CallbackProbe.cs)"
       }
     },
@@ -45935,7 +46206,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 169,
         "text": "](../tests/UI%20Framework.Checks/Probes/CallbackProbe.cs)"
       }
     },
@@ -45945,7 +46216,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/MemoProbe.cs)"
       }
     },
@@ -45955,7 +46226,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 169,
         "text": "](../tests/UI%20Framework.Checks/Probes/MemoProbe.cs)"
       }
     },
@@ -45965,7 +46236,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/MountMutation.cs)"
       }
     },
@@ -45975,7 +46246,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/Probes/MountMutation.cs)"
       }
     },
@@ -45985,7 +46256,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/OtherProbe.cs)"
       }
     },
@@ -45995,7 +46266,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/Probes/OtherProbe.cs)"
       }
     },
@@ -46005,7 +46276,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/Pair.cs)"
       }
     },
@@ -46015,7 +46286,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 169,
         "text": "](../tests/UI%20Framework.Checks/Probes/Pair.cs)"
       }
     },
@@ -46025,7 +46296,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/Preferences.cs)"
       }
     },
@@ -46035,7 +46306,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 162,
+        "line": 166,
         "text": "](../tests/UI%20Framework.Checks/Probes/Preferences.cs)"
       }
     },
@@ -46045,7 +46316,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/Probe.cs)"
       }
     },
@@ -46055,7 +46326,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/Probes/Probe.cs)"
       }
     },
@@ -46065,7 +46336,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/Profile.cs)"
       }
     },
@@ -46075,7 +46346,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 162,
+        "line": 166,
         "text": "](../tests/UI%20Framework.Checks/Probes/Profile.cs)"
       }
     },
@@ -46085,7 +46356,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/Probes/SelectionProbe.cs)"
       }
     },
@@ -46095,7 +46366,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 165,
+        "line": 169,
         "text": "](../tests/UI%20Framework.Checks/Probes/SelectionProbe.cs)"
       }
     },
@@ -46105,7 +46376,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/Probes/TrackedTextComposition.cs)"
       }
     },
@@ -46115,7 +46386,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../tests/UI%20Framework.Checks/RendererFailureTests.cs)"
       }
     },
@@ -46125,7 +46396,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 143,
+        "line": 147,
         "text": "](../tests/UI%20Framework.Checks/StateNotificationTests.cs)"
       }
     },
@@ -46135,7 +46406,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/StateSessionTests.cs)"
       }
     },
@@ -46145,7 +46416,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tests/UI%20Framework.Checks/TestAutomationTree.cs)"
       }
     },
@@ -46155,7 +46426,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tests/UI%20Framework.Checks/ThemeResourceUpdateTests.cs)"
       }
     },
@@ -46165,7 +46436,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/ThemeResourceUpdateTests.cs)"
       }
     },
@@ -46175,7 +46446,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/ToggleStyleTests.cs)"
       }
     },
@@ -46185,7 +46456,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 155,
+        "line": 159,
         "text": "](../tests/UI%20Framework.Checks/ViewValidationTests.cs)"
       }
     },
@@ -46195,17 +46466,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 151,
-        "text": "](../tests/UI%20Framework.Checks/VirtualizationTests.cs)"
-      }
-    },
-    {
-      "source": "docs/knowledge-graph.md",
-      "target": "tests/UI Framework.Checks/VirtualizationTests.cs",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 155,
         "text": "](../tests/UI%20Framework.Checks/VirtualizationTests.cs)"
       }
     },
@@ -46221,11 +46482,21 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/VirtualizationTests.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 162,
+        "text": "](../tests/UI%20Framework.Checks/VirtualizationTests.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tests/UI Framework.Checks/VirtualizedEditingTests.cs",
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tests/UI%20Framework.Checks/VirtualizedEditingTests.cs)"
       }
     },
@@ -46235,7 +46506,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tests/UI%20Framework.Checks/VirtualizedEditingTests.cs)"
       }
     },
@@ -46245,7 +46516,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 138,
+        "line": 142,
         "text": "](../tests/UI%20Framework.Checks/WorkspaceLayoutTests.cs)"
       }
     },
@@ -46255,7 +46526,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tests/UI%20Framework.Checks/WpfComCleanupPolicyTests.cs)"
       }
     },
@@ -46265,7 +46536,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tools/AccessibilityAcceptance/AccessibilityAcceptance.csproj)"
       }
     },
@@ -46275,7 +46546,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 135,
+        "line": 139,
         "text": "](../tools/AccessibilityAcceptance/Program.cs)"
       }
     },
@@ -46285,7 +46556,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Collect-ComparisonTrace.ps1)"
       }
     },
@@ -46295,7 +46566,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tools/KeyedShuffleDiagnostics/Program.cs)"
       }
     },
@@ -46305,7 +46576,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/KeyedShuffleDiagnostics/Program.cs)"
       }
     },
@@ -46315,7 +46586,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/KeyedShuffleDiagnostics/ShuffleCounters.cs)"
       }
     },
@@ -46325,8 +46596,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/KeyedShuffleDiagnostics/ShuffleRow.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tools/New-SkillPreviewGif.py",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../tools/New-SkillPreviewGif.py)"
       }
     },
     {
@@ -46335,8 +46616,38 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../tools/New-SourceArchive.ps1)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tools/SkillPreview/Program.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../tools/SkillPreview/Program.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tools/SkillPreview/ReleaseScreen.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../tools/SkillPreview/ReleaseScreen.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tools/SkillPreview/SkillPreview.csproj",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../tools/SkillPreview/SkillPreview.csproj)"
       }
     },
     {
@@ -46345,7 +46656,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Summarize-EditorMount.py)"
       }
     },
@@ -46355,7 +46666,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tools/Summarize-NativeMemory.py)"
       }
     },
@@ -46365,7 +46676,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tools/Summarize-NativeMemory.py)"
       }
     },
@@ -46375,7 +46686,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Summarize-PerformancePairs.py)"
       }
     },
@@ -46385,7 +46696,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Summarize-TimingBottleneck.py)"
       }
     },
@@ -46395,7 +46706,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 140,
+        "line": 144,
         "text": "](../tools/Test-ApiCompatibility.ps1)"
       }
     },
@@ -46405,7 +46716,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-ComCleanupLifecycle.ps1)"
       }
     },
@@ -46415,7 +46726,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-ConsumerLayout.ps1)"
       }
     },
@@ -46425,7 +46736,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-ConsumerPackages.ps1)"
       }
     },
@@ -46435,7 +46746,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../tools/Test-Documentation.ps1)"
       }
     },
@@ -46445,7 +46756,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-EditorMount.ps1)"
       }
     },
@@ -46455,7 +46766,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-EditorWaitDiagnostics.ps1)"
       }
     },
@@ -46465,7 +46776,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 158,
+        "line": 162,
         "text": "](../tools/Test-KeyedShuffles.ps1)"
       }
     },
@@ -46475,7 +46786,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-KeyedShuffles.ps1)"
       }
     },
@@ -46485,7 +46796,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tools/Test-NativeLifetime.ps1)"
       }
     },
@@ -46495,7 +46806,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 149,
+        "line": 153,
         "text": "](../tools/Test-NativeLifetime.ps1)"
       }
     },
@@ -46505,7 +46816,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tools/Test-NativeStyleIsolation.ps1)"
       }
     },
@@ -46515,7 +46826,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-NativeStyleIsolation.ps1)"
       }
     },
@@ -46525,7 +46836,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../tools/Test-Packages.ps1)"
       }
     },
@@ -46535,7 +46846,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-Performance.ps1)"
       }
     },
@@ -46545,7 +46856,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-PresentationContext.ps1)"
       }
     },
@@ -46555,7 +46866,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 167,
+        "line": 171,
         "text": "](../tools/Test-Release.ps1)"
       }
     },
@@ -46565,7 +46876,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../tools/Test-Release.ps1)"
       }
     },
@@ -46575,7 +46886,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 136,
+        "line": 140,
         "text": "](../tools/Test-WebViewAcceptance.ps1)"
       }
     },
@@ -46585,7 +46896,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-WindowStartup.ps1)"
       }
     },
@@ -46595,7 +46906,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 168,
+        "line": 172,
         "text": "](../tools/Test-WindowStartup.ps1)"
       }
     },
@@ -46605,7 +46916,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/Test-WorkspacePerformance.ps1)"
       }
     },
@@ -46615,7 +46926,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tools/VirtualizedEditingAcceptance/Program.cs)"
       }
     },
@@ -46625,7 +46936,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 154,
+        "line": 158,
         "text": "](../tools/VirtualizedEditingAcceptance/VirtualizedEditingAcceptance.csproj)"
       }
     },
@@ -46635,7 +46946,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
-        "line": 163,
+        "line": 167,
         "text": "](../tools/performance-baseline.json)"
       }
     },
@@ -48557,6 +48868,11 @@
     {
       "source": "group:docs",
       "target": "docs/accessibility.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/agent-skill.md",
       "kind": "contains"
     },
     {
@@ -76360,6 +76676,21 @@
       "kind": "contains"
     },
     {
+      "source": "group:skills",
+      "target": "skills/ui-framework/SKILL.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:skills",
+      "target": "skills/ui-framework/agents/openai.yaml",
+      "kind": "contains"
+    },
+    {
+      "source": "group:skills",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "contains"
+    },
+    {
       "source": "group:tests",
       "target": "tests/UI Framework.Checks/AccessibilityAcceptanceTests.cs",
       "kind": "contains"
@@ -76686,12 +77017,32 @@
     },
     {
       "source": "group:tools",
+      "target": "tools/New-SkillPreviewGif.py",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
       "target": "tools/New-SourceArchive.ps1",
       "kind": "contains"
     },
     {
       "source": "group:tools",
       "target": "tools/Save-BenchmarkDump.ps1",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
+      "target": "tools/SkillPreview/Program.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
+      "target": "tools/SkillPreview/ReleaseScreen.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tools",
+      "target": "tools/SkillPreview/SkillPreview.csproj",
       "kind": "contains"
     },
     {
@@ -76895,6 +77246,16 @@
       }
     },
     {
+      "source": "skills/ui-framework/SKILL.md",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "links",
+      "evidence": {
+        "path": "skills/ui-framework/SKILL.md",
+        "line": 16,
+        "text": "](references/composition.md)"
+      }
+    },
+    {
       "source": "tests/UI Framework.Checks/UI Framework.Checks.csproj",
       "target": "UI Framework.Wpf/UI Framework.Wpf.csproj",
       "kind": "project reference",
@@ -76931,6 +77292,16 @@
       "evidence": {
         "path": "tools/KeyedShuffleDiagnostics/KeyedShuffleDiagnostics.csproj",
         "line": 3,
+        "text": "<ProjectReference Include=\"../../UI Framework.Wpf/UI Framework.Wpf.csproj\""
+      }
+    },
+    {
+      "source": "tools/SkillPreview/SkillPreview.csproj",
+      "target": "UI Framework.Wpf/UI Framework.Wpf.csproj",
+      "kind": "project reference",
+      "evidence": {
+        "path": "tools/SkillPreview/SkillPreview.csproj",
+        "line": 9,
         "text": "<ProjectReference Include=\"../../UI Framework.Wpf/UI Framework.Wpf.csproj\""
       }
     },

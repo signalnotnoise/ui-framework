@@ -747,6 +747,21 @@
         "AGENTS.md",
         "docs/knowledge-graph/README.md"
       ]
+    },
+    {
+      "id": "agentskill",
+      "label": "Agent UI composition skill",
+      "status": "implemented",
+      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes.",
+      "sources": [
+        "skills/ui-framework/SKILL.md",
+        "skills/ui-framework/references/composition.md",
+        "tools/SkillPreview/Program.cs",
+        "tools/SkillPreview/ReleaseScreen.cs",
+        "tools/SkillPreview/SkillPreview.csproj",
+        "tools/New-SkillPreviewGif.py",
+        "docs/agent-skill.md"
+      ]
     }
   ],
   "edges": [
@@ -1114,6 +1129,21 @@
       "from": "lifecycle",
       "relation": "checks post-disposal collectability of visited native rows in",
       "to": "virtualization"
+    },
+    {
+      "from": "agentskill",
+      "relation": "teaches composition with",
+      "to": "layoutstyle"
+    },
+    {
+      "from": "agentskill",
+      "relation": "preserves ownership of",
+      "to": "host"
+    },
+    {
+      "from": "agentskill",
+      "relation": "documents application lifetime through",
+      "to": "wpfstartup"
     }
   ],
   "releaseVersion": "0.1.0-alpha.6"

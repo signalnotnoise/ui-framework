@@ -46,6 +46,14 @@ dotnet run --project samples/Counter -- --showcase
 
 The demo uses session-only sample data. The existing stress lab remains the default. See [Launchpad](docs/launchpad.md) for a short walkthrough.
 
+## Build with an agent
+
+Use the [UI Framework skill](skills/ui-framework/SKILL.md) to help coding agents
+build clean native C# interfaces with retained state, responsive layout and
+scoped themes. [Install it and reproduce the before/after](docs/agent-skill.md).
+
+![Native C# release workspace before and after applying the UI Framework skill guidance](docs/images/ui-framework-before-after.gif)
+
 ## Write a view
 
 ```csharp
