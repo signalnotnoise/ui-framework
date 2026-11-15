@@ -4,6 +4,10 @@ $version = [string]([xml](Get-Content (Join-Path $projectRoot 'Directory.Build.p
 $readme = Get-Content (Join-Path $projectRoot 'README.md') -Raw
 $heading = if ($version.Contains('-')) { '**Experimental · ' + $version + ' preview ·' } else { '**' + $version + ' ·' }
 if (-not $readme.Contains($heading)) { throw 'README version differs from package version.' }
+$packageReadme = Get-Content (Join-Path $projectRoot 'docs/package-readme.md') -Raw
+if (-not $version.Contains('-') -and $packageReadme -match '(?im)^## Preview limitations|This is an evaluation release') {
+    throw 'Stable package README retains obsolete preview status.'
+}
 $changelog = Get-Content (Join-Path $projectRoot 'CHANGELOG.md') -Raw
 $release = [regex]::Match($changelog, '(?m)^## (\d+\.\d+\.\d+[^\s]*)')
 if ($release.Groups[1].Value -cne $version) { throw 'Latest changelog release differs from package version.' }

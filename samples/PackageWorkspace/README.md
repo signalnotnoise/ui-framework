@@ -27,9 +27,9 @@ native controls while restoring model data; it does not serialize native selecti
 
 ## Upgrade and repeatable checks
 
-The default exact dependency and lock file target alpha.7. To test alpha.6 in a
-separate copy, restore with `-p:FrameworkPackageVersion=0.1.0-alpha.6 --force-evaluate`
-and pass that property to the subsequent build. Restore/build alpha.7 again to
+The default exact dependency and lock file target 1.0.0. To test alpha.7 in a
+separate copy, restore with `-p:FrameworkPackageVersion=0.1.0-alpha.7 --force-evaluate`
+and pass that property to the subsequent build. Restore/build 1.0.0 again to
 perform a source upgrade. Never overwrite a published package or reuse caches
 as proof of a clean installation.
 
@@ -45,9 +45,9 @@ and records timing, UI-thread allocations, component work and post-shutdown memo
 Add `--full-list` for the unvirtualized control workload. Use a fresh output path.
 
 In the framework checkout, `tools/Test-WorkspaceAdoption.ps1` automates isolated
-NuGet-only restores, alternating alpha.6/alpha.7 checks and binary compatibility:
-it keeps the alpha.6 consumer assembly/deps intact while replacing only the two
-framework DLLs with the published alpha.7 DLLs. `tools/Summarize-WorkspaceAdoption.py`
+NuGet-only restores, alternating alpha.7/1.0.0 checks and binary compatibility:
+it keeps the alpha.7 consumer assembly/deps intact while replacing only the two
+framework DLLs with the published 1.0.0 DLLs. `tools/Summarize-WorkspaceAdoption.py`
 verifies loaded hashes, ownership and measurements. These local diagnostics are
 separate from the framework's exact-candidate hosted performance release gate.
 

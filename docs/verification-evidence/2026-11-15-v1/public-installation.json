@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "candidate": "cbd85b8beb2e3aa57b709dd96b4943365db02f57",
+  "publishRun": 43721319796,
+  "source": "Fresh NuGet.org-only caches; source and binary upgrade acceptance",
+  "packages": [
+    {
+      "package": "SignalNotNoise.UI",
+      "version": "1.0.0",
+      "assembly": "UI Framework.dll",
+      "hostedSha256": "e04e9dc9ef2303d4d797721a765b4fc0ede63c75d98c499ab09d8b452cefd29d",
+      "publicInstalledSha256": "e04e9dc9ef2303d4d797721a765b4fc0ede63c75d98c499ab09d8b452cefd29d",
+      "binaryUpgradeSha256": "e04e9dc9ef2303d4d797721a765b4fc0ede63c75d98c499ab09d8b452cefd29d",
+      "matches": true
+    },
+    {
+      "package": "SignalNotNoise.UI.Wpf",
+      "version": "1.0.0",
+      "assembly": "UI Framework.Wpf.dll",
+      "hostedSha256": "22aca72a689ba009fdb0aa388872fa3f3e328862846411df69beb15c90ba48dc",
+      "publicInstalledSha256": "22aca72a689ba009fdb0aa388872fa3f3e328862846411df69beb15c90ba48dc",
+      "binaryUpgradeSha256": "22aca72a689ba009fdb0aa388872fa3f3e328862846411df69beb15c90ba48dc",
+      "matches": true
+    }
+  ],
+  "processes": 14
+}

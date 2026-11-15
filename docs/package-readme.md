@@ -42,8 +42,15 @@ The policy changes CLR COM-wrapper cleanup for the lifetime of that STA and
 cannot restore eager cleanup. The application owns failure reporting and shutdown
 ordering.
 
-## Preview limitations
+## Supported scope and limits
 
-This is an evaluation release, not a production SwiftUI replacement. Visible-window focus/IME and accessibility behavior still need validation. Rendering is not transactional, some large list shuffles have quadratic cost, and non-Windows renderers are not available.
+V1 acceptance covers Windows 11 x64 / .NET 10 and the documented source, binary
+and behavioral contracts. Historical physical focus/IME and contrast acceptance
+has recorded environment limits; renewed physical Narrator verification after
+peer-cache cleanup remains a post-v1 follow-up. Rendering does not roll back
+arbitrary native mutations. Virtualization bounds native realization, not all
+description processing or visited-row logical state. Native provider recovery
+and application shutdown remain application-owned. Non-Windows renderers are
+not included. See the repository API contract and release evidence for scope.
 
 See the [source and examples](https://github.com/signalnotnoise/ui-framework), [documentation](https://github.com/signalnotnoise/ui-framework/tree/main/docs), and [issue tracker](https://github.com/signalnotnoise/ui-framework/issues). Licensed under MIT.

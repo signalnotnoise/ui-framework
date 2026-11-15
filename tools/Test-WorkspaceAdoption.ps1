@@ -1,8 +1,8 @@
 #requires -Version 7.0
 param(
     [Parameter(Mandatory)][string]$OutputDirectory,
-    [string]$BaselineVersion='0.1.0-alpha.6',
-    [string]$CandidateVersion='0.1.0-alpha.7',
+    [string]$BaselineVersion='0.1.0-alpha.7',
+    [string]$CandidateVersion='1.0.0',
     [string]$CandidatePackageDirectory,
     [ValidateRange(3,15)][int]$Repetitions=3
 )

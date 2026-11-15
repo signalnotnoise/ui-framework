@@ -4,7 +4,7 @@
 
 **1.0.0 · Windows renderer · .NET 10**
 
-The v1 candidate preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Publication is conditional on exact-commit hosted correctness, package and performance gates. See the [v1 release record](docs/releases/1.0.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
+V1 preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Version 1.0.0 was published after exact-commit hosted correctness, package and performance gates passed. See the [v1 release record](docs/releases/1.0.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
 
 A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the first backend renders WPF controls on Windows. The runtime requires no XAML or third-party packages. Tests use MSTest.
 
@@ -14,21 +14,18 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 *The `samples/Counter` binding stress lab, rendered by SignalNotNoise.UI.Wpf as native WPF controls. This is the offscreen capture from the automated `--stress --snapshot` run in CI on `windows-latest`.*
 
-## NuGet preview
+## NuGet
 
-Version `0.1.0-alpha.7` was published November 13, 2026 from `c5d639b` after
-both hosted workflows passed. Fresh NuGet installation and alpha.6-to-alpha.7
-source/binary upgrades are verified. See the [release record](docs/releases/0.1.0-alpha.7.md).
-Install [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.7)
-with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.7):
+Version `1.0.0` was published November 15, 2026 from `cbd85b8` after both
+hosted workflows passed all correctness/package checks and 32 performance checks
+each. See the [detailed release record](docs/releases/1.0.0.md) for the development
+history, measurements, acceptance scope and known embedded-README discrepancy.
+Install [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/1.0.0)
+with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise.UI/1.0.0):
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.7
+dotnet add package SignalNotNoise.UI.Wpf --version 1.0.0
 ```
-
-Published alpha.7 does not include the peer-cache cleanup and acceptance work
-committed in `a1d2ed6`. Version 1.0.0 is currently being validated; the installation
-command above remains the latest verified public package until publication finishes.
 
 The WPF package brings in the core automatically. See the
 [package getting-started guide](docs/package-readme.md) and

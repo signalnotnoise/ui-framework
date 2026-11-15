@@ -4,17 +4,17 @@
     "net10.0-windows7.0": {
       "SignalNotNoise.UI.Wpf": {
         "type": "Direct",
-        "requested": "[0.1.0-alpha.7, 0.1.0-alpha.7]",
-        "resolved": "0.1.0-alpha.7",
-        "contentHash": "G/5dJM4unai1Ulkrdqqfn4kG6bA/xIFcD13oKI191kNk3amN8SeGJr514WM1AWi5mJzmd0WyUqdQURdcrXa6mw==",
+        "requested": "[1.0.0, 1.0.0]",
+        "resolved": "1.0.0",
+        "contentHash": "9LSCjyT9IMJw4EYk4M1El4me1vj8rLhfzVDSvuiSMI8+6XrBOji8L0nzQXmb6DzkPF4Dp3VWihMpqFomivuLRw==",
         "dependencies": {
-          "SignalNotNoise.UI": "0.1.0-alpha.7"
+          "SignalNotNoise.UI": "1.0.0"
         }
       },
       "SignalNotNoise.UI": {
         "type": "Transitive",
-        "resolved": "0.1.0-alpha.7",
-        "contentHash": "Sy9NYRUM1FoRgw0q9TmkN3Ouyn378ywW68rGHgcMkVLmX3bFW87No8YiSeDYoApMzdVbixxf7ynG8HNnF1KkqQ=="
+        "resolved": "1.0.0",
+        "contentHash": "c34Ep3nBPeZZhyrRPN+7XodApi4isYx+ngiRsgVrI56Pw00r12FnsLpITLIhT2R6xavu4St54YmmqHF62d40Lg=="
       }
     }
   }

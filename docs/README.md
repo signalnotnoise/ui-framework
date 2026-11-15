@@ -1,6 +1,6 @@
 # UI Framework documentation
 
-The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. The v1 candidate adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [v1 record](releases/1.0.0.md).
+The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [v1 record](releases/1.0.0.md).
 
 ## Start here
 
@@ -8,9 +8,9 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | --- | --- |
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Framework backlog](backlog.md) | Prioritized running work list, completion criteria, status and completed work. |
-| [Current alpha.7 release](releases/0.1.0-alpha.7.md) | Published version, exact source, hosted gates and public installation. |
+| [Version 1.0.0 release](releases/1.0.0.md) | Published version, exact source, hosted gates and public installation. |
 | [Independent package workspace](../samples/PackageWorkspace/README.md) | NuGet-only setup, startup/shutdown and source/binary upgrades. |
-| [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
+| [Release checklist](releasing.md) | Release status, validation and owner decisions. |
 | [September 24 publication status](publication-status-2026-09-24.md) | Historical source and package gate that first captured the editor timeout. |
 | [September 26 local package adoption](consumer-package-2026-09-25.md) | Production cleanup policy, passing framework gate, and passing 15-sample consumer comparison. |
 | [September 25 editor wait isolation](editor-wait-isolation-2026-09-25.md) | Captured text-services wait, native subtraction experiments, and setter-level timings. |

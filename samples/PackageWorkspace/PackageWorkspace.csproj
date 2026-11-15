@@ -5,7 +5,7 @@
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <FrameworkPackageVersion Condition="'$(FrameworkPackageVersion)' == ''">0.1.0-alpha.7</FrameworkPackageVersion>
+    <FrameworkPackageVersion Condition="'$(FrameworkPackageVersion)' == ''">1.0.0</FrameworkPackageVersion>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
   <ItemGroup><PackageReference Include="SignalNotNoise.UI.Wpf" Version="[$(FrameworkPackageVersion)]" /></ItemGroup>

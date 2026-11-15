@@ -1,0 +1,8 @@
+{
+  "candidate": "cbd85b8beb2e3aa57b709dd96b4943365db02f57",
+  "archive": "candidate-validation.zip",
+  "sha256": "6988ef9703fafe2407f60990d3a41145d6944238d8fc2749e40891cf81bff64a",
+  "entries": 605,
+  "bytes": 1252045,
+  "scope": "Local release/package/upgrade checks, local accepted-baseline performance, source match verification, hosted Validate evidence and package artifacts. Publication evidence is separate."
+}

@@ -1,8 +1,9 @@
 # Changelog
 
-## 1.0.0 — release candidate, November 15, 2026
+## 1.0.0 — November 15, 2026
 
-Publication pending exact-commit hosted gates. Establish the supported v1 API and
+Published both libraries and symbols from `cbd85b8` after both exact-commit hosted
+workflows passed, including 32 performance checks each. Establish the supported v1 API and
 behavioral compatibility contract for Windows 11 x64 / .NET 10. See the
 [release record](docs/releases/1.0.0.md) for evidence and scope.
 

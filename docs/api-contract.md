@@ -1,6 +1,6 @@
 # Public API and compatibility contract
 
-FW-016 decision, October 23, 2026; adopted for the v1 candidate November 15.
+FW-016 decision, October 23, 2026; adopted for v1 on November 15.
 This defines the supported stable contract. Publication status and exact-package
 evidence are tracked in [the v1 release record](releases/1.0.0.md).
 
@@ -47,7 +47,7 @@ An intentional API redesign requires a separately reviewed migration proposal.
 These are the supported v1 behavioral contracts. Provider-completion, focus-race and wrapper fixes
 ship in alpha.6/alpha.7. [October 29 manual acceptance](manual-acceptance-2026-10-29.md)
 closes FW-005/FW-006 within its recorded scope; missing provider/build/scale details
-are not inferred. The later automation peer-cache cleanup remains unpublished,
+are not inferred. The automation peer-cache cleanup ships in 1.0.0,
 with additional physical Narrator revalidation deferred to FW-026 after v1.
 
 ## Compatibility checks and change policy

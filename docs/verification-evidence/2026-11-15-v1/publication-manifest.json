@@ -1,0 +1,8 @@
+{
+  "candidate": "cbd85b8beb2e3aa57b709dd96b4943365db02f57",
+  "archive": "publication-validation.zip",
+  "sha256": "4590577d3069cede46d6dc37a83765f3dd7f5fd44a012860d62b7216397548c1",
+  "entries": 344,
+  "bytes": 398250,
+  "scope": "Publish workflow correctness/performance, exact uploaded library/symbol artifacts and NuGet push receipts. Fresh public installation is separate."
+}

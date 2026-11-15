@@ -1,0 +1,7 @@
+{
+  "archive": "public-installation.zip",
+  "sha256": "2c35e0fb34aae955ea8b17ab4bf2e1672c3657f2d162ef53df50811d37162030",
+  "entries": 57,
+  "bytes": 517359,
+  "scope": "14 fresh public NuGet source/binary upgrade processes, exact uploaded/loaded assembly hash comparison and sample locked restore."
+}

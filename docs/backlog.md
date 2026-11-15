@@ -2,12 +2,12 @@
 
 Last updated: November 15, 2026.
 
-Alpha.7 libraries and symbols were published November 13 from `c5d639b` after
-both exact-commit hosted workflows passed, including 32 performance checks each.
-Fresh public installation and alpha.6-to-alpha.7 source/binary upgrades pass.
-[Release record](releases/0.1.0-alpha.7.md). The committed peer-cache cleanup
-and acceptance tooling are not part of those published packages; a new exact
-candidate still needs package/correctness/hosted validation.
+Version 1.0.0 libraries and symbols were published November 15 from `cbd85b8`.
+Both exact-commit hosted workflows passed all validation and 32 performance checks
+each. Fresh public alpha.7-to-v1 source/binary upgrades pass and installed DLL
+hashes match the uploaded packages. [Detailed release record](releases/1.0.0.md).
+The embedded 1.0.0 README retains an obsolete preview paragraph; repository text
+and guards are corrected, with shipment tracked in FW-029 for the next version.
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
 and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
@@ -28,7 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | In progress — exact candidate gates pending |
+| Done | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | Done — both hosted gates and fresh public installation pass |
 | Done | FW-027 | P1 | Package current source and validate against alpha.7 | Done — local validation, hosted gate separate |
 | Done | FW-018 | P1 | Verify resource lifetime and scoped memory budgets | Done — 12/12 scoped memory runs |
 | Done | FW-010 | P1 | Verify asynchronous native host ownership | Done — scoped native/WebView2 acceptance |
@@ -45,6 +45,7 @@ Dates below record evidence or updates, not delivery commitments.
 | Done | FW-019 | P2 | Validate independent sample adoption and upgrades | Done — published alpha.6 to alpha.7 |
 | 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
+| Next patch | FW-029 | P2 | Ship corrected embedded package README | Open — source corrected; 1.0.0 artifact immutable |
 | Later | FW-025 | P3 | Add contextual runtime failure diagnostics | Deferred — post-v1 |
 | Later | FW-026 | P3 | Revalidate physical Narrator after peer-cache cleanup | Deferred — post-v1 follow-up |
 
@@ -1121,10 +1122,22 @@ explicitly to consume these new packages.
 
 ## FW-028 — Validate and publish v1
 
-Status: In progress, November 15, 2026. The user authorized a detailed commit,
-push and v1 publication only after all validation and performance gates pass.
-Acceptance work is committed in a1d2ed6; upstream publication/action changes
-are integrated in e1aad81. Prepare exact 1.0.0 packages, verify alpha.7 upgrades,
-retain local diagnostics and require the unchanged hosted performance baseline.
-Preserve release workflow evidence and fresh public-installation hashes.
-See [the detailed release record](releases/1.0.0.md).
+Done, November 15, 2026. Detailed acceptance commit a1d2ed6, upstream integration
+e1aad81 and candidate cbd85b8 are pushed. Validate 43719989593 and Publish NuGet
+43721319796 passed all correctness/package checks and 32/32 performance metrics
+each against the unchanged accepted baseline. Local Release passed 176 tests;
+local accepted-baseline diagnostics passed 32/32. Exact local and public package
+campaigns each passed 14 source/binary upgrade processes. Both publicly installed
+DLLs match hosted artifacts; the standalone sample pins 1.0.0 and restores locked.
+Both libraries and symbols are published. Raw evidence/manifests and the detailed
+beginning-to-end write-up are in [the release record](releases/1.0.0.md).
+The post-upload README discrepancy is explicit in FW-029; it does not alter binaries.
+
+## FW-029 — Ship corrected embedded package README
+
+Open, November 15, 2026. Post-upload public-page verification found the obsolete
+Preview limitations paragraph still embedded in 1.0.0. Repository text is corrected
+and the stable-version documentation guard rejects those old status markers.
+Ship that correction with the next explicitly prepared package version. Do not
+overwrite 1.0.0 or describe its embedded README as corrected. Runtime gates passed;
+this follow-up concerns documentation, not an observed runtime regression.
