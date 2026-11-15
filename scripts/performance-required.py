@@ -1,4 +1,4 @@
-"""Check local eligibility for a [skip performance] push commit marker."""
+"""Check local eligibility for [skip performance] or [docs only] push markers."""
 import argparse
 from pathlib import Path
 import re
@@ -16,7 +16,9 @@ SAFE_FILES = {
 }
 
 
-def safe_path(path):
+def safe_path(path, docs_only=False):
+    if docs_only and (path.startswith(("tools/", "scripts/", "tests/"))):
+        return False
     if path in SAFE_FILES:
         return True
     if path.startswith("skills/") and Path(path).suffix in {".md", ".yaml", ".json"}:
@@ -26,7 +28,7 @@ def safe_path(path):
     return path.startswith("tests/UI Framework.Checks/") and path.endswith(".cs")
 
 
-def decide(base, head, git, staged=False):
+def decide(base, head, git, staged=False, docs_only=False):
     if not all(isinstance(sha, str) and re.fullmatch(r"[0-9a-f]{40}", sha) and sha != "0" * 40 for sha in (base, head)):
         return True, "Missing or invalid revision range: full comparison required."
     try:
@@ -38,29 +40,32 @@ def decide(base, head, git, staged=False):
         return True, "Revision comparison unavailable: full comparison required."
     if not paths:
         return True, "Empty comparison: full comparison required."
-    if any(not safe_path(path) for path in paths):
-        return True, "Runtime, build, benchmark or unclassified paths changed."
-    return False, f"All {len(paths)} changed paths are explicitly classified as non-runtime."
+    if any(not safe_path(path, docs_only) for path in paths):
+        return True, "Changed paths require validation; this marker is not eligible."
+    category = "documentation/skill content" if docs_only else "non-runtime"
+    return False, f"All {len(paths)} changed paths are explicitly classified as {category}."
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", required=True, help="Freshly fetched remote branch that will receive the push")
     parser.add_argument("--staged", action="store_true", help="Compare the proposed index against the remote, before committing")
+    parser.add_argument("--docs-only", action="store_true", help="Check the stricter [docs only] marker; no code/tool/test edits")
     args = parser.parse_args()
     def git(arguments):
         return subprocess.check_output(["git", *arguments], encoding="utf-8", errors="strict").strip("\n")
     try:
         base = git(["rev-parse", "--verify", "--end-of-options", args.base + "^{commit}"])
         head = git(["rev-parse", "--verify", "HEAD"])
-        required, reason = decide(base, head, git, args.staged)
+        required, reason = decide(base, head, git, args.staged, args.docs_only)
     except (OSError, subprocess.SubprocessError, UnicodeError):
         required, reason = True, "Local history unavailable: full comparison required."
     print(reason)
+    marker = "[docs only]" if args.docs_only else "[skip performance]"
     if required:
-        print("Do not add [skip performance] to the pushed tip commit.")
+        print(f"Do not add {marker} to the pushed tip commit.")
     else:
-        print("Eligible for [skip performance] on the pushed tip commit. Recheck after any range/content change.")
+        print(f"Eligible for {marker} on the pushed tip commit. Recheck after any range/content change.")
     return 1 if required else 0
 
 

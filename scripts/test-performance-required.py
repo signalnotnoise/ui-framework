@@ -18,6 +18,14 @@ class PerformanceSelectionTests(unittest.TestCase):
         self.assertFalse(self.decide(["docs/agent-skill.md", "skills/ui-framework/SKILL.md",
                                      "tests/UI Framework.Checks/SkillContractTests.cs", "docs/knowledge-graph/graph.json"]))
 
+    def test_docs_only_excludes_code_even_when_performance_skip_is_allowed(self):
+        for path in ["tests/UI Framework.Checks/SkillContractTests.cs", "tools/Update-SkillReference.py", "scripts/test-skill-reference.py"]:
+            with self.subTest(path=path):
+                self.assertFalse(selection.decide("a" * 40, "b" * 40, lambda args: path)[0])
+                self.assertTrue(selection.decide("a" * 40, "b" * 40, lambda args: path, docs_only=True)[0])
+        self.assertFalse(selection.decide("a" * 40, "b" * 40,
+                         lambda args: "docs/agent-skill.md\0skills/ui-framework/SKILL.md\0docs/knowledge-graph/graph.json\0", docs_only=True)[0])
+
     def test_runtime_build_benchmark_policy_and_unknown_paths_run(self):
         for path in ["UI Framework/View.cs", "UI Framework.Wpf/ThemeStyles.cs", "samples/Counter/StressRunner.cs",
                      "Directory.Build.props", "global.json", ".github/workflows/validate.yml",
@@ -65,16 +73,19 @@ class PerformanceSelectionTests(unittest.TestCase):
             (root / "README.md").write_text("docs")
             git("add", ".")
             self.assertEqual(0, check("--staged"))
+            self.assertEqual(0, check("--staged", "--docs-only"))
             git("commit", "-m", "docs")
             self.assertEqual(0, check())
             (root / "Runtime.cs").write_text("// unknown runtime")
             git("add", ".")
             self.assertEqual(1, check("--staged"))
+            self.assertEqual(1, check("--staged", "--docs-only"))
             git("commit", "-m", "runtime")
             (root / "README.md").write_text("more docs")
             git("add", ".")
             git("commit", "-m", "docs at tip")
             self.assertEqual(1, check())
+            self.assertEqual(1, check("--docs-only"))
 
 
 if __name__ == "__main__":

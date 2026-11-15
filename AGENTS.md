@@ -30,6 +30,11 @@
   a runner. Unmarked pushes, PRs, manual runs and publication retain full gates.
   Never use `[skip ci]`; a skipped comparison is not release acceptance evidence.
   See `docs/releasing.md` for the allowlist, commands and multi-commit rules.
+  For documentation/skill-content-only pushes, add `--docs-only` to both local
+  checks; only a reviewed exit-0 result permits `[docs only]` on the tip commit.
+  This also skips the Windows release job before runner allocation while keeping
+  graph/documentation/reference checks. Code, tools and test/example C# edits do
+  not qualify. PRs, manual runs and publication ignore both skip markers.
 
 - For runtime, renderer, control, layout, styling, state, or virtualization changes, measure before and after using `tools/Test-Performance.ps1`. Use the same benchmark harness, machine, SDK, data sizes and operations for both revisions; alternate order and retain raw repeated runs.
 - Always keep the full-list comparison alongside virtualization, and measure themed controls when changing templates. Report mount/update time, UI-thread allocations and component work; do not present fewer builds as proof of lower latency.

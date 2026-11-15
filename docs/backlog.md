@@ -26,6 +26,15 @@ Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
 
+FW-032 — Done (November 15, 2026): locally reviewed `[docs only]` push marker
+retains fast graph/documentation/reference checks and skips Windows release
+validation and performance before runner allocation. Seven selector tests pass,
+including rejecting code/tool/test edits under the stricter marker and checking
+real staged/committed ranges. Reference, documentation and both graph checks
+pass. [Usage and exclusions](releasing.md#fast-documentation-and-skill-content-pushes).
+Unmarked pushes, PRs, manual and release workflows retain their full validation;
+hosted validation of this workflow change is separate.
+
 FW-031 — Done (November 15, 2026): local full-pushed-range review authorizes the
 `[skip performance]` tip marker for known non-runtime changes. The push job
 condition skips before runner allocation; unmarked pushes, PRs, manual runs
@@ -47,6 +56,7 @@ remains a separate exact-commit check after push.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| Done | FW-032 | P2 | Keep docs-only pushes on fast validation | Done — seven selector tests; documented local marker |
 | Done | FW-031 | P2 | Choose push performance coverage locally before allocating runners | Done — six checks and documented marker policy |
 | Done | FW-030 | P2 | Generate skill API reference and verify behavioral examples | Done — local contract and freshness checks pass |
 | Done | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | Done — both hosted gates and fresh public installation pass |

@@ -104,6 +104,30 @@ even for documentation-only changes. Local runtime-change measurement duties
 remain unchanged. This scheduling change does not alter benchmark workloads,
 budgets, accepted revisions or measurement commands.
 
+### Fast documentation and skill-content pushes
+
+For an eligible documentation/skill-content-only range, use `[docs only]`
+instead. This skips both the performance and Windows release jobs **before
+runner allocation**. The graph/tooling job still runs reference freshness,
+generator regression checks, graph validation and other Python tooling checks.
+The marker does not apply to PRs, manual Validate runs or Publish NuGet.
+
+```powershell
+git fetch origin main
+python scripts/performance-required.py --base origin/main --staged --docs-only
+# Only after a reviewed exit-0 result:
+git commit -m "Clarify component guidance [docs only]"
+python scripts/performance-required.py --base origin/main --docs-only
+git push origin main
+```
+
+The same fresh-destination and whole-pushed-range rules apply. This narrower
+mode excludes all code/tool/test changes, including the compiled skill examples,
+even when those changes qualify for `[skip performance]`. C# or build changes
+must keep automatic regression validation. Unmarked pushes keep the existing
+full Windows validation, including native stress, startup, API and package checks.
+GitHub trusts either marker; do not use one to bypass a failing required check.
+
 Run tools/Test-Documentation.ps1 to verify the README, latest versioned changelog entry and knowledge graph against Directory.Build.props, and to reject mutable workflow action references. Test-Release includes this check. Action SHAs were resolved from the existing major-version tags; Dependabot checks for updates weekly. Keep the human-readable version comment beside each SHA.
 
 The test dependencies remain explicitly pinned together in the single test project. Upgrade the MSTest adapter and framework as a pair, then run Test-Release on the repository's .NET 10 SDK and Windows WPF runtime. Central package management is deferred until multiple projects need shared package versions; introducing it alone would not improve the current runtime contract.
