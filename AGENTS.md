@@ -20,6 +20,17 @@
 
 # Performance is a standing requirement
 
+- Before pushing, decide performance coverage locally for the entire range since
+  the freshly fetched destination branch. `python scripts/performance-required.py
+  --base origin/main --staged` checks the proposed commit; omit `--staged` to
+  check the final committed range. Substitute the actual destination branch.
+  Only when the check exits 0 and paths have been reviewed may the pushed tip
+  message include `[skip performance]`. Recheck after any range/content change.
+  GitHub trusts this marker and skips the push performance job before allocating
+  a runner. Unmarked pushes, PRs, manual runs and publication retain full gates.
+  Never use `[skip ci]`; a skipped comparison is not release acceptance evidence.
+  See `docs/releasing.md` for the allowlist, commands and multi-commit rules.
+
 - For runtime, renderer, control, layout, styling, state, or virtualization changes, measure before and after using `tools/Test-Performance.ps1`. Use the same benchmark harness, machine, SDK, data sizes and operations for both revisions; alternate order and retain raw repeated runs.
 - Always keep the full-list comparison alongside virtualization, and measure themed controls when changing templates. Report mount/update time, UI-thread allocations and component work; do not present fewer builds as proof of lower latency.
 - Aim to beat the accepted baseline. Investigate measured regressions and use the evidence to attempt a focused improvement where practical. Preserve correctness, accessibility and application behavior; never reduce workload, loosen budgets, or silently advance the baseline to hide a regression.

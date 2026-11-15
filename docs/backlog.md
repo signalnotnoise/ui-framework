@@ -26,6 +26,15 @@ Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
 
+FW-031 — Done (November 15, 2026): local full-pushed-range review authorizes the
+`[skip performance]` tip marker for known non-runtime changes. The push job
+condition skips before runner allocation; unmarked pushes, PRs, manual runs
+and publication retain full comparisons. Six selector tests pass, including
+real staged/committed multi-commit ranges. Documentation and both graph checks
+pass. [Policy and commands](releasing.md#decide-performance-coverage-before-pushing).
+Baseline, budgets, workloads and correctness/package checks are unchanged;
+hosted validation of this workflow change is separate.
+
 FW-030 — Done (November 15, 2026): generated, version-labelled core/WPF shipped
 API reference and compiled behavioral examples now ground the portable skill.
 CI/release freshness gates are wired; 34 focused .NET tests, three generator
@@ -38,6 +47,7 @@ remains a separate exact-commit check after push.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| Done | FW-031 | P2 | Choose push performance coverage locally before allocating runners | Done — six checks and documented marker policy |
 | Done | FW-030 | P2 | Generate skill API reference and verify behavioral examples | Done — local contract and freshness checks pass |
 | Done | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | Done — both hosted gates and fresh public installation pass |
 | Done | FW-027 | P1 | Package current source and validate against alpha.7 | Done — local validation, hosted gate separate |

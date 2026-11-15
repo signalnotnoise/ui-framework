@@ -58,6 +58,52 @@ The CLI also pushes the adjacent symbol package. Package versions are immutable:
 
 ## Validation
 
+### Decide performance coverage before pushing
+
+For a push containing only reviewed non-runtime changes, put the literal marker
+`[skip performance]` in the **tip commit message**. GitHub evaluates this at the
+job level before allocating the performance runner, avoiding benchmark setup
+and comparison minutes. It does not skip graph, correctness or package checks.
+Unmarked pushes, all PRs, manual Validate runs and Publish NuGet still run the
+full comparison. Never use `[skip ci]` for this purpose.
+
+Before creating the commit, stage the intended changes and check the **entire
+proposed pushed range**, not just the final commit:
+
+```powershell
+git fetch origin main
+python scripts/performance-required.py --base origin/main --staged
+# Only if the check exits 0 and the changed paths have been reviewed:
+git commit -m "Update agent guidance [skip performance]"
+# Check the final committed range again before pushing:
+python scripts/performance-required.py --base origin/main
+git push origin main
+```
+
+Use the actual destination remote branch in place of `origin/main`. Exit 0 means
+eligible; exit 1 means keep the full comparison. A freshly fetched remote ref
+is required; the helper does not fetch or change commits. Rerun after any edits,
+rebases, merges or remote changes. If eligibility changes, remove the marker
+before pushing. Do not assume an older marker is valid for a new pushed range.
+For multiple commits, only the pushed tip's message controls the job, but the
+local check must include every change since the destination branch.
+
+`scripts/performance-required.py` has a narrow allowlist: selected prose docs,
+generated architecture graphs, skill content and its reference generator/tests,
+documentation images and correctness-test C# sources. Runtime/templates, samples,
+project/SDK settings, workflows, benchmark code, baseline/budgets, performance
+policy documentation and unknown paths require comparison. Renames preserve
+both source and destination paths. Missing history and empty ranges also require
+comparison. Extend the allowlist only after reviewing dependencies.
+
+This is an explicit maintainer decision: GitHub trusts the marker and does not
+repeat the path analysis on a runner. A skipped comparison is **not performance
+acceptance evidence**. Publication still requires a successful full hosted
+comparison against the unchanged accepted baseline for the exact candidate,
+even for documentation-only changes. Local runtime-change measurement duties
+remain unchanged. This scheduling change does not alter benchmark workloads,
+budgets, accepted revisions or measurement commands.
+
 Run tools/Test-Documentation.ps1 to verify the README, latest versioned changelog entry and knowledge graph against Directory.Build.props, and to reject mutable workflow action references. Test-Release includes this check. Action SHAs were resolved from the existing major-version tags; Dependabot checks for updates weekly. Keep the human-readable version comment beside each SHA.
 
 The test dependencies remain explicitly pinned together in the single test project. Upgrade the MSTest adapter and framework as a pair, then run Test-Release on the repository's .NET 10 SDK and Windows WPF runtime. Central package management is deferred until multiple projects need shared package versions; introducing it alone would not improve the current runtime contract.

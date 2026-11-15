@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "15847d4e278d556a9b8facc2645b1602904546658c9769423f359e2f5b2015fa",
+  "inputDigest": "75a010159cc8e83075ec977b3323e436e124e353da2c6870463e250d9343fca9",
   "coverage": {
     "unresolvedRelativeReferences": 52,
     "semantic": false,
@@ -36647,6 +36647,12 @@
       "kind": "file"
     },
     {
+      "id": "scripts/performance-required.py",
+      "label": "performance-required.py",
+      "group": "scripts",
+      "kind": "file"
+    },
+    {
       "id": "scripts/query-knowledge-graph.py",
       "label": "query-knowledge-graph.py",
       "group": "scripts",
@@ -36691,6 +36697,12 @@
     {
       "id": "scripts/test-performance-pairs.py",
       "label": "test-performance-pairs.py",
+      "group": "scripts",
+      "kind": "file"
+    },
+    {
+      "id": "scripts/test-performance-required.py",
+      "label": "test-performance-required.py",
       "group": "scripts",
       "kind": "file"
     },
@@ -38331,7 +38343,7 @@
       "id": "concept:release",
       "label": "Version 1 publication and verification",
       "status": "implemented",
-      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees.",
+      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees. FW-031 uses local full-pushed-range path review to authorize a [skip performance] tip commit marker. Push workflow skips the performance job before runner allocation; it trusts the marker. Unmarked pushes, all PRs, manual Validate and publication retain full comparisons. Correctness and package validation always run.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -38367,7 +38379,9 @@
         "docs/fw027-local-candidate-2026-11-15.md",
         "docs/verification-evidence/2026-11-15-local-alpha8-candidate/README.md",
         "docs/releases/1.0.0.md",
-        "docs/verification-evidence/2026-11-15-v1/README.md"
+        "docs/verification-evidence/2026-11-15-v1/README.md",
+        "scripts/performance-required.py",
+        "scripts/test-performance-required.py"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -38514,7 +38528,7 @@
       "kind": "links",
       "evidence": {
         "path": "AGENTS.md",
-        "line": 33,
+        "line": 44,
         "text": "](docs/knowledge-graph/README.md)"
       }
     },
@@ -43363,6 +43377,24 @@
     },
     {
       "source": "concept:release",
+      "target": "scripts/performance-required.py",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/32/sources/35"
+      }
+    },
+    {
+      "source": "concept:release",
+      "target": "scripts/test-performance-required.py",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/32/sources/36"
+      }
+    },
+    {
+      "source": "concept:release",
       "target": "tools/New-SourceArchive.ps1",
       "kind": "evidenced by",
       "evidence": {
@@ -45520,7 +45552,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1069,
+        "line": 1079,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -45530,7 +45562,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 387,
+        "line": 397,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -45540,7 +45572,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 389,
+        "line": 399,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -45550,7 +45582,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 33,
+        "line": 42,
         "text": "](agent-skill.md#phase-1-verification--november-15-2026-fw-030)"
       }
     },
@@ -45560,7 +45592,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1015,
+        "line": 1025,
         "text": "](agent-skill.md)"
       }
     },
@@ -45570,7 +45602,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1086,
+        "line": 1096,
         "text": "](agent-skill.md)"
       }
     },
@@ -45580,7 +45612,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 672,
+        "line": 682,
         "text": "](api-contract.md)"
       }
     },
@@ -45590,7 +45622,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1077,
+        "line": 1087,
         "text": "](api-contract.md)"
       }
     },
@@ -45600,7 +45632,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 179,
+        "line": 189,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -45610,7 +45642,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 273,
+        "line": 283,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -45620,7 +45652,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1075,
+        "line": 1085,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -45630,7 +45662,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 391,
+        "line": 401,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -45640,7 +45672,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 371,
+        "line": 381,
         "text": "](discovery-initialization-2026-10-28.md)"
       }
     },
@@ -45650,7 +45682,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 436,
+        "line": 446,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -45660,7 +45692,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 484,
+        "line": 494,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -45670,7 +45702,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1082,
+        "line": 1092,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -45680,7 +45712,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1083,
+        "line": 1093,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -45690,7 +45722,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 445,
+        "line": 455,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -45700,7 +45732,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 446,
+        "line": 456,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -45710,7 +45742,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 447,
+        "line": 457,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -45720,7 +45752,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 443,
+        "line": 453,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -45730,7 +45762,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1082,
+        "line": 1092,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -45740,7 +45772,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 640,
+        "line": 650,
         "text": "](fw012-release-reconciliation-2026-11-15.md)"
       }
     },
@@ -45750,7 +45782,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 106,
+        "line": 116,
         "text": "](fw017-appearance-acceptance-2026-11-15.md)"
       }
     },
@@ -45760,7 +45792,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 697,
+        "line": 707,
         "text": "](fw017-appearance-acceptance-2026-11-15.md)"
       }
     },
@@ -45770,7 +45802,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 714,
+        "line": 724,
         "text": "](fw017-evidence-review-2026-11-15.md)"
       }
     },
@@ -45780,7 +45812,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 813,
+        "line": 823,
         "text": "](fw018-automation-retention-2026-11-15.md)"
       }
     },
@@ -45790,7 +45822,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 888,
+        "line": 898,
         "text": "](fw018-bounded-reporting-2026-11-13.md)"
       }
     },
@@ -45800,7 +45832,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 788,
+        "line": 798,
         "text": "](fw018-guidedgrade-closed-resources-2026-11-15.md)"
       }
     },
@@ -45810,7 +45842,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 872,
+        "line": 882,
         "text": "](fw018-heap-handle-attribution-2026-11-13.md)"
       }
     },
@@ -45820,7 +45852,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 858,
+        "line": 868,
         "text": "](fw018-long-memory-2026-11-15.md)"
       }
     },
@@ -45830,7 +45862,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 798,
+        "line": 808,
         "text": "](fw018-manual-focus-2026-11-15.md)"
       }
     },
@@ -45840,7 +45872,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 105,
+        "line": 115,
         "text": "](fw018-memory-budgets-2026-11-15.md)"
       }
     },
@@ -45850,7 +45882,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 745,
+        "line": 755,
         "text": "](fw018-memory-budgets-2026-11-15.md)"
       }
     },
@@ -45860,7 +45892,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 916,
+        "line": 926,
         "text": "](fw018-memory-diagnostics-2026-11-13.md)"
       }
     },
@@ -45870,7 +45902,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 761,
+        "line": 771,
         "text": "](fw018-peer-cache-cleanup-2026-11-15.md)"
       }
     },
@@ -45880,7 +45912,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 773,
+        "line": 783,
         "text": "](fw018-plain-wpf-focus-2026-11-15.md)"
       }
     },
@@ -45890,7 +45922,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 900,
+        "line": 910,
         "text": "](fw018-reporting-retention-2026-11-13.md)"
       }
     },
@@ -45900,7 +45932,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 826,
+        "line": 836,
         "text": "](fw018-snipping-comparison-2026-11-15.md)"
       }
     },
@@ -45910,7 +45942,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 107,
+        "line": 117,
         "text": "](fw019-package-adoption-2026-11-15.md)"
       }
     },
@@ -45920,7 +45952,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 956,
+        "line": 966,
         "text": "](fw019-package-adoption-2026-11-15.md)"
       }
     },
@@ -45930,7 +45962,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1126,
+        "line": 1136,
         "text": "](fw027-local-candidate-2026-11-15.md)"
       }
     },
@@ -45940,7 +45972,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1005,
+        "line": 1015,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -45950,7 +45982,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1080,
+        "line": 1090,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -45960,7 +45992,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1081,
+        "line": 1091,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -45970,7 +46002,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 991,
+        "line": 1001,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -45980,7 +46012,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1080,
+        "line": 1090,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -45990,7 +46022,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1006,
+        "line": 1016,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -46000,7 +46032,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1081,
+        "line": 1091,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -46010,7 +46042,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 187,
+        "line": 197,
         "text": "](layout-styling.md)"
       }
     },
@@ -46030,7 +46062,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 344,
+        "line": 354,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -46040,7 +46072,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 383,
+        "line": 393,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -46050,7 +46082,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1084,
+        "line": 1094,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -46060,7 +46092,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1085,
+        "line": 1095,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -46070,7 +46102,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 745,
+        "line": 755,
         "text": "](memory-budgets.md)"
       }
     },
@@ -46080,7 +46112,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 618,
+        "line": 628,
         "text": "](native-interop.md)"
       }
     },
@@ -46090,7 +46122,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 300,
+        "line": 310,
         "text": "](native-island-performance.md)"
       }
     },
@@ -46100,7 +46132,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1079,
+        "line": 1089,
         "text": "](native-island-performance.md)"
       }
     },
@@ -46110,7 +46142,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 559,
+        "line": 569,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -46120,7 +46152,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 932,
+        "line": 942,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -46130,7 +46162,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 512,
+        "line": 522,
         "text": "](native-provider-stall-policy.md)"
       }
     },
@@ -46140,7 +46172,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 155,
+        "line": 165,
         "text": "](native-style-validation.md)"
       }
     },
@@ -46150,7 +46182,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 558,
+        "line": 568,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -46160,7 +46192,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 931,
+        "line": 941,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -46170,7 +46202,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 494,
+        "line": 504,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -46180,7 +46212,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1083,
+        "line": 1093,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -46190,7 +46222,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 444,
+        "line": 454,
         "text": "](performance-evidence/2026-10-29-mount-allocations/README.md)"
       }
     },
@@ -46200,7 +46232,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1043,
+        "line": 1053,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -46210,7 +46242,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 622,
+        "line": 632,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -46220,7 +46252,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 154,
+        "line": 164,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -46230,7 +46262,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1074,
+        "line": 1084,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -46240,7 +46272,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 140,
+        "line": 150,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -46250,7 +46282,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 181,
+        "line": 191,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -46260,7 +46292,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1076,
+        "line": 1086,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -46270,7 +46302,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 406,
+        "line": 416,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -46280,7 +46312,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1036,
+        "line": 1046,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -46300,7 +46332,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1144,
+        "line": 1154,
         "text": "](releases/1.0.0.md)"
       }
     },
@@ -46310,7 +46342,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 75,
+        "line": 34,
+        "text": "](releasing.md#decide-performance-coverage-before-pushing)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releasing.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 85,
         "text": "](releasing.md#next-release-candidate)"
       }
     },
@@ -46320,7 +46362,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 162,
+        "line": 172,
         "text": "](releasing.md)"
       }
     },
@@ -46330,7 +46372,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 394,
+        "line": 404,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -46340,7 +46382,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 377,
+        "line": 387,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -46350,7 +46392,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 397,
+        "line": 407,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -46360,7 +46402,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 207,
+        "line": 217,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -46370,7 +46412,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1078,
+        "line": 1088,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -46380,7 +46422,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 234,
+        "line": 244,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -46390,7 +46432,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1078,
+        "line": 1088,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -46400,7 +46442,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 352,
+        "line": 362,
         "text": "](virtualization.md)"
       }
     },
@@ -46410,7 +46452,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 345,
+        "line": 355,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -46420,7 +46462,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 576,
+        "line": 586,
         "text": "](webview2-acceptance-2026-10-29.md)"
       }
     },
@@ -46430,7 +46472,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 517,
+        "line": 527,
         "text": "](webview2-final-2026-11-11.md)"
       }
     },
@@ -46440,7 +46482,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 582,
+        "line": 592,
         "text": "](webview2-interaction-2026-10-29.md)"
       }
     },
@@ -46450,7 +46492,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 595,
+        "line": 605,
         "text": "](webview2-recovery-2026-10-29.md)"
       }
     },
@@ -46460,7 +46502,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 537,
+        "line": 547,
         "text": "](webview2-retention-2026-11-11.md)"
       }
     },
@@ -46470,7 +46512,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 563,
+        "line": 573,
         "text": "](webview2-review-2026-10-29.md)"
       }
     },
@@ -46480,7 +46522,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 545,
+        "line": 555,
         "text": "](webview2-shutdown-2026-11-11.md)"
       }
     },
@@ -51706,6 +51748,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "scripts/performance-required.py",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 176,
+        "text": "](../scripts/performance-required.py)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "scripts/query-knowledge-graph.py",
       "kind": "links",
       "evidence": {
@@ -51792,6 +51844,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 172,
         "text": "](../scripts/test-performance-pairs.py)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "scripts/test-performance-required.py",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 176,
+        "text": "](../scripts/test-performance-required.py)"
       }
     },
     {
@@ -85926,6 +85988,11 @@
     },
     {
       "source": "group:scripts",
+      "target": "scripts/performance-required.py",
+      "kind": "contains"
+    },
+    {
+      "source": "group:scripts",
       "target": "scripts/query-knowledge-graph.py",
       "kind": "contains"
     },
@@ -85962,6 +86029,11 @@
     {
       "source": "group:scripts",
       "target": "scripts/test-performance-pairs.py",
+      "kind": "contains"
+    },
+    {
+      "source": "group:scripts",
+      "target": "scripts/test-performance-required.py",
       "kind": "contains"
     },
     {
