@@ -2,6 +2,8 @@
 docs/performance-evidence/**/*.log -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
 docs/performance-evidence/**/*-stack.txt -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
 .githooks/* text eol=lf
+skills/ui-framework/references/api-surface.md text eol=lf
+skills/ui-framework/references/behavior-examples.md text eol=lf
 scripts/knowledge-graph.html text eol=lf
 scripts/knowledge-graph-vendor/* text eol=lf
 docs/knowledge-graph/graph.json text eol=lf

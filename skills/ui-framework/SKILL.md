@@ -9,6 +9,16 @@ Build a deliberate native interface using the kit's declarative C# views. Preser
 
 ## Establish the contract
 
+Use the version-labelled [generated shipped API reference](references/api-surface.md)
+to check declared methods and overloads. Do not invent a declared API absent from
+that baseline for the matching package version; inherited and compiler-generated
+members require assembly inspection. For another version, its installed metadata
+takes precedence. Unshipped repository additions are not released APIs.
+
+Read the [compiled behavioral examples](references/behavior-examples.md) for
+finite layout, field-owned state and keyed rows. Their complete source types are
+compiled and exercised by `SkillContractTests`; signatures alone do not prove behavior.
+
 Inspect the application's project references and resolved package version before writing code. Package IDs are `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf`; namespaces are `UI_Framework` and `UI_Framework.Wpf`. Do not replace the user's UI stack or upgrade packages merely to use an example.
 
 In a framework checkout, consult `docs/knowledge-graph.json`, bounded graph neighborhoods, and the relevant guide before changing a subsystem. Verify signatures against `UI Framework/UI.cs`, `View.cs`, and the consumer's actual assembly version; source docs can describe APIs newer than its package. The source repository is https://github.com/signalnotnoise/ui-framework. For a consumer without the checkout, inspect its installed package/API metadata and fetch only needed upstream guides if access is available. Report unavailable evidence rather than inventing APIs.

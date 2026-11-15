@@ -42,6 +42,9 @@ jobs:
           if ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z]+([.-][0-9A-Za-z]+)*)?$') { throw 'Invalid package version.' }
           if ($env:REQUESTED_VERSION -cne $version) { throw 'Requested version does not match Directory.Build.props.' }
           "version=$version" >> $env:GITHUB_OUTPUT
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
       - name: Validate release
         shell: pwsh
         run: ./tools/Test-Release.ps1

@@ -26,8 +26,19 @@ Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
 
+FW-030 — Done (November 15, 2026): generated, version-labelled core/WPF shipped
+API reference and compiled behavioral examples now ground the portable skill.
+CI/release freshness gates are wired; 34 focused .NET tests, three generator
+tests, documentation consistency and both graph validators pass locally.
+[Completion evidence and commands](agent-skill.md#phase-1-verification--november-15-2026-fw-030).
+Scope is tooling, tests and documentation; runtime and demo redesign are
+unchanged. Full local release validation also passes: 180 tests, 15 visual
+checks, 21 stress assertions and startup/native lifetime controls. Hosted CI
+remains a separate exact-commit check after push.
+
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| Done | FW-030 | P2 | Generate skill API reference and verify behavioral examples | Done — local contract and freshness checks pass |
 | Done | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | Done — both hosted gates and fresh public installation pass |
 | Done | FW-027 | P1 | Package current source and validate against alpha.7 | Done — local validation, hosted gate separate |
 | Done | FW-018 | P1 | Verify resource lifetime and scoped memory budgets | Done — 12/12 scoped memory runs |

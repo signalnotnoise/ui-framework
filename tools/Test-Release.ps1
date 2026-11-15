@@ -3,6 +3,8 @@ $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectRoot
 try {
+    python tools/Update-SkillReference.py --check
+    if ($LASTEXITCODE -ne 0) { throw 'Skill references are stale.' }
     if (-not $NoRestore) {
         dotnet restore 'UI Framework.slnx' --disable-build-servers
         if ($LASTEXITCODE -ne 0) { throw 'Restore failed.' }

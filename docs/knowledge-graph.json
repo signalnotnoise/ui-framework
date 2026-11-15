@@ -796,7 +796,7 @@
       "id": "agentskill",
       "label": "Agent UI composition skill",
       "status": "implemented",
-      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes.",
+      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes. FW-030 adds exact shipped API and compiled-source reference generation with freshness gates; SkillContractTests verifies native finite layout, field/computed subscription lifetime and keyed row identity. Tooling owns generation; existing core/WPF responsibilities are unchanged.",
       "sources": [
         "skills/ui-framework/SKILL.md",
         "skills/ui-framework/references/composition.md",
@@ -804,7 +804,16 @@
         "tools/SkillPreview/ReleaseScreen.cs",
         "tools/SkillPreview/SkillPreview.csproj",
         "tools/New-SkillPreviewGif.py",
-        "docs/agent-skill.md"
+        "docs/agent-skill.md",
+        "tools/Update-SkillReference.py",
+        "scripts/test-skill-reference.py",
+        "skills/ui-framework/references/api-surface.md",
+        "skills/ui-framework/references/behavior-examples.md",
+        "tests/UI Framework.Checks/SkillContractTests.cs",
+        "tests/UI Framework.Checks/SkillExamples/SkillLayoutExample.cs",
+        "tests/UI Framework.Checks/SkillExamples/SkillStateExample.cs",
+        "tests/UI Framework.Checks/SkillExamples/SkillRowsExample.cs",
+        "tests/UI Framework.Checks/SkillExamples/SkillRowExample.cs"
       ]
     },
     {
@@ -1264,6 +1273,16 @@
       "from": "measurementreporting",
       "to": "accessibility",
       "relation": "separates external automation peer roots from framework ownership during collection checks"
+    },
+    {
+      "from": "agentskill",
+      "relation": "generates version-labelled declaration reference from",
+      "to": "api"
+    },
+    {
+      "from": "agentskill",
+      "relation": "checks keyed row reorder and removal through",
+      "to": "virtualization"
     }
   ],
   "releaseVersion": "1.0.0"

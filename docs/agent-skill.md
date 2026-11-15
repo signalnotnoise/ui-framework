@@ -27,6 +27,59 @@ The optional `agents/openai.yaml` supplies discovery metadata. Other agents can
 read `SKILL.md` directly. The skill does not install or upgrade the framework;
 the consumer's resolved version governs API availability.
 
+## Generated contract and behavioral examples
+
+The portable bundle includes a version-labelled [shipped API reference](../skills/ui-framework/references/api-surface.md)
+generated from both libraries' `PublicAPI.Shipped.txt` files. Exact analyzer
+notation preserves nullability and overloads. Unshipped additions are excluded;
+the consumer's installed version remains authoritative. Inherited and
+compiler-generated members may require assembly inspection.
+
+[Behavioral examples](../skills/ui-framework/references/behavior-examples.md)
+are generated from complete C# types in `tests/UI Framework.Checks/SkillExamples`.
+Edit those sources, then regenerate; do not maintain a second copy of their code.
+`SkillContractTests` verifies finite native layout, stack sizing, retained state
+notifications and keyed virtual row edits across reorder/removal. These focused
+checks do not replace broader virtualization or accessibility acceptance.
+
+```powershell
+python tools/Update-SkillReference.py
+python tools/Update-SkillReference.py --check
+python scripts/test-skill-reference.py
+dotnet test 'tests/UI Framework.Checks/UI Framework.Checks.csproj' -c Release --filter FullyQualifiedName~SkillContractTests
+```
+
+CI and `tools/Test-Release.ps1` reject stale references; release validation
+also runs the compiled examples as part of the existing regression suite.
+Python 3.10+ is required alongside the pinned .NET SDK. When cutting a release,
+review/promote the API baselines and package version before regenerating the
+reference. This documents declarations, not compatibility across every version.
+
+### Phase 1 verification — November 15, 2026 (FW-030)
+
+SDK 10.0.402 compiled the example types. All 34 selected tests passed:
+`SkillContractTests`, `StateSessionTests`, `WorkspaceLayoutTests` and
+`VirtualizationTests`. The three Python generator tests passed, including
+missing/stale output rejection and exact signature/source preservation.
+The initial state test incorrectly expected one invalidation while observing
+both a field and its computed value; it was corrected to verify stable counts
+for both dependencies, computed equality suppression and disposal cleanup.
+Initial and final TRX reports remain in `artifacts/skill-contract`.
+
+Reference freshness, documentation consistency and both graph validators pass.
+No runtime, renderer, theme or benchmark code changed, so performance was not
+remeasured.
+
+Full local `tools/Test-Release.ps1` validation subsequently passed with SDK
+10.0.402: warning-free Release build, 180/180 regression tests, reporting
+retention controls, 15 visual checks, 21 stress assertions, actual-window
+startup/editing/disposal, native-window ownership/shutdown and the short memory
+check (76 native mounts, zero surviving instances and zero owned native bytes).
+No release-validation failures required fixes. The transcript is retained at
+`artifacts/phase1-release/full-release.log`; test/stress/native reports are in
+`artifacts/release-validation`. Hosted CI is checked separately after pushing
+the exact commit; local success does not establish the hosted performance gate.
+
 ## Before and after
 
 ![The same native release workspace before and after applying hierarchy, spacing and scoped theme guidance](images/ui-framework-before-after.gif)
