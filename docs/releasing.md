@@ -1,17 +1,41 @@
 # Experimental release process
 
-The current candidate is 0.1.0-alpha.7, defined in Directory.Build.props.
-Publication is pending; see the [alpha.7 release record](releases/0.1.0-alpha.7.md).
-The latest verified public release is alpha.6, published October 28, 2026 from
-`fd725347749bcee79e29d10ac2a6de4355137be7`; its
-[release record](releases/0.1.0-alpha.6.md) preserves publication and installation evidence.
-Packages remain experimental Windows/.NET 10 previews under MIT.
+The latest verified public preview is 0.1.0-alpha.7, published November 13, 2026
+from `c5d639bcff707ff1a75b23f2a60135d6be6cb7b2`. Its [release record](releases/0.1.0-alpha.7.md)
+links exact-commit correctness, package and hosted performance gates, publication
+and fresh-installation hashes. Directory.Build.props still carries that published
+version; unpublished changes require a new unique version before packing for release.
+Do not overwrite or republish alpha.7 to include the current working tree.
+
+Packages remain experimental Windows/.NET 10 previews under MIT. The verified
+independent consumer matrix is Windows 11 x64 / .NET 10.0.13 with SDK 10.0.402;
+this is evidence, not a promise of an untested platform/runtime matrix. Install a
+compatible stable .NET 10 SDK; global.json does not accept an 11 preview as a substitute.
+
+## Next release candidate
+
+1. Reconcile the Unreleased changes and finalize the candidate's supported API and
+   Windows/runtime scope. Completed scoped items remain complete; optional APIs
+   and post-v1 FW-025/026 work do not silently become new release blockers.
+2. Pack a unique candidate version and verify the independent sample against those
+   exact packages, including the upgrade from published alpha.7. FW-019's completed
+   alpha.6-to-alpha.7 comparison does not measure unpublished changes.
+3. Run full correctness/package checks and mandatory local paired performance
+   diagnostics against the unchanged accepted baseline. Commit the exact candidate,
+   then require the full hosted performance comparison and correctness checks.
+4. Publish only the validated artifacts and verify a new public restore and assembly
+   hashes. A future v1 RC still requires its own exact-package acceptance.
+
+Historical physical IME/contrast/scaling evidence keeps its documented scope and
+missing environment details. The additional post-cleanup Narrator revalidation is
+post-v1 FW-026 by user decision. Do not claim it ran, or present static captures as
+new physical input/accessibility acceptance. See the [current backlog](backlog.md).
 
 ## Required owner decisions
 
 - MIT licensing is selected and the approved license text is in LICENSE.
 - Public repository: https://github.com/signalnotnoise/ui-framework. Verify the staged source files before uploading.
-- NuGet IDs: `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf`; authors: UI Framework contributors. Only the two libraries are packable. Both include a package README, MIT license, repository metadata, and separate portable symbol packages. NuGet.org returned no published versions for either ID on September 18, 2026; this does not reserve the names or guarantee permission to publish under a reserved prefix.
+- NuGet IDs: `SignalNotNoise.UI` and `SignalNotNoise.UI.Wpf`; authors: UI Framework contributors. Only the two libraries are packable. Both include a package README, MIT license, repository metadata, and separate portable symbol packages. Both IDs are published; verify account permissions and the Trusted Publishing policy before a new release.
 
 ## NuGet packages
 
@@ -38,7 +62,7 @@ Run tools/Test-Documentation.ps1 to verify the README, latest versioned changelo
 
 The test dependencies remain explicitly pinned together in the single test project. Upgrade the MSTest adapter and framework as a pair, then run Test-Release on the repository's .NET 10 SDK and Windows WPF runtime. Central package management is deferred until multiple projects need shared package versions; introducing it alone would not improve the current runtime contract.
 
-Before any production-readiness claim, record manual visible-window IME composition (including scrolling and regeneration), keyboard navigation, screen-reader announcements, high-contrast behavior and full-application frame/scroll performance. Automated peer and focus tests do not establish these outcomes. Prerelease APIs may change without compatibility guarantees; behavioral changes belong in the Unreleased changelog and require a new package version before publishing.
+Apply the agreed v1 acceptance scope in the backlog and retain the existing physical acceptance records with their limits. Automated peer/focus tests do not establish unperformed physical outcomes; exact-candidate package and hosted checks remain mandatory. Prerelease APIs may change without compatibility guarantees; behavioral changes belong in the Unreleased changelog and require a new package version before publishing.
 
 For `0.1.0-alpha.3`, visible typing, selection, replace, undo and redo; installed-IME composition start, update, commit and cancel; screen-reader names, focus, state and text-change announcements; and repeated open/close without cleanup errors or lingering processes were accepted manually before publication.
 
@@ -54,6 +78,6 @@ Run `./tools/New-SourceArchive.ps1` to generate artifacts/ui-framework-0.1.0-alp
 
 Exclude bin, obj, .vs, TestResults, artifacts, local environment files and user-specific IDE settings. Include source, project files, docs, tools, README, CHANGELOG, CONTRIBUTING and LICENSE. Review the release contents for accidental private data before upload. The source repository is public; keep future release source commits pushed before running the publishing workflow.
 
-An optional GitHub prerelease can attach the source archive after validation. Describe it as experimental, Windows-only for rendering, requiring .NET 10. Do not present historical benchmarks as performance guarantees or claim focus/IME/accessibility verification.
+An optional GitHub prerelease can attach the source archive after validation. Describe it as experimental, Windows-only for rendering, requiring .NET 10. Do not present historical benchmarks as performance guarantees or overstate the scope of recorded focus/IME/accessibility verification.
 
 No repository, tag, release or package is created by the validation script.

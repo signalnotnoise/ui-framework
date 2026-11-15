@@ -6,7 +6,7 @@
       "id": "accessibility",
       "label": "UI Automation and accessibility acceptance",
       "status": "implemented",
-      "summary": "Core names and native peers support actionable patterns and virtual-row discovery. Host wrappers skip Tab stops. User reports Narrator/scaling acceptance. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. All 146 framework tests pass, including five accessibility acceptance tests and two resource-ownership checks. Discovery setup initializes native UIA on an MTA client while pumping the window dispatcher, then refreshes cached peers; original assertions pass in the full suite and two additional fresh hosts. Latest seven-pair runtime performance passes 32/32; test-only correction does not change that candidate. User confirmed passing physical Windows contrast switching and physical IME editing/recycling on October 29; FW-005/FW-006 are complete within scope. Provider/build details and per-case logs were not supplied.",
+      "summary": "Core names and native peers support actionable patterns and virtual-row discovery; host wrappers skip Tab stops. WPF owns item discovery, realization and ordinary child enumeration. Scoped palettes follow contrast settings; TextBox uses frozen normal colors and conditional system resources. ThemeStyles batches resource publication with caller-aware initialization ownership. User-confirmed Narrator/scaling and October 29 physical contrast/IME acceptance closed FW-005/FW-006 within their recorded scope. The unreleased FW-018 cleanup uses weak row/peer registration, clears detached cached children and refreshes queried rows after layout without adding a field to every logical row or creating peers during ordinary cleanup. Three fresh-process runs retain zero editors through held row/list peers, one through a directly held editor peer, and zero after root release. All 176 framework tests pass, including four new cases covering collection, recycling/realization and removed-key reuse; all four fail with unchanged baseline libraries. Earlier premature-refresh and UIA-reentrancy prototypes failed and are preserved separately. Native release ownership remains balanced. Seven alternating pairs pass all 32 local checks against pre-change HEAD: allocations within 0.05%, unchanged component work and timing -3.79% to +4.91%, within unchanged budgets. No hosted release-gate claim. No new physical Narrator acceptance or sustained external-client budget is claimed.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework.Wpf/ViewHost.cs",
@@ -31,14 +31,19 @@
         "docs/theme-resource-batching-2026-10-28.md",
         "docs/discovery-initialization-2026-10-28.md",
         "tests/UI Framework.Checks/TestAutomationTree.cs",
-        "docs/manual-acceptance-2026-10-29.md"
+        "docs/manual-acceptance-2026-10-29.md",
+        "samples/NativeLifetime/AutomationRetentionProbe.cs",
+        "docs/fw018-automation-retention-2026-11-15.md",
+        "tests/UI Framework.Checks/AutomationLifetimeTests.cs",
+        "docs/fw018-peer-cache-cleanup-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-peer-cache-cleanup/README.md"
       ]
     },
     {
       "id": "nativeinterop",
       "label": "Retained native WPF islands",
       "status": "implemented",
-      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary; applications own native contents, asynchronous provider work and durable state. FW-010 completed November 11, 2026 within the documented standard-WPF/WebView2 contract; existing callbacks suffice and no new runtime API is justified. Controlled ownership, partial-failure and late-completion checks, real-window shutdown, real-browser initialization/popup races, failure/recovery and script-close pass. Final interactive acceptance passes 9/9 fresh-process cases: keyboard traversal, three-theme identity/focus/text/selection, native/HTML trusted pointer, scrolling, sampled rectangular bounds, resize and verified HWND overlay limits. Retention passes six final runs: 270 parent/popup cycles including negative controls, 540 one-time releases, 1,350 captured process exits and 2,970 collected weak references. Timeout bounds the caller wait while retaining owner/dispatcher and one drain task; a permanently unsettled provider keeps close pending. Hard deadlines require app-owned process isolation; forced in-process disposal/cancellation is not promised. Arbitrary WPF clipping/sibling overlays, composition control, arbitrary websites/SSO and GuidedGrade adoption are outside this acceptance. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and real-window startup/disposal. Raw source snapshots, pilot issues and per-case evidence are preserved. FW-018 retains representative memory budgets and diagnostics; no new performance-release claim.",
+      "summary": "Core carries an opaque platform description. WPF Interop owns native factories, declared-type identity, updates, detachment, one-time release and an opt-in implicit-style boundary; applications own native contents, asynchronous provider work and durable state. FW-010 completed November 11, 2026 within the documented standard-WPF/WebView2 contract; existing callbacks suffice and no new runtime API is justified. Controlled ownership, partial-failure and late-completion checks, real-window shutdown, real-browser initialization/popup races, failure/recovery and script-close pass. Final interactive acceptance passes 9/9 fresh-process cases: keyboard traversal, three-theme identity/focus/text/selection, native/HTML trusted pointer, scrolling, sampled rectangular bounds, resize and verified HWND overlay limits. Retention passes six final runs: 270 parent/popup cycles including negative controls, 540 one-time releases, 1,350 captured process exits and 2,970 collected weak references. Timeout bounds the caller wait while retaining owner/dispatcher and one drain task; a permanently unsettled provider keeps close pending. Hard deadlines require app-owned process isolation; forced in-process disposal/cancellation is not promised. Arbitrary WPF clipping/sibling overlays, composition control, arbitrary websites/SSO and GuidedGrade adoption are outside this acceptance. Full Release validation passes 172 tests, 15 visual checks, 21 stress assertions and real-window startup/disposal. Raw source snapshots, pilot issues and per-case evidence are preserved. FW-018 retains representative memory budgets and diagnostics; no new performance-release claim. November 15 current status: FW-018 scoped lifetime/memory acceptance passes all 12 frozen-budget native/browser runs; additional contextual diagnostics and new physical Narrator revalidation are separate post-v1 FW-025/FW-026 by user decision.",
       "sources": [
         "UI Framework/View.cs",
         "UI Framework/ViewKind.cs",
@@ -124,7 +129,7 @@
       "id": "layoutstyle",
       "label": "Responsive layout and scoped styling",
       "status": "implemented",
-      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately.",
+      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately. FW-017 completes November 15 within scoped appearance acceptance. Existing implementation and manual evidence are credited. Eight hidden-HWND native captures are individually inspected across light/dark, wide/compact and normal/editor-focus states; form, compact toolbar, review list and split panes include long text, disabled action and textual errors. Focus state is injected for rendering, not a new physical keyboard claim. 222 fixture assertions and 44 focused styling/layout tests pass. The v1 validation contract is application-owned rules, timing, messages and accessible field context using existing APIs; no validation engine, error token, adorner or automatic announcement promise. Core/WPF source hashes remain unchanged; no new performance or hosted gate is claimed. Earlier FW-006 physical contrast/scaling evidence retains its missing build/scale metadata; FW-026 is a separate post-v1 Narrator follow-up.",
       "sources": [
         "UI Framework/Layout/ViewAlignment.cs",
         "UI Framework/Styling/ThemeTokens.cs",
@@ -154,7 +159,17 @@
         "UI Framework.Wpf/Styling/TextBoxStyles.cs",
         "docs/textbox-contrast-2026-10-28.md",
         "tests/UI Framework.Checks/ThemeResourceUpdateTests.cs",
-        "docs/theme-resource-batching-2026-10-28.md"
+        "docs/theme-resource-batching-2026-10-28.md",
+        "docs/fw017-evidence-review-2026-11-15.md",
+        "docs/manual-acceptance-2026-10-29.md",
+        "docs/agent-skill.md",
+        "skills/ui-framework/SKILL.md",
+        "tools/SkillPreview/ReleaseScreen.cs",
+        "samples/Counter/VisualStressChecks.cs",
+        "docs/fw017-appearance-acceptance-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-appearance/README.md",
+        "tools/SkillPreview/AppearanceScreen.cs",
+        "tools/SkillPreview/AppearanceAcceptance.cs"
       ]
     },
     {
@@ -287,7 +302,7 @@
       "id": "lifecycle",
       "label": "Mount and cleanup",
       "status": "implemented",
-      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released. FW-010 is complete within the November 11 native-provider contract: applications own async tasks, faults, cancellation and retained ownership across deadlines; late completion cannot attach to a closing owner, and cleanup drains before detachment/release. Permanently unsettled providers keep close pending; hard shutdown deadlines require app-owned process isolation. Controlled async/collectability and real-window shutdown checks pass; repeated WebView2 lifetime/recovery, script-close, final interactive and retention evidence is preserved. Browser retention covers 270 parent/popup pairs, 540 releases, 1,350 captured process exits and 2,970 collected references with deliberate-root negative controls. Earlier native-memory runs cover 756 workspace cycles and 57,456 native mounts with zero observed survivors/owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removal releases state. Heap/handle trends remain observations, not universal budgets. Full Release regression passes 172 tests, 15 visual checks and 21 stress assertions. FW-018 remains the first active P1 item for representative budgets and useful diagnostic API decisions. GuidedGrade application adoption remains separate.",
+      "summary": "Subtree dependencies detach before unmount hooks; removed instances are released. FW-010 is complete within the November 11 native-provider contract: applications own async tasks, faults, cancellation and retained ownership across deadlines; late completion cannot attach to a closing owner, and cleanup drains before detachment/release. Permanently unsettled providers keep close pending; hard shutdown deadlines require app-owned process isolation. Controlled async/collectability and real-window shutdown checks pass; repeated WebView2 lifetime/recovery, script-close, final interactive and retention evidence is preserved. Browser retention covers 270 parent/popup pairs, 540 releases, 1,350 captured process exits and 2,970 collected references with deliberate-root negative controls. Earlier native-memory runs cover 756 workspace cycles and 57,456 native mounts with zero observed survivors/owned native bytes after batches. Visiting 500 keys retains 500 logical states but only 10 native editors; removal releases state. Heap/handle trends remain observations, not universal budgets. Full Release regression passes 172 tests, 15 visual checks and 21 stress assertions. FW-018 remains the first active P1 item for representative budgets and useful diagnostic API decisions. GuidedGrade application adoption remains separate. FW-018 resumed November 13: offline retention validation now checks report/workload identity, description counts, required probes, logical/native payload accounting, coarse native realization bounds and removed-state release. Focused corrupt-evidence fixtures and reanalysis of both archived three-run memory campaigns pass; only the longer campaign has retention checkpoints. That initial analyzer pass reused archived evidence; subsequent fresh reporting-isolation results are recorded below without approving a budget. Growing measurement-owned telemetry must be bounded before representative heap/handle budgets; contextual failure diagnostics and overhead measurements remain open. The sample-only release-reporting-roots-v1 probe now saves completed reporting samples, measures managed memory before/after clearing their roots and list capacity, checks weak-reference survivors, then reloads evidence after measurement. A deliberately rooted sample verifies sensitivity; empty controls expose GC noise. Three fresh 60-batch native runs each release 31,808 observed reporting bytes with zero sample survivors. Six corrected browser runs each release 38,016 bytes for fresh profiles or 25,344 for reused profiles, with all 44 roots collected. The failed pilot detects one reporting root; non-inlined sample construction resolves it. Original ownership/shutdown checks remain enabled. Signed deltas are not corrected workload trends or approved budgets; bounded reporting was the next step at that stage and is now implemented; budget calibration remains open. Final Release validation passes 172 tests, 15 visual checks, 21 stress assertions, reporting controls and real-window ownership/shutdown. The fresh-directory direct memory invocation passes. Failed and successful isolation sources/reports are hash-archived; both graphs are refreshed. No paired latency gate was rerun because framework runtime is unchanged. Final review also caught one surviving native sample in a one-batch pilot. Native sample construction is now non-inlined and both callers fail on reporting survivors. Final Release includes that short-run regression and passes; final three native soak runs release 31,808 / 31,832 / 31,808 bytes with zero roots. Two final browser guard cases pass with the previous per-mode deltas. Both failed pilots and final-source results are preserved separately. FW-018 bounded reporting now spools each sample to a fresh file with one pending weak probe, verifies prior sample collection before recording another, and reconstructs reports only after measurement. The bounded-sample-files-v1 protocol is distinct from retained-reporting evidence; controls, short native checks, three 60-batch native runs and six browser runs pass. All measured reporting roots collect and raw samples match reconstructed reports. Residual heap/handle trends remain unbudgeted. This changes sample tooling only, not framework runtime or accepted budgets. November 15 current status: FW-018 scoped lifetime/memory acceptance passes all 12 frozen-budget native/browser runs; additional contextual diagnostics and new physical Narrator revalidation are separate post-v1 FW-025/FW-026 by user decision.",
       "sources": [
         "UI Framework/Component.cs",
         "UI Framework.Wpf/ViewHost.cs",
@@ -321,7 +336,17 @@
         "samples/WebViewAcceptance/RetentionTelemetry.cs",
         "docs/webview2-retention-2026-11-11.md",
         "docs/native-provider-stall-policy.md",
-        "docs/webview2-final-2026-11-11.md"
+        "docs/webview2-final-2026-11-11.md",
+        "docs/fw018-memory-diagnostics-2026-11-13.md",
+        "samples/MeasurementTools/ReportingRetention.cs",
+        "tests/ReportingRetentionChecks/Program.cs",
+        "tests/ReportingRetentionChecks/ReportingRetentionChecks.csproj",
+        "docs/fw018-reporting-retention-2026-11-13.md",
+        "tools/Test-WebViewAcceptance.ps1",
+        "tools/Test-Release.ps1",
+        "docs/verification-evidence/2026-11-13-reporting-retention/README.md",
+        "samples/MeasurementTools/BoundedReporting.cs",
+        "docs/fw018-bounded-reporting-2026-11-13.md"
       ]
     },
     {
@@ -692,7 +717,7 @@
       "id": "release",
       "label": "Experimental release preparation",
       "status": "partial",
-      "summary": "Alpha.7 candidate prepared November 13, 2026; local validation, exact-commit hosted gates and publication verification pending. Baseline and budgets remain unchanged. Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved.",
+      "summary": "Alpha.7 published November 13, 2026 from c5d639b; local validation, both exact-commit hosted gates and public installation verification pass. Baseline and budgets remain unchanged. Alpha.6 libraries and symbols were accepted by NuGet from fd725347749bcee79e29d10ac2a6de4355137be7 after both hosted workflows passed: 146 framework tests and 32 performance gates with unchanged baseline and budgets. Fresh NuGet.org installation passed with isolated caches; both installed DLL hashes match the exact hosted release artifacts. A distinct alpha.6-local.1 Release build for GuidedGrade passed fresh package smoke checks. GitHub Actions is enabled. User confirmed physical contrast and IME acceptance on October 29; FW-005/FW-006 are complete, without a v1 readiness claim or exact tested-package assertion. Raw successful and failed evidence is preserved. FW-019 completes November 15 for published alpha.6-to-alpha.7 adoption and source/binary upgrade. PackageWorkspace has NuGet-only exact dependencies, its own build-properties boundary and lock file; independent external copies use isolated caches. Fourteen final processes cover full-list and virtualized workloads, 56 workspace lifetimes and 168 collected host/editor probes. Forms, direct list selection, retained native editing, resize, navigation, ownership and normal Application shutdown pass. Binary acceptance preserves the old consumer/deps files and replaces only the two framework DLLs; loaded hashes are verified. Three alternating pairs retain raw latency/allocation/component and post-shutdown memory observations; update medians increase 5.54% full-list and 4.45% virtualized, with allocations/work effectively unchanged. This is diagnostic evidence, not a hosted gate or new memory budget. Windows 11 x64 / .NET 10.0.13 is verified; future v1 RC packages require exact acceptance. Pilot lifecycle failures and the intermediate campaign are preserved. FW-012 reconciles FW-024 as complete: alpha.7 published November 13 from c5d639b; Validate 43409502188 and Publish NuGet 43410864931 succeeded with 32/32 checks each. The completed record and 601 evidence files are restored from 42d6617; public DLL hashes match the fresh FW-019 consumer. Current uncommitted changes remain outside this release. Current guides distinguish historical measurements, implemented APIs and exact future RC gates. Framework runtime and release budgets are unchanged. FW-027 completes local validation November 15: uniquely versioned alpha.8-local.1 libraries/symbols preserve the current dirty source. Full Release passes 176 tests, reporting controls, visual/stress and real-window/native shutdown; API guards, package smoke and 25 graph fixtures pass. Seven alternating pairs against alpha.7 source c5d639b pass all 32 metrics with timing medians 0.02–2.30% lower, allocations effectively unchanged and identical component work. All 58 package/framework entries match measured source. Fourteen exact local-package source/binary upgrade processes pass with 168 collected host/editor probes; installed package and loaded DLL hashes are verified. Smaller workspace timing increases of 7.40% full-list mount and 4.01% virtual update remain visible with raw variability; no universal speedup or causal-noise claim. Prior 12-run memory evidence matches 54 framework entries and is reused explicitly. Accepted baseline/budgets are unchanged; no commit, push, hosted gate or publication is claimed. Exact committed candidate hosted validation remains a release requirement.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -710,7 +735,23 @@
         "docs/releases/0.1.0-alpha.5.md",
         "docs/releases/0.1.0-alpha.6.md",
         "docs/manual-acceptance-2026-10-29.md",
-        "docs/releases/0.1.0-alpha.7.md"
+        "docs/releases/0.1.0-alpha.7.md",
+        "samples/PackageWorkspace/PackageWorkspace.csproj",
+        "samples/PackageWorkspace/Program.cs",
+        "samples/PackageWorkspace/WorkspaceModel.cs",
+        "samples/PackageWorkspace/WorkspaceScreen.cs",
+        "samples/PackageWorkspace/WorkspaceAcceptance.cs",
+        "tools/Test-WorkspaceAdoption.ps1",
+        "docs/fw019-package-adoption-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-package-adoption/README.md",
+        "samples/PackageWorkspace/README.md",
+        "samples/PackageWorkspace/packages.lock.json",
+        "tools/Summarize-WorkspaceAdoption.py",
+        "docs/fw012-release-reconciliation-2026-11-15.md",
+        "docs/release-evidence/2026-11-13-alpha7/public-installation.json",
+        "docs/verification-evidence/2026-11-15-release-reconciliation/verification.json",
+        "docs/fw027-local-candidate-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-local-alpha8-candidate/README.md"
       ]
     },
     {
@@ -762,6 +803,72 @@
         "tools/SkillPreview/SkillPreview.csproj",
         "tools/New-SkillPreviewGif.py",
         "docs/agent-skill.md"
+      ]
+    },
+    {
+      "id": "measurementreporting",
+      "label": "Memory measurement and attribution",
+      "status": "implemented",
+      "summary": "Sample tooling separates tracked ownership, bounded reporting and process-resource attribution. Samples spool to disk with one pending weak probe; reports reload after measurement. Optional paused attribution traces remain diagnostic, not budget runs. Plain WPF/framework controls reproduce a fixed focus-related GDI signature without per-window accumulation; exact residual identities remain unresolved. The production peer-cache cleanup releases disposed editors held indirectly through row/list peers; direct editor-peer ownership remains explicit. Its prior validation passes 176 framework tests and 32 local pre-change performance comparisons; no hosted gate is claimed. FW-018 scoped lifetime/memory acceptance completes November 15: all 12 fresh processes pass a policy frozen before measurement, with six native 500/5000-row runs (4392 workspace cycles including warmup) and six local-page fresh/reused WebView runs (792 cycles). Evaluator checks raw samples, workload identity, bounded reporting, ownership, shutdown, native input eligibility and matching framework/runtime sources before evaluating peaks and first/mid/final median windows. Native maximum late heap growth is zero; browser is 1208 bytes. One browser run reaches the +16 late-handle limit exactly. Earlier +20 browser and native GUI/input calibration outliers remain failures; no limits are inflated or cache sizes subtracted. Browser groups are separately capped by process count and summed private bytes; working sets are informational. Runtime libraries and accepted rendering-performance baseline are unchanged in this budget task. Numerical policy is unchanged after fresh validation; only status metadata changes. This is finite-workload local acceptance, not universal leak freedom, arbitrary-site or external accessibility-client coverage. Per user scope split, additional contextual diagnostics are post-v1 FW-025 and physical Narrator revalidation after cleanup is post-v1 FW-026; neither is claimed completed.",
+      "sources": [
+        "samples/MeasurementTools/BoundedReporting.cs",
+        "samples/MeasurementTools/ReportingRetention.cs",
+        "samples/NativeLifetime/MemoryWorkload.cs",
+        "samples/WebViewAcceptance/RetentionChecks.cs",
+        "tests/ReportingRetentionChecks/Program.cs",
+        "tools/Summarize-NativeMemory.py",
+        "tools/Test-NativeLifetime.ps1",
+        "tools/Test-WebViewAcceptance.ps1",
+        "docs/fw018-bounded-reporting-2026-11-13.md",
+        "docs/verification-evidence/2026-11-13-bounded-reporting/README.md",
+        "samples/MeasurementTools/MemoryCheckpoint.cs",
+        "tools/Test-MemoryAttribution.ps1",
+        "tools/Summarize-MemoryAttribution.py",
+        "tools/MemoryDumpCollector/Program.cs",
+        "scripts/test-memory-attribution.py",
+        "docs/fw018-heap-handle-attribution-2026-11-13.md",
+        "docs/verification-evidence/2026-11-13-heap-handle-attribution/README.md",
+        "tools/MemoryDumpCollector/MemoryDumpCollector.csproj",
+        "tools/MemoryDumpCollector/HandleTrace.cs",
+        "tools/MemoryDumpCollector/FileHandleProbe.cs",
+        "tools/MemoryDumpCollector/WindowInventory.cs",
+        "samples/NativeLifetime/InputObservation.cs",
+        "samples/NativeLifetime/MemoryTelemetry.cs",
+        "docs/fw018-long-memory-2026-11-15.md",
+        ".github/workflows/validate.yml",
+        "docs/verification-evidence/2026-11-15-long-memory/README.md",
+        "docs/fw018-snipping-comparison-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-snipping-comparison/README.md",
+        "samples/NativeLifetime/AutomationRetentionProbe.cs",
+        "docs/fw018-automation-retention-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-automation-retention/README.md",
+        "docs/fw018-manual-focus-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-manual-focus/README.md",
+        "tools/MemoryDumpCollector/GdiInventory.cs",
+        "tools/Test-FocusResources.ps1",
+        "samples/NativeLifetime/ThreadExitProbe.cs",
+        "docs/fw018-guidedgrade-closed-resources-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-guidedgrade-closed/README.md",
+        "samples/FocusComparison/Plain/Plain.csproj",
+        "samples/FocusComparison/Framework/Framework.csproj",
+        "samples/FocusComparison/Shared/Program.cs",
+        "samples/FocusComparison/README.md",
+        "samples/FocusComparison/Plain/ContentFactory.cs",
+        "samples/FocusComparison/Framework/ContentFactory.cs",
+        "samples/FocusComparison/Shared/ResourceSnapshot.cs",
+        "tools/Test-FocusComparison.ps1",
+        "tools/Summarize-FocusComparison.py",
+        "docs/fw018-plain-wpf-focus-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-plain-wpf-focus/README.md",
+        "docs/fw018-peer-cache-cleanup-2026-11-15.md",
+        "tests/UI Framework.Checks/AutomationLifetimeTests.cs",
+        "tools/memory-budgets.json",
+        "tools/Test-MemoryBudgets.py",
+        "tools/Test-MemoryBudgets.ps1",
+        "scripts/test-memory-budgets.py",
+        "docs/memory-budgets.md",
+        "docs/fw018-memory-budgets-2026-11-15.md",
+        "docs/verification-evidence/2026-11-15-memory-budgets/README.md"
       ]
     }
   ],
@@ -1145,6 +1252,16 @@
       "from": "agentskill",
       "relation": "documents application lifetime through",
       "to": "wpfstartup"
+    },
+    {
+      "from": "lifecycle",
+      "to": "measurementreporting",
+      "relation": "verified with samples from"
+    },
+    {
+      "from": "measurementreporting",
+      "to": "accessibility",
+      "relation": "separates external automation peer roots from framework ownership during collection checks"
     }
   ],
   "releaseVersion": "0.1.0-alpha.7"

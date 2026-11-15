@@ -1,5 +1,7 @@
 #requires -Version 7.0
 param([Parameter(Mandatory)][string]$OutputDirectory, [ValidateRange(1,10)][int]$Repetitions = 3,
+    [ValidateRange(44,1000)][int]$RetentionCycles = 44,
+    [ValidateRange(120,3600)][int]$CaseTimeoutSeconds = 120,
     [switch]$IncludeInteractive,
     [ValidateCount(1,19)]
     [ValidateSet('environment-boundary-close','control-close','popup-success','popup-parent-close','popup-child-close','focus-keyboard','airspace','initialization-recovery','runtime-missing-recovery','navigation-recovery','renderer-recovery','browser-recovery','stalled-success-close','stalled-fault-close','script-child-close','script-parent-close','retention-fresh','retention-reused','pointer-bounds')]
@@ -18,13 +20,13 @@ try {
     dotnet build samples/WebViewAcceptance/WebViewAcceptance.csproj -c Release --disable-build-servers -m:1 -warnaserror
     if ($LASTEXITCODE -ne 0) { throw 'WebView acceptance build failed.' }
     $dll = Join-Path $root 'samples/WebViewAcceptance/bin/Release/net10.0-windows/WebViewAcceptance.dll'
-    $sources = @('UI Framework','UI Framework.Wpf','samples/WebViewAcceptance') | ForEach-Object {
+    $sources = @('UI Framework','UI Framework.Wpf','samples/WebViewAcceptance','samples/MeasurementTools') | ForEach-Object {
         Get-ChildItem -LiteralPath $_ -Recurse -File | Where-Object { $_.Extension -in @('.cs','.csproj','.html') -and $_.FullName -notmatch '[\\/](bin|obj)[\\/]' }
     }
     $sources | ForEach-Object { [pscustomobject]@{ path=[IO.Path]::GetRelativePath($root,$_.FullName); sha256=(Get-FileHash -LiteralPath $_.FullName).Hash } } |
         ConvertTo-Json | Set-Content (Join-Path $output 'source-manifest.json')
     [pscustomobject]@{ revision=(& git rev-parse HEAD).Trim(); dirty=[bool](& git status --porcelain);
-        sdk=(& dotnet --version).Trim(); repetitions=$Repetitions; modes=$Modes; kind='real-webview-local-page-acceptance'; releaseGate=$false } |
+        sdk=(& dotnet --version).Trim(); repetitions=$Repetitions; modes=$Modes; retentionCycles=$RetentionCycles; caseTimeoutSeconds=$CaseTimeoutSeconds; kind='real-webview-local-page-acceptance'; releaseGate=$false } |
         ConvertTo-Json | Set-Content (Join-Path $output 'campaign.json')
     $reports = @()
     foreach ($iteration in 1..$Repetitions) {
@@ -36,11 +38,12 @@ try {
             $start.UseShellExecute=$false; $start.CreateNoWindow=$true
             $start.RedirectStandardOutput=$true; $start.RedirectStandardError=$true
             foreach ($argument in @($dll,$mode,$caseOutput)) { $start.ArgumentList.Add($argument) }
+            if ($mode.StartsWith('retention-')) { $start.ArgumentList.Add('--retention-cycles'); $start.ArgumentList.Add("$RetentionCycles") }
             if ($mode -in @('focus-keyboard','airspace','pointer-bounds')) { $start.ArgumentList.Add('--interactive') }
             $process = [Diagnostics.Process]::Start($start)
             try {
                 $stdout=$process.StandardOutput.ReadToEndAsync(); $stderr=$process.StandardError.ReadToEndAsync()
-                $finished=$process.WaitForExit(120000)
+                $finished=$process.WaitForExit($CaseTimeoutSeconds*1000)
                 if (-not $finished) { $process.Kill($true); $process.WaitForExit() }
                 ($stdout.GetAwaiter().GetResult()+$stderr.GetAwaiter().GetResult()) | Set-Content (Join-Path $output "$name.log")
                 [pscustomobject]@{ exitCode=$process.ExitCode; timedOut=(-not $finished); mode=$mode } |
@@ -49,6 +52,13 @@ try {
             } finally { $process.Dispose() }
             $report = Get-Content -LiteralPath (Join-Path $caseOutput 'report.json') -Raw | ConvertFrom-Json
             if (-not $report.Passed -or -not $report.DispatcherShutdownFinished -or -not $report.CleanupPolicyClosed) { throw "Incomplete browser shutdown: $name" }
+            if ($mode.StartsWith('retention-')) {
+                $probe = $report.Result.ReportingRetention
+                if ($report.Result.Cycles -ne $RetentionCycles -or $report.Result.Warmups -ne 4) { throw 'Retention workload differs from requested campaign.' }
+                if ($null -eq $probe -or $probe.Protocol -ne 'bounded-sample-files-v1' -or $probe.SampleSurvivors -ne 0 -or $probe.Samples -ne $report.Result.Cycles -or $probe.VerifiedCollectedSamples -ne $report.Result.Cycles -or $probe.MaximumPendingWeakProbes -ne 1 -or -not $probe.MeasurementBeforeReportReload) {
+                    throw "Incomplete reporting-root isolation: $name"
+                }
+            }
             $reports += $report
         }
     }

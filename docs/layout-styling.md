@@ -18,7 +18,7 @@ FlexRow(
 
 ## Adaptive columns
 
-For vertical fill, fixed edge docking and bound resizable panes, see [workspace layout](workspace-layout.md). These newer source APIs are not included in the app's pinned local.3 package.
+For vertical fill, fixed edge docking and bound resizable panes, see [workspace layout](workspace-layout.md). These APIs are included in published alpha.7; older application package pins must be upgraded explicitly.
 
 ```csharp
 AdaptiveGrid(240, planned, building, shipped).Spacing(16);
@@ -61,9 +61,32 @@ properties; view `.Height(...)` and `.Padding(...)` continue to size/pad the
 outer framework frame. Callers must still allow enough room for their chosen
 font, border and native padding. See [compact button validation](compact-button-validation.md).
 
-`Toggle` remains a native CheckBox with the same boolean binding API. Its scoped template uses Ink for labels, Accent/OnAccent for checked indicators, Hover/Pressed variants for interaction, and a Focus-colored outline while keyboard focus is inside. Disabled labels and checkmarks use Muted at full opacity against Surface; they do not fall back to system black/gray text or fade the entire control. An explicit `.Foreground(...)` on the Toggle takes precedence, including when disabled. The template covers the framework's string-label, two-state Toggle contract. This source fix is newer than the published `0.1.0-alpha.1` package and needs a subsequent package version for NuGet consumers.
+`Toggle` remains a native CheckBox with the same boolean binding API. Its scoped template uses Ink for labels, Accent/OnAccent for checked indicators, Hover/Pressed variants for interaction, and a Focus-colored outline while keyboard focus is inside. Disabled labels and checkmarks use Muted at full opacity against Surface; they do not fall back to system black/gray text or fade the entire control. An explicit `.Foreground(...)` on the Toggle takes precedence, including when disabled. The template covers the framework's string-label, two-state Toggle contract. This behavior is included in published alpha.7; the old alpha.1 package predates the fix.
 
 ## Ownership and verification
+
+### Validation and error appearance (v1 contract)
+
+Validation is application-owned composition. The application owns rules, when to
+validate, error state, save/publish eligibility and the visible messages. The
+framework does not promise a validation engine, error token, error adorner or
+automatic screen-reader announcement in v1. Native WPF validation features may
+be used inside application-owned native content; they are not a declarative
+framework validation API.
+
+Keep a visible label and place a short, actionable message near the affected
+field, such as "Error: Enter a release name before saving." Use ordinary readable
+theme text; color can supplement the wording but must not carry the error alone.
+Update the input's `AccessibilityLabel` with relevant error context and clear or
+replace both visible and accessible text after correction. This provides a field
+description, not a live-region announcement guarantee. Explain disabled actions.
+Applications own custom colors and Windows contrast behavior on their own surfaces;
+using an accent or a red border is not a substitute for that responsibility.
+
+The [appearance acceptance fixture](../tools/SkillPreview/AppearanceScreen.cs)
+demonstrates this contract without adding an API. Its invalid-to-valid-to-invalid
+sequence checks visible messages and accessible context; the [acceptance record](fw017-appearance-acceptance-2026-11-15.md)
+includes light/dark captures and retained-control checks.
 
 - Core `Layout/` and `Styling/`: platform-independent descriptions and tokens.
 - WPF `Layout/AdaptivePanel.cs`: measurement and arrangement.

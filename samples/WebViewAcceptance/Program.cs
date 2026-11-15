@@ -10,7 +10,7 @@ internal static class Program
     [STAThread]
     private static int Main(string[] args)
     {
-        if (args.Length is not (2 or 3)) throw new ArgumentException("Usage: WebViewAcceptance <mode> <new-output-directory> [--interactive]");
+        if (args.Length is not (2 or 3 or 4)) throw new ArgumentException("Usage: WebViewAcceptance <mode> <new-output-directory> [--interactive | --retention-cycles <44..1000>]");
         var mode = args[0];
         if (mode is not ("environment-boundary-close" or "control-close" or "popup-success" or "popup-parent-close" or "popup-child-close" or "focus-keyboard" or "airspace" or "initialization-recovery" or "runtime-missing-recovery" or "navigation-recovery" or "renderer-recovery" or "browser-recovery" or "stalled-success-close" or "stalled-fault-close" or "script-child-close" or "script-parent-close" or "retention-fresh" or "retention-reused" or "pointer-bounds"))
             throw new ArgumentException("Unknown mode.");
@@ -19,6 +19,13 @@ internal static class Program
             throw new ArgumentException("This case activates a desktop window, sends test keystrokes and captures pixels. Explicit --interactive opt-in is required.");
         if (args.Length == 3 && (!interactive || args[2] != "--interactive"))
             throw new ArgumentException("Unexpected interactive argument.");
+        var retentionCycles = 44;
+        if (args.Length == 4)
+        {
+            if (!mode.StartsWith("retention-", StringComparison.Ordinal) || args[2] != "--retention-cycles"
+                || !int.TryParse(args[3], out retentionCycles) || retentionCycles < 44 || retentionCycles > 1000)
+                throw new ArgumentException("Retention cycles must be 44..1000 and require a retention mode.");
+        }
         var output = Path.GetFullPath(args[1]);
         if (Directory.Exists(output)) throw new IOException("Use a fresh output directory.");
         Directory.CreateDirectory(output);
@@ -34,7 +41,7 @@ internal static class Program
                 result = mode is "focus-keyboard" or "airspace" or "pointer-bounds"
                     ? await InteractionChecks.Run(mode, Path.Combine(output, "isolated-profile"), output)
                     : mode.StartsWith("retention-", StringComparison.Ordinal)
-                    ? await RetentionChecks.Run(mode, Path.Combine(output, "isolated-profile"), output)
+                    ? await RetentionChecks.Run(mode, Path.Combine(output, "isolated-profile"), output, retentionCycles)
                     : mode.StartsWith("stalled-", StringComparison.Ordinal) || mode.StartsWith("script-", StringComparison.Ordinal)
                     ? await ShutdownChecks.Run(mode, Path.Combine(output, "isolated-profile"))
                     : mode.EndsWith("-recovery", StringComparison.Ordinal)

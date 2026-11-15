@@ -33,15 +33,16 @@ An intentional API redesign requires a separately reviewed migration proposal.
 | State/threading | State, list, computed and session operations belong to their creating thread; WPF controls belong to their dispatcher. Background results require explicit dispatch. Notifications complete delivery before reporting subscriber failures. See StateNotificationTests and StateSessionTests. |
 | Bindings/derived values | Bindings read accepted values back and filter projected equality. Computed reevaluates reads, including ordinary properties; caching is not implied. StateList enumeration is a snapshot; item fields are not deeply observed. See [bindings](bindings.md). |
 | Sizing/styles | View modifiers affect the outer frame. Native local values and bindings retain WPF precedence. Automatic native button height retains its theme minimum; explicit height permits compact sizing. PreserveNative isolates common implicit control styles, not all resources. See [styling](layout-styling.md) and [interop](native-interop.md). |
-| Virtualization | Bound native realization does not bound description work or visited-row logical state. Unmount creates fresh native controls on return and may restore logical components. Active native composition uses WPF's focus-loss path before detachment; IME sessions are not serialized. Physical IME acceptance remains pending. See [virtualization](virtualization.md). |
-| Keyboard wrappers (unreleased) | ViewHost and internal virtual-row presenters default to non-focusable/non-tab-stop wrappers; their actionable descendants own keyboard focus. Explicit native local values retain WPF precedence. See [accessibility](accessibility.md). |
+| Virtualization | Bound native realization does not bound description work or visited-row logical state. Unmount creates fresh native controls on return and may restore logical components. Active native composition uses WPF's focus-loss path before detachment; IME sessions are not serialized. User-confirmed physical IME acceptance is recorded October 29, with build/provider details unspecified. See [virtualization](virtualization.md). |
+| Keyboard wrappers (published since alpha.6) | ViewHost and internal virtual-row presenters default to non-focusable/non-tab-stop wrappers; their actionable descendants own keyboard focus. Explicit native local values retain WPF precedence. See [accessibility](accessibility.md). |
 | Errors | Build/validation failures retain the previous tree; patch failures clear damaged hosts and permit explicit Refresh. No arbitrary mutation rollback. See [recovery](error-recovery.md), RendererFailureTests and ViewValidationTests. |
 | Cleanup policy | Applications opt into one WpfComCleanupPolicy on their STA before creating controls and close it after hosts, before dispatcher shutdown. Hosts do not install it implicitly. See [lifecycle](application-cleanup-policy-2026-09-25.md). |
 
-These are the preview contracts. FW-005 physical IME acceptance and FW-006 remain
-required before promising native composition or comprehensive assistive-technology support.
-The provider-completion and focus-race fixes are unreleased; published alpha.5
-predates those FW-005 changes.
+These are preview contracts. Provider-completion, focus-race and wrapper fixes
+ship in alpha.6/alpha.7. [October 29 manual acceptance](manual-acceptance-2026-10-29.md)
+closes FW-005/FW-006 within its recorded scope; missing provider/build/scale details
+are not inferred. The later automation peer-cache cleanup remains unpublished,
+with additional physical Narrator revalidation deferred to FW-026 after v1.
 
 ## Compatibility checks and change policy
 
@@ -75,9 +76,17 @@ Native(create, NativeStyleScope.PreserveNative, update, release) when needed; th
 adds a style boundary without changing the old overload's meaning. Existing
 `new View(ViewKind.Text) { Content = "Title" }` and `UI.Text("Title")` remain valid.
 
-Before v1 RC, run an upgrade from the preceding supported package in the independent
-consumer (FW-019), select a concrete supported Windows/runtime test matrix, and
+Before v1 RC, repeat the independent consumer upgrade on the exact RC packages (FW-019 already
+verified the published alpha.6-to-alpha.7 source/binary path), select a concrete supported Windows/runtime test matrix, and
 complete the broader [acceptance matrix](backlog.md). API inventory acceptance alone
 does not close those release requirements.
 
 Run `pwsh -NoProfile -File tools/Test-ApiCompatibility.ps1 -VerifyGuard` to prove both diagnostic guards fail and restore the baseline. The Windows CI job runs this probe; ordinary builds enforce the baseline without modifying it.
+
+## Independent package acceptance — November 15, 2026
+
+FW-019 now verifies the published alpha.6-to-alpha.7 source and binary upgrade on
+Windows 11 x64 / .NET 10.0.13 using a standalone NuGet-only workspace. See the
+[acceptance record](fw019-package-adoption-2026-11-15.md) for hashes, cleanup and
+measurement limits. This preview path does not replace exact-package acceptance
+for a future v1 release candidate or expand the supported platform matrix.

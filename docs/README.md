@@ -8,6 +8,8 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | --- | --- |
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Framework backlog](backlog.md) | Prioritized running work list, completion criteria, status and completed work. |
+| [Current alpha.7 release](releases/0.1.0-alpha.7.md) | Published version, exact source, hosted gates and public installation. |
+| [Independent package workspace](../samples/PackageWorkspace/README.md) | NuGet-only setup, startup/shutdown and source/binary upgrades. |
 | [Release checklist](releasing.md) | Experimental release status, validation and owner decisions. |
 | [September 24 publication status](publication-status-2026-09-24.md) | Historical source and package gate that first captured the editor timeout. |
 | [September 26 local package adoption](consumer-package-2026-09-25.md) | Production cleanup policy, passing framework gate, and passing 15-sample consumer comparison. |
@@ -23,7 +25,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Rendering performance](performance.md) | Derived observation, Memo inputs, and performance contracts. |
 | [Measured results](performance-results.md) | Reference/optimized timings, allocations, checks, and measurement limitations. |
 | [Performance guardrails](performance-guardrails.md) | Paired baseline measurements, regression budgets, and CI/release gates. |
-| [Reopened timing investigation](timing-bottleneck-2026-10-24.md) | Active FW-003 bottleneck analysis; phase CPU, DPI-cache hypothesis and controlled interventions. |
+| [Reopened timing investigation](timing-bottleneck-2026-10-24.md) | Completed FW-003 bottleneck analysis; phase CPU, DPI-cache hypothesis and controlled interventions. |
 | [September 21 comparison](performance-2026-09-21.md) | Measured optimization results, 11-sample verification, and the approved themed budget. |
 | [September 25 reconciliation investigation](themed-reconciliation-2026-09-25.md) | Rejected checkbox experiment, forward-row move optimization, and consumer cleanup opt-in evidence. |
 | [September 20 performance exploration](performance-exploration-2026-09-20.md) | Virtualization measurements, dependency-tracking experiment, and tradeoffs of further techniques. |

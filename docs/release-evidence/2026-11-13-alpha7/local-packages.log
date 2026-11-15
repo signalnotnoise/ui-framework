@@ -1,0 +1,13 @@
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\local-packages\SignalNotNoise.UI.0.1.0-alpha.7.nupkg'.
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\local-packages\SignalNotNoise.UI.0.1.0-alpha.7.snupkg'.
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\local-packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.7.nupkg'.
+  Successfully created package 'C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\local-packages\SignalNotNoise.UI.Wpf.0.1.0-alpha.7.snupkg'.
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\package-validation\ae9818791b6b46039fb58b498453d9da\PackageSmoke.csproj (in 294 ms).
+Package installation, transitive core dependency, rendering, click, and state update passed.
+Packaged themed file label and interactive close content passed.
+Native interop: 1000 retained updates, 1.52 ms, 1032040 UI-thread bytes; one creation and one release. Diagnostic single run, not a historical comparison.
+Packaged style scope, original overload, retained selection, scope changes and cleanup passed.
+Packaged compact input viewport, retained caret and binding passed.
+Packaged compact button glyph, native padding, retheming and sizing precedence passed.
+Validated packages: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\local-packages

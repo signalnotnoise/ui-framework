@@ -11,6 +11,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Release build failed.' }
     dotnet test 'tests/UI Framework.Checks/UI Framework.Checks.csproj' -c Release --no-build --no-restore --results-directory artifacts/release-validation/tests --logger 'trx;LogFileName=regression.trx' --blame-hang-timeout 2m
     if ($LASTEXITCODE -ne 0) { throw 'Regression tests failed.' }
+    $reportingOutput = 'artifacts/release-validation/reporting-' + [Guid]::NewGuid().ToString('N')
+    dotnet 'tests/ReportingRetentionChecks/bin/Release/net10.0/ReportingRetentionChecks.dll' $reportingOutput
+    if ($LASTEXITCODE -ne 0) { throw 'Measurement reporting retention controls failed.' }
     & (Join-Path $PSScriptRoot 'Update-KnowledgeGraph.ps1') -Check
     & (Join-Path $PSScriptRoot 'Test-Documentation.ps1')
     dotnet 'samples/Counter/bin/Release/net10.0-windows/Counter.dll' --visual-check
@@ -23,6 +26,9 @@ try {
     $nativeReport = 'artifacts/release-validation/native-window-' + [Guid]::NewGuid().ToString('N') + '.json'
     dotnet 'samples/NativeLifetime/bin/Release/net10.0-windows/NativeLifetime.dll' --mode window --report $nativeReport
     if ($LASTEXITCODE -ne 0) { throw 'Native real-window ownership and shutdown checks failed.' }
+    $memoryReport = 'artifacts/release-validation/native-memory-' + [Guid]::NewGuid().ToString('N') + '/report.json'
+    dotnet 'samples/NativeLifetime/bin/Release/net10.0-windows/NativeLifetime.dll' --mode memory --batches 1 --warmups 0 --cycles 1 --rows 100 --report $memoryReport
+    if ($LASTEXITCODE -ne 0) { throw 'Short memory reporting isolation or fresh-directory check failed.' }
     Write-Output 'Release validation passed. This command does not publish anything.'
 } finally {
     Pop-Location

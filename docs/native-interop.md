@@ -38,7 +38,10 @@ A factory must clean its own partial resources if it throws before returning.
 The dispatcher must remain available for the adapter's completion/cleanup work;
 this initial fixture does not establish dispatcher-shutdown or third-party popup,
 airspace or provider guarantees. No async-void create/update/release contract is
-introduced. Further integration and memory acceptance remains in the backlog.
+introduced. That is the initial fixture boundary, not current overall status: scoped standard
+WebView2 acceptance is complete under FW-010 (see the later sections below), and
+[FW-018 memory budgets](fw018-memory-budgets-2026-11-15.md) pass for their defined
+workloads. Arbitrary native providers remain outside that evidence.
 
 ## Preserving native styles
 

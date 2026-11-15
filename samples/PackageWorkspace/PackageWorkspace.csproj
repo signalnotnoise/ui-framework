@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <FrameworkPackageVersion Condition="'$(FrameworkPackageVersion)' == ''">0.1.0-alpha.7</FrameworkPackageVersion>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <ItemGroup><PackageReference Include="SignalNotNoise.UI.Wpf" Version="[$(FrameworkPackageVersion)]" /></ItemGroup>
+</Project>

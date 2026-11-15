@@ -8,11 +8,10 @@ namespace WebViewAcceptance;
 
 internal static class RetentionChecks
 {
-    private const int CycleCount = 44;
     private const int WarmupCount = 4;
-    internal static async Task<object> Run(string mode, string profile, string output)
+    internal static async Task<object> Run(string mode, string profile, string output, int cycleCount = 44)
     {
-        var samples = new List<object>();
+        var samples = new MeasurementTools.BoundedReporting(Path.Combine(output, "bounded-samples"));
         // Detect a known retained owner before trusting zero-survivor measurements.
         var negative = await Cycle(profile + "-negative", true);
         await Collect();
@@ -21,7 +20,7 @@ internal static class RetentionChecks
         negative.DeliberateRoot = null;
         await Collect();
         Probe.Require(negative.Survivors().Length == 0, "Negative-control release retained: " + string.Join(",", negative.Survivors()));
-        for (var cycle = 0; cycle < CycleCount; cycle++)
+        for (var cycle = 0; cycle < cycleCount; cycle++)
         {
             var allocated = GC.GetAllocatedBytesForCurrentThread();
             var timer = Stopwatch.StartNew();
@@ -31,18 +30,39 @@ internal static class RetentionChecks
             var natural = RetentionTelemetry.Read();
             await Collect();
             var survivors = result.Survivors();
-            var sample = new { Cycle = cycle, Warmup = cycle < WarmupCount, result.Evidence, Survivors = survivors,
-                Natural = natural, Collected = RetentionTelemetry.Read(), Milliseconds = timer.Elapsed.TotalMilliseconds,
-                UiAllocatedBytes = allocated };
-            samples.Add(sample);
-            File.WriteAllText(Path.Combine(output, $"retention-{cycle}.json"), JsonSerializer.Serialize(sample, new JsonSerializerOptions { WriteIndented = true }));
+            samples.VerifyPreviousCollected();
+            if (cycle == WarmupCount) await MeasurementTools.MemoryCheckpoint.Pause("start");
+            if (cycle == cycleCount - 1) await MeasurementTools.MemoryCheckpoint.Pause("end");
+            Record(samples, cycle, result.Evidence, survivors, natural, timer.Elapsed.TotalMilliseconds, allocated, output);
             Console.WriteLine($"Retention cycle {cycle}: survivors={string.Join(',', survivors)}; {timer.Elapsed.TotalMilliseconds:F0} ms");
             Probe.Require(survivors.Length == 0, "Closed browser resources retained: " + string.Join(",", survivors));
+            natural = null;
+            result = null;
         }
-        return new { Passed = true, Mode = mode, NegativeControlDetectedAndReleased = true, Cycles = CycleCount,
+        if (MeasurementTools.MemoryCheckpoint.Enabled)
+        {
+            await Task.Delay(5000);
+            await Collect();
+            samples.VerifyPreviousCollected();
+            await MeasurementTools.MemoryCheckpoint.Pause("quiescent");
+        }
+        var reporting = samples.Complete();
+        return new { Passed = true, Mode = mode, NegativeControlDetectedAndReleased = true, Cycles = cycleCount,
             NegativeControl = new { negative.Evidence, RetainedBeforeRelease = retainedBeforeRelease, SurvivorsAfterRelease = negative.Survivors() },
-            Warmups = WarmupCount, Samples = samples, ReleaseGate = false,
+            Warmups = WarmupCount, Samples = reporting.Samples, ReportingRetention = reporting.Measurement, ReleaseGate = false,
             Scope = "Managed collectability and normal isolated process exit; heap/private bytes are observations, not universal memory budgets." };
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static void Record(MeasurementTools.BoundedReporting samples, int cycle, object evidence, string[] survivors,
+        object natural, double milliseconds, long allocated, string output)
+    {
+        // Keep construction/serialization temporaries off the caller's async state-machine stack.
+        var sample = new { Cycle = cycle, Warmup = cycle < WarmupCount, Evidence = evidence, Survivors = survivors,
+            Natural = natural, Collected = RetentionTelemetry.Read(), Milliseconds = milliseconds,
+            UiAllocatedBytes = allocated };
+        samples.Add(sample);
+        File.WriteAllText(Path.Combine(output, $"retention-{cycle}.json"), JsonSerializer.Serialize(sample, new JsonSerializerOptions { WriteIndented = true }));
     }
 
     private static async Task Collect()

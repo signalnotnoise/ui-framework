@@ -7,6 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="../MeasurementTools/ReportingRetention.cs" Link="Diagnostics/ReportingRetention.cs" />
+    <Compile Include="../MeasurementTools/BoundedReporting.cs" Link="Diagnostics/BoundedReporting.cs" />
+    <Compile Include="../MeasurementTools/MemoryCheckpoint.cs" Link="Diagnostics/MemoryCheckpoint.cs" />
     <ProjectReference Include="../../UI Framework.Wpf/UI Framework.Wpf.csproj" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
     <None Update="Pages/*.html" CopyToOutputDirectory="PreserveNewest" />

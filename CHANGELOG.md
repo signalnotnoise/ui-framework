@@ -2,9 +2,19 @@
 
 ## Unreleased
 
+- Release disposed virtual-row editors held indirectly through cached automation
+  children; direct editor-peer ownership remains explicit. This working-tree fix
+  is not in published alpha.7. See [verification](docs/fw018-peer-cache-cleanup-2026-11-15.md).
+- Add bounded memory reporting, scoped lifetime budgets, light/dark appearance
+  acceptance and the independent NuGet-only adoption/upgrade workspace. These
+  source tools are not runtime features added to the alpha.7 package.
+
+
 ## 0.1.0-alpha.7 — November 13, 2026
 
-Release candidate; publication pending. See the [release record](docs/releases/0.1.0-alpha.7.md).
+Published both libraries and symbols from `c5d639b` after Validate and Publish
+NuGet passed. Public installation hashes match hosted packages. See the
+[release record](docs/releases/0.1.0-alpha.7.md).
 
 - Use indexed keyed virtual-row storage for large reorders and reduce initial
   mount allocations while preserving active editors, logical state and cleanup.
@@ -21,6 +31,9 @@ Release candidate; publication pending. See the [release record](docs/releases/0
   live in the source repository; NuGet packages contain the core/WPF libraries.
 
 ## 0.1.0-alpha.6 — October 28, 2026
+
+The pending manual checks mentioned in this dated entry were subsequently
+confirmed October 29; see [manual acceptance](docs/manual-acceptance-2026-10-29.md).
 
 Published libraries and symbols from `fd72534` after both hosted workflows
 passed correctness, package and performance gates. See the

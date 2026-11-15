@@ -1,0 +1,3075 @@
+{
+  "entries": [
+    {
+      "path": "artifacts/fw018-automation-roots-2026-11-15/focus-control-1.json",
+      "bytes": 248247,
+      "sha256": "1b38413542c24d833325496f171eb9112ed32f9e28ee1e6ecba80bfba819fd2a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/analysis.json",
+      "bytes": 10712,
+      "sha256": "28671abc38e14670d9e12e31e9d4bea404598063c2f7ec529db9055672afcd4c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/analyze.py",
+      "bytes": 2678,
+      "sha256": "4d0af077c524a5ea9a9fd80fcc46b0fee0c19db14694a6c25e07a6c8ea1b60a2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/campaign.json",
+      "bytes": 562,
+      "sha256": "670ac1f48a643b9505349817c320b3fd4705c4d8eb30b4827b8e6d485aa46bee"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/focus-binary-manifest.json",
+      "bytes": 387,
+      "sha256": "60b265dd0b116ed0b0ccb38d91ed94b51b5679eb989b54a8a9a528d87b51dbc7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/focus-source-manifest.json",
+      "bytes": 10614,
+      "sha256": "fab55c8ce54ca173c1c613eca926409808e9e8b415179085709908fed07bd1e3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/focus-sources.zip",
+      "bytes": 71764,
+      "sha256": "04fb79a7ea4ce645c2fc899e0edc4b8f64c9a15b7706029f116a15100978223a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json",
+      "bytes": 817189,
+      "sha256": "d35bc0802ca008f90d4674dfe3ebdfb6933c178f4128dfb522bea2d63009f545"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000000.json",
+      "bytes": 854,
+      "sha256": "5b5e8be2d86fa37e61c146bab77754f49069e62f4f582776da4791603f324d44"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000001.json",
+      "bytes": 853,
+      "sha256": "ddb888a34fb45493f70de3f4cd834bf7394fcf6ad5ff92de976ba490d9afd0ba"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000002.json",
+      "bytes": 853,
+      "sha256": "9b777bd4a73f511dfe11de54d1f568033e3c9fb7c34c3353088d0edfd654ed6e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000003.json",
+      "bytes": 858,
+      "sha256": "be3a68bf157f2531788b195ac45cf4e9b02863e33e50a251a9a74143b912f366"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000004.json",
+      "bytes": 858,
+      "sha256": "7cacf34b31afc545588b03e7be9fe8666077ca0776ed83a36973c47f4d3c00a5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000005.json",
+      "bytes": 858,
+      "sha256": "1b42344204111f315768556ce29ce99145f1cad129a75bb99543e992cc1521ab"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000006.json",
+      "bytes": 857,
+      "sha256": "7adb9d0c9effd81e39e407695f0022957c31638fd467b7a71eb3620af4cec30e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000007.json",
+      "bytes": 856,
+      "sha256": "65e4dd0ca38f8b78a9b5e43b0b6e39b5c564c59bf029d52fb6932e5688b5b3b7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000008.json",
+      "bytes": 857,
+      "sha256": "1a6b25413c7056b1bf334d5c0b45ca008842b6cd6012d447178497557b5b9187"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000009.json",
+      "bytes": 857,
+      "sha256": "802d3660fe504cf98e75398244ec1f4b47c7983f78f6b0b61450a9d0265260e3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000010.json",
+      "bytes": 858,
+      "sha256": "b0b6496db24ab2b6f7e7bb70a203a9ab52d2c4e2274d478a6f1dc2d782f4a67c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000011.json",
+      "bytes": 857,
+      "sha256": "efc18a0c9c32314b82f2fe3cf29225fdea11dcefd5852cd32b963e013a4ffe3d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000012.json",
+      "bytes": 858,
+      "sha256": "29f1e75e4013619134dd37719e9283406c8958685890da721ff1b3ef181264a2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000013.json",
+      "bytes": 857,
+      "sha256": "18aa21692d28a051de94081e38fd18511e0b25e1b9be8ca69876ea34a909a974"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000014.json",
+      "bytes": 858,
+      "sha256": "e7156f7fb5a7d02a1ea6c236d45dd859179deb3cc5e354987f1de9daa893bff8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000015.json",
+      "bytes": 858,
+      "sha256": "c945c4b4c01ee68ba9b3a617c5719b5dfcd3c0df43dc473e64878c0daccb20af"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000016.json",
+      "bytes": 858,
+      "sha256": "4665ade3998b5dc37603dc5cf288d4c0c41af8fcec42a329c9584effa83fc66d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000017.json",
+      "bytes": 858,
+      "sha256": "e8ce57224cd65d80e71c5ae54d105669065cd21f674636dbae280dc4fa3c1771"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000018.json",
+      "bytes": 858,
+      "sha256": "05edcc9cada6b67d48c1fc114c532f25c135959c02be96efdaa61803573fda12"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000019.json",
+      "bytes": 858,
+      "sha256": "d13ae320bf8f77fbe4dd4d6c3483ba4a79bba4165672acb1ca7508132fcec214"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000020.json",
+      "bytes": 857,
+      "sha256": "d08ae947b1a5ed9e91d540bb30fd1d3106e07981cf4a25057041417c222f2686"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000021.json",
+      "bytes": 855,
+      "sha256": "3ec363a62566aa99282d352aedfd55623dd2875983024588fe6fa84c4c936557"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000022.json",
+      "bytes": 858,
+      "sha256": "18679c830a70ba9856e44d9a71d5738126fc3f4a594d96d4d9ce376a478c9527"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000023.json",
+      "bytes": 857,
+      "sha256": "81a827f2f5ad35794a102e3dd535f4972879bf1dc5d83b84bba89c6a4233b7b8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000024.json",
+      "bytes": 858,
+      "sha256": "a0674739ecedc0496130906bb2f79acbdae6f9286861f22dfa0e02c8bb9a456b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000025.json",
+      "bytes": 857,
+      "sha256": "e10b566c614eaad2a74a03413d6112c7cde215093cd06a55e749099bcc33aedc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000026.json",
+      "bytes": 858,
+      "sha256": "48b53acddf8e2d6920aaba0feae41c152625f25181d762eb49f8f65f8bb751a2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000027.json",
+      "bytes": 858,
+      "sha256": "8337dfa34ad535c5f5cbfd2cbd44e757e4004635243dedb153a0c6d58270bc0b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000028.json",
+      "bytes": 859,
+      "sha256": "f5d8196cba0e9f04cfa686a89a5bb82fdc7f1f70ce851f45dedfc68a1a90631b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000029.json",
+      "bytes": 862,
+      "sha256": "55765061ce097aa4b88bdb1067befaeed3aeb4ae83597ff0e5fc1075244ffaa9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000030.json",
+      "bytes": 861,
+      "sha256": "e6d93b77f0154bde0257f3074c04a073d793bab6f305cd7ee1bc30672a1a4c24"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000031.json",
+      "bytes": 860,
+      "sha256": "fdeba10dbc1cd2cb0645b019089aa71100c3c0f19e294a2d869286aff65895cb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000032.json",
+      "bytes": 865,
+      "sha256": "6e92ebd2cbc400a7f67ec66ff4dadf613ef51cb144cbec24e8df474b635fbcb2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000033.json",
+      "bytes": 865,
+      "sha256": "474dd4b7ee9e388a1573df5382d3cac6f9c4f6c555e93c90476aff7aac434487"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000034.json",
+      "bytes": 864,
+      "sha256": "01cffeac0bf6aedcd41d7cca46ca58e51813be93cc3d3bf5fc41c846daf10f4e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000035.json",
+      "bytes": 864,
+      "sha256": "b9b7b8e12fd1219cc64db87d510c35ae866e513a804ce90d49e8075ba3cb3bbb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000036.json",
+      "bytes": 864,
+      "sha256": "3eda3c8effbe546ae5aa7209812b4f94d2fe7657bbc91e40ac67d12083099d2e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000037.json",
+      "bytes": 864,
+      "sha256": "4c32db6bde2cc3d6ca7a6169c44a8972ef3f4229f623fbd7f53d9f1a4dcab002"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000038.json",
+      "bytes": 864,
+      "sha256": "35f94ef241292c2029b25d316a25881fcfd9ef1adccd79333d0f1fefc2a17679"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000039.json",
+      "bytes": 864,
+      "sha256": "3ad61725299e1c812b97df96be7c68442483901c9b4b12002c48831efba7973a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000040.json",
+      "bytes": 864,
+      "sha256": "85bc5598f690c77b70f8a8123f54b684730268a021a9aa0bba3409d546d06a78"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000041.json",
+      "bytes": 864,
+      "sha256": "414befad9bd752ede7e5c75e0042c8a7eeb12f7e41c2c4b8c0930d3f2919efe4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000042.json",
+      "bytes": 863,
+      "sha256": "371d27a0b56bdb5dfaabcae4d13ab405f3a4e1561f3b70194cde8737a1e9a85d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000043.json",
+      "bytes": 864,
+      "sha256": "5288b027f87b36e001c0287df1791c2f81b3a960b2fcd14c217977f22a937c59"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000044.json",
+      "bytes": 862,
+      "sha256": "8ba38a83bb22ac4fdf7b4cf7ec60855f0f0e365b55474003b6ee2d87172231e8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000045.json",
+      "bytes": 862,
+      "sha256": "86fd6b81a92f451f1e647623bb2977aa52dc903cc1e5165f0da783bc0aed2e7b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000046.json",
+      "bytes": 862,
+      "sha256": "9451e82a4715de467f669a5b8b535b5806db2211be469297f3b32275500116f3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000047.json",
+      "bytes": 862,
+      "sha256": "49c745a157679bf17fef81565705babb10cfade2ebcfa6f51b93619aaf339ee8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000048.json",
+      "bytes": 862,
+      "sha256": "019ab03352dc615e26a6728d591c0d0ff0feae2c3bc735494165ef8b8dc309bb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000049.json",
+      "bytes": 862,
+      "sha256": "f6c2ffac298b0514f5677e9b21ba85a41b10c906349b69a3cd3e3c9adbac462c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000050.json",
+      "bytes": 862,
+      "sha256": "e3e791033964981b49d77c9c95d3a08a55b2e053793a2cd8cabccd0403bda731"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000051.json",
+      "bytes": 862,
+      "sha256": "fdb475dd2a84a6fbf7c0e718469ec89164654e5480a22dfcfdaa5efa62a97fbf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000052.json",
+      "bytes": 862,
+      "sha256": "426c49894d56e618d02819b46b8a0242d0394e31e447407c51ee4bd63eeccd94"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000053.json",
+      "bytes": 862,
+      "sha256": "ade845b24c20669bab17c38360399a0d63837b18050fbad935ba5413272d200c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000054.json",
+      "bytes": 862,
+      "sha256": "d44730793c9f23a4577f85b3efb02553784af19330f06a6e715c29817f4a0a48"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000055.json",
+      "bytes": 862,
+      "sha256": "e34d75686c239835b456d0a9bd30f5484bf5cdfcaad83dc6306fdecd2e46eccd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000056.json",
+      "bytes": 862,
+      "sha256": "11bc47db8b55982af28058245fb92a7a577e4f8f67e9cc1daa3ed42f3d874e1e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000057.json",
+      "bytes": 862,
+      "sha256": "c739880c869b8803708887f17adb346356cfe77293cf039e031fcad7b7493f56"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000058.json",
+      "bytes": 861,
+      "sha256": "7032002a7870ca858f8b183f6e9e3922400fad701139c508e50d3fe699550c74"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000059.json",
+      "bytes": 862,
+      "sha256": "4d8e9299ea52edd6ebcb0edea1d5441539dff9fca19be22c92384f32efd7b810"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000060.json",
+      "bytes": 860,
+      "sha256": "a35a9703871e1d6a916b62d60412bfdc93c38190e95baf2b59c8369d87d6918b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000061.json",
+      "bytes": 864,
+      "sha256": "205868fe47e81db546207006daecac7fcaa96345dd12d98d38c821c297d1e44d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000062.json",
+      "bytes": 864,
+      "sha256": "755575fdbdbdf6017a5b23b142a51ef2bbfd66bc0731824978ce0109f6025528"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000063.json",
+      "bytes": 864,
+      "sha256": "36976e72fa56a133174582545c8df9089649b1e8a224a58d16ffa8efc33725d1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000064.json",
+      "bytes": 864,
+      "sha256": "1be3fd01be8f08382613c946490e4ed26d6fc7b51fc343604a13d7316a4913c7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000065.json",
+      "bytes": 864,
+      "sha256": "249e772757d0630e0e0d23981a3674f5d298d79293e876b2eb17dde5fdb70e86"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000066.json",
+      "bytes": 864,
+      "sha256": "d7c69ea7340053c05a8706f9bbfc3dae983fc83587b757028381a6d7e1bf7434"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000067.json",
+      "bytes": 864,
+      "sha256": "8402afce24453c769dc7a023d149ab1586ed827ed843ef3c081c248d5a433332"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000068.json",
+      "bytes": 864,
+      "sha256": "04954ad8b42a687898f1e262c28b2db1af494b990baa0faaa5213d5bc0c096d8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000069.json",
+      "bytes": 864,
+      "sha256": "698e8fef0aae75f11f063cbb0ecba19b24c00e42ce7a8f9f4fb66bb9291ae0f0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000070.json",
+      "bytes": 864,
+      "sha256": "890dbd9e06de1527f139c5a4bc49f180efd86e4d598d008c7a149131b8fc7d9b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000071.json",
+      "bytes": 863,
+      "sha256": "007ae36e8301bf50691090c5dd186f9d1c291484f3a780f168606cb90de70c15"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000072.json",
+      "bytes": 864,
+      "sha256": "1ee3d1280b3a1f1bb79152627e4424905fa7405c1ce8a60a93cffb3ca8da78de"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000073.json",
+      "bytes": 864,
+      "sha256": "c4b332b13a6e1262e1a34c2e0ac2a0108985ae8012cee82fd9382714a1a79a3e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000074.json",
+      "bytes": 864,
+      "sha256": "0cfe2945554486e5e63698914ecbc6f99ddd0d545b9d5ac93762ec7af145a1b9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000075.json",
+      "bytes": 864,
+      "sha256": "d0ae50b085bd7889c929abfa76fb8758f5837c6f757bd1e51b1b5b13684b6e45"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000076.json",
+      "bytes": 864,
+      "sha256": "fc11d594f1687681725b72d66c4ee63e8d7c80dcdcf7c6f6b8f5113e98fb4c3b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000077.json",
+      "bytes": 863,
+      "sha256": "94b824768900f465c76358187c11eb84e0e3e96010cfaad1e9b1de345112dddc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000078.json",
+      "bytes": 864,
+      "sha256": "e1ebde989cae1ac56bfdf4e82b24534dd350cce7b06f87a80249e089d10207aa"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000079.json",
+      "bytes": 863,
+      "sha256": "9900c51a4ce3bb428ba77da3b67d53bac3f42d8e9162a50b794098f2b97250a3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000080.json",
+      "bytes": 863,
+      "sha256": "f05130a887c953181ec62e3b31b2fd4842d3a6d0505d0809f43117ec887242f7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000081.json",
+      "bytes": 864,
+      "sha256": "a0c1eb18800a97ffe07c2a1f9aedc52f22fa40fb9d9c5974ac5ea15502fc2edb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000082.json",
+      "bytes": 864,
+      "sha256": "1327a21c267760bc7fd035179bb586c664b4c416b6762b877378ca43580afa8a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000083.json",
+      "bytes": 864,
+      "sha256": "1a1195d870805d6a263055e225ca183819ff3766724ba71c8bbf84cf5eb07790"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000084.json",
+      "bytes": 864,
+      "sha256": "ae973ec8636c1b304f4ad527332cb832815f26a8a2f2d6a615d48363078d902e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000085.json",
+      "bytes": 864,
+      "sha256": "4197841ca27847b94a9d7cfa4a1c0d681bed8b9e72c495b986ff69e82547971f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000086.json",
+      "bytes": 864,
+      "sha256": "590385bdb7432bcdbe7eae63d8dea6b17d86b8f1ca81b48b8c77ed2c0af44fb8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000087.json",
+      "bytes": 864,
+      "sha256": "db6d6ccd391e669ab9e0752cfe190b8499914f84c2eb22eee8391b4f1bbe40a9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000088.json",
+      "bytes": 864,
+      "sha256": "7e645572a903a5abeaf8c0e0dced7342fdfb3768711d2e08f9099939dad92057"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000089.json",
+      "bytes": 864,
+      "sha256": "33ed6bb56aa4c4dcb21789d076913875bdfad51066772aaa0425cda4344fa0bd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000090.json",
+      "bytes": 864,
+      "sha256": "d05f5b82793e883d0d78986bdfad421a88ac52b7e825fe90bef5741fa6513936"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000091.json",
+      "bytes": 864,
+      "sha256": "5034f443f843d522460a2dd84b939ecfda05890d6a41b4efdbf43bc654c3f340"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000092.json",
+      "bytes": 864,
+      "sha256": "bb8db0950e8f68fb2290dae5b58b8c6853fbf38e20aae8d5fdd45c4160147ab1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000093.json",
+      "bytes": 863,
+      "sha256": "83f9dd996dc3d7f727268cd379bd5d3191f5b2480014ecee7d282222f847a677"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000094.json",
+      "bytes": 864,
+      "sha256": "485d3ff1aaaed18bac28581d023cd3a54dc2471737146e605729e7f930a645cc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000095.json",
+      "bytes": 864,
+      "sha256": "368b4fd597db215c9ff5ddb286f0965499666c51703ba208e100ec755c0057c2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000096.json",
+      "bytes": 863,
+      "sha256": "21444ee86d0ada69fd6fdae9e677f7a60634bcae3f16456cfeb3413172903366"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000097.json",
+      "bytes": 864,
+      "sha256": "06252e4fbf1201aaf9517d9fe9e27184c29c5d7dc622fe288fae30472092a19a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000098.json",
+      "bytes": 864,
+      "sha256": "414fee87fa1dd3f561d542ef294419cbca77cc2172b84b6b4ca080a957c23169"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000099.json",
+      "bytes": 864,
+      "sha256": "20f3e3cdf31c77af56433ae3eb2774bd9116401b230e3b6ab034cab4c8e2ee07"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000100.json",
+      "bytes": 865,
+      "sha256": "92c75093d3188dc7c40aee783b5d7cad95e511569ce7caca4f26840a8bd70147"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000101.json",
+      "bytes": 865,
+      "sha256": "5e3a3f3280b4d319e072b0a0c833cbb74e3771ee64242a92d98dc94420f71c67"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000102.json",
+      "bytes": 865,
+      "sha256": "fe557bb1be2429e4dfb5cbff98f834a803ba4a324dd3d1e0d3da76c554edd8b6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000103.json",
+      "bytes": 865,
+      "sha256": "f5af2b1ab442a13e85bbce4045b7ee21fb39b607f56d737aeb3935ef37cbfbcb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000104.json",
+      "bytes": 865,
+      "sha256": "49f2a7589ef7e378b93751b5b8be2bd3d934d41050604303d6a78397619205a2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000105.json",
+      "bytes": 865,
+      "sha256": "212d2de84acceb5a6776e24c50deb5bd4dde304101a5c793d4d57cd31e98b5f2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000106.json",
+      "bytes": 865,
+      "sha256": "716d43682e4a32a170d7496a84c02750907df6ca3dfdca09714b90efb0b5a2ba"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000107.json",
+      "bytes": 865,
+      "sha256": "b73c81fa3a2a66555681598daf4c4c12a39570977734e3b579892fd53cdd9ca9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000108.json",
+      "bytes": 865,
+      "sha256": "9a36b669e3e91fa4cbb9a67c2c5379fd06863b82bda0e48ecbea224bd9cc5429"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000109.json",
+      "bytes": 865,
+      "sha256": "c1d8e5efe149343c2b5db1ce1e76acf14978f2082e9dbea936b911b13cfec451"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000110.json",
+      "bytes": 865,
+      "sha256": "503c7a5465cb1db1b7d0b880bda6574b28a8637cfafa41c6201ab21024dc3c18"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000111.json",
+      "bytes": 865,
+      "sha256": "c1c5ea39f106127fbce94df07a2ec06df9b09798648ac871837d9b0e4029b02c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000112.json",
+      "bytes": 865,
+      "sha256": "368cb95641ae438b03f16a337b7cafd008d496909f1ac317c2ea41a4d55e49fb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000113.json",
+      "bytes": 865,
+      "sha256": "92e3ad7362cbd5b7fc114f1f990385e6a597c2e15d66642df83caa6d4fae6bf0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000114.json",
+      "bytes": 865,
+      "sha256": "7dfcf9f9165ccfc3587f80dfe00b58ab5b0522832a832410db385020bc8cb664"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000115.json",
+      "bytes": 864,
+      "sha256": "e08495301f8f83f3994563894767446c5ee500e5a26dbf9de22b280511fc850e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000116.json",
+      "bytes": 865,
+      "sha256": "ace12a7266923eb05957308de751c3ec8fcaa95b3169a7bf1e4d3d1cef75b65e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000117.json",
+      "bytes": 865,
+      "sha256": "2dfac2d81a9f6195d169c44002006387d6f3c373c2fbaea98628398bea7ac491"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000118.json",
+      "bytes": 865,
+      "sha256": "bc4313788c5b3357204d301ec4502086a4d919a3f468eba41545c54e32406457"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000119.json",
+      "bytes": 865,
+      "sha256": "50eadd9d92432fa3f3de6c1e4238721bc799f67453279f63676cd0892ba4efb1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000120.json",
+      "bytes": 865,
+      "sha256": "c4275ce75ae908186de20be9164dc8a97f838a2d99e9ab930b9cdcb257354570"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000121.json",
+      "bytes": 865,
+      "sha256": "c79defbc18f6500ca6daf9537c16253d71d6a16f0952b9a78d50eab83ea98b5d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000122.json",
+      "bytes": 865,
+      "sha256": "1b8280eb0f17d038d228103a27dcd0a68c9bbe5b47f7a9d81eec0532b7d6f104"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000123.json",
+      "bytes": 865,
+      "sha256": "06e0f080b6ea01602420bc7e0e3ef4887b9c9598ec24a5bcdf73ac2ab2e098a3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000124.json",
+      "bytes": 865,
+      "sha256": "ce3d7c78d9dcc0497b2fe91c4807d746c3633ce6ccbd4e9fb727784132301f4e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000125.json",
+      "bytes": 864,
+      "sha256": "86ede51537eca070de534925cfe233789776aa6194c8afba4e267b1dbaebc383"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000126.json",
+      "bytes": 865,
+      "sha256": "96bcbb437d1f8f2f693051ba57dbad746c05bb8aa5216d3890724362ea85ece9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000127.json",
+      "bytes": 865,
+      "sha256": "8fd3de0272547d1dde074e03db2331395d368d770cd25f2de3c8a333d7e9ab8d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000128.json",
+      "bytes": 865,
+      "sha256": "036a7a48cf88ce6d61bec770465f66b90c6d6455171b65a3eacb288c8940c09c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000129.json",
+      "bytes": 865,
+      "sha256": "6bba645b5e95f310dd25a65071b573192c7669b60d9086c6bdf959cc7e27f9f2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000130.json",
+      "bytes": 865,
+      "sha256": "1cd2d760fff76cf1ce5de5a07c4f68b093454913267f621aed1cf013c29674c1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000131.json",
+      "bytes": 865,
+      "sha256": "d12695e25e24ac6ca856ecad06208930f7401730f79762dbeb0063837796ae5b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000132.json",
+      "bytes": 864,
+      "sha256": "4a57af4ffd57e3cf8e7e14f3e8ef5af80601645eb27dc51ed7259a6a0a24bf22"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000133.json",
+      "bytes": 865,
+      "sha256": "ef3ad130bde1fcd0c11ef1e5762655fcd0ba11921b97a6bfd8c437fbfc8a77c5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000134.json",
+      "bytes": 864,
+      "sha256": "60519a7ab4df7cdb3350df951a418831fddf776922ebe3bc0bb17cdf894d2aa6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000135.json",
+      "bytes": 865,
+      "sha256": "f0361dccecb9e30865552c10e6008be70c33a0efbe4edbb5fff99cf5e6331b38"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000136.json",
+      "bytes": 865,
+      "sha256": "59c1e4420ef0da28458f7893c2914edfdf84234120b464adf86d345691509387"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000137.json",
+      "bytes": 865,
+      "sha256": "93e3e77e18e076445b60c543aa0116a9a7a086f9b9a54938574df400a23c8b4e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000138.json",
+      "bytes": 865,
+      "sha256": "26a725468bb1b58945790109e3abbb6c748c90f5677a81c7aae034657c2c6341"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000139.json",
+      "bytes": 865,
+      "sha256": "9864da4556776244ce8a586a8a8069c3c1f34e7df77a04f36bb033ff634e1e6f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000140.json",
+      "bytes": 865,
+      "sha256": "83adc3381cf3251274fc9f91ece5f985a626dcb04007f69e15a200fe9db380f6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000141.json",
+      "bytes": 865,
+      "sha256": "3a638860e3889adaff20c948ce96d76a471bb6b3a4a0b16a199cdecfa7efc167"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000142.json",
+      "bytes": 865,
+      "sha256": "08dd52909b3e35d468df1e96281d8021a8ed6aa0cd159bcb7cf5fb98dedc2dcb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000143.json",
+      "bytes": 865,
+      "sha256": "5f2d52366942d50173d44541eee19622768d4e99974b031d1dc175e3b7ab17e7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000144.json",
+      "bytes": 865,
+      "sha256": "e3ea1f59e16459e8c32490221dd86f7c812a1a25dd6fbd9bb672a32ea5f9136c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000145.json",
+      "bytes": 865,
+      "sha256": "67cc3cd2a9ba68abdb1d85e6675a0d5a595132f9c6a033fd3d0b91686afd8785"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000146.json",
+      "bytes": 865,
+      "sha256": "4b86de379e3f0c3bb5477ba2d93a238b896b650b29457387d818448a8ff5add2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000147.json",
+      "bytes": 864,
+      "sha256": "12dc19f4fbb698f54db0566e863d5fb2a84a1c73b856c985b1943bb011992f99"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000148.json",
+      "bytes": 864,
+      "sha256": "9f7acef4caca45908805c95df714cfac663d5a20946b4304a0bf985d27a414f8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000149.json",
+      "bytes": 865,
+      "sha256": "eb2fd421df268d9d3baa02261c609bb84f58377f71a8118cd187dd744548011b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000150.json",
+      "bytes": 865,
+      "sha256": "2439f8da342caf147c044ebcd35578fabf2a38e53ab21e2b780cdc78276b6049"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000151.json",
+      "bytes": 865,
+      "sha256": "a39dd5c257a6ebac5ccb903cf8c0e4e07f19d1965fda92c5be4981202b6cdc7e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000152.json",
+      "bytes": 865,
+      "sha256": "c3f318f7fdf4feb1dc6061f4c31c4df060cd2f96e4251c83454120f22727728c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000153.json",
+      "bytes": 865,
+      "sha256": "aa585ed26b72ad5c7796c5d6e5a92a7d8ff96f32f495729085fd4b36f530b494"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000154.json",
+      "bytes": 865,
+      "sha256": "508f57e645e7db17790e315c48e4a0e0428b575e25ff35a2b34c0880a609530f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000155.json",
+      "bytes": 865,
+      "sha256": "5dcc2b86258529474fd9899eb44c6b39baed293a9546011379e01029feed412d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000156.json",
+      "bytes": 865,
+      "sha256": "de7cfa8f364c9757c90b2db82adf3c5bf2e5ef90e04df3dd8ab7d4c7a0ba8640"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000157.json",
+      "bytes": 865,
+      "sha256": "a43a41c9b89e48fe1f6f98695e4552c66efad6601e8427f35795fa13015318d2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000158.json",
+      "bytes": 865,
+      "sha256": "451f37932684466e184f6c1e44b4946626d4d8731b9b6295d18a82722468b4ba"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000159.json",
+      "bytes": 865,
+      "sha256": "6d9641ed3b3063b071290a9c7066ee94df421d47ccee9099155aa980f9b11330"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000160.json",
+      "bytes": 865,
+      "sha256": "6b12b884da3c0cd12ad966c1d904be677b2781b3c519aa4ba60f358c19d1d33a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000161.json",
+      "bytes": 864,
+      "sha256": "9b10b6f8758b4f368ac8b697a7348fbb61be4bf9ae3619f2e681a0ed9055cef9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000162.json",
+      "bytes": 865,
+      "sha256": "9e471db756e5d6f1de607cf3dc83214e3c98de00149aab6fb65ba89ea3d1d5b6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000163.json",
+      "bytes": 865,
+      "sha256": "c16f1e54d927ea8e35ceb1b57b0e281533a01940dbc4a4507e262629df3db510"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000164.json",
+      "bytes": 865,
+      "sha256": "5504be052256a6de65e98c9a1043f4def7db5ba72959efbba25f64ce10fe61b6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000165.json",
+      "bytes": 865,
+      "sha256": "3cdb9f65e2b51a887b283ce7a4d3666aa0ba0b63574ffe1e794c0f56ec73bb42"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000166.json",
+      "bytes": 865,
+      "sha256": "9b8e03a54a7dbbc82243e5046f621ecb6ea4c2cdb52a35fffb10879733301f9a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000167.json",
+      "bytes": 865,
+      "sha256": "418d2f05d6c25f08b0789595d98c55571f547a503bcce7ab87e559710387589e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000168.json",
+      "bytes": 865,
+      "sha256": "a9a0e976fa0007a02d83ce963eac037f38220c2bc2b6ad9fdfdfe98622a74c17"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000169.json",
+      "bytes": 865,
+      "sha256": "a0ad48b197c093e76bb1655d919c66c02fb81c3ee2cb992007539232fd67ee47"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000170.json",
+      "bytes": 865,
+      "sha256": "f239f882e28834036180dbeb73d3d53311e22d3b34e0a5f4241f91b05f598d66"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000171.json",
+      "bytes": 864,
+      "sha256": "a805511e149e21f4fc4e2f4ab64ef0f2fcd260bc5c863eeba6ebde6898561132"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000172.json",
+      "bytes": 864,
+      "sha256": "993cc97e134290d9189ae38afb88c64a1234f33c4579ed91a4ca334cce563240"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000173.json",
+      "bytes": 865,
+      "sha256": "33414a3a424eb3598c4f4f946b9a0de170307adbe2852a626ecf9d81a73cc676"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000174.json",
+      "bytes": 864,
+      "sha256": "40bc21802f67166384897df59864bd7044bdab6eb3a08b33564b962aed45f067"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000175.json",
+      "bytes": 863,
+      "sha256": "0c0ea8f4470b119e0ba20ca73a9401e7abb67aa779afbfb6f8ffca5982bba4e7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000176.json",
+      "bytes": 865,
+      "sha256": "c333c92e538275fc56bac863754d3cf34d80a0b9b2127212c2e84984c5b61f20"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000177.json",
+      "bytes": 863,
+      "sha256": "3940492c9a54ebc360cd171c4b22404b5b6f22656ceeb0479a79b66798169136"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000178.json",
+      "bytes": 864,
+      "sha256": "1e76d9e603f365eebc407894a5a6f7ad433070a06f6c538fd422e26916862749"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000179.json",
+      "bytes": 865,
+      "sha256": "af8e73609be20c576bd20bbf7e49d5d4b59c5adc954576f79de6f1cec735b4ea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000180.json",
+      "bytes": 865,
+      "sha256": "042a90bd8c37300c05e0d124cada26ef61820bd9d1afaa8b2911e1d8029e568a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000181.json",
+      "bytes": 865,
+      "sha256": "8e1cc4d05ded0c30ff2be536ea2c44110bc2e55929aee87538bede8b06dd775d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000182.json",
+      "bytes": 864,
+      "sha256": "49e49ebe2efaa26c95858d26c6c8109e45f6c2409a3ff251df5dea01613ebf82"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000183.json",
+      "bytes": 865,
+      "sha256": "a4abb48a21d4317d363def9aca0081cf2214cf953ca9d00426da434cde7d3c14"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000184.json",
+      "bytes": 865,
+      "sha256": "76a8f0cc96769d1734d9e0fa9781164dc75002cd06043777f19ffcbd9007ec4d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000185.json",
+      "bytes": 865,
+      "sha256": "e9cd06044370d8e21f32408829f9c3b195e2e43661b062c0c98e38b52fbc0d72"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000186.json",
+      "bytes": 865,
+      "sha256": "f399a97d58ef311787f0d48d2efd35d1e68e0a189fba8a7fdd59adf3a88a386d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000187.json",
+      "bytes": 865,
+      "sha256": "a6a6a2abac1f532ca6e0caf71de9543084b7095148d091748e60fc8e021f23f0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000188.json",
+      "bytes": 865,
+      "sha256": "c091981d96a314aa5ce1b7aece207f198598dbc175d8ce941d8499352ceea725"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000189.json",
+      "bytes": 865,
+      "sha256": "a06732408b6bc37ad5f1ff92c45ab3376b8592bd877289a43133cfafa6c9d2e3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000190.json",
+      "bytes": 865,
+      "sha256": "dcf9e871b138677a23ad102abaa32aec1f0dfa52fa91968e7fd783fbdc3c8150"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000191.json",
+      "bytes": 865,
+      "sha256": "c44a3b4c7c06409fa447788237d103d710e04b31060461997211b31a1ad8702f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000192.json",
+      "bytes": 865,
+      "sha256": "21d3c240d947235cb7f6f43e6ed55061fe41798e38704b3ac6c83ea0e7b6709a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000193.json",
+      "bytes": 865,
+      "sha256": "b60e1649f7eb69a6a742fde2de2a18330d1607c22eabaf6366252772474c9fea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000194.json",
+      "bytes": 865,
+      "sha256": "78a23c1e5cca3726d036e13695bdf1a61893f48286215ae032c865895f9ba421"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000195.json",
+      "bytes": 865,
+      "sha256": "b8f1a48dae4debba99a55de0de2cf3ccfaaee6c6748c4b071dbefe6ef966d6b8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000196.json",
+      "bytes": 865,
+      "sha256": "f540789b964366a53a6b5924aed5f95f00c3df191fcbd5b59e769dd3e03cf4cd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000197.json",
+      "bytes": 865,
+      "sha256": "8fed01ba2585329463b1e94ad6a10b2ac3bb9ff54c2da3376fb348abd4e7a1dd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000198.json",
+      "bytes": 865,
+      "sha256": "ae114afccb6d45d5e7bddf53f998dd37e3c33b7f2eb633f57e779611e9aee25b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000199.json",
+      "bytes": 865,
+      "sha256": "950b5807afe5bd53b191016c4e6376e9c82e142ca5f00c3bb805f56ec558f14c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000200.json",
+      "bytes": 865,
+      "sha256": "ab10ac6ccb3bab9608b84c61509646a49ae3df495c325ac022861a99464bfa26"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000201.json",
+      "bytes": 865,
+      "sha256": "cfd1ba7c87042c17cdc34167524d23113ae367cfc87e29d24fcd1d51be1f5ff9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000202.json",
+      "bytes": 865,
+      "sha256": "a1b9b7215a9d5d55c9fe184a3a149504cb05818cea3afb1b610698d2c4b42318"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000203.json",
+      "bytes": 865,
+      "sha256": "d111fe77253772e05862051a8a285ba2f6726ce1750bcfc4e0550de14c8c5ecc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000204.json",
+      "bytes": 865,
+      "sha256": "5d37bcc5af425c46c5849abc46f58837420111dec781272bc1dc66d533ddc00f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000205.json",
+      "bytes": 865,
+      "sha256": "f339d1a3927a3af0551103cd903296dc23e74241508bc344941fa718ecfb8099"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000206.json",
+      "bytes": 864,
+      "sha256": "3dc01f47f4cc607521b50ebc2217b3ae74fcae5ea7783cd4646936596e6ee5c4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000207.json",
+      "bytes": 865,
+      "sha256": "44b68de7d8b99d884edd9be899a3cadf69c665a1f79a6ac123d6b465b6170014"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000208.json",
+      "bytes": 865,
+      "sha256": "84078fda2c03143bc10e123503b9a20dc0001fc314e1fdc068ff80b32d5f2634"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000209.json",
+      "bytes": 865,
+      "sha256": "ad77668a7bbb0eab13b18534f8bdd42725ab8039bef4d0f8b9e221d8986fd422"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000210.json",
+      "bytes": 865,
+      "sha256": "d4daa236806690f63737a7e5ed988b8d355ad4ae4fadc3cb7a1a794817a92275"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000211.json",
+      "bytes": 865,
+      "sha256": "43aa0581a066e3a001b35051ac88d77acf591c7f66b93af55c1578e887a1a530"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000212.json",
+      "bytes": 865,
+      "sha256": "f25d955c6f958a6ab176a1afa5ad1e4bec7951eff368bc6f0c9df8697f8e7ad9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000213.json",
+      "bytes": 865,
+      "sha256": "8b80d13138cb81cb109193ed0149d9f8007804b232dbdfce824fff1d7a08e4e0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000214.json",
+      "bytes": 865,
+      "sha256": "9f1e98dbe7ff9a79cf178bcb9d8c02421302bbc29e8b57a1eec95be6d615ae5d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000215.json",
+      "bytes": 865,
+      "sha256": "9150dc5bba4bd848f06ead330f5e2891eb93d51188f987e5d0b657f2862db6f7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000216.json",
+      "bytes": 865,
+      "sha256": "9eef7ec8f6813803daca6a08cde79d0b7c9ac87024522804da1fd2e55f650a58"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000217.json",
+      "bytes": 865,
+      "sha256": "1a280d91b77dd33304f61b38a596f75ddcc135def5c48674b74b39e5796734a6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000218.json",
+      "bytes": 864,
+      "sha256": "041224a80b541c712e65343a50f1feaf6d28ec91e8e75aa831154d8984872aea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000219.json",
+      "bytes": 865,
+      "sha256": "b043fde6e77cebb9dc412d27f0ffcad5d3ef87598c917f2172fdfc11c645fc38"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000220.json",
+      "bytes": 865,
+      "sha256": "0f26c544bcb17e355ec07effd5b354aaa6c9ae89f9990dcebaeb6cab080d4338"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000221.json",
+      "bytes": 865,
+      "sha256": "ad10f8fbecd8b53027c312491aa25e5070503b3eb954fcf70eedd27ed78d9515"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000222.json",
+      "bytes": 865,
+      "sha256": "1e0fae188d7f3da9bcf6af3b324a52c724a45ee4ff8389df822722ab7aaf46dd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000223.json",
+      "bytes": 864,
+      "sha256": "cdf110ff59e2a6df112709c46ff02af42936cd5663916fe9a5dda9e7ff583519"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000224.json",
+      "bytes": 865,
+      "sha256": "b06480f3bfa404bb0b41e575e15625035a6726cd7629b5b24379b53f197413e8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000225.json",
+      "bytes": 865,
+      "sha256": "81fcd192f1e726801d34049837516088adb27c61660374e6de34ba51c13bbcfc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000226.json",
+      "bytes": 865,
+      "sha256": "d1341f8a0758fa36d81b589cd2a476ac57ecb0a0e21b152ed9a9b15360b92ba9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000227.json",
+      "bytes": 865,
+      "sha256": "663ed30a370fbe2c9c9e33612d804bc7ca59c590808ed83b04e189b3f0739036"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000228.json",
+      "bytes": 865,
+      "sha256": "b0ae1632d18b3acc9abd243b0a46cdc17ab41f169f98dd6f2e349d93c33b6270"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000229.json",
+      "bytes": 864,
+      "sha256": "37e926be39bc5c974099da3bfc05e5a390c28f3148ee7d70f900bd0ce2aeb088"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000230.json",
+      "bytes": 865,
+      "sha256": "8ca5cdae9fce0937ff4ec1893991c8472f67307dbbf882a36d708f243d464e08"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000231.json",
+      "bytes": 865,
+      "sha256": "b75cb2a6b9a4468f5cc95611a19c1f1347a896f170a741bd9bfb456be1883f56"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000232.json",
+      "bytes": 865,
+      "sha256": "ef957945fc00fda2990e75b044da7422100c5e5173dfe6a58a1c8826490e638c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000233.json",
+      "bytes": 865,
+      "sha256": "75e4d0871938128664e12034b8e74273750b4b8447432b827dcfcf47ac4c7b71"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000234.json",
+      "bytes": 865,
+      "sha256": "996e2d636a190885157129af6c0f1df358311cc3da11d86f23c682602cec810d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000235.json",
+      "bytes": 865,
+      "sha256": "989840eceab99ef1c5967518e09d9306f5dbc0c6208bc20735e94914f6e208ad"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000236.json",
+      "bytes": 865,
+      "sha256": "8faed2d685c2df308ec82bc6715ae5cbb0ef47a978232016bd7744bce6dc762a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000237.json",
+      "bytes": 865,
+      "sha256": "0cb2e6d368b9b9a53b370b9759197fae5b7a01ea7d8d82a4c07dbe754163bfad"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000238.json",
+      "bytes": 865,
+      "sha256": "344fbd45fde45a9ae38b40e6f5127043b451ed0c6c26a288e2d2b1ae1205f733"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000239.json",
+      "bytes": 865,
+      "sha256": "b482df784feaf2235d3b51ca2b7e261003a46a021007bc693e609eba5b93c2da"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000240.json",
+      "bytes": 865,
+      "sha256": "fc0f7b051125b11062a6c62366ebed8d97a4fd4c91bae5c0b3648ae58e7425d1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000241.json",
+      "bytes": 865,
+      "sha256": "85bbdb41832fd1bfdd5323fa7b6fab6af83196b3162ecbf2a842c5794b789a07"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000242.json",
+      "bytes": 865,
+      "sha256": "ec859e90299b03b792207b4b3c48d458863c64cb4dc1277c3a96be6d20696784"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000243.json",
+      "bytes": 865,
+      "sha256": "3391d0cd6cb8bea35e5770b224b334ccc8e4f5e317c7ee1d341d0d49aaed8cd9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000244.json",
+      "bytes": 865,
+      "sha256": "7a24ca8c7ac5a39b46e5fb28fa66a9e236bf577cb12f51a8c20716088c89ce8f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000245.json",
+      "bytes": 865,
+      "sha256": "751f6105a9f68611eda3db3d2b95cc5377ec171259a965857ed3e6b5d1f9f587"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000246.json",
+      "bytes": 864,
+      "sha256": "1031900ec4524bfbdaf9c48de8624e220ce87842e02b3548fcde8b9259d65a85"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000247.json",
+      "bytes": 865,
+      "sha256": "cfdfc960459f89511e48386419e1c7e1f7537c696a7a0c09b654148a5ecb49ea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000248.json",
+      "bytes": 864,
+      "sha256": "37c0cdeb130d74785fe3beb30078b508eb61827daffc96a700c638a92f9fcae7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000249.json",
+      "bytes": 865,
+      "sha256": "6bba149137ca04729a330857c6b66881132aefd2eb4b1efb1e4cbb8fbe459cbd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000250.json",
+      "bytes": 865,
+      "sha256": "a785b552a31eb496bf1d45fc30d8d4706780235e048f1b895f8262b70608473b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000251.json",
+      "bytes": 865,
+      "sha256": "2d3862789d0ae796c9d820b5251127733f63f1d752b02da823e8b7675023595e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000252.json",
+      "bytes": 865,
+      "sha256": "d0390ef555abd3e12f8c78e71d4299445b32dfeb7ae4808d1327ddc071d70c1c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000253.json",
+      "bytes": 865,
+      "sha256": "e6d0a1bc04e5d8cd7a27520647b569a98691255380a5b2604f60e0ff3bfed9fd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000254.json",
+      "bytes": 865,
+      "sha256": "5ca0439443ad31267c504cdb4a50bd6ed23cbb926502c6c12a68c16d549b5087"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000255.json",
+      "bytes": 865,
+      "sha256": "433cfddfa00e649c85ad5fc543e7c1fe9adcfe5ed2d19afcd4ac7c73e09af442"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000256.json",
+      "bytes": 865,
+      "sha256": "4512a69d0214a9fb19481f0ff206fe74344f483000e560619adaa3b7a24b690f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000257.json",
+      "bytes": 865,
+      "sha256": "310ba1c530d7ab02e65ebee330f2f678f88640b0313a3b0d7d68378f56c3af4e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000258.json",
+      "bytes": 864,
+      "sha256": "f1315bcc1b5caaa5abe3cb9e488c0c0e265ac1813b71c7fa69f82c3df59154b8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000259.json",
+      "bytes": 864,
+      "sha256": "80f6cae368c4dd776653a4e611a7b752ee9725c7e4b5b729d0b4b0cf54033f28"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000260.json",
+      "bytes": 865,
+      "sha256": "cfb602d2f5b8de57e31450cb5210f0389139ef238f8164f7e5156a5b1d709057"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000261.json",
+      "bytes": 865,
+      "sha256": "4825c2bf705ae2de83fb147ad6ea248f1710d3cbd02f57812c820cd9cc91bb95"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000262.json",
+      "bytes": 865,
+      "sha256": "25fd0160f8190b101201f70d95610b08b73a368ef9a2939b2da7ed4eae40518e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000263.json",
+      "bytes": 865,
+      "sha256": "2ae52619c81709b95abade244910a332968f0f7ec20cce34fb190e3af6abcbaf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000264.json",
+      "bytes": 865,
+      "sha256": "a153759ee5d50b798277c927ceac20c70cebab567031e686c1c5c813cbff024b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000265.json",
+      "bytes": 865,
+      "sha256": "d147aa110f8c0377d6d5a7d08761bf4f617471bf9aa31cf42147f75f6cc3b6a5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000266.json",
+      "bytes": 864,
+      "sha256": "253b3b6147c4aa0d50fdfc4eb5aaf44d1890d7a9280afbc195d1e337eaf50dad"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000267.json",
+      "bytes": 865,
+      "sha256": "9e628b92209092573e68cd251d7ea22e0e520ca9b151d835c02c295b756be7a2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000268.json",
+      "bytes": 865,
+      "sha256": "a723d7e4e4eeaee540a74532a81fbd561b6a4864c5d8c5af99be525bea2258a0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000269.json",
+      "bytes": 865,
+      "sha256": "e91d109564c2f8e5a5977a7c90c24a21dc5fa57df64d25d0a1c793fc93129348"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000270.json",
+      "bytes": 865,
+      "sha256": "c38b55934494ef97e783c187054bdee8284fa1f4f435e4012bc4f0fa9a47e3de"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000271.json",
+      "bytes": 865,
+      "sha256": "69ad4c4a9597131d48d9defc38f62601867f9a92b94d2af48d88065559e54eb4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000272.json",
+      "bytes": 865,
+      "sha256": "0a789c6aa03ae5c8e517624c3a749c24838c62273dcdf10c8e52ff2bd8a415b0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000273.json",
+      "bytes": 865,
+      "sha256": "e6cb3b075bcc7108df073c3faa575a260349cd316ca3419341dc20e90d621bf2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000274.json",
+      "bytes": 865,
+      "sha256": "eafc46516e886fe505562092b6b06368d185c9c964d0733e333cd20547c1e461"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000275.json",
+      "bytes": 865,
+      "sha256": "5feb17e6e20df73edbdeecfa4da232f6b3c1755e1f0f3871b951ad9c96f797bf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000276.json",
+      "bytes": 865,
+      "sha256": "6b592e1c8c237eccfc32d9290f371dd5051fe08538e7bc7cdfbe0bbf13bd0b97"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000277.json",
+      "bytes": 865,
+      "sha256": "d6233ee373e84e5d8a1a11c52a2e24aef2a3a3961603e1bd9370a0ca64e42929"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000278.json",
+      "bytes": 865,
+      "sha256": "e21895b59164633846a777293997797e258b2afc910255763162621fa237f49f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000279.json",
+      "bytes": 865,
+      "sha256": "fea87ef6ad74fbfbe4b0c2db0c47f90be9afa75da7f640e4835d096e458ddcef"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000280.json",
+      "bytes": 865,
+      "sha256": "57c5708e7bc57fc5224d364de476d1ce337ab55765534e021846be8b7a3db59b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000281.json",
+      "bytes": 865,
+      "sha256": "efdca5c845a9045e86a87502b217b35e0961fedb318eaec29ec863f98a74accb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000282.json",
+      "bytes": 865,
+      "sha256": "bf4e6e84ef9495955060dbb8d7e2dd7e9c0483bf5961f91ceb596c130f63643f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000283.json",
+      "bytes": 865,
+      "sha256": "323980e779fa0490299eee08cffa5ef2fd4a093cfc3e6b58ebb985c64bf785e2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000284.json",
+      "bytes": 864,
+      "sha256": "b9d34c6c7066a9f9303defd34f39f4af938eb9977a191d5d039d65cd8fa8d26d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000285.json",
+      "bytes": 865,
+      "sha256": "e1197d9806835bbc18cda5dddcd50d3a99a6d6c4349140cf1e63c947c07cda46"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000286.json",
+      "bytes": 865,
+      "sha256": "dd27b9446b7330c124749420cc3a3a6af71df03442e6d0e7bab015c988fc9f88"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000287.json",
+      "bytes": 865,
+      "sha256": "9ce98deed5af5f9fb48b54cbac925d3e645c43dff832b9e0be6629c29b5a42e5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000288.json",
+      "bytes": 865,
+      "sha256": "4ada51afa196f8362e013f5a7bcb0700b89770e8cb1f4086920b446dcf4464dc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000289.json",
+      "bytes": 863,
+      "sha256": "222c744e57588d51621ee7c6d660e778e91641ca7146ab212e7b8c8f23053faf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000290.json",
+      "bytes": 865,
+      "sha256": "9c74ccca0603747595e8fb8aeba1c1d73eb686e1b3c235b56af8a38524156677"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000291.json",
+      "bytes": 865,
+      "sha256": "126f46892c77ca66b17c48e36f790da582658ca821987a68798594c9adcfc225"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000292.json",
+      "bytes": 865,
+      "sha256": "40092f5c2f33e27da741623af08cd54ae445b559aa217dc06d4da53925116c5b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000293.json",
+      "bytes": 865,
+      "sha256": "7318c4c06f417e2240ea8a98041b2c8a58666d62fb3cd2d7465e7abca0dbe2c9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000294.json",
+      "bytes": 865,
+      "sha256": "ac63e8d3cc2ec15b1dd1a3133724e530e648acdbd6665ab8758cc60b5b90cef2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000295.json",
+      "bytes": 865,
+      "sha256": "47d0e73c6aa28b343d4ca98bd6b4b352b0ed21d8b95fa77911b740950c640906"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000296.json",
+      "bytes": 865,
+      "sha256": "73f4077fbf541d41114d15d2fe345a5494b428eae3d8aaea9d2725d324ce9c39"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000297.json",
+      "bytes": 865,
+      "sha256": "bbe95c5632864ea0334234e9d2149a01391f0034422f780f82711d7ca9b42d6e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000298.json",
+      "bytes": 865,
+      "sha256": "c2f7ddf9b12b553acb91bfd7005b274cfc843ff5ba485a9e3b9da7ddc02f6b98"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000299.json",
+      "bytes": 865,
+      "sha256": "37cbc7e66dd27b8ae2abdf210ab3b21eb2f98f2f8e97b991716f86262e925bbe"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000300.json",
+      "bytes": 865,
+      "sha256": "aabd56c0343646e10b4b2550b70b9c2c538edc67d0b34254d747b7890c637599"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000301.json",
+      "bytes": 865,
+      "sha256": "b43bbc227e203616497b9e519bb2ca89bd54e7d55dc0d4a6fc2494fe01ae7e49"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000302.json",
+      "bytes": 865,
+      "sha256": "dd921c543e67ddcc40785e920d1d5c50419a62abdaee310152fbbfa0bbce4e79"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000303.json",
+      "bytes": 865,
+      "sha256": "e3bd4e27cb91cae7daeaea3c94aed358b7700c53dd267e3b82f93bfa9f45b8e5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000304.json",
+      "bytes": 865,
+      "sha256": "923c7502b417fee6f45a1dff499e61ceed3f81c642cf48a421fbccc4b8f3e117"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000305.json",
+      "bytes": 865,
+      "sha256": "46629ed9b0ffdbe3aacf79066eea23b62d78c6981b65feae894b7246a9ee0fb8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000306.json",
+      "bytes": 865,
+      "sha256": "b0026d9387bfa5e6332cdfc688c9755cecbf621d9a4684c38ebf375af201318d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000307.json",
+      "bytes": 865,
+      "sha256": "7cf764d1178654410a678c3622ecace65f89f79b48793e763856f6ac29d02e1d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000308.json",
+      "bytes": 864,
+      "sha256": "fa5653ad8c97963fdf005f89ab3d5cede0a57475fbcae6d12a0b0d303abbf8a7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000309.json",
+      "bytes": 865,
+      "sha256": "651d63616e985b35acbf864f1e0a1bc541efd3d2d6d2f46783dd39b9e62e3c37"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000310.json",
+      "bytes": 865,
+      "sha256": "3229b76c67533f111f87a5f38865a0f01df4601876144bcdd53145403d43c5e6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000311.json",
+      "bytes": 865,
+      "sha256": "2285e4246f4b1a64fd870702a73778c3f6445b973bcbb28386de83d5ebcb8917"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000312.json",
+      "bytes": 865,
+      "sha256": "3a2b1a5732afaac60c096db1535d4c50d3e36036a3a7796bd7436273b5660445"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000313.json",
+      "bytes": 865,
+      "sha256": "768f755582313210a1edffb45ddf1f2765c59612fae75768c214e8080d201587"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000314.json",
+      "bytes": 865,
+      "sha256": "649e9a78462360f5c904e38f1836cf14c7065edb7f5642e0d346505a0bd8cfb1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000315.json",
+      "bytes": 865,
+      "sha256": "8c1bdc0e852da2020bc62da4fc537cff22a2aa700ea456285a993eb37786bb6f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000316.json",
+      "bytes": 865,
+      "sha256": "484b32cfd238fdfe0a5eb02bcee45b123d18742d40704cdee419187f92c5cf26"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000317.json",
+      "bytes": 865,
+      "sha256": "675e690b648d50d9dd5a2fb97942fbe2577468f36ab30dfcbe984e29f21c21da"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000318.json",
+      "bytes": 865,
+      "sha256": "dc3bcd6b9122a70b8f4d3530727313f18446068013c82a345a8ddf4b30fd1f43"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000319.json",
+      "bytes": 865,
+      "sha256": "5dfa1d86a6a5663b20b7d0274546987d927d6b0025c8f7defd37a8c4b56a46cb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000320.json",
+      "bytes": 864,
+      "sha256": "7c5fe63ab65ca622cccad674ca78bebad3a7c5224c3c259281de8384235525dd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000321.json",
+      "bytes": 865,
+      "sha256": "b17cff0c7db1de2a3a3f10a42343ecad7b67d8d8a3ac253680f324637575f8b2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000322.json",
+      "bytes": 865,
+      "sha256": "f82df139ed937af5925fda6665f5dcf1342af5b9db9dcaa58deade54cbe97f94"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000323.json",
+      "bytes": 865,
+      "sha256": "a82a46d84b0a34b5e2c27f505abfc9af58bc8994e887471595554b1eae1a339e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000324.json",
+      "bytes": 865,
+      "sha256": "e271e310b0cd9d44c57bee8607835382b539a51b3c26c3ff8f235430d12c20b1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000325.json",
+      "bytes": 865,
+      "sha256": "1a3e41810ab0fbb284b72e0eec2dd796c219acd2cfc9a2dc7f44b939091a1cd4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000326.json",
+      "bytes": 865,
+      "sha256": "b6500b587bc5383e93df32f6931889416dc7b6d01aa26b763ba7ad80d2a9e0c0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000327.json",
+      "bytes": 864,
+      "sha256": "e7accecaebc8432b3799a502117d789858608206a1db8a07bf247144b8b6fce0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000328.json",
+      "bytes": 869,
+      "sha256": "9fd2d490130508debf631981ab3eb1ec11d65a94557e8ad56b71a23e24958c15"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000329.json",
+      "bytes": 869,
+      "sha256": "5a185eeee162e9869f4c32599216641c53b6c97160a32d013f76cc58f4a2a973"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000330.json",
+      "bytes": 869,
+      "sha256": "9c33232cd60ffdbc802e1e93884f32b4d0a962947215fbf6c0c77b8141c1a906"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000331.json",
+      "bytes": 868,
+      "sha256": "2f0450b6e9933c6d4a1f929713eb49fe1c75bbe85a4457ba9e1b3cabf67f5248"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000332.json",
+      "bytes": 869,
+      "sha256": "63e46796aa1fef46cc938db99636f8e7818119de00c5f4f117c4baad00f95379"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000333.json",
+      "bytes": 869,
+      "sha256": "37302ef6c9e44683be94acc87999d00bca61e8e68538d96e3050ca91fc3b3e71"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000334.json",
+      "bytes": 869,
+      "sha256": "ccbd1fff011ef3810a9c6f41dcb3a2c453e03d4c544170985d8e66da752bd34b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000335.json",
+      "bytes": 868,
+      "sha256": "60937d3bbb6f9f78a214a4125783f1d5d65726d40c11ea35abd34625b72aa3bd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000336.json",
+      "bytes": 869,
+      "sha256": "44113aac3c666342d9a0131f2b4cc2ea9c3a3e8737f205a684810741722818d3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000337.json",
+      "bytes": 869,
+      "sha256": "423ce2c80b6f0b8612bd0df0fc6d5b6189611b4317a3b808ebc317f797d744f8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000338.json",
+      "bytes": 869,
+      "sha256": "d432ff3c050a6807ed5fe4772544b14d1708fa008bd34a75a92b4c55c731d2de"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000339.json",
+      "bytes": 869,
+      "sha256": "813978f4689075bbac1255a0d85362930b0ad63237f246a9998f0de35458d6c1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000340.json",
+      "bytes": 869,
+      "sha256": "0b84dc1bf8cc8389e1844c406d020b2178069d03e37ead108b27913e1f4e51ed"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000341.json",
+      "bytes": 869,
+      "sha256": "8add3c08b11215a72ac80e8c3845bef47649d32baa20aa7f1254b38e332d19f0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000342.json",
+      "bytes": 869,
+      "sha256": "acac2fe43276b8f37b084e6779a53d983f1296e21139548b93138d1ab36ef45c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000343.json",
+      "bytes": 869,
+      "sha256": "1431e93930881a3f5fa448b565dea6c718ee8eb1cecd44c8a361017abde5ace5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000344.json",
+      "bytes": 869,
+      "sha256": "a9179f63202d6693949fe330b33835ae3ee42f14aa577df8f892492d3916d22b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000345.json",
+      "bytes": 869,
+      "sha256": "2f211c0e7c4f8440e7064292713ed6629a05d9f0a44934fbcb23796b344713e8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000346.json",
+      "bytes": 869,
+      "sha256": "4ee472e0a5153780831aed1a2a6a6aabfa0d6e9755b2994205338f03a955cc92"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000347.json",
+      "bytes": 869,
+      "sha256": "64e70bc739ac037fecb3bdb6e888d6dacf6c8e32dfc27e3bcd90f3acc935a07d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000348.json",
+      "bytes": 869,
+      "sha256": "af8398af0f56eb573466bbdffc6eb3f8123f449e42acdd071196fcd98c3b0c97"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000349.json",
+      "bytes": 869,
+      "sha256": "d766a6f82657f89b26f549a39dea6864706ac244a91ecbb99d7ae517bfcc6d1a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000350.json",
+      "bytes": 869,
+      "sha256": "1f34f1d6c255b94da5c7b5dfb1b90145ebbe268338464e6a37ed422dea571d72"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000351.json",
+      "bytes": 869,
+      "sha256": "566f09038897e2d57636d10d3f6bd12ace90aec87fd1efcf759b44d76d59869f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000352.json",
+      "bytes": 869,
+      "sha256": "36c44d0dd0b1c59e33c71c9f9a80303d67c5870439222fc0c6887ff30d2318e6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000353.json",
+      "bytes": 869,
+      "sha256": "1046888068ca3443c04f5bcc34cb52e149400d4d1bd5bf866e204f5201f321b0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000354.json",
+      "bytes": 869,
+      "sha256": "ab22d92d0b51e82b0183826b3d6936765cbcb5f7443207845a7dbace5a729e8c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000355.json",
+      "bytes": 869,
+      "sha256": "db7a856b68e961a04dd05094905224916eb97a73563f97cc2db7d19460eef3fb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000356.json",
+      "bytes": 869,
+      "sha256": "4a71cdb4e0da68f6687c38a4584cc4aaf04200a99536c1052133a303447525c0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000357.json",
+      "bytes": 868,
+      "sha256": "8480f67de617836d447d0cf6e28c63dccf9bef34b27cd7e90261dfdb07e7c32b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000358.json",
+      "bytes": 869,
+      "sha256": "863c3ae40d423ec227c72bbfbbb5f32b3506687e9e03deeda5f77dbd4336a73d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000359.json",
+      "bytes": 869,
+      "sha256": "3ea17435220407ffb9222883efb133e7e00a24db7e7df933f32f05f2b0c34c55"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000360.json",
+      "bytes": 869,
+      "sha256": "34f060812401217c79697dab8e2fbf09729d0704dd974630e2c7ae7841423fee"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000361.json",
+      "bytes": 869,
+      "sha256": "06632f9cfc9d623053fcbfdbd7d9f63b694e1cb1643d51780c3138a988d215ee"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000362.json",
+      "bytes": 869,
+      "sha256": "a34272e30d096b4c918bd05659abf3c48cc105216c829035a702007f7a77fb9c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000363.json",
+      "bytes": 869,
+      "sha256": "99464f6b6b59eb54b7601d6a232598f00673e9eec68da784b7829942cb7c35cc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000364.json",
+      "bytes": 869,
+      "sha256": "e44a2aed9db335b9af043ef968cf261c80d8671afa7e92dd8aa4371b82b6dffb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000365.json",
+      "bytes": 869,
+      "sha256": "a952b7e3b99bbe48b4d7c670fa93dbf832a4c1e770835e8402919b189b603f69"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000366.json",
+      "bytes": 869,
+      "sha256": "4352eb58b0e86c0142931bdf1a7b3a16c888d976a08e972338a56c869a87577e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000367.json",
+      "bytes": 869,
+      "sha256": "e0dc76adaf31776ca1097b8eed8439458a0ab7b9dd39dff1444860e170487c42"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000368.json",
+      "bytes": 869,
+      "sha256": "1bc968416d50f6b3f6c5d9ed317064f8450b248585a8735fd81d797f13092a71"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000369.json",
+      "bytes": 868,
+      "sha256": "0f6898e13b3ae4098376058110b3b9137cc80b9a4bc758e19d6b7e0a8f0c8a0b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000370.json",
+      "bytes": 869,
+      "sha256": "743b513857f4677687a96db96d0a73b68d358f1293b70cef623d9f25b8ac15f3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000371.json",
+      "bytes": 869,
+      "sha256": "b5baa8d14f6e747692266fc71f83c7f68530935d0b2c132520e6fa4bfd848a19"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000372.json",
+      "bytes": 869,
+      "sha256": "fe403e1e6cbf980f610bfd3679fdbc2b2fc21010692b14c58b51d637c3845c86"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000373.json",
+      "bytes": 869,
+      "sha256": "ba2b5cab1eb8a283b28612559a9d75b3c41ea82517f462bfe34015cb0d6a380a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000374.json",
+      "bytes": 869,
+      "sha256": "40fc39a42d1130be54c4bfcde770856ef284b5839f818d2f0ce20376e956de6a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000375.json",
+      "bytes": 869,
+      "sha256": "efd5e8b5a490a20f21af6ec6c6f7f2bfc2263c9cf2898200c34c47230a483edc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000376.json",
+      "bytes": 869,
+      "sha256": "54c6ea53e8af3cf3f52e109b3fc7a494d337e4ff4b207e1ac176e5410c781024"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000377.json",
+      "bytes": 869,
+      "sha256": "99eae0ffe121ba2593532593c25b9afe616cf18d346bc07c03e5f51bf1111078"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000378.json",
+      "bytes": 869,
+      "sha256": "3b66d9f3a845b53b9a789ed7212d8024b4459cbeaa0d91185bd4ebf98144e9f1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000379.json",
+      "bytes": 868,
+      "sha256": "383590d46ee2ae6018c9d7b7d6b7ac6f8e2027ed6bbc6cb9f6589197bb152d43"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000380.json",
+      "bytes": 869,
+      "sha256": "947de0e286d6867bc70d74275e500d39bf6ea2dbb8953f2082b7a1a746e495f4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000381.json",
+      "bytes": 869,
+      "sha256": "f563a83b0dff5498bd24804b89d72b538cb8eb78e21f03e97e7cb1e53254c033"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000382.json",
+      "bytes": 869,
+      "sha256": "8cad6dd55a736f023581e29ea81a77b5e3a007daf969fa83e232e535fa55169a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000383.json",
+      "bytes": 869,
+      "sha256": "5419978aab375f804160ef584d64ccd91005dd22e754e3a800089b1c27f6fca2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000384.json",
+      "bytes": 869,
+      "sha256": "a1e72a9f9bdedcbd80501ed4a0ec9fd513f45172d97db91abfdaa4d886a507dd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000385.json",
+      "bytes": 869,
+      "sha256": "09df13b97c935b6584479fbd06b73665ed44dfb11e3afea6891a064a49a641c4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000386.json",
+      "bytes": 869,
+      "sha256": "f6cfa0a761bb27fb3d8572c9274f22fb5332d565f58115e76152750582528be5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000387.json",
+      "bytes": 869,
+      "sha256": "88ba2cd07e1903c035d3fa9ec1563452e2c0300888d4c93354528eaa38ff2a38"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000388.json",
+      "bytes": 869,
+      "sha256": "2c26078ea9b0efa73a984de04094c63b14eb32166404ed30d0d42a10d4818e85"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000389.json",
+      "bytes": 869,
+      "sha256": "a6ce41fba193adb678dcd87e10e4da8b6c77a91b0eeb80971e54f934cd051195"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000390.json",
+      "bytes": 868,
+      "sha256": "755b9001f51dfbd784838a136d3bcef48407d10872a215e878d3bd7c8206917a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000391.json",
+      "bytes": 868,
+      "sha256": "dcc612e00904f39acc15d3727e5df72309339cf21621f2399995c052f5c0e717"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000392.json",
+      "bytes": 869,
+      "sha256": "d99cc3f8f9fa82d00094ec9ea02eb9888242f87403948c4f9edd57915f4e417e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000393.json",
+      "bytes": 869,
+      "sha256": "861bd2df5dc83399ab79275441975bec53626261514d29324d80eb4c5e36845e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000394.json",
+      "bytes": 869,
+      "sha256": "eb41823ce20c93cb6fc2820d77e837c035f4f8ac69887d517d145fb847bdc85f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000395.json",
+      "bytes": 869,
+      "sha256": "c4e6719ee7775840dc9b1b690901377bd6e0dc09de4c6abe3eec70fe19360b67"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000396.json",
+      "bytes": 869,
+      "sha256": "e3e462f4e8aaf47d1747a51ad87671ecffb51b0d22c74e8a11d6dc4eee4a6917"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000397.json",
+      "bytes": 869,
+      "sha256": "4ea6997226d45b1bdaef0a26f7a7a5457fc1fac3877132ae6ee4c67ccf6dac51"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000398.json",
+      "bytes": 869,
+      "sha256": "85d689572221f641ea4c046a0229d05e834d274e84aff8ad216b7ec93aa283ff"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000399.json",
+      "bytes": 869,
+      "sha256": "7403a07396b39267db8195e038fd93d571ade44fbc61f3042642db3086c66450"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000400.json",
+      "bytes": 869,
+      "sha256": "76ec63932b62f72a2f4572e7bac3470b7ec24f0080cc4cc88ea59cd3214d6025"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000401.json",
+      "bytes": 869,
+      "sha256": "a67e8746f0b1359a3dc6bc2a3027f4b175080093e15c8ea13da3fe5b2ac4dcc9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000402.json",
+      "bytes": 869,
+      "sha256": "c84ab75ea2f474b456b8595dd1407c1bc59df884cf7461e2205528a78179baf0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000403.json",
+      "bytes": 869,
+      "sha256": "a12f1931e33a566dab7a1eee5fdc9baf363b802ae3f20f25c58a470c9fb88e8e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000404.json",
+      "bytes": 868,
+      "sha256": "4dc7541dd4c9163eeafb0dc578611b13568ff7cddbaf8d77f3606963c89afe67"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000405.json",
+      "bytes": 869,
+      "sha256": "2a8d44b560298a935a7827718d052aa437f8d9649b56a4ced2267c3835555dcc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000406.json",
+      "bytes": 869,
+      "sha256": "4ae6e6f7760ec0b44f9294d2cafbfb65515c4d62842f136a8251f966d17dadb9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000407.json",
+      "bytes": 869,
+      "sha256": "0537b8890ab30947a8d92737a2f9139cf8785a83a0ca01ec55e5926deb0356a3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000408.json",
+      "bytes": 869,
+      "sha256": "da01eb923c84658c900fc2a98b5f9b78b06b5269b827066cbec1102b0237e844"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000409.json",
+      "bytes": 869,
+      "sha256": "8c92bfddf6a8417c3ef6f62d0166cb627a696a3a710dab9cf8199aad38bee3d7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000410.json",
+      "bytes": 869,
+      "sha256": "c4f54abe44771382fdf28dfbcf5b26e5491348d59ce0566a0daff37270266e2e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000411.json",
+      "bytes": 869,
+      "sha256": "73a4193b4a4a0e639591c504ce15cde7e72efa6db66b34c44e3ad13d3a51ceaa"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000412.json",
+      "bytes": 869,
+      "sha256": "c880cdcdae96f7a77119eef4d11b4f632636127ba34ec3e63ae82c61ad34a5b8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000413.json",
+      "bytes": 869,
+      "sha256": "b69907767aa9a054017d820408c6b04957ecfa992be229e63166681cbf3ee10e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000414.json",
+      "bytes": 869,
+      "sha256": "0a48a7ddf02690db1a512306f60657ef2091874e3cb0b84c6ff51abdbb9eb05e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000415.json",
+      "bytes": 869,
+      "sha256": "8290b673717f9be0c3a3332a664f8be5d14b37283026128923b01d457e0690f0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000416.json",
+      "bytes": 869,
+      "sha256": "75135f6731019a787576c17e7370782709d58a2b8704425a3c3b191a2e7fa95d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000417.json",
+      "bytes": 869,
+      "sha256": "f296709f91eb70db4b706934a24c575e625cfd36f743462155da0bf8b896e60a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000418.json",
+      "bytes": 869,
+      "sha256": "45427e56f85e9e029c087447d628db29f0dc533f958e73a21d6b08a88e9cd4dc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000419.json",
+      "bytes": 869,
+      "sha256": "eb3d445c9e34130f2a2c2f3f7575fbe01dc9516c017bf8ea89d93a64e122f633"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000420.json",
+      "bytes": 869,
+      "sha256": "781c155fa74bcc9f69898c05762cafb3c68c6d79570207b8cbfce9082c82aa32"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000421.json",
+      "bytes": 869,
+      "sha256": "759c701b5bcc854ba3821f02cc929a0f52b08fab93063093715b1ae6353d6de9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000422.json",
+      "bytes": 869,
+      "sha256": "f7f0d8e59cc00b07f0251ffedba3f2a9868ac2fd6699a9e69a9c216291b911fb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000423.json",
+      "bytes": 869,
+      "sha256": "6df3848ee14b735beb666aaa053c4b06cee47c43691235fe729534ab64de5a38"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000424.json",
+      "bytes": 869,
+      "sha256": "c0582aa0fe2f927c397860d9e8f18ffb4f2140d239147544ad400849e67502af"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000425.json",
+      "bytes": 869,
+      "sha256": "2c004ba551d2576ef3756b26f3d582c6ff19c432456701f71b599f316be1c884"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000426.json",
+      "bytes": 869,
+      "sha256": "ca32da922eaf6550b434b3d7dbd518979f2455dbb282bef512c79e963cf6d9ea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000427.json",
+      "bytes": 869,
+      "sha256": "3240e5b11a61cfd7ef6fd9cf320dbed4a1dd52963030296dd2706d551cdaa067"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000428.json",
+      "bytes": 869,
+      "sha256": "22acb26ae6fbc79c73b0240140307ee8848c7f36ab98aff6a75b394edbd5941b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000429.json",
+      "bytes": 869,
+      "sha256": "a3a5e9679472724100188ec365df26b67ab93653b9fcdbee8368222bd7d26289"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000430.json",
+      "bytes": 869,
+      "sha256": "7c84d86c6e228690070c03e844fee2f2e2fb9160731a9839766ec57fd28ed49e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000431.json",
+      "bytes": 869,
+      "sha256": "c79184ecd42969a4d30deb3204738b7e5fbf8727b6daac3c92c96516d7ac88ef"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000432.json",
+      "bytes": 869,
+      "sha256": "e7fd849b2cf64ec9a035a1dd05a8080104dea3835199980a62a8c0fd4e076176"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000433.json",
+      "bytes": 869,
+      "sha256": "df5240935ce50863d646fb8dc6e6e3d3fcdda1306554b8dc5c4edd9fd91902fd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000434.json",
+      "bytes": 869,
+      "sha256": "bb568fc0f797477b726397a238a95a1e43d52903c79240ca7ef61998234b7557"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000435.json",
+      "bytes": 869,
+      "sha256": "02f223a53d0870fe1b1d05a72221dc486951810cd209d8545f88e8b4b83f4f62"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000436.json",
+      "bytes": 869,
+      "sha256": "b19b5917fb21aa83a1af1e3157ae7a29f5715578a06a432cf52447de0e630bb0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000437.json",
+      "bytes": 869,
+      "sha256": "3585c61e51b0b81af8567ed4b4396edf220bbdfff23f4cc3a78f30a5502bcd5a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000438.json",
+      "bytes": 869,
+      "sha256": "9ee5a942396bf4c58fcc7da50276796ad0355dc672a07e5adb8fe419a1bc7cd7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000439.json",
+      "bytes": 869,
+      "sha256": "88095c3e2c9600799d658ed4f147cc132e40de78ea17e34d9a084fb4850df00c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000440.json",
+      "bytes": 869,
+      "sha256": "5782c40324f045511a7c3c1bccb48e6f5cd819c410d75d1e72ce9012edb770ea"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000441.json",
+      "bytes": 869,
+      "sha256": "4cea871ce72042f69d0c0a6072706cea2fe32eca70fbf93065ca05ba52275985"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000442.json",
+      "bytes": 869,
+      "sha256": "66e63882f62cd09483ebaa412ada7096053295fe762239088d4ba9b16d574e63"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000443.json",
+      "bytes": 869,
+      "sha256": "deeb4c50f43407baea2b1beb7804403161aa183e71fad4a113a175c4c8e3b2b9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000444.json",
+      "bytes": 869,
+      "sha256": "825ed1eecdfb0f0a892a72f735f34c877376627d178c7ba988c2bc64a3321d6c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000445.json",
+      "bytes": 869,
+      "sha256": "3c84ca4461367e02a80f17287cf85d685cb21cd65401352e7c954490204fcc85"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000446.json",
+      "bytes": 869,
+      "sha256": "a62bddf0b32d7eb3cfacc3449384a65e0f6575b0f6fe7247d4071669c66c4b4f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000447.json",
+      "bytes": 869,
+      "sha256": "275e3fe0fc8b1080970f214f5040d9ebb611f9e3fe0599d979f021be28b86b1d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000448.json",
+      "bytes": 869,
+      "sha256": "b6719805f9f21985a0e7b5ff640a2f07162f08745a7fd7021560e536eb682a40"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000449.json",
+      "bytes": 869,
+      "sha256": "041cc1e085281072e8a67892bf0667ae4936bd26b0c37973817a87def8811970"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000450.json",
+      "bytes": 869,
+      "sha256": "2ae2252594a3218f40e2591c493c232ddcadb90dc817c35effa3a84a6bd8de85"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000451.json",
+      "bytes": 869,
+      "sha256": "9351f6152f44ed915319e1d09dd9494e30fc2fe27177055ce337f5a695982124"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000452.json",
+      "bytes": 869,
+      "sha256": "b8be660eb30470878294831d391439fac63bf7b0cf787c2d06e4c75d35d0ed26"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000453.json",
+      "bytes": 869,
+      "sha256": "033bd56aac94c71a6b964466d10a18681010d5d89278cd8326bd138b68583341"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000454.json",
+      "bytes": 869,
+      "sha256": "9f8c981f8d3407357afce8972d033d703f0423ac2d3d4ce664b3153abad6fb6a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000455.json",
+      "bytes": 869,
+      "sha256": "0d3c819a97d473183f3f8640ea8c7f800039500b1188dc4baa5640942ba45d64"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000456.json",
+      "bytes": 868,
+      "sha256": "c16b339817ccdf9e45622c6da110ec4c272eb519318e4031857f5129751595f9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000457.json",
+      "bytes": 869,
+      "sha256": "203553473e5d61ba61bb8a543c2c7b09b917c8261ac7b872aad812d5288b2986"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000458.json",
+      "bytes": 869,
+      "sha256": "eb8d226eab82d95c52d7a3bff18097a7f08f5a4efbf28cb6ff59ac6330a221cc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000459.json",
+      "bytes": 869,
+      "sha256": "4c6dd6ecd066cd4beba1b381961068298d04e25535c441139dadaede56a3c77d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000460.json",
+      "bytes": 868,
+      "sha256": "b9868509413ae966cca4acc11beedcf6dc5517001e0fc0b0bd9a1411c6e843e8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000461.json",
+      "bytes": 869,
+      "sha256": "cf76ed4ecdabec697d84ab687398189bb033477f2051e28ec110776d9a30a4c8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000462.json",
+      "bytes": 869,
+      "sha256": "e1722a4ee787b864f3b0616e4cbd9bd2ced95c8f74f1a82ddcbe4f4b1658d1c9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000463.json",
+      "bytes": 869,
+      "sha256": "222c7fc4dc1ca0bdbeb282470888954c86833b77ddaff50363627efad540ca63"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000464.json",
+      "bytes": 869,
+      "sha256": "601ee385c7ac043f2f12e9ba5c2375c4674e2bb6520bc362bb33b79095bf6b94"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000465.json",
+      "bytes": 869,
+      "sha256": "26581c4e8b8ac264769d116379a641f2c5bc55561d76129525f4d4ac893499d6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000466.json",
+      "bytes": 869,
+      "sha256": "f7a8ca487077a52c8d43f0fe0cc601f06078fd289bb1ba8599b7956150ec412f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000467.json",
+      "bytes": 869,
+      "sha256": "c371b318974a382f0f55a5bc9e2f5d60c33999ddfe08be1dde3317561809b7fc"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000468.json",
+      "bytes": 869,
+      "sha256": "34dea21afea9238cc3fca8e615440fdde483d2d07350d6b461efdc176a7d9846"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000469.json",
+      "bytes": 869,
+      "sha256": "b2fcf54931a3a0be07555a6da6d13dac0e81be4ba7e120d30980dab65585301c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000470.json",
+      "bytes": 869,
+      "sha256": "9c70fbca6352aec1b7dadb00a3bb0ac850dceedfbff833574c55f6276fcf791b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000471.json",
+      "bytes": 869,
+      "sha256": "1c9f3f0e9eddbfece592874941f9b5de8725b0695472b7f21a8fae3d843161e2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000472.json",
+      "bytes": 869,
+      "sha256": "19d91aa7f957bf68e969ebfae635e960c89288b938947724f0fea0446d971455"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000473.json",
+      "bytes": 869,
+      "sha256": "c2e16838d01ec44bc959271fd78141bcf129168bbadc1abbe068e279c0973a69"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000474.json",
+      "bytes": 869,
+      "sha256": "057ccedef0f7dd3b214d65507152d4099134412509fea0ee1fe87c95a636a980"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000475.json",
+      "bytes": 869,
+      "sha256": "f35d0854acd36fe07bb4403f4290216ffb4f84e3a65c50957a186ee7515999bb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000476.json",
+      "bytes": 869,
+      "sha256": "ad366c943837568a21cbbc55011aca4993369a24fdb6e935df976b69dd9ad5e7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000477.json",
+      "bytes": 869,
+      "sha256": "fc020c351ba225666649435f39efb17ae292bc9fbf5e5bc76f32ee3ae6193262"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000478.json",
+      "bytes": 869,
+      "sha256": "a5591bac3177e8d14eee362d563261b31b02003243809f4a28f65a49afdd1831"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000479.json",
+      "bytes": 869,
+      "sha256": "8cd4c97fbe5a829a0d9662d3e734deaf240fffc902862ace7d415ce409d2fa5c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000480.json",
+      "bytes": 869,
+      "sha256": "fbb7cc05736fe87e2ad605d54676e10b6d0793ef1b0042aa96d8a1af0491abc5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000481.json",
+      "bytes": 869,
+      "sha256": "a1fe592aaa3f30f53dad8a2bc6dad90b99dd782f3b3803d52c25b85f8a9d4df6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000482.json",
+      "bytes": 868,
+      "sha256": "763e5a150398872ce0d62e0e2701bddb570a9f97b87e03439bd39e956deb4a67"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000483.json",
+      "bytes": 869,
+      "sha256": "fce6c96ba9517ddccb4570290d90fabfe91d018d393704a2f111ec8b8722d42b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000484.json",
+      "bytes": 869,
+      "sha256": "9301f36bb706be5d0a3e643bc603c382689923116c4e5741756091f4c382f624"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000485.json",
+      "bytes": 869,
+      "sha256": "63aa5077b6c2500d0cfa99d3ed9c66e60197b24f9a6c6ee2efa74a3e577afaeb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000486.json",
+      "bytes": 869,
+      "sha256": "60f296188b6790ac136901acc9fc3359034e2428aa795add174597b4443211a6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000487.json",
+      "bytes": 869,
+      "sha256": "623d1167de3570dbce410cb2f70ffad9fef7a4f35dbf89e65b346188d1742cfd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000488.json",
+      "bytes": 869,
+      "sha256": "ea44195bc2e51984c05f5825a250d59440cc95a22f427b10fdab99e7d7d702cb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000489.json",
+      "bytes": 869,
+      "sha256": "b296f8da2eed9d1d181c8dba8751a35b041f82b193080d6f8c469c87c008cb6b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000490.json",
+      "bytes": 869,
+      "sha256": "3b4e935ed90daebba5ec21c850e296b4f51aab2e515bfb5534abfac101038fd4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000491.json",
+      "bytes": 868,
+      "sha256": "d71dd3e288b14065b78bd373b20fd8260f46d3995f99c9befd99785c508c5927"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000492.json",
+      "bytes": 869,
+      "sha256": "5b9f9a7264de6d3266a8bb55c73426c7e8a5fd8d9b4f8cee9dd2c6eac8284e0d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000493.json",
+      "bytes": 869,
+      "sha256": "21ab862bdff5f70d72cac49147983b1f42ec4241df162a5c005cf217c90a979d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000494.json",
+      "bytes": 869,
+      "sha256": "99ebdbf293bedce82d52403727bca6a85616cf57546dce427fd3d06098a7ec8a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000495.json",
+      "bytes": 868,
+      "sha256": "0478277c7a17719ffdece9570c07114911fc35bfcf44f9fd759054cd9047d7a5"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000496.json",
+      "bytes": 869,
+      "sha256": "e94ad5bc7ab0c054b980db054759693d565c6611e46b60f00688bd691e6be9ee"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000497.json",
+      "bytes": 869,
+      "sha256": "65cef0dffc9cead577dc0e0dafd0b942a51987abedc114f1315372147cd42889"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000498.json",
+      "bytes": 869,
+      "sha256": "3252575e6b7b6e7235837c4adf92e0c8ebc0a8e2e338e08d98f1884d5f262bca"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000499.json",
+      "bytes": 869,
+      "sha256": "455fe340d379b7a50324ca1589110cb42d00aab802b1ecffc761c08bd18cdc5c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000500.json",
+      "bytes": 869,
+      "sha256": "729ee9dc3d8bd055b0f4bd2635dc52ba735f734896771178d0bdda9f52bbb99d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000501.json",
+      "bytes": 869,
+      "sha256": "88d2f1c9ef4bc0c20be04d26c715205cd6cfded55eb9617e0b3ea034dd9912c7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000502.json",
+      "bytes": 869,
+      "sha256": "959366e9e0faf3f0faf5ea1e896e6cc9da5fc464b01c224898b6260d878f597a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000503.json",
+      "bytes": 869,
+      "sha256": "91520405d4a6890c10826c3d9965c4679f62016a4a727b105567dcf3e33db313"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000504.json",
+      "bytes": 869,
+      "sha256": "5bdcafd679f1b790ffdec7504c82ad18f56d633b61bb2643c9f3aa39a747b837"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000505.json",
+      "bytes": 869,
+      "sha256": "b7479fc917d02e74b291ff331262609f0c672dafc90c6c53832a1e0d14fd1cc2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000506.json",
+      "bytes": 869,
+      "sha256": "0329b6efe62b4449f7c478c4ab5eb9db79ab4233c5eedc89ea1f27b6209ba879"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000507.json",
+      "bytes": 869,
+      "sha256": "5ba23f8791908bef00e86cd3e59c1ade98902ca767635de110e57f4356d3d1a4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000508.json",
+      "bytes": 869,
+      "sha256": "7fb54a479bc9aee242a7cae9a99253365d7f736102ef98146f2aae7a46722245"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000509.json",
+      "bytes": 869,
+      "sha256": "76e6468f54c0a176d382e63706644a148d10c7e78026513d83cdb73b32b95ca0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000510.json",
+      "bytes": 869,
+      "sha256": "ae1dc9927e2fdba497389305577101a203e03d35bba377d653330caab1aba527"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000511.json",
+      "bytes": 869,
+      "sha256": "a8ce663a742b0e1bb4d764c62ce16da07184c53f630fd867dc9b13b01b012082"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000512.json",
+      "bytes": 869,
+      "sha256": "a007a1bff376411569db6c801c2c47c8e2c2860be792f04465af7055b85db6da"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000513.json",
+      "bytes": 869,
+      "sha256": "9d6e23440754cd5909e6e83cf6199eb0d6a50a8eeb55a240c3cebbce550a34d0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000514.json",
+      "bytes": 869,
+      "sha256": "7f35ca862efba10692f109a2f7aa2716c1b68b01a0da8668de7fe5c42ae0e72e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000515.json",
+      "bytes": 869,
+      "sha256": "edf1a6a2b6c703b94cf6bcc15af11f91acc2c78ea3844e4d0af2b31b4dd7b7cf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000516.json",
+      "bytes": 869,
+      "sha256": "b6dd47c5d373cf6e0064355d4a969620db110687edcb8fcaa2254f61c10a1e1d"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000517.json",
+      "bytes": 869,
+      "sha256": "8557e5a747920d50af4d24ca5ac301d48cacf0ac1fffd2551b83d0190d9086f9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000518.json",
+      "bytes": 868,
+      "sha256": "426b4020baa69e4d87b802552a5410527392ee20bc493f9dd46ea0f98d2769e8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000519.json",
+      "bytes": 868,
+      "sha256": "0bac9749e8300cfe067112c3bcda9007140d0cca2a19a1fe28c03a6c3adf7443"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000520.json",
+      "bytes": 869,
+      "sha256": "61dfa6a26cf4629217ec627077a8a77ab7087df18b6cce007ed21fbb78e925a1"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000521.json",
+      "bytes": 869,
+      "sha256": "7f0d97f32c7d2a2eedb11bd15cb7513af24b7346135a5d5920b9521edda5d477"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000522.json",
+      "bytes": 869,
+      "sha256": "3d4f0943d7eb4686184e4dc7f2a7c4438f93951d16c9356790bbc91cafad754f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000523.json",
+      "bytes": 869,
+      "sha256": "d9a44a218fa4e5bd743a1ad2920e5c1a5780118d890230fae51a05127227ae16"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000524.json",
+      "bytes": 869,
+      "sha256": "a69b8424ae700fed33a06a69106ad7626d058b8cceda98e1d305ce2ff01c7695"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000525.json",
+      "bytes": 869,
+      "sha256": "b28d18deaade570bcfd788c6d71c3b43c04383e54f1b59a7c962ab88b35076ca"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000526.json",
+      "bytes": 869,
+      "sha256": "1adc80c85bb08f541d37b179cf40738fef5083f0d830412cb1c2daa349dedd4a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000527.json",
+      "bytes": 869,
+      "sha256": "003c8feef8bafca622b906c0ac52bf6639bd8fa9c8f89acfd3ae9a4585cd6d7a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000528.json",
+      "bytes": 869,
+      "sha256": "837d13fd9594879f729a6380c89859be336f088c24fa34b32b4487b377462993"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000529.json",
+      "bytes": 869,
+      "sha256": "7627ad791034025554e6bd890e12ad17010cfef0825709fa8890e3119323d552"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000530.json",
+      "bytes": 869,
+      "sha256": "e402054493e925258553470303b3982614401748bdfcf51fe3b9244961581bae"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000531.json",
+      "bytes": 869,
+      "sha256": "871f9f53c4e6487e41091a827a861c7efe85f5517d9c293754acd7360f21ecee"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000532.json",
+      "bytes": 869,
+      "sha256": "09846127ac2d3912dbec5873c3662669b0968d60fbf4a9d9252b6a3ab0845abe"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000533.json",
+      "bytes": 869,
+      "sha256": "c985dd49f9798ea73e32c49b5a9b464e87eeab974618e6f3e0a302f65bc615ac"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000534.json",
+      "bytes": 869,
+      "sha256": "aed24e2277c42c93c782fcf4b9c090bbdf2dbd4ccbbde90dbdc5e7574c2ed30b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000535.json",
+      "bytes": 869,
+      "sha256": "1083dd93b497af46b8d804d70c22003578caabcac9cc99cdf2125a8f6f3b42ba"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000536.json",
+      "bytes": 869,
+      "sha256": "f6a6f8ad8a382809b33976182973db07d915c0a43c13da64bbd82d47d344e01f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000537.json",
+      "bytes": 869,
+      "sha256": "780b47b91d97b00837692b080439d504fc505c205288f65ecff0230c7c6dc1d6"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000538.json",
+      "bytes": 869,
+      "sha256": "dd37174ec56052e970b033b899942e85829ebd0b65384a9a76fb96fd7ec89f7f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000539.json",
+      "bytes": 869,
+      "sha256": "388fe516c58c06ae4b32008c50aff9b651b8dee617ee1812609e8f44c506f2ab"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000540.json",
+      "bytes": 869,
+      "sha256": "c528ca0287e54b30449339264d00e5a57673c13af1598ddf7cf7b62606a4c165"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000541.json",
+      "bytes": 867,
+      "sha256": "cc50d7be6ecdfbabec01353c9e48bf97f9c3a57b7f67bf95e773f3f593bd7c3a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000542.json",
+      "bytes": 870,
+      "sha256": "aed0c96022fd2d081ac74215b07556f91fcf71ac239009c02781a091e6ceeaf2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000543.json",
+      "bytes": 869,
+      "sha256": "f8dc5540e6bb93fdabeb33ae235f80e05b8fa1d82c2ca9b9d52da56f72d9c710"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000544.json",
+      "bytes": 866,
+      "sha256": "670bd89b8c0b05614036e8f05d46c55cf2e15e334e4b1922ff703ae9740349fe"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000545.json",
+      "bytes": 869,
+      "sha256": "2534ece63b561d00c21e2e3ef610c3b35db4ca594d9cca8eb81d4ea373696097"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000546.json",
+      "bytes": 869,
+      "sha256": "bf76c326a094c8fe4e9df16edc9028687d5192199b1b1582888a8ebd6037c0df"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000547.json",
+      "bytes": 868,
+      "sha256": "4a7a029034ab0ca88e10fe33479c637ce1d1470f509506a7746d9d44e20c90e0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000548.json",
+      "bytes": 869,
+      "sha256": "ab0c144d3d34ac4521ee30eeaebf527233bb95e4cdfb47a3aeeee5a9b7d12c3c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000549.json",
+      "bytes": 869,
+      "sha256": "a63ef6f39829e54d65d43bf01ac3f9044e277694f5987ea1b46169a77b852d30"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000550.json",
+      "bytes": 869,
+      "sha256": "eca496b96abcdab3006cf1903ced4a55a1922d16ca61183ddab46f5e6599121a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000551.json",
+      "bytes": 868,
+      "sha256": "4ad2591778c7686c7c3f0fce7a21905a53ab347dee675e71965b809df176ff6f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000552.json",
+      "bytes": 869,
+      "sha256": "26ee6ef793d4447e8c85f8e9919bb0ca26014255d0c9a176138854455a656d4a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000553.json",
+      "bytes": 869,
+      "sha256": "dfc4e86f4c968017ca581086df4c6abd8e57030533dbebff4036bd46eb423663"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000554.json",
+      "bytes": 869,
+      "sha256": "98b369ebcb52ec7ff04555dcebe25ceb2a775e1e435c185664c890e46dd3a56b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000555.json",
+      "bytes": 869,
+      "sha256": "519171a1f4bdb107224b3919be65dc35c23aeed77d4683c6db62006cffb6ef79"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000556.json",
+      "bytes": 869,
+      "sha256": "0c128fa722dfb1927d9ebf08f31fcaf95d5e778563a1095e5edb9d5eae051b99"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000557.json",
+      "bytes": 868,
+      "sha256": "13b8b0c463b6153b81ff0fb2c1bb914501a69b03bea4f6fa17d6cb024b422bcf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000558.json",
+      "bytes": 869,
+      "sha256": "f78016710e20709c982085edcd5c6de426e2c072a074a3e79a57706e90055e99"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000559.json",
+      "bytes": 869,
+      "sha256": "3b9ed70a9bb9910eea9be2e15f1dc59face7aacc124806ef384deed18d358f32"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000560.json",
+      "bytes": 869,
+      "sha256": "2bc0ffc6959407455f61fa241e453c74c019a9589eed38abeeef1c8d60074ded"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000561.json",
+      "bytes": 869,
+      "sha256": "2e01c941cf796447d5ab4d6a75d7783323b52120dc48a16c80bc936053f1c84b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000562.json",
+      "bytes": 869,
+      "sha256": "82f3b9d5ad800724540de419c4b2c4a328d63e5a359060aa6a5486fe466f2afa"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000563.json",
+      "bytes": 869,
+      "sha256": "59c0bf108bbea16efc9b684cd392e97816e6f35b7c7f03e6f85e3efe3dabb5de"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000564.json",
+      "bytes": 869,
+      "sha256": "f123eaedf967b7d896d3a44c78d67ee5d250cd822ad887745002d3ca26413958"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000565.json",
+      "bytes": 869,
+      "sha256": "1ed15823ac9296eae923841c2f7e7d76507e41299e923269e6e4069bb44f7062"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000566.json",
+      "bytes": 869,
+      "sha256": "69cc5d6d43f6825fc73637655a405efaaa54967da74f7525b8df898bd85c9b6a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000567.json",
+      "bytes": 869,
+      "sha256": "4b192bce95d81a182d64738bd3a07472cb90c6df2adf06f001131f0ab1a7af49"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000568.json",
+      "bytes": 869,
+      "sha256": "0a57e413426d93713b36a0575545f4bda82a99c941302f5a37976336ad673acb"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000569.json",
+      "bytes": 869,
+      "sha256": "304c9a918845061dc4ff88a13a1af3536567eabe0801090754111c80fa88cd69"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000570.json",
+      "bytes": 869,
+      "sha256": "b20510c13f2588cfbf99c8b00560cb3bf6002295f59b30dcc69cbfc75206a40a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000571.json",
+      "bytes": 869,
+      "sha256": "5493b130fcc11c5b244dc364e500cccab0f309e9e77004b13355df512d4a5d21"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000572.json",
+      "bytes": 869,
+      "sha256": "5bbe2ac8bb0b81f30d0b3e9d8e35514676712854a49ae4140772ff128b929624"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000573.json",
+      "bytes": 869,
+      "sha256": "c7a38e24342c868dd8368c12a5da2644f06e082162bdf6544a912ecb4b11fbb7"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000574.json",
+      "bytes": 869,
+      "sha256": "358145845ff79cfdea2f42e733cdb93eb88954a1396262ce81358d2310ee92de"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000575.json",
+      "bytes": 869,
+      "sha256": "a07796307bdf024eab73465b43df4843e4fda5eb021b5a501cc5e597ef6069f4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000576.json",
+      "bytes": 869,
+      "sha256": "82218b7542c3da4377a670e59a9578b8885731e1cd78077a694950557a293cd3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000577.json",
+      "bytes": 869,
+      "sha256": "5d0a58437ff9bc2bbec49914c6720264471084b4f342715bb675043f3de63cf8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000578.json",
+      "bytes": 869,
+      "sha256": "d2575fda20d7d2fb1dc7a0c6ac58680b864367a2269a2f3dec7ee4cf48b3f53a"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000579.json",
+      "bytes": 869,
+      "sha256": "7c3d9c6de062c2f26e3401d4b596d8f5d55750a99f84b64696f0548b80136f2f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000580.json",
+      "bytes": 869,
+      "sha256": "9854f248af71d087e69e4c7398b144a332667b15a75fe183cd95633f1342144b"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000581.json",
+      "bytes": 869,
+      "sha256": "a74d5bc56b5eced389ce5386c63c0ae1eb44596ab8d69925ac65313404170150"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000582.json",
+      "bytes": 869,
+      "sha256": "84b6ceafd111f3f83fb5dd044d69a388b3be39e1448f3793f55b0edb65c59332"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000583.json",
+      "bytes": 869,
+      "sha256": "36c029520e757eb0b1be779dc292365c86e4d7d086e58ed0b7e737ede357f3c4"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000584.json",
+      "bytes": 868,
+      "sha256": "463588247a749b9a815c1ef771ceee76cc747e2174a60e42bc5f41539e18e9da"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000585.json",
+      "bytes": 869,
+      "sha256": "2794a5dae06926944d0730048c5d6aa0241b0aadff3c74b2bef887f1c4abb34e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000586.json",
+      "bytes": 869,
+      "sha256": "560019bbfeec4f8f6658d43723e19f4dc7e8fd6a54e5d84451ed32c718ab32b3"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000587.json",
+      "bytes": 868,
+      "sha256": "25ba0900cc157203348b6a814a87c3948846cbd6bbacd59d796ca80a695bd98f"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000588.json",
+      "bytes": 869,
+      "sha256": "3bbc6ceeb618112467d71ab49d51c1eba29c6a6e61bac97a06c577921a324e37"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000589.json",
+      "bytes": 868,
+      "sha256": "5a89b3f279a274bff1e07c707167ba6ad7666b9455a4b821527d3f61e6691e39"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000590.json",
+      "bytes": 869,
+      "sha256": "6962603c2c10a27b028ea310cde36960a9e994515a221199033dc306d26fbfe9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000591.json",
+      "bytes": 869,
+      "sha256": "1078792ff0e25ae1f8634273a8968556ee52a2a8ab44a443f5473ff6b4c4e3c9"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000592.json",
+      "bytes": 869,
+      "sha256": "b75fc41e3a1792863cdbf6b0a65fafb595d2b075ebe2663154077d3e9f8bc3bd"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000593.json",
+      "bytes": 869,
+      "sha256": "13df17dca56ac8b3cb1502d501899998473bacb27bc096de968d6e8b6bc4a844"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000594.json",
+      "bytes": 868,
+      "sha256": "7f1d760f6ce76a3d066e367381e9f4d06e4d39008eaa00c523240a01055b5cb0"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000595.json",
+      "bytes": 869,
+      "sha256": "5ce3314a146beccc4fee4280f85d1e75f348bb828ae0e06b02725a564e26888e"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000596.json",
+      "bytes": 869,
+      "sha256": "bbaebd885628e1c3a90116baea22bee0190e3d54c4b6e522d607a4586a2a6ba2"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000597.json",
+      "bytes": 869,
+      "sha256": "4464c5bea9a10ee4bdf9c2cde477ad4704484411f3ff43675ced7395a4160aaa"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000598.json",
+      "bytes": 869,
+      "sha256": "60e945cbbc402f0ebafb30a5eb3e818e2126417ac565728d916c31ebd6a3a497"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000599.json",
+      "bytes": 869,
+      "sha256": "7b9d8d214a5f32ae8b94eeb0e6b45ce3a3100f1ef2b81f63200a405d502222ed"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000600.json",
+      "bytes": 869,
+      "sha256": "b33eb22d503316782f1549ddad41940401fbaf257ef79634278877e2078eeca8"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000601.json",
+      "bytes": 869,
+      "sha256": "3ea07857b251e988f87a233dc2ad7deb2889c0265341b6f13f5b4c19358f2a08"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.json.samples/000602.json",
+      "bytes": 869,
+      "sha256": "a2285ad5e3b95841bb9104ff53be3ddc652b2cee1b2f10f5a3ea80b5429abe42"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/manual.log",
+      "bytes": 38119,
+      "sha256": "c74adfabd56401bcd901c89182926948fea2de957e12a2ec4ce8b893d22f7ccf"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/receipt.json",
+      "bytes": 174,
+      "sha256": "22a999fdc49d4c96a24e6cead0c4f6c8c0fc03938d5c824696b28b57d4c1fa9c"
+    },
+    {
+      "path": "artifacts/fw018-manual-focus-2026-11-15/request.json",
+      "bytes": 168,
+      "sha256": "93e8854d6f7bb0f89f792e1dcd47f2018146871cf769db6a2c396333b6dda2d4"
+    }
+  ],
+  "releaseGate": false
+}

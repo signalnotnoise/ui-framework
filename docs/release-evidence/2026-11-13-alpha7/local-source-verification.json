@@ -1,0 +1,7 @@
+{
+  "candidateRevision": "c5d639bcff707ff1a75b23f2a60135d6be6cb7b2",
+  "sourceFiles": 194,
+  "manifestHashMismatches": [],
+  "contentDifferencesIgnoringCheckoutLineEndings": [],
+  "note": "Summary dirty flag reflects concurrent FW-018 working-tree edits. Captured source comparison normalizes CRLF/LF only."
+}

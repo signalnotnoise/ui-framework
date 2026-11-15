@@ -7,4 +7,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup><ProjectReference Include="../../UI Framework.Wpf/UI Framework.Wpf.csproj" /></ItemGroup>
+  <ItemGroup><Compile Include="../MeasurementTools/ReportingRetention.cs" Link="Diagnostics/ReportingRetention.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../MeasurementTools/BoundedReporting.cs" Link="Diagnostics/BoundedReporting.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../MeasurementTools/MemoryCheckpoint.cs" Link="Diagnostics/MemoryCheckpoint.cs" /></ItemGroup>
 </Project>

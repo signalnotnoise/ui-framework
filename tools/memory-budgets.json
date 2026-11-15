@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "policy": "scoped-sustained-memory-v1",
+  "status": "validated-local-workloads",
+  "medianWindow": 32,
+  "minimumRepetitions": 3,
+  "native": {
+    "rows": [500, 5000], "minimumMeasuredBatches": 180, "cyclesPerBatch": 4, "warmups": 3,
+    "metrics": {
+      "CollectedManagedBytes": { "peak": 8388608, "growth": 131072, "lateGrowth": 65536 },
+      "PrivateMemorySize64": { "peak": 536870912, "growth": 33554432, "lateGrowth": 16777216 },
+      "HandleCount": { "peak": 768, "growth": 16, "lateGrowth": 8 },
+      "GdiObjects": { "peak": 64, "growth": 1, "lateGrowth": 1 },
+      "UserObjects": { "peak": 96, "growth": 4, "lateGrowth": 2 }
+    }
+  },
+  "browser": {
+    "modes": ["retention-fresh", "retention-reused"], "minimumMeasuredCycles": 128, "warmups": 4,
+    "maximumLiveProcesses": 16, "maximumLivePrivateBytes": 536870912,
+    "metrics": {
+      "ManagedBytes": { "peak": 8388608, "growth": 262144, "lateGrowth": 65536 },
+      "PrivateMemorySize64": { "peak": 402653184, "growth": 33554432, "lateGrowth": 16777216 },
+      "HandleCount": { "peak": 768, "growth": 32, "lateGrowth": 16 },
+      "GdiObjects": { "peak": 64, "growth": 1, "lateGrowth": 1 },
+      "UserObjects": { "peak": 96, "growth": 4, "lateGrowth": 2 }
+    }
+  },
+  "scope": "Post-cleanup native workspace and local parent/popup WebView2 workloads only. No pauses or traces; native input makes a run ineligible. Zero tracked survivors, owned native bytes and browser processes after close are mandatory. Working set is informational, not summed across shared browser pages. Existing timing/allocation release baseline is unchanged.",
+  "rationale": "Frozen before fresh validation. Prior bounded-reporting runs showed small collected-heap steps, stable private-byte windows and fixed GUI initialization. Native limits permit at most 128 KiB aggregate heap drift and 64 KiB late drift; browser permits 256 KiB total and 64 KiB late. Whole-process ceilings are regression tripwires for these small workloads, not application capacity promises. Handle late-growth limits deliberately flag the older browser +20 late-handle outlier; failures are not discarded or fitted away. No cache-size subtraction is allowed."
+}

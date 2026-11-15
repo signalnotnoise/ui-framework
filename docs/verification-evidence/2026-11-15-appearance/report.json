@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "checks": 222,
+  "captures": [
+    {
+      "mode": "light",
+      "width": 1040,
+      "height": 820,
+      "state": "normal",
+      "path": "light-1040-normal.png",
+      "dpi": 96
+    },
+    {
+      "mode": "light",
+      "width": 1040,
+      "height": 820,
+      "state": "focus",
+      "path": "light-1040-focus.png",
+      "dpi": 96
+    },
+    {
+      "mode": "dark",
+      "width": 1040,
+      "height": 820,
+      "state": "normal",
+      "path": "dark-1040-normal.png",
+      "dpi": 96
+    },
+    {
+      "mode": "dark",
+      "width": 1040,
+      "height": 820,
+      "state": "focus",
+      "path": "dark-1040-focus.png",
+      "dpi": 96
+    },
+    {
+      "mode": "light",
+      "width": 760,
+      "height": 820,
+      "state": "normal",
+      "path": "light-760-normal.png",
+      "dpi": 96
+    },
+    {
+      "mode": "light",
+      "width": 760,
+      "height": 820,
+      "state": "focus",
+      "path": "light-760-focus.png",
+      "dpi": 96
+    },
+    {
+      "mode": "dark",
+      "width": 760,
+      "height": 820,
+      "state": "normal",
+      "path": "dark-760-normal.png",
+      "dpi": 96
+    },
+    {
+      "mode": "dark",
+      "width": 760,
+      "height": 820,
+      "state": "focus",
+      "path": "dark-760-focus.png",
+      "dpi": 96
+    }
+  ],
+  "runtime": "10.0.13",
+  "focus": "Injected WPF template state on hidden HWND; not physical keyboard acceptance",
+  "validation": "Application-owned text and accessible field description; no framework validation API",
+  "releaseGate": false
+}

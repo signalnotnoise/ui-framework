@@ -16,7 +16,7 @@ internal static class MemoryTelemetry
             GdiObjects = GetGuiResources(process.Handle, 0), UserObjects = GetGuiResources(process.Handle, 1) };
     }
     internal static object Read(int batch, bool warmup, long naturalHeap, double milliseconds, long allocated,
-        LifetimeCounters counters, Dictionary<string, int> alive)
+        LifetimeCounters counters, Dictionary<string, int> alive, object input)
     {
         using var process = Process.GetCurrentProcess();
         process.Refresh();
@@ -27,6 +27,6 @@ internal static class MemoryTelemetry
             process.HandleCount, GdiObjects = GetGuiResources(process.Handle, 0), UserObjects = GetGuiResources(process.Handle, 1),
             BatchMilliseconds = milliseconds, UiAllocatedBytes = allocated, Alive = alive,
             counters.Created, counters.Released, counters.BufferCreates, counters.BufferReleases,
-            counters.NativeBytes, counters.WrongThreadReleases };
+            counters.NativeBytes, counters.WrongThreadReleases, Input = input };
     }
 }

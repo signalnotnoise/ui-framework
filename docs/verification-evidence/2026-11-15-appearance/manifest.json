@@ -1,0 +1,82 @@
+[
+  {
+    "path": "dark-1040-focus.png",
+    "bytes": 52716,
+    "sha256": "b3e157736e934979b11bc5a0d17dc60fc11b1ea8be44981208d20b7b0ff135b8"
+  },
+  {
+    "path": "dark-1040-normal.png",
+    "bytes": 52660,
+    "sha256": "32b2c62d4651f0699e98b069c3e1f140628f6d477a6a62d446179bbe610a4035"
+  },
+  {
+    "path": "dark-760-focus.png",
+    "bytes": 51782,
+    "sha256": "2174af2125d6c5c36500699a5f0c14759fe88a8259322c6d323519b95aa9df29"
+  },
+  {
+    "path": "dark-760-normal.png",
+    "bytes": 51737,
+    "sha256": "37e80a9fef18a475f887f8196b94c7a767ec5fc1a8b3155861c2f819dc867acd"
+  },
+  {
+    "path": "fixture-sources.zip",
+    "bytes": 6691,
+    "sha256": "e1a48587a1d234765781bfa3330d743c303d54960f3f84ebec07af7f0508a498"
+  },
+  {
+    "path": "fw017-appearance-run-2.log",
+    "bytes": 64,
+    "sha256": "e5924511ea93210d701ff72fbf2058a377af3f3cf0edd90b44c61e5c7b61fab9"
+  },
+  {
+    "path": "fw017-appearance-run.log",
+    "bytes": 1078,
+    "sha256": "8081a913482763846c12467837017a2caf1f5042f7b991d6b8e084754c4c6447"
+  },
+  {
+    "path": "fw017-focused-tests.log",
+    "bytes": 928,
+    "sha256": "f09991cb912b4baefffb3e8a143caa3071244998c81e097098dd8f0b11b72b6b"
+  },
+  {
+    "path": "light-1040-focus.png",
+    "bytes": 53887,
+    "sha256": "1e0cbb6d4509dd7209601dfc9fa529307a9791a290381e3f236b659875a6a1d5"
+  },
+  {
+    "path": "light-1040-normal.png",
+    "bytes": 53793,
+    "sha256": "728320cd8f530f70997272fb6f5aacb64acd810f09f484a679f8abe10f10875d"
+  },
+  {
+    "path": "light-760-focus.png",
+    "bytes": 52880,
+    "sha256": "52d07bfa2768ee8580c9513837a1bf3cbab46ef0b02f23c77b5dcbd40e46fa9a"
+  },
+  {
+    "path": "light-760-normal.png",
+    "bytes": 52787,
+    "sha256": "3a24a4a91074c546f3334c60e063dce5ec02fe8e3ea977984536bbd0a6a505b5"
+  },
+  {
+    "path": "report.json",
+    "bytes": 1613,
+    "sha256": "3c5ecc812a5c6912ecdb80558e90dadf4082fdd56ae40cb27f7c54a0173666eb"
+  },
+  {
+    "path": "runtime-provenance.json",
+    "bytes": 107,
+    "sha256": "0d631cf7e5b92b771a64319161cfb74cd598e2848bd5b081fda18bbc24833b23"
+  },
+  {
+    "path": "source-manifest.json",
+    "bytes": 8780,
+    "sha256": "1d61503b344f0127b18d190b8e4d2b0017c5da36dd184e25836f8a45fb260267"
+  },
+  {
+    "path": "tests/appearance.trx",
+    "bytes": 58250,
+    "sha256": "f3b87717fe352f95ea5346920335d6fefaa13320a5648b2b735735ffc4516b8c"
+  }
+]

@@ -1,11 +1,13 @@
 # UI Framework backlog
 
-Last updated: November 13, 2026.
+Last updated: November 15, 2026.
 
-Alpha.6 libraries and symbols were accepted by NuGet from `fd72534` after
-both hosted workflows passed (146 tests, 32 performance gates each). A fresh
-NuGet.org installation passed; DLL hashes match the published artifacts. A separate local Release
-build `0.1.0-alpha.6-local.1` is ready for GuidedGrade. [Release record](releases/0.1.0-alpha.6.md).
+Alpha.7 libraries and symbols were published November 13 from `c5d639b` after
+both exact-commit hosted workflows passed, including 32 performance checks each.
+Fresh public installation and alpha.6-to-alpha.7 source/binary upgrades pass.
+[Release record](releases/0.1.0-alpha.7.md). Current uncommitted peer-cache cleanup
+and acceptance tooling are not part of those published packages; a new exact
+candidate still needs package/correctness/hosted validation.
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
 and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
@@ -18,7 +20,7 @@ FW-003 was reopened October 24 and is now resolved with an identified startup
 bottleneck, a tested initialization-order fix and passing local gates. No later
 backlog item was started during that investigation. FW-005 and FW-006 now have user-confirmed physical acceptance and are complete.
 FW-001, FW-002, FW-004,
-FW-010, FW-015, FW-016 and FW-020 are also complete within their recorded scopes. Work within each priority follows the order below; performance
+FW-010, FW-015, FW-016, FW-017, FW-018, FW-019 and FW-020 are also complete within their recorded scopes. Work within each priority follows the order below; performance
 and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
@@ -26,7 +28,8 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
-| 1 | FW-018 | P1 | Verify resource lifetime and improve diagnostics | In progress |
+| Done | FW-027 | P1 | Package current source and validate against alpha.7 | Done — local validation, hosted gate separate |
+| Done | FW-018 | P1 | Verify resource lifetime and scoped memory budgets | Done — 12/12 scoped memory runs |
 | Done | FW-010 | P1 | Verify asynchronous native host ownership | Done — scoped native/WebView2 acceptance |
 | Done | FW-005 | P1 | Strengthen editing through virtualized row recycling | Done — user-confirmed physical IME pass |
 | Done | FW-006 | P1 | Expand UI Automation and accessibility coverage | Done — user-confirmed contrast pass |
@@ -35,11 +38,14 @@ Dates below record evidence or updates, not delivery commitments.
 | 4 | FW-008 | P2 | Add a text submit callback | Proposed |
 | 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
 | 7 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
-| 8 | FW-012 | P2 | Reconcile stale roadmap and release claims | Open |
-| 9 | FW-017 | P2 | Establish cohesive theme and visual acceptance | Proposed |
-| 11 | FW-019 | P2 | Validate independent sample adoption and upgrades | Proposed |
+| Done | FW-012 | P2 | Reconcile stale roadmap and release claims | Done — November 15 evidence reconciliation |
+| Done | FW-017 | P2 | Establish cohesive theme and visual acceptance | Done — scoped visual/error acceptance |
+| Done | FW-024 | P2 | Publish alpha.7 | Done — publication history reconciled |
+| Done | FW-019 | P2 | Validate independent sample adoption and upgrades | Done — published alpha.6 to alpha.7 |
 | 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
+| Later | FW-025 | P3 | Add contextual runtime failure diagnostics | Deferred — post-v1 |
+| Later | FW-026 | P3 | Revalidate physical Narrator after peer-cache cleanup | Deferred — post-v1 follow-up |
 
 P0 is reserved for release blockers. FW-003's startup bottleneck is resolved
 locally; a new publication still needs exact committed-source CI and package
@@ -47,17 +53,18 @@ checks. Previously published alpha.5 evidence remains preserved. P1 addresses kn
 usability gaps; P2 improves scale and APIs; P3 needs a concrete use case before
 implementation. Proposed and Investigation items do not commit to a new API.
 
-## Draft v1 scope â€” October 23, 2026
+## v1 scope and candidate preparation — updated November 15, 2026
 
-Proposed direction for discussion: a stable declarative C# UI layer for Windows
+Direction: a stable declarative C# UI layer for Windows
 and WPF, with retained components, predictable state/bindings, workspace layout,
 virtualized lists, coherent styling and reliable native-control integration.
-This is a scope proposal, not a v1 readiness claim or an implementation commitment.
+The scoped implementation/acceptance items below are complete; this is not yet a
+v1 release-readiness claim. Follow the [exact-candidate release sequence](releasing.md#next-release-candidate).
 
 Candidate release requirements: explain and control performance variability
 (FW-003/004/007), define editing and IME behavior during recycling (FW-005),
 verify keyboard/UI Automation and assistive-technology behavior (FW-006),
-and establish API, visual, diagnostic and adoption contracts (FW-016â€“019).
+and establish API, visual, lifetime and adoption contracts (FW-016–019).
 Existing successful alpha.5 gates remain valid evidence for that preview;
 they do not establish all of these broader guarantees.
 
@@ -67,9 +74,9 @@ general animation, hot reload and other backends require separate scope and
 benefit decisions. They are not automatically v1 blockers. Keep native controls
 available where specialized functionality already exists.
 
-## Proposed v1 acceptance matrix
+## v1 acceptance matrix
 
-This matrix defines evidence to collect, not completed acceptance. Owners below
+This matrix distinguishes completed scoped acceptance from future exact-RC gates. Owners below
 are responsibility roles; a named assignee must be recorded before work starts.
 Each row needs links to dated evidence for the release candidate. Unresolved
 numeric performance/memory targets must be established from representative
@@ -77,16 +84,20 @@ measurements before claiming v1 acceptance; existing budgets remain enforced.
 
 | Contract / backlog | Workload | Required outcome | Evidence / current gap | Owner role |
 | --- | --- | --- | --- | --- |
-| API and compatibility â€” FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; binary upgrade/RC platform acceptance remains FW-019 | Core/API maintainer |
-| Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; broader memory/RC acceptance remains open | Performance maintainer |
+| API and compatibility â€” FW-016 | Inventory public core/WPF APIs; compile and run a consumer upgrade | Explicit decision on direct View construction and supported extension points; approved API baseline; incompatible changes detected automatically | Reviewed preview contract and compatibility guards complete; published-preview binary upgrade acceptance complete; exact future RC/platform acceptance remains | Core/API maintainer |
+| Performance â€” FW-003/004/007 | Same-binary controls and predecessor comparisons; full-list, virtualized, themed, editors, native scopes and keyed shuffles | Report latency, UI allocations and component work; explain reproducible regressions and measurement uncertainty within defined workloads | FW-003 identifies/avoids cold WPF DPI discovery; 32 local accepted-source gates pass; native-scope measurement complete. FW-007 keyed shuffles complete; FW-022 hosted source-first editor gate passes 32/32. Local timing failures retained; scoped memory acceptance complete; exact future RC validation remains | Performance maintainer |
 | Virtualized editing â€” FW-005 | Edit while scrolling, recycling, reordering, filtering and removing rows; exercise IME composition | No write reaches a former item's binding; explicit tested focus, selection and IME commit/cancel/preservation policy | Provider completion before detachment and original-focus ownership implemented; real-window recycling, stale input and routed composition checks pass. User confirmed physical IME pass October 29; provider/build details not supplied | Codex / WPF/input maintainer |
 | Accessibility â€” FW-006 | Keyboard-only workspace, virtual item discovery, screen reader, high contrast and scaling | Expected names, states, focus order and item access; actionable controls remain usable | Automated checks pass; user reported Narrator/scaling October 28 and contrast switching October 29 | Accessibility reviewer |
-| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | FW-010 complete within documented standard-WebView2 scope: repeated interaction, lifetime/recovery and retention pass; permanent-stall policy defined. Representative budgets/diagnostics remain FW-018 | WPF interop maintainer |
-| Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Repeated collectability, native buffers and visited-key measurements pass; representative memory budgets remain open | Runtime maintainer |
-| Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Compact glyph/layout checks pass; cohesive visual acceptance pending | Theme/accessibility reviewer |
-| Adoption and upgrades â€” FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Package smoke tests pass; independent upgrade acceptance pending | Release/sample maintainer |
+| Native ownership â€” FW-010/018 | Successful/failed creation, partial initialization, completion after removal, repeated mount/unmount | Explicit resource owner; detached controls cannot receive stale updates; cleanup and late completion obey documented ownership | FW-010 complete within documented standard-WebView2 scope: repeated interaction, lifetime/recovery and retention pass; permanent-stall policy defined. FW-018 scoped budgets pass; additional diagnostics deferred to FW-025 | WPF interop maintainer |
+| Memory â€” FW-018 | Sustained scrolling through new rows, navigation, removal and workspace disposal | Distinguish bounded native realization, O(item-count) descriptions and retained visited-row state; demonstrate release of removed/disposed resources | Lifetime checks and all 12 frozen-budget native/browser runs pass November 15; [scoped evidence](fw018-memory-budgets-2026-11-15.md) | Runtime maintainer |
+| Default appearance â€” FW-017 | Representative forms, compact toolbar, lists and split workspace under themes/scaling | Coherent typography/spacing and usable focus/disabled/error states; theme changes preserve input and compatible control identity | Complete within documented scope: eight inspected light/dark wide/compact renders, 44 focused tests, application-owned error contract; prior physical evidence retained ([acceptance](fw017-appearance-acceptance-2026-11-15.md)) | Theme/accessibility reviewer |
+| Adoption and upgrades â€” FW-019 | Clean published-package starter, previous-version upgrade, independent workspace and shutdown | Documented setup succeeds; supported interactions and cleanup pass; deployed package provenance is verified | Independent NuGet-only alpha.6→alpha.7 source/binary acceptance passes; future exact v1 RC package acceptance remains ([evidence](fw019-package-adoption-2026-11-15.md)) | Release/sample maintainer |
 
-Basic actionable error context and clear ownership are v1 requirements. A full
+November 15 user scope decision: FW-018 covers resource lifetime and scoped memory
+budgets. Additional contextual error diagnostics (FW-025) and new physical Narrator
+revalidation after peer-cache cleanup (FW-026) are separate post-v1 follow-ups, not
+v1 blockers. Existing ownership, automated accessibility and prior manual evidence
+remain required; no new physical Narrator pass is claimed. A full
 rebuild inspector, sophisticated theme customization, broad control catalog,
 general animation, hot reload, other backends and unproven lazy-computed
 optimization can follow v1. Existing Computed reevaluation semantics must be
@@ -378,7 +389,8 @@ Preserved investigation history:
 ### FW-007 Improve large keyed shuffles
 
 Status: **Done**. Owner: Codex. Started October 28; completed/last updated
-October 29, 2026. Implementation and validation complete; not yet published.
+October 29, 2026. Published in alpha.7 on November 13; publication status
+reconciled November 15. [Release record](releases/0.1.0-alpha.7.md).
 
 - Indexed AVL storage removes linear rank searches and array shifts. Row-embedded
   links replace separate nodes and a redundant membership dictionary. Successor
@@ -604,6 +616,19 @@ or an unsupported parity claim with another signals implementation.
 
 ### FW-012 Reconcile documentation
 
+Done November 15, 2026. Owner: Codex. Current README, release instructions,
+roadmap, layout/native-interop/API/accessibility guides and backlog distinguish
+published alpha.7, current uncommitted work and historical evidence. Recovered
+alpha.7's release record plus 601 evidence files from `42d6617`; both exact-commit
+GitHub runs and their 32/32 comparisons verified, and hosted/public DLL hashes
+match the fresh FW-019 consumer. FW-024 closes on that verified history. Dated
+failed experiments are retained, not rewritten as passes. New candidate and v1 RC
+gates remain explicit; optional/post-v1 work is not promoted into blockers.
+[Reconciliation audit](fw012-release-reconciliation-2026-11-15.md).
+Documentation-only task; no runtime, baseline, version, publication or merge.
+
+Original scope:
+
 Update stale implementation and package-availability claims in the roadmap,
 layout/native-interop guides and release instructions. Clearly separate current
 contracts from dated measurements. Keep this backlog as the work-status source,
@@ -655,6 +680,29 @@ a stable release. Existing functional/package checks do not freeze public APIs.
 
 ### FW-017 Establish cohesive theme and visual acceptance
 
+Status: **Done — scoped visual and error acceptance**, November 15, 2026.
+Owner: Codex. [Acceptance and evidence](fw017-appearance-acceptance-2026-11-15.md).
+
+- [x] Existing scoped states, compact sizing, wrapping, theme/local precedence,
+  responsive/split behavior and FW-023 composition work credited.
+- [x] Eight native renders individually reviewed: light/dark, 1040/760 DIP,
+  normal/editor-focus appearance; form, compact toolbar, review list and split
+  panes with long text, disabled action and explicit errors remain readable.
+- [x] Validation/error contract documented as application-owned composition using
+  existing text and accessible labels; invalid/valid transitions verified.
+- [x] 222 fixture assertions and 44 focused styling/layout tests pass. Captures,
+  source hashes, TRX and logs archived. Earlier compile failure retained.
+- [x] Prior FW-006 physical contrast/scaling evidence retains its original scope.
+
+The focus captures use an injected template state on a hidden HWND, not a new
+physical focus campaign. No new Narrator, DPI matrix or hosted gate is claimed.
+Core/WPF source hashes are unchanged; this task changes only acceptance tooling
+and documentation, so no new performance campaign is required. FW-019 remains
+sample adoption/upgrades; FW-025/026 are post-v1. The [earlier review](fw017-evidence-review-2026-11-15.md)
+records the gaps before this continuation closed them.
+
+Original scope retained for traceability:
+
 Proposed October 23, 2026. Build on existing ThemeTokens, native style isolation
 and corrected compact controls. Define a consistent typography/spacing/density
 system with light/dark appearances and complete interaction states. Verify
@@ -664,9 +712,197 @@ Review real-window captures alongside layout assertions; a template that fits
 its glyph is not by itself a visually coherent application. Integrate with
 FW-006 accessibility acceptance and retain theme/local-value precedence.
 
-### FW-018 Improve runtime diagnostics and lifetime verification
+### FW-018 Verify resource lifetime and scoped memory budgets
 
-Status: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
+Scope split November 15 by user decision: additional contextual diagnostics move
+to FW-025; physical Narrator revalidation after peer-cache cleanup moves to FW-026.
+Both are post-v1 follow-ups. Close FW-018 on scoped memory acceptance; the historical
+entries below retain the original wider scope and its evidence.
+
+Status: **Done — scoped lifetime and memory acceptance**, November 15, 2026.
+All 12 fresh processes pass the numerical policy frozen before measurement:
+six native runs at 500/5,000 rows (4,392 workspace cycles including warmup) and
+six fresh/reused-profile browser runs (792 parent/popup cycles). Raw samples,
+source/runtime agreement, ownership, reporting controls and shutdown validate.
+Native input evidence is quiet. Native late heap growth is at most zero; browser
+late heap growth at most 1,208 bytes. One browser run reaches the +16 late-handle
+limit exactly; older calibration outliers remain flagged. No numerical limit,
+existing performance baseline or production runtime source changed in this task.
+Evaluator fixtures pass and are wired into CI; no hosted run is claimed.
+[Budget contract](memory-budgets.md) · [Validation evidence](fw018-memory-budgets-2026-11-15.md).
+FW-025/FW-026 retain the explicitly deferred post-v1 work.
+
+#### Historical investigation record (original wider scope)
+
+November 15 production peer-cache cleanup implemented and locally validated:
+held row/list peers retain zero disposed editors (previously ten); a directly held
+editor peer retains only its own editor, which collects after release. Three fresh
+native runs pass 21 cases. All 176 tests pass, including four regressions that fail
+against unchanged baseline binaries. Recycling/realization and key reuse remain
+correct. The 15 visual checks, 21 stress assertions, real-window startup/disposal
+and native-window shutdown also pass. Seven alternating pairs pass 32/32 performance checks versus pre-change
+HEAD; allocations within 0.05%, component work unchanged, timing -3.79% to +4.91%.
+Raw failures/prototypes are preserved. No accepted baseline/budget change or hosted
+release claim. Physical Narrator revalidation and sustained external-client costs
+remain unmeasured. FW-018 stays open for representative native/browser memory
+budgets and contextual failure diagnostics. [Cleanup evidence](fw018-peer-cache-cleanup-2026-11-15.md).
+
+November 15 plain-WPF comparison completed: all eight processes pass, covering
+240 windows, 540 verified editor-focus acquisitions and 1,248 snapshots. Independent
+plain WPF (no framework assembly loaded) and framework-native builds reproduce
+identical fixed GDI deltas: 24 untouched / 30 focused during repeated window cycles,
+14 untouched / 17 focused after UI-thread exit. No tracked survivors; no per-window
+GDI accumulation in 30 cycles per process. The fixed +3 residual no longer provides
+evidence of a framework-specific leak; exact identities remain unresolved. Preserve
+raw counts and platform comparison; pursue deeper tracing if growth diverges from
+plain WPF or violates representative budgets. Remaining FW-018 work: native/browser
+budgets, production peer-cache acceptance and contextual failure diagnostics.
+No runtime or baseline change. [Comparison](fw018-plain-wpf-focus-2026-11-15.md).
+
+November 15 GuidedGrade-closed native tracing completed: four accepted campaigns validate
+2,412 samples / 9,648 workspace cycles with zero tracked retained editors/resources.
+The +6 GDI step reproduces without GuidedGrade. Identified objects include a font,
+msctfui.dll text-input windows and a CoreMessaging helper. The font/input UI windows
+disappear at dispatcher shutdown; CoreMessaging's window disappears at STA-thread
+exit. Three aggregate GDI objects remain above the untouched reference after thread
+exit and outside the partial shared-handle inventory. The fresh same-binary untouched
+thread control passes with no input and GuidedGrade absent at every audit: final
+10 GDI / 4 USER versus focused 13 GDI / 6 USER. Two excluded attempts (app at exit;
+activation followed by user-requested stop) remain preserved and outside these totals.
+No budget approval or production
+lifecycle change. This preceded the plain-WPF comparison above; its fixed-residual
+interpretation is superseded by that control. Peer-cache remediation and contextual
+diagnostics remain separate. [Findings](fw018-guidedgrade-closed-resources-2026-11-15.md).
+
+November 15 manual focus observation completed: user confirmed two clicks; the
+first activation at batch 7 (before the prompt) includes pointer/client-area input
+and reproduces +6 GDI/+9 USER. The second adds no GDI step. All 603 samples / 2,412
+workspace cycles pass tracked ownership, reporting and shutdown checks. Final 100
+batches plateau at 471 handles / 27 GDI / 25 USER; all editor survivors are zero.
+Post-dispatcher counts remain above the shorter untouched reference. This supports
+an activation/input initialization signature, not a proven title-bar-only cause or
+fully attributed resource budget. Next: identify the actual native resources and
+keep peer-cache retention remediation separate. [Findings](fw018-manual-focus-2026-11-15.md).
+
+November 15 accessibility attribution: 21 controlled peer cases confirm a held
+row/list/editor peer retains all 10 realized editors through cached children.
+Releasing the root collects all; one-row cache refresh leaves nine and refreshing
+all realized-row caches releases all. Native resources were already released.
+Six alternating clean/UIA-warm soaks pass 1,098 raw samples / 4,392 workspace cycles.
+Six historical native dumps have no editor/row-proxy instances. One warm run has
++6 GDI and a USER step exactly when activation/focus appears at batch 166, while
+editor survivors remain zero. Activation/focus is now included in the summary's
+interaction classification, with regression fixtures. A deliberate focus attempt
+was blocked by Windows at batch 60; preserve it as failed setup, not a passing
+focus check. Its matched control passes. All 172 framework tests and focused
+negative/parser checks pass. No production cache fix or budget change. FW-018 stays
+open for manual focus attribution, production cache-lifetime acceptance, budgets
+and contextual diagnostics. [Findings](fw018-automation-retention-2026-11-15.md).
+
+November 15 screenshot follow-up completed as one diagnostic pair: manual capture
+and untouched control each pass 603 batches / 2,412 workspace cycles, with all
+1,206 samples verified. Both finish -12 handles, flat GDI and -1 USER; no lasting
+capture-related resource step reproduced. Median batch times 204.73 vs 196.92 ms
+are not causal evidence from one sequential pair. Failed setup controls are
+preserved: a sampled editor is rooted by a ref-counted accessibility ElementProxy
+through cached virtual-row/textbox peers. Automation session reset preceded the
+successful manual pair; external client identity remains unproven. Error diagnostics
+now include survivor kinds and an opt-in failure checkpoint without relaxing checks.
+Negative-retention, real-window and parser controls pass. FW-018 remains open for
+interactive/accessibility retention, other growth, budgets and contextual errors.
+[Manual screenshot comparison and evidence](fw018-snipping-comparison-2026-11-15.md).
+
+November 15 continuation: tracing remaining handles using process-local creation
+history in a separate diagnostic campaign; extending unpaused native/browser soaks
+and row counts before proposing budgets. Sample runners now record requested
+cycle counts and explicit case deadlines; defaults and accepted performance gates
+are unchanged. Completion also requires a decision on actionable error diagnostics.
+Creation-history controls validate handle/PID/open/close metadata, but Windows
+returns empty stacks in this session. The browser's two persistent file handles
+are identified as .NET 10.0.13 System.Private.Windows.Core.dll and
+System.Windows.Primitives.dll, opened by the tiered-compilation worker. Native
+added event/I/O-completion handles have runtime-worker creation IDs; exact helper
+stacks remain unavailable. A broad file-query pilot timed out and is preserved;
+the corrected probe queries only added disk files, never pipe state/data. Longer
+unpaused checks have completed; no budget or leak-freedom claim yet. The first three
+180-batch/500-row runs pass ownership checks; run 2 has a late +26 handle step
+with additional GDI/USER objects. Preserve and investigate that outlier; it is not
+an approved plateau. All three 5,000-row runs also pass tracked ownership and
+visited/removal accounting (5,000 logical states, 10–11 native controls, then zero).
+After the user reported hovering over the scrolling window, a bounded passive
+window-input observer was added. It records counts/booleans only and never blocks
+input or moves the pointer. One repeat records keyboard activity despite no mouse
+entry; it is not classified as untouched. Input and activation evidence are kept
+separate from ownership and memory-budget decisions.
+The two repeat runs with no routed input have decreasing heap/handle counts and
+no GDI/USER growth. All six 132-cycle browser runs pass ownership/shutdown;
+whole-process handle changes remain +1 to +35 and need further attribution.
+Combined evidence validates 15 runs and 2,442 spooled samples: 6,588 native
+workspace cycles and 792 browser cycles. Full Release passes 172 tests, 15 visual
+checks and 21 stress assertions; parser fixtures pass. FW-018 remains in progress:
+controlled interactive resource growth, representative budgets and contextual
+failure diagnostics are still outstanding. No release baseline or budgets changed.
+[November 15 findings](fw018-long-memory-2026-11-15.md).
+
+Heap/handle attribution continuation (November 13): opt-in start/end/quiet dumps
+now separate runtime/reporting caches from ownership checks. Native heap decreases;
+fresh browser's exact 49,152-byte array expansion is rooted by .NET's type-cast
+cache. A reporting getter is rooted by System.Text.Json metadata. Browser worker
+counts and a transient five-handle group rise/fall together. Both browser modes
+retain two unnamed file handles and one Windows cache-file mapping; native retains
+two events and one I/O-completion handle whose allocator is still unresolved.
+All three handle-aware diagnostic workloads pass their ownership checks. The
+standard-collector pilot lacks handle metadata and is retained as incomplete
+evidence. Pauses perturb the process: no subtraction, budget or regression claim.
+Next: creation-stack attribution for remaining handles, then longer unpaused
+campaigns and additional row counts before setting budgets. See
+[heap/handle findings](fw018-heap-handle-attribution-2026-11-13.md).
+Normal Release revalidation passes 172 tests, 15 visual checks, 21 stress assertions,
+reporting controls and window/shutdown checks; both analyzer fixture suites pass.
+Both unpaused browser modes also pass (88 total cycles/reporting samples).
+
+Bounded-reporting continuation (November 13): native and browser samples now spool
+each sample to a fresh file, retaining only one weak probe between measurements.
+Every previous sample must collect before the next is recorded; complete reports
+are reconstructed only after measurement. The 128-sample control and short native
+regression pass; three 60-batch native runs and all six browser runs pass. All 189
+native soak samples and 264 browser samples verify collection; raw evidence matches
+reconstructed reports. Native collected-heap changes range from -4,648 to +46,904
+bytes; browser heap changes from +216 to +99,384 bytes and handles from +3 to +23.
+Residual process trends need attribution before budgets; bounded reporting alone
+is not whole-process leak proof. Protocol is
+`bounded-sample-files-v1`; prior retained-reporting evidence remains separate.
+[Bounded reporting findings](fw018-bounded-reporting-2026-11-13.md).
+Final Release validation passes 172 tests, 15 visual checks, 21 stress assertions,
+reporting controls, the one-batch regression and window/shutdown checks.
+
+Reporting isolation continuation: implemented an end-of-run save/release/reload probe
+shared by the native and browser samples. Empty, deliberately retained and fully
+released controls pass. Final three 60-batch native runs release 31,808–31,832 reporting
+bytes; all six browser runs collect their sample roots (38,016 bytes fresh profiles,
+25,344 reused). The initial browser pilot detected one rooted sample; moving sample
+construction out of the async loop resolves it. Failed pilot and measured source
+are preserved. Samples are measured before report reload; no heap budgets or
+corrected trends are claimed. Bounded reporting is now implemented above; residual
+trend attribution and repeated budget calibration remain. [Reporting isolation evidence](fw018-reporting-retention-2026-11-13.md).
+Final Release validation passes 172 tests, 15 visual checks, 21 stress assertions,
+reporting controls and window/shutdown checks; direct fresh-directory memory smoke
+also passes after a one-batch pilot exposed a remaining reporting root. Both callers
+now reject surviving reporting roots; native construction is isolated too. Two final
+browser guard checks pass. Raw failed/successful evidence and exact measured sources are archived.
+Framework runtime and accepted performance budgets remain unchanged.
+
+Updated November 13, 2026: resumed after FW-010. The offline memory analyzer now
+checks all retention checkpoints for description counts, required ownership probes,
+logical/native payload accounting, bounded native realization and complete removal.
+Focused fixtures pass; reanalysis of both archived three-run campaigns passes (the
+longer campaign alone includes retention checkpoints). This is existing-evidence
+analysis, not a fresh runtime/performance run. The later bounded-reporting continuation
+removes growing sample retention during measurements. Next: attribute residual
+heap/handle trends, establish budgets, then design contextual failure diagnostics
+and measure any instrumentation overhead. [Scope and findings](fw018-memory-diagnostics-2026-11-13.md).
+
+Historical status before the November 15 scope split: **In progress**. Owner: Codex. Started October 29, 2026. Promoted to P1
 and now first in the active queue after FW-010 closed November 11. Initial slice: weak-reference
 collectability with live external publishers, queued refreshes, native removal
 and repeated disposal. Callback balance alone is insufficient.
@@ -693,6 +929,27 @@ resources after disposal. Do not mistake balanced callback counts for proof of
 collectability, or add automatic recovery that masks application errors.
 
 ### FW-019 Validate independent sample adoption and upgrades
+
+Completed November 15, 2026. Owner: Codex. Standalone PackageWorkspace restores
+only published packages in independent consumers and isolated caches. Exact
+alpha.6 → alpha.7 source and unchanged-consumer binary upgrade pass in both
+full-list and virtualized modes: 14 final processes, 56 workspace lifetimes,
+168 collected host/editor probes, balanced ownership and completed shutdown.
+Forms, direct list selection, native edits, resize and navigation are checked.
+Source/loaded assembly hashes, lock files, captures and raw repeated diagnostics
+are retained. Final update timing changes +5.54% full-list / +4.45% virtualized;
+allocations and component work are effectively unchanged. No update-speedup,
+universal memory budget or hosted-release claim. Windows 11 x64 / .NET 10.0.13
+is the verified scope. [Adoption and upgrade evidence](fw019-package-adoption-2026-11-15.md).
+
+The original pilot shutdown failure/stall and earlier campaign are retained.
+Final harness uses the normal Application lifecycle. No framework runtime change.
+NuGet alpha.7 availability is confirmed; FW-012 subsequently reconciled the
+complete hosted/publication history and closed FW-024. Future v1 RC packages need exact-package
+acceptance; this closes the reproducible sample/upgrade capability and current
+published preview path, not a future unbuilt release.
+
+Original scope:
 
 Proposed October 23, 2026. Maintain a framework-owned workspace sample restored
 only from published packages, exercising forms, lists, editing, split panes,
@@ -758,12 +1015,13 @@ documentation are included in this commit; no package published.
 
 ### FW-024 Publish alpha.7
 
-Status: **In progress**. Owner: Codex. Started November 13, 2026 at user request.
-Publish both library/symbol packages after local correctness/package/performance
-checks and exact-candidate hosted gates, then verify an isolated NuGet.org
-consumer. Consulted the release concept and generated neighborhood, workflows,
-package scripts and existing acceptance evidence before preparing the candidate.
-Baseline and budgets remain unchanged. [Release record](releases/0.1.0-alpha.7.md).
+Status: **Done — published November 13, record reconciled November 15, 2026**.
+Owner: Codex. Exact release commit `c5d639bcff707ff1a75b23f2a60135d6be6cb7b2` passed
+Validate 43409502188 and Publish NuGet 43410864931, including 32/32 performance
+checks in each. Both libraries/symbols published; public DLL hashes match hosted
+artifacts and fresh FW-019 installation. Complete source/evidence restored from
+`42d6617` without merging unrelated code. [Release record](releases/0.1.0-alpha.7.md).
+This closes historical publication only, not a release of current uncommitted work.
 
 ## Definition of done
 
@@ -813,3 +1071,49 @@ in `0.1.0-alpha.4` under FW-001.
 | FW-005 | October 29, 2026 | Existing editing safeguards and automated checks supplemented by user-confirmed physical IME editing/recycling pass. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
 | FW-006 | October 29, 2026 | Existing accessibility/contrast implementation and checks supplemented by user-confirmed Windows contrast pass; earlier Narrator/scaling passes retained. | [Manual acceptance](manual-acceptance-2026-10-29.md) |
 | FW-023 | November 13, 2026 | Portable C# UI skill, local installation and reproducible native before/after GIF; build, visual inspection, skill/media, docs and graph checks pass. Included in this commit. | [Usage and evidence](agent-skill.md) |
+
+
+### FW-025 Add contextual runtime failure diagnostics
+
+Status: **Deferred — post-v1**. Split from FW-018 November 15, 2026 by user decision.
+Evaluate actionable component/key context for invalid views, rendering failures,
+unexpected rebuilds and cleanup failures. Preserve existing exception behavior;
+do not mask application errors. Any opt-in instrumentation needs measured enabled
+and disabled overhead. A full rebuild inspector is not implied. This is not a v1
+release blocker; resource-lifetime and memory acceptance remain in FW-018.
+
+### FW-026 Revalidate physical Narrator after peer-cache cleanup
+
+Status: **Deferred — post-v1 follow-up**. Split from FW-018 November 15, 2026 by
+user decision. Exercise virtual-row discovery, recycling, focus and removed-key
+reuse with physical Narrator against the production peer-cache cleanup; record
+OS, build and observed behavior. Existing automated peer checks and October manual
+acceptance remain evidence, but do not establish a new physical pass. Consider
+sustained external-client retention separately if the workload warrants it. This
+follow-up is not a v1 blocker under the agreed scope; any discovered correctness
+regression must be triaged on its own evidence.
+
+
+### FW-027 Package current source and validate against alpha.7
+
+Done November 15, 2026. Owner: Codex. Built both libraries/symbols as
+`0.1.0-alpha.8-local.1` from preserved dirty source. Full Release passes 176 tests,
+reporting controls, 15 visual stress checks, 21 stress assertions, real-window
+startup/native shutdown and the short memory check. API guard probes and fresh
+package smoke checks pass. Seven alternating pairs against alpha.7 source
+`c5d639b` pass all 32 metrics: timings −0.02% to −2.30%, UI allocations effectively
+unchanged, identical component work. All 58 package/source manifest entries match.
+
+Fourteen public-alpha.7 → exact-local-package source/binary upgrade processes
+pass, with 56 lifetimes and 168 collected host/editor probes. Smaller workspace
+diagnostics retain +7.40% full-list mount and +4.01% virtual update increases;
+raw ranges and interpretation are recorded rather than described as universal
+improvement. Existing 12-run memory budgets match 54 runtime source entries and
+are reused, not newly rerun. All evidence/hashes preserved.
+[Candidate and results](fw027-local-candidate-2026-11-15.md).
+
+The accepted baseline and budgets remain unchanged. No commit, push, hosted run
+or publication was performed. Exact committed-candidate hosted validation against
+the accepted baseline remains required before release. The default repository
+version and sample public dependency remain alpha.7; use the unique local version
+explicitly to consume these new packages.

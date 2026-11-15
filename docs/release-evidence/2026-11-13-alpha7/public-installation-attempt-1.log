@@ -1,0 +1,4 @@
+  Determining projects to restore...
+C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\public-consumer-0172bad6fb874a70ab8cecb334ee33bb\PackageSmoke.csproj : error NU1102: Unable to find package SignalNotNoise.UI.Wpf with version (= 0.1.0-alpha.7)
+C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\public-consumer-0172bad6fb874a70ab8cecb334ee33bb\PackageSmoke.csproj : error NU1102:   - Found 6 version(s) in nuget.org [ Nearest version: 0.1.0-alpha.6 ]
+  Failed to restore C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-alpha7\public-consumer-0172bad6fb874a70ab8cecb334ee33bb\PackageSmoke.csproj (in 578 ms).

@@ -8,6 +8,7 @@
     <Project Path="samples/WebViewAcceptance/WebViewAcceptance.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/ReportingRetentionChecks/ReportingRetentionChecks.csproj" />
     <Project Path="tests/UI Framework.Checks/UI Framework.Checks.csproj" />
   </Folder>
 </Solution>

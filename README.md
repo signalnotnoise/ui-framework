@@ -16,17 +16,19 @@ See the [documentation index](docs/README.md) for API guides, architectural deci
 
 ## NuGet preview
 
-Version `0.1.0-alpha.7` is the release candidate. Publication and fresh public
-installation are pending; see the [release record](docs/releases/0.1.0-alpha.7.md).
-The latest verified public version is `0.1.0-alpha.6`:
-[SignalNotNoise.UI](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.6)
-and [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.6).
-
-In a .NET 10 WPF project, install the current published preview:
+Version `0.1.0-alpha.7` was published November 13, 2026 from `c5d639b` after
+both hosted workflows passed. Fresh NuGet installation and alpha.6-to-alpha.7
+source/binary upgrades are verified. See the [release record](docs/releases/0.1.0-alpha.7.md).
+Install [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/0.1.0-alpha.7)
+with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise.UI/0.1.0-alpha.7):
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.6
+dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.7
 ```
+
+Published alpha.7 does not include later uncommitted peer-cache cleanup or the
+new memory/adoption acceptance tooling in this working tree. Keep package and
+source validation separate; the current tree is not a new published release.
 
 The WPF package brings in the core automatically. See the
 [package getting-started guide](docs/package-readme.md) and
@@ -35,13 +37,22 @@ run `./tools/Test-Packages.ps1`; outputs are under `artifacts/packages`.
 
 ## Run from source
 
-Requires Windows and the .NET 10 SDK. From this directory:
+Requires Windows and a stable .NET 10 SDK. `global.json` permits later stable
+10.0 SDK feature bands; an installed .NET 11 preview alone does not satisfy it.
+From this directory:
 
 ```powershell
 dotnet build "UI Framework.slnx"
 dotnet run --project samples/Counter
 dotnet test "tests/UI Framework.Checks"
 ```
+
+## Try the standalone package sample
+
+`dotnet run --project samples/PackageWorkspace -c Release` opens the NuGet-only
+workspace. Its [README](samples/PackageWorkspace/README.md) explains standalone
+setup, editing, native ownership, shutdown and upgrade checks. This tests published
+packages; the source examples below use project references.
 
 ## Try the product showcase
 

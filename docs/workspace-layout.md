@@ -1,6 +1,10 @@
 # Workspace layout
 
-These APIs are implemented in the working source after `d5a94b2` and included in the local `0.1.0-alpha.3-local.1` integration package. The app retains its existing native layout adapters; adopting the package does not migrate those call sites. See [local adoption and unresolved performance checks](consumer-package-2026-09-25.md).
+Vertical fill, docking and split panes are implemented and available in published
+alpha.7. The independent [package workspace](../samples/PackageWorkspace/README.md)
+exercises them. Historical local.3 application adoption evidence is retained in
+[the September 25 record](consumer-package-2026-09-25.md); it is not today's
+framework status and does not imply an application has upgraded its package.
 
 ## Vertical fill
 

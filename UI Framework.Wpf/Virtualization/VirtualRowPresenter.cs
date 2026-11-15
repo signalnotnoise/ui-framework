@@ -16,6 +16,7 @@ internal sealed class VirtualRowPresenter : ContentControl
     private DependencyObject? compositionSource;
     private Exception? compositionFailure;
     private bool completingComposition;
+    private bool automationLayoutPending;
 
     // A move may detach this presenter before WPF asks us to release it. Only
     // inactive trees may take that path; nested rows own their own compositions.
@@ -117,6 +118,11 @@ internal sealed class VirtualRowPresenter : ContentControl
         catch { row.Presenter = null; row = null; throw; }
         value.Saved = null;
         Content = host;
+        if (VirtualRowAutomationPeer.HasPeers(value))
+        {
+            automationLayoutPending = true;
+            LayoutUpdated += RefreshAutomationAfterLayout;
+        }
         if (value.Focus is { } focus)
         {
             value.Focus = null;
@@ -139,6 +145,13 @@ internal sealed class VirtualRowPresenter : ContentControl
         host?.Refresh();
     }
 
+    private void RefreshAutomationAfterLayout(object? sender, EventArgs args)
+    {
+        LayoutUpdated -= RefreshAutomationAfterLayout;
+        automationLayoutPending = false;
+        if (row is { } current) VirtualRowAutomationPeer.RefreshChildren(current);
+    }
+
     internal void Deactivate()
     {
         CompleteComposition();
@@ -148,6 +161,11 @@ internal sealed class VirtualRowPresenter : ContentControl
 
     internal void Release()
     {
+        if (automationLayoutPending)
+        {
+            LayoutUpdated -= RefreshAutomationAfterLayout;
+            automationLayoutPending = false;
+        }
         focusOperation?.Abort();
         focusOperation = null;
         if (row is null) return;
@@ -172,6 +190,8 @@ internal sealed class VirtualRowPresenter : ContentControl
         }
         catch (Exception error) { previous.Saved = null; previous.Focus = null; failure = error; }
         Content = null;
+        try { VirtualRowAutomationPeer.RefreshChildren(previous); }
+        catch (Exception error) { failure = failure is null ? error : new AggregateException("Row capture and automation cleanup failed.", failure, error); }
         try { old?.Dispose(); }
         catch (Exception error)
         {

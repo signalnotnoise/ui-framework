@@ -1,0 +1,1969 @@
+{
+  "files": [
+    {
+      "path": "artifacts/fw018-reporting-controls-2026-11-13/checks.json",
+      "bytes": 1170,
+      "sha256": "eaa835cac6558482283d924f2bca7931dc2594f6f9b9c093729fc08d991182c5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-controls-2026-11-13/empty.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "artifacts/fw018-reporting-controls-2026-11-13/negative.json",
+      "bytes": 349737,
+      "sha256": "e3c49d3925ac6491eb054ac31af08e3ab8b05d88e8033416cb396c25c3d48e80"
+    },
+    {
+      "path": "artifacts/fw018-reporting-controls-2026-11-13/released.json",
+      "bytes": 349737,
+      "sha256": "e3c49d3925ac6491eb054ac31af08e3ab8b05d88e8033416cb396c25c3d48e80"
+    },
+    {
+      "path": "artifacts/fw018-reporting-direct-2026-11-13/new-directory/report.json",
+      "bytes": 2083,
+      "sha256": "509c5fa55d191505fbda8ff0e2f75ee2e0df92250c8089394fcd5ae6064c6829"
+    },
+    {
+      "path": "artifacts/fw018-reporting-direct-2026-11-13/new-directory/report.json.samples.json",
+      "bytes": 537,
+      "sha256": "62e0ed666bd48d24cd1b4c1e2bf176590cab0d2b611bc7d9375382c7069d9df5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-direct-2026-11-13.log",
+      "bytes": 58,
+      "sha256": "dbdb938e20a442cc26f4bd04b1798897f8be6ab4b1baad643a044cf5723c7c13"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/analysis.json",
+      "bytes": 11062,
+      "sha256": "64a673286f63ff9fb44482aa4b642a7fdea404172e1b364f1a55e8f5a6578da1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/binary-manifest.json",
+      "bytes": 389,
+      "sha256": "76fd5bc6b7be73948d65ab9d7805b12ded6397ac2d94b287c124ff5e90cec240"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/campaign.json",
+      "bytes": 292,
+      "sha256": "fe6bc420296e9efeb7aa474288f7c4bf02535966ed773d9d3b689cc170a972aa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/measured-source.zip",
+      "bytes": 66411,
+      "sha256": "cd83f17f661248bb10ef1bcdd557ff62562ff6005f8e5b57e496ee9ea40fd842"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-1-process.json",
+      "bytes": 479,
+      "sha256": "a541a66ae28c5c0a3348765f8fb08d29833ab1828d8f463231976027ecbccbb3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-1.json",
+      "bytes": 56708,
+      "sha256": "a6bbb648da94261320c12d197c779aa7e9914ddaf197f51253cf9e9af7bf9216"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-1.json.samples.json",
+      "bytes": 34386,
+      "sha256": "5e0d7730bd1f97fa591c2fb4b730b4d1b7b01f5ceb48b95545ab21d026627a93"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-1.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-2-process.json",
+      "bytes": 479,
+      "sha256": "36b097bdfbeba84f8fbc2ff01a7466eafa495a95c12cdab1fd7badbf68545d14"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-2.json",
+      "bytes": 56706,
+      "sha256": "18816d6ff2416240b8ca56edd3475e487d36bee2f825ef8ff41e74fd9bb0c6a4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-2.json.samples.json",
+      "bytes": 34384,
+      "sha256": "c6792aeb3865cf274844d50acd2d911dc7aee8cc78f69e70da35eccee7a84b57"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-2.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-3-process.json",
+      "bytes": 477,
+      "sha256": "067fdd1d6d618bb68a6101a9590d44a1a99d76c245ceb934a1dd56e6c02cc337"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-3.json",
+      "bytes": 56713,
+      "sha256": "f3d73561d3898bacfc5d5925de02c74ec33e33945a51592a0a9a1dc4145f432e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-3.json.samples.json",
+      "bytes": 34391,
+      "sha256": "88d22e297eb39893325bda83b0ff9cd666d30761aacccf16c5afef69f2c644d1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/memory-3.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/negative-process.json",
+      "bytes": 479,
+      "sha256": "8e9e1013463e3451ca7d81573ab46a1e966b2db383e75f4b4b019d1da86c98a8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/negative.json",
+      "bytes": 2080,
+      "sha256": "779c6bc9a67f4100de6afff651590ba8fb9d587af0dca56855c526577986c991"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/negative.json.samples.json",
+      "bytes": 542,
+      "sha256": "b3cd34af407a581efdc487c3a65a40f4ec6919d1f2c3436dd5f4de82027fa1c4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/negative.log",
+      "bytes": 61,
+      "sha256": "a7ea739954b3da68e3bcacdad6824e34eb25cd634b87654abacffe3b8c0df65b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/retained-process.json",
+      "bytes": 480,
+      "sha256": "b0395183a407cd705e5e6dfe8d165213f3c1fb6f61e5a8338bde7090844f580a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/retained.json",
+      "bytes": 4107,
+      "sha256": "dd060841d23f9a8e2dd7a153b4098a62741fb15fd2cd8956563c3e4b9b37dff6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/retained.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/source-manifest.json",
+      "bytes": 10113,
+      "sha256": "2cb414a806a662f593ecbec3ba7c52a309c19c2dcb183c72e2c683aa1fa4500f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/window-process.json",
+      "bytes": 476,
+      "sha256": "792a5ba5926789fb1e6d6309f3794df2881aaa971094b328e3971064b2277e94"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/window.json",
+      "bytes": 1716,
+      "sha256": "a89c2890b746dff5e4dd4181dbcd47eb9093bc0775f17e78193f8c8168fbf770"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13/window.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-2026-11-13.log",
+      "bytes": 699,
+      "sha256": "dad99149bb71b75edb8f0fac79e7b183ad3aa040b80c404c71cfbd4f4576b697"
+    },
+    {
+      "path": "artifacts/fw018-reporting-release-2026-11-13.log",
+      "bytes": 3379,
+      "sha256": "019c24b3c90045b11dbd290ecb8bba9fcfb72d518ab700e4f36d44a72f53ea70"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/report.json",
+      "bytes": 84785,
+      "sha256": "e00dab3b95f06e7fdcb60a113a6e03f4083c48f9897369c3a08a1284e78dce9c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-0.json",
+      "bytes": 1504,
+      "sha256": "49c42ca284a7a1bd77627863aa98ef619139f4ef5fc549734ebf576fc9d55606"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-1.json",
+      "bytes": 1503,
+      "sha256": "6faedee3b835e8380e4c456a456de23c6d7c2d0045a87715bbc090ffc64c8980"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-10.json",
+      "bytes": 1507,
+      "sha256": "e67341b2d2ebbe5c5be6d8a15811cf8e7127111ed2f8fb9cc6f270a5b5229e33"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-11.json",
+      "bytes": 1507,
+      "sha256": "fae6102fd5f127b234bbe107555c487a3e34703ceeeb0a3441a0d4ccb6e11254"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-12.json",
+      "bytes": 1507,
+      "sha256": "718067a732bb53c2fd09ab35f0ea3829543895bd165c179cead1000a4c20f11c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-13.json",
+      "bytes": 1506,
+      "sha256": "5bfc6c18da5db29fe166c0d61e3f8e03003f8604bef24b1981461f6aa2176f75"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-14.json",
+      "bytes": 1505,
+      "sha256": "fe7b7ec85f9fea48ee5680013672b0d2793323572ee432e53fa3f46326c8bc6d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-15.json",
+      "bytes": 1507,
+      "sha256": "0a6cc4ce7419d9a8f00d35bbfa8c9ccb055c897a80713645d70ca9574e1b4f12"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-16.json",
+      "bytes": 1506,
+      "sha256": "b31d7d0346be84f479539e2c4b6499e763f689078513e891ffdf7bf8854ffc59"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-17.json",
+      "bytes": 1507,
+      "sha256": "d94d7a67c470a957f6ae1b986d986d5e1278e6a1d8ac698194496d04e3939a4e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-18.json",
+      "bytes": 1507,
+      "sha256": "64f7f2eea1178b31b5bbe6bbce8d12b21089c063843205e6872b99f3dc5255a7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-19.json",
+      "bytes": 1508,
+      "sha256": "68ec0e00ad0872f4e7add3910a9be4a0899485e9fb6c15947de6a0412b1a7b9d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-2.json",
+      "bytes": 1504,
+      "sha256": "5c58f4eb07c44fb48064468d530938e5890257dd533c67acfce21ad53d65b2c5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-20.json",
+      "bytes": 1507,
+      "sha256": "0150716f3b8318608edc6ab29505f519a6c39dce89ffaece687dabf524720a19"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-21.json",
+      "bytes": 1507,
+      "sha256": "ecfa602f4652b93a025ad9f50056e3b510ccfa6febd35fa5332926852d6228ab"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-22.json",
+      "bytes": 1506,
+      "sha256": "ed1744b54783e25120b0de468a07d651ceeaa36dbc9b06caea47cfe38a5380b8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-23.json",
+      "bytes": 1507,
+      "sha256": "3711a8c09bfef26471647e07db96164516ef49dbc62ab62e30c44d894668cd20"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-24.json",
+      "bytes": 1505,
+      "sha256": "979de187e60ad764b7518b8c518a7a5eaa32d3aed8ed0431d453b3ba31530f5b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-25.json",
+      "bytes": 1506,
+      "sha256": "27da839d8acdf87fc7b852ef2d06984103c9d3a33bebbec14553f061065ea31d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-26.json",
+      "bytes": 1507,
+      "sha256": "cdd6d34610ad2dcf95aafed36b0ac0890faa683764c88bb1cac6216036012cbf"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-27.json",
+      "bytes": 1507,
+      "sha256": "44ed5070717acc002c3dfed72dee169aaaf7f8988b212c6b74fa32c1cd0f6bb0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-28.json",
+      "bytes": 1505,
+      "sha256": "da484dc6bb8b7d4da136583c2e7c8bd31bfce5807e8bfd1a07c0bdf46f7e7cfd"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-29.json",
+      "bytes": 1506,
+      "sha256": "073f9115337471cc0a35521a12d4e494d02e91ab74cd84d16664a3453082c0d8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-3.json",
+      "bytes": 1504,
+      "sha256": "e08572b6e397b64de6f426400953d5df1c5b8396f63f3142eef406a4a5b48930"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-30.json",
+      "bytes": 1506,
+      "sha256": "fd05299c0a6d8248b07aacceff8ed00ecb6dce2ced72872ef7da18471944be96"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-31.json",
+      "bytes": 1507,
+      "sha256": "56d904f8b210379104d3613709011d74f605c85c9f88dca0b40cbf06d0f45733"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-32.json",
+      "bytes": 1505,
+      "sha256": "b061d6aef15a05a0028e057107bd46c82898874252880416d420d7a20d4fcf30"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-33.json",
+      "bytes": 1507,
+      "sha256": "cb56efb55e0b4355dab58c7fdce90fad9c59583eb733b1d4f28a0136af0e6da8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-34.json",
+      "bytes": 1507,
+      "sha256": "191bc859385e0398c283bf5c777818aac860121931fd3433f18e307a4280dc0b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-35.json",
+      "bytes": 1507,
+      "sha256": "fd72cc877d8f77fc26795a4f207e3327280b23e566605703bc9c91a7e861f078"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-36.json",
+      "bytes": 1506,
+      "sha256": "04f2688e1af82076ae9abd246e10d9c52ba9952654a7e2ffb2da7c9908f244f8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-37.json",
+      "bytes": 1507,
+      "sha256": "b650955787ff55a6f3bcaea71d60f8e4574dd1a60e9a21a4511b33c7f98ea0b5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-38.json",
+      "bytes": 1507,
+      "sha256": "a029c6829c3673f356ec9536dea3ee4e5b1110c64dc161c47d095877cc2e4aac"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-39.json",
+      "bytes": 1504,
+      "sha256": "9b23cabf589458b82c21ba38374b25aa0b268c1b6b6c6ad5c6e39e9212f3a231"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-4.json",
+      "bytes": 1505,
+      "sha256": "2046721f16bb36a84cf474479f6bcbc50d2dd33d4b89845cf2db968a35703817"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-40.json",
+      "bytes": 1507,
+      "sha256": "f029a83f951d810566f0cc3aa7f19205a9a81da34dbf5551969b7bbc13b5c586"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-41.json",
+      "bytes": 1507,
+      "sha256": "09f23e326b76710e7256d26734ac7391a7e757b5a9decd1e22c00372b5dfc564"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-42.json",
+      "bytes": 1505,
+      "sha256": "a44f3737e38f22167ac747af436a6479b69e87e1b445493f7605c189280fe7b0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-43.json",
+      "bytes": 1506,
+      "sha256": "ea58d5979b3abf06318606996c766ccc3121b420120a9f20c34c2bb2078a068e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-5.json",
+      "bytes": 1505,
+      "sha256": "a8fa72b44bbaf23f82ecf95756fcac620fbc035875a3f1521f5b9d5e7354ea88"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-6.json",
+      "bytes": 1504,
+      "sha256": "e1a3b6a2307672dd4f421a79ab3a3e4e76cad8ada6bfc8ee93d89b3b817f9fe9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-7.json",
+      "bytes": 1504,
+      "sha256": "24053c38d9782067a8bd2e86ccf62c0f38423e6711cef9011ecf3af538aa3925"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-8.json",
+      "bytes": 1503,
+      "sha256": "830b908aeb8468dc74e8e0b32d6d13d3e1d475066a83e37c87a288af48223403"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-9.json",
+      "bytes": 1505,
+      "sha256": "001e5061d4fa75d7045b1ffdfe148817e374954f96ccdb52eb6ad621376303dc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh/retention-samples.json",
+      "bytes": 46416,
+      "sha256": "3700381633da9914373bc10cf915133fea5f227c772d16d5aa0afd9cfec25ac8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/1-retention-fresh.log",
+      "bytes": 1754,
+      "sha256": "4826d3b50eaba54208a2ed8e8d47c4cc3d43e562253e8a84c3b2e8500b708b98"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/campaign.json",
+      "bytes": 267,
+      "sha256": "7c218c73dc12ca9169545e9221e0c6ab6c1fc7fa83fed4c59242b621438179d3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/measured-source.zip",
+      "bytes": 78264,
+      "sha256": "c78d178d7444a058c462be2e6237a07b7f8ca9b3f6110fa8320d8c0a3ccc9ede"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13/source-manifest.json",
+      "bytes": 11248,
+      "sha256": "531dcdcdf8e50cc0aeef79df70148537528404a444ccd01f33eef6ffcce8cacc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-2026-11-13.log",
+      "bytes": 587,
+      "sha256": "38c087f4427b849b335f42d5728b598877245fc3705baa5b5573289b2551460f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/report.json",
+      "bytes": 85184,
+      "sha256": "7e147132032813d6ff2abf5caa73d04b2d6aa70475ed9793ec31cccd3dd593d2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-0.json",
+      "bytes": 1513,
+      "sha256": "5590d92eaf3c42f9b3218dc5025efacc6b73759e8d568ed90744b40090b3c9aa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-1.json",
+      "bytes": 1509,
+      "sha256": "6cb7f67444410d8f2c857f5718fb5d11de8fabf923ba35af4196770f8a684fea"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-10.json",
+      "bytes": 1516,
+      "sha256": "e98bd192c72a16cfed938fbb74d6a355d4305443c2f0bada4f26242b776f7125"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-11.json",
+      "bytes": 1513,
+      "sha256": "dab90613f7052b8d9a706df76be4ceac46e89b63aba0e7b1b20a661279e0f1b7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-12.json",
+      "bytes": 1515,
+      "sha256": "38a79713dc963bc3f3402555e37f00eabc6f5991f10d286d6301101eee6b7184"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-13.json",
+      "bytes": 1516,
+      "sha256": "a55003c33740c6021c5283b7f8f2bec3134b265087676ecf8c19484931326abc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-14.json",
+      "bytes": 1516,
+      "sha256": "7cde0c8689c6aece3fcaa38d3e69bf7c334b0917ba7dde3e28d8bdada5bc5ebd"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-15.json",
+      "bytes": 1516,
+      "sha256": "1b462d99da10c725a2219a3c895abdd747951ccdf9bd7a332cea61b2c4548222"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-16.json",
+      "bytes": 1514,
+      "sha256": "ae72dd956e5bfdffa4eea85cc03a98da7ec3c809961a4ec0f240215de91c9fc2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-17.json",
+      "bytes": 1516,
+      "sha256": "f41b94cad47c8d47928fdb766f819ad12466909ff767a74494358a4623964479"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-18.json",
+      "bytes": 1514,
+      "sha256": "5e1fcd0cd51b9a67b2f800783194b080373d95484f76fae9213a96d0776c8fee"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-19.json",
+      "bytes": 1514,
+      "sha256": "b46bad1001f3e3b22f8eed3df10ab54e59ea7091f5dc4fc28f600f0a9ca677da"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-2.json",
+      "bytes": 1513,
+      "sha256": "e41b35a488bbb49c49d2d33575559da9b1a32852a82f6fc942dcc912489ee196"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-20.json",
+      "bytes": 1516,
+      "sha256": "d80e6fa53afa5c87d542b02219d480f4a31427b4e80366068edb9ebcfaabf39d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-21.json",
+      "bytes": 1516,
+      "sha256": "02ec0f05fa576a94a4182910436353c5f83bd8fb11a26ee1f555069595a9df78"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-22.json",
+      "bytes": 1516,
+      "sha256": "e6b65604008a49f592588cc5479eb5982008567498c2c408caf43b6002c58530"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-23.json",
+      "bytes": 1515,
+      "sha256": "291c41cce3c3a99bafe2d612fc739bbd7be4c058e4a0eacb026cd6f71a96eb00"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-24.json",
+      "bytes": 1515,
+      "sha256": "c1a77468eb22c8bab9a7a4dd1efb1d59f81b28f380f271b0098de640580a43e2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-25.json",
+      "bytes": 1515,
+      "sha256": "7ec65aa7092e319e50fa50533c299d30879369ee46cdde3d5a5f941d8ba51a23"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-26.json",
+      "bytes": 1514,
+      "sha256": "50749752fc3e58d6050d23f621aad7e92e4247207dd7abd587d06ddab3a30c61"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-27.json",
+      "bytes": 1515,
+      "sha256": "5dd1d04ab40833cf8c7d18c36c22de46ead97fde0ce2aca3c76e61bf91978798"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-28.json",
+      "bytes": 1516,
+      "sha256": "1917106b1284fc4f5bc33e68659153e7b3322cf4eaf7cc413105df587cdbf78e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-29.json",
+      "bytes": 1514,
+      "sha256": "f8cea8a5475122ef9620ebe22de43997bbe47257c27ef9c7c75016a780ea1e9f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-3.json",
+      "bytes": 1513,
+      "sha256": "f3b9180df7a613087e0f8a513ac77157de1f91c56b3cc3e1a6c0a98ea371ead7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-30.json",
+      "bytes": 1516,
+      "sha256": "470b770090115727fdd73f75faac0ab0b4d0a653230f8f6b31821d00a760da54"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-31.json",
+      "bytes": 1514,
+      "sha256": "aac84da067a3bcdedd441cc3b47f15ffbc08edac276935646c16f98736e13bc2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-32.json",
+      "bytes": 1514,
+      "sha256": "b83fc90b1f37b6f5dad759dcf3778917eb016222a44ca271916e7b6986fcd7f2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-33.json",
+      "bytes": 1515,
+      "sha256": "08365c7c64a4990509ced6aefec6c4e7f75a154fb33463c74a80ca8d773c2d47"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-34.json",
+      "bytes": 1516,
+      "sha256": "70bf62572ba8532079c510c6ae81ac76dafe05b07c572d52462daf5a28e412c0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-35.json",
+      "bytes": 1515,
+      "sha256": "d120e0152a075ffabda7477912573366001200e5edb1b463b25d25d1c2fb980b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-36.json",
+      "bytes": 1516,
+      "sha256": "aacdf0c98ff66b1f7c323bf02b5fb5a015f74a10e264b7d6823a4f0348af101d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-37.json",
+      "bytes": 1514,
+      "sha256": "a21774beb40ac50ef7dd11b96fbd0e8919e5916897fe1bce1b2fa77557c9d1f9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-38.json",
+      "bytes": 1516,
+      "sha256": "2ee4b05d8657a04ab9c5fa7f77e6c0c43cf0a2906fa21a61ea0e413a3ec1163f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-39.json",
+      "bytes": 1515,
+      "sha256": "67a82e361ad33f5b664e01ba245f35629cb5e5ad685cb01436131e3c8950e197"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-4.json",
+      "bytes": 1514,
+      "sha256": "91301a55f4507fb8533ec6d76c081b129049570bb18dfdd58feacd852acbf51e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-40.json",
+      "bytes": 1516,
+      "sha256": "b860a2ffb34d7a3268f544e5117bd8a7f2d9b444bc44ba55440bb230e51934ca"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-41.json",
+      "bytes": 1516,
+      "sha256": "19e1cdfa0891ce3a34e8a71f5c8e7815657b0e72796ed34c9e46cce7f9d47592"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-42.json",
+      "bytes": 1516,
+      "sha256": "5c868ef45828700b97a764c6d2174ffc4a2bc9d46d2fcaf772ce671db01a0f20"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-43.json",
+      "bytes": 1516,
+      "sha256": "59ce50481c932cdfc289c5a5f23016bea7e5d006d3d2118be0ebec56be763561"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-5.json",
+      "bytes": 1513,
+      "sha256": "e48cf3aea6a3daba5107f2971f24ebe83e62e6a20a822ce9dc700b06535c8f02"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-6.json",
+      "bytes": 1514,
+      "sha256": "61d4745b3683cf0bc12bf05c3f038e6366ece179a95a042e4934ba5a59cd89cf"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-7.json",
+      "bytes": 1514,
+      "sha256": "5d07b10d9e60cf377a4a0cbdaa75775c33d69384f7e1be9fa6fe8296d334ab1c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-8.json",
+      "bytes": 1514,
+      "sha256": "1ed4ff30af134d5d156cd0b20a2e5d8eff81a2354d7fb4259df789a5ab756ba0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-9.json",
+      "bytes": 1513,
+      "sha256": "7688c7443e2f841e2b9e0ca33d636f0d82ae499d29dfa1b364f723e35a809f0f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh/retention-samples.json",
+      "bytes": 46804,
+      "sha256": "338bc9b402f34aa1dc0b4b0d5678acb3eb0d4c8d7a7f368405e5f6975e7e21dc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "c8ae2d2ae041e0d87624e584e61172ec3ca96b553af4d2cfeff7f524efa17c14"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/report.json",
+      "bytes": 85109,
+      "sha256": "f1157d433befb6f6e5e3757a72099311e256a5b84941dd04e07be456a70ac2f1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-0.json",
+      "bytes": 1511,
+      "sha256": "c4d0ce93c022185524f28a10fc52c31493dd56aad49256c0fcf7d6add551c9d9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-1.json",
+      "bytes": 1512,
+      "sha256": "eb100efe80347aba704f2025c5cf38982fe4f1d1ded11174d64567e4dd101c3f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-10.json",
+      "bytes": 1512,
+      "sha256": "8bb18b9cfa31bf9e0811d1a1dbcd5c85507ced60115b34fb04b99f79e78ed5f2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-11.json",
+      "bytes": 1513,
+      "sha256": "ed8fc085dac8f3bc2965cb476d093c68c3c8fb661fc10da113b139b893967d95"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-12.json",
+      "bytes": 1514,
+      "sha256": "f534b80ab79966b311e789994050f1e67fe4c16a7b80716e58554c6e7f0dabd8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-13.json",
+      "bytes": 1514,
+      "sha256": "b261ae5482afa8e4a60bf444bf57f5ca25ca3dbde3a752b379a96a864b89861a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-14.json",
+      "bytes": 1512,
+      "sha256": "38d9959dfbbf7a27d65b37c98b4b9e5bc9de8d8d01b1586e601acf012552db59"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-15.json",
+      "bytes": 1513,
+      "sha256": "4fe76cc03b5927e85a4a63fcda205b615d16a962b8b5b869ae248944c77a8bcf"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-16.json",
+      "bytes": 1514,
+      "sha256": "53208d6473829a9163fa06c0b38da05259cc882e8b0472cebc8538bfd0c78712"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-17.json",
+      "bytes": 1512,
+      "sha256": "0e542a548b46f6a28ed45ae575444a2b7ffaf7a81ff734c2f50ed51cf2c958fa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-18.json",
+      "bytes": 1511,
+      "sha256": "58e9519f1b0fe4db4f6bde0a72cf1a72dcc3008fa3633c8c19026c62be97ad53"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-19.json",
+      "bytes": 1513,
+      "sha256": "e0b25a24800558450c34dde208a10b2b3639bf85f5700edd82d69d73356efb79"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-2.json",
+      "bytes": 1512,
+      "sha256": "fe4b27aeae4869441a40f959664924fc236de90e5d17bab4d56cf583f8d816be"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-20.json",
+      "bytes": 1514,
+      "sha256": "0db82229258acdd7a4ea744e1fbe6554850143f0618acd7e122293427fa99273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-21.json",
+      "bytes": 1512,
+      "sha256": "768c13f0625dc886be46616515fba747c71a9ea6658e3c139074a45be38b2c66"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-22.json",
+      "bytes": 1513,
+      "sha256": "4cf47d900f269a7655e54d04cbdc670c416fc56e8a917c36089001628a9f810d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-23.json",
+      "bytes": 1513,
+      "sha256": "79f2f6e441446badb3e51ca00ec7514c016564978236580943fe892a4ebcdd04"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-24.json",
+      "bytes": 1514,
+      "sha256": "b87d511d89a66a6be845f13d48a9dea0231f5dff99d422190fdb96e912133dae"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-25.json",
+      "bytes": 1513,
+      "sha256": "1767f47104cfab062f7086bfea924fd33bbb566aa8790e2b132e40ab9ac49f70"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-26.json",
+      "bytes": 1514,
+      "sha256": "415580718fbb61c899c8a8fccc39172d5aed8e2ae6b4e116e4511b8e5d441b58"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-27.json",
+      "bytes": 1514,
+      "sha256": "38b533d32d714ba941a40b4af84187acf431bf4e0a4503981f99e08241d915b4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-28.json",
+      "bytes": 1513,
+      "sha256": "4b0f9a1b9925ea705941973b0d72365888c28e4ae4b58afcaa016b90e1830444"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-29.json",
+      "bytes": 1513,
+      "sha256": "2df093cfcf6b56f6dc161bc36d4d06db1b0d7b627803da5949bc3ef009653ea0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-3.json",
+      "bytes": 1509,
+      "sha256": "de853571e84417e0107b9985c8d80327f446ce486a517dba22f2b389e95bbb8c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-30.json",
+      "bytes": 1514,
+      "sha256": "b4070fa71678d0852955b911fec563a884f6d862099579931ec633bedc0e2628"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-31.json",
+      "bytes": 1514,
+      "sha256": "e108751d7f005fff1696abad36168cc43eb7718a665e9fd6f6e0276025e7eb79"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-32.json",
+      "bytes": 1512,
+      "sha256": "e43c40611fe04bd40a5c1a3601d171f0f9b8b018c092f36e9919401c850a6757"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-33.json",
+      "bytes": 1514,
+      "sha256": "65e874a4eddf9e41527a3876dab5b98a5383e13bc58a827e5cdfa046e1898706"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-34.json",
+      "bytes": 1513,
+      "sha256": "507b59c9d7e54589389e709ed00f52ac1695cfd416bc05e3d3599eada98e9d08"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-35.json",
+      "bytes": 1513,
+      "sha256": "422900a8a425bdf8fd4705c500c5005d018f7ad6ca530dac890751651212280b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-36.json",
+      "bytes": 1513,
+      "sha256": "1a2dbe6b3d96f4419b9f94c4cd5776611039c5263f225ece7caf0d9c44e0ca88"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-37.json",
+      "bytes": 1514,
+      "sha256": "359cd91e125325107414ce90ecb249d49bd145958eb246315080aca7150bafb2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-38.json",
+      "bytes": 1514,
+      "sha256": "27955231079829ee260e4765cadd9b199fc51274b7c961067349bd07648f01b5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-39.json",
+      "bytes": 1513,
+      "sha256": "41fc4b591bbc6fd64a02b85e1979d47b17c205b4b92937857cd771c124aba720"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-4.json",
+      "bytes": 1512,
+      "sha256": "26754e2681aa243334473aceaa3b280c17698302f270971e491c69ab54c5e97b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-40.json",
+      "bytes": 1514,
+      "sha256": "e573ca884f9f29a33f0dedb6eb520f0d7a62cb6e282090a4af2f05ef6d238b0b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-41.json",
+      "bytes": 1514,
+      "sha256": "0d8001357f695c6d82658258d6d14ca7e8f356361713d1b23e2c221815b66ed3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-42.json",
+      "bytes": 1513,
+      "sha256": "d929efe1c665e203a760c99d0faae6c74631b418327cf1f25ddc52ecb4a09e44"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-43.json",
+      "bytes": 1514,
+      "sha256": "fd5c91172d5f31e7fa19d334ea9c2956fc6f6382b23db5ed0b5345f78c1f275f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-5.json",
+      "bytes": 1513,
+      "sha256": "96322529182ba1b500afe00390e0b43ffd070a79f0f6158cd7e87c840906d010"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-6.json",
+      "bytes": 1513,
+      "sha256": "d4a4135796339db8e68c9848210213f9956897899c451863f3627e8765afc559"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-7.json",
+      "bytes": 1512,
+      "sha256": "b5d6c7bd496b2d509e03dc8d9008023c19218fdd86e9a0ae97a519074c1d56c5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-8.json",
+      "bytes": 1513,
+      "sha256": "0494235e00303a788d598b94cd5ea3a4b18ec3ea7b7c13e4f7580d8b35f07816"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-9.json",
+      "bytes": 1512,
+      "sha256": "013ec78ffe2a7d577e68ae2035a78f31fab6cd982ba6dc8e1dffba34db322908"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused/retention-samples.json",
+      "bytes": 46726,
+      "sha256": "c9fa982ab84059feb10b37ff2485e5762dc843ee3dc5b4122f565df164e901ea"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/1-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "c944ce25f2fea1ab59496ba6072148f9947b79e0f00ac3790c2c900a78fee756"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/report.json",
+      "bytes": 85183,
+      "sha256": "58551fd7bcef40ee6b4b1f196a736232b7ad1e46b4638a76589e698011819e49"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-0.json",
+      "bytes": 1513,
+      "sha256": "70cb7c23e5e97f8182d47dc065bf66b3471528369d9f6266708173121b322921"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-1.json",
+      "bytes": 1512,
+      "sha256": "453831afb05e08294f7c0a5e0ac0df66aa5df631a4d6a82a5a110a1447e5560f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-10.json",
+      "bytes": 1516,
+      "sha256": "26524a498207f1f1d066e4431dc1a2e6385de42457b1495be70444c00dcb7058"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-11.json",
+      "bytes": 1515,
+      "sha256": "9377eb898778f1d4ed93ab961567039df68a919c2f397d14ff814c9b3c8a36cb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-12.json",
+      "bytes": 1514,
+      "sha256": "cd7dc89aaea00e8cb1affc60078bd017d178bd25dbc979d157eb0610131ce603"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-13.json",
+      "bytes": 1516,
+      "sha256": "237bcd574eaa5b6798bd5b47dd64ec02c74ceb450e0a175509d9e65465b60471"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-14.json",
+      "bytes": 1516,
+      "sha256": "458bb52174f73d681c2c28d1ff5e3186450df5176a78527225006507d9c6651a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-15.json",
+      "bytes": 1516,
+      "sha256": "265baf9bf2eb16699d017f7f885aec4ed8164ad2e55e3ffa69af739c4bb58beb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-16.json",
+      "bytes": 1515,
+      "sha256": "91cec0895d979160f80560c972651742dd4aaa719c9af6690c6e3dd37045fdce"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-17.json",
+      "bytes": 1515,
+      "sha256": "a20db07cc1100088c2f675a6a372c95997ea4c3d77e4f17e5980a13dd21707df"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-18.json",
+      "bytes": 1512,
+      "sha256": "4ccf563b4ef9fbd1ed5bdedef60945ee2bd217067d775c31236fe6d52e69691e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-19.json",
+      "bytes": 1515,
+      "sha256": "90b5a03fd32fdbd52470b789ecb8bf4dfff87f9097af7152a53f173e6bb8c368"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-2.json",
+      "bytes": 1512,
+      "sha256": "57c4696716d2e23d537ef722cadd7b71410a7f17b0c2050640a438a30fbe9be6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-20.json",
+      "bytes": 1515,
+      "sha256": "4c2008765cad751656d30142f9edca4129e77a8692cf0beab98088a9ddf844fa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-21.json",
+      "bytes": 1516,
+      "sha256": "1d8afdf061cf19bd62d0a714a006218817d1b9f61470249d2a9f504539fe5dd0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-22.json",
+      "bytes": 1516,
+      "sha256": "526e2135e83d3bd622303e426722f52482a1682fe08d6aa2cf9f18f26468c244"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-23.json",
+      "bytes": 1516,
+      "sha256": "4e6b85d85b9ee58bca678f0fca1fffe2099af047ec38857cd621bf6ce6f06b1c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-24.json",
+      "bytes": 1516,
+      "sha256": "bcaddda889666b97416e5c50de65b060fce6e9571231a45329f018198645ac38"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-25.json",
+      "bytes": 1516,
+      "sha256": "6a269469749dedaaf9c9ca038312a061935deb26f62402e855f51535cc675742"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-26.json",
+      "bytes": 1516,
+      "sha256": "f034eeb80e7a34952269d6dbd61dd326237e5959d24f77d4f2bbc004062de10a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-27.json",
+      "bytes": 1516,
+      "sha256": "d46c883de821979bc63015974b53a4053d8ceb58dfd2300e6b03c7d4befdf81d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-28.json",
+      "bytes": 1513,
+      "sha256": "9597c2cd4f392d201c8f80c25ee714f82d8d48b6c2c796278d6864d0c89f7e0d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-29.json",
+      "bytes": 1516,
+      "sha256": "9fd6463b6409aed37f50f0429fb014ed088f888ef2e4a703277a5bb80c3cbd0f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-3.json",
+      "bytes": 1513,
+      "sha256": "f7f14996ce2a776b9f0be652be12fd65f406384ef4e9349a891f7579f862d81d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-30.json",
+      "bytes": 1514,
+      "sha256": "4103895567fa1caea620fbcef8c61954299eeb93a8d11991a57e1987201a076c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-31.json",
+      "bytes": 1511,
+      "sha256": "3c12eaa0023389b0cdd1ec54cb5dcac025b76b7df08d452ea9aaf16a9cdfa65c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-32.json",
+      "bytes": 1516,
+      "sha256": "180b9893b9c9ebaa99e9b94384cec27fd50ee8df67a36048d03a607330e31fe5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-33.json",
+      "bytes": 1515,
+      "sha256": "4da3f8edd0c6dc4694401731915d27214ffb1433a90280ba71a831ca7a731495"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-34.json",
+      "bytes": 1517,
+      "sha256": "a04b2a459127d25d4e877a49e7b164a428d66249537cad81a436ff081c26bf7d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-35.json",
+      "bytes": 1516,
+      "sha256": "675f94229bac9e257c8158feb82e4a08cc00149e233f23c8b5492cbba1aabab1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-36.json",
+      "bytes": 1516,
+      "sha256": "e8b5c0fedb9ba3a5dce3adc062389b3ddb744dc29b2a9e7970b2598c3c10f29c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-37.json",
+      "bytes": 1516,
+      "sha256": "7f360593a1ca70129cc46d25c21ba64dfaf559a6687263ea774e654626395454"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-38.json",
+      "bytes": 1515,
+      "sha256": "e13ea271dd5f74d08ab98ac9f2fa0a426e3b61b9880bb7f8b5c865786b038dcb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-39.json",
+      "bytes": 1514,
+      "sha256": "f5f311ef92ba93aaf8deb47817f60dbfde7d2726f7651e011b595835430dc611"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-4.json",
+      "bytes": 1514,
+      "sha256": "f878948a481966e4ef4ff029abc11f863186d6c27e9fa83bd5610604467388e1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-40.json",
+      "bytes": 1515,
+      "sha256": "9747a594ac5730b0d82709cecec1f3a42654f4cc9a617370d2d92a07d4d3d8f0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-41.json",
+      "bytes": 1514,
+      "sha256": "17356fe0b6d8dcb2bc6e41b5ad719619d6a4cdc3f53336788346fd78a76d8e0b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-42.json",
+      "bytes": 1516,
+      "sha256": "7ea0e3980dbfd2a656fff7be2f6c7bee689d3611c2e78ed701d4aa47d37376f0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-43.json",
+      "bytes": 1516,
+      "sha256": "f17e0931b021dc4c46afe0569dc4929b56594bafa6626bb25191659602e9853a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-5.json",
+      "bytes": 1514,
+      "sha256": "8d0945ba50719aa4421d326cb46178fc2c93567dd075d0aea6c369fdff0a132e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-6.json",
+      "bytes": 1512,
+      "sha256": "f994d06a9ddb181b1dc4fbb1f97bbcff1a68a59b6b70aa277f9046938f4068a8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-7.json",
+      "bytes": 1514,
+      "sha256": "2a18a68ec3fc01bb69a0334707f8f0af5123b533cebec9379deb2137f1b6571b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-8.json",
+      "bytes": 1513,
+      "sha256": "160bf7cc13a7f603d5994101c6c71209fab930c5c5061e6a7540d9ea008d97c1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-9.json",
+      "bytes": 1512,
+      "sha256": "18adb0fe72e59edc0bf3ec3327db3ceb708d6e5550c5f6b693924dca0f095499"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh/retention-samples.json",
+      "bytes": 46803,
+      "sha256": "038f53dcb26d861d0fa77f8809c5aa5b83a5a6c38c0e02d3185b0afff5221c98"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-fresh.log",
+      "bytes": 1753,
+      "sha256": "8d50074df18ff93ab0f360f1f6235d0a4afa7d6e2ed5ea06b6cdb9c4cc2f2214"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/report.json",
+      "bytes": 85098,
+      "sha256": "b9b06276d07136bbed98e2e5a66796340d9dc3d8aefab67bda3d34c76bb9a473"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-0.json",
+      "bytes": 1512,
+      "sha256": "fd8f7390d34cf2c24edc6950f30bd8ce26edbaa1df32ccd5c1685ea97a974110"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-1.json",
+      "bytes": 1512,
+      "sha256": "6948380d98c0db414571f36c666037e9e5620128c4d046bc0924f5b823b7a5e2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-10.json",
+      "bytes": 1513,
+      "sha256": "f16bfdfe617cdb06528085398336d71af87a967bd815b5d02ecff57f93ac5323"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-11.json",
+      "bytes": 1511,
+      "sha256": "e2bd7de0a99e24e25e28cbefbcbdfd32b7a8fe79cc338b193f834c35cf0a3e94"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-12.json",
+      "bytes": 1514,
+      "sha256": "5d6edb2e9e93877d9bd08944d560678a2019859a92bae2f39d70d75d64a2cf92"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-13.json",
+      "bytes": 1513,
+      "sha256": "4b54707fabee3864c7e336a9e9ad69173f5349637bfef76c1c3328bfef94933f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-14.json",
+      "bytes": 1513,
+      "sha256": "54da8e72b8fc16314c70f677c45b4d5248c7553fc59f09f87950ebe76bccf528"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-15.json",
+      "bytes": 1513,
+      "sha256": "24a645376930cbb66a116032d595e93f0f3ad22239e13b5396def69158aea234"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-16.json",
+      "bytes": 1513,
+      "sha256": "96f9478a3643c53e9a23003b944f56f60562f33fa0fd6608c002348295bb603c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-17.json",
+      "bytes": 1513,
+      "sha256": "738a16fced895cd0152651b4c2227788001733240cc4e9c61c06d4ee496eac61"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-18.json",
+      "bytes": 1514,
+      "sha256": "86213ef972f717ec2d6b8bf814d97cb69b697f23f4c98a20c6c11d03ba9e10c5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-19.json",
+      "bytes": 1514,
+      "sha256": "36a54b9a2fe77b498280225e2b6c520615ef98b156ca6da3e4951571735adde1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-2.json",
+      "bytes": 1512,
+      "sha256": "5bbcb60ee5c337e0821e02dbfefa9ae6095b938028c684a05479198ae4cc552a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-20.json",
+      "bytes": 1514,
+      "sha256": "501dcbfc1bac11bc39ea014e81f6c1a8583744be5c0505d4cd8d9604c899ae26"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-21.json",
+      "bytes": 1512,
+      "sha256": "af85d9f943e9d0fb9abeeaa008fef438c17024119c9a0d5deb882819b24396c1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-22.json",
+      "bytes": 1514,
+      "sha256": "ce6daf11233ea02f0463cad7d0f210fdda60a969a35b0719f09bac8b59bb3732"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-23.json",
+      "bytes": 1514,
+      "sha256": "a20f4f44a39616319cbd9df9a84bd3eac0182ea77dc2ff68082d24198d90d0f2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-24.json",
+      "bytes": 1514,
+      "sha256": "a7b41b7db717fbc38519507bb8db8ecc84d30744ef5d75c5f7c05b3eddb8ab91"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-25.json",
+      "bytes": 1511,
+      "sha256": "c05e01341e72c09070c824b500aa84ee9b82dff875e80303cbea94683a69946f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-26.json",
+      "bytes": 1513,
+      "sha256": "ae4cfeff3861ae138805d8e49aa25d1f3b965c122bb49274c7d41feba68bc881"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-27.json",
+      "bytes": 1512,
+      "sha256": "dc520ebf0abab57e499a9b38aacbd6e7e7dfc27ca74db07cb671c5547052890d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-28.json",
+      "bytes": 1513,
+      "sha256": "e2595676ae1b7b814d97fee97e2c6b32121518a92f004fded5ae88d8a568f186"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-29.json",
+      "bytes": 1511,
+      "sha256": "fa8bfc8d0bbdbbd3873530f123f59da936365c0f875fc85a8d11501c51eb0969"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-3.json",
+      "bytes": 1511,
+      "sha256": "3acff9ac025d8e73057cda5b790bc41a2562b6437639cba859fae662e5c88b10"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-30.json",
+      "bytes": 1514,
+      "sha256": "e2a117e2d3ed8dcf663ef6ab9840e685a5a0dc831b7b2f1e637fa504a07b8665"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-31.json",
+      "bytes": 1512,
+      "sha256": "1d8c23de8d9da9f39f030609d863ba5753fda65500601d3258e0a0c82864b33d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-32.json",
+      "bytes": 1514,
+      "sha256": "07b6709bf1a9cda2ac92c15460435bd99b6f2790f31a13dfe267cfba05e6d9f8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-33.json",
+      "bytes": 1512,
+      "sha256": "edade4459269a33bea2f3da97d7da5891c6b0e8b2175d43b8dbb2073b35d1467"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-34.json",
+      "bytes": 1513,
+      "sha256": "bd471f6acd5e155a98fd5b20dcf3dfbe54cf046a35fd2d8614012ab378f6ce57"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-35.json",
+      "bytes": 1512,
+      "sha256": "2aa5ef17542f1af38e1fe5ca97b57f2eb7074beb89ee697a6756cacf9db6c9a7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-36.json",
+      "bytes": 1514,
+      "sha256": "4c0f6891c49e3abc6142e82a1affa038b50ef7a59a07060de5cc7ef76cc49ff0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-37.json",
+      "bytes": 1513,
+      "sha256": "145a60138228e600628dd9e102132a780842cf7c6236361b705fede6141df0ae"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-38.json",
+      "bytes": 1512,
+      "sha256": "31aa52ff9416ce9f7058db9894c765e06a45a0d926fb4f68cc9ab3867dd842e3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-39.json",
+      "bytes": 1514,
+      "sha256": "25bd50910d081d718f9320a6ac5f509738a450cd03309934cf4590a8dce3b295"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-4.json",
+      "bytes": 1511,
+      "sha256": "761ff169caa55f69db7a4ae652d162473925cc56a6a833278684dec1732a8011"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-40.json",
+      "bytes": 1512,
+      "sha256": "a086901537a6431882b4d8e6fdf74dff943ce9ff1705fea97cb2433c6a6298ef"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-41.json",
+      "bytes": 1513,
+      "sha256": "c0db9114e9dd0b2ab9d63be649e0aee99d85dc40d24b93a621de2bf0b798c7b8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-42.json",
+      "bytes": 1515,
+      "sha256": "2d1420c0da4e62c625bd170abaca76fea300ba4884a82b0bf15318ef6976427b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-43.json",
+      "bytes": 1513,
+      "sha256": "6fdd2d359a9b7b95375213593726c70433676cbcade061e594c1b50feb1472ab"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-5.json",
+      "bytes": 1513,
+      "sha256": "a42185c77061a5dfd2e8fafa7346ba0099cceceb19041027b1ae401f40f60399"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-6.json",
+      "bytes": 1512,
+      "sha256": "0360bd2385f84b2b316ccc982497d3a5ef24b5ca46b5e555704c1d79e00aaf7a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-7.json",
+      "bytes": 1512,
+      "sha256": "ea2c9c74fe3019a9b5916ddb1e864e07a5ac9c078bb619eae6c2dcc154dc73b9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-8.json",
+      "bytes": 1509,
+      "sha256": "4684aac0253870f468036347abde76117d3b583f89ace764280ae5137b26f79e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-9.json",
+      "bytes": 1513,
+      "sha256": "7a94e3e2267a996f7d15ab252923bb6d056d486833adc60e3efd0138c012003a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused/retention-samples.json",
+      "bytes": 46716,
+      "sha256": "fe911a48f5969508a8e3638ef999571723b1d7c17e57bb0ff7828fed4e736eff"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/2-retention-reused.log",
+      "bytes": 1753,
+      "sha256": "dfc0d14c71e720db85edf7f4fe8dcd93c486e442955a78c0b4b29fc7ba7b6df4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/report.json",
+      "bytes": 85195,
+      "sha256": "9bbc74f6b4f985c9ba75661599587885de37e60a8cfd2767c6b7931ec3346b54"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-0.json",
+      "bytes": 1513,
+      "sha256": "34efbc782b59c979772e152676fe6181746ada939def4776a27721b032b57f60"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-1.json",
+      "bytes": 1511,
+      "sha256": "285e16d5fb117c5b25e9796c390e45222f32d52862df3566a7da094d8185bc52"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-10.json",
+      "bytes": 1516,
+      "sha256": "e46528bd13c552749ebe42725f842e103c9e87efda6d1cbd280ca49d18c35d76"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-11.json",
+      "bytes": 1515,
+      "sha256": "238d5b7f1b734406707720106cec8bd817176ec1b573f7aa22413da5bdb51b93"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-12.json",
+      "bytes": 1515,
+      "sha256": "873f7673d8f30df5c1618171cfb10fc9d68e432afa0112cf837e2031c911c5b3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-13.json",
+      "bytes": 1516,
+      "sha256": "eaeefae15ddb60030fec1547e3522869d3657eba1563abf1f165105f08105bda"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-14.json",
+      "bytes": 1516,
+      "sha256": "6d7711a0b21828da251adf87f0200672742504554274fd36ddd61c3bae09cda0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-15.json",
+      "bytes": 1516,
+      "sha256": "03c69b52a754b53a2ec41d2c7cdd5758498baf93aff7e29b13cfa9e3f36c7ff0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-16.json",
+      "bytes": 1516,
+      "sha256": "3967ad6e7cd09160ad5b6c0f1cf7142f406fc739fa82699c9d5422ac29f0e74e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-17.json",
+      "bytes": 1513,
+      "sha256": "67fb1b2d37df4da981b5767980981fe49cdfb6cf75f60eb81b44ccbc8e507f93"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-18.json",
+      "bytes": 1516,
+      "sha256": "03b8b24d0e505e649db0361923759f9d6f102ba1c73992433c67ec181e99ee5e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-19.json",
+      "bytes": 1516,
+      "sha256": "b8fea672000667adb4377712b502c68de3f0ae8e3d1be1bee341636f14308d67"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-2.json",
+      "bytes": 1513,
+      "sha256": "5a36f2fbfce339a8d5325d1fd0e9c0662d94fa2fcd700c2fa04643412bc1f6eb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-20.json",
+      "bytes": 1515,
+      "sha256": "801af648220eadf593f036c4e44b4a991c71c8b72e86543c6e7696c9ee90f53a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-21.json",
+      "bytes": 1516,
+      "sha256": "f259f782dd036097754d069acddbad9ce4fac0eced8c3c8b0456ebb3bc3bf856"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-22.json",
+      "bytes": 1516,
+      "sha256": "197739231464f6753066a8629a0f340d800e0f4bd0e53c8ea69ac1c9a5c8ba43"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-23.json",
+      "bytes": 1516,
+      "sha256": "9ac2423d92068ee108c9dab2df718b848180c9779d8c1a37a516b327e629dd8f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-24.json",
+      "bytes": 1516,
+      "sha256": "185000c06072c4ec0eb46d65e9f5c790882bc19e1ef274582c11b6729250d9ce"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-25.json",
+      "bytes": 1515,
+      "sha256": "ff5f84e1b7975d86fee2ac190d2e3bff491a771a2cdff9acf12e1ad448b9256d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-26.json",
+      "bytes": 1516,
+      "sha256": "1716304c24b774db0b6af6447c1387071a261c96cd5126522c12e5dc189d422c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-27.json",
+      "bytes": 1515,
+      "sha256": "eb15adc6a65797d6b0b195ed5c8310ce23180f12a478c417691d8eab4cb00140"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-28.json",
+      "bytes": 1516,
+      "sha256": "1fed68d8314ab17c7568965d88e5f213cf8a86e82e5537d29eb5a548e5386d09"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-29.json",
+      "bytes": 1516,
+      "sha256": "772e63316e578f91cbeedc9ad0e4ab724b8833e4cdd1e34330eb6c5257877218"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-3.json",
+      "bytes": 1513,
+      "sha256": "8a6268cf88dd14510032008a7ddb4a7cf1be6620fd66bcd746897cb03f0cb642"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-30.json",
+      "bytes": 1516,
+      "sha256": "d7b9d7fc21b98010b565d9326b76f3ee30d2490a8e02f8db6804fc89b32e67a8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-31.json",
+      "bytes": 1515,
+      "sha256": "7f03f53d5c04a9b4dd8f9331f8c46b48c4cf8313cd88fa4cbe523b0b9acccdcc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-32.json",
+      "bytes": 1515,
+      "sha256": "ae91323c1a6df8ce27c6bbe3660c92cf4f0443137ba0dafcb6f1e050bc4ae060"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-33.json",
+      "bytes": 1515,
+      "sha256": "51de360d061eeb77683cd4670bb1aad7fea51c9dee8d28587c39c908fa0c8e57"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-34.json",
+      "bytes": 1515,
+      "sha256": "b29572b8c8988f120bf53f3e46562b7e03646cd1beb73fc3d454341f646dcb57"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-35.json",
+      "bytes": 1516,
+      "sha256": "6dbc9e18d962df8c7d1a5b20fb7ee0a530c9a9c1314f827d14a3dacae307525d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-36.json",
+      "bytes": 1515,
+      "sha256": "8557333ef7010f7fa4873b1148e129d879aab8c34700e948025d17ad0a1a79aa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-37.json",
+      "bytes": 1516,
+      "sha256": "ab96954a4f8f908f5eb20b1146d4634ad736105bc9f6b083699a249f3ada4fa4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-38.json",
+      "bytes": 1516,
+      "sha256": "4d55144a71579caf805c96a1921a063101502389e2a2cf45af33441d897866cd"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-39.json",
+      "bytes": 1516,
+      "sha256": "129ad9c920f0b4939bec7e5053ceba0cee214c4dcb8ca8c0534fa224ae39046c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-4.json",
+      "bytes": 1513,
+      "sha256": "3effc0c46239d2f79ee145f3b13ce541f3b0433460f70a8a494e5dd70b458dfb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-40.json",
+      "bytes": 1515,
+      "sha256": "0089fd085b251a74df72ee3bd23ef05ca12aba5e76164eb508c513d75ae96c56"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-41.json",
+      "bytes": 1516,
+      "sha256": "3929512541b605fb6c6c171e45c83e5692ea5ee95c5c77fdf74a1c10570b5fe9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-42.json",
+      "bytes": 1516,
+      "sha256": "ca5c4afb53cf6d705389d8d17dc631f09a1c3245b90b271a11c13e449c232e9f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-43.json",
+      "bytes": 1515,
+      "sha256": "976dae45e683518151fed2d77bb4bfe40290bd59c8a2a6a22bb93ff60090b100"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-5.json",
+      "bytes": 1513,
+      "sha256": "1259d3bcb2b52f549b6c01051bf25704ded0c9b2f13d6758880576a956fba3e7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-6.json",
+      "bytes": 1513,
+      "sha256": "725f8b7424619fabce7dd6981f4038973c7f4c963bf17e736b7fe9ad7b6dd8a5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-7.json",
+      "bytes": 1513,
+      "sha256": "da06eba0d357c3fa94c9ac16af99729a9b31421a957d50259e656b8deef42412"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-8.json",
+      "bytes": 1513,
+      "sha256": "8af4df85d729f275d582e04612bd46ced98fbe2d5a4ceb2afec92317bb007c39"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-9.json",
+      "bytes": 1514,
+      "sha256": "412200f62ca4fd325c66ba8a3781257a5693d576fdb2cfe5b8c07ca4a2eb9b22"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh/retention-samples.json",
+      "bytes": 46815,
+      "sha256": "06e5162dafbcc457935b71640ae81917443b0e95fb51bb3b0d21309e1f1bdb2e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-fresh.log",
+      "bytes": 1753,
+      "sha256": "6481d0caca9e214dbd9af389016ed1f37d3b7ac4f39f9e40ae28b3ab8265618a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/report.json",
+      "bytes": 85113,
+      "sha256": "98fe2ea57712efed2edf93fe69b2be7ffd80dcb7c1a2b7510865062c90686e4c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-0.json",
+      "bytes": 1511,
+      "sha256": "7275339e3feb54941330f175c98e50f2ac2ee933c44b5b252c3d5ddc4fd3d5ea"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-1.json",
+      "bytes": 1509,
+      "sha256": "eea5b4a3205fe0459d3e1074596698af2d9a93ed80d7dc5c60a616527b3b47fe"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-10.json",
+      "bytes": 1514,
+      "sha256": "75005fa1a7b5643e22b5e16de4fc7b3c98a4282113ab958df0730aad493793c0"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-11.json",
+      "bytes": 1513,
+      "sha256": "14937f96de3994be72b9c3908976f073868f503d10eaf8fab6a084d7c05c7c6f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-12.json",
+      "bytes": 1513,
+      "sha256": "bb1ee4e2ac7c21f2e1740acfd61b6cefb606b0429d49dab087de624c7333e0b1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-13.json",
+      "bytes": 1513,
+      "sha256": "a0ec59349d0c1cb172c3e649fda03267d421aed87c5943fef56c248ea51cc331"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-14.json",
+      "bytes": 1513,
+      "sha256": "9a2fc8a6bd6573e3dc5d556c5c248715cac521b71ea38589daf1d7e6f2749429"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-15.json",
+      "bytes": 1511,
+      "sha256": "6a857c2d7c018153ff0ec51a3996a9d26b9be18814c6884d082245840ffcde66"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-16.json",
+      "bytes": 1514,
+      "sha256": "8d99914ffb7b1c17511d42322836881157338f0e0f3cfab26fbc14191000fe41"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-17.json",
+      "bytes": 1514,
+      "sha256": "363ecbce0b36019801e9b14b7f5102a5ab2893ec4cd338f0dd64959bc8f19455"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-18.json",
+      "bytes": 1513,
+      "sha256": "157315c62325a6cbf2f99edd2914fcbf2b8a83b6e932ba07330092b76f5dfb25"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-19.json",
+      "bytes": 1513,
+      "sha256": "180b24854185791e11694d89da02f69a4a446428683430d1d78bdad6d071bc4d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-2.json",
+      "bytes": 1510,
+      "sha256": "711c59d2d08bd8fb86cfd8a528473f62db46ef9133c8034ed0cff01d2822753f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-20.json",
+      "bytes": 1514,
+      "sha256": "d4d42493d483e48fc9cb1006949c5dd4f028ffe389594a51bc48dcfa5abef803"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-21.json",
+      "bytes": 1514,
+      "sha256": "e2102cc24f5ef47348d0cbe1ae427279203fc05951a0f2b2476fa94a703b1ed6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-22.json",
+      "bytes": 1514,
+      "sha256": "e1acbecd96f77cdbb7f085dd562b1b5023174026a02fbc1617dc691e5cf2e700"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-23.json",
+      "bytes": 1513,
+      "sha256": "22fcb4232be5fe21d531a2b81fe7203f5adf578a13437735a4630c1ca2b6e775"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-24.json",
+      "bytes": 1514,
+      "sha256": "394f6db0e86032710aa9d1028e39fbc70d7f2960f78cba4516465c79bf622668"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-25.json",
+      "bytes": 1514,
+      "sha256": "b34210444300263faf4697aa389f7a0dac128b3045f542af1207e96480739780"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-26.json",
+      "bytes": 1514,
+      "sha256": "23951486d7fa97225bf4d2f2f5d0eb6f6c473e481e922404528f64d3d04b17b8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-27.json",
+      "bytes": 1513,
+      "sha256": "756ad5dc7b6b235f4d9f030a1a3e0d24ff0037ea85ab52d45d64e3580eb341a7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-28.json",
+      "bytes": 1514,
+      "sha256": "608fcb04c9da3f804024e0c6d43b13354bfcc3cd008f17ed33f67a01e60c1732"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-29.json",
+      "bytes": 1512,
+      "sha256": "43350bca38868471c5d3c5986a572d5c5e8e60177a7a1f5d953fe31e7516b690"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-3.json",
+      "bytes": 1512,
+      "sha256": "48079b7f17afb7874d5f6bd115fe7eae7bba517f2ddf491739ec8e1212b35a19"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-30.json",
+      "bytes": 1514,
+      "sha256": "243e9473e5c6df556e2bd34cf217bb25f352c315b9b8cfa81dc0e3e2330a3383"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-31.json",
+      "bytes": 1513,
+      "sha256": "2079b280eed9750de489e107ec7ed2529943fc93525d18409c33a832492cec03"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-32.json",
+      "bytes": 1512,
+      "sha256": "d5091afcef345100c1fe12fbf200e8220842cd0b988c5d779593c173be516cd5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-33.json",
+      "bytes": 1514,
+      "sha256": "3c0a964104ef223c62a32ea270d982b8fb14a5d3f936d980c34f37e68f15e7ff"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-34.json",
+      "bytes": 1513,
+      "sha256": "474cf8e76e356f9761ae4fbc0dce671cc42aa05009de2eac2d5a012d3d86512d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-35.json",
+      "bytes": 1514,
+      "sha256": "f6858b012809484095d584a9dfa7143aa2848deaf872a1e7efb25a81e2dc2171"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-36.json",
+      "bytes": 1514,
+      "sha256": "958a44b56f5c83fea89647c54a6ee3eae24cc85e19836b802cdf72c7764e0514"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-37.json",
+      "bytes": 1514,
+      "sha256": "74ad9243a6f0ed2abab8c25a2ab5199e499c6a4c88c99b924adf6f5b9a5d4acc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-38.json",
+      "bytes": 1511,
+      "sha256": "963aa3d77b65d8027f3128d630199a13d2e81adba492a06b595cbd7fd015efe1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-39.json",
+      "bytes": 1513,
+      "sha256": "edc7881e7c148664e2749cfcd8da32a087ff43c5c9df809a52d9dfd59ae65253"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-4.json",
+      "bytes": 1513,
+      "sha256": "61dac182b15838e20b9f214f3a659d0d2795320c14bc737dea3250b8b0bea16f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-40.json",
+      "bytes": 1513,
+      "sha256": "d52d7b5cbf9f3f406b2096a10236fa404e8a11e25fab00e0b6535e8ae08706eb"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-41.json",
+      "bytes": 1514,
+      "sha256": "e196d0ac0f209493be350b440aa9c140bf7bf163c4f9a9d585a00d94714525f5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-42.json",
+      "bytes": 1514,
+      "sha256": "c0b348298ad6bf5cd4154b7ba2233ff9e3c846e6e7bd77380f12443a983afb44"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-43.json",
+      "bytes": 1514,
+      "sha256": "e6dd515ecae8d44b606f6f60fc656a4efaf8faae0144eeb7aa7f2486d739efd7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-5.json",
+      "bytes": 1513,
+      "sha256": "8a24869aba0e249a63ad0aa1f77c09d206c24c06824389dae836147ddbaa4d3c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-6.json",
+      "bytes": 1513,
+      "sha256": "bf64ac4d40434ee991f2667209a5f417eb40ec96070c8751ac97492688e58547"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-7.json",
+      "bytes": 1513,
+      "sha256": "68f937bed2633885600483de9ba6c85ee2f65f78ba4893da68972d7cd5a8805e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-8.json",
+      "bytes": 1512,
+      "sha256": "16ab33cd03f89bbb3cf3940cdcf5c2e4d0bd8f14c690fc8a79d3ae8faf500a8d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-9.json",
+      "bytes": 1513,
+      "sha256": "c15253c0ff48b5ef24a69648172089f3d108b6fe052552f89a5b4e1b18208d39"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused/retention-samples.json",
+      "bytes": 46730,
+      "sha256": "9229725dd397f8e6750b727f429b66380691cfa2bad4d43bef262ed5621f0a1a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/3-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "344d249ae7d825c35963d0c06b072e294f5e26216b6a8e101d5b352b412d0a15"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/campaign.json",
+      "bytes": 267,
+      "sha256": "7c218c73dc12ca9169545e9221e0c6ab6c1fc7fa83fed4c59242b621438179d3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/measured-source.zip",
+      "bytes": 78361,
+      "sha256": "99362e20c5aff4172c5cf29799b3f8a90bc6d82d7df97a40d155fc7d94a06199"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/source-manifest.json",
+      "bytes": 11248,
+      "sha256": "dd98189a8542b908f2eb26b185c332d7298b46de6195e6ab3a66bc343e79c397"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13/summary.json",
+      "bytes": 576337,
+      "sha256": "16b301791eb176ee0736efcac7100a158dc0072af480639978da6ed7571efb68"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-isolated-2026-11-13.log",
+      "bytes": 858,
+      "sha256": "4fc35c3e0fe6b672313f971b32d09396f96abb023d66a17a9f793a2faff64b46"
+    },
+    {
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3347,
+      "sha256": "4cafb8dab144bdc82bd781e20fab561bd923894e52570974f0bbc71c4fa17f3a"
+    },
+    {
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "b10fa325cdc792370750698474104d7c0029a21e35ed314177b08fb5b782df94"
+    },
+    {
+      "path": "samples/MeasurementTools/ReportingRetention.cs",
+      "bytes": 2004,
+      "sha256": "c79b66459e9a260fb5e12eb6b1c5ac4e6566cbb780e0accd15f95a0dcbfcdfb4"
+    },
+    {
+      "path": "samples/NativeLifetime/Program.cs",
+      "bytes": 2592,
+      "sha256": "de80360b5b4995041f4391b6e38557ff26081867bba839888e2598bf3b40f617"
+    },
+    {
+      "path": "scripts/test-native-memory.py",
+      "bytes": 4756,
+      "sha256": "251a9c59dd5189b5d995c2ebab27e024f72a4661b21b55210433ce514c0a3e8d"
+    },
+    {
+      "path": "tests/ReportingRetentionChecks/Program.cs",
+      "bytes": 2071,
+      "sha256": "1d5bd4ec9cca0dc2416dab617ea66ab75917dc111d394d2de19d006def7b6f7c"
+    },
+    {
+      "path": "tests/ReportingRetentionChecks/ReportingRetentionChecks.csproj",
+      "bytes": 367,
+      "sha256": "8af02cd168abe601f9f91a77d9367f08fa886edb7aa155adbc10398517df819c"
+    },
+    {
+      "path": "tools/Summarize-NativeMemory.py",
+      "bytes": 8084,
+      "sha256": "840e3d678faf4d7ed44b5b2848de09567e71ea4675cd33304522f1fb6c368f41"
+    },
+    {
+      "path": "tools/Test-NativeLifetime.ps1",
+      "bytes": 4296,
+      "sha256": "31f4406721f04f1d05b86920ef404634f8f533d9d6da7d00ccbc1fed22bbab82"
+    },
+    {
+      "path": "tools/Test-Release.ps1",
+      "bytes": 2368,
+      "sha256": "2c65ee0b96a7bf91e19c85a77a743ca9a94fa0a5507127e75d13bfb24130aac3"
+    },
+    {
+      "path": "tools/Test-WebViewAcceptance.ps1",
+      "bytes": 5368,
+      "sha256": "6b3d9a8daf7b47d924242ea5dc2b9ea53497896d3c398a8acb4d3fea18604b44"
+    },
+    {
+      "path": "UI Framework.slnx",
+      "bytes": 654,
+      "sha256": "66ac64a71d915e265ae4c77bfc019c3e1020e6a5146b418b28a08616404d0ab2"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\AppearanceScreen.cs(22,23): error CS1501: No overload for method 'Padding' takes 4 arguments [C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\SkillPreview.csproj]
+C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\AppearanceScreen.cs(41,112): error CS1501: No overload for method 'Padding' takes 4 arguments [C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\SkillPreview.csproj]
+C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\AppearanceAcceptance.cs(48,49): error CS0119: 'UI.Button(string, Action)' is a method, which is not valid in the given context [C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\SkillPreview.csproj]
+C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\AppearanceAcceptance.cs(51,76): error CS0119: 'UI.Button(string, Action)' is a method, which is not valid in the given context [C:\Users\iotero\Dev\personal\UI Framework\tools\SkillPreview\SkillPreview.csproj]
+
+The build failed. Fix the build errors and run again.

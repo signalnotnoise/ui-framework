@@ -11,7 +11,7 @@ The modifier stores `View.AccessibleName` in the platform-independent descriptio
 
 Buttons retain their native focus, keyboard, click, and automation behavior. For a component, put the modifier on the actionable view returned by its body when that control needs the name. A label on a container names the container; it does not label all descendants.
 
-## Virtualized rows (unreleased)
+## Virtualized rows (discovery shipped in alpha.6)
 
 The list exposes WPF's `ItemContainer` and `Scroll` patterns. Logical row peers
 expose `VirtualizedItem` while unrealized, allowing an automation client to find
@@ -34,6 +34,15 @@ row by name scans logical items; it does not make description processing or
 search constant time. Realization preserves the bounded native viewport. These
 peers add no selection model to `VirtualList`; use the native child control's
 patterns. Theme replacement retains compatible native controls and their focus.
+When a realized row is released, the renderer refreshes existing logical row
+peers so their cached children no longer retain detached editors. Re-realization
+refreshes those children after layout, when WPF has published the new container.
+Registration is weak and allocated only for queried peers; ordinary rows gain
+no peer field or per-row registry entry. Holding a list or logical row peer must
+not keep unrelated disposed editors alive. A client that directly retains an
+editor peer can still retain that editor; the framework cannot collect an object
+while an external owner intentionally references it. This unreleased cleanup is
+covered by held-peer, recycling, realization and key-reuse regression checks.
 `ViewHost` and virtual-row lifetime wrappers are not keyboard destinations by
 default. Tab and Shift+Tab reach their actionable descendants, including rows
 beyond the initial viewport. Applications can explicitly override native host

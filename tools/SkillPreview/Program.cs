@@ -13,6 +13,11 @@ internal static class Program
     [STAThread]
     private static void Main(string[] args)
     {
+        if (args.Length > 0 && args[0] == "--appearance-acceptance")
+        {
+            AppearanceAcceptance.Run(args.Length > 1 ? args[1] : "artifacts/appearance-acceptance");
+            return;
+        }
         var output = Path.GetFullPath(args.Length > 0 ? args[0] : "artifacts/skill-preview");
         Directory.CreateDirectory(output);
         var app = new Application();

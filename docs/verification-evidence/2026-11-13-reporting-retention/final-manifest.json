@@ -1,0 +1,724 @@
+{
+  "files": [
+    {
+      "path": "artifacts/fw018-reporting-final-release-2026-11-13.log",
+      "bytes": 3437,
+      "sha256": "fe54fa3b8cfcac12b470bb0b417fffc221e01ec13ec04496b7ab887af5e03d9a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/analysis.json",
+      "bytes": 11051,
+      "sha256": "6a17c24f4f393eb4cf2f73d569ca200e1623268a35b827aba164f26453af3114"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/binary-manifest.json",
+      "bytes": 389,
+      "sha256": "d1b7b49a7c2c15f146a6119908f33713b525d5807d6fab7301570a04cd2a0fc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/campaign.json",
+      "bytes": 292,
+      "sha256": "fe6bc420296e9efeb7aa474288f7c4bf02535966ed773d9d3b689cc170a972aa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/measured-source.zip",
+      "bytes": 66520,
+      "sha256": "4f3c05e26456f6aa3f41f99ada7611137cc058bd1dbbc7bce506d2513a2a240e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-1-process.json",
+      "bytes": 488,
+      "sha256": "37a5ca567185e8f3aac8198f8856fab3b9ddee1c6392bd9e83709a1e51d6910a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-1.json",
+      "bytes": 56706,
+      "sha256": "589561abe1eeef5a1b94ec5722d29088cb2732dbb0e3f8c14378b8dd79e52a9c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-1.json.samples.json",
+      "bytes": 34384,
+      "sha256": "84fbb1e3c13b2d152a04d16c8a0ea744bfac0af2cbe8b2f6d1b63d27b840b36e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-1.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-2-process.json",
+      "bytes": 484,
+      "sha256": "b9fb09247ab17d5a8c357f8636aa56e14bd8ad9fa3400127402c98c96931b293"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-2.json",
+      "bytes": 56797,
+      "sha256": "cf1c336ce3c60d6c820ce2f2fd334f182a4d7fc8d429553dd4bd09c51bfb4923"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-2.json.samples.json",
+      "bytes": 34473,
+      "sha256": "51922de40c35a86f8fc82319cef4c23cb07c85d12d8ae7d3ab6a3823acb7c767"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-2.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-3-process.json",
+      "bytes": 488,
+      "sha256": "a9daa9d9e93878796fa756d1d7a941b5b87c2d56b263b77d8c06de4d39055e01"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-3.json",
+      "bytes": 56708,
+      "sha256": "5628e96158dcb4daa672a9056c47045e2db76c306c91718c2a2cb1142115142d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-3.json.samples.json",
+      "bytes": 34386,
+      "sha256": "6c57d94c0064dfedd6c7f40c532b26941df2e5222bbe837133efc1b91c0a2306"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/memory-3.log",
+      "bytes": 3863,
+      "sha256": "925667e29e66361b005546ede1e953b4ce390c87a2206f4457d65c201099c273"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/negative-process.json",
+      "bytes": 487,
+      "sha256": "6ae7240eafc9af241a6942a357603d3c3d92fe600f9fa1e2cee598380593a3bc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/negative.json",
+      "bytes": 2081,
+      "sha256": "acae5674f03623598b3bd2b4e9b665e77343edad9320af939e7b75953cb92a20"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/negative.json.samples.json",
+      "bytes": 542,
+      "sha256": "cdfc939bb7754fa519ecae7a40f27d7a46efe75be407695669f586437f60698d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/negative.log",
+      "bytes": 61,
+      "sha256": "a7ea739954b3da68e3bcacdad6824e34eb25cd634b87654abacffe3b8c0df65b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/retained-process.json",
+      "bytes": 489,
+      "sha256": "e62394062590a694fb23a83b41e5710c6769b3ef37229cd5e33f59283f295da2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/retained.json",
+      "bytes": 4107,
+      "sha256": "f3393e78c10e37ac8a543aa0080e2ce906d7e6fc47a73fe0d6be31f69fba7a55"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/retained.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/source-manifest.json",
+      "bytes": 10113,
+      "sha256": "f79fa26ed91e756a385fbf423971429d8edf4a35f3857828259f377ec362243f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/window-process.json",
+      "bytes": 480,
+      "sha256": "99e6512e917ca2d06a04ee633214269c44f2ab04cbbc677b1d3cf5b56f8ebf16"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/window.json",
+      "bytes": 1716,
+      "sha256": "21c34752e97ac4f5ca48cbcdf5e8a015d0f3d4fa0d7a42de8af384b0a2d443f1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13/window.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-native-isolated-2026-11-13.log",
+      "bytes": 699,
+      "sha256": "f666f7190804cc82515e1578750169abcfd6d9d1b3a40053d7938ee33a7dc511"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/report.json",
+      "bytes": 85105,
+      "sha256": "2c91862775415f713ea6ea29949f8e44c4b077bf24c88f66d18f0fcfea66f21a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-0.json",
+      "bytes": 1511,
+      "sha256": "551706312740077fcc2afb021c197cef657ec56eb752780af4471cc925c80586"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-1.json",
+      "bytes": 1511,
+      "sha256": "eebef133aa69a84d464bb2201e75cea9ac2b665cdfea73a3028178c4f5237eca"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-10.json",
+      "bytes": 1514,
+      "sha256": "0ec67db7092fd8bf8037290e73c9f8c445a2e8f9809339afca08f06d9614222c"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-11.json",
+      "bytes": 1513,
+      "sha256": "1e93772a755332da18ae6e6bfd1a208750dd449916916a057371c3719e3f84a1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-12.json",
+      "bytes": 1513,
+      "sha256": "3beecc9ffd8cb4decfc7d62a52926a993bdaeee2e8133fc388d64e60d4a06308"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-13.json",
+      "bytes": 1514,
+      "sha256": "b74737195ee2b424d9b099a9ddb0d3c376cdecb2dc16c142d55dc6c95f874aac"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-14.json",
+      "bytes": 1514,
+      "sha256": "ea5e2dbdd8629608a12723c210b71ac69922ed8fd0c06c61b8e69b7d17919b41"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-15.json",
+      "bytes": 1514,
+      "sha256": "95afe5bc1e7d1fe65128a8acbeaefb88ae36fe1238e5aecf1b84ae9bc0d88fe1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-16.json",
+      "bytes": 1514,
+      "sha256": "cd292a7e1a8d12f52c0ab6220f99fb7ef3b6d0d325bd1319e10809f8a1bcce30"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-17.json",
+      "bytes": 1514,
+      "sha256": "ebb48eacaba3df7fc998477eb03be8f6ccda7efa5d45ce1d7b67ad9168d3dde5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-18.json",
+      "bytes": 1514,
+      "sha256": "ae3bb3a755f330f6010d29ffcc82ea0566169eb6db775582d23414a09e6ba8a2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-19.json",
+      "bytes": 1513,
+      "sha256": "a946b2108e87900327c8c829c5e031c782259e7f5acdff0f841a4abbe16e9d53"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-2.json",
+      "bytes": 1510,
+      "sha256": "0cf36d3b17a5fb26ede335860826088c755087466c395d0f20db2edce15eaf5e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-20.json",
+      "bytes": 1514,
+      "sha256": "0ece60b995ce99be3dbf999d50ae2fbb09cf5526986f0fee4e1010d36d72308a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-21.json",
+      "bytes": 1513,
+      "sha256": "bcc852cdce9649887896384906c683c32eb35fc81dfeb2a00f22f2a36f632911"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-22.json",
+      "bytes": 1514,
+      "sha256": "54023713308d6047b901969ae3a36668648031b9226110f5e050745505c3d225"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-23.json",
+      "bytes": 1513,
+      "sha256": "8d99c9f24e464621af0e63d4977240b4899f52462e644fc9a9b45eecae537de1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-24.json",
+      "bytes": 1513,
+      "sha256": "76f838730d6cfd7caf40ead7b6855da2ce5b1a8ee1cec4f6fa80ec8a976feca3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-25.json",
+      "bytes": 1513,
+      "sha256": "03d15014e980b4269ee3fea36fe844f5ea2165cc7e5e0b2c4725c04a4ecfb225"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-26.json",
+      "bytes": 1513,
+      "sha256": "bf22790478c8e969057803c170252562651fea0f7fbcacbb3f4b4e8a67e2cb33"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-27.json",
+      "bytes": 1514,
+      "sha256": "db76ee3b819151885384a18f1851868ba9671f8686551e2fdc22c2901bb1d8ef"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-28.json",
+      "bytes": 1514,
+      "sha256": "a2fb5fd25d74edcc827fb3c4ac7f064c363b523d407f28718ad7478106434805"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-29.json",
+      "bytes": 1514,
+      "sha256": "79b34d4805db6feef3ac7a2105d135492941d0bf76a1ddec090ac3d1b1aa1ab2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-3.json",
+      "bytes": 1510,
+      "sha256": "defc29618ed368e061796e8ce09af011426d653e368c3ae51b959bed9b5f12f8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-30.json",
+      "bytes": 1514,
+      "sha256": "2e2f39723f877f9109af47dd81bb9b72e0557c04f69f66239d2694996a38bf82"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-31.json",
+      "bytes": 1513,
+      "sha256": "06aa5cf83a5004531fb65403b76e2a82e26aacc7b3cf1890c6c6712983384c96"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-32.json",
+      "bytes": 1513,
+      "sha256": "26071fd10e33c874ee4e014a3c64431148f9cdc9496e70b571b74973ae983b4a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-33.json",
+      "bytes": 1514,
+      "sha256": "fd6ce153217f993cd220138216d3bb2ab35311732dfaf3e147dab14b0ea8bc7f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-34.json",
+      "bytes": 1513,
+      "sha256": "ab814891ebc3daa4ee276f61f7c1176f86a69c5a60dfa4ec12cb7ad828829dc1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-35.json",
+      "bytes": 1512,
+      "sha256": "f7441d3a61d02ffa242ea358e9e427e21e02a809edcefe215aefda2ee18d9313"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-36.json",
+      "bytes": 1514,
+      "sha256": "c0c387773e69d9a4c50ed2bf30c94469a92f36d14fd778ebe6c12b552d3e42ad"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-37.json",
+      "bytes": 1514,
+      "sha256": "22c5f5848b6c150280e302c1a9bdb5ce16fc41a02389b3d08150b7e96d89859b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-38.json",
+      "bytes": 1514,
+      "sha256": "31b38c0bd0c50de963ab6b01fa414abe17f0197d21ef0e8ff85c63df8cd3de23"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-39.json",
+      "bytes": 1514,
+      "sha256": "db1e620a2b1e5ad71d789590fb9957ece24b43c3be99011c34fb8bd20506b0a4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-4.json",
+      "bytes": 1511,
+      "sha256": "b09fe36bef3cea9d352825c018f5426d6e29248e2f94b97e23525288f5ddba12"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-40.json",
+      "bytes": 1514,
+      "sha256": "9fcddbc3a3dcf2eedf9cf78872ebe4c3227b020a89041477b014ac73042570c7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-41.json",
+      "bytes": 1513,
+      "sha256": "37429870d210d091b2447e76c2b4574e96403e1f949341a994a451850a1faa93"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-42.json",
+      "bytes": 1514,
+      "sha256": "51e1f68193d7a8e70d5b66ee67f74557854b98cbe8f0c74560bb75ffd8a48050"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-43.json",
+      "bytes": 1514,
+      "sha256": "70f39ad545a7c628ea430b79fafda826788ce528815ffaf511e432ebbc605d52"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-5.json",
+      "bytes": 1509,
+      "sha256": "cb88e2546e33b9c10313acef91d2043ba7a8fd70f798ec7e43440bd1a3973937"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-6.json",
+      "bytes": 1511,
+      "sha256": "d00ebb3a0950d7e5417e5ac43c3fcb407aa95ee9c1d418d5dec7edb72b01191b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-7.json",
+      "bytes": 1511,
+      "sha256": "866f3cc2bdf40c82e8581ae7669eb361d49bddbefdcdbf9e6ce78ba27513e349"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-8.json",
+      "bytes": 1512,
+      "sha256": "45babf429043cf1b008c399b5d58f3df226bbf1c389cdd63f40ae584d002e0f8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-9.json",
+      "bytes": 1512,
+      "sha256": "fcfdbe31667fb999773090ee06ef4d74724e6b06e5758b8309700850905dd659"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh/retention-samples.json",
+      "bytes": 46727,
+      "sha256": "2b255f2940f93c7132362cc7b43fd2dcefd4840aa0cdd53b90f17b8a505e4af3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh-process.json",
+      "bytes": 75,
+      "sha256": "4d4338094723be0a9853392ec7f36aed7da674c3021a2f47d76646ed6e91adc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-fresh.log",
+      "bytes": 1752,
+      "sha256": "f70ca677d01c8dca2ce0576be12026f08019ed223cc16409a6e1a3272fbf0e8f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/report.json",
+      "bytes": 85018,
+      "sha256": "4fa16e0d8a3dce4bd2c10a7b22dc15955bd8bfd9bd2ba1572bc798c4eaa92d72"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-0.json",
+      "bytes": 1510,
+      "sha256": "b4919bbdf2696c1b652614337ca352e669c7e6dd7d7305936e9f1f1d144615d5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-1.json",
+      "bytes": 1509,
+      "sha256": "15aaaf43a197079d9e08f9a599c0e610b4930fb533ee0d178c3407fbcd4968b2"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-10.json",
+      "bytes": 1512,
+      "sha256": "4a16f8218a26b4d847c39eadc9dfbca04a7e5533cb1a0a1435324fa44c521ae5"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-11.json",
+      "bytes": 1512,
+      "sha256": "d7fa27b5ca1c468d4822617405fa46759c3399bfea5bd4ac213c5e39ce57c4ab"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-12.json",
+      "bytes": 1512,
+      "sha256": "0338e195eaac14d066050df75d6378a1d03454a5e2fe59d59bbe0cd42c444728"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-13.json",
+      "bytes": 1511,
+      "sha256": "0f7ee545620d31237e3d970800a95b1390f89d14588d2fba60ea27af86f1499a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-14.json",
+      "bytes": 1509,
+      "sha256": "0125c5cd637606007d7373f45ba987cf34cad5e90ec98a92153bf4776d7425ba"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-15.json",
+      "bytes": 1510,
+      "sha256": "756146e34901fc8ddf9897f2efca7ff8ffdb9de87e61688e6f6319083409148d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-16.json",
+      "bytes": 1512,
+      "sha256": "f6efb73a2fe2a4942ac32d062584524035e3ee42071122ef10cce7989c2e1321"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-17.json",
+      "bytes": 1512,
+      "sha256": "b3a7d6ad2993b4940125650f618b96b52a4b57703b5e342d692a42e2890063dc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-18.json",
+      "bytes": 1512,
+      "sha256": "44838ccfce86d454441fdc34650c77660f8099d5b2ee2ce8520365d697be6e4e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-19.json",
+      "bytes": 1510,
+      "sha256": "411915246fe39116c5ba51943db6eee7430462790c9be49e164507663c41c5e8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-2.json",
+      "bytes": 1510,
+      "sha256": "e6a33c395efdc77285ee66bc6986e422080e29186f6a8e899f6d67ce60e03a40"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-20.json",
+      "bytes": 1511,
+      "sha256": "4bcd84c3a7209c4a2edbcc3f1232702ce445fc31750abb0d6b95931c51c8f2f8"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-21.json",
+      "bytes": 1512,
+      "sha256": "904dae192bddd175773832bf03e01fa69241818381714bcdf953d808662d1de9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-22.json",
+      "bytes": 1509,
+      "sha256": "01a554f9769dc6adb5e701804b91b6a60c203ce82d5e82f223a915d09d1aee39"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-23.json",
+      "bytes": 1512,
+      "sha256": "bbc7010d17c76416bdc80b79279926de70083fd658a5553e44a78ee85a7d15c4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-24.json",
+      "bytes": 1512,
+      "sha256": "7d5a28596a0ce4ea257c96e583fa0fb347ad1d8e30664b2addc07e82e36121aa"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-25.json",
+      "bytes": 1512,
+      "sha256": "f568df32cf2684c56cab9bf644181be5107b9c7f286e3d6012f89f227e9bd921"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-26.json",
+      "bytes": 1510,
+      "sha256": "76c1fb2e2c7a7093b484745f0bcc13825a3a4e01248cbf77245b2adff00ed6f4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-27.json",
+      "bytes": 1510,
+      "sha256": "3699470e36f6d0c5b2381d7570f8ef0032a40e34940652f9e5fc3a7f4aa3b873"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-28.json",
+      "bytes": 1512,
+      "sha256": "1ba3ac1c5aca96aad9ffdd788a7fbb5e7acf01dbe52987cee8c02344ad1a8887"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-29.json",
+      "bytes": 1511,
+      "sha256": "27776a58fa804404d984567e87a7007a9674eab9c5f5baee379a3febfa0da749"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-3.json",
+      "bytes": 1509,
+      "sha256": "cf7cc032a465813b7edb68ddbb444e8ab3e2dfa6031b3b7ede5c3cff9f43dfe6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-30.json",
+      "bytes": 1512,
+      "sha256": "757b85a20d8143535251433b5816a9ad239d6392cdc453cf252aabb7d93ea63b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-31.json",
+      "bytes": 1512,
+      "sha256": "b8eba01e3a4985ed142e12fd30c306973ccd607f1d23cf69790b415fa4c3cc0f"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-32.json",
+      "bytes": 1512,
+      "sha256": "f014e95532711edd8987bf980e0d29ba92c4f4448e96cf2d349c580b308be2d6"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-33.json",
+      "bytes": 1511,
+      "sha256": "f3c0fcef3c63bc50ebae429cc6879be04a7b8fd686d78d59595a6016a1a90a5d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-34.json",
+      "bytes": 1512,
+      "sha256": "3d5e6699549d3b367622c59942653cb39b4fd74aeda80021b811ada9ade8899a"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-35.json",
+      "bytes": 1512,
+      "sha256": "b2e1c6b765d169f686ddcfd62e42f6b521db91dd54fa5f9cbc62518bcb5513f4"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-36.json",
+      "bytes": 1510,
+      "sha256": "a1d581e4f96446057d35f4cf4646dd82b2ea62fecd6195218c0bbb9789851a27"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-37.json",
+      "bytes": 1512,
+      "sha256": "99083ddcf73e8cc7e316226b1338ff400870bece0fab86ff5dad398509a195e3"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-38.json",
+      "bytes": 1511,
+      "sha256": "568527534a89cc84f03a451e33221d5402fb05b9b55840efa180d38e4506034b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-39.json",
+      "bytes": 1512,
+      "sha256": "3d8b51d2ae64db81cd3e49899380285b8ac74f810579ec7ddc25014c9c0cc690"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-4.json",
+      "bytes": 1511,
+      "sha256": "0ac7a8b69991a66d98b4057e89b8fb5cf1b5deefcf4619d6566424456955a379"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-40.json",
+      "bytes": 1511,
+      "sha256": "1ac7305b3745600e32b0966a0b87c862a7461a1602ca753bde2a5b332d28cb74"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-41.json",
+      "bytes": 1512,
+      "sha256": "9377704e9f0a4d5dbc52239f3e4841d35006f84c864a379fc36a36593fc49880"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-42.json",
+      "bytes": 1510,
+      "sha256": "f0d03df743b2dc6641196847595844d1982072e4e39b653eba5987a626760dc9"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-43.json",
+      "bytes": 1510,
+      "sha256": "5c9bc88aa3b4869abd567360d9e1b4d5d27e61777fba3a045844d9ef68cca84b"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-5.json",
+      "bytes": 1511,
+      "sha256": "fc7e90baf71318cae6c674d8fa2fbac02d98a64e7e704e22c4f2c35c1bd58b83"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-6.json",
+      "bytes": 1510,
+      "sha256": "4d06eebd254aa2c2c69f36271e0be2199dd6b1541b80325af1f8d61c751c198e"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-7.json",
+      "bytes": 1509,
+      "sha256": "a4fffc0dddf66c8ba7efdf1bdcf2f17a484cef356ac82efb42478ea160e20867"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-8.json",
+      "bytes": 1509,
+      "sha256": "0cc1eecec36e6cce739cbef35705c9fa1d22bacba697a1b2be166921a6bbca0d"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-9.json",
+      "bytes": 1510,
+      "sha256": "29d71aaa22e07dd91ef59f2b255719a57528caef89bcbfff8c29a6d0ad1f0d23"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused/retention-samples.json",
+      "bytes": 46637,
+      "sha256": "cf94babbb97429b51c1fe2491da97e6e81e6445273dd459a7abc39878079d5bc"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused-process.json",
+      "bytes": 76,
+      "sha256": "eea1692971841ab41a111d5e9c9894d5d6cf5f2a0cedd428abe8425b4dadc780"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/1-retention-reused.log",
+      "bytes": 1752,
+      "sha256": "f44dc3acb3abd644416f859f6cd770bdd0da86e6f10af0a67fa88c998e67dbc7"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/campaign.json",
+      "bytes": 267,
+      "sha256": "9f57c65b7b14c203b1918c544531a57de3a9f093c6f1c4477da184fcbdb23056"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/measured-source.zip",
+      "bytes": 78398,
+      "sha256": "feda727afaac3b238339872d561299b94f953e7149a9ab89a2100305e5569ef1"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/source-manifest.json",
+      "bytes": 11248,
+      "sha256": "c2b4f08d1db6c5938437414eee11b31a9d5b0b73f5fd2f78f429971311c22892"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13/summary.json",
+      "bytes": 191998,
+      "sha256": "690f182c3c4ea58af1f814c36147f382934e67191b2803cf6f81bdb7c7acb8db"
+    },
+    {
+      "path": "artifacts/fw018-reporting-webview-guards-2026-11-13.log",
+      "bytes": 700,
+      "sha256": "8edbaca99eea34844255b498b5e574aee89df83858cea69d48e4932bbfc4bb41"
+    },
+    {
+      "path": "artifacts/release-validation/native-memory-b04c5fb9748c4eca8c98c57ce0294766/report.json",
+      "bytes": 2084,
+      "sha256": "316257d2cbfa6655662bdc7eff054df1160a483ab48dad8487d286191641de5a"
+    },
+    {
+      "path": "artifacts/release-validation/native-memory-b04c5fb9748c4eca8c98c57ce0294766/report.json.samples.json",
+      "bytes": 537,
+      "sha256": "06e62595bb5785c2ddd5fceed2a9c47c9d7dca7f9e6ca0982517f48477bee7d0"
+    },
+    {
+      "path": "artifacts/release-validation/reporting-592811103d244871b353333bef0e7f06/checks.json",
+      "bytes": 1169,
+      "sha256": "4501a096c454a57780a06bd023d8de6eb7e0ed9815d71dcdb5f7a447025cbcd4"
+    },
+    {
+      "path": "artifacts/release-validation/reporting-592811103d244871b353333bef0e7f06/empty.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "artifacts/release-validation/reporting-592811103d244871b353333bef0e7f06/negative.json",
+      "bytes": 349737,
+      "sha256": "e3c49d3925ac6491eb054ac31af08e3ab8b05d88e8033416cb396c25c3d48e80"
+    },
+    {
+      "path": "artifacts/release-validation/reporting-592811103d244871b353333bef0e7f06/released.json",
+      "bytes": 349737,
+      "sha256": "e3c49d3925ac6491eb054ac31af08e3ab8b05d88e8033416cb396c25c3d48e80"
+    },
+    {
+      "path": "artifacts/release-validation/stress.json",
+      "bytes": 3345,
+      "sha256": "0da9f2368234f330cbeaf1b382d67e5bffed23325a1ff1385913a13975d5e784"
+    },
+    {
+      "path": "artifacts/release-validation/tests/regression.trx",
+      "bytes": 224344,
+      "sha256": "bff42e62bd37f34e3ffe77ca4a09463f5a07ab91ae64820b4985219aac07fd81"
+    },
+    {
+      "path": "samples/MeasurementTools/ReportingRetention.cs",
+      "bytes": 2030,
+      "sha256": "2a3ccbae944cfd2ed69171c303d6c75d2e7d9a3ad83372cfdd31f2d62af2b8f4"
+    },
+    {
+      "path": "tests/ReportingRetentionChecks/Program.cs",
+      "bytes": 2071,
+      "sha256": "1d5bd4ec9cca0dc2416dab617ea66ab75917dc111d394d2de19d006def7b6f7c"
+    },
+    {
+      "path": "tools/Summarize-NativeMemory.py",
+      "bytes": 8084,
+      "sha256": "840e3d678faf4d7ed44b5b2848de09567e71ea4675cd33304522f1fb6c368f41"
+    },
+    {
+      "path": "tools/Test-NativeLifetime.ps1",
+      "bytes": 4296,
+      "sha256": "31f4406721f04f1d05b86920ef404634f8f533d9d6da7d00ccbc1fed22bbab82"
+    },
+    {
+      "path": "tools/Test-Release.ps1",
+      "bytes": 2758,
+      "sha256": "97d92d958fa845504512cc95a450847694e0c582cf9c1c358fb4ecf8a56bf36e"
+    },
+    {
+      "path": "tools/Test-WebViewAcceptance.ps1",
+      "bytes": 5368,
+      "sha256": "6b3d9a8daf7b47d924242ea5dc2b9ea53497896d3c398a8acb4d3fea18604b44"
+    }
+  ]
+}
