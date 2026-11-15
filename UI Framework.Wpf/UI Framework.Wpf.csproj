@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackageId>SignalNotNoise.UI.Wpf</PackageId>
-    <Description>Experimental WPF host and renderer for SignalNotNoise.UI declarative C# components. Requires Windows and .NET 10.</Description>
+    <Description>Native WPF host and renderer for SignalNotNoise.UI declarative C# components. Requires Windows and .NET 10.</Description>
   </PropertyGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="UI Framework.Checks" />

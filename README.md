@@ -2,9 +2,9 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**Experimental · 0.1.0-alpha.7 preview · Windows renderer · .NET 10**
+**1.0.0 · Windows renderer · .NET 10**
 
-APIs may change without compatibility guarantees. This release is intended for evaluation and contributions under the [MIT license](LICENSE). See the [release checklist](docs/releasing.md), [changelog](CHANGELOG.md), and [contributing guide](CONTRIBUTING.md). CI builds and validates preview NuGet packages; publishing is a separate step.
+The v1 candidate preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Publication is conditional on exact-commit hosted correctness, package and performance gates. See the [v1 release record](docs/releases/1.0.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
 
 A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the first backend renders WPF controls on Windows. The runtime requires no XAML or third-party packages. Tests use MSTest.
 
@@ -26,9 +26,9 @@ with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise
 dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.7
 ```
 
-Published alpha.7 does not include later uncommitted peer-cache cleanup or the
-new memory/adoption acceptance tooling in this working tree. Keep package and
-source validation separate; the current tree is not a new published release.
+Published alpha.7 does not include the peer-cache cleanup and acceptance work
+committed in `a1d2ed6`. Version 1.0.0 is currently being validated; the installation
+command above remains the latest verified public package until publication finishes.
 
 The WPF package brings in the core automatically. See the
 [package getting-started guide](docs/package-readme.md) and

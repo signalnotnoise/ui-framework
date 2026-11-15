@@ -5,7 +5,7 @@ Last updated: November 15, 2026.
 Alpha.7 libraries and symbols were published November 13 from `c5d639b` after
 both exact-commit hosted workflows passed, including 32 performance checks each.
 Fresh public installation and alpha.6-to-alpha.7 source/binary upgrades pass.
-[Release record](releases/0.1.0-alpha.7.md). Current uncommitted peer-cache cleanup
+[Release record](releases/0.1.0-alpha.7.md). The committed peer-cache cleanup
 and acceptance tooling are not part of those published packages; a new exact
 candidate still needs package/correctness/hosted validation.
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
@@ -28,6 +28,7 @@ Dates below record evidence or updates, not delivery commitments.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| 1 | FW-028 | P0 | Validate and publish v1 with end-to-end evidence | In progress — exact candidate gates pending |
 | Done | FW-027 | P1 | Package current source and validate against alpha.7 | Done — local validation, hosted gate separate |
 | Done | FW-018 | P1 | Verify resource lifetime and scoped memory budgets | Done — 12/12 scoped memory runs |
 | Done | FW-010 | P1 | Verify asynchronous native host ownership | Done — scoped native/WebView2 acceptance |
@@ -1117,3 +1118,13 @@ or publication was performed. Exact committed-candidate hosted validation agains
 the accepted baseline remains required before release. The default repository
 version and sample public dependency remain alpha.7; use the unique local version
 explicitly to consume these new packages.
+
+## FW-028 — Validate and publish v1
+
+Status: In progress, November 15, 2026. The user authorized a detailed commit,
+push and v1 publication only after all validation and performance gates pass.
+Acceptance work is committed in a1d2ed6; upstream publication/action changes
+are integrated in e1aad81. Prepare exact 1.0.0 packages, verify alpha.7 upgrades,
+retain local diagnostics and require the unchanged hosted performance baseline.
+Preserve release workflow evidence and fresh public-installation hashes.
+See [the detailed release record](releases/1.0.0.md).

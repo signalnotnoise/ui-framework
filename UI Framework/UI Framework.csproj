@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
     <PackageId>SignalNotNoise.UI</PackageId>
-    <Description>Experimental SwiftUI-inspired C# components, observable state, bindings, and platform-independent view descriptions for .NET 10.</Description>
+    <Description>Declarative C# components, observable state, bindings, and platform-independent view descriptions for .NET 10.</Description>
   </PropertyGroup>
 
   <ItemGroup>

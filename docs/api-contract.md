@@ -1,7 +1,13 @@
 # Public API and compatibility contract
 
-FW-016 decision, October 23, 2026. This establishes the reviewed preview surface
-and intended v1 compatibility policy. It does not declare v1 released.
+FW-016 decision, October 23, 2026; adopted for the v1 candidate November 15.
+This defines the supported stable contract. Publication status and exact-package
+evidence are tracked in [the v1 release record](releases/1.0.0.md).
+
+The v1 acceptance matrix is Windows 11 x64 / .NET 10, with local SDK 10.0.402
+and runtime 10.0.13. Hosted Windows validation records its actual SDK/runtime
+separately. Other operating systems, architectures and .NET 11 previews are not
+part of this tested support claim.
 
 ## Supported surface
 
@@ -38,7 +44,7 @@ An intentional API redesign requires a separately reviewed migration proposal.
 | Errors | Build/validation failures retain the previous tree; patch failures clear damaged hosts and permit explicit Refresh. No arbitrary mutation rollback. See [recovery](error-recovery.md), RendererFailureTests and ViewValidationTests. |
 | Cleanup policy | Applications opt into one WpfComCleanupPolicy on their STA before creating controls and close it after hosts, before dispatcher shutdown. Hosts do not install it implicitly. See [lifecycle](application-cleanup-policy-2026-09-25.md). |
 
-These are preview contracts. Provider-completion, focus-race and wrapper fixes
+These are the supported v1 behavioral contracts. Provider-completion, focus-race and wrapper fixes
 ship in alpha.6/alpha.7. [October 29 manual acceptance](manual-acceptance-2026-10-29.md)
 closes FW-005/FW-006 within its recorded scope; missing provider/build/scale details
 are not inferred. The later automation peer-cache cleanup remains unpublished,
@@ -60,7 +66,7 @@ RS0026 is suppressed only in WpfUI.cs to retain their existing optional signatur
 future overload additions require explicit ambiguity/source compatibility review.
 
 During previews, breaking changes require a fresh version, changelog and migration
-example. At v1, preserve supported source/binary and documented behavioral contracts
+example. For v1, preserve supported source/binary and documented behavioral contracts
 within the major version. Prefer additive APIs; mark replacement guidance with
 Obsolete before eventual removal in a major version. Do not silently alter default
 threading, identity, computed evaluation or cleanup ownership in a patch release.
@@ -76,7 +82,7 @@ Native(create, NativeStyleScope.PreserveNative, update, release) when needed; th
 adds a style boundary without changing the old overload's meaning. Existing
 `new View(ViewKind.Text) { Content = "Title" }` and `UI.Text("Title")` remain valid.
 
-Before v1 RC, repeat the independent consumer upgrade on the exact RC packages (FW-019 already
+For every v1 release candidate, repeat the independent consumer upgrade on the exact RC packages (FW-019 already
 verified the published alpha.6-to-alpha.7 source/binary path), select a concrete supported Windows/runtime test matrix, and
 complete the broader [acceptance matrix](backlog.md). API inventory acceptance alone
 does not close those release requirements.

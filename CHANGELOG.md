@@ -1,9 +1,13 @@
 # Changelog
 
-## Unreleased
+## 1.0.0 — release candidate, November 15, 2026
+
+Publication pending exact-commit hosted gates. Establish the supported v1 API and
+behavioral compatibility contract for Windows 11 x64 / .NET 10. See the
+[release record](docs/releases/1.0.0.md) for evidence and scope.
 
 - Release disposed virtual-row editors held indirectly through cached automation
-  children; direct editor-peer ownership remains explicit. This working-tree fix
+  children; direct editor-peer ownership remains explicit. This candidate fix
   is not in published alpha.7. See [verification](docs/fw018-peer-cache-cleanup-2026-11-15.md).
 - Add bounded memory reporting, scoped lifetime budgets, light/dark appearance
   acceptance and the independent NuGet-only adoption/upgrade workspace. These

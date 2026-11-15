@@ -1,13 +1,17 @@
-# Experimental release process
+# Release process
+
+Version 1.0.0 is the current candidate. [Its release record](releases/1.0.0.md)
+tracks exact-package upgrades, hosted gates and publication. No public v1 release
+is claimed until those steps succeed.
 
 The latest verified public preview is 0.1.0-alpha.7, published November 13, 2026
 from `c5d639bcff707ff1a75b23f2a60135d6be6cb7b2`. Its [release record](releases/0.1.0-alpha.7.md)
 links exact-commit correctness, package and hosted performance gates, publication
-and fresh-installation hashes. Directory.Build.props still carries that published
-version; unpublished changes require a new unique version before packing for release.
+and fresh-installation hashes. Directory.Build.props now carries the distinct 1.0.0 candidate
+version; alpha.7 remains the public baseline until v1 is verified.
 Do not overwrite or republish alpha.7 to include the current working tree.
 
-Packages remain experimental Windows/.NET 10 previews under MIT. The verified
+The v1 candidate adopts the supported API contract under MIT. The verified
 independent consumer matrix is Windows 11 x64 / .NET 10.0.13 with SDK 10.0.402;
 this is evidence, not a promise of an untested platform/runtime matrix. Install a
 compatible stable .NET 10 SDK; global.json does not accept an 11 preview as a substitute.

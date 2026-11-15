@@ -1,16 +1,16 @@
 # SignalNotNoise.UI
 
-Experimental SwiftUI-inspired UI components in C#. Requires .NET 10; the WPF renderer requires Windows. APIs may change without compatibility guarantees.
+Declarative C# components, reactive state and native WPF rendering. Requires .NET 10; v1 acceptance covers Windows 11 x64. Supported source, binary and documented behavioral contracts are preserved within major version 1. See the repository API contract for ownership, threading and virtualization rules.
 
 - `SignalNotNoise.UI`: platform-independent view descriptions, components, state, and bindings.
 - `SignalNotNoise.UI.Wpf`: WPF renderer and `ViewHost`; automatically references the core package.
 
 ## Get started
 
-In a .NET 10 WPF application, install the preview:
+In a .NET 10 WPF application, install the package:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 0.1.0-alpha.7
+dotnet add package SignalNotNoise.UI.Wpf --version 1.0.0
 ```
 
 In your WPF window constructor, after `InitializeComponent()`:
