@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "50611988ad57e828b6b6fb2d6018ccbca70b1ec929e4194d770658bf415a5c00",
+  "inputDigest": "a594a0e720880594e19b9419fafdbe45383f0105f3a524f7f59b02cfc631f154",
   "coverage": {
     "unresolvedRelativeReferences": 52,
     "semantic": false,
