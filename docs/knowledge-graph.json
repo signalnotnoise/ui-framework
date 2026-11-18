@@ -883,6 +883,34 @@
         "docs/fw018-memory-budgets-2026-11-15.md",
         "docs/verification-evidence/2026-11-15-memory-budgets/README.md"
       ]
+    },
+    {
+      "id": "logviewer",
+      "label": "Trace log viewer showcase",
+      "status": "implemented",
+      "summary": "FW-033 composes a standalone core-API log workspace with stable virtual rows, retained selection, source/severity/text filters and split panes. Sample model owns bounded simulated data and palette; WPF hosting owns HWND, finite viewport, clipboard, timer and shutdown. Native verification passes 60 interaction/layout/lifetime checks and retains alternating full-list/virtual mount diagnostics plus inspected wide/compact/empty captures. This is sample evidence, not a framework performance gate or physical accessibility campaign. Core and renderer APIs/templates remain unchanged. Sample-scoped vertical scrollbar templates replace bright native rails with slim dark thumbs; page commands and thumb dragging are verified. Framework templates remain unchanged.",
+      "sources": [
+        "samples/LogViewer/LogViewer.csproj",
+        "samples/LogViewer/Program.cs",
+        "samples/LogViewer/README.md",
+        "samples/LogViewer/Components/LogInspector.cs",
+        "samples/LogViewer/Components/LogRow.cs",
+        "samples/LogViewer/Components/LogScreen.cs",
+        "samples/LogViewer/Components/LogStatus.cs",
+        "samples/LogViewer/Components/LogStream.cs",
+        "samples/LogViewer/Components/LogToolbar.cs",
+        "samples/LogViewer/Components/SourceSidebar.cs",
+        "samples/LogViewer/Hosting/LogWindow.cs",
+        "samples/LogViewer/Models/DemoLogs.cs",
+        "samples/LogViewer/Models/LogEntry.cs",
+        "samples/LogViewer/Models/LogWorkspace.cs",
+        "samples/LogViewer/Models/StudioTheme.cs",
+        "samples/LogViewer/Verification/LogViewerChecks.cs",
+        "UI Framework.slnx",
+        "tools/Test-Release.ps1",
+        "docs/verification-evidence/2026-11-15-log-viewer/report.json",
+        "samples/LogViewer/Hosting/ScrollChrome.xaml"
+      ]
     }
   ],
   "edges": [
@@ -1285,6 +1313,26 @@
       "from": "agentskill",
       "relation": "checks keyed row reorder and removal through",
       "to": "virtualization"
+    },
+    {
+      "from": "logviewer",
+      "to": "layoutstyle",
+      "relation": "composes finite docking and retained split panes with"
+    },
+    {
+      "from": "logviewer",
+      "to": "virtualization",
+      "relation": "uses stable keyed rows from"
+    },
+    {
+      "from": "logviewer",
+      "to": "wpfstartup",
+      "relation": "owns native presentation startup through"
+    },
+    {
+      "from": "logviewer",
+      "to": "agentskill",
+      "relation": "demonstrates curated behavioral guidance from"
     }
   ],
   "releaseVersion": "1.0.0"

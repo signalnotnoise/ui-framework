@@ -185,6 +185,9 @@ Concept nodes retain their IDs, labels, status, summary and source paths.
 `evidenced by` and concept relationships carry JSON-pointer evidence into that
 curated source; these are human-authored claims, not inferred runtime traffic.
 
+XAML resources are included as file nodes; resource lookup and template bindings
+are not resolved as dependency edges.
+
 The extractor retains this repository's PowerShell/JSON/workflow/MSBuild file
 coverage, extensionless license/hook entries, and explicit XML ProjectReference
 edges. Project references have path/line/snippet evidence. C# using directives,

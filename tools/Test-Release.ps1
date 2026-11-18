@@ -13,6 +13,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Release build failed.' }
     dotnet test 'tests/UI Framework.Checks/UI Framework.Checks.csproj' -c Release --no-build --no-restore --results-directory artifacts/release-validation/tests --logger 'trx;LogFileName=regression.trx' --blame-hang-timeout 2m
     if ($LASTEXITCODE -ne 0) { throw 'Regression tests failed.' }
+    $logViewerOutput = 'artifacts/release-validation/log-viewer-' + [Guid]::NewGuid().ToString('N')
+    dotnet 'samples/LogViewer/bin/Release/net10.0-windows/LogViewer.dll' --verify $logViewerOutput
+    if ($LASTEXITCODE -ne 0) { throw 'Log viewer sample verification failed.' }
     $reportingOutput = 'artifacts/release-validation/reporting-' + [Guid]::NewGuid().ToString('N')
     dotnet 'tests/ReportingRetentionChecks/bin/Release/net10.0/ReportingRetentionChecks.dll' $reportingOutput
     if ($LASTEXITCODE -ne 0) { throw 'Measurement reporting retention controls failed.' }

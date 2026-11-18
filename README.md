@@ -53,6 +53,18 @@ packages; the source examples below use project references.
 
 ## Try the product showcase
 
+**Trace** is a multi-pane desktop log viewer with a compact dark palette,
+keyed virtual rows, source/severity/search filters and a retained JSON inspector.
+It uses simulated data and the existing public APIs.
+
+```powershell
+dotnet run --project samples/LogViewer -c Release
+```
+
+See the [log viewer walkthrough and verification](samples/LogViewer/README.md).
+
+![Trace: native multi-pane log viewer with virtualized events and a JSON inspector](docs/images/log-viewer-wide.png)
+
 Launchpad is a release-planning application with Overview, Board, and Details screens, retained state on Back, and reduced-motion-aware transitions. Move cards between Planned, Building, and Shipped, edit details, filter by title/owner/area, and add ideas while release metrics update.
 
 ```powershell

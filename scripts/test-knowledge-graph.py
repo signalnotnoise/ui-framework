@@ -153,6 +153,7 @@ for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g)){if(!match[1].
         self.assertLessEqual(len(result['before']['edges']) + len(result['after']['edges']), 1)
 
     def test_curated_architecture_and_project_evidence_adapter(self):
+        self.write('App/ScrollChrome.xaml', '<ResourceDictionary />')
         self.write('Core/Core.csproj', '<Project />')
         self.write('App/App.csproj', '<Project>\n<ItemGroup><ProjectReference Include="../Core/Core.csproj" /></ItemGroup></Project>')
         architecture = {'schemaVersion': 1, 'nodes': [
@@ -163,6 +164,7 @@ for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g)){if(!match[1].
         self.generate()
         graph = self.graph()
         concept = next(node for node in graph['nodes'] if node['id'] == 'concept:core')
+        self.assertTrue(any(node['id'] == 'App/ScrollChrome.xaml' for node in graph['nodes']))
         self.assertEqual(concept['summary'], 'Human-authored boundary')
         self.assertEqual(concept['kind'], 'concept')
         self.assertEqual(json.loads((self.root/'docs/knowledge-graph.json').read_text()), architecture)

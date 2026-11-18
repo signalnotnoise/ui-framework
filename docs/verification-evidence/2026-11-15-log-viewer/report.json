@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checks": 60,
+  "runtime": "10.0.13",
+  "captures": [
+    "wide.png",
+    "compact.png",
+    "empty.png"
+  ],
+  "diagnostics": [
+    {
+      "mode": "full-list",
+      "rows": 1000,
+      "mountMilliseconds": 964.4849,
+      "uiThreadBytes": 126719064,
+      "nativeRowButtons": 1000
+    },
+    {
+      "mode": "virtualized",
+      "rows": 1000,
+      "mountMilliseconds": 17.1067,
+      "uiThreadBytes": 3416792,
+      "nativeRowButtons": 10
+    },
+    {
+      "mode": "virtualized",
+      "rows": 1000,
+      "mountMilliseconds": 14.4992,
+      "uiThreadBytes": 3402232,
+      "nativeRowButtons": 10
+    },
+    {
+      "mode": "full-list",
+      "rows": 1000,
+      "mountMilliseconds": 647.3921,
+      "uiThreadBytes": 126425584,
+      "nativeRowButtons": 1000
+    }
+  ],
+  "performanceGate": false,
+  "physicalKeyboardAndScreenReaderAcceptance": false
+}

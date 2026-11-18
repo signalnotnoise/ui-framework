@@ -13,7 +13,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ('docs/knowledge-graph/graph.json', 'docs/knowledge-graph/graph.html')
 EXTENSIONS = {'.md', '.mdx', '.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.cs', '.csproj', '.py', '.sh', '.go', '.rs', '.java', '.kt', '.rb', '.php', '.c', '.h', '.cpp', '.hpp', '.swift', '.vue', '.svelte', '.sql'}
-EXTENSIONS |= {'.ps1', '.json', '.yml', '.yaml', '.props', '.targets', '.slnx', '.html'}
+EXTENSIONS |= {'.ps1', '.json', '.yml', '.yaml', '.props', '.targets', '.slnx', '.html', '.xaml'}
 SPECIAL_FILES = {'.githooks/pre-commit', 'LICENSE'}
 ARCHITECTURE = 'docs/knowledge-graph.json'
 JS = {'.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs'}

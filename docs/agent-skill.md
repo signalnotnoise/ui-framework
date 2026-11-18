@@ -82,6 +82,12 @@ the exact commit; local success does not establish the hosted performance gate.
 
 ## Before and after
 
+Phase 2 adds [Trace, the multi-pane log viewer](../samples/LogViewer/README.md),
+a runnable example of finite docking/split layout, bounded simulated ingestion,
+stable virtual row keys and retained selection. Run it with
+`dotnet run --project samples/LogViewer -c Release`. The sample owns its palette,
+clipboard, timer and window lifecycle; it introduces no framework API.
+
 ![The same native release workspace before and after applying hierarchy, spacing and scoped theme guidance](images/ui-framework-before-after.gif)
 
 These are actual offscreen WPF renders, composed in C# with the source kit.

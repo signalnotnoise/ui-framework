@@ -35,6 +35,7 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Native island performance](native-island-performance.md) | Supplemental style-scope workload, phase timings, native lifetime and presentation-context investigation. |
 | [Stress lab](stress-lab.md) | Interactive controls, automated workloads, and comparison commands. |
 | [Launchpad showcase](launchpad.md) | A release board with live editing, workflow actions, filters, and progress. |
+| [Trace log viewer](../samples/LogViewer/README.md) | Phase 2 showcase: resizable desktop panes, virtualized logs, filtering, simulated ingestion and a JSON inspector. |
 | [Layout and styling](layout-styling.md) | Weighted rows, adaptive columns, alignment, and scoped control themes. |
 | [Navigation](navigation.md) | Typed history, retained screen state, lifetime, and entry transitions. |
 | [Architecture graph](knowledge-graph.md) | Relationships between APIs, rendering, tests, and planned features. |

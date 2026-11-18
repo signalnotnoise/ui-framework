@@ -2,6 +2,7 @@
   <Project Path="UI Framework/UI Framework.csproj" />
   <Project Path="UI Framework.Wpf/UI Framework.Wpf.csproj" />
   <Folder Name="/samples/">
+    <Project Path="samples/LogViewer/LogViewer.csproj" />
     <Project Path="samples/Counter/Counter.csproj" />
     <Project Path="samples/WorkspaceComparison/WorkspaceComparison.csproj" />
     <Project Path="samples/NativeLifetime/NativeLifetime.csproj" />

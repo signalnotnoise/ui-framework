@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: November 15, 2026.
+Last updated: November 17, 2026.
 
 Version 1.0.0 libraries and symbols were published November 15 from `cbd85b8`.
 Both exact-commit hosted workflows passed all validation and 32 performance checks
@@ -25,6 +25,30 @@ and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
+
+### Agent skill and showcase phases
+
+FW-033 follow-up — Done November 15: sample-owned slim dark vertical scrollbar
+chrome replaces the bright default rails. All 60 native checks pass, including
+page commands and thumb dragging; wide/compact captures are refreshed.
+Framework templates remain unchanged.
+
+- **Phase 1 — FW-030: Done.** Generated public API reference, compiled behavioral
+  examples and release freshness checks. Commit `86295e4` passed full local and
+  hosted validation. [Implementation and verification](agent-skill.md#phase-1-verification--november-15-2026-fw-030).
+- **Phase 2 — FW-033: Done (November 15, 2026).** [Trace log viewer](../samples/LogViewer/README.md):
+  compact dark theme, source/severity/text filtering, stable keyed virtual rows,
+  retained selection/JSON inspector, split panes, bounded simulated ingestion
+  and empty states. The solution builds warning-free; 60 native sample checks
+  and all 180 framework tests pass. Wide/compact/empty captures were inspected;
+  run/verify commands, ownership and raw sample diagnostics are documented.
+  Both graph checks, reference freshness and documentation validation pass.
+  No framework API/template changes, hosted benchmark claim or new physical
+  accessibility acceptance. Prepared for commit/push November 17; no package
+  publication or new hosted performance acceptance is claimed.
+  No additional phases are agreed.
+
+Related CI-cost work is tracked separately under FW-031/FW-032 below.
 
 FW-032 — Done (November 15, 2026): locally reviewed `[docs only]` push marker
 retains fast graph/documentation/reference checks and skips Windows release
@@ -56,6 +80,7 @@ remains a separate exact-commit check after push.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| Done | FW-033 | P2 | Phase 2: multi-pane log viewer showcase | Done — 60 native checks, 180 regression tests and inspected captures |
 | Done | FW-032 | P2 | Keep docs-only pushes on fast validation | Done — seven selector tests; documented local marker |
 | Done | FW-031 | P2 | Choose push performance coverage locally before allocating runners | Done — six checks and documented marker policy |
 | Done | FW-030 | P2 | Generate skill API reference and verify behavioral examples | Done — local contract and freshness checks pass |
