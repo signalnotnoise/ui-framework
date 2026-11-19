@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: November 17, 2026.
+Last updated: November 19, 2026.
 
 Version 1.0.0 libraries and symbols were published November 15 from `cbd85b8`.
 Both exact-commit hosted workflows passed all validation and 32 performance checks
@@ -27,6 +27,13 @@ Dates below record evidence or updates, not delivery commitments.
 ## Work queue
 
 ### Agent skill and showcase phases
+
+FW-034 — In progress (November 19, 2026): finish the showcase follow-through:
+inspect exact-commit hosted CI and fix failures, exercise the live desktop
+workflow, record a 20–30 second walkthrough, and retain a controlled same-model,
+same-package coding comparison with and without the skill. Initial inspection:
+`49c623a` passed hosted performance and graph checks; Windows validation failed
+at the demo's keyboard-splitter assertion. No all-green claim is made.
 
 FW-033 follow-up — Done November 15: sample-owned slim dark vertical scrollbar
 chrome replaces the bright default rails. All 60 native checks pass, including

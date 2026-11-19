@@ -80,14 +80,33 @@ internal static class LogViewerChecks
             var count = model.Entries.Count; Pump(TimeSpan.FromSeconds(1.7)); Check(model.Entries.Count == count, "Paused timer does not ingest");
             Click("Hide sources"); Check(model.SourcesHidden.Value, "Collapse sources");
             Click("Show sources"); Check(!model.SourcesHidden.Value, "Restore sources");
-            model.StreamWidth.Value = 600; Flush();
-            Check(Find<GridSplitter>(host).Count() == 2 && model.StreamWidth.Value == 600, "Two retained split panes");
-            var splitter = Find<GridSplitter>(host).OrderBy(control => control.TranslatePoint(new Point(), host).X).Last();
-            var presentation = PresentationSource.FromVisual(host)!;
-            splitter.RaiseEvent(new KeyEventArgs(Keyboard.PrimaryDevice, presentation, 0, Key.Right) { RoutedEvent = Keyboard.KeyDownEvent });
-            Flush(); host.UpdateLayout();
-            splitter.RaiseEvent(new KeyEventArgs(Keyboard.PrimaryDevice, presentation, 0, Key.Right) { RoutedEvent = Keyboard.KeyUpEvent });
-            Flush(); Check(model.StreamWidth.Value > 600, "Native keyboard splitter updates bound extent");
+            foreach (var width in new[] { 1440d, 1040d })
+            {
+                window.Width = width; Flush();
+                model.StreamWidth.Value = 600; Flush(); host.UpdateLayout();
+                Check(Find<GridSplitter>(host).Count() == 2, "Two retained split panes");
+                var splitter = Find<GridSplitter>(host).OrderBy(control => control.TranslatePoint(new Point(), host).X).Last();
+                var grid = (Grid)VisualTreeHelper.GetParent(splitter);
+                var before = grid.ColumnDefinitions[0].ActualWidth;
+                var presentation = PresentationSource.FromVisual(host)!;
+                void Arrow(Key key)
+                {
+                    splitter.RaiseEvent(new KeyEventArgs(Keyboard.PrimaryDevice, presentation, 0, key) { RoutedEvent = Keyboard.KeyDownEvent });
+                    Flush(); host.UpdateLayout();
+                    splitter.RaiseEvent(new KeyEventArgs(Keyboard.PrimaryDevice, presentation, 0, key) { RoutedEvent = Keyboard.KeyUpEvent });
+                    Flush(); host.UpdateLayout();
+                }
+                // The preferred 600 DIP may be clamped by the real desktop viewport.
+                // Move inward first so both arrows have room at compact sizes.
+                Arrow(Key.Left);
+                Check(Math.Abs(model.StreamWidth.Value - (before - splitter.KeyboardIncrement)) < .1,
+                    $"Native keyboard splitter publishes left resize at {width} DIP");
+                Check(Math.Abs(grid.ColumnDefinitions[0].ActualWidth - model.StreamWidth.Value) < .1,
+                    "Bound extent matches native layout");
+                Arrow(Key.Right);
+                Check(Math.Abs(model.StreamWidth.Value - before) < .1,
+                    $"Native keyboard splitter restores width at {width} DIP");
+            }
             Click("Reset demo"); Check(model.Entries.Count == 2380 && model.SelectedId.Value == 2380, "Reset demo");
             window.Width = 1040; window.Height = 740; Flush();
             Capture(host, Path.Combine(output, "compact.png"));
