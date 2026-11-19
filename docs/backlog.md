@@ -28,6 +28,16 @@ Dates below record evidence or updates, not delivery commitments.
 
 ### Agent skill and showcase phases
 
+FW-035 — Done (November 19, 2026): README leads with the Trace screenshot
+linked to the committed 30-second walkthrough, Windows/stable .NET 10
+prerequisites, the source-run command and skill installation links. The agent
+pilot summary links its method and limitations. The committed MP4 matches the
+FW-034 verified recording byte-for-byte. Documentation, reference freshness and
+both graph checks pass. Scope is documentation/media, with no runtime/API
+changes. The follow-up post is drafted locally at
+`artifacts/showcase-review/reddit-followup-draft.md` for review and has not been
+posted or included in the public repository.
+
 FW-034 — Done (November 19, 2026): completed all four showcase follow-through items:
 inspect exact-commit hosted CI and fix failures, exercise the live desktop
 workflow, record a 20–30 second walkthrough, and retain a controlled same-model,

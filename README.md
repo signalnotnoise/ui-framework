@@ -10,9 +10,31 @@ A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the 
 
 See the [documentation index](docs/README.md) for API guides, architectural decisions, benchmarks, and the next milestone.
 
-![Binding stress lab from samples/Counter: a 50-item project board with native WPF text boxes, check boxes and buttons, summary cards, and a shared work item inspector](docs/images/stress-lab.png)
+## Run Trace, the desktop log viewer
 
-*The `samples/Counter` binding stress lab, rendered by SignalNotNoise.UI.Wpf as native WPF controls. This is the offscreen capture from the automated `--stress --snapshot` run in CI on `windows-latest`.*
+Trace demonstrates resizable panes, keyed virtual rows, live filtering and a
+retained JSON inspector using native WPF controls. All events are simulated;
+it does not connect to a server or read your logs.
+
+[![Trace: native multi-pane log viewer with virtualized events and a JSON inspector](docs/images/log-viewer-wide.png)](docs/images/trace-walkthrough.mp4)
+
+**[Watch or download the 30-second walkthrough (MP4)](docs/images/trace-walkthrough.mp4)** —
+live ingestion, search, event selection, pause and Copy JSON. Silent recording
+of the running app; not a performance measurement.
+
+Requires **Windows and a stable .NET 10 SDK**. Clone or download this repository,
+open a terminal in its root directory, then run:
+
+```powershell
+dotnet run --project samples/LogViewer -c Release
+```
+
+The command restores and builds the sample and its project-referenced libraries.
+An installed .NET 11 preview alone does not satisfy `global.json`.
+[Demo controls, ownership and verification](samples/LogViewer/README.md).
+
+Building with an AI coding tool? [Install the UI Framework skill](docs/agent-skill.md#install-and-invoke)
+or [read its rules and linked API reference](skills/ui-framework/SKILL.md).
 
 ## NuGet
 
@@ -51,19 +73,7 @@ workspace. Its [README](samples/PackageWorkspace/README.md) explains standalone
 setup, editing, native ownership, shutdown and upgrade checks. This tests published
 packages; the source examples below use project references.
 
-## Try the product showcase
-
-**Trace** is a multi-pane desktop log viewer with a compact dark palette,
-keyed virtual rows, source/severity/search filters and a retained JSON inspector.
-It uses simulated data and the existing public APIs.
-
-```powershell
-dotnet run --project samples/LogViewer -c Release
-```
-
-See the [log viewer walkthrough and verification](samples/LogViewer/README.md).
-
-![Trace: native multi-pane log viewer with virtualized events and a JSON inspector](docs/images/log-viewer-wide.png)
+## Try the release-planning showcase
 
 Launchpad is a release-planning application with Overview, Board, and Details screens, retained state on Back, and reduced-motion-aware transitions. Move cards between Planned, Building, and Shipped, edit details, filter by title/owner/area, and add ideas while release metrics update.
 
@@ -78,6 +88,12 @@ The demo uses session-only sample data. The existing stress lab remains the defa
 Use the [UI Framework skill](skills/ui-framework/SKILL.md) to help coding agents
 build clean native C# interfaces with retained state, responsive layout and
 scoped themes. [Install it and reproduce the before/after](docs/agent-skill.md).
+
+In one controlled same-model, same-package coding task, the draft supplied with
+the skill and references compiled and passed ten behavioral checks unchanged.
+The draft without that context failed compilation and still failed after one
+compiler-feedback correction. This is one constrained pilot, not a general
+success-rate claim. [Method, results and limitations](docs/agent-skill.md#controlled-first-draft-pilot--november-19-2026-fw-034).
 
 ![Native C# release workspace before and after applying the UI Framework skill guidance](docs/images/ui-framework-before-after.gif)
 
