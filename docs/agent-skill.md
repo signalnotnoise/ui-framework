@@ -134,3 +134,48 @@ instruction/media fixture establishes no new performance or release claim.
 Keyboard navigation, physical IME, UI Automation and contrast-mode interaction
 were not exercised in this capture task; the GIF is not acceptance evidence
 for those behaviors. No package publication is part of this work.
+
+## Controlled first-draft pilot — November 19, 2026 (FW-034)
+
+One paired task used Codex CLI 0.169.0, `gpt-6-astra`, medium reasoning,
+.NET SDK 10.0.402 and the public `SignalNotNoise.UI.Wpf` package pinned to
+`[1.0.0]`. All three builds resolved identical package-lock contents (SHA-256
+`31e6dc716d739e922524896f78d6064c255604ec550ff05e365d75ba6599f44a`).
+The task requested a filling event workspace with retained count/query/order,
+bound controls, case-insensitive filtering and keyed virtual rows at 320 DIP.
+
+Fresh ephemeral sessions received the same task. Only the treatment received
+`SKILL.md`, generated API surface, behavioral examples and composition reference.
+User configuration and project instructions were excluded; host skill discovery
+and skill descriptions were disabled using the CLI's experimental feature flags.
+Shell tools were disabled and both prompts prohibited tools. Retained JSON event
+traces show no tool calls. This is a constrained context-injection experiment,
+not a test of automatic skill discovery or an unrestricted coding agent.
+
+- **Without supplied skill:** six first-draft compiler errors, referring to five
+  distinct nonexistent view types (`VStack`, `Text`, `Button`, `TextField`,
+  `VirtualList<T>`). A single compiler-feedback correction changed factories but
+  still failed: invented two-argument `TextField` and generic `UI.VirtualList<T>`.
+  Both drafts also contain an unsupported `.Fill()` call, which the compiler
+  did not separately diagnose after upstream errors. Behavioral checks could
+  not run; state fields alone do not establish correct rendering or identity.
+- **With supplied skill:** zero compiler warnings/errors; the unedited first
+  draft passed ten checks for filling layout, finite virtual height, stable
+  keys, button actions, notifications, case-insensitive bound edits and retained
+  count/query/order across repeated builds. No correction was needed.
+
+The external harness initially used a nonexistent `ViewKind.Dock`; that harness
+mistake was corrected for both conditions before scoring. `Dock` expands into
+`FlexColumn`/`FlexRow`. Original harness-error logs were preserved and were not
+fed to the model or counted as model failures. The corrected harness inspects
+core view descriptions and state; it does not prove native visual/accessibility
+acceptance for the generated component.
+
+Raw prompts, responses, event traces, generated source, compiler diagnostics,
+lockfiles, harness, results and source hashes are retained locally under
+`artifacts/showcase-review/trial/`; the run, compile and correction scripts are
+under `artifacts/showcase-review/`. Both first drafts were preserved unchanged.
+One fixed-order pair with one allowed repair is illustrative, not a success-rate
+estimate. The treatment bundles API reference and behavioral guidance, so this
+pilot cannot attribute the result to either part separately. Repeated independent
+tasks and randomized condition order are needed for a broader claim.

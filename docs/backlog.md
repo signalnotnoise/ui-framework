@@ -35,6 +35,24 @@ same-package coding comparison with and without the skill. Initial inspection:
 `49c623a` passed hosted performance and graph checks; Windows validation failed
 at the demo's keyboard-splitter assertion. No all-green claim is made.
 
+- CI correction committed/pushed as `e624f76`: compare actual laid-out width,
+  exercise Left/Right at wide and compact sizes, and check native/bound extent
+  agreement. All 66 sample checks pass locally. [Hosted run 44522481239](https://github.com/signalnotnoise/ui-framework/actions/runs/44522481239)
+  passes all three jobs on exact commit `e624f76`: graph checks, Windows
+  validation (180 framework tests, 66 demo checks, full release validation,
+  API guards and package checks) and the full unchanged-baseline performance gate.
+  A separate local full-suite attempt aborted in
+  `HeldPeerDoesNotRetainUnrelatedDisposedEditors` after its 60-second timeout;
+  this is retained as an unresolved local result, not a passing suite. That
+  timeout did not reproduce in the hosted full run.
+- Agent pilot complete: same model/package/task, skill-backed first draft passes
+  ten checks; no-skill draft fails compilation and still fails after one repair.
+  [Method, limitations and raw-evidence location](agent-skill.md#controlled-first-draft-pilot--november-19-2026-fw-034).
+- Live desktop interaction and 20–30 second recording pending: automation reads
+  the demo's accessibility tree but cannot activate its window; captures show
+  wallpaper. User assistance was requested. Static verification is not being
+  substituted for the requested live pass or recording.
+
 FW-033 follow-up — Done November 15: sample-owned slim dark vertical scrollbar
 chrome replaces the bright default rails. All 60 native checks pass, including
 page commands and thumb dragging; wide/compact captures are refreshed.
