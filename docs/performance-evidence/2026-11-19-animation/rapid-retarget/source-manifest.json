@@ -1,0 +1,274 @@
+[
+  {
+    "path": "Directory.Build.props",
+    "sha256": "BE21BDB1A44BF800F10CBD056CBAB55F29FD0471C599E8FE85443E6519BCA479"
+  },
+  {
+    "path": "global.json",
+    "sha256": "20C93CA7812D0A9825EEF71217156F95AB2F4FE5AADFEB22EBC1C24B630018D3"
+  },
+  {
+    "path": "tools\\AnimationDiagnostics\\AnimationDiagnostics.csproj",
+    "sha256": "488E8BA48566633091FDFE1BA10F5DB40DDEFF652D8FD985DE02A1861BCAD115"
+  },
+  {
+    "path": "tools\\AnimationDiagnostics\\Program.cs",
+    "sha256": "06FF3B0A2FD9013A21C900E1E260F4E277AB4430148E86A34197AD6ADFAF9733"
+  },
+  {
+    "path": "UI Framework\\Binding.cs",
+    "sha256": "566C0E871055778345FBED2AC4F744B12CF8B3BF0F646F02250A90B95BDB6E1D"
+  },
+  {
+    "path": "UI Framework\\Component.cs",
+    "sha256": "5BC78429499713784025706A8B7DCE888D678C676E9FE5E5D6332D13B565C9BC"
+  },
+  {
+    "path": "UI Framework\\Computed.cs",
+    "sha256": "6BDD6173D689A165E11979F51766C4777E4D9C4927591D0A3A6B48788362D40E"
+  },
+  {
+    "path": "UI Framework\\Dependencies.cs",
+    "sha256": "6FADBF442BC3D7FC50D099C4EBB488B6602719A289C2CFACC9FFA20E5B015224"
+  },
+  {
+    "path": "UI Framework\\IState.cs",
+    "sha256": "1A1E426442541A17A2BDB7733ADD8B27BF61AD6BEB9AA50F7BD7930565521CB8"
+  },
+  {
+    "path": "UI Framework\\ObservableState.cs",
+    "sha256": "AA9FF307E5F301B80C261913438CD9DA315044EFF79CE511152589D5FD71C5E8"
+  },
+  {
+    "path": "UI Framework\\PublicAPI.Shipped.txt",
+    "sha256": "3D2C897362A328402F8AF21760FD39277DE468633B4CB8016C0EA0067032CA7C"
+  },
+  {
+    "path": "UI Framework\\PublicAPI.Unshipped.txt",
+    "sha256": "F9E8A71D5367FE66FEABA1B9DCE8156F803FBA016295C21072C83A98FAD7BF70"
+  },
+  {
+    "path": "UI Framework\\State.cs",
+    "sha256": "7B456332F93567E0B9E5159F3BC4289A7C0325ACBF3A1A98BE4E68EF52FD951A"
+  },
+  {
+    "path": "UI Framework\\StateList.cs",
+    "sha256": "FF4DB976BABDDE75CF769861856B67AA519F003E62C2AC4A824740B6893F0DCE"
+  },
+  {
+    "path": "UI Framework\\StateNotifications.cs",
+    "sha256": "FB8E1D0EE08C9630DF94424D7B81FD5A70E73F67A9C78FD0874B2BD8887932F7"
+  },
+  {
+    "path": "UI Framework\\UI Framework.csproj",
+    "sha256": "EAE6E08AF20A00DFA0F791D469A1D4C4DEF6906C6A0CBEFA789AC5EB6DAE5725"
+  },
+  {
+    "path": "UI Framework\\UI.cs",
+    "sha256": "FE377B60FB24E8283E73A160DC80FF88C25D709D5E30D9B7D3F55C8A6F3D43B9"
+  },
+  {
+    "path": "UI Framework\\View.cs",
+    "sha256": "BEFA3DD13A951D52D9B9E7E197CDDAF74A89001D7339472932C154C09C77DB6C"
+  },
+  {
+    "path": "UI Framework\\ViewKind.cs",
+    "sha256": "E9EFBBFF9685C23012A61C7A18BF8AE6B312BB0232677B39B021209C82C5A4B8"
+  },
+  {
+    "path": "UI Framework\\ViewSession.cs",
+    "sha256": "A70B4E9A8148B13D5F2DFE206416A16CC4F62A15BBE2EE6F796DA49DB1017577"
+  },
+  {
+    "path": "UI Framework\\Animation\\AnimationEasing.cs",
+    "sha256": "528F92B8B35C5A126ACDDD412CF906E9968947F9A097D73E191D293FCD344867"
+  },
+  {
+    "path": "UI Framework\\Animation\\AnimationProperties.cs",
+    "sha256": "CAD31E133E74736A03E014C1381E10903FEA7C4CFE927149C7756ED43F25C356"
+  },
+  {
+    "path": "UI Framework\\Animation\\AnimationSpec.cs",
+    "sha256": "9564A94D8315E86CC1DEB0F3A54CBD4F083D0A8F3E93510AB910EC606ADFEDAD"
+  },
+  {
+    "path": "UI Framework\\Animation\\ViewMotion.cs",
+    "sha256": "4DFFFB6ACC7B3E54A66A1D3D7702CFEC2A11A08386B94A04ECBEF6C6FD148093"
+  },
+  {
+    "path": "UI Framework\\Layout\\SplitAxis.cs",
+    "sha256": "3265D57614D6E1804CC3F03A100A1CCB44E72E80EE0F84D30DC423D4D0BA6B97"
+  },
+  {
+    "path": "UI Framework\\Layout\\SplitPaneLayout.cs",
+    "sha256": "6CA60FB6A0677ED9DA815666DB87E7A046A1CD9F46A9BEE4EA764952EA0FE385"
+  },
+  {
+    "path": "UI Framework\\Layout\\ViewAlignment.cs",
+    "sha256": "B6DD915729F42FB8419E9F60872461571DAE95189085FD7996B9449A826C6077"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationEntry.cs",
+    "sha256": "69AA6012F399114D0160D9B8A4462B2EDE14E2A5B98232394A04A8D74F43E562"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationStack.cs",
+    "sha256": "D359A617C404710FA5AC0FDCAE8BD16D9C1780B7839C095DA95DC15D8E7181BF"
+  },
+  {
+    "path": "UI Framework\\Navigation\\NavigationTransition.cs",
+    "sha256": "6CDC53175B9E2C96EF9B7CB474063A52943DA47DEA56548D7F2F19D1B0185DDA"
+  },
+  {
+    "path": "UI Framework\\Styling\\ButtonStyleKind.cs",
+    "sha256": "90BA5A95F25CA0AEAC22447F1B37F64E8633C596AFF38F95A50214737ABE0798"
+  },
+  {
+    "path": "UI Framework\\Styling\\ThemeTokens.cs",
+    "sha256": "DED33F526A53D237BC276C74918A66FD6BF1AFEA4ABB41B4388C9DABE09D77F4"
+  },
+  {
+    "path": "UI Framework.Wpf\\PublicAPI.Shipped.txt",
+    "sha256": "8997004061AD9BCF48A86CC1736A7A7FB3ECB33D53DA174E57BF19EBFDCD6A90"
+  },
+  {
+    "path": "UI Framework.Wpf\\PublicAPI.Unshipped.txt",
+    "sha256": "2112703C4341CF730AA0C43ED1D35E67D320217896C8815D380764AEB1E84BC7"
+  },
+  {
+    "path": "UI Framework.Wpf\\UI Framework.Wpf.csproj",
+    "sha256": "F8E0D8F3FD7CCD1616BA4844B34E0ECD4A7B46267E0B3ABF01B267C0AFABBF8D"
+  },
+  {
+    "path": "UI Framework.Wpf\\ViewHost.cs",
+    "sha256": "7399BF18D2FE93A1CF92C55BEA1808DD50819B1F269ED77CE8C2F2166662107B"
+  },
+  {
+    "path": "UI Framework.Wpf\\WpfComCleanupPolicy.cs",
+    "sha256": "CEB48C2B6D88D215548288C4F57985576EE9D7FBD32E1EB3326DFF79646E8978"
+  },
+  {
+    "path": "UI Framework.Wpf\\Animation\\AnimationSettings.cs",
+    "sha256": "55FCF1903E57C52BF0CFE9574F64DE9DACCA87400BD55250215CA05A5D16EDD6"
+  },
+  {
+    "path": "UI Framework.Wpf\\Animation\\NodeAnimation.cs",
+    "sha256": "39CA13A9D4D43085DB03EABB2843B310E8859751DA8740730859B037ECC73631"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeControlHost.cs",
+    "sha256": "FBAC6A2B4A64FD80DFD09CFC3ED1F21AC94D52802D75D58C82ACD9ACD5909CC2"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeStyleResources.cs",
+    "sha256": "38329D31F345184CA65C3D72F5C9A71AFF543A3330DD3222394C21D489485B76"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeStyleScope.cs",
+    "sha256": "80CF8CF71781D5FBC84906D2675E7910AC114702A44BB16A2ED6DBF2597FC550"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\NativeViewDescriptor.cs",
+    "sha256": "2497AA4444D836B136D9384E85566D6ECB6004039828DF47354D75E33B6B83DC"
+  },
+  {
+    "path": "UI Framework.Wpf\\Interop\\WpfUI.cs",
+    "sha256": "17583710668FD22D5791FD42D0C07111C063600FA7CAB2562F35A76E5CE92987"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\AdaptivePanel.cs",
+    "sha256": "8FD2D5A3FF7C8F54674206DB42AE0F3507BF757E405834DA0553338A35D29EF9"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\FlexColumnPanel.cs",
+    "sha256": "AFD3DF354361F688A473925220878E7562A36E95CBCDC14C5E713F9E50D2C62E"
+  },
+  {
+    "path": "UI Framework.Wpf\\Layout\\SplitPanePanel.cs",
+    "sha256": "65EA83094166928682F139072B24905A34809C908C3CC3F6AFCF8225BAB1C33C"
+  },
+  {
+    "path": "UI Framework.Wpf\\Navigation\\NavigationSnapshot.cs",
+    "sha256": "A1AC0703CC77D123727B37F2FA86F33936CADA85055FEFA925ADEBA3B010B112"
+  },
+  {
+    "path": "UI Framework.Wpf\\Navigation\\NavigationSurface.cs",
+    "sha256": "1B3AD43233FB54133E1626BB34DF90DCBECD55B972D269327652F49C58853A72"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\FocusIdentity.cs",
+    "sha256": "1B39939D285EE136E6B103CE3B3287B9FC0979A35473AC54AFFE1EEA99E4327D"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\Node.cs",
+    "sha256": "65618B16DA1DAEC44F83E622368EAFAAE8D3A8EB25081D663297D1D5EF95ECBC"
+  },
+  {
+    "path": "UI Framework.Wpf\\Rendering\\NodeSnapshot.cs",
+    "sha256": "56750C0EB42E3C217DB0D8442CA010E329FCD13FBD203B0EA7731908779C3DCD"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ButtonContentPresenter.cs",
+    "sha256": "1198E0375EE94FBEB5028777C205CE5ABD8745EEB8AD9E00E1D03F539039C65C"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\PickerStyles.cs",
+    "sha256": "8F773A5ECAE2421170C8FD05F5F5B22D1B92F86A2BFAC34B9C44F3249B73696F"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\TextBoxStyles.cs",
+    "sha256": "3488ADA41BDB4B6C7130917A966F65852FD90EC878E65D4D7E2266856F2AB6B3"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ThemeColor.cs",
+    "sha256": "EE5308E8FC77D8DC3F978DF5F7E3BAFEE93B14AC0F75C4351F977B3DEA871101"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ThemePalette.cs",
+    "sha256": "E8B69F1DA338E6B1444D517782ED99A6F245100F255AAA6C7A8A2D08C23005E6"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ThemeStyles.cs",
+    "sha256": "86B3DE17408FCA7CB3BF6C5DD85F6A5F89C491897777BDA3C0E31E40B7246821"
+  },
+  {
+    "path": "UI Framework.Wpf\\Styling\\ToggleStyles.cs",
+    "sha256": "95498053A7968E67A5A0E17313E60C9B0755B33414F8AFC2EF2A39EAC3937F79"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\RowFocusSnapshot.cs",
+    "sha256": "DD9FE207979DDB89FC80A823758087931CB1A416DC22F6DC4E5309EC6D36C886"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualListAutomationPeer.cs",
+    "sha256": "36B14B7A6672FB0B55E6AA37A1387AAA483E3E74454FFE7AF6C5FFE537125ECB"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualListControl.cs",
+    "sha256": "0560E2C0B51D32A99B0EF432A63A053A00C98DA42F18EB7908B82FDDC8437130"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualListSnapshot.cs",
+    "sha256": "6947FA3F0BA2E9B5303EDFC3102571155607A04950C48D6606E0E4EA08C537FF"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRow.cs",
+    "sha256": "760A3E047306FDA60D45E70562D5345D17F744F865B917B44704BE63FA6DCD3E"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRowAutomationPeer.cs",
+    "sha256": "A1117CD90FB4C12B20F8D9F61D2A7C9BB43CFD7767A37ECE1135518C3AC807AF"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRowCollection.cs",
+    "sha256": "39217D54E35B3176FC117555F135159613312CFEE42E7BA04E1738E52C876CBC"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRowPresenter.cs",
+    "sha256": "5E0D50DC513161E558E743DA5A778A0B88B10563FDF389581AE8232CC6C5CDA8"
+  },
+  {
+    "path": "UI Framework.Wpf\\Virtualization\\VirtualRowSavedState.cs",
+    "sha256": "EB9B926256CDECA185988D65E4B0AEDDEAB85D6059095C5A62D39726AA0BE749"
+  }
+]

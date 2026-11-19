@@ -42,6 +42,16 @@ public sealed record View(ViewKind Kind)
     public ButtonStyleKind ButtonAppearance { get; init; }
     public bool Enabled { get; init; } = true;
     public NavigationTransition Transition { get; init; } = NavigationTransition.FadeSlide;
+    public ViewMotion? Motion { get; init; }
+    public View Opacity(double value) => WithMotion((Motion ?? ViewMotion.Default) with { Opacity = value });
+    public View Translate(double x, double y) => WithMotion((Motion ?? ViewMotion.Default) with { X = x, Y = y });
+    public View Animate(AnimationProperties properties, AnimationSpec? animation) =>
+        WithMotion((Motion ?? ViewMotion.Default) with { Properties = properties, Animation = animation });
+    private View WithMotion(ViewMotion motion)
+    {
+        motion.Validate();
+        return this with { Motion = motion };
+    }
     public View Flex(double weight = 1) => this with { FlexWeight = Dimension(weight) };
     public View Align(ViewAlignment horizontal, ViewAlignment vertical = ViewAlignment.Stretch) => this with { Horizontal = horizontal, Vertical = vertical };
     public View ButtonStyle(ButtonStyleKind style) => this with { ButtonAppearance = style };

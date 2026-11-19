@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f23b8413-4385-4607-b31d-41c65e8358bd" name="iotero@IOTERO-MSI76 2026-11-19 16:06:08" runUser="SYSTEMS\iotero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-19T16:06:08.4652339-05:00" queuing="2026-11-19T16:06:08.4652342-05:00" start="2026-11-19T16:06:06.3768774-05:00" finish="2026-11-19T16:06:09.0216016-05:00" />
+  <TestSettings name="default" id="24cbf9b4-b0b0-461c-a2cd-94950b402286">
+    <Deployment runDeploymentRoot="iotero_IOTERO-MSI76_2026-11-19_16_06_08" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8e3f64b2-cc1d-4173-9feb-6f9f7e507fc8" testId="d5b0366d-86f6-be62-9184-f769cc79089d" testName="ZeroDurationAndSuppressionCancelAllClocks" computerName="IOTERO-MSI76" duration="00:00:00.0054548" startTime="2026-11-19T16:06:08.4343590-05:00" endTime="2026-11-19T16:06:08.4399522-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e3f64b2-cc1d-4173-9feb-6f9f7e507fc8" />
+    <UnitTestResult executionId="8f4a09cd-09ef-4d9a-88c1-3d252ca6a5a7" testId="f7e6c09e-2641-5f84-4e9f-240bcfddf875" testName="CompletedClocksReleaseAndLeaveDestination" computerName="IOTERO-MSI76" duration="00:00:00.0061134" startTime="2026-11-19T16:06:08.4492259-05:00" endTime="2026-11-19T16:06:08.4554594-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f4a09cd-09ef-4d9a-88c1-3d252ca6a5a7" />
+    <UnitTestResult executionId="99a5f902-efe7-434e-ab95-b9383a4ee3d0" testId="467833a7-561d-dc82-857d-e020d3cdb57f" testName="RetargetStartsAtDisplayedValueAndUnchangedRefreshDoesNotRestart" computerName="IOTERO-MSI76" duration="00:00:00.0078280" startTime="2026-11-19T16:06:08.4140564-05:00" endTime="2026-11-19T16:06:08.4220298-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99a5f902-efe7-434e-ab95-b9383a4ee3d0" />
+    <UnitTestResult executionId="30912dcd-cbd7-4f2b-a4ba-3f7c0a7fb8d7" testId="6ecccd0d-6046-62ba-98d4-04eae91b9dc3" testName="InvalidDirectDescriptionsDoNotPatchMountedTree" computerName="IOTERO-MSI76" duration="00:00:00.0058604" startTime="2026-11-19T16:06:08.4837113-05:00" endTime="2026-11-19T16:06:08.4896903-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30912dcd-cbd7-4f2b-a4ba-3f7c0a7fb8d7" />
+    <UnitTestResult executionId="bc5c68b7-1ce6-4615-8554-fcb6049748d7" testId="625ada33-62d3-85d8-99dc-47c0581102a5" testName="DisposedControllerAndFrameCollectEvenWithOldClockHeld" computerName="IOTERO-MSI76" duration="00:00:00.0249767" startTime="2026-11-19T16:06:08.5330528-05:00" endTime="2026-11-19T16:06:08.5581791-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc5c68b7-1ce6-4615-8554-fcb6049748d7" />
+    <UnitTestResult executionId="fe6b69b9-2ff4-47ba-9f45-74c1b521136e" testId="665183a4-c7ba-1e42-9169-fa7e589e5f29" testName="RecyclingDropsMotionAndRestoresOnlyTarget" computerName="IOTERO-MSI76" duration="00:00:00.3073951" startTime="2026-11-19T16:06:08.5603191-05:00" endTime="2026-11-19T16:06:08.8688821-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe6b69b9-2ff4-47ba-9f45-74c1b521136e" />
+    <UnitTestResult executionId="4f1baf3f-bbd7-4d03-8e1b-b6a2e0e2f300" testId="ceb6defb-2b12-8d9f-bab7-5e3428f82fe3" testName="InheritedMotionSwitchAndUnloadSettleImmediately" computerName="IOTERO-MSI76" duration="00:00:00.0090076" startTime="2026-11-19T16:06:08.4400155-05:00" endTime="2026-11-19T16:06:08.4491555-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f1baf3f-bbd7-4d03-8e1b-b6a2e0e2f300" />
+    <UnitTestResult executionId="3cfa4d0c-1f20-4c82-bbdf-b095932f6b61" testId="83619163-e22a-e757-a9f8-b64a6b0a6348" testName="RemovingOnePropertySettlesItWithoutRestartingOthers" computerName="IOTERO-MSI76" duration="00:00:00.0120369" startTime="2026-11-19T16:06:08.4220982-05:00" endTime="2026-11-19T16:06:08.4342849-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3cfa4d0c-1f20-4c82-bbdf-b095932f6b61" />
+    <UnitTestResult executionId="a3068cbb-3c6c-4efb-a0e7-bc1902659843" testId="597d87ed-889b-f238-5beb-340dd20368cf" testName="RapidRetargetingKeepsOnlyCurrentClocksAndNoBodyWork" computerName="IOTERO-MSI76" duration="00:00:00.0279435" startTime="2026-11-19T16:06:08.4555289-05:00" endTime="2026-11-19T16:06:08.4836090-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3068cbb-3c6c-4efb-a0e7-bc1902659843" />
+    <UnitTestResult executionId="be8b9ec9-4115-40b4-890b-c998f2e64f88" testId="d5ee8886-06b4-e24d-5e6a-68844296cb96" testName="OrdinaryViewsAllocateNoControllerOrTransform" computerName="IOTERO-MSI76" duration="00:00:00.6764840" startTime="2026-11-19T16:06:07.4686078-05:00" endTime="2026-11-19T16:06:08.1609763-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be8b9ec9-4115-40b4-890b-c998f2e64f88" />
+    <UnitTestResult executionId="0f08b0d9-b628-4dd1-9e3f-6f649687db7f" testId="ddc81b1d-c00d-dcf2-d2a6-475fd5914eaa" testName="MountAndUnloadedUpdatesSettleAtTargets" computerName="IOTERO-MSI76" duration="00:00:00.2192654" startTime="2026-11-19T16:06:08.1647077-05:00" endTime="2026-11-19T16:06:08.3842280-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f08b0d9-b628-4dd1-9e3f-6f649687db7f" />
+    <UnitTestResult executionId="57cf1a14-3ea8-4ad1-ad7a-15540ecdad16" testId="01874624-a460-3098-e9c6-6f80fb723e0a" testName="NativeTransformIsUntouchedAndOpacityDoesNotDisableInput" computerName="IOTERO-MSI76" duration="00:00:00.0427529" startTime="2026-11-19T16:06:08.4897412-05:00" endTime="2026-11-19T16:06:08.5329437-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57cf1a14-3ea8-4ad1-ad7a-15540ecdad16">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method UI_Framework.Checks.AnimationTests.NativeTransformIsUntouchedAndOpacityDoesNotDisableInput threw exception: &#xD;
+System.InvalidOperationException: Sequence contains no elements</Message>
+          <StackTrace>    at System.Linq.ThrowHelper.ThrowNoElementsException()&#xD;
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)&#xD;
+   at UI_Framework.Checks.AnimationTests.&lt;&gt;c.&lt;NativeTransformIsUntouchedAndOpacityDoesNotDisableInput&gt;b__11_0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AnimationTests.cs:line 183&#xD;
+   at StaTestRunner.&lt;&gt;c__DisplayClass0_0.&lt;Run&gt;b__0() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 18&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at StaTestRunner.Run(Action test, String testName) in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\StaTestRunner.cs:line 36&#xD;
+   at UI_Framework.Checks.AnimationTests.NativeTransformIsUntouchedAndOpacityDoesNotDisableInput() in C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\AnimationTests.cs:line 178&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="OrdinaryViewsAllocateNoControllerOrTransform" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d5ee8886-06b4-e24d-5e6a-68844296cb96">
+      <Execution id="be8b9ec9-4115-40b4-890b-c998f2e64f88" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="OrdinaryViewsAllocateNoControllerOrTransform" />
+    </UnitTest>
+    <UnitTest name="ZeroDurationAndSuppressionCancelAllClocks" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="d5b0366d-86f6-be62-9184-f769cc79089d">
+      <Execution id="8e3f64b2-cc1d-4173-9feb-6f9f7e507fc8" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="ZeroDurationAndSuppressionCancelAllClocks" />
+    </UnitTest>
+    <UnitTest name="RemovingOnePropertySettlesItWithoutRestartingOthers" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="83619163-e22a-e757-a9f8-b64a6b0a6348">
+      <Execution id="3cfa4d0c-1f20-4c82-bbdf-b095932f6b61" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="RemovingOnePropertySettlesItWithoutRestartingOthers" />
+    </UnitTest>
+    <UnitTest name="RecyclingDropsMotionAndRestoresOnlyTarget" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="665183a4-c7ba-1e42-9169-fa7e589e5f29">
+      <Execution id="fe6b69b9-2ff4-47ba-9f45-74c1b521136e" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="RecyclingDropsMotionAndRestoresOnlyTarget" />
+    </UnitTest>
+    <UnitTest name="CompletedClocksReleaseAndLeaveDestination" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="f7e6c09e-2641-5f84-4e9f-240bcfddf875">
+      <Execution id="8f4a09cd-09ef-4d9a-88c1-3d252ca6a5a7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="CompletedClocksReleaseAndLeaveDestination" />
+    </UnitTest>
+    <UnitTest name="RapidRetargetingKeepsOnlyCurrentClocksAndNoBodyWork" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="597d87ed-889b-f238-5beb-340dd20368cf">
+      <Execution id="a3068cbb-3c6c-4efb-a0e7-bc1902659843" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="RapidRetargetingKeepsOnlyCurrentClocksAndNoBodyWork" />
+    </UnitTest>
+    <UnitTest name="InheritedMotionSwitchAndUnloadSettleImmediately" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="ceb6defb-2b12-8d9f-bab7-5e3428f82fe3">
+      <Execution id="4f1baf3f-bbd7-4d03-8e1b-b6a2e0e2f300" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="InheritedMotionSwitchAndUnloadSettleImmediately" />
+    </UnitTest>
+    <UnitTest name="InvalidDirectDescriptionsDoNotPatchMountedTree" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="6ecccd0d-6046-62ba-98d4-04eae91b9dc3">
+      <Execution id="30912dcd-cbd7-4f2b-a4ba-3f7c0a7fb8d7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="InvalidDirectDescriptionsDoNotPatchMountedTree" />
+    </UnitTest>
+    <UnitTest name="MountAndUnloadedUpdatesSettleAtTargets" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="ddc81b1d-c00d-dcf2-d2a6-475fd5914eaa">
+      <Execution id="0f08b0d9-b628-4dd1-9e3f-6f649687db7f" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="MountAndUnloadedUpdatesSettleAtTargets" />
+    </UnitTest>
+    <UnitTest name="NativeTransformIsUntouchedAndOpacityDoesNotDisableInput" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="01874624-a460-3098-e9c6-6f80fb723e0a">
+      <Execution id="57cf1a14-3ea8-4ad1-ad7a-15540ecdad16" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="NativeTransformIsUntouchedAndOpacityDoesNotDisableInput" />
+    </UnitTest>
+    <UnitTest name="RetargetStartsAtDisplayedValueAndUnchangedRefreshDoesNotRestart" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="467833a7-561d-dc82-857d-e020d3cdb57f">
+      <Execution id="99a5f902-efe7-434e-ab95-b9383a4ee3d0" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="RetargetStartsAtDisplayedValueAndUnchangedRefreshDoesNotRestart" />
+    </UnitTest>
+    <UnitTest name="DisposedControllerAndFrameCollectEvenWithOldClockHeld" storage="c:\users\iotero\dev\personal\ui framework\tests\ui framework.checks\bin\release\net10.0-windows\ui framework.checks.dll" id="625ada33-62d3-85d8-99dc-47c0581102a5">
+      <Execution id="bc5c68b7-1ce6-4615-8554-fcb6049748d7" />
+      <TestMethod codeBase="C:\Users\iotero\Dev\personal\UI Framework\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll" adapterTypeName="executor://mstestadapter/v2" className="UI_Framework.Checks.AnimationTests" name="DisposedControllerAndFrameCollectEvenWithOldClockHeld" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d5b0366d-86f6-be62-9184-f769cc79089d" executionId="8e3f64b2-cc1d-4173-9feb-6f9f7e507fc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7e6c09e-2641-5f84-4e9f-240bcfddf875" executionId="8f4a09cd-09ef-4d9a-88c1-3d252ca6a5a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="467833a7-561d-dc82-857d-e020d3cdb57f" executionId="99a5f902-efe7-434e-ab95-b9383a4ee3d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ecccd0d-6046-62ba-98d4-04eae91b9dc3" executionId="30912dcd-cbd7-4f2b-a4ba-3f7c0a7fb8d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="625ada33-62d3-85d8-99dc-47c0581102a5" executionId="bc5c68b7-1ce6-4615-8554-fcb6049748d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="665183a4-c7ba-1e42-9169-fa7e589e5f29" executionId="fe6b69b9-2ff4-47ba-9f45-74c1b521136e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ceb6defb-2b12-8d9f-bab7-5e3428f82fe3" executionId="4f1baf3f-bbd7-4d03-8e1b-b6a2e0e2f300" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83619163-e22a-e757-a9f8-b64a6b0a6348" executionId="3cfa4d0c-1f20-4c82-bbdf-b095932f6b61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="597d87ed-889b-f238-5beb-340dd20368cf" executionId="a3068cbb-3c6c-4efb-a0e7-bc1902659843" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5ee8886-06b4-e24d-5e6a-68844296cb96" executionId="be8b9ec9-4115-40b4-890b-c998f2e64f88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddc81b1d-c00d-dcf2-d2a6-475fd5914eaa" executionId="0f08b0d9-b628-4dd1-9e3f-6f649687db7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01874624-a460-3098-e9c6-6f80fb723e0a" executionId="57cf1a14-3ea8-4ad1-ad7a-15540ecdad16" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="12" executed="12" passed="11" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

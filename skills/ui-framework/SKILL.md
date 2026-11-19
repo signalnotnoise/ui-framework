@@ -30,6 +30,9 @@ Read [the composition recipe](references/composition.md) for a concrete componen
 - Large editable lists: `docs/virtualization.md`, `docs/performance.md`.
 - Native controls and shutdown: `docs/native-interop.md`, `docs/application-cleanup-policy-2026-09-25.md`.
 - Navigation: `docs/navigation.md`. Accessibility: `docs/accessibility.md`.
+- Opacity/translation: read [animation guidance](references/animation.md) and,
+  in the source checkout, `docs/animation.md`. These APIs are currently unshipped;
+  verify the consumer has them before using the example.
 
 ## Design the screen
 
@@ -42,7 +45,12 @@ Use a clear title, short supporting copy and a dominant next action. Group relat
 - `AdaptiveGrid(minimumColumnWidth, children)` reflows mounted children; it does not virtualize them. Use `VirtualList(rows, height)` with stable keys and a finite viewport for large lists.
 - Text wraps only when measured with finite width. Prefer a constrained `FlexRow` over a long description inside an unbounded `HStack`. Do not hard-code the whole screen to the screenshot dimensions.
 - Use immutable `ThemeTokens` and `ThemeStyles.Apply(host, tokens)` at the WPF boundary. Set root `.Foreground(tokens.Ink).Background(tokens.Canvas)` explicitly: applying styles does not color standalone text or the root surface.
-- `.Padding` and `.Height` describe the outer view frame, not native button content padding. Allow room for native chrome. Do not invent CSS properties, rich-button factories, arbitrary animation APIs or responsive visibility modifiers.
+- `.Padding` and `.Height` describe the outer view frame, not native button content padding. Allow room for native chrome. Do not invent CSS properties, rich-button factories, unsupported animation APIs or responsive visibility modifiers.
+- When supported by the consumer, animate explicit opacity/translation destinations
+  with a property mask and reusable immutable timing specification. Keep targets
+  in state; let WPF clocks interpolate. Mount/recycle settles immediately, opacity
+  does not disable input, and translation does not reserve layout space. Follow
+  the animation reference for motion suppression, lifecycle and measured costs.
 
 ## Keep behavior and ownership clean
 

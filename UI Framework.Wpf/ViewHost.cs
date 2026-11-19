@@ -96,6 +96,7 @@ public sealed class ViewHost : ContentControl, IDisposable
     private static void Validate(View view)
     {
         ArgumentNullException.ThrowIfNull(view);
+        view.Motion?.Validate();
         // Explicit patterns compile to value checks without repeated enum metadata lookups.
         // Regression coverage checks every declared value when these enums grow.
         if (view.Kind is not (ViewKind.Text or ViewKind.Button or ViewKind.TextField or ViewKind.VStack
@@ -175,6 +176,8 @@ public sealed class ViewHost : ContentControl, IDisposable
             ArgumentNullException.ThrowIfNull(node);
             var previous = node.View;
             node.View = view; // Event handlers always read the latest description.
+            if (view.Motion is not null || previous.Motion is not null)
+                NodeAnimation.Patch(node.Frame, created ? null : previous.Motion, view.Motion, created);
             if (created || previous.AccessibleName != view.AccessibleName)
             {
                 var target = node.Control is NativeControlHost nativeHost ? nativeHost.Element : node.Control;

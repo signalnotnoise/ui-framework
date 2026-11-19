@@ -147,7 +147,7 @@ remains a separate exact-commit check after push.
 | Done | FW-024 | P2 | Publish alpha.7 | Done — publication history reconciled |
 | Done | FW-019 | P2 | Validate independent sample adoption and upgrades | Done — published alpha.6 to alpha.7 |
 | 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
-| 13 | FW-014 | P3 | Evaluate general animation and other rendering backends | Deferred |
+| 13 | FW-014 | P3 | Opacity/translation first slice; evaluate broader expansion | First slice done locally; broader expansion deferred |
 | Next patch | FW-029 | P2 | Ship corrected embedded package README | Open — source corrected; 1.0.0 artifact immutable |
 | Later | FW-025 | P3 | Add contextual runtime failure diagnostics | Deferred — post-v1 |
 | Later | FW-026 | P3 | Revalidate physical Narrator after peer-cache cleanup | Deferred — post-v1 follow-up |
@@ -751,10 +751,54 @@ and dials need demonstrated demand.
 
 ### FW-014 Evaluate broader expansion
 
-General animatable properties and non-Windows renderers remain deferred.
-Require an architecture proposal, a real consumer need, a measurement plan and
-an explicit scope decision before promoting either into implementation work.
+Status November 19, 2026: **First slice done locally; broader expansion deferred**.
+Owner: Codex. Opacity/translation destinations, explicit timing/property masks,
+lazy attached controller storage, native interruptible clocks, inherited motion
+suppression and immediate lifecycle cleanup are implemented. All 196 Release
+tests pass, including 16 animation regressions; API, documentation/reference and
+both graph checks pass. Seven final alternating pairs pass all 24 local checks
+against pre-feature HEAD. Full-list mount/update +3.11%/+4.99%, virtualized
+mount/update +8.90%/-4.66%, themed +2.54%/+0.27%; update allocation +0.32–1.05%,
+with identical component work. Initial full-list mount +19.56% failure is retained;
+the focused revision removes duplicate Node storage and isolates setup from Patch.
+Cross-campaign variation prevents attributing the timing change solely to that edit.
+Seven isolated native-clock/immediate retarget pairs preserve raw cost: 32 frames,
+240 updates, median 4.000/0.143 ms and 44.1/7.1 MB synchronous allocation.
+Windows motion stayed disabled; the diagnostic explicitly bypasses policy only
+inside its internal-controller workload. No FPS, physical acceptance, hosted
+release or publication claim. Accepted baseline/budgets are unchanged.
+[Contract](animation.md), [methods, results and preserved failures](animation-performance-2026-11-19.md).
+
+November 19 skill follow-through: updated the portable skill with a focused
+animation reference, source-versus-published API gating, destination-based usage,
+lifecycle/reduced-motion rules and measured cost caveats. Synchronized the local
+Codex installation after checking for local customizations. Skill validation,
+generated-reference freshness, documentation and both graph checks pass. This
+follow-through changes guidance only; it does not change runtime or performance
+claims and does not require a new benchmark.
+
+User authorized opacity/translation, lazy node controllers, native WPF clocks,
+regression checks and disabled-path/rapid-retargeting measurements. Non-Windows
+renderers and animation features beyond this slice remain deferred.
+Further expansion requires a consumer need, measurement plan and explicit scope
+decision. The user approved the first animation slice after the review below.
 Existing screen-entry transitions are already implemented.
+
+Earlier November 19, 2026: animation design review started at user request on
+`codex/animations`; implementation was deferred pending the subsequent scope decision.
+Reviewed core View descriptions, retained Node/Frame reconciliation, navigation
+entry clocks, logical snapshots and virtual-row release. Proposed first slice:
+explicit per-view opacity/translation targets with immutable duration/easing
+metadata, WPF-owned interruptible clocks and reduced-motion policy. First mount
+and virtual-row restoration settle at target; removal retains immediate cleanup.
+Follow with opt-in entry effects; scope exit retention, layout motion, springs
+and sequences separately. Candidate consumer: a retained Trace inspector detail
+change, without animating its ingestion stream. Acceptance must cover retargeting,
+unchanged refreshes, detach/disposal, recycling, motion suppression, focus/input
+and native-host limits; measure disabled-path overhead and active frame behavior
+alongside the existing full-list/virtualized performance baseline. This is a
+proposal, not implemented behavior or measured performance evidence. Other
+rendering backends remain deferred independently.
 
 ### FW-016 Define v1 API compatibility and support contracts
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add explicit opacity/translation destinations and retained-update animation
+  specifications in core, with lazy WPF node controllers, native interruptible
+  clocks, inherited motion suppression and immediate detach cleanup. See the
+  [contract and diagnostic commands](docs/animation.md).
+
 ## 1.0.0 — November 15, 2026
 
 Published both libraries and symbols from `cbd85b8` after both exact-commit hosted

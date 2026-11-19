@@ -27,6 +27,12 @@ The optional `agents/openai.yaml` supplies discovery metadata. Other agents can
 read `SKILL.md` directly. The skill does not install or upgrade the framework;
 the consumer's resolved version governs API availability.
 
+The [animation reference](../skills/ui-framework/references/animation.md) covers
+the unreleased opacity/translation slice, interruption and recycling, reduced
+motion, input/layout semantics and measured native-clock cost. It explicitly
+distinguishes source support from published 1.0.0; shipped API generation remains
+unchanged. The November 19 update also synchronizes the local Codex skill bundle.
+
 ## Generated contract and behavioral examples
 
 The portable bundle includes a version-labelled [shipped API reference](../skills/ui-framework/references/api-surface.md)

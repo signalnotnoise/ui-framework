@@ -135,6 +135,7 @@ internal sealed class Node : IDisposable
     {
         if (detached) return;
         detached = true;
+        NodeAnimation.GetController(Frame)?.Dispose();
         foreach (var child in Children) child.Detach();
         if (Control is ViewHost host) host.Deactivate();
         if (Control is VirtualListControl list) list.Deactivate();

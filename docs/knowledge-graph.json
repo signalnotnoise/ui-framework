@@ -541,11 +541,27 @@
       "id": "animation",
       "label": "Animation",
       "status": "partial",
-      "summary": "WPF screen entry fade/slide transitions with interruption cleanup and reduced-motion support. General animatable view properties remain planned.",
+      "summary": "Unreleased first slice: core describes optional immutable opacity/translation targets, property masks and timing. WPF retained nodes lazily own native clocks and frame transforms; unchanged targets do not restart, interruption uses the displayed value, and completion/detach/unload release clocks. Inherited application suppression and Windows motion preferences settle active effects. Logical snapshots contain no clocks; recycled rows mount at current targets. Existing navigation entry behavior remains separate. Animation regressions and isolated rapid-retarget diagnostics accompany the ordinary full-list/virtualized comparison; validation evidence is tracked in FW-014. Controller storage is attached only to opted-in frames, with no additional Node field; setup is isolated from ordinary reconciliation. All 196 tests pass, including 16 animation checks. Seven-pair rapid-retarget evidence explicitly isolates native-clock cost while leaving Windows motion disabled; it is not a presented-frame FPS claim.",
       "sources": [
         "UI Framework/Navigation/NavigationTransition.cs",
         "UI Framework.Wpf/Navigation/NavigationSurface.cs",
-        "docs/navigation.md"
+        "docs/navigation.md",
+        "UI Framework/Animation/AnimationProperties.cs",
+        "UI Framework/Animation/AnimationEasing.cs",
+        "UI Framework/Animation/AnimationSpec.cs",
+        "UI Framework/Animation/ViewMotion.cs",
+        "UI Framework/View.cs",
+        "UI Framework.Wpf/Animation/AnimationSettings.cs",
+        "UI Framework.Wpf/Animation/NodeAnimation.cs",
+        "UI Framework.Wpf/Rendering/Node.cs",
+        "UI Framework.Wpf/ViewHost.cs",
+        "tests/UI Framework.Checks/AnimationTests.cs",
+        "tests/UI Framework.Checks/AnimationTestPump.cs",
+        "tools/AnimationDiagnostics/Program.cs",
+        "tools/Test-AnimationPerformance.ps1",
+        "docs/animation.md",
+        "docs/animation-performance-2026-11-19.md",
+        "docs/performance-evidence/2026-11-19-animation/README.md"
       ]
     },
     {
@@ -798,7 +814,7 @@
       "id": "agentskill",
       "label": "Agent UI composition skill",
       "status": "implemented",
-      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes. FW-030 adds exact shipped API and compiled-source reference generation with freshness gates; SkillContractTests verifies native finite layout, field/computed subscription lifetime and keyed row identity. Tooling owns generation; existing core/WPF responsibilities are unchanged. FW-034 retains a constrained same-model/package first-draft pilot: supplied skill/reference context compiled and passed ten core-description/state checks; the no-skill draft failed compilation before and after one compiler-only repair. This does not establish automatic discovery, native visual acceptance or a general success rate.",
+      "summary": "Portable agent guidance for existing C# UI composition, retained state, finite layout, theme and application host ownership. Isolated SkillPreview renders the same release workspace before and after hierarchy/styling changes; the GIF is presentation media, not runtime animation or performance evidence. No core or renderer API changes. FW-030 adds exact shipped API and compiled-source reference generation with freshness gates; SkillContractTests verifies native finite layout, field/computed subscription lifetime and keyed row identity. Tooling owns generation; existing core/WPF responsibilities are unchanged. FW-034 retains a constrained same-model/package first-draft pilot: supplied skill/reference context compiled and passed ten core-description/state checks; the no-skill draft failed compilation before and after one compiler-only repair. This does not establish automatic discovery, native visual acceptance or a general success rate. November 19 animation guidance gates unreleased source APIs against consumer metadata, describes destination-based opacity/translation, native lifetime and motion suppression, and records workload-specific clock costs without changing the shipped API reference. The local Codex bundle is synchronized.",
       "sources": [
         "skills/ui-framework/SKILL.md",
         "skills/ui-framework/references/composition.md",
@@ -815,7 +831,8 @@
         "tests/UI Framework.Checks/SkillExamples/SkillLayoutExample.cs",
         "tests/UI Framework.Checks/SkillExamples/SkillStateExample.cs",
         "tests/UI Framework.Checks/SkillExamples/SkillRowsExample.cs",
-        "tests/UI Framework.Checks/SkillExamples/SkillRowExample.cs"
+        "tests/UI Framework.Checks/SkillExamples/SkillRowExample.cs",
+        "skills/ui-framework/references/animation.md"
       ]
     },
     {
@@ -1096,7 +1113,7 @@
     },
     {
       "from": "animation",
-      "relation": "will extend",
+      "relation": "extends",
       "to": "host"
     },
     {
@@ -1333,6 +1350,26 @@
       "from": "logviewer",
       "to": "agentskill",
       "relation": "demonstrates curated behavioral guidance from"
+    },
+    {
+      "from": "animation",
+      "relation": "releases native clocks during",
+      "to": "lifecycle"
+    },
+    {
+      "from": "animation",
+      "relation": "settles on native recycling in",
+      "to": "virtualization"
+    },
+    {
+      "from": "animation",
+      "relation": "uses retained node identity from",
+      "to": "identity"
+    },
+    {
+      "from": "agentskill",
+      "relation": "teaches version gated use of",
+      "to": "animation"
     }
   ],
   "releaseVersion": "1.0.0"

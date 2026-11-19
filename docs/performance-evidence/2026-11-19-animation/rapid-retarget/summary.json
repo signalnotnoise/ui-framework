@@ -1,0 +1,161 @@
+{
+  "protocol": "animation-retarget-v1",
+  "samplesPerMode": 7,
+  "warmupsPerMode": 1,
+  "modes": {
+    "disabled": {
+      "MountMs": {
+        "median": 106.3165,
+        "min": 100.1877,
+        "max": 142.7069
+      },
+      "MountBytes": {
+        "median": 854608,
+        "min": 829984,
+        "max": 854608
+      },
+      "ControllerSetupMs": {
+        "median": 0.2205,
+        "min": 0.2081,
+        "max": 0.3273
+      },
+      "ControllerSetupBytes": {
+        "median": 18824,
+        "min": 18824,
+        "max": 18824
+      },
+      "RefreshMedianMs": {
+        "median": 0.1434,
+        "min": 0.1187,
+        "max": 0.2206
+      },
+      "RefreshP95Ms": {
+        "median": 0.4211,
+        "min": 0.3154,
+        "max": 0.6345
+      },
+      "RefreshTotalMs": {
+        "median": 43.540000000000035,
+        "min": 36.88900000000001,
+        "max": 64.16939999999997
+      },
+      "RefreshAllocatedBytes": {
+        "median": 7101616,
+        "min": 6898096,
+        "max": 7280560
+      },
+      "TotalUiThreadAllocatedBytes": {
+        "median": 7582832,
+        "min": 7381976,
+        "max": 7765688
+      },
+      "BodyBuilds": {
+        "median": 240,
+        "min": 240,
+        "max": 240
+      },
+      "ComponentBuilds": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "WallMs": {
+        "median": 4011.135,
+        "min": 3841.4501,
+        "max": 4403.6181
+      },
+      "RenderingCallbacks": {
+        "median": 454,
+        "min": 449,
+        "max": 462
+      },
+      "RenderingGapMedianMs": {
+        "median": 8.7894,
+        "min": 8.393,
+        "max": 10.0137
+      },
+      "RenderingGapP95Ms": {
+        "median": 17.6187,
+        "min": 17.2963,
+        "max": 21.9835
+      }
+    },
+    "enabled": {
+      "MountMs": {
+        "median": 104.8865,
+        "min": 101.7934,
+        "max": 109.4019
+      },
+      "MountBytes": {
+        "median": 854608,
+        "min": 829984,
+        "max": 854608
+      },
+      "ControllerSetupMs": {
+        "median": 0.5059,
+        "min": 0.4394,
+        "max": 0.5428
+      },
+      "ControllerSetupBytes": {
+        "median": 19504,
+        "min": 19504,
+        "max": 19504
+      },
+      "RefreshMedianMs": {
+        "median": 4.0001,
+        "min": 3.427,
+        "max": 4.1663
+      },
+      "RefreshP95Ms": {
+        "median": 8.9273,
+        "min": 7.5356,
+        "max": 9.3231
+      },
+      "RefreshTotalMs": {
+        "median": 986.2372000000007,
+        "min": 884.7060000000007,
+        "max": 1074.7853000000002
+      },
+      "RefreshAllocatedBytes": {
+        "median": 44054728,
+        "min": 43923912,
+        "max": 44186568
+      },
+      "TotalUiThreadAllocatedBytes": {
+        "median": 57587824,
+        "min": 57363176,
+        "max": 57813600
+      },
+      "BodyBuilds": {
+        "median": 240,
+        "min": 240,
+        "max": 240
+      },
+      "ComponentBuilds": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "WallMs": {
+        "median": 4212.2618,
+        "min": 4048.6005,
+        "max": 4264.4392
+      },
+      "RenderingCallbacks": {
+        "median": 489,
+        "min": 479,
+        "max": 493
+      },
+      "RenderingGapMedianMs": {
+        "median": 8.3759,
+        "min": 7.964,
+        "max": 8.5667
+      },
+      "RenderingGapP95Ms": {
+        "median": 17.5944,
+        "min": 17.15,
+        "max": 18.0527
+      }
+    }
+  }
+}

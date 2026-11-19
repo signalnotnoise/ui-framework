@@ -8,6 +8,7 @@
   <ItemGroup>
     <InternalsVisibleTo Include="UI Framework.Checks" />
     <InternalsVisibleTo Include="ComCleanupLifecycle" />
+    <InternalsVisibleTo Include="AnimationDiagnostics" />
   </ItemGroup>
   <ItemGroup><ProjectReference Include="../UI Framework/UI Framework.csproj" /></ItemGroup>
   <PropertyGroup>
