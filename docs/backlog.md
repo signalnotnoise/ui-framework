@@ -28,12 +28,12 @@ Dates below record evidence or updates, not delivery commitments.
 
 ### Agent skill and showcase phases
 
-FW-034 — In progress (November 19, 2026): finish the showcase follow-through:
+FW-034 — Done (November 19, 2026): completed all four showcase follow-through items:
 inspect exact-commit hosted CI and fix failures, exercise the live desktop
 workflow, record a 20–30 second walkthrough, and retain a controlled same-model,
 same-package coding comparison with and without the skill. Initial inspection:
 `49c623a` passed hosted performance and graph checks; Windows validation failed
-at the demo's keyboard-splitter assertion. No all-green claim is made.
+at the demo's keyboard-splitter assertion; the correction and acceptance follow.
 
 - CI correction committed/pushed as `e624f76`: compare actual laid-out width,
   exercise Left/Right at wide and compact sizes, and check native/bound extent
@@ -48,10 +48,22 @@ at the demo's keyboard-splitter assertion. No all-green claim is made.
 - Agent pilot complete: same model/package/task, skill-backed first draft passes
   ten checks; no-skill draft fails compilation and still fails after one repair.
   [Method, limitations and raw-evidence location](agent-skill.md#controlled-first-draft-pilot--november-19-2026-fw-034).
-- Live desktop interaction and 20–30 second recording pending: automation reads
-  the demo's accessibility tree but cannot activate its window; captures show
-  wallpaper. User assistance was requested. Static verification is not being
-  substituted for the requested live pass or recording.
+- Live desktop pass completed after the user unlocked Windows: dragged both
+  splitters, resized the inspector by keyboard, used Tab/Down/Space for severity
+  and clear-filter controls, filtered during ingestion, selected an event,
+  retained its inspector through filtering, paused, and parsed the copied JSON
+  as the selected `evt-002373`. Compact window resizing, inspector scrolling,
+  thin scrollbar dragging and source collapse/restore worked. No new demo
+  defect was found. This is scoped live interaction evidence, not a Narrator,
+  IME or full accessibility campaign.
+- Recorded and inspected a continuous 30-second, target-window-only walkthrough:
+  ingestion, search, event inspection, pause and Copy JSON. Local artifact:
+  `artifacts/showcase-review/trace-walkthrough.mp4` (1424 × 862, H.264, 15 fps,
+  450 decoded frames, 407004 bytes; no audio). SHA-256:
+  `2292a85c65e6bd663bc56769bececf3f5364a2036502ca9e014bc01f1cf01a3c`.
+  The original recording, encoder/decoder logs and inspected contact sheet are
+  retained alongside it. This is live capture, not a still-image sequence or a
+  performance measurement. Media remains local; no social post was published.
 
 FW-033 follow-up — Done November 15: sample-owned slim dark vertical scrollbar
 chrome replaces the bright default rails. All 60 native checks pass, including
