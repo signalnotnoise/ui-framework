@@ -31,7 +31,7 @@ Read [the composition recipe](references/composition.md) for a concrete componen
 - Native controls and shutdown: `docs/native-interop.md`, `docs/application-cleanup-policy-2026-09-25.md`.
 - Navigation: `docs/navigation.md`. Accessibility: `docs/accessibility.md`.
 - Opacity/translation: read [animation guidance](references/animation.md) and,
-  in the source checkout, `docs/animation.md`. These APIs are currently unshipped;
+  in the source checkout, `docs/animation.md`. These APIs require version 1.1.0 or later;
   verify the consumer has them before using the example.
 
 ## Design the screen

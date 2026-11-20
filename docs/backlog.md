@@ -1,6 +1,6 @@
 # UI Framework backlog
 
-Last updated: November 19, 2026.
+Last updated: November 20, 2026.
 
 Version 1.0.0 libraries and symbols were published November 15 from `cbd85b8`.
 Both exact-commit hosted workflows passed all validation and 32 performance checks
@@ -25,6 +25,17 @@ and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
+
+### FW-036 Merge and publish animation support as 1.1.0
+
+In progress November 20, 2026. Owner: Codex. User authorized merging the animation
+branch into main and publishing. Additive APIs select minor version 1.1.0; NuGet
+1.0.0 remains immutable. Promote the reviewed API declarations, refresh the skill
+contract and package docs, run exact-candidate hosted validation/publication,
+verify fresh public installation and source/binary upgrades, and preserve release
+evidence. This release also carries the pending FW-029 embedded README correction.
+The unchanged implementation already passed exact-commit hosted checks in
+Validate 44620484678. [Release status](releases/1.1.0.md).
 
 ### Agent skill and showcase phases
 

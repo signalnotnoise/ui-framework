@@ -1,4 +1,17 @@
 #nullable enable
+UI_Framework.AnimationEasing
+UI_Framework.AnimationEasing.EaseOut = 1 -> UI_Framework.AnimationEasing
+UI_Framework.AnimationEasing.Linear = 0 -> UI_Framework.AnimationEasing
+UI_Framework.AnimationProperties
+UI_Framework.AnimationProperties.None = 0 -> UI_Framework.AnimationProperties
+UI_Framework.AnimationProperties.Opacity = 1 -> UI_Framework.AnimationProperties
+UI_Framework.AnimationProperties.Translation = 2 -> UI_Framework.AnimationProperties
+UI_Framework.AnimationSpec
+UI_Framework.AnimationSpec.AnimationSpec(System.TimeSpan Duration, UI_Framework.AnimationEasing Easing = UI_Framework.AnimationEasing.EaseOut) -> void
+UI_Framework.AnimationSpec.Duration.get -> System.TimeSpan
+UI_Framework.AnimationSpec.Duration.init -> void
+UI_Framework.AnimationSpec.Easing.get -> UI_Framework.AnimationEasing
+UI_Framework.AnimationSpec.Easing.init -> void
 UI_Framework.Binding<T>
 UI_Framework.Binding<T>.Binding(System.Func<T>! get, System.Action<T>! set) -> void
 UI_Framework.Binding<T>.Select<TValue>(System.Func<T, TValue>! get, System.Func<T, TValue, T>! set) -> UI_Framework.Binding<TValue>!
@@ -114,6 +127,7 @@ UI_Framework.View.AccessibilityLabel(string? label) -> UI_Framework.View!
 UI_Framework.View.AccessibleName.get -> string?
 UI_Framework.View.AccessibleName.init -> void
 UI_Framework.View.Align(UI_Framework.ViewAlignment horizontal, UI_Framework.ViewAlignment vertical = UI_Framework.ViewAlignment.Stretch) -> UI_Framework.View!
+UI_Framework.View.Animate(UI_Framework.AnimationProperties properties, UI_Framework.AnimationSpec? animation) -> UI_Framework.View!
 UI_Framework.View.Background(string! color) -> UI_Framework.View!
 UI_Framework.View.BackgroundColor.get -> string?
 UI_Framework.View.BackgroundColor.init -> void
@@ -174,6 +188,9 @@ UI_Framework.View.MemoInputs.get -> object?
 UI_Framework.View.MemoInputs.init -> void
 UI_Framework.View.MinimumColumnWidth.get -> double
 UI_Framework.View.MinimumColumnWidth.init -> void
+UI_Framework.View.Motion.get -> UI_Framework.ViewMotion?
+UI_Framework.View.Motion.init -> void
+UI_Framework.View.Opacity(double value) -> UI_Framework.View!
 UI_Framework.View.Options.get -> System.Collections.Generic.IReadOnlyList<string!>!
 UI_Framework.View.Options.init -> void
 UI_Framework.View.Padding(double value) -> UI_Framework.View!
@@ -202,6 +219,7 @@ UI_Framework.View.ToggleChanged.get -> System.Action<bool>?
 UI_Framework.View.ToggleChanged.init -> void
 UI_Framework.View.Transition.get -> UI_Framework.NavigationTransition
 UI_Framework.View.Transition.init -> void
+UI_Framework.View.Translate(double x, double y) -> UI_Framework.View!
 UI_Framework.View.UndoHistoryLimit.get -> int
 UI_Framework.View.UndoHistoryLimit.init -> void
 UI_Framework.View.UndoLimit(int limit) -> UI_Framework.View!
@@ -233,6 +251,18 @@ UI_Framework.ViewKind.TextField = 2 -> UI_Framework.ViewKind
 UI_Framework.ViewKind.Toggle = 6 -> UI_Framework.ViewKind
 UI_Framework.ViewKind.VStack = 3 -> UI_Framework.ViewKind
 UI_Framework.ViewKind.VirtualList = 8 -> UI_Framework.ViewKind
+UI_Framework.ViewMotion
+UI_Framework.ViewMotion.Animation.get -> UI_Framework.AnimationSpec?
+UI_Framework.ViewMotion.Animation.init -> void
+UI_Framework.ViewMotion.Opacity.get -> double
+UI_Framework.ViewMotion.Opacity.init -> void
+UI_Framework.ViewMotion.Properties.get -> UI_Framework.AnimationProperties
+UI_Framework.ViewMotion.Properties.init -> void
+UI_Framework.ViewMotion.ViewMotion(double Opacity = 1, double X = 0, double Y = 0, UI_Framework.AnimationProperties Properties = UI_Framework.AnimationProperties.None, UI_Framework.AnimationSpec? Animation = null) -> void
+UI_Framework.ViewMotion.X.get -> double
+UI_Framework.ViewMotion.X.init -> void
+UI_Framework.ViewMotion.Y.get -> double
+UI_Framework.ViewMotion.Y.init -> void
 UI_Framework.ViewSession
 UI_Framework.ViewSession.Build() -> UI_Framework.View!
 UI_Framework.ViewSession.Dispose() -> void

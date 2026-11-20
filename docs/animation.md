@@ -1,7 +1,8 @@
-# Opacity and translation (unreleased)
+# Opacity and translation (1.1.0)
 
-This first slice adds visual targets and retained-update animation. It is not in
-the published 1.0.0 packages. Core descriptions contain no WPF types.
+Version 1.1.0 adds visual targets and retained-update animation; 1.0.0 does not
+include these APIs. Core descriptions contain no WPF types. Publication and
+acceptance status are recorded in [the release record](releases/1.1.0.md).
 
 ```csharp
 private static readonly AnimationSpec feedbackMotion =

@@ -2,9 +2,9 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**1.0.0 · Windows renderer · .NET 10**
+**1.1.0 · Windows renderer · .NET 10**
 
-V1 preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Version 1.0.0 was published after exact-commit hosted correctness, package and performance gates passed. See the [v1 release record](docs/releases/1.0.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
+V1 preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Version 1.1.0 adds retained opacity and translation animations. See the [1.1.0 release status](docs/releases/1.1.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
 
 A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the first backend renders WPF controls on Windows. The runtime requires no XAML or third-party packages. Tests use MSTest.
 
@@ -38,15 +38,14 @@ or [read its rules and linked API reference](skills/ui-framework/SKILL.md).
 
 ## NuGet
 
-Version `1.0.0` was published November 15, 2026 from `cbd85b8` after both
-hosted workflows passed all correctness/package checks and 32 performance checks
-each. See the [detailed release record](docs/releases/1.0.0.md) for the development
-history, measurements, acceptance scope and known embedded-README discrepancy.
-Install [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/1.0.0)
-with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise.UI/1.0.0):
+Version `1.1.0` adds [opacity and translation](docs/animation.md) and includes
+the corrected embedded package README. See the [release record](docs/releases/1.1.0.md)
+for publication status, exact source, hosted gates and installation verification.
+Install [SignalNotNoise.UI.Wpf](https://www.nuget.org/packages/SignalNotNoise.UI.Wpf/1.1.0)
+with its transitive [core package](https://www.nuget.org/packages/SignalNotNoise.UI/1.1.0):
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 1.0.0
+dotnet add package SignalNotNoise.UI.Wpf --version 1.1.0
 ```
 
 The WPF package brings in the core automatically. See the

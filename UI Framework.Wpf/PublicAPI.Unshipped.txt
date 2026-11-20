@@ -1,5 +1,1 @@
 #nullable enable
-UI_Framework.Wpf.AnimationSettings
-static UI_Framework.Wpf.AnimationSettings.GetIsEnabled(System.Windows.DependencyObject! element) -> bool
-static UI_Framework.Wpf.AnimationSettings.SetIsEnabled(System.Windows.DependencyObject! element, bool value) -> void
-static readonly UI_Framework.Wpf.AnimationSettings.IsEnabledProperty -> System.Windows.DependencyProperty!

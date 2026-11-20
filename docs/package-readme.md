@@ -10,7 +10,7 @@ Declarative C# components, reactive state and native WPF rendering. Requires .NE
 In a .NET 10 WPF application, install the package:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 1.0.0
+dotnet add package SignalNotNoise.UI.Wpf --version 1.1.0
 ```
 
 In your WPF window constructor, after `InitializeComponent()`:

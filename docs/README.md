@@ -9,6 +9,8 @@ The framework is a C# class library with a WPF renderer. This index describes th
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
 | [Framework backlog](backlog.md) | Prioritized running work list, completion criteria, status and completed work. |
 | [Version 1.0.0 release](releases/1.0.0.md) | Published version, exact source, hosted gates and public installation. |
+| [Version 1.1.0 release](releases/1.1.0.md) | Animation release status, exact-candidate validation and publication. |
+| [Opacity and translation](animation.md) | Destination-based animation, interruption, reduced motion and lifecycle. |
 | [Independent package workspace](../samples/PackageWorkspace/README.md) | NuGet-only setup, startup/shutdown and source/binary upgrades. |
 | [Release checklist](releasing.md) | Release status, validation and owner decisions. |
 | [September 24 publication status](publication-status-2026-09-24.md) | Historical source and package gate that first captured the editor timeout. |

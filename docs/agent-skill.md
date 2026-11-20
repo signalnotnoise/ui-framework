@@ -28,10 +28,10 @@ read `SKILL.md` directly. The skill does not install or upgrade the framework;
 the consumer's resolved version governs API availability.
 
 The [animation reference](../skills/ui-framework/references/animation.md) covers
-the unreleased opacity/translation slice, interruption and recycling, reduced
+the 1.1.0 opacity/translation slice, interruption and recycling, reduced
 motion, input/layout semantics and measured native-clock cost. It explicitly
-distinguishes source support from published 1.0.0; shipped API generation remains
-unchanged. The November 19 update also synchronizes the local Codex skill bundle.
+requires a supporting consumer version; the generated shipped API reference
+now includes the 1.1.0 additions. The November 19 update also synchronizes the local Codex skill bundle.
 
 ## Generated contract and behavioral examples
 

@@ -21,9 +21,9 @@ IDs. Public types, including ViewSession and ObservableState extension methods,
 are intentional API. Public record-generated members are included in the inventory.
 Internal renderer nodes, snapshots and dependency tracking are implementation details.
 
-The unreleased animation slice adds optional `View.Motion`, fluent opacity and
+Version 1.1.0 adds optional `View.Motion`, fluent opacity and
 translation targets, core timing descriptions and the WPF inherited motion switch.
-These additions are tracked in `PublicAPI.Unshipped.txt`; they are not available
+These additions are tracked in `PublicAPI.Shipped.txt`; they are not available
 in published 1.0.0. See the [animation contract](animation.md) for interruption,
 recycling, reduced-motion and input semantics.
 

@@ -2,18 +2,18 @@
 
 ## Check availability first
 
-As of November 19, 2026, this API is implemented in the source checkout but is
-**not in published 1.0.0**. The generated shipped API reference intentionally
-excludes it. Verify project references and the actual consumer assembly before
-using `View.Opacity`, `View.Translate`, `View.Animate`, `ViewMotion`,
-`AnimationProperties`, `AnimationSpec`, `AnimationEasing` or WPF
-`AnimationSettings`. Do not upgrade a package just to use this example. With
-1.0.0, use immediate existing UI updates or its existing navigation transition.
+These APIs require **1.1.0 or later**; published 1.0.0 does not include them.
+The generated shipped API reference includes the 1.1.0 declarations. Verify the
+consumer's actual package/project references before using `View.Opacity`,
+`View.Translate`, `View.Animate`, `ViewMotion`, `AnimationProperties`,
+`AnimationSpec`, `AnimationEasing` or WPF `AnimationSettings`. Do not upgrade a
+package just to use this example. With 1.0.0, use immediate existing UI updates
+or its existing navigation transition.
 
-In a checkout, inspect `UI Framework/PublicAPI.Unshipped.txt`,
-`UI Framework.Wpf/PublicAPI.Unshipped.txt` and `docs/animation.md`. The timing
-evidence is in `docs/animation-performance-2026-11-19.md`. For a newer package,
-inspect its metadata; this date is not a claim about that package's availability.
+In a checkout, inspect both libraries' `PublicAPI.Shipped.txt` files and
+`docs/animation.md`. Publication/acceptance status is in `docs/releases/1.1.0.md`;
+timing evidence is in `docs/animation-performance-2026-11-19.md`. For a different
+package version, its installed metadata takes precedence.
 
 ## Describe destinations
 

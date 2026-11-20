@@ -41,7 +41,7 @@ FadeSlide animates the incoming native host from transparent and 10 pixels below
 
 NavigationTransition.None suppresses motion and cancels a running entry animation when applied. WPF also respects SystemParameters.ClientAreaAnimation when starting/updating screens. Launchpad exposes Reduce motion. This is an entry transition, not a general animation API, shared-element system, navigation guard, or URL router.
 
-Unreleased [opacity and translation animations](animation.md) add independent
+Version 1.1.0 [opacity and translation animations](animation.md) add independent
 per-view target transitions; navigation entry behavior and lifetime stay unchanged.
 
 ## Verification
