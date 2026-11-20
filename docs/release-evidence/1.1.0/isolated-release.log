@@ -1,0 +1,59 @@
+Skill references are current.
+  Determining projects to restore...
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\WorkspaceComparison\WorkspaceComparison.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\tests\ReportingRetentionChecks\ReportingRetentionChecks.csproj (in 81 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\LogViewer\LogViewer.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\NativeLifetime\NativeLifetime.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\Counter\Counter.csproj (in 83 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\UI Framework\UI Framework.csproj (in 211 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\WebViewAcceptance\WebViewAcceptance.csproj (in 211 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\UI Framework.Wpf\UI Framework.Wpf.csproj (in 211 ms).
+  Restored C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\tests\UI Framework.Checks\UI Framework.Checks.csproj (in 296 ms).
+  UI Framework -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\UI Framework\bin\Release\net10.0\UI Framework.dll
+  UI Framework.Wpf -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\UI Framework.Wpf\bin\Release\net10.0-windows\UI Framework.Wpf.dll
+  Counter -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\Counter\bin\Release\net10.0-windows\Counter.dll
+  LogViewer -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\LogViewer\bin\Release\net10.0-windows\LogViewer.dll
+  NativeLifetime -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\NativeLifetime\bin\Release\net10.0-windows\NativeLifetime.dll
+  WebViewAcceptance -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\WebViewAcceptance\bin\Release\net10.0-windows\WebViewAcceptance.dll
+  WorkspaceComparison -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\samples\WorkspaceComparison\bin\Release\net10.0-windows\WorkspaceComparison.dll
+  ReportingRetentionChecks -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\tests\ReportingRetentionChecks\bin\Release\net10.0\ReportingRetentionChecks.dll
+  UI Framework.Checks -> C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:22.98
+Test run for C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\tests\UI Framework.Checks\bin\Release\net10.0-windows\UI Framework.Checks.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
+Results File: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\artifacts\release-validation\tests\regression.trx
+
+Passed!  - Failed:     0, Passed:   196, Skipped:     0, Total:   196, Duration: 24 s - UI Framework.Checks.dll (net10.0)
+Passed 66 log viewer checks. Captures and diagnostics: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\artifacts\release-validation\log-viewer-d546d0b8fa384c2f876dd565298f1cf5
+PASS: empty control, deliberate retained sample detection, release and evidence roundtrip.
+PASS: 128 bounded samples collected between writes, full payload/order preservation, deliberate-root detection and release.
+Validated 38 nodes, 88 relationships, and source paths.
+Documentation versions and workflow action pins are consistent.
+Passed 15 visual stress checks.
+Initial 50-row mount + offscreen layout: 663.5 ms, 72 body builds
+Native TextBox event + shared binding: 11.1 ms, 2 body builds
+Load 250 rows + layout: 1284.6 ms, 259 body builds
+Load 1000 rows + layout: 15760.2 ms, 1,009 body builds
+Expand row into nested checklist + layout: 24.5 ms, 5 body builds
+1000-row keyed shuffle + layout: 3063.8 ms, 2 body builds
+10000 projected writes + one flush + layout: 76.9 ms, 1 body builds
+Mixed workload: 50/200 operations complete
+Mixed workload: 100/200 operations complete
+Mixed workload: 150/200 operations complete
+Mixed workload: 200/200 operations complete
+200 mixed operations with per-step render + layout: 89383.4 ms, 20,559 body builds
+Filter to zero rows + layout: 3418.7 ms, 2 body builds
+Clear filter + remount + layout: 15843.7 ms, 1,002 body builds
+Board unmount + layout: 6306.0 ms, 2 body builds
+Board remount + layout: 17277.8 ms, 1,003 body builds
+Expand recursive tree to depth 24 + layout: 127.3 ms, 26 body builds
+Full host disposal: 901.7 ms, 0 body builds
+Passed 21 stress assertions. Report: C:\Users\iotero\Dev\personal\UI Framework\artifacts\release-1.1.0\source\artifacts\release-validation\stress.json
+Batch 0: 76 native mounts; alive=0; owned native bytes=0
+Release validation passed. This command does not publish anything.

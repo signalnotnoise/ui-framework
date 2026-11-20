@@ -1,0 +1,30 @@
+[
+  {
+    "package": "SignalNotNoise.UI.1.1.0.nupkg",
+    "version": "1.1.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/signalnotnoise/ui-framework",
+      "commit": "7c1fff5ac2ebb5f65d9b4a911c0319ba46b632f9"
+    },
+    "sha256": "f15a794286a94410b8fe88f6414c1cb2b44490ac4163e6fe1d931d5c13c4222e",
+    "readmeSha256": "47da5a0363e86436d82957ae8e3c718a3e71dbea60597e1d59ad0bd8bd14e095",
+    "dlls": {
+      "lib/net10.0/UI Framework.dll": "e28c0354501382a60f224af800d550d41c1b6b0966b63a992e481af207893e84"
+    }
+  },
+  {
+    "package": "SignalNotNoise.UI.Wpf.1.1.0.nupkg",
+    "version": "1.1.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/signalnotnoise/ui-framework",
+      "commit": "7c1fff5ac2ebb5f65d9b4a911c0319ba46b632f9"
+    },
+    "sha256": "b877a1da47ae14a72978ccdc71f170426709e88bebca9ecb0c44f0651d4e16b5",
+    "readmeSha256": "47da5a0363e86436d82957ae8e3c718a3e71dbea60597e1d59ad0bd8bd14e095",
+    "dlls": {
+      "lib/net10.0-windows7.0/UI Framework.Wpf.dll": "5593a0335b4f9d6135ea6d87dd101476b4bcfbc7f82de171f7876672685d780b"
+    }
+  }
+]

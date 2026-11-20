@@ -1,0 +1,114 @@
+﻿2026-11-20T08:11:24.0882961Z Current runner version: '2.338.2'
+2026-11-20T08:11:24.0903395Z ##[group]Runner Image Provisioner
+2026-11-20T08:11:24.0904089Z Hosted Compute Agent
+2026-11-20T08:11:24.0904672Z Version: 20261111.635
+2026-11-20T08:11:24.0905194Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-20T08:11:24.0905774Z Build Date: 2026-11-11T01:49:01Z
+2026-11-20T08:11:24.0906400Z Worker ID: {861d746e-4ccf-452b-9e96-6343591ed6a1}
+2026-11-20T08:11:24.0906974Z Region: centralus
+2026-11-20T08:11:24.0907638Z Cloud: Azure
+2026-11-20T08:11:24.0908147Z ##[endgroup]
+2026-11-20T08:11:24.0909489Z ##[group]Operating System
+2026-11-20T08:11:24.0910088Z Ubuntu
+2026-11-20T08:11:24.0910522Z 26.04.1
+2026-11-20T08:11:24.0911006Z LTS
+2026-11-20T08:11:24.0911441Z ##[endgroup]
+2026-11-20T08:11:24.0911894Z ##[group]Runner Image
+2026-11-20T08:11:24.0912423Z Image: ubuntu-26.04
+2026-11-20T08:11:24.0912897Z Version: 20261116.202.1
+2026-11-20T08:11:24.0914269Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-20T08:11:24.0915523Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-20T08:11:24.0916345Z ##[endgroup]
+2026-11-20T08:11:24.0917288Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T08:11:24.0919157Z Contents: read
+2026-11-20T08:11:24.0919689Z Metadata: read
+2026-11-20T08:11:24.0920199Z ##[endgroup]
+2026-11-20T08:11:24.0921868Z Secret source: Actions
+2026-11-20T08:11:24.0922686Z Cache mode: write
+2026-11-20T08:11:24.0923481Z Prepare workflow directory
+2026-11-20T08:11:24.1224016Z Prepare all required actions
+2026-11-20T08:11:24.1261760Z Getting action download info
+2026-11-20T08:11:24.3670920Z Download action repository 'actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68' (SHA:a98b56852c35b8e3190ac28c8c2271da59106c68)
+2026-11-20T08:11:24.8824626Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+2026-11-20T08:11:25.2739298Z Download action repository 'NuGet/login@8d196754b4036150537f80ac539e15c2f1028841' (SHA:8d196754b4036150537f80ac539e15c2f1028841)
+2026-11-20T08:11:25.6644410Z Complete job name: publish
+2026-11-20T08:11:25.7379534Z ##[group]Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+2026-11-20T08:11:25.7381024Z with:
+2026-11-20T08:11:25.7381714Z   dotnet-version: 10.0.x
+2026-11-20T08:11:25.7382502Z   cache: false
+2026-11-20T08:11:25.7383293Z ##[endgroup]
+2026-11-20T08:11:25.9641365Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --runtime dotnet --channel LTS
+2026-11-20T08:11:26.2306113Z dotnet-install: .NET Core Runtime with version '10.0.15' is already installed.
+2026-11-20T08:11:26.2325308Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --channel 10.0
+2026-11-20T08:11:26.5176534Z dotnet-install: .NET Core SDK with version '10.0.404' is already installed.
+2026-11-20T08:11:26.5571152Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-11-20T08:11:26.5572462Z with:
+2026-11-20T08:11:26.5573117Z   name: nuget-release
+2026-11-20T08:11:26.5573889Z   path: artifacts/packages
+2026-11-20T08:11:26.5574727Z   merge-multiple: false
+2026-11-20T08:11:26.5575552Z   repository: signalnotnoise/ui-framework
+2026-11-20T08:11:26.5576470Z   run-id: 44698350462
+2026-11-20T08:11:26.5577216Z   skip-decompress: false
+2026-11-20T08:11:26.5578125Z   digest-mismatch: error
+2026-11-20T08:11:26.5578892Z env:
+2026-11-20T08:11:26.5579561Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-20T08:11:26.5580392Z ##[endgroup]
+2026-11-20T08:11:26.6692093Z Downloading single artifact
+2026-11-20T08:11:26.8510433Z Preparing to download the following artifacts:
+2026-11-20T08:11:26.8512937Z - nuget-release (ID: 14612467096, Size: 114414, Expected Digest: sha256:63d3736f17a1091b9f3601c686cad53a81a7303c602bd0d2188b7935103fb455)
+2026-11-20T08:11:27.1345580Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/39e4e033-9437-4bcc-add4-0140b138342b/workflow-job-run-c00433aa-4d05-5b69-95cf-09809736bc70/artifacts/31361d84464b5bc3bae9424eb541e65e158bd3d9db5fa56cf780332f21af10b9.zip
+2026-11-20T08:11:27.1348307Z Starting download of artifact to: /home/runner/work/ui-framework/ui-framework/artifacts/packages
+2026-11-20T08:11:27.2926000Z (node:2249) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-20T08:11:27.2928799Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T08:11:27.3581765Z SHA256 digest of downloaded artifact is 63d3736f17a1091b9f3601c686cad53a81a7303c602bd0d2188b7935103fb455
+2026-11-20T08:11:27.3582901Z Artifact download completed successfully.
+2026-11-20T08:11:27.3583767Z Total of 1 artifact(s) downloaded
+2026-11-20T08:11:27.3585033Z Download artifact has finished successfully
+2026-11-20T08:11:27.3724621Z ##[group]Run if ([string]::IsNullOrWhiteSpace($env:NUGET_USER)) { throw 'Set the NUGET_USER repository variable to your NuGet.org profile username.' }
+2026-11-20T08:11:27.3725776Z [36;1mif ([string]::IsNullOrWhiteSpace($env:NUGET_USER)) { throw 'Set the NUGET_USER repository variable to your NuGet.org profile username.' }[0m
+2026-11-20T08:11:27.3763315Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-11-20T08:11:27.3763830Z env:
+2026-11-20T08:11:27.3764195Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-20T08:11:27.3764655Z   NUGET_USER: signalNotNoise
+2026-11-20T08:11:27.3765012Z ##[endgroup]
+2026-11-20T08:11:28.2682873Z ##[group]Run NuGet/login@8d196754b4036150537f80ac539e15c2f1028841
+2026-11-20T08:11:28.2683192Z with:
+2026-11-20T08:11:28.2683364Z   user: signalNotNoise
+2026-11-20T08:11:28.2683606Z   token-service-url: https://www.nuget.org/api/v2/token
+2026-11-20T08:11:28.2683891Z   audience: https://www.nuget.org
+2026-11-20T08:11:28.2684116Z env:
+2026-11-20T08:11:28.2684289Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-20T08:11:28.2684495Z ##[endgroup]
+2026-11-20T08:11:30.6411114Z Successfully exchanged OIDC token for NuGet API key.
+2026-11-20T08:11:30.6516011Z ##[group]Run foreach ($id in @('SignalNotNoise.UI', 'SignalNotNoise.UI.Wpf')) {
+2026-11-20T08:11:30.6516470Z [36;1mforeach ($id in @('SignalNotNoise.UI', 'SignalNotNoise.UI.Wpf')) {[0m
+2026-11-20T08:11:30.6516860Z [36;1m  $package = "artifacts/packages/$id.$env:PACKAGE_VERSION.nupkg"[0m
+2026-11-20T08:11:30.6517292Z [36;1m  if (-not (Test-Path -LiteralPath $package)) { throw "Missing package: $package" }[0m
+2026-11-20T08:11:30.6518103Z [36;1m  dotnet nuget push $package --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_API_KEY --skip-duplicate[0m
+2026-11-20T08:11:30.6518622Z [36;1m  if ($LASTEXITCODE -ne 0) { throw "Publish failed: $id" }[0m
+2026-11-20T08:11:30.6518918Z [36;1m}[0m
+2026-11-20T08:11:30.6551284Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-11-20T08:11:30.6551569Z env:
+2026-11-20T08:11:30.6551762Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-20T08:11:30.6552448Z   NUGET_API_KEY: ***
+2026-11-20T08:11:30.6552651Z   PACKAGE_VERSION: 1.1.0
+2026-11-20T08:11:30.6552894Z ##[endgroup]
+2026-11-20T08:11:36.0494083Z Pushing SignalNotNoise.UI.1.1.0.nupkg to 'https://www.nuget.org/api/v2/package'...
+2026-11-20T08:11:36.0508131Z   PUT https://www.nuget.org/api/v2/package/
+2026-11-20T08:11:36.3057378Z   Created https://www.nuget.org/api/v2/package/ 254ms
+2026-11-20T08:11:36.3066474Z Your package was pushed.
+2026-11-20T08:11:36.3069925Z Pushing SignalNotNoise.UI.1.1.0.snupkg to 'https://www.nuget.org/api/v2/symbolpackage'...
+2026-11-20T08:11:36.3071275Z   PUT https://www.nuget.org/api/v2/symbolpackage/
+2026-11-20T08:11:36.4446618Z   Created https://www.nuget.org/api/v2/symbolpackage/ 137ms
+2026-11-20T08:11:36.4447423Z Your package was pushed.
+2026-11-20T08:11:37.4568142Z Pushing SignalNotNoise.UI.Wpf.1.1.0.nupkg to 'https://www.nuget.org/api/v2/package'...
+2026-11-20T08:11:37.4636724Z   PUT https://www.nuget.org/api/v2/package/
+2026-11-20T08:11:37.7588114Z   Created https://www.nuget.org/api/v2/package/ 294ms
+2026-11-20T08:11:37.7601633Z Your package was pushed.
+2026-11-20T08:11:37.7606432Z Pushing SignalNotNoise.UI.Wpf.1.1.0.snupkg to 'https://www.nuget.org/api/v2/symbolpackage'...
+2026-11-20T08:11:37.7608887Z   PUT https://www.nuget.org/api/v2/symbolpackage/
+2026-11-20T08:11:37.8847272Z   Created https://www.nuget.org/api/v2/symbolpackage/ 123ms
+2026-11-20T08:11:37.8847957Z Your package was pushed.
+2026-11-20T08:11:38.2885926Z Post job cleanup.
+2026-11-20T08:11:38.3933456Z Cleaning up orphan processes
+

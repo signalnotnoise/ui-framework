@@ -1,0 +1,16 @@
+{
+  "Passed": true,
+  "WindowsMotionEnabled": false,
+  "Assemblies": [
+    {
+      "Name": "UI Framework",
+      "Version": "1.1.0.0",
+      "Sha256": "E28C0354501382A60F224AF800D550D41C1B6B0966B63A992E481AF207893E84"
+    },
+    {
+      "Name": "UI Framework.Wpf",
+      "Version": "1.1.0.0",
+      "Sha256": "5593A0335B4F9D6135EA6D87DD101476B4BCFBC7F82DE171F7876672685D780B"
+    }
+  ]
+}

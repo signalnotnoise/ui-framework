@@ -1,6 +1,6 @@
 # Release process
 
-The 1.1.0 animation release is being prepared November 20, 2026. Its exact source,
+The 1.1.0 animation release was published November 20, 2026. Its exact source,
 hosted gates and public verification are tracked in [the release record](releases/1.1.0.md).
 
 Version 1.0.0 was published November 15, 2026 from

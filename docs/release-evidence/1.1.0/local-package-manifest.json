@@ -1,0 +1,18 @@
+[
+  {
+    "package": "SignalNotNoise.UI.1.1.0.nupkg",
+    "sha256": "1437faacc68d9c62ea36cc46405a373aa1613a118220a9414359887e920f6a67",
+    "readmeCorrected": true,
+    "dlls": {
+      "lib/net10.0/UI Framework.dll": "5840adbf9243b2e4314c1808de54c83514fbeb4b4cc76c418ee9f3d4bc5b82c7"
+    }
+  },
+  {
+    "package": "SignalNotNoise.UI.Wpf.1.1.0.nupkg",
+    "sha256": "2235a34d765c026c4a087c94c40095afb80c79f194ed4c2c429c43f4c68f19bf",
+    "readmeCorrected": true,
+    "dlls": {
+      "lib/net10.0-windows7.0/UI Framework.Wpf.dll": "ced3a9fd276c25cec4e4697d79f4d50e3168ecfb7f18f41de6cd40cd5ab466a2"
+    }
+  }
+]

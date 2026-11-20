@@ -1,0 +1,17 @@
+{
+  "animation-smoke-source.zip": "44738b5d8ef77c45f8ba3200b15f2378f94fcc22c5c283da6d169860569e2545",
+  "hosted-package-manifest.json": "45eaf4a7fb0793b8e51241293ed0b9e3f52ec7eedad0b86204231a361c7413da",
+  "isolated-release.log": "e8c8f37abc02f47a6dcc6b7841be53058876cb716920d5879dd564e7257efc6b",
+  "local-package-manifest.json": "22d3a1ea3200a9c519c09d2dc223980d3e5212fb391b5defb3762232aa738136",
+  "local-packages.log": "e51f99c22cf7368fa03369e65ce375e8cd75890c9b6efa99b36e14d3102b9683",
+  "local-release.log": "45bbd5e72d708c360c3e797e47977e27051c96bb5a36e58c6b00e12e5df99b4d",
+  "local-upgrade.zip": "56e66866aec3e27c122c8f013afcf28422558db42ee9e1bbb9b8221e5608b562",
+  "public-animation-smoke.json": "c72a55956e2b0e3331a027676166ab0faf882cb443ef57b2b93f33727423ba04",
+  "public-package-verification.json": "ce7df2ca06f5f0e62c79723c46aa0a710257c941b060d55eaeef296a8905137f",
+  "public-upgrade.zip": "a66f7995a8c3ccfdbd99db9698b2151bcf8e9ba3e76228e71ca32012dce22b14",
+  "publish-performance.zip": "dc82bae063488da3f71b49eaca9f7df61e024c78fcb8a1f00ba00ce620a96914",
+  "publish-run.json": "9a1c6449b2564b9878caf967dd6836bda3fcbdefbe71206a73af1a8e79d785a9",
+  "publish.log": "e3bbf17c275b9940ee4ecee72da45b0cb8ff14c65092bad7d6d5795e6528f27d",
+  "validate-performance.zip": "5014ddbaddbca6e2eed32bc9f9f4096bf93bc2bc3d069092ff0ffa3335e45223",
+  "validate-run.json": "5fcb6825cdbe3dc49e0d7d00ff46ada89e9baf6663ab8f280a4b4fd4716b63b5"
+}

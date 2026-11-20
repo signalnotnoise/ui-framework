@@ -2,12 +2,12 @@
 
 Last updated: November 20, 2026.
 
-Version 1.0.0 libraries and symbols were published November 15 from `cbd85b8`.
-Both exact-commit hosted workflows passed all validation and 32 performance checks
-each. Fresh public alpha.7-to-v1 source/binary upgrades pass and installed DLL
-hashes match the uploaded packages. [Detailed release record](releases/1.0.0.md).
-The embedded 1.0.0 README retains an obsolete preview paragraph; repository text
-and guards are corrected, with shipment tracked in FW-029 for the next version.
+Version 1.1.0 libraries and symbols were published November 20 from `7c1fff5`.
+Both exact-candidate hosted workflows passed 32/32 performance checks. Fresh
+public installation and 14 source/binary upgrade processes pass; installed DLLs
+and embedded READMEs match hosted artifacts. FW-029's README correction shipped
+in 1.1.0; the historical 1.0.0 artifact remains immutable.
+[Detailed release record](releases/1.1.0.md).
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
 and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
@@ -28,14 +28,13 @@ Dates below record evidence or updates, not delivery commitments.
 
 ### FW-036 Merge and publish animation support as 1.1.0
 
-In progress November 20, 2026. Owner: Codex. User authorized merging the animation
-branch into main and publishing. Additive APIs select minor version 1.1.0; NuGet
-1.0.0 remains immutable. Promote the reviewed API declarations, refresh the skill
-contract and package docs, run exact-candidate hosted validation/publication,
-verify fresh public installation and source/binary upgrades, and preserve release
-evidence. This release also carries the pending FW-029 embedded README correction.
-The unchanged implementation already passed exact-commit hosted checks in
-Validate 44620484678. [Release status](releases/1.1.0.md).
+Done November 20, 2026. Owner: Codex. Merged animation support into main and
+published 1.1.0 from `7c1fff5`. Shipped API declarations, skill and package docs
+are current. Validate 44698350780 and Publish NuGet 44698350462 both pass all
+32 hosted performance checks against the unchanged baseline. Fresh public
+installation, animation smoke and 14 source/binary upgrade processes pass.
+Public DLL/README hashes match hosted artifacts. FW-029 is also complete.
+[Release evidence](releases/1.1.0.md).
 
 ### Agent skill and showcase phases
 
@@ -159,7 +158,7 @@ remains a separate exact-commit check after push.
 | Done | FW-019 | P2 | Validate independent sample adoption and upgrades | Done — published alpha.6 to alpha.7 |
 | 12 | FW-013 | P3 | Evaluate additional reusable control APIs | Deferred |
 | 13 | FW-014 | P3 | Opacity/translation first slice; evaluate broader expansion | First slice done locally; broader expansion deferred |
-| Next patch | FW-029 | P2 | Ship corrected embedded package README | Open — source corrected; 1.0.0 artifact immutable |
+| Complete | FW-029 | P2 | Ship corrected embedded package README | Done November 20 — verified in public 1.1.0; 1.0.0 immutable |
 | Later | FW-025 | P3 | Add contextual runtime failure diagnostics | Deferred — post-v1 |
 | Later | FW-026 | P3 | Revalidate physical Narrator after peer-cache cleanup | Deferred — post-v1 follow-up |
 
@@ -1293,9 +1292,10 @@ The post-upload README discrepancy is explicit in FW-029; it does not alter bina
 
 ## FW-029 — Ship corrected embedded package README
 
-Open, November 15, 2026. Post-upload public-page verification found the obsolete
+Done November 20, 2026. Public 1.1.0 README hashes match corrected hosted
+artifacts; see [release evidence](releases/1.1.0.md). Post-upload public-page verification found the obsolete
 Preview limitations paragraph still embedded in 1.0.0. Repository text is corrected
 and the stable-version documentation guard rejects those old status markers.
-Ship that correction with the next explicitly prepared package version. Do not
+The correction shipped in 1.1.0. Do not
 overwrite 1.0.0 or describe its embedded README as corrected. Runtime gates passed;
 this follow-up concerns documentation, not an observed runtime regression.

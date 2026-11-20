@@ -1,6 +1,6 @@
 # UI Framework documentation
 
-The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [v1 record](releases/1.0.0.md).
+The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [current release record](releases/1.1.0.md).
 
 ## Start here
 
