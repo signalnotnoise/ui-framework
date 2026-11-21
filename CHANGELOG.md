@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0 — November 20, 2026
+
+- Add shared spacing, typography, radius and icon token scales; scoped themes
+  now control icon-button label spacing. See [design tokens](docs/design-tokens.md).
+
+- Add reusable vector icons, icon-and-text buttons and accessible icon-only buttons.
+  See [the icon contract](docs/icons.md).
+
 ## 1.1.0 — November 20, 2026
 
 - Add explicit opacity/translation destinations and retained-update animation

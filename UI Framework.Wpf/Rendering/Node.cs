@@ -59,6 +59,7 @@ internal sealed class Node : IDisposable
         {
             ViewKind.Platform => new NativeControlHost((NativeViewDescriptor)view.PlatformContent!),
             ViewKind.Text => new TextBlock { TextWrapping = TextWrapping.Wrap },
+            ViewKind.Icon => new IconElement(),
             ViewKind.Button => new Button { Padding = new Thickness(12, 6, 12, 6), HorizontalAlignment = HorizontalAlignment.Left },
             ViewKind.TextField => new TextBox { MinWidth = 40, Padding = new Thickness(6) },
             ViewKind.TextEditor => new TextBox { MinWidth = 40, Padding = new Thickness(6), AcceptsReturn = true,

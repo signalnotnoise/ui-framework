@@ -6,6 +6,13 @@ hierarchy, finite responsive layout, scoped themes, retained component state,
 bindings and application-owned WPF lifetime. It is portable Markdown with a
 small [composition recipe](../skills/ui-framework/references/composition.md).
 
+The November 20 guidance prefers reusable vector icons and centralized design
+tokens, with component-specific constants kept at their owning layer. The
+1.2.0 shared scales now have a [token-based recipe](../skills/ui-framework/references/composition.md)
+and [explicit theme replacement guidance](design-tokens.md). Dedicated
+icon APIs require 1.2.0; [the icon contract](icons.md) records their
+version boundary and native fallback for 1.1.0 consumers.
+
 ## Install and invoke
 
 Copy the `skills/ui-framework` folder into your agent's skill directory.

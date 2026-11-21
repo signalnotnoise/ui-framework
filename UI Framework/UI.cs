@@ -59,6 +59,29 @@ public static class UI
         };
     public static View Text(string text) => new(ViewKind.Text) { Content = text };
     public static View Button(string text, Action click) => new(ViewKind.Button) { Content = text, Click = click };
+    /// <summary>Displays a decorative vector icon in a square DIP box. Add AccessibilityLabel for meaningful standalone icons.</summary>
+    public static View Icon(VectorIcon icon, double size = IconTokens.DefaultSmall)
+    {
+        ArgumentNullException.ThrowIfNull(icon);
+        if (!double.IsFinite(size) || size <= 0) throw new ArgumentOutOfRangeException(nameof(size));
+        return new(ViewKind.Icon) { Icon = icon, TextSize = size };
+    }
+    /// <summary>A native button with a leading vector icon and visible label. FontSize scales both.</summary>
+    public static View Button(VectorIcon icon, string text, Action click)
+    {
+        ArgumentNullException.ThrowIfNull(icon);
+        ArgumentException.ThrowIfNullOrWhiteSpace(text);
+        ArgumentNullException.ThrowIfNull(click);
+        return new(ViewKind.Button) { Icon = icon, Content = text, Click = click };
+    }
+    /// <summary>A native icon-only button with a required accessible name, also used as its tooltip.</summary>
+    public static View IconButton(VectorIcon icon, string accessibleName, Action click)
+    {
+        ArgumentNullException.ThrowIfNull(icon);
+        ArgumentException.ThrowIfNullOrWhiteSpace(accessibleName);
+        ArgumentNullException.ThrowIfNull(click);
+        return new(ViewKind.Button) { Icon = icon, AccessibleName = accessibleName, Click = click };
+    }
     public static View TextField(State<string> value) => TextField(value.Binding());
     public static View TextField(Binding<string> value) => new(ViewKind.TextField)
         { Content = value.Value, Edit = text => value.Value = text, ReadText = () => value.Value };

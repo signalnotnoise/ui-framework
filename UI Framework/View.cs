@@ -29,7 +29,7 @@ public sealed record View(ViewKind Kind)
     public object? MemoInputs { get; init; }
     public double Gap { get; init; }
     public double Inset { get; init; }
-    public double TextSize { get; init; } = 16;
+    public double TextSize { get; init; } = TypographyTokens.Default.Body;
     public double DesiredWidth { get; init; } = double.NaN;
     public double DesiredHeight { get; init; } = double.NaN;
     public string? BackgroundColor { get; init; }
@@ -43,6 +43,7 @@ public sealed record View(ViewKind Kind)
     public bool Enabled { get; init; } = true;
     public NavigationTransition Transition { get; init; } = NavigationTransition.FadeSlide;
     public ViewMotion? Motion { get; init; }
+    public VectorIcon? Icon { get; init; }
     public View Opacity(double value) => WithMotion((Motion ?? ViewMotion.Default) with { Opacity = value });
     public View Translate(double x, double y) => WithMotion((Motion ?? ViewMotion.Default) with { X = x, Y = y });
     public View Animate(AnimationProperties properties, AnimationSpec? animation) =>

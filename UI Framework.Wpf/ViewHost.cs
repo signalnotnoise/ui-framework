@@ -102,7 +102,7 @@ public sealed class ViewHost : ContentControl, IDisposable
         if (view.Kind is not (ViewKind.Text or ViewKind.Button or ViewKind.TextField or ViewKind.VStack
                 or ViewKind.HStack or ViewKind.Component or ViewKind.Toggle or ViewKind.Scroll
                 or ViewKind.VirtualList or ViewKind.FlexRow or ViewKind.AdaptiveGrid or ViewKind.Navigation
-                or ViewKind.TextEditor or ViewKind.PasswordField or ViewKind.Picker or ViewKind.Platform or ViewKind.FlexColumn or ViewKind.SplitPane)
+                or ViewKind.TextEditor or ViewKind.PasswordField or ViewKind.Picker or ViewKind.Platform or ViewKind.FlexColumn or ViewKind.SplitPane or ViewKind.Icon)
             || view.Horizontal is not (ViewAlignment.Stretch or ViewAlignment.Start or ViewAlignment.Center or ViewAlignment.End)
             || view.Vertical is not (ViewAlignment.Stretch or ViewAlignment.Start or ViewAlignment.Center or ViewAlignment.End)
             || view.ButtonAppearance is not (ButtonStyleKind.Secondary or ButtonStyleKind.Primary or ButtonStyleKind.Quiet)
@@ -110,6 +110,15 @@ public sealed class ViewHost : ContentControl, IDisposable
             throw new InvalidOperationException("View contains an unknown kind, alignment, appearance or transition.");
         if (view.Children is null || view.Options is null || view.Content is null)
             throw new InvalidOperationException("View content and collections cannot be null.");
+        if (view.Icon is not null)
+        {
+            if (view.Kind is not (ViewKind.Icon or ViewKind.Button))
+                throw new InvalidOperationException("Icons require an Icon or Button view.");
+            if (view.Kind == ViewKind.Button && string.IsNullOrWhiteSpace(view.Content) && string.IsNullOrWhiteSpace(view.AccessibleName))
+                throw new InvalidOperationException("An icon-only button requires an accessible name.");
+            _ = IconGeometry.Get(view.Icon);
+        }
+        else if (view.Kind == ViewKind.Icon) throw new InvalidOperationException("An Icon view requires a vector definition.");
         static bool Dimension(double value) => double.IsFinite(value) && value >= 0;
         if (!Dimension(view.Gap) || !Dimension(view.Inset) || !Dimension(view.Radius) || !Dimension(view.FlexWeight)
             || !(double.IsNaN(view.DesiredWidth) || Dimension(view.DesiredWidth))
@@ -178,14 +187,17 @@ public sealed class ViewHost : ContentControl, IDisposable
             node.View = view; // Event handlers always read the latest description.
             if (view.Motion is not null || previous.Motion is not null)
                 NodeAnimation.Patch(node.Frame, created ? null : previous.Motion, view.Motion, created);
-            if (created || previous.AccessibleName != view.AccessibleName)
+            if (created || previous.AccessibleName != view.AccessibleName
+                || view.Kind == ViewKind.Button && (view.Icon is not null || previous.Icon is not null))
             {
                 var target = node.Control is NativeControlHost nativeHost ? nativeHost.Element : node.Control;
-                if (view.AccessibleName is null)
+                var name = view.AccessibleName ?? (view.Kind == ViewKind.Button && view.Icon is not null ? view.Content : null);
+                if (name is null)
                 {
                     if (!created || node.Control is not NativeControlHost) target.ClearValue(System.Windows.Automation.AutomationProperties.NameProperty);
                 }
-                else System.Windows.Automation.AutomationProperties.SetName(target, view.AccessibleName);
+                else if (System.Windows.Automation.AutomationProperties.GetName(target) != name)
+                    System.Windows.Automation.AutomationProperties.SetName(target, name);
             }
             // Avoid boxing and dependency-property work when retained layout is unchanged.
             var padding = new Thickness(view.Inset);
@@ -215,6 +227,9 @@ public sealed class ViewHost : ContentControl, IDisposable
             }
             switch (node.Control)
             {
+                case IconElement icon:
+                    icon.Update(view.Icon!, view.TextSize);
+                    break;
                 case NavigationSurface navigation:
                     navigation.Update(view.Children, view.Transition);
                     break;
@@ -235,7 +250,8 @@ public sealed class ViewHost : ContentControl, IDisposable
                 case Button button:
                     // Content is object-valued: equal labels can be distinct string instances.
                     // Avoid invalidating the presenter when the displayed value is unchanged.
-                    if (!Equals(button.Content, view.Content)) button.Content = view.Content;
+                    if (view.Icon is not null || previous.Icon is not null) IconButtonContent.Patch(button, view);
+                    else if (!Equals(button.Content, view.Content)) button.Content = view.Content;
                     if (!button.FontSize.Equals(view.TextSize)) button.FontSize = view.TextSize;
                     break;
                 case CheckBox toggle:

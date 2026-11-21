@@ -1,14 +1,17 @@
 # UI Framework documentation
 
-The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [current release record](releases/1.1.0.md).
+The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [current release record](releases/1.2.0.md).
 
 ## Start here
 
 | Guide | Covers |
 | --- | --- |
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
+| [Shared design tokens](design-tokens.md) | 1.2.0 spacing, typography, radii and icon scales. |
+| [Vector icons](icons.md) | 1.2.0 icon views, icon buttons, ownership and accessibility. |
 | [Framework backlog](backlog.md) | Prioritized running work list, completion criteria, status and completed work. |
 | [Version 1.0.0 release](releases/1.0.0.md) | Published version, exact source, hosted gates and public installation. |
+| [Version 1.2.0 release](releases/1.2.0.md) | Icons and shared tokens: validation and publication status. |
 | [Version 1.1.0 release](releases/1.1.0.md) | Animation release status, exact-candidate validation and publication. |
 | [Opacity and translation](animation.md) | Destination-based animation, interruption, reduced motion and lifecycle. |
 | [Independent package workspace](../samples/PackageWorkspace/README.md) | NuGet-only setup, startup/shutdown and source/binary upgrades. |

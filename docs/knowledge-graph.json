@@ -129,7 +129,7 @@
       "id": "layoutstyle",
       "label": "Responsive layout and scoped styling",
       "status": "implemented",
-      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately. FW-017 completes November 15 within scoped appearance acceptance. Existing implementation and manual evidence are credited. Eight hidden-HWND native captures are individually inspected across light/dark, wide/compact and normal/editor-focus states; form, compact toolbar, review list and split panes include long text, disabled action and textual errors. Focus state is injected for rendering, not a new physical keyboard claim. 222 fixture assertions and 44 focused styling/layout tests pass. The v1 validation contract is application-owned rules, timing, messages and accessible field context using existing APIs; no validation engine, error token, adorner or automatic announcement promise. Core/WPF source hashes remain unchanged; no new performance or hosted gate is claimed. Earlier FW-006 physical contrast/scaling evidence retains its missing build/scale metadata; FW-026 is a separate post-v1 Narrator follow-up.",
+      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately. FW-017 completes November 15 within scoped appearance acceptance. Existing implementation and manual evidence are credited. Eight hidden-HWND native captures are individually inspected across light/dark, wide/compact and normal/editor-focus states; form, compact toolbar, review list and split panes include long text, disabled action and textual errors. Focus state is injected for rendering, not a new physical keyboard claim. 222 fixture assertions and 44 focused styling/layout tests pass. The v1 validation contract is application-owned rules, timing, messages and accessible field context using existing APIs; no validation engine, error token, adorner or automatic announcement promise. Core/WPF source hashes remain unchanged; no new performance or hosted gate is claimed. Earlier FW-006 physical contrast/scaling evidence retains its missing build/scale metadata; FW-026 is a separate post-v1 Narrator follow-up. FW-038 adds unreleased immutable spacing, typography, radius and icon scales to ThemeTokens. Core owns reusable values and validation; composition explicitly selects roles, while WPF styles own scoped icon-label gap updates. Default appearance and explicit sizes remain unchanged. Default group instances are shared; nested record copies are isolated. Icon path coordinates remain geometry, not design tokens. FW-038 local verification passes 212 tests, including six token cases. Four default native previews are byte-identical and custom scales are inspected. All 24 seven-pair comparisons against the pre-token snapshot pass; allocation changes are at most +0.14%, with unchanged component work. No hosted gate or package publication is claimed.",
       "sources": [
         "UI Framework/Layout/ViewAlignment.cs",
         "UI Framework/Styling/ThemeTokens.cs",
@@ -169,7 +169,15 @@
         "docs/fw017-appearance-acceptance-2026-11-15.md",
         "docs/verification-evidence/2026-11-15-appearance/README.md",
         "tools/SkillPreview/AppearanceScreen.cs",
-        "tools/SkillPreview/AppearanceAcceptance.cs"
+        "tools/SkillPreview/AppearanceAcceptance.cs",
+        "UI Framework/Styling/SpacingTokens.cs",
+        "UI Framework/Styling/TypographyTokens.cs",
+        "UI Framework/Styling/RadiusTokens.cs",
+        "UI Framework/Styling/IconTokens.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "tests/UI Framework.Checks/DesignTokenTests.cs",
+        "docs/design-tokens.md",
+        "docs/performance-evidence/2026-11-20-design-tokens/README.md"
       ]
     },
     {
@@ -479,14 +487,23 @@
       "id": "styling",
       "label": "Styling and themes",
       "status": "partial",
-      "summary": "Basic dimensions, colors, corners, text size, spacing; advanced themes and style systems remain open.",
+      "summary": "Basic dimensions, colors, corners, text size, spacing; advanced themes and style systems remain open. FW-037 adds unreleased immutable core VectorIcon definitions and Icon/Button/IconButton descriptions. WPF owns weak-key frozen geometry caching, viewport drawing, retained icon/label content and image automation peers; icon buttons remain native Buttons. Shared icon defaults are centralized; platform-only label spacing stays in the renderer. No SVG document parser or bundled third-party icon set. FW-037 verification: 206 tests including ten icon checks pass; wide/compact light/dark native captures inspected. All 24 seven-pair local comparisons pass, with unchanged component work and allocation changes up to +1.04%; small timing differences are inconclusive. Evidence measures ordinary-path overhead, not icon-heavy throughput or hosted release acceptance.",
       "sources": [
         "UI Framework/ViewKind.cs",
         "UI Framework/View.cs",
         "UI Framework/UI.cs",
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Rendering/Node.cs",
-        "README.md"
+        "README.md",
+        "UI Framework/Icons/VectorIcon.cs",
+        "UI Framework/Icons/IconDefaults.cs",
+        "UI Framework.Wpf/Icons/IconGeometry.cs",
+        "UI Framework.Wpf/Icons/IconElement.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+        "tests/UI Framework.Checks/IconTests.cs",
+        "docs/icons.md",
+        "docs/performance-evidence/2026-11-20-icons/README.md"
       ]
     },
     {
@@ -733,7 +750,7 @@
       "id": "release",
       "label": "Version 1 publication and verification",
       "status": "implemented",
-      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees. FW-031 uses local full-pushed-range path review to authorize a [skip performance] tip commit marker. Push workflow skips the performance job before runner allocation; it trusts the marker. Unmarked pushes, all PRs, manual Validate and publication retain full comparisons. The performance-only marker retains correctness and package checks. FW-032 adds a stricter locally checked [docs only] push marker that skips Windows/performance runners while retaining graph/reference/tooling checks. Code/tool/test changes do not qualify; PR/manual/publication gates ignore both markers. November 20: FW-036 prepares 1.1.0 from the animation branch, whose exact bcdbe9f candidate passed Validate 44620484678 including 32/32 performance checks. Published 1.1.0 from 7c1fff5: Validate 44698350780 and Publish NuGet 44698350462 each pass 32/32 hosted checks against unchanged baseline and budgets. Fresh public animation installation and 14 source/binary upgrade processes pass; public DLL/README and installed assembly hashes match hosted artifacts. FW-036 and FW-029 are complete. Raw local/public and hosted evidence is preserved in docs/release-evidence/1.1.0; noisy public upgrade timing increases remain diagnostic.",
+      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees. FW-031 uses local full-pushed-range path review to authorize a [skip performance] tip commit marker. Push workflow skips the performance job before runner allocation; it trusts the marker. Unmarked pushes, all PRs, manual Validate and publication retain full comparisons. The performance-only marker retains correctness and package checks. FW-032 adds a stricter locally checked [docs only] push marker that skips Windows/performance runners while retaining graph/reference/tooling checks. Code/tool/test changes do not qualify; PR/manual/publication gates ignore both markers. November 20: FW-036 prepares 1.1.0 from the animation branch, whose exact bcdbe9f candidate passed Validate 44620484678 including 32/32 performance checks. Published 1.1.0 from 7c1fff5: Validate 44698350780 and Publish NuGet 44698350462 each pass 32/32 hosted checks against unchanged baseline and budgets. Fresh public animation installation and 14 source/binary upgrade processes pass; public DLL/README and installed assembly hashes match hosted artifacts. FW-036 and FW-029 are complete. Raw local/public and hosted evidence is preserved in docs/release-evidence/1.1.0; noisy public upgrade timing increases remain diagnostic. FW-039 prepares 1.2.0 icons and shared design tokens; exact-candidate release gates and public verification are pending.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -772,7 +789,8 @@
         "docs/verification-evidence/2026-11-15-v1/README.md",
         "scripts/performance-required.py",
         "scripts/test-performance-required.py",
-        "docs/releases/1.1.0.md"
+        "docs/releases/1.1.0.md",
+        "docs/releases/1.2.0.md"
       ]
     },
     {
@@ -1373,5 +1391,5 @@
       "to": "animation"
     }
   ],
-  "releaseVersion": "1.1.0"
+  "releaseVersion": "1.2.0"
 }

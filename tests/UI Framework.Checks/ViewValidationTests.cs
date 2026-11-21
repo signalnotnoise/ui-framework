@@ -13,6 +13,7 @@ public sealed class ViewValidationTests
             var view = kind switch
             {
                 ViewKind.Component => UI.Component<VirtualizationProbe>(),
+                ViewKind.Icon => UI.Icon(new VectorIcon("M 0,0 L 24,24")),
                 ViewKind.Platform => WpfUI.Native<System.Windows.Controls.TextBlock>(() => new()),
                 ViewKind.Scroll => UI.Scroll(UI.Text("child")),
                 ViewKind.Navigation => new View(kind) { Children = [UI.Text("screen").Id("screen")] },

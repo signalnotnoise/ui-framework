@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "UI Framework knowledge graph",
   "source": "repository files and curated architecture",
-  "inputDigest": "f7a27fb5c2ca92ae91b11c49f9ad1c665d6f8b192a42c98d2521aa41e87648b4",
+  "inputDigest": "dcfba67a37b4d16babd6fd80437d21ea494cf03f82674bfbdf9456d2b1123f69",
   "coverage": {
-    "unresolvedRelativeReferences": 56,
+    "unresolvedRelativeReferences": 58,
     "semantic": false,
     "curatedArchitectureConcepts": 38,
     "limitations": "Regex syntax evidence may include comments/examples. C# has file nodes and explicit XML project references, not resolved using directives or calls. Curated concepts/relationships are imported from schema v1, not inferred. Aliases and runtime calls are not resolved."
@@ -79,6 +79,30 @@
     {
       "id": "UI Framework.Wpf/Animation/NodeAnimation.cs",
       "label": "NodeAnimation.cs",
+      "group": "UI Framework.Wpf",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+      "label": "IconAutomationPeer.cs",
+      "group": "UI Framework.Wpf",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "label": "IconButtonContent.cs",
+      "group": "UI Framework.Wpf",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework.Wpf/Icons/IconElement.cs",
+      "label": "IconElement.cs",
+      "group": "UI Framework.Wpf",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework.Wpf/Icons/IconGeometry.cs",
+      "label": "IconGeometry.cs",
       "group": "UI Framework.Wpf",
       "kind": "file"
     },
@@ -335,6 +359,18 @@
       "kind": "file"
     },
     {
+      "id": "UI Framework/Icons/IconDefaults.cs",
+      "label": "IconDefaults.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework/Icons/VectorIcon.cs",
+      "label": "VectorIcon.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
       "id": "UI Framework/Layout/SplitAxis.cs",
       "label": "SplitAxis.cs",
       "group": "UI Framework",
@@ -401,8 +437,32 @@
       "kind": "file"
     },
     {
+      "id": "UI Framework/Styling/IconTokens.cs",
+      "label": "IconTokens.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework/Styling/RadiusTokens.cs",
+      "label": "RadiusTokens.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework/Styling/SpacingTokens.cs",
+      "label": "SpacingTokens.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
       "id": "UI Framework/Styling/ThemeTokens.cs",
       "label": "ThemeTokens.cs",
+      "group": "UI Framework",
+      "kind": "file"
+    },
+    {
+      "id": "UI Framework/Styling/TypographyTokens.cs",
+      "label": "TypographyTokens.cs",
       "group": "UI Framework",
       "kind": "file"
     },
@@ -547,6 +607,12 @@
     {
       "id": "docs/decisions/0001-selective-rendering.md",
       "label": "0001-selective-rendering.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/design-tokens.md",
+      "label": "design-tokens.md",
       "group": "docs",
       "kind": "file"
     },
@@ -721,6 +787,12 @@
     {
       "id": "docs/fw027-local-candidate-2026-11-15.md",
       "label": "fw027-local-candidate-2026-11-15.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/icons.md",
+      "label": "icons.md",
       "group": "docs",
       "kind": "file"
     },
@@ -30905,6 +30977,18 @@
       "kind": "file"
     },
     {
+      "id": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
+      "id": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "label": "README.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/performance-exploration-2026-09-20.md",
       "label": "performance-exploration-2026-09-20.md",
       "group": "docs",
@@ -36767,6 +36851,12 @@
       "kind": "file"
     },
     {
+      "id": "docs/releases/1.2.0.md",
+      "label": "1.2.0.md",
+      "group": "docs",
+      "kind": "file"
+    },
+    {
       "id": "docs/releasing.md",
       "label": "releasing.md",
       "group": "docs",
@@ -38375,6 +38465,12 @@
       "kind": "file"
     },
     {
+      "id": "tests/UI Framework.Checks/DesignTokenTests.cs",
+      "label": "DesignTokenTests.cs",
+      "group": "tests",
+      "kind": "file"
+    },
+    {
       "id": "tests/UI Framework.Checks/EditorPropertyPrecedenceTests.cs",
       "label": "EditorPropertyPrecedenceTests.cs",
       "group": "tests",
@@ -38395,6 +38491,12 @@
     {
       "id": "tests/UI Framework.Checks/GuardedMoveTests.cs",
       "label": "GuardedMoveTests.cs",
+      "group": "tests",
+      "kind": "file"
+    },
+    {
+      "id": "tests/UI Framework.Checks/IconTests.cs",
+      "label": "IconTests.cs",
       "group": "tests",
       "kind": "file"
     },
@@ -39263,7 +39365,7 @@
       "id": "concept:layoutstyle",
       "label": "Responsive layout and scoped styling",
       "status": "implemented",
-      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately. FW-017 completes November 15 within scoped appearance acceptance. Existing implementation and manual evidence are credited. Eight hidden-HWND native captures are individually inspected across light/dark, wide/compact and normal/editor-focus states; form, compact toolbar, review list and split panes include long text, disabled action and textual errors. Focus state is injected for rendering, not a new physical keyboard claim. 222 fixture assertions and 44 focused styling/layout tests pass. The v1 validation contract is application-owned rules, timing, messages and accessible field context using existing APIs; no validation engine, error token, adorner or automatic announcement promise. Core/WPF source hashes remain unchanged; no new performance or hosted gate is claimed. Earlier FW-006 physical contrast/scaling evidence retains its missing build/scale metadata; FW-026 is a separate post-v1 Narrator follow-up.",
+      "summary": "Core defines weighted rows/columns, docking, split panes, adaptive grids, alignment and theme tokens. WPF owns measurement, native splitter input, templates and interaction states. Applications own native content, pane sizing and data templates. Scoped palette updates preserve controls; TextBox shares frozen normal brushes with conditional system-color triggers. Theme resource publication batches invalidations and respects caller-owned initialization. Latest paired validation passes 32/32 performance gates; remaining accessibility acceptance is tracked separately. FW-017 completes November 15 within scoped appearance acceptance. Existing implementation and manual evidence are credited. Eight hidden-HWND native captures are individually inspected across light/dark, wide/compact and normal/editor-focus states; form, compact toolbar, review list and split panes include long text, disabled action and textual errors. Focus state is injected for rendering, not a new physical keyboard claim. 222 fixture assertions and 44 focused styling/layout tests pass. The v1 validation contract is application-owned rules, timing, messages and accessible field context using existing APIs; no validation engine, error token, adorner or automatic announcement promise. Core/WPF source hashes remain unchanged; no new performance or hosted gate is claimed. Earlier FW-006 physical contrast/scaling evidence retains its missing build/scale metadata; FW-026 is a separate post-v1 Narrator follow-up. FW-038 adds unreleased immutable spacing, typography, radius and icon scales to ThemeTokens. Core owns reusable values and validation; composition explicitly selects roles, while WPF styles own scoped icon-label gap updates. Default appearance and explicit sizes remain unchanged. Default group instances are shared; nested record copies are isolated. Icon path coordinates remain geometry, not design tokens. FW-038 local verification passes 212 tests, including six token cases. Four default native previews are byte-identical and custom scales are inspected. All 24 seven-pair comparisons against the pre-token snapshot pass; allocation changes are at most +0.14%, with unchanged component work. No hosted gate or package publication is claimed.",
       "sources": [
         "UI Framework/Layout/ViewAlignment.cs",
         "UI Framework/Styling/ThemeTokens.cs",
@@ -39303,7 +39405,15 @@
         "docs/fw017-appearance-acceptance-2026-11-15.md",
         "docs/verification-evidence/2026-11-15-appearance/README.md",
         "tools/SkillPreview/AppearanceScreen.cs",
-        "tools/SkillPreview/AppearanceAcceptance.cs"
+        "tools/SkillPreview/AppearanceAcceptance.cs",
+        "UI Framework/Styling/SpacingTokens.cs",
+        "UI Framework/Styling/TypographyTokens.cs",
+        "UI Framework/Styling/RadiusTokens.cs",
+        "UI Framework/Styling/IconTokens.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "tests/UI Framework.Checks/DesignTokenTests.cs",
+        "docs/design-tokens.md",
+        "docs/performance-evidence/2026-11-20-design-tokens/README.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -39649,14 +39759,23 @@
       "id": "concept:styling",
       "label": "Styling and themes",
       "status": "partial",
-      "summary": "Basic dimensions, colors, corners, text size, spacing; advanced themes and style systems remain open.",
+      "summary": "Basic dimensions, colors, corners, text size, spacing; advanced themes and style systems remain open. FW-037 adds unreleased immutable core VectorIcon definitions and Icon/Button/IconButton descriptions. WPF owns weak-key frozen geometry caching, viewport drawing, retained icon/label content and image automation peers; icon buttons remain native Buttons. Shared icon defaults are centralized; platform-only label spacing stays in the renderer. No SVG document parser or bundled third-party icon set. FW-037 verification: 206 tests including ten icon checks pass; wide/compact light/dark native captures inspected. All 24 seven-pair local comparisons pass, with unchanged component work and allocation changes up to +1.04%; small timing differences are inconclusive. Evidence measures ordinary-path overhead, not icon-heavy throughput or hosted release acceptance.",
       "sources": [
         "UI Framework/ViewKind.cs",
         "UI Framework/View.cs",
         "UI Framework/UI.cs",
         "UI Framework.Wpf/ViewHost.cs",
         "UI Framework.Wpf/Rendering/Node.cs",
-        "README.md"
+        "README.md",
+        "UI Framework/Icons/VectorIcon.cs",
+        "UI Framework/Icons/IconDefaults.cs",
+        "UI Framework.Wpf/Icons/IconGeometry.cs",
+        "UI Framework.Wpf/Icons/IconElement.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+        "tests/UI Framework.Checks/IconTests.cs",
+        "docs/icons.md",
+        "docs/performance-evidence/2026-11-20-icons/README.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -39925,7 +40044,7 @@
       "id": "concept:release",
       "label": "Version 1 publication and verification",
       "status": "implemented",
-      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees. FW-031 uses local full-pushed-range path review to authorize a [skip performance] tip commit marker. Push workflow skips the performance job before runner allocation; it trusts the marker. Unmarked pushes, all PRs, manual Validate and publication retain full comparisons. The performance-only marker retains correctness and package checks. FW-032 adds a stricter locally checked [docs only] push marker that skips Windows/performance runners while retaining graph/reference/tooling checks. Code/tool/test changes do not qualify; PR/manual/publication gates ignore both markers. November 20: FW-036 prepares 1.1.0 from the animation branch, whose exact bcdbe9f candidate passed Validate 44620484678 including 32/32 performance checks. Published 1.1.0 from 7c1fff5: Validate 44698350780 and Publish NuGet 44698350462 each pass 32/32 hosted checks against unchanged baseline and budgets. Fresh public animation installation and 14 source/binary upgrade processes pass; public DLL/README and installed assembly hashes match hosted artifacts. FW-036 and FW-029 are complete. Raw local/public and hosted evidence is preserved in docs/release-evidence/1.1.0; noisy public upgrade timing increases remain diagnostic.",
+      "summary": "Version 1.0.0 published November 15, 2026 from cbd85b8 after detailed acceptance a1d2ed6 and upstream integration e1aad81. Validate 43719989593 and Publish NuGet 43721319796 both pass correctness/package and 32/32 hosted performance checks against unchanged baseline 78c88fb and budgets. Local v1 Release passes 176 tests; local seven-pair accepted-baseline diagnostics pass 32/32 with 231 measured inputs matching candidate. Independent local-package and public-package alpha.7-to-v1 campaigns each pass 14 source/binary upgrade processes; public installed DLL hashes match exact uploaded packages and all 168 host/editor probes collect. Smaller public full-list update timing increases 8.28% remain preserved as diagnostics, not hidden or promoted to a gate. Both libraries and symbols are accepted and publicly indexed. PackageWorkspace now pins 1.0.0 and passes fresh locked restore. Detailed release chronology and three raw-evidence archives have SHA256 manifests. FW-028 is complete. An obsolete final preview paragraph survived in the immutable 1.0.0 embedded README; source text and the stable documentation guard are corrected, and FW-029 tracks shipping the correction in the next package version. FW-025 diagnostics and FW-026 physical Narrator revalidation remain user-deferred after v1. Historical alpha.6/alpha.7 publication and scoped manual/memory evidence remain linked without claiming new physical checks or universal performance/memory guarantees. FW-031 uses local full-pushed-range path review to authorize a [skip performance] tip commit marker. Push workflow skips the performance job before runner allocation; it trusts the marker. Unmarked pushes, all PRs, manual Validate and publication retain full comparisons. The performance-only marker retains correctness and package checks. FW-032 adds a stricter locally checked [docs only] push marker that skips Windows/performance runners while retaining graph/reference/tooling checks. Code/tool/test changes do not qualify; PR/manual/publication gates ignore both markers. November 20: FW-036 prepares 1.1.0 from the animation branch, whose exact bcdbe9f candidate passed Validate 44620484678 including 32/32 performance checks. Published 1.1.0 from 7c1fff5: Validate 44698350780 and Publish NuGet 44698350462 each pass 32/32 hosted checks against unchanged baseline and budgets. Fresh public animation installation and 14 source/binary upgrade processes pass; public DLL/README and installed assembly hashes match hosted artifacts. FW-036 and FW-029 are complete. Raw local/public and hosted evidence is preserved in docs/release-evidence/1.1.0; noisy public upgrade timing increases remain diagnostic. FW-039 prepares 1.2.0 icons and shared design tokens; exact-candidate release gates and public verification are pending.",
       "sources": [
         "Directory.Build.props",
         "global.json",
@@ -39964,7 +40083,8 @@
         "docs/verification-evidence/2026-11-15-v1/README.md",
         "scripts/performance-required.py",
         "scripts/test-performance-required.py",
-        "docs/releases/1.1.0.md"
+        "docs/releases/1.1.0.md",
+        "docs/releases/1.2.0.md"
       ],
       "group": "architecture",
       "kind": "concept"
@@ -40152,8 +40272,18 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 8,
+        "line": 16,
         "text": "](docs/animation.md)"
+      }
+    },
+    {
+      "source": "CHANGELOG.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "CHANGELOG.md",
+        "line": 6,
+        "text": "](docs/design-tokens.md)"
       }
     },
     {
@@ -40162,8 +40292,18 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 20,
+        "line": 28,
         "text": "](docs/fw018-peer-cache-cleanup-2026-11-15.md)"
+      }
+    },
+    {
+      "source": "CHANGELOG.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "CHANGELOG.md",
+        "line": 9,
+        "text": "](docs/icons.md)"
       }
     },
     {
@@ -40172,7 +40312,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 49,
+        "line": 57,
         "text": "](docs/manual-acceptance-2026-10-29.md)"
       }
     },
@@ -40182,7 +40322,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 91,
+        "line": 99,
         "text": "](docs/releases/0.1.0-alpha.5.md)"
       }
     },
@@ -40192,7 +40332,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 53,
+        "line": 61,
         "text": "](docs/releases/0.1.0-alpha.6.md)"
       }
     },
@@ -40202,7 +40342,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 30,
+        "line": 38,
         "text": "](docs/releases/0.1.0-alpha.7.md)"
       }
     },
@@ -40212,7 +40352,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 16,
+        "line": 24,
         "text": "](docs/releases/1.0.0.md)"
       }
     },
@@ -40222,7 +40362,7 @@
       "kind": "links",
       "evidence": {
         "path": "CHANGELOG.md",
-        "line": 73,
+        "line": 81,
         "text": "](docs/virtualization.md)"
       }
     },
@@ -40298,16 +40438,6 @@
     },
     {
       "source": "README.md",
-      "target": "docs/animation.md",
-      "kind": "links",
-      "evidence": {
-        "path": "README.md",
-        "line": 41,
-        "text": "](docs/animation.md)"
-      }
-    },
-    {
-      "source": "README.md",
       "target": "docs/api-contract.md",
       "kind": "links",
       "evidence": {
@@ -40338,12 +40468,32 @@
     },
     {
       "source": "README.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "README.md",
+        "line": 42,
+        "text": "](docs/design-tokens.md)"
+      }
+    },
+    {
+      "source": "README.md",
       "target": "docs/error-recovery.md",
       "kind": "links",
       "evidence": {
         "path": "README.md",
         "line": 214,
         "text": "](docs/error-recovery.md)"
+      }
+    },
+    {
+      "source": "README.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "README.md",
+        "line": 41,
+        "text": "](docs/icons.md)"
       }
     },
     {
@@ -40438,22 +40588,22 @@
     },
     {
       "source": "README.md",
-      "target": "docs/releases/1.1.0.md",
+      "target": "docs/releases/1.2.0.md",
       "kind": "links",
       "evidence": {
         "path": "README.md",
         "line": 7,
-        "text": "](docs/releases/1.1.0.md)"
+        "text": "](docs/releases/1.2.0.md)"
       }
     },
     {
       "source": "README.md",
-      "target": "docs/releases/1.1.0.md",
+      "target": "docs/releases/1.2.0.md",
       "kind": "links",
       "evidence": {
         "path": "README.md",
         "line": 42,
-        "text": "](docs/releases/1.1.0.md)"
+        "text": "](docs/releases/1.2.0.md)"
       }
     },
     {
@@ -42873,6 +43023,15 @@
     },
     {
       "source": "concept:layoutstyle",
+      "target": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/43"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
       "target": "UI Framework.Wpf/Layout/AdaptivePanel.cs",
       "kind": "evidenced by",
       "evidence": {
@@ -42990,11 +43149,47 @@
     },
     {
       "source": "concept:layoutstyle",
+      "target": "UI Framework/Styling/IconTokens.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/42"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "UI Framework/Styling/RadiusTokens.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/41"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "UI Framework/Styling/SpacingTokens.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/39"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
       "target": "UI Framework/Styling/ThemeTokens.cs",
       "kind": "evidenced by",
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/3/sources/1"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "UI Framework/Styling/TypographyTokens.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/40"
       }
     },
     {
@@ -43044,6 +43239,15 @@
     },
     {
       "source": "concept:layoutstyle",
+      "target": "docs/design-tokens.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/45"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
       "target": "docs/fw017-appearance-acceptance-2026-11-15.md",
       "kind": "evidenced by",
       "evidence": {
@@ -43076,6 +43280,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/3/sources/30"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/46"
       }
     },
     {
@@ -43166,6 +43379,15 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/3/sources/21"
+      }
+    },
+    {
+      "source": "concept:layoutstyle",
+      "target": "tests/UI Framework.Checks/DesignTokenTests.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/3/sources/44"
       }
     },
     {
@@ -45348,6 +45570,15 @@
     },
     {
       "source": "concept:release",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/32/sources/38"
+      }
+    },
+    {
+      "source": "concept:release",
       "target": "docs/releasing.md",
       "kind": "evidenced by",
       "evidence": {
@@ -46257,6 +46488,42 @@
     },
     {
       "source": "concept:styling",
+      "target": "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/11"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/10"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "UI Framework.Wpf/Icons/IconElement.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/9"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "UI Framework.Wpf/Icons/IconGeometry.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/8"
+      }
+    },
+    {
+      "source": "concept:styling",
       "target": "UI Framework.Wpf/Rendering/Node.cs",
       "kind": "evidenced by",
       "evidence": {
@@ -46271,6 +46538,24 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/nodes/21/sources/3"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "UI Framework/Icons/IconDefaults.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/7"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "UI Framework/Icons/VectorIcon.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/6"
       }
     },
     {
@@ -46307,6 +46592,33 @@
       "evidence": {
         "path": "docs/knowledge-graph.json",
         "jsonPointer": "/edges/31"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "docs/icons.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/13"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/14"
+      }
+    },
+    {
+      "source": "concept:styling",
+      "target": "tests/UI Framework.Checks/IconTests.cs",
+      "kind": "evidenced by",
+      "evidence": {
+        "path": "docs/knowledge-graph.json",
+        "jsonPointer": "/nodes/21/sources/12"
       }
     },
     {
@@ -47000,7 +47312,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 35,
+        "line": 38,
         "text": "](accessibility.md)"
       }
     },
@@ -47010,7 +47322,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 72,
+        "line": 75,
         "text": "](agent-skill.md)"
       }
     },
@@ -47020,7 +47332,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 13,
+        "line": 16,
         "text": "](animation.md)"
       }
     },
@@ -47040,7 +47352,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 68,
+        "line": 71,
         "text": "](api-contract.md)"
       }
     },
@@ -47050,7 +47362,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 20,
+        "line": 23,
         "text": "](application-cleanup-policy-2026-09-25.md)"
       }
     },
@@ -47060,7 +47372,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 10,
+        "line": 12,
         "text": "](backlog.md)"
       }
     },
@@ -47070,7 +47382,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 25,
+        "line": 28,
         "text": "](bindings.md)"
       }
     },
@@ -47080,7 +47392,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 24,
+        "line": 27,
         "text": "](components.md)"
       }
     },
@@ -47090,7 +47402,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 17,
+        "line": 20,
         "text": "](consumer-package-2026-09-25.md)"
       }
     },
@@ -47100,8 +47412,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 44,
+        "line": 47,
         "text": "](decisions/0001-selective-rendering.md)"
+      }
+    },
+    {
+      "source": "docs/README.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/README.md",
+        "line": 10,
+        "text": "](design-tokens.md)"
       }
     },
     {
@@ -47110,7 +47432,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 19,
+        "line": 22,
         "text": "](editor-com-cleanup-2026-09-25.md)"
       }
     },
@@ -47120,7 +47442,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 18,
+        "line": 21,
         "text": "](editor-wait-isolation-2026-09-25.md)"
       }
     },
@@ -47130,7 +47452,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 26,
+        "line": 29,
         "text": "](editors.md)"
       }
     },
@@ -47140,8 +47462,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 23,
+        "line": 26,
         "text": "](error-recovery.md)"
+      }
+    },
+    {
+      "source": "docs/README.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/README.md",
+        "line": 11,
+        "text": "](icons.md)"
       }
     },
     {
@@ -47150,7 +47482,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 43,
+        "line": 46,
         "text": "](knowledge-graph.md)"
       }
     },
@@ -47160,7 +47492,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 39,
+        "line": 42,
         "text": "](launchpad.md)"
       }
     },
@@ -47170,7 +47502,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 41,
+        "line": 44,
         "text": "](layout-styling.md)"
       }
     },
@@ -47180,7 +47512,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 36,
+        "line": 39,
         "text": "](native-interop.md)"
       }
     },
@@ -47190,7 +47522,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 37,
+        "line": 40,
         "text": "](native-island-performance.md)"
       }
     },
@@ -47200,7 +47532,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 42,
+        "line": 45,
         "text": "](navigation.md)"
       }
     },
@@ -47210,7 +47542,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 60,
+        "line": 63,
         "text": "](navigation.md)"
       }
     },
@@ -47220,7 +47552,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 34,
+        "line": 37,
         "text": "](performance-2026-09-18.md)"
       }
     },
@@ -47230,7 +47562,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 31,
+        "line": 34,
         "text": "](performance-2026-09-21.md)"
       }
     },
@@ -47240,7 +47572,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 33,
+        "line": 36,
         "text": "](performance-exploration-2026-09-20.md)"
       }
     },
@@ -47250,7 +47582,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 29,
+        "line": 32,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -47260,7 +47592,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 28,
+        "line": 31,
         "text": "](performance-results.md)"
       }
     },
@@ -47270,7 +47602,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 62,
+        "line": 65,
         "text": "](performance-results.md)"
       }
     },
@@ -47280,7 +47612,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 27,
+        "line": 30,
         "text": "](performance.md)"
       }
     },
@@ -47290,7 +47622,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 16,
+        "line": 19,
         "text": "](publication-status-2026-09-24.md)"
       }
     },
@@ -47300,7 +47632,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 11,
+        "line": 13,
         "text": "](releases/1.0.0.md)"
       }
     },
@@ -47310,18 +47642,28 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 3,
+        "line": 15,
         "text": "](releases/1.1.0.md)"
       }
     },
     {
       "source": "docs/README.md",
-      "target": "docs/releases/1.1.0.md",
+      "target": "docs/releases/1.2.0.md",
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 12,
-        "text": "](releases/1.1.0.md)"
+        "line": 3,
+        "text": "](releases/1.2.0.md)"
+      }
+    },
+    {
+      "source": "docs/README.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/README.md",
+        "line": 14,
+        "text": "](releases/1.2.0.md)"
       }
     },
     {
@@ -47330,7 +47672,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 15,
+        "line": 18,
         "text": "](releasing.md)"
       }
     },
@@ -47340,7 +47682,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 21,
+        "line": 24,
         "text": "](review-resolution-2026-09-23.md)"
       }
     },
@@ -47350,7 +47692,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 46,
+        "line": 49,
         "text": "](roadmap.md)"
       }
     },
@@ -47360,7 +47702,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 38,
+        "line": 41,
         "text": "](stress-lab.md)"
       }
     },
@@ -47370,7 +47712,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 32,
+        "line": 35,
         "text": "](themed-reconciliation-2026-09-25.md)"
       }
     },
@@ -47380,7 +47722,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 30,
+        "line": 33,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -47390,7 +47732,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 22,
+        "line": 25,
         "text": "](validation-costs-2026-09-23.md)"
       }
     },
@@ -47400,7 +47742,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 45,
+        "line": 48,
         "text": "](virtualization.md)"
       }
     },
@@ -47410,7 +47752,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 60,
+        "line": 63,
         "text": "](virtualization.md)"
       }
     },
@@ -47420,7 +47762,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 40,
+        "line": 43,
         "text": "](../samples/LogViewer/README.md)"
       }
     },
@@ -47430,7 +47772,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/README.md",
-        "line": 14,
+        "line": 17,
         "text": "](../samples/PackageWorkspace/README.md)"
       }
     },
@@ -47496,11 +47838,31 @@
     },
     {
       "source": "docs/agent-skill.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 12,
+        "text": "](design-tokens.md)"
+      }
+    },
+    {
+      "source": "docs/agent-skill.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 13,
+        "text": "](icons.md)"
+      }
+    },
+    {
+      "source": "docs/agent-skill.md",
       "target": "samples/LogViewer/README.md",
       "kind": "links",
       "evidence": {
         "path": "docs/agent-skill.md",
-        "line": 91,
+        "line": 98,
         "text": "](../samples/LogViewer/README.md)"
       }
     },
@@ -47520,7 +47882,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/agent-skill.md",
-        "line": 30,
+        "line": 37,
         "text": "](../skills/ui-framework/references/animation.md)"
       }
     },
@@ -47530,7 +47892,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/agent-skill.md",
-        "line": 38,
+        "line": 45,
         "text": "](../skills/ui-framework/references/api-surface.md)"
       }
     },
@@ -47540,7 +47902,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/agent-skill.md",
-        "line": 44,
+        "line": 51,
         "text": "](../skills/ui-framework/references/behavior-examples.md)"
       }
     },
@@ -47556,11 +47918,21 @@
     },
     {
       "source": "docs/agent-skill.md",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/agent-skill.md",
+        "line": 11,
+        "text": "](../skills/ui-framework/references/composition.md)"
+      }
+    },
+    {
+      "source": "docs/agent-skill.md",
       "target": "tools/SkillPreview/ReleaseScreen.cs",
       "kind": "links",
       "evidence": {
         "path": "docs/agent-skill.md",
-        "line": 106,
+        "line": 113,
         "text": "](../tools/SkillPreview/ReleaseScreen.cs)"
       }
     },
@@ -47666,6 +48038,16 @@
     },
     {
       "source": "docs/api-contract.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/api-contract.md",
+        "line": 108,
+        "text": "](design-tokens.md)"
+      }
+    },
+    {
+      "source": "docs/api-contract.md",
       "target": "docs/error-recovery.md",
       "kind": "links",
       "evidence": {
@@ -47682,6 +48064,16 @@
         "path": "docs/api-contract.md",
         "line": 102,
         "text": "](fw019-package-adoption-2026-11-15.md)"
+      }
+    },
+    {
+      "source": "docs/api-contract.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/api-contract.md",
+        "line": 108,
+        "text": "](icons.md)"
       }
     },
     {
@@ -47740,7 +48132,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1215,
+        "line": 1256,
         "text": "](../CHANGELOG.md)"
       }
     },
@@ -47750,7 +48142,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 489,
+        "line": 530,
         "text": "](accessibility-2026-10-26.md)"
       }
     },
@@ -47760,7 +48152,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 491,
+        "line": 532,
         "text": "](accessibility-2026-10-28.md)"
       }
     },
@@ -47770,7 +48162,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 70,
+        "line": 111,
         "text": "](agent-skill.md#controlled-first-draft-pilot--november-19-2026-fw-034)"
       }
     },
@@ -47780,7 +48172,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 95,
+        "line": 136,
         "text": "](agent-skill.md#phase-1-verification--november-15-2026-fw-030)"
       }
     },
@@ -47790,7 +48182,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 132,
+        "line": 173,
         "text": "](agent-skill.md#phase-1-verification--november-15-2026-fw-030)"
       }
     },
@@ -47800,7 +48192,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1161,
+        "line": 1202,
         "text": "](agent-skill.md)"
       }
     },
@@ -47810,7 +48202,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1232,
+        "line": 1273,
         "text": "](agent-skill.md)"
       }
     },
@@ -47820,7 +48212,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 780,
+        "line": 821,
         "text": "](animation-performance-2026-11-19.md)"
       }
     },
@@ -47830,7 +48222,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 780,
+        "line": 821,
         "text": "](animation.md)"
       }
     },
@@ -47840,7 +48232,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 818,
+        "line": 859,
         "text": "](api-contract.md)"
       }
     },
@@ -47850,7 +48242,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1223,
+        "line": 1264,
         "text": "](api-contract.md)"
       }
     },
@@ -47860,7 +48252,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 281,
+        "line": 322,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -47870,7 +48262,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 375,
+        "line": 416,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -47880,7 +48272,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1221,
+        "line": 1262,
         "text": "](compact-button-validation.md)"
       }
     },
@@ -47890,7 +48282,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 493,
+        "line": 534,
         "text": "](contrast-allocation-investigation-2026-10-28.md)"
       }
     },
@@ -47900,7 +48292,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 473,
+        "line": 514,
         "text": "](discovery-initialization-2026-10-28.md)"
       }
     },
@@ -47910,7 +48302,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 538,
+        "line": 579,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -47920,7 +48312,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 586,
+        "line": 627,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -47930,7 +48322,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1228,
+        "line": 1269,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -47940,7 +48332,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1229,
+        "line": 1270,
         "text": "](editor-mount-investigation-2026-10-29.md)"
       }
     },
@@ -47950,7 +48342,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 547,
+        "line": 588,
         "text": "](fw007-guarded-move-2026-10-28.md)"
       }
     },
@@ -47960,7 +48352,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 548,
+        "line": 589,
         "text": "](fw007-indexed-shuffles-2026-10-28.md)"
       }
     },
@@ -47970,7 +48362,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 549,
+        "line": 590,
         "text": "](fw007-keyed-shuffles-2026-10-28.md)"
       }
     },
@@ -47980,7 +48372,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 545,
+        "line": 586,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -47990,7 +48382,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1228,
+        "line": 1269,
         "text": "](fw007-mount-allocations-2026-10-29.md)"
       }
     },
@@ -48000,7 +48392,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 742,
+        "line": 783,
         "text": "](fw012-release-reconciliation-2026-11-15.md)"
       }
     },
@@ -48010,7 +48402,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 208,
+        "line": 249,
         "text": "](fw017-appearance-acceptance-2026-11-15.md)"
       }
     },
@@ -48020,7 +48412,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 843,
+        "line": 884,
         "text": "](fw017-appearance-acceptance-2026-11-15.md)"
       }
     },
@@ -48030,7 +48422,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 860,
+        "line": 901,
         "text": "](fw017-evidence-review-2026-11-15.md)"
       }
     },
@@ -48040,7 +48432,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 959,
+        "line": 1000,
         "text": "](fw018-automation-retention-2026-11-15.md)"
       }
     },
@@ -48050,7 +48442,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1034,
+        "line": 1075,
         "text": "](fw018-bounded-reporting-2026-11-13.md)"
       }
     },
@@ -48060,7 +48452,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 934,
+        "line": 975,
         "text": "](fw018-guidedgrade-closed-resources-2026-11-15.md)"
       }
     },
@@ -48070,7 +48462,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1018,
+        "line": 1059,
         "text": "](fw018-heap-handle-attribution-2026-11-13.md)"
       }
     },
@@ -48080,7 +48472,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1004,
+        "line": 1045,
         "text": "](fw018-long-memory-2026-11-15.md)"
       }
     },
@@ -48090,7 +48482,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 944,
+        "line": 985,
         "text": "](fw018-manual-focus-2026-11-15.md)"
       }
     },
@@ -48100,7 +48492,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 207,
+        "line": 248,
         "text": "](fw018-memory-budgets-2026-11-15.md)"
       }
     },
@@ -48110,7 +48502,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 891,
+        "line": 932,
         "text": "](fw018-memory-budgets-2026-11-15.md)"
       }
     },
@@ -48120,7 +48512,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1062,
+        "line": 1103,
         "text": "](fw018-memory-diagnostics-2026-11-13.md)"
       }
     },
@@ -48130,7 +48522,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 907,
+        "line": 948,
         "text": "](fw018-peer-cache-cleanup-2026-11-15.md)"
       }
     },
@@ -48140,7 +48532,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 919,
+        "line": 960,
         "text": "](fw018-plain-wpf-focus-2026-11-15.md)"
       }
     },
@@ -48150,7 +48542,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1046,
+        "line": 1087,
         "text": "](fw018-reporting-retention-2026-11-13.md)"
       }
     },
@@ -48160,7 +48552,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 972,
+        "line": 1013,
         "text": "](fw018-snipping-comparison-2026-11-15.md)"
       }
     },
@@ -48170,7 +48562,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 209,
+        "line": 250,
         "text": "](fw019-package-adoption-2026-11-15.md)"
       }
     },
@@ -48180,7 +48572,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1102,
+        "line": 1143,
         "text": "](fw019-package-adoption-2026-11-15.md)"
       }
     },
@@ -48190,7 +48582,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1272,
+        "line": 1313,
         "text": "](fw027-local-candidate-2026-11-15.md)"
       }
     },
@@ -48200,7 +48592,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1151,
+        "line": 1192,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -48210,7 +48602,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1226,
+        "line": 1267,
         "text": "](knowledge-graph/README.md)"
       }
     },
@@ -48220,7 +48612,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1227,
+        "line": 1268,
         "text": "](knowledge-graph/README.md#visual-git-history)"
       }
     },
@@ -48230,7 +48622,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1137,
+        "line": 1178,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -48240,7 +48632,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1226,
+        "line": 1267,
         "text": "](knowledge-graph/validation/2026-10-24.md)"
       }
     },
@@ -48250,7 +48642,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1152,
+        "line": 1193,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -48260,7 +48652,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1227,
+        "line": 1268,
         "text": "](knowledge-graph/validation/2026-10-27.md)"
       }
     },
@@ -48270,7 +48662,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 289,
+        "line": 330,
         "text": "](layout-styling.md)"
       }
     },
@@ -48290,7 +48682,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 446,
+        "line": 487,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -48300,7 +48692,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 485,
+        "line": 526,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -48310,7 +48702,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1230,
+        "line": 1271,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -48320,7 +48712,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1231,
+        "line": 1272,
         "text": "](manual-acceptance-2026-10-29.md)"
       }
     },
@@ -48330,7 +48722,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 891,
+        "line": 932,
         "text": "](memory-budgets.md)"
       }
     },
@@ -48340,7 +48732,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 720,
+        "line": 761,
         "text": "](native-interop.md)"
       }
     },
@@ -48350,7 +48742,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 402,
+        "line": 443,
         "text": "](native-island-performance.md)"
       }
     },
@@ -48360,7 +48752,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1225,
+        "line": 1266,
         "text": "](native-island-performance.md)"
       }
     },
@@ -48370,7 +48762,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 661,
+        "line": 702,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -48380,7 +48772,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1078,
+        "line": 1119,
         "text": "](native-lifetime-2026-10-29.md)"
       }
     },
@@ -48390,7 +48782,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 614,
+        "line": 655,
         "text": "](native-provider-stall-policy.md)"
       }
     },
@@ -48400,7 +48792,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 257,
+        "line": 298,
         "text": "](native-style-validation.md)"
       }
     },
@@ -48410,7 +48802,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 660,
+        "line": 701,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -48420,7 +48812,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1077,
+        "line": 1118,
         "text": "](native-window-memory-2026-10-29.md)"
       }
     },
@@ -48430,7 +48822,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 596,
+        "line": 637,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -48440,7 +48832,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1229,
+        "line": 1270,
         "text": "](performance-evidence/2026-10-29-editor-hosted/README.md)"
       }
     },
@@ -48450,8 +48842,28 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 546,
+        "line": 587,
         "text": "](performance-evidence/2026-10-29-mount-allocations/README.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 48,
+        "text": "](performance-evidence/2026-11-20-design-tokens/README.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 61,
+        "text": "](performance-evidence/2026-11-20-icons/README.md)"
       }
     },
     {
@@ -48460,7 +48872,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1189,
+        "line": 1230,
         "text": "](performance-guardrails.md)"
       }
     },
@@ -48470,7 +48882,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 724,
+        "line": 765,
         "text": "](reactivity-performance-investigation.md)"
       }
     },
@@ -48480,7 +48892,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 256,
+        "line": 297,
         "text": "](releases/0.1.0-alpha.4.md)"
       }
     },
@@ -48490,18 +48902,8 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1220,
+        "line": 1261,
         "text": "](releases/0.1.0-alpha.4.md)"
-      }
-    },
-    {
-      "source": "docs/backlog.md",
-      "target": "docs/releases/0.1.0-alpha.5.md",
-      "kind": "links",
-      "evidence": {
-        "path": "docs/backlog.md",
-        "line": 242,
-        "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
     {
@@ -48520,7 +48922,17 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1222,
+        "line": 324,
+        "text": "](releases/0.1.0-alpha.5.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/0.1.0-alpha.5.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 1263,
         "text": "](releases/0.1.0-alpha.5.md)"
       }
     },
@@ -48530,7 +48942,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 508,
+        "line": 549,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -48540,7 +48952,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1182,
+        "line": 1223,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -48550,7 +48962,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1290,
+        "line": 1331,
         "text": "](releases/1.0.0.md)"
       }
     },
@@ -48570,7 +48982,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 37,
+        "line": 73,
         "text": "](releases/1.1.0.md)"
       }
     },
@@ -48580,8 +48992,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1296,
+        "line": 1337,
         "text": "](releases/1.1.0.md)"
+      }
+    },
+    {
+      "source": "docs/backlog.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/backlog.md",
+        "line": 34,
+        "text": "](releases/1.2.0.md)"
       }
     },
     {
@@ -48590,7 +49012,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 115,
+        "line": 156,
         "text": "](releasing.md#fast-documentation-and-skill-content-pushes)"
       }
     },
@@ -48600,7 +49022,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 124,
+        "line": 165,
         "text": "](releasing.md#decide-performance-coverage-before-pushing)"
       }
     },
@@ -48610,7 +49032,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 177,
+        "line": 218,
         "text": "](releasing.md#next-release-candidate)"
       }
     },
@@ -48620,7 +49042,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 264,
+        "line": 305,
         "text": "](releasing.md)"
       }
     },
@@ -48630,7 +49052,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 496,
+        "line": 537,
         "text": "](textbox-contrast-2026-10-28.md)"
       }
     },
@@ -48640,7 +49062,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 479,
+        "line": 520,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -48650,7 +49072,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 499,
+        "line": 540,
         "text": "](theme-resource-batching-2026-10-28.md)"
       }
     },
@@ -48660,7 +49082,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 309,
+        "line": 350,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -48670,7 +49092,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1224,
+        "line": 1265,
         "text": "](timing-bottleneck-2026-10-24.md)"
       }
     },
@@ -48680,7 +49102,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 336,
+        "line": 377,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -48690,7 +49112,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 1224,
+        "line": 1265,
         "text": "](timing-variance-investigation.md)"
       }
     },
@@ -48700,7 +49122,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 454,
+        "line": 495,
         "text": "](virtualization.md)"
       }
     },
@@ -48710,7 +49132,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 447,
+        "line": 488,
         "text": "](virtualized-editing-2026-10-24.md)"
       }
     },
@@ -48720,7 +49142,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 678,
+        "line": 719,
         "text": "](webview2-acceptance-2026-10-29.md)"
       }
     },
@@ -48730,7 +49152,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 619,
+        "line": 660,
         "text": "](webview2-final-2026-11-11.md)"
       }
     },
@@ -48740,7 +49162,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 684,
+        "line": 725,
         "text": "](webview2-interaction-2026-10-29.md)"
       }
     },
@@ -48750,7 +49172,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 697,
+        "line": 738,
         "text": "](webview2-recovery-2026-10-29.md)"
       }
     },
@@ -48760,7 +49182,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 639,
+        "line": 680,
         "text": "](webview2-retention-2026-11-11.md)"
       }
     },
@@ -48770,7 +49192,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 665,
+        "line": 706,
         "text": "](webview2-review-2026-10-29.md)"
       }
     },
@@ -48780,7 +49202,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 647,
+        "line": 688,
         "text": "](webview2-shutdown-2026-11-11.md)"
       }
     },
@@ -48790,7 +49212,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/backlog.md",
-        "line": 96,
+        "line": 137,
         "text": "](../samples/LogViewer/README.md)"
       }
     },
@@ -48942,6 +49364,36 @@
         "path": "docs/decisions/0001-selective-rendering.md",
         "line": 32,
         "text": "](../../tests/UI%20Framework.Checks/OptimizationChecks.cs)"
+      }
+    },
+    {
+      "source": "docs/design-tokens.md",
+      "target": "docs/backlog.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/design-tokens.md",
+        "line": 96,
+        "text": "](backlog.md)"
+      }
+    },
+    {
+      "source": "docs/design-tokens.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/design-tokens.md",
+        "line": 5,
+        "text": "](releases/1.2.0.md)"
+      }
+    },
+    {
+      "source": "docs/design-tokens.md",
+      "target": "skills/ui-framework/references/composition.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/design-tokens.md",
+        "line": 28,
+        "text": "](../skills/ui-framework/references/composition.md)"
       }
     },
     {
@@ -49835,6 +50287,36 @@
       }
     },
     {
+      "source": "docs/icons.md",
+      "target": "docs/backlog.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/icons.md",
+        "line": 74,
+        "text": "](backlog.md)"
+      }
+    },
+    {
+      "source": "docs/icons.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/icons.md",
+        "line": 37,
+        "text": "](design-tokens.md)"
+      }
+    },
+    {
+      "source": "docs/icons.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/icons.md",
+        "line": 4,
+        "text": "](releases/1.2.0.md)"
+      }
+    },
+    {
       "source": "docs/knowledge-graph.md",
       "target": ".githooks/pre-commit",
       "kind": "links",
@@ -50012,6 +50494,56 @@
         "path": "docs/knowledge-graph.md",
         "line": 177,
         "text": "](../UI%20Framework.Wpf/Animation/NodeAnimation.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework.Wpf/Icons/IconAutomationPeer.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../UI%20Framework.Wpf/Icons/IconButtonContent.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework.Wpf/Icons/IconButtonContent.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Icons/IconElement.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework.Wpf/Icons/IconElement.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework.Wpf/Icons/IconGeometry.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework.Wpf/Icons/IconGeometry.cs)"
       }
     },
     {
@@ -50816,6 +51348,26 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Icons/IconDefaults.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework/Icons/IconDefaults.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Icons/VectorIcon.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../UI%20Framework/Icons/VectorIcon.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "UI Framework/Layout/SplitAxis.cs",
       "kind": "links",
       "evidence": {
@@ -50966,12 +51518,52 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Styling/IconTokens.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../UI%20Framework/Styling/IconTokens.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Styling/RadiusTokens.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../UI%20Framework/Styling/RadiusTokens.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Styling/SpacingTokens.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../UI%20Framework/Styling/SpacingTokens.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "UI Framework/Styling/ThemeTokens.cs",
       "kind": "links",
       "evidence": {
         "path": "docs/knowledge-graph.md",
         "line": 156,
         "text": "](../UI%20Framework/Styling/ThemeTokens.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "UI Framework/Styling/TypographyTokens.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../UI%20Framework/Styling/TypographyTokens.cs)"
       }
     },
     {
@@ -51386,6 +51978,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../docs/design-tokens.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "docs/discovery-initialization-2026-10-28.md",
       "kind": "links",
       "evidence": {
@@ -51696,6 +52298,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../docs/icons.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "docs/knowledge-graph/README.md",
       "kind": "links",
       "evidence": {
@@ -51986,6 +52598,26 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../docs/performance-evidence/2026-11-20-design-tokens/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../docs/performance-evidence/2026-11-20-icons/README.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "docs/performance-guardrails.md",
       "kind": "links",
       "evidence": {
@@ -52092,6 +52724,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 185,
         "text": "](../docs/releases/1.1.0.md)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 185,
+        "text": "](../docs/releases/1.2.0.md)"
       }
     },
     {
@@ -54726,6 +55368,16 @@
     },
     {
       "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/DesignTokenTests.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 156,
+        "text": "](../tests/UI%20Framework.Checks/DesignTokenTests.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
       "target": "tests/UI Framework.Checks/EditorTests.cs",
       "kind": "links",
       "evidence": {
@@ -54762,6 +55414,16 @@
         "path": "docs/knowledge-graph.md",
         "line": 176,
         "text": "](../tests/UI%20Framework.Checks/GuardedMoveTests.cs)"
+      }
+    },
+    {
+      "source": "docs/knowledge-graph.md",
+      "target": "tests/UI Framework.Checks/IconTests.cs",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/knowledge-graph.md",
+        "line": 174,
+        "text": "](../tests/UI%20Framework.Checks/IconTests.cs)"
       }
     },
     {
@@ -56196,12 +56858,32 @@
     },
     {
       "source": "docs/layout-styling.md",
+      "target": "docs/animation.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/layout-styling.md",
+        "line": 49,
+        "text": "](animation.md)"
+      }
+    },
+    {
+      "source": "docs/layout-styling.md",
       "target": "docs/compact-button-validation.md",
       "kind": "links",
       "evidence": {
         "path": "docs/layout-styling.md",
-        "line": 62,
+        "line": 69,
         "text": "](compact-button-validation.md)"
+      }
+    },
+    {
+      "source": "docs/layout-styling.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/layout-styling.md",
+        "line": 33,
+        "text": "](design-tokens.md)"
       }
     },
     {
@@ -56210,7 +56892,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/layout-styling.md",
-        "line": 88,
+        "line": 95,
         "text": "](fw017-appearance-acceptance-2026-11-15.md)"
       }
     },
@@ -56220,7 +56902,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/layout-styling.md",
-        "line": 42,
+        "line": 49,
         "text": "](navigation.md)"
       }
     },
@@ -56240,7 +56922,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/layout-styling.md",
-        "line": 86,
+        "line": 93,
         "text": "](../tools/SkillPreview/AppearanceScreen.cs)"
       }
     },
@@ -57285,12 +57967,52 @@
       }
     },
     {
+      "source": "docs/releases/1.2.0.md",
+      "target": "docs/design-tokens.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/1.2.0.md",
+        "line": 13,
+        "text": "](../design-tokens.md)"
+      }
+    },
+    {
+      "source": "docs/releases/1.2.0.md",
+      "target": "docs/icons.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/1.2.0.md",
+        "line": 13,
+        "text": "](../icons.md)"
+      }
+    },
+    {
+      "source": "docs/releases/1.2.0.md",
+      "target": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/1.2.0.md",
+        "line": 20,
+        "text": "](../performance-evidence/2026-11-20-design-tokens/README.md)"
+      }
+    },
+    {
+      "source": "docs/releases/1.2.0.md",
+      "target": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releases/1.2.0.md",
+        "line": 19,
+        "text": "](../performance-evidence/2026-11-20-icons/README.md)"
+      }
+    },
+    {
       "source": "docs/releasing.md",
       "target": "docs/backlog.md",
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 35,
+        "line": 37,
         "text": "](backlog.md)"
       }
     },
@@ -57300,7 +58022,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 10,
+        "line": 12,
         "text": "](releases/0.1.0-alpha.7.md)"
       }
     },
@@ -57310,7 +58032,7 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 8,
+        "line": 10,
         "text": "](releases/1.0.0.md)"
       }
     },
@@ -57320,8 +58042,18 @@
       "kind": "links",
       "evidence": {
         "path": "docs/releasing.md",
-        "line": 4,
+        "line": 6,
         "text": "](releases/1.1.0.md)"
+      }
+    },
+    {
+      "source": "docs/releasing.md",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "links",
+      "evidence": {
+        "path": "docs/releasing.md",
+        "line": 3,
+        "text": "](releases/1.2.0.md)"
       }
     },
     {
@@ -58231,6 +58963,16 @@
     },
     {
       "source": "group:UI Framework",
+      "target": "UI Framework/Icons/IconDefaults.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
+      "target": "UI Framework/Icons/VectorIcon.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
       "target": "UI Framework/Layout/SplitAxis.cs",
       "kind": "contains"
     },
@@ -58286,7 +59028,27 @@
     },
     {
       "source": "group:UI Framework",
+      "target": "UI Framework/Styling/IconTokens.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
+      "target": "UI Framework/Styling/RadiusTokens.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
+      "target": "UI Framework/Styling/SpacingTokens.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
       "target": "UI Framework/Styling/ThemeTokens.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework",
+      "target": "UI Framework/Styling/TypographyTokens.cs",
       "kind": "contains"
     },
     {
@@ -58322,6 +59084,26 @@
     {
       "source": "group:UI Framework.Wpf",
       "target": "UI Framework.Wpf/Animation/NodeAnimation.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Icons/IconAutomationPeer.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Icons/IconButtonContent.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Icons/IconElement.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:UI Framework.Wpf",
+      "target": "UI Framework.Wpf/Icons/IconGeometry.cs",
       "kind": "contains"
     },
     {
@@ -58581,6 +59363,11 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/design-tokens.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/discovery-initialization-2026-10-28.md",
       "kind": "contains"
     },
@@ -58722,6 +59509,11 @@
     {
       "source": "group:docs",
       "target": "docs/fw027-local-candidate-2026-11-15.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/icons.md",
       "kind": "contains"
     },
     {
@@ -83876,6 +84668,16 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/performance-evidence/2026-11-20-design-tokens/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
+      "target": "docs/performance-evidence/2026-11-20-icons/README.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/performance-exploration-2026-09-20.md",
       "kind": "contains"
     },
@@ -88761,6 +89563,11 @@
     },
     {
       "source": "group:docs",
+      "target": "docs/releases/1.2.0.md",
+      "kind": "contains"
+    },
+    {
+      "source": "group:docs",
       "target": "docs/releasing.md",
       "kind": "contains"
     },
@@ -90136,6 +90943,11 @@
     },
     {
       "source": "group:tests",
+      "target": "tests/UI Framework.Checks/DesignTokenTests.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tests",
       "target": "tests/UI Framework.Checks/EditorPropertyPrecedenceTests.cs",
       "kind": "contains"
     },
@@ -90152,6 +90964,11 @@
     {
       "source": "group:tests",
       "target": "tests/UI Framework.Checks/GuardedMoveTests.cs",
+      "kind": "contains"
+    },
+    {
+      "source": "group:tests",
+      "target": "tests/UI Framework.Checks/IconTests.cs",
       "kind": "contains"
     },
     {
@@ -90825,7 +91642,7 @@
       "kind": "links",
       "evidence": {
         "path": "skills/ui-framework/SKILL.md",
-        "line": 33,
+        "line": 37,
         "text": "](references/animation.md)"
       }
     },

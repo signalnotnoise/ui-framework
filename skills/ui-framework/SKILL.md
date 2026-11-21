@@ -30,6 +30,10 @@ Read [the composition recipe](references/composition.md) for a concrete componen
 - Large editable lists: `docs/virtualization.md`, `docs/performance.md`.
 - Native controls and shutdown: `docs/native-interop.md`, `docs/application-cleanup-policy-2026-09-25.md`.
 - Navigation: `docs/navigation.md`. Accessibility: `docs/accessibility.md`.
+- Vector icons: in a source checkout read `docs/icons.md`. `VectorIcon`, `UI.Icon`,
+  `UI.Button(icon, text, click)` and `UI.IconButton` require 1.2.0 or later and are absent
+  from 1.1.0. Verify consumer metadata before using them; otherwise use the existing
+  WPF native boundary for vector drawing. Reuse application-owned icon definitions.
 - Opacity/translation: read [animation guidance](references/animation.md) and,
   in the source checkout, `docs/animation.md`. These APIs require version 1.1.0 or later;
   verify the consumer has them before using the example.
@@ -40,12 +44,16 @@ Start from its primary task, main action and reading order. Reuse the applicatio
 
 Use a clear title, short supporting copy and a dominant next action. Group related controls; use whitespace before adding borders or nesting more cards. Keep dense tools compact and reading surfaces comfortable. Show status in words as well as color. Use realistic long labels and empty/loading/error content when relevant to the requested workflow. Avoid ornamental metrics and inert controls added only to make a screenshot look complete.
 
+Reuse existing design tokens and named defaults for colors, spacing, typography, icon sizes and timing. When the consumer supports them, use `theme.Spacing`, `theme.Typography`, `theme.Radii` and `theme.Icons`; these groups require 1.2.0 or later and are absent from 1.1.0. In source checkouts read `docs/design-tokens.md`. Pass one theme through component props and apply it at the native boundary; recompose numeric values when replacing the theme. For older packages, use one application-owned design object. Define shared values once at their owning layer; keep component-specific constants beside the component. Do not scatter repeated literals or duplicate shared values into several local constants. Keep intrinsic vector path coordinates in reusable icon definitions; ordinary zero/one values do not need token wrappers.
+
+- Prefer vector icons wherever practical, using the application's existing icon set and a consistent visual style. At the WPF boundary, use supported vector geometry/drawing resources or an existing SVG integration; do not assume the framework renders SVG directly. Avoid emoji, Unicode symbol substitutes and raster icons when a suitable vector is available. Keep icons crisp at the intended size and DPI, use theme-aware colors, and give icon-only actions accessible names. Preserve required brand assets or raster artwork when vector equivalents are unsuitable.
+
 - `VStack`/`HStack` size to content. They are not CSS flexbox.
 - `FlexRow`/`FlexColumn` distribute finite available space. Explicit dimensions override weights; `Flex(0)` uses content size. Use `Dock` for fixed edges and a filling center, `SplitPane` for user-resizable workspaces.
 - `AdaptiveGrid(minimumColumnWidth, children)` reflows mounted children; it does not virtualize them. Use `VirtualList(rows, height)` with stable keys and a finite viewport for large lists.
 - Text wraps only when measured with finite width. Prefer a constrained `FlexRow` over a long description inside an unbounded `HStack`. Do not hard-code the whole screen to the screenshot dimensions.
 - Use immutable `ThemeTokens` and `ThemeStyles.Apply(host, tokens)` at the WPF boundary. Set root `.Foreground(tokens.Ink).Background(tokens.Canvas)` explicitly: applying styles does not color standalone text or the root surface.
-- `.Padding` and `.Height` describe the outer view frame, not native button content padding. Allow room for native chrome. Do not invent CSS properties, rich-button factories, unsupported animation APIs or responsive visibility modifiers.
+- `.Padding` and `.Height` describe the outer view frame, not native button content padding. Allow room for native chrome. Do not invent CSS properties, arbitrary rich-button content factories, unsupported animation APIs or responsive visibility modifiers.
 - When supported by the consumer, animate explicit opacity/translation destinations
   with a property mask and reusable immutable timing specification. Keep targets
   in state; let WPF clocks interpolate. Mount/recycle settles immediately, opacity

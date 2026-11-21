@@ -102,3 +102,7 @@ Windows 11 x64 / .NET 10.0.13 using a standalone NuGet-only workspace. See the
 [acceptance record](fw019-package-adoption-2026-11-15.md) for hashes, cleanup and
 measurement limits. This preview path does not replace exact-package acceptance
 for a future v1 release candidate or expand the supported platform matrix.
+
+Version 1.2.0 adds immutable `VectorIcon` definitions, icon views and icon buttons,
+plus spacing, typography, radius and icon groups on `ThemeTokens`. Existing defaults
+and explicit sizes remain unchanged. See [icons](icons.md) and [shared tokens](design-tokens.md).

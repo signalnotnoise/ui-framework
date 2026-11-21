@@ -17,8 +17,7 @@ public static class ThemeStyles
     {
         ArgumentNullException.ThrowIfNull(root);
         ArgumentNullException.ThrowIfNull(theme);
-        if (!double.IsFinite(theme.ControlRadius) || theme.ControlRadius < 0 || !double.IsFinite(theme.ControlPadding) || theme.ControlPadding < 0)
-            throw new ArgumentOutOfRangeException(nameof(theme));
+        theme.Validate();
         var resources = root.Resources;
         var ownsInitialization = false;
         try
@@ -41,6 +40,7 @@ public static class ThemeStyles
             resources[typeof(PasswordBox)] = InputStyle(typeof(PasswordBox), theme, palette);
             resources[typeof(ComboBox)] = PickerStyles.Create(BaseStyle(typeof(ComboBox), theme, palette), theme, palette);
             resources[typeof(CheckBox)] = ToggleStyles.Create(theme, palette);
+            resources[typeof(IconButtonContent)] = IconButtonContent.CreateStyle(theme.Icons);
         }
         finally
         {

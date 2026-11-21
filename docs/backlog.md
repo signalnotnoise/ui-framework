@@ -26,6 +26,42 @@ Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
 
+### FW-039 Validate and publish icons and shared tokens as 1.2.0
+
+In progress November 20, 2026. User authorized commit, push, CI and publication.
+Promote APIs and skill guidance, validate exact packages and upgrades, run full
+local/hosted gates against the unchanged accepted baseline, then verify public
+artifacts. [Release record](releases/1.2.0.md).
+
+### FW-038 Shared design-token scales
+
+Done November 20, 2026 (source-only, unreleased). Added immutable `Spacing`,
+`Typography`, `Radii` and `Icons` scales to `ThemeTokens`, with shared default
+instances and explicit composition. Native icon-label spacing follows scoped
+styles without replacing controls. Existing defaults and explicit view sizes
+remain unchanged. Skill and installed copy now use the shared groups.
+All 212 tests pass, including six token regressions; the extracted skill recipe
+builds without warnings. Four default previews are byte-identical; custom scales
+were inspected at wide/compact widths. All 24 local comparisons pass across
+seven alternating pairs against the saved pre-token source; allocations change
+by at most +0.14%, with unchanged component work. Both graphs validate.
+[Evidence and limits](performance-evidence/2026-11-20-design-tokens/README.md).
+No publication or hosted release-gate acceptance is claimed.
+
+### FW-037 Vector icons and icon buttons
+
+Done November 20, 2026 (source-only, unreleased). Added reusable immutable
+`VectorIcon` definitions, `Icon`, icon/text `Button` and accessible `IconButton`.
+WPF owns weak-key frozen geometry caching, retained drawing/content and native
+button behavior. Shared defaults and skill guidance now use named values at the
+owning layer. All 206 tests pass, including ten icon regressions. Inspected
+wide/compact light/dark native captures; 24 local performance comparisons pass
+across seven alternating pairs, retaining full-list and themed coverage.
+Allocations increase at most 1.04%; component work is unchanged. Small timing
+differences are inconclusive. [Evidence](performance-evidence/2026-11-20-icons/README.md).
+Both knowledge graphs validate. No hosted gate or physical Narrator acceptance
+is claimed; full SVG loading and bundled icon collections remain outside scope.
+
 ### FW-036 Merge and publish animation support as 1.1.0
 
 Done November 20, 2026. Owner: Codex. Merged animation support into main and
@@ -37,6 +73,11 @@ Public DLL/README hashes match hosted artifacts. FW-029 is also complete.
 [Release evidence](releases/1.1.0.md).
 
 ### Agent skill and showcase phases
+
+FW-030 follow-up — Done November 20, 2026: skill guidance prefers vector icons,
+consistent existing icon sets, theme-aware colors and accessible icon-only actions.
+WPF vector/SVG integration stays at the platform boundary; no new API is implied.
+Repository and installed skill copies match; skill validation and graph checks pass.
 
 FW-035 — Done (November 19, 2026): README leads with the Trace screenshot
 linked to the committed 30-second walkthrough, Windows/stable .NET 10

@@ -26,6 +26,13 @@ AdaptiveGrid(240, planned, building, shipped).Spacing(16);
 
 The renderer chooses as many equal columns as fit the available width, up to the number of children. Rows use the tallest measured child. Below the requested minimum column width, one column shrinks to fit. With infinite available width, all children occupy a single row at the requested column width. This is layout, not virtualization: every child is mounted. Resizing rearranges existing native controls without rebuilding components. Keep the full-list stress baseline for virtualization comparisons.
 
+## Shared design values
+
+Version 1.2.0 adds `theme.Spacing`, `theme.Typography`, `theme.Radii` and
+`theme.Icons`. Select them in existing view modifiers and pass the same theme
+through component props. See [shared design tokens](design-tokens.md) for defaults,
+validation and theme replacement behavior; these groups are not in NuGet 1.1.0.
+
 ## Theme boundaries
 
 ```csharp
@@ -39,7 +46,7 @@ ThemeStyles.Apply(host, theme); // UI_Framework.Wpf
 
 ThemeTokens is an immutable core record for canvas, surface, text, interaction colors, control radius, and control padding. Sample views consume the surface and typography colors; scoped WPF Button, TextBox, PasswordBox, ComboBox and CheckBox styles consume the control tokens. Apply another theme at the same boundary to replace these styles. Application-wide resources are not modified. Local WPF property values can override style values using standard WPF precedence.
 
-`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); there is no general animation or responsive visibility API.
+`ButtonStyle(Primary | Secondary | Quiet)` chooses button appearance. The native templates provide hover, pressed, keyboard-focus, and disabled feedback. `IsEnabled(false)` disables the entire view subtree. Text fields retain native editing and get hover/focus borders. Explicit Foreground on a native control overrides the theme; removing it restores theme precedence. Scrollbar styling remains native. Screen-entry transitions are documented under [navigation](navigation.md); opacity/translation targets are covered by [animation](animation.md); there is no responsive visibility API.
 
 The scoped Button template presents native `Content`, including panels containing labels and interactive controls, through a `ContentPresenter`. It forwards `ContentTemplate`, `ContentTemplateSelector`, and `ContentStringFormat` using WPF's normal template selection. Ordinary string labels retain wrapping and inherited theme foreground. Application-owned visuals and explicit or implicit data templates retain their own wrapping policy. This does not add a declarative rich-button API; native compositions remain application-owned. Menus, context menus and scrollbars still need application styles.
 
