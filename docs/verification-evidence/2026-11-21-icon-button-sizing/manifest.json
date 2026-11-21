@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-21",
+  "baseline": "09cd20b3ad49f62e971032f909fe2587824f8b98",
+  "archive": "acceptance.zip",
+  "sha256": "5ad1df0c79a292f680293d9cbe83bb7d85ab7af0a622e5ab9052d25cb0105b9c",
+  "entries": 27,
+  "frameworkRuntimeAndPerformanceHarnessUnchanged": true,
+  "sources": [
+    {
+      "path": "tests/UI Framework.Checks/CompactIconButtonTests.cs",
+      "sha256": "929db5cab6eb4b1a272383482b15cd2fd446ad03f6e45c79e6b858b568126e5c"
+    },
+    {
+      "path": "tests/UI Framework.Checks/SkillExamples/SkillIconToolbarExample.cs",
+      "sha256": "61fd78f1f7385ab84a7d4989c5d6718dcbbe888367faf915b39b67b37e31aac3"
+    },
+    {
+      "path": "tools/Update-SkillReference.py",
+      "sha256": "bd2f3f2ed4c83b71be9d8088e614e0b0122fde3f4ae4a1c712b3dffbd3480976"
+    }
+  ],
+  "verification": "43 focused cases pass; 10 new sizing/recipe cases. Three skill-reference fixtures and documentation checks pass. Hidden-source property-state and DPI checks, not physical keyboard/screen-reader acceptance. No performance claim."
+}

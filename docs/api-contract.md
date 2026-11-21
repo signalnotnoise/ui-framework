@@ -11,6 +11,11 @@ part of this tested support claim.
 
 ## Supported surface
 
+Source-only additions are recorded in `PublicAPI.Unshipped.txt` until released.
+Version 1.3.0 / FW-040's [button tooltip contract](tooltips.md) is additive and not available in
+published 1.2.0. Its text override does not change accessible names or native
+tooltip presentation policy.
+
 The core library remains platform independent; the Windows renderer targets WPF.
 Both currently target .NET 10. Support is limited to Windows/WPF for rendering;
 new runtime or platform targets require their own build, package and interaction

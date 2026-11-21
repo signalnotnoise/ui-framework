@@ -5,6 +5,8 @@ public sealed record View(ViewKind Kind)
     public string? Key { get; init; }
     public string Content { get; init; } = "";
     public string? AccessibleName { get; init; }
+    /// <summary>Button tooltip override: null restores automatic behavior; empty suppresses the tooltip.</summary>
+    public string? TooltipText { get; init; }
     /// <summary>Opaque renderer-specific description; use the platform's factory API.</summary>
     public object? PlatformContent { get; init; }
     public SplitPaneLayout? SplitLayout { get; init; }
@@ -68,6 +70,9 @@ public sealed record View(ViewKind Kind)
     public View Id(string key) => this with { Key = key };
     /// <summary>Sets the native automation name without changing visible content. Null restores the native name.</summary>
     public View AccessibilityLabel(string? label) => this with { AccessibleName = label };
+    /// <summary>Sets Button/IconButton hint text independently of its accessible name. Null restores the default; empty suppresses it.</summary>
+    public View Tooltip(string? text) => Kind == ViewKind.Button
+        ? this with { TooltipText = text } : throw new InvalidOperationException("Tooltip applies only to buttons.");
     /// <summary>Skip parent-driven component rebuilds when these immutable input values compare equal.</summary>
     public View Memo(object? inputs) => Kind == ViewKind.Component
         ? this with { IsMemoized = true, MemoInputs = inputs }

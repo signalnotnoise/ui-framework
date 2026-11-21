@@ -1,12 +1,14 @@
 # UI Framework documentation
 
-The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [current release record](releases/1.2.0.md).
+The framework is a C# class library with a WPF renderer. This index describes the working source; dated verification records below identify the revisions actually tested. V1 adopts the [supported compatibility contract](api-contract.md); publication status is tracked in the [current release record](releases/1.3.0.md).
 
 ## Start here
 
 | Guide | Covers |
 | --- | --- |
 | [Project quick start](../README.md) | Build, run, project structure, and first view. |
+| [Button tooltips](tooltips.md) | 1.3.0 independent hints, accessibility and native policy. |
+| [Button tooltips](tooltips.md) | 1.3.0 independent hints, accessibility and native policy. |
 | [Shared design tokens](design-tokens.md) | 1.2.0 spacing, typography, radii and icon scales. |
 | [Vector icons](icons.md) | 1.2.0 icon views, icon buttons, ownership and accessibility. |
 | [Framework backlog](backlog.md) | Prioritized running work list, completion criteria, status and completed work. |

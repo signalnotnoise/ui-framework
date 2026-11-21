@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — November 21, 2026
+
+- FW-040: independent Button/IconButton tooltip text, null restoration and empty
+  suppression, preserving accessible names and native WPF policy.
+- FW-041: clarify frame versus native icon-button sizing with a compiled compact
+  toolbar recipe, contrast/DPI checks and retained native feedback.
+- Add regression/package checks, version-aware skill guidance and archived evidence.
+  See [release status](docs/releases/1.3.0.md); publication is pending gates.
+
 ## 1.2.0 — November 20, 2026
 
 - Add shared spacing, typography, radius and icon token scales; scoped themes

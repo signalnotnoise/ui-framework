@@ -38,7 +38,6 @@ internal sealed class IconButtonContent : DockPanel
         if (view.Icon is null)
         {
             button.Content = view.Content;
-            button.ClearValue(ToolTipProperty);
             return;
         }
         var content = button.Content as IconButtonContent;
@@ -49,7 +48,5 @@ internal sealed class IconButtonContent : DockPanel
         content.UpdateGap();
         var visibility = hasLabel ? Visibility.Visible : Visibility.Collapsed;
         if (content.label.Visibility != visibility) content.label.Visibility = visibility;
-        var tooltip = hasLabel ? null : view.AccessibleName;
-        if (!Equals(button.ToolTip, tooltip)) button.ToolTip = tooltip;
     }
 }

@@ -110,6 +110,8 @@ public sealed class ViewHost : ContentControl, IDisposable
             throw new InvalidOperationException("View contains an unknown kind, alignment, appearance or transition.");
         if (view.Children is null || view.Options is null || view.Content is null)
             throw new InvalidOperationException("View content and collections cannot be null.");
+        if (view.TooltipText is not null && view.Kind != ViewKind.Button)
+            throw new InvalidOperationException("Tooltip applies only to buttons.");
         if (view.Icon is not null)
         {
             if (view.Kind is not (ViewKind.Icon or ViewKind.Button))
@@ -252,6 +254,8 @@ public sealed class ViewHost : ContentControl, IDisposable
                     // Avoid invalidating the presenter when the displayed value is unchanged.
                     if (view.Icon is not null || previous.Icon is not null) IconButtonContent.Patch(button, view);
                     else if (!Equals(button.Content, view.Content)) button.Content = view.Content;
+                    if (view.TooltipText is not null || previous.TooltipText is not null || view.Icon is not null || previous.Icon is not null)
+                        ButtonTooltip.Patch(button, view);
                     if (!button.FontSize.Equals(view.TextSize)) button.FontSize = view.TextSize;
                     break;
                 case CheckBox toggle:

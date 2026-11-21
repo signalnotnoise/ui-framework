@@ -16,6 +16,15 @@ FlexRow(
 
 `Align(horizontal, vertical)` positions the view's frame within its allocated space. Each axis accepts Stretch, Start, Center, or End; defaults are Stretch. Width/Height constrain the frame independently of alignment.
 
+Frame sizing does not assign native control dimensions. In particular, declarative
+Buttons are left-aligned and have renderer-local native padding. A wider frame
+does not guarantee a wider native button, and outer `.Padding(0)` does not clear
+native padding. Native local values also outrank ordinary style setters. For
+compact icon actions, distinguish frame size, native hit target, native content
+padding and icon viewport; see the [scoped toolbar recipe](icons.md#compact-and-flat-icon-buttons).
+It preserves the existing sizing contract and native feedback rather than making
+all Buttons stretch or changing their defaults.
+
 ## Adaptive columns
 
 For vertical fill, fixed edge docking and bound resizable panes, see [workspace layout](workspace-layout.md). These APIs are included in published alpha.7; older application package pins must be upgraded explicitly.

@@ -10,7 +10,7 @@ Declarative C# components, reactive state and native WPF rendering. Requires .NE
 In a .NET 10 WPF application, install the package:
 
 ```powershell
-dotnet add package SignalNotNoise.UI.Wpf --version 1.2.0
+dotnet add package SignalNotNoise.UI.Wpf --version 1.3.0
 ```
 
 In your WPF window constructor, after `InitializeComponent()`:
@@ -54,3 +54,11 @@ and application shutdown remain application-owned. Non-Windows renderers are
 not included. See the repository API contract and release evidence for scope.
 
 See the [source and examples](https://github.com/signalnotnoise/ui-framework), [documentation](https://github.com/signalnotnoise/ui-framework/tree/main/docs), and [issue tracker](https://github.com/signalnotnoise/ui-framework/issues). Licensed under MIT.
+
+## Button hints (1.3.0)
+
+Use `Button("Save", Save).Tooltip("Save document (Ctrl+S)")` for an independent hint.
+Null restores automatic hints; empty text suppresses them. Accessible names stay
+separate. WPF owns presentation and timing; the hint does not bind a shortcut.
+Frame Width differs from native icon-button sizing and padding; see the repository
+icon guide and compiled compact toolbar recipe.

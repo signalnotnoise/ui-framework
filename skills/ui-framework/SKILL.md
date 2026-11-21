@@ -34,6 +34,11 @@ Read [the composition recipe](references/composition.md) for a concrete componen
   `UI.Button(icon, text, click)` and `UI.IconButton` require 1.2.0 or later and are absent
   from 1.1.0. Verify consumer metadata before using them; otherwise use the existing
   WPF native boundary for vector drawing. Reuse application-owned icon definitions.
+- Independent button hints: read `docs/tooltips.md` in the source checkout.
+  FW-040's `.Tooltip(string?)` requires 1.3.0 and is absent from 1.2.0;
+  verify the installed API before using it. Nonempty text overrides the hint,
+  null restores automatic behavior and empty text suppresses it. Accessible
+  names remain separate; WPF owns tooltip presentation and timing.
 - Opacity/translation: read [animation guidance](references/animation.md) and,
   in the source checkout, `docs/animation.md`. These APIs require version 1.1.0 or later;
   verify the consumer has them before using the example.
@@ -53,7 +58,7 @@ Reuse existing design tokens and named defaults for colors, spacing, typography,
 - `AdaptiveGrid(minimumColumnWidth, children)` reflows mounted children; it does not virtualize them. Use `VirtualList(rows, height)` with stable keys and a finite viewport for large lists.
 - Text wraps only when measured with finite width. Prefer a constrained `FlexRow` over a long description inside an unbounded `HStack`. Do not hard-code the whole screen to the screenshot dimensions.
 - Use immutable `ThemeTokens` and `ThemeStyles.Apply(host, tokens)` at the WPF boundary. Set root `.Foreground(tokens.Ink).Background(tokens.Canvas)` explicitly: applying styles does not color standalone text or the root surface.
-- `.Padding` and `.Height` describe the outer view frame, not native button content padding. Allow room for native chrome. Do not invent CSS properties, arbitrary rich-button content factories, unsupported animation APIs or responsive visibility modifiers.
+- `.Width`, `.Height`, `.Padding` and `.Align` describe the outer view frame, not the native button's dimensions, padding or alignment. Declarative Buttons have renderer-local padding and left alignment; an ordinary style padding setter cannot override that local value. For compact/flat icon actions use the compiled `SkillIconToolbarExample` in the [behavioral examples](references/behavior-examples.md), and in a source checkout read `docs/icons.md`. Keep hit-target size separate from icon size, scope any padding handoff to owned buttons, retain the native template's Quiet/focus/hover feedback, and let the application theme owner reapply system surface colors on contrast changes. Allow room for native chrome. Do not invent CSS properties, arbitrary rich-button content factories, unsupported animation APIs or responsive visibility modifiers.
 - When supported by the consumer, animate explicit opacity/translation destinations
   with a property mask and reusable immutable timing specification. Keep targets
   in state; let WPF clocks interpolate. Mount/recycle settles immediately, opacity

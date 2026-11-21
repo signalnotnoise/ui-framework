@@ -1,6 +1,10 @@
 # UI Framework backlog
 
-Last updated: November 20, 2026.
+Last updated: November 21, 2026.
+
+FW-040/FW-041 are being prepared as 1.3.0 at the user's request. API additions
+are promoted into the release inventory; publication is pending exact-candidate
+validation/performance gates. [Release record](releases/1.3.0.md).
 
 Version 1.2.0 libraries and symbols were published November 20 from `5be84d6`.
 Local and both hosted full comparisons pass 32/32 checks against unchanged
@@ -24,6 +28,120 @@ and correctness requirements apply to every runtime change, regardless of order.
 Dates below record evidence or updates, not delivery commitments.
 
 ## Work queue
+
+### FW-041 Clarify compact and flat icon-button sizing
+
+Done November 21, 2026. P2. Follow-up FW-040 is also complete below.
+Owner: framework documentation / WPF styling maintainer. Follow-up to FW-037/038.
+Prioritize this bounded clarification first: it addresses an existing consumer
+integration without first extending the public API or changing sizing semantics.
+
+GuidedGrade reports that IconButton.Width(32) clipped icons under its scoped
+native Button template with inherited padding. Removing native padding reportedly
+left a 16-DIP native width despite the 32-DIP outer frame. Explicit native sizing,
+zero padding and transparent borders with hover/focus feedback resolved its
+320/800-wide editor captures. This is consumer-reported evidence from its 1.2.0
+integration; captures have not been independently inspected in this task, and
+it is not a reproduced framework-only defect. No package changes are claimed.
+Current ViewHost source applies DesiredWidth to Node.Frame, not directly to the
+native Button; native content, padding, alignment and template constraints matter.
+
+Source investigation: Node creates declarative Buttons with local padding and
+left alignment; ordinary style padding setters therefore cannot override it.
+The compiled toolbar-only recipe now uses explicit native dimensions and a
+Loaded padding-ownership handoff. It keeps the base template and follows system
+surface colors in contrast mode. All 43 focused cases pass (10 new sizing/recipe
+cases); 24 captures are retained with representative inspection. Three reference
+fixtures and reference/documentation checks pass. Runtime and performance inputs
+are unchanged; both knowledge graphs validate.
+[Evidence and limits](fw041-icon-button-sizing-2026-11-21.md).
+
+Completion criteria:
+- Document outer frame, native control, icon viewport and padding separately in
+  docs/icons.md and docs/layout-styling.md; explain what Width guarantees.
+- Verify a minimal compact/flat recipe under both the default theme and a scoped
+  consumer-style template. Inspect wide/compact widths, scaling and contrast;
+  preserve keyboard activation, accessible names, focus/hover/disabled feedback
+  and an intentional hit target. A transparent border must not erase feedback.
+- Reuse IconTests, CompactButtonTests and layout/style coverage; add only focused
+  checks for uncovered behavior. Open a separately evidenced defect if a default-
+  theme reproduction fails; do not silently change established Width semantics.
+- Keep reusable sizes, spacing and styling defaults at their owning layer as
+  described below; synchronize the framework skill/behavior examples with the
+  verified recipe. Do not turn a consumer workaround into a universal requirement.
+
+### FW-040 Add independently configurable declarative tooltips
+
+Done November 21, 2026. P2. Implemented after FW-041; unshipped.
+Owner: core API / WPF renderer maintainer. Follow-up to FW-037 and FW-016.
+A concrete consumer needs descriptions and keyboard hints without a native
+adapter; this is higher priority than speculative controls or lazy computation.
+
+Scope correction from source review: IconButton already requires an accessible
+name and uses it as its native tooltip. IconTests verifies that fallback and its
+removal when content changes to a labelled button. Published 1.2.0 has no separate
+public tooltip description/modifier. The gap is explicit tooltip content for
+Button/IconButton, independently of the accessible name, not total absence of
+tooltips. GuidedGrade's pointer-event/drag adapter remains a separate concern.
+
+Started with clean runtime sources at HEAD 09cd20b; the prior FW-041 staged
+documentation/example/test work is preserved. Saved runtime source hashes before
+editing. User selected Button/IconButton first. Implemented an unshipped text
+modifier with explicit override, null restoration and empty suppression; native
+presentation/timing defaults are retained with no new policy constants. A small
+renderer helper now owns tooltip precedence, separate from icon content.
+All 229 framework checks pass, including seven focused tooltip cases and native
+focus traversal in a real offscreen window. API guards and isolated local package
+installation/update checks pass. Seven alternating sample pairs against pre-change
+09cd20b pass 32/32 local comparisons; timings range -3.83% to +3.04%, allocations
++0.01% to +1.03%, with unchanged component work. This is measured overhead within
+unchanged budgets, not zero regression or hosted release acceptance.
+See [tooltip contract](tooltips.md) and [validation/evidence](fw040-tooltips-2026-11-21.md).
+Physical keyboard input, visible popup and screen-reader acceptance are not claimed
+from programmatic traversal/native policy assertions. Generated shipped API
+reference remains accurate for published 1.2.0; the new API is in Unshipped and
+source guidance only. Both knowledge graphs validated before closure.
+
+Completed scope and acceptance criteria:
+- Review whether a platform-neutral text description/modifier belongs on View
+  generally or only supported actionable kinds. Define unspecified, explicit
+  text and removal/suppression semantics before adding API. Preserve the existing
+  icon-only accessible-name fallback unless explicitly overridden; tooltips must
+  supplement accessible names rather than replace them.
+- Keep the core free of WPF ToolTip objects. WPF owns native application, update,
+  clearing and lifecycle. Decide precedence relative to IconButtonContent.Patch,
+  which currently sets/clears ToolTip, and to native styling/interop values.
+- Verify retained tooltip updates, transitions among plain/icon/combined buttons,
+  row recycling/removal and cleanup without stale hints or remounts. Exercise
+  keyboard access and applicable disabled-control/contrast behavior; document
+  supported behavior without claiming physical screen-reader acceptance from
+  property assertions. Extend existing focused tests rather than blanket guard tests.
+- Review additive public API declarations/compatibility, update docs and generated
+  skill API reference, and verify the packaged API. Keep application descriptions,
+  localized strings and shortcut labels application-owned.
+- Measure renderer changes before/after with the same harness, retaining full-list,
+  virtualized and themed coverage, UI allocations and component work. Existing
+  budgets and exact-candidate hosted release requirements remain unchanged.
+
+Shared constants and ownership requirement for FW-040/FW-041 (user request):
+Reuse ThemeTokens and its Icons/Spacing/Radii/Typography groups where the meaning
+matches, and keep geometry defaults in IconDefaults. Do not scatter literal
+sizes, gaps, padding, colors or tooltip timing values across renderer code, tests
+and examples. Prefer native tooltip defaults where adequate; any necessary WPF-
+specific policy belongs in one named renderer-owned location, not the core.
+Consumer-only toolbar/hit-target metrics belong in a named sample/theme owner.
+Do not couple unrelated roles merely because both currently equal 32, or create
+an all-purpose constants bag. Acceptance should check ownership and override
+behavior rather than duplicating production constants as expected values.
+
+Shared implementation constraints for FW-040/FW-041 (user request): keep one
+declared type per C# file, named after the type, including test helpers. Apply
+single responsibility: core descriptions, WPF property/lifecycle behavior, styling
+and consumer composition stay in their existing layers. Prefer the smallest
+additive design; avoid speculative abstractions, parallel policy systems or broad
+refactors. Ask for clarification when an unresolved public behavior or ownership
+choice materially changes the feature; routine choices follow existing contracts.
+Completion evidence for each item is recorded above; these constraints remain applicable to follow-ups.
 
 ### FW-039 Validate and publish icons and shared tokens as 1.2.0
 
@@ -181,6 +299,8 @@ remains a separate exact-commit check after push.
 
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
+| Done | FW-041 | P2 | Clarify compact/flat icon-button sizing and token ownership | Done — compiled recipe, 43 focused checks and inspected renders |
+| Done | FW-040 | P2 | Add independent declarative tooltip descriptions | Done — 229 checks, API/package acceptance, 32/32 local comparisons; unshipped |
 | Done | FW-033 | P2 | Phase 2: multi-pane log viewer showcase | Done — 60 native checks, 180 regression tests and inspected captures |
 | Done | FW-032 | P2 | Keep docs-only pushes on fast validation | Done — seven selector tests; documented local marker |
 | Done | FW-031 | P2 | Choose push performance coverage locally before allocating runners | Done — six checks and documented marker policy |
@@ -192,10 +312,10 @@ remains a separate exact-commit check after push.
 | Done | FW-005 | P1 | Strengthen editing through virtualized row recycling | Done — user-confirmed physical IME pass |
 | Done | FW-006 | P1 | Expand UI Automation and accessibility coverage | Done — user-confirmed contrast pass |
 | Done | FW-022 | P1 | Identify editor mount cost and initialization-order effects | Done — exact-commit hosted gate passed |
-| 3 | FW-007 | P2 | Improve large keyed shuffles | Done |
-| 4 | FW-008 | P2 | Add a text submit callback | Proposed |
-| 5 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
-| 7 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
+| Done | FW-007 | P2 | Improve large keyed shuffles | Done |
+| 3 | FW-008 | P2 | Add a text submit callback | Proposed |
+| 4 | FW-009 | P2 | Evaluate an editable picker API | Proposed |
+| 5 | FW-011 | P2 | Benchmark and prototype opt-in lazy computed values | Investigation |
 | Done | FW-012 | P2 | Reconcile stale roadmap and release claims | Done — November 15 evidence reconciliation |
 | Done | FW-017 | P2 | Establish cohesive theme and visual acceptance | Done — scoped visual/error acceptance |
 | Done | FW-024 | P2 | Publish alpha.7 | Done — publication history reconciled |

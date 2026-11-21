@@ -1,5 +1,9 @@
 # Release process
 
+Version 1.3.0 is being prepared for FW-040/FW-041; [current release status](releases/1.3.0.md). Publication requires exact-commit hosted gates.
+
+Version 1.3.0 is being prepared for FW-040/FW-041; [current release status](releases/1.3.0.md). Publication requires exact-commit hosted gates.
+
 Version 1.2.0 was published November 20, 2026; see [its release record](releases/1.2.0.md).
 
 The 1.1.0 animation release was published November 20, 2026. Its exact source,

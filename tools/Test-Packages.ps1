@@ -56,11 +56,12 @@ internal static class Program
         var count = new State<int>(0);
         using var host = new ViewHost(() => VStack(
             Text($"Count: {count.Value}").FontSize(24),
-            UI_Framework.UI.Button("Increment", () => count.Value++)
+            UI_Framework.UI.Button("Increment", () => count.Value++).Tooltip($"Increment from {count.Value}")
         ).Spacing(12).Padding(20));
         host.Measure(new Size(400, 300));
         host.Arrange(new Rect(0, 0, 400, 300));
         var button = Find<Button>(host);
+        if (!Equals(button.ToolTip, "Increment from 0")) throw new Exception("Packaged tooltip was not applied.");
         var label = Find<TextBlock>(host);
         if (label.Text != "Count: 0") throw new Exception("Initial text mismatch.");
         button.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
@@ -69,6 +70,7 @@ internal static class Program
             throw new Exception("Packaged state update failed.");
         if (!ReferenceEquals(button, Find<Button>(host)))
             throw new Exception("Button identity was not retained.");
+        if (!Equals(button.ToolTip, "Increment from 1")) throw new Exception("Packaged tooltip update failed.");
         Console.WriteLine("Package installation, transitive core dependency, rendering, click, and state update passed.");
         var fileLabel = new TextBlock { Text = "Program.cs" };
         var close = new Button { Content = "Close" };

@@ -948,6 +948,57 @@
         "docs/verification-evidence/2026-11-15-log-viewer/report.json",
         "samples/LogViewer/Hosting/ScrollChrome.xaml"
       ]
+    },
+    {
+      "id": "tooltip_plan",
+      "label": "Independent declarative tooltips - FW-040",
+      "status": "implemented",
+      "summary": "FW-040 completed within button-only scope November 21, 2026. User approved Button/IconButton scope. Unshipped View.Tooltip(string?) and TooltipText keep descriptions in core: nonempty overrides, null restores automatic behavior, empty suppresses native style hints. Existing icon-only accessible-name fallback is preserved. WPF Rendering/ButtonTooltip owns native property precedence; IconButtonContent owns visuals only. Application strings and native-island tooltips remain application-owned. Native tooltip service retains presentation, keyboard/disabled policy and timing, with no new constants or subscriptions. Seven regression tests cover retained identity, accessible names, style precedence, content transitions, recycled/removed rows and policy ownership. All 229 framework tests, API compatibility guards and isolated local-package smoke checks passed. Real offscreen-window programmatic focus traversal retains focus during hint updates. Seven alternating measured pairs against pre-tooltip 09cd20b passed 32/32 local comparisons: timings -3.83% to +3.04%, allocations +0.01% to +1.03%, component work unchanged. This is diagnostic pre-change evidence, not hosted publication acceptance; accepted baseline/budgets unchanged. Property assertions do not establish physical keyboard/screen-reader popup acceptance. API is absent from published 1.2.0; shipped skill reference stays version accurate. One declared type per file and simple layer ownership retained. November 21 release preparation: API promoted into the 1.3.0 shipped inventory; publication pending local and exact-commit hosted release gates.",
+      "sources": [
+        "docs/backlog.md",
+        "UI Framework/View.cs",
+        "UI Framework/UI.cs",
+        "UI Framework.Wpf/ViewHost.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "tests/UI Framework.Checks/IconTests.cs",
+        "docs/icons.md",
+        "docs/api-contract.md",
+        "skills/ui-framework/references/api-surface.md",
+        "UI Framework.Wpf/Rendering/ButtonTooltip.cs",
+        "tests/UI Framework.Checks/TooltipTests.cs",
+        "docs/tooltips.md",
+        "tools/Test-Packages.ps1",
+        "docs/fw040-tooltips-2026-11-21.md",
+        "docs/verification-evidence/2026-11-21-tooltips/manifest.json"
+      ]
+    },
+    {
+      "id": "icon_sizing_plan",
+      "label": "Compact icon-button sizing guidance - FW-041 complete",
+      "status": "implemented",
+      "summary": "FW-041 completed November 21, 2026: unchanged 1.2.0 source confirms frame sizing, renderer-local Button padding and left alignment. Two reproductions keep a 32-DIP frame while native width becomes 18 DIP with framework border or 16 DIP in a reconstructed borderless template after local padding is cleared. Actual GuidedGrade template/captures remain unverified consumer evidence. A compiled toolbar-only example derives the native style, sets native width/height, hands padding ownership to that style on Loaded, preserves Quiet template feedback and updates its application-owned surface for contrast. Hit target has one named example-owned constant; display sizes and gaps use existing semantic tokens, geometry stays with the reusable icon. No runtime/API changes or visual-tree walk. Application owns host attachment/disposal and theme/contrast notifications; foreign local padding bindings must not enter this scope. One type per new file, with tests separate from recipe. All 43 focused cases pass including 10 new cases; 24 captures are retained and representative renders inspected. Three reference fixtures and freshness/documentation checks pass. No physical keyboard/screen-reader acceptance, performance run or new package claim; both graphs validate.",
+      "sources": [
+        "docs/backlog.md",
+        "UI Framework/View.cs",
+        "UI Framework/Icons/IconDefaults.cs",
+        "UI Framework/Styling/IconTokens.cs",
+        "UI Framework/Styling/SpacingTokens.cs",
+        "UI Framework/Styling/ThemeTokens.cs",
+        "UI Framework.Wpf/ViewHost.cs",
+        "UI Framework.Wpf/Rendering/Node.cs",
+        "UI Framework.Wpf/Styling/ThemeStyles.cs",
+        "UI Framework.Wpf/Icons/IconButtonContent.cs",
+        "tests/UI Framework.Checks/IconTests.cs",
+        "tests/UI Framework.Checks/CompactButtonTests.cs",
+        "docs/icons.md",
+        "docs/layout-styling.md",
+        "skills/ui-framework/references/behavior-examples.md",
+        "tests/UI Framework.Checks/CompactIconButtonTests.cs",
+        "tests/UI Framework.Checks/SkillExamples/SkillIconToolbarExample.cs",
+        "tools/Update-SkillReference.py",
+        "docs/fw041-icon-button-sizing-2026-11-21.md",
+        "docs/verification-evidence/2026-11-21-icon-button-sizing/manifest.json"
+      ]
     }
   ],
   "edges": [
@@ -1390,7 +1441,42 @@
       "from": "agentskill",
       "relation": "teaches version gated use of",
       "to": "animation"
+    },
+    {
+      "from": "tooltip_plan",
+      "relation": "extends descriptions in",
+      "to": "api"
+    },
+    {
+      "from": "tooltip_plan",
+      "relation": "preserves accessible names from",
+      "to": "accessibility"
+    },
+    {
+      "from": "tooltip_plan",
+      "relation": "coordinates native tooltip updates with",
+      "to": "styling"
+    },
+    {
+      "from": "icon_sizing_plan",
+      "relation": "clarifies frame and native sizing in",
+      "to": "layoutstyle"
+    },
+    {
+      "from": "icon_sizing_plan",
+      "relation": "reuses shared tokens and native feedback from",
+      "to": "styling"
+    },
+    {
+      "from": "icon_sizing_plan",
+      "relation": "precedes independent tooltip work in",
+      "to": "tooltip_plan"
+    },
+    {
+      "from": "icon_sizing_plan",
+      "relation": "supplies a compiled toolbar recipe to",
+      "to": "agentskill"
     }
   ],
-  "releaseVersion": "1.2.0"
+  "releaseVersion": "1.3.0"
 }

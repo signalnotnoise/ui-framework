@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-21",
+  "baseline": "09cd20b3ad49f62e971032f909fe2587824f8b98",
+  "archive": "acceptance.zip",
+  "sha256": "09ef910acd0b73094d983794c1792079d216a61a60cc2108513dd44bee2f9278",
+  "entries": 473,
+  "verification": "229/229 framework checks; API guards; isolated local package smoke with tooltip initial/update assertions; 32/32 local comparisons against pre-tooltip HEAD. Seven alternating measured pairs plus warmups. No hosted or physical popup/screen-reader acceptance claimed.",
+  "packages": [
+    {
+      "name": "SignalNotNoise.UI.1.2.1-tooltips-local.1.nupkg",
+      "sha256": "26198f9315735957928638c41b569f22c384f58121b2d93c778168301a7b868b"
+    },
+    {
+      "name": "SignalNotNoise.UI.Wpf.1.2.1-tooltips-local.1.nupkg",
+      "sha256": "5dcd26c1af39a34cd04cb6d88de9fa707d83d6ceef32d10ff37b8a4f48b7117d"
+    }
+  ]
+}

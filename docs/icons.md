@@ -5,6 +5,10 @@ Publication status is tracked in [the release record](releases/1.2.0.md).
 Core descriptions remain independent of WPF. No SVG document loader or bundled
 icon collection is included.
 
+Version 1.3.0 / FW-040 adds [independent tooltip descriptions](tooltips.md).
+That modifier is not part of published 1.2.0; the icon-only accessible-name
+fallback remains available in 1.2.0.
+
 ## Usage
 
 Define reusable icons once in an application-owned file such as `Icons/AppIcons.cs`:
@@ -64,6 +68,58 @@ application geometry belongs in reusable icon definitions. See [shared tokens](d
   automation role. Icons inside buttons are decorative and never separate Tab
   stops. No new physical Narrator acceptance is claimed.
 
+## Compact and flat icon buttons
+
+`IconButton(...).Width(32).Height(32)` sizes the **outer view frame**, not
+the native Button or the icon. `.Padding(0)` also affects that frame. The
+renderer creates Buttons with local native padding and left alignment; those
+values take precedence over ordinary style setters. `.Align(...)` changes the
+frame's alignment, not the native Button's alignment.
+
+Removing native padding alone does not make the button fill the frame. In the
+FW-041 reproduction, a 32-DIP frame contains an 18-DIP content-sized native button
+with the framework border, or a 16-DIP button with a reconstructed borderless
+template. Explicit native width/height establishes the intended hit target.
+This explains the reported sizing interaction without claiming to have tested
+GuidedGrade's actual custom template or changing `.Width()` semantics.
+
+The [compiled toolbar recipe](../skills/ui-framework/references/behavior-examples.md#skillicontoolbarexample)
+uses existing 1.2.0 APIs:
+
+```csharp
+var example = new SkillIconToolbarExample(theme, Search);
+var toolbar = new ViewHost(example.Body);
+example.ApplyTheme(toolbar, theme, SystemParameters.HighContrast);
+// Attach toolbar to the window only after configuring its dedicated scope.
+// Its application owner disposes toolbar when removed or closed.
+```
+
+The example owns one named `TargetSize` for its desktop hit target. Icon display
+size comes from `theme.Icons.Small`; gaps/insets come from `theme.Spacing.Small`.
+Those roles remain independent even when two token values happen to be equal.
+Vector coordinates stay with the shared icon definition, not in spacing tokens.
+The 32-DIP target is an example choice, not a general accessibility minimum.
+
+The dedicated toolbar derives its native Button style from the framework style,
+sets native width/height and zero padding, and explicitly clears renderer-local
+padding on `Loaded` so its style owns that property. This handoff is intentional
+and repeats on reload; do not apply it to a mixed scope containing native buttons
+whose local padding/bindings belong to another owner. It does not require walking
+the visual tree or changing the renderer.
+
+Use `ButtonStyle(ButtonStyleKind.Quiet)` for a transparent normal border and
+background. Keep the framework template and its border thickness: hover, pressed,
+focus and disabled feedback remain native. Setting a local transparent brush or
+removing the border can hide that feedback. A replacement consumer template owns
+its own equivalent behavior; the recipe does not repair arbitrary templates.
+
+The application theme owner must reapply `ApplyTheme` after theme/contrast changes,
+passing the current `SystemParameters.HighContrast` value. The recipe rebases on
+the newly installed framework style and uses system surface/text colors in
+contrast mode. Quiet buttons are transparent, so a fixed dark application canvas
+can otherwise conflict with a system-colored foreground. The example does not
+subscribe globally to system events; that lifetime remains application-owned.
+
 ## Verification
 
 `IconTests` covers invalid descriptions before mutation, frozen shared geometry,
@@ -72,3 +128,9 @@ theme and contrast inheritance, label wrapping and filled/outlined rendering at
 96, 144 and 192 DPI. `ViewValidationTests` includes the new kind. Performance
 comparisons retain full-list, virtualized and themed full-list workloads; see
 FW-037 in [the backlog](backlog.md) for evidence and limitations.
+
+FW-041 adds two frame/native sizing reproductions and eight scoped-toolbar cases
+at 320/800 DIP and simulated 100%/200% DPI. They check containment, target size,
+retained identity, native invoke/cleanup and template feedback, with saved renders.
+See [evidence and limits](fw041-icon-button-sizing-2026-11-21.md). This is a
+documentation/example clarification, not a new runtime or tooltip API.

@@ -2,9 +2,9 @@
 
 [Source repository](https://github.com/signalnotnoise/ui-framework)
 
-**1.2.0 · Windows renderer · .NET 10**
+**1.3.0 · Windows renderer · .NET 10**
 
-V1 preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Version 1.2.0 adds vector icons, icon buttons and shared design-token scales. See the [1.2.0 release status](docs/releases/1.2.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
+V1 preserves the supported source, binary and behavioral contracts within the major version; see the [API contract](docs/api-contract.md). Licensed under [MIT](LICENSE). Version 1.3.0 adds independent button tooltips and compact icon-button styling guidance. Publication is pending validation; see the [1.3.0 release status](docs/releases/1.3.0.md), [release checklist](docs/releasing.md), and [changelog](CHANGELOG.md).
 
 A small SwiftUI-inspired C# UI framework. The core is a .NET class library; the first backend renders WPF controls on Windows. The runtime requires no XAML or third-party packages. Tests use MSTest.
 

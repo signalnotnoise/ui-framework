@@ -273,6 +273,9 @@ UI_Framework.View.TextSize.get -> double
 UI_Framework.View.TextSize.init -> void
 UI_Framework.View.ToggleChanged.get -> System.Action<bool>?
 UI_Framework.View.ToggleChanged.init -> void
+UI_Framework.View.Tooltip(string? text) -> UI_Framework.View!
+UI_Framework.View.TooltipText.get -> string?
+UI_Framework.View.TooltipText.init -> void
 UI_Framework.View.Transition.get -> UI_Framework.NavigationTransition
 UI_Framework.View.Transition.init -> void
 UI_Framework.View.Translate(double x, double y) -> UI_Framework.View!
