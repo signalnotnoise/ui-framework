@@ -2,12 +2,11 @@
 
 Last updated: November 20, 2026.
 
-Version 1.1.0 libraries and symbols were published November 20 from `7c1fff5`.
-Both exact-candidate hosted workflows passed 32/32 performance checks. Fresh
-public installation and 14 source/binary upgrade processes pass; installed DLLs
-and embedded READMEs match hosted artifacts. FW-029's README correction shipped
-in 1.1.0; the historical 1.0.0 artifact remains immutable.
-[Detailed release record](releases/1.1.0.md).
+Version 1.2.0 libraries and symbols were published November 20 from `5be84d6`.
+Local and both hosted full comparisons pass 32/32 checks against unchanged
+accepted baseline and budgets. Fresh public icon/token installation and 14
+source/binary upgrade processes pass; installed DLLs and embedded READMEs match
+publication artifacts. [Detailed release record](releases/1.2.0.md).
 FW-005 and FW-006 are complete after the user confirmed passing physical IME
 and Windows contrast checks on October 29. [Manual acceptance](manual-acceptance-2026-10-29.md).
 
@@ -28,14 +27,18 @@ Dates below record evidence or updates, not delivery commitments.
 
 ### FW-039 Validate and publish icons and shared tokens as 1.2.0
 
-In progress November 20, 2026. User authorized commit, push, CI and publication.
-Promote APIs and skill guidance, validate exact packages and upgrades, run full
-local/hosted gates against the unchanged accepted baseline, then verify public
-artifacts. [Release record](releases/1.2.0.md).
+Done November 20, 2026. Committed and pushed `5be84d6` to main, then published
+1.2.0. Validate 44865868498 and Publish NuGet 44867087790 both pass, including
+32/32 hosted performance checks each. The exact candidate also passes all 32
+local accepted-baseline checks. Local release passes 212 tests and sample/stress/
+cleanup checks. Fresh public installation, icon/token smoke and 14 source/binary
+upgrade processes pass; public DLL/README and installed assembly hashes match
+hosted artifacts. Both libraries and symbol packages were accepted. Skill and
+shipped API reference are synchronized. [Release evidence](releases/1.2.0.md).
 
 ### FW-038 Shared design-token scales
 
-Done November 20, 2026 (source-only, unreleased). Added immutable `Spacing`,
+Done November 20, 2026; published in 1.2.0 under FW-039. Added immutable `Spacing`,
 `Typography`, `Radii` and `Icons` scales to `ThemeTokens`, with shared default
 instances and explicit composition. Native icon-label spacing follows scoped
 styles without replacing controls. Existing defaults and explicit view sizes
@@ -46,11 +49,11 @@ were inspected at wide/compact widths. All 24 local comparisons pass across
 seven alternating pairs against the saved pre-token source; allocations change
 by at most +0.14%, with unchanged component work. Both graphs validate.
 [Evidence and limits](performance-evidence/2026-11-20-design-tokens/README.md).
-No publication or hosted release-gate acceptance is claimed.
+The implementation evidence is local; FW-039 records subsequent publication gates.
 
 ### FW-037 Vector icons and icon buttons
 
-Done November 20, 2026 (source-only, unreleased). Added reusable immutable
+Done November 20, 2026; published in 1.2.0 under FW-039. Added reusable immutable
 `VectorIcon` definitions, `Icon`, icon/text `Button` and accessible `IconButton`.
 WPF owns weak-key frozen geometry caching, retained drawing/content and native
 button behavior. Shared defaults and skill guidance now use named values at the
@@ -59,7 +62,7 @@ wide/compact light/dark native captures; 24 local performance comparisons pass
 across seven alternating pairs, retaining full-list and themed coverage.
 Allocations increase at most 1.04%; component work is unchanged. Small timing
 differences are inconclusive. [Evidence](performance-evidence/2026-11-20-icons/README.md).
-Both knowledge graphs validate. No hosted gate or physical Narrator acceptance
+Both knowledge graphs validate. FW-039 records subsequent hosted acceptance; no new physical Narrator acceptance
 is claimed; full SVG loading and bundled icon collections remain outside scope.
 
 ### FW-036 Merge and publish animation support as 1.1.0
