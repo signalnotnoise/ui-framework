@@ -1,0 +1,48 @@
+{
+  "release": "1.3.0",
+  "date": "2026-11-21",
+  "sourceCommit": "9aad40d31426ad18fc74cccd0a91d80d9cb256df",
+  "tag": "v1.3.0",
+  "validateRun": 44954454614,
+  "publishRun": 44955746224,
+  "localChecks": 32,
+  "validatePerformanceChecks": 32,
+  "publishPerformanceChecks": 32,
+  "frameworkTests": 229,
+  "publicRestorePassed": true,
+  "publicDllAndReadmeMatchRelease": true,
+  "archives": [
+    {
+      "path": "ci-performance.zip",
+      "sha256": "210cb0679abd8a487acdfcc08ac99cbed3f4d3656689a48b63bd72d676687f0b"
+    },
+    {
+      "path": "ci-upgrade.zip",
+      "sha256": "b68404947efb006ea8f7d8638f28ee51b917aafc509a9bc3ee44b1b40cf1bcde"
+    },
+    {
+      "path": "ci-validation.zip",
+      "sha256": "d9c90d2b70840b86b086c3b9abfc673ce6282ff0ed95d629f17ed5de1112abcf"
+    },
+    {
+      "path": "local-validation.zip",
+      "sha256": "9e37b2a0fb43658bd34435e39783d24bcc15245373b237c220b3c49323e83e18"
+    },
+    {
+      "path": "public-verification.zip",
+      "sha256": "9ba249c81fbce3d93ebe727acd8f77f023c12f98216a6f12f8dc0e4956976ec3"
+    },
+    {
+      "path": "publish-packages.zip",
+      "sha256": "13a8318f19e616b1360c84e768c49ad0494621aeadc457f91191d510b9aabb76"
+    },
+    {
+      "path": "publish-performance.zip",
+      "sha256": "309fc2284f90ef8a6c47a07b1f22ef97c03062efddeecacd0de9745f3b5b4886"
+    },
+    {
+      "path": "publish-validation.zip",
+      "sha256": "1d418f40ebd3974526a0380ee2486b036f7a4f1a9f4bf26c9853111a040db7fb"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 - FW-041: clarify frame versus native icon-button sizing with a compiled compact
   toolbar recipe, contrast/DPI checks and retained native feedback.
 - Add regression/package checks, version-aware skill guidance and archived evidence.
-  See [release status](docs/releases/1.3.0.md); publication is pending gates.
+  See [release evidence](docs/releases/1.3.0.md); both packages and symbols are published.
 
 ## 1.2.0 — November 20, 2026
 

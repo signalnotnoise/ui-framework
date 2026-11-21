@@ -2,9 +2,10 @@
 
 Last updated: November 21, 2026.
 
-FW-040/FW-041 are being prepared as 1.3.0 at the user's request. API additions
-are promoted into the release inventory; publication is pending exact-candidate
-validation/performance gates. [Release record](releases/1.3.0.md).
+FW-040/FW-041 shipped in 1.3.0 on November 21 from 9aad40d. Both hosted
+workflows passed, including 32/32 checks each against unchanged baseline and
+budgets. Fresh public restore and exact DLL/README verification passed.
+[Release record and archived evidence](releases/1.3.0.md).
 
 Version 1.2.0 libraries and symbols were published November 20 from `5be84d6`.
 Local and both hosted full comparisons pass 32/32 checks against unchanged
@@ -72,7 +73,7 @@ Completion criteria:
 
 ### FW-040 Add independently configurable declarative tooltips
 
-Done November 21, 2026. P2. Implemented after FW-041; unshipped.
+Done November 21, 2026. P2. Implemented after FW-041; published in 1.3.0.
 Owner: core API / WPF renderer maintainer. Follow-up to FW-037 and FW-016.
 A concrete consumer needs descriptions and keyboard hints without a native
 adapter; this is higher priority than speculative controls or lazy computation.
@@ -86,7 +87,7 @@ tooltips. GuidedGrade's pointer-event/drag adapter remains a separate concern.
 
 Started with clean runtime sources at HEAD 09cd20b; the prior FW-041 staged
 documentation/example/test work is preserved. Saved runtime source hashes before
-editing. User selected Button/IconButton first. Implemented an unshipped text
+editing. User selected Button/IconButton first. Implemented an additive text
 modifier with explicit override, null restoration and empty suppression; native
 presentation/timing defaults are retained with no new policy constants. A small
 renderer helper now owns tooltip precedence, separate from icon content.
@@ -98,9 +99,8 @@ installation/update checks pass. Seven alternating sample pairs against pre-chan
 unchanged budgets, not zero regression or hosted release acceptance.
 See [tooltip contract](tooltips.md) and [validation/evidence](fw040-tooltips-2026-11-21.md).
 Physical keyboard input, visible popup and screen-reader acceptance are not claimed
-from programmatic traversal/native policy assertions. Generated shipped API
-reference remains accurate for published 1.2.0; the new API is in Unshipped and
-source guidance only. Both knowledge graphs validated before closure.
+from programmatic traversal/native policy assertions. The released 1.3.0 API inventory and generated skill reference now include the
+new API; 1.2.0 consumers must upgrade before using it. Both knowledge graphs validated before closure.
 
 Completed scope and acceptance criteria:
 - Review whether a platform-neutral text description/modifier belongs on View
@@ -300,7 +300,7 @@ remains a separate exact-commit check after push.
 | Order | ID | Priority | Work | Status |
 | ---: | --- | --- | --- | --- |
 | Done | FW-041 | P2 | Clarify compact/flat icon-button sizing and token ownership | Done — compiled recipe, 43 focused checks and inspected renders |
-| Done | FW-040 | P2 | Add independent declarative tooltip descriptions | Done — 229 checks, API/package acceptance, 32/32 local comparisons; unshipped |
+| Done | FW-040 | P2 | Add independent declarative tooltip descriptions | Done — 229 checks, API/package acceptance, 32/32 local comparisons; shipped in 1.3.0 |
 | Done | FW-033 | P2 | Phase 2: multi-pane log viewer showcase | Done — 60 native checks, 180 regression tests and inspected captures |
 | Done | FW-032 | P2 | Keep docs-only pushes on fast validation | Done — seven selector tests; documented local marker |
 | Done | FW-031 | P2 | Choose push performance coverage locally before allocating runners | Done — six checks and documented marker policy |
